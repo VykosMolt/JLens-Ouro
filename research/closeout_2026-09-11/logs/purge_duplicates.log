@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/closeout_2026-09-11/archive/purge_duplicates.py", line 22, in <module>
+    assert uuid == UUID, f'destination UUID {uuid} != {UUID}'
+           ^^^^^^^^^^^^
+AssertionError: destination UUID  != 36df468b-3bf9-41a9-ace8-edccfb292434

@@ -102,18 +102,18 @@ for p in (1, 2, 3):
     ax.plot(x, [float(v['raw']) for v in r], color=RAW, lw=1.5, label='raw lens')
     ax.plot(x, [float(v['final']) for v in r], color=FINAL, lw=1.5, label='J-Lens, final-pass target (exit 3)')
     ax.plot(x, [float(v[f'local{p}']) if v[f'local{p}'] else np.nan for v in r], color=LOCAL, lw=2.0, label="J-Lens, the pass's own exit")
-    passaxes(ax, p); ax.set_ylim(-0.05, 0.42); ax.set_yticks([0, 0.1, 0.2, 0.3, 0.4])
-    if p > 1: ax.set_yticklabels([])
+    passaxes(ax, p); ax.set_ylim(-0.05, 0.45); ax.set_yticks([0, 0.1, 0.2, 0.3, 0.4])
 axes[0].set_ylabel('excess hit@10 (90 items)')
 ax = fig.add_subplot(gs[1, 0:2]); zero(ax)
 for j, (k, col, lab, mk) in enumerate((('local_minus_final', LOCAL, 'own exit − final target', 'o'), ('local_minus_raw', st.VIOLET, 'own exit − raw', 'D'), ('final_minus_raw', FINAL, 'final target − raw', 's'))):
     for p in (1, 2, 3):
         row = dj['passes'][p - 1][k]; e = row['excess_diff']; iv = row['concept_cluster_bootstrap_95_descriptive']
         ax.errorbar([p + (j - 1) * 0.22], [e], yerr=[[e - iv[0]], [iv[1] - e]], fmt=mk, color=col, capsize=3, ms=6, lw=1.4, label=lab if p == 1 else None)
-        ax.annotate(f'{e:+.2f}', (p + (j - 1) * 0.22, iv[1]), xytext=(0, 4), textcoords='offset points', ha='center', fontsize=7.4, color=st.INK)
-ax.set_xticks([1, 2, 3]); ax.set_xlim(0.5, 3.5); ax.set_ylim(-0.17, 0.37); ax.set_xlabel('pass'); ax.set_ylabel('difference in band 26–37')
+        up = e >= 0
+        ax.annotate(f'{e:+.2f}', (p + (j - 1) * 0.22, iv[1] if up else iv[0]), xytext=(0, 4 if up else -4), textcoords='offset points', ha='center', va='bottom' if up else 'top', fontsize=7.4, color=st.INK)
+ax.set_xticks([1, 2, 3]); ax.set_xlim(0.5, 3.5); ax.set_ylim(-0.2, 0.4); ax.set_xlabel('pass'); ax.set_ylabel('difference in band 26–37')
 ax.set_title('(d) band means with shared-concept-cluster 95% intervals (descriptive)', loc='left')
 lax = fig.add_subplot(gs[1, 2]); lax.axis('off')
 h, l = axes[0].get_legend_handles_labels(); h2, l2 = ax.get_legend_handles_labels()
 lax.legend(h + h2, l + l2, loc='center left', fontsize=8.2, frameon=False, handlelength=2.2, labelspacing=0.9)
-fig.subplots_adjust(left=0.09, right=0.99, top=0.93, bottom=0.09); save(fig, 'fig5_local_exit')
+fig.subplots_adjust(left=0.1, right=0.985, top=0.93, bottom=0.09); save(fig, 'fig5_local_exit')

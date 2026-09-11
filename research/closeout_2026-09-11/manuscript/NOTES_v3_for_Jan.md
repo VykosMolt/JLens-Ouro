@@ -14,8 +14,12 @@
 
 ## On presentation
 
-6. Figures 1–5 are now in the kirin system (Source Sans fallback to Noto Sans because Source Sans Pro is not installed as a system font; the LaTeX side uses the TeX-distributed font, so the PDF text and figure text will differ slightly in typeface until you install Source Sans Pro system-wide).
+6. Figures 1–5 are in the kirin system with the gentle-red accent. Source Sans Pro is installed system-wide now (TeX Live OTFs linked into `~/.local/share/fonts`), so figure text and body text share the typeface.
 7. Figure 2 is dense (eight panels). It earns its place because the bottom row shows that the raw lens has its own late peaks in every pass; consider cropping to passes 1 and 4 if space is tight.
 8. Table 6 uses your status vocabulary. The "Bounded screen" label for the within-domain result is my judgement; you may prefer Established with the caveat in the basis column.
-9. The contribution statement needs your decisions on what you personally verified. I left it factual and incomplete rather than flattering.
+9. Appendix D is your revised statement of 12 September (typos fixed, "(draft)" dropped from the heading). It credits Claude Fable 5.1 and GPT 6 Astra and nothing else; `CONTRIBUTION_AI_ASSISTANCE.md` was rewritten to match. Draft two (`JLens_Ouro_Second_Draft.md`, in the repository and the handoff zip) still carries the old over-attributing draft statement; I left it as the dated record.
 10. Numbers are unchanged from v2 (ledger applies). Two v1 double-rounding slips were corrected in v2 and remain corrected here.
+
+## Reconciliation with your edited draft (12 September)
+
+Your `~/Downloads/JLens_Ouro_Third_Draft.md` (saved 01:05) was ahead of the repository copy the kirin build was made from. Ported paragraph for paragraph, with the kirin boxes and captions kept: the title ("Final-Target J-Lens in Ouro"), the abstract, "under the final-target estimator" in Section 1 and the restored fourth paragraph there, "accepted single-token forms" in Section 2.2, the Newton/"N" alias disclosure in Section 3.2, the rewritten within-domain paragraph in Section 4.4 (sensitivity to the control set, itemwise inequality vs. aggregate bound), the local-exit inventory wording (remote availability not verified here), your longer Section 6 interpretation with the exit-state hypothesis, the Section 7 first paragraph, the reproducibility paragraph (43 lost / 19 unresolved split), the conclusion, the Records paragraph in Appendix B, and Appendix D. The Table 6 row on within-domain controls was reworded to match Section 4.4; the scope box in Section 1 now says the raw lens beats *this final-target estimator* in the early passes. Figure 5: the negative band means in panel (d) had their labels drawn on top of the error bars; labels now sit below negative intervals and the axes have more headroom.
