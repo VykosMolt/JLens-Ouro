@@ -1,0 +1,176 @@
+{
+  "status": "passed",
+  "scope": "CPU allocator and preflight orchestration; no GPU/model inference or new parity claim",
+  "checks": [
+    "CPU proof starts without a CUDA context",
+    "unchanged function and numerical/resource policy: _host_memory",
+    "unchanged function and numerical/resource policy: _offload_budget",
+    "unchanged function and numerical/resource policy: _compare",
+    "unchanged function and numerical/resource policy: _io_timing",
+    "unchanged function and numerical/resource policy: _huginn_primal",
+    "unchanged function and numerical/resource policy: _huginn_benchmark_runtime",
+    "malloc_trim uses size_t input and int return ABI",
+    "malloc_trim requests release of unused pages with zero padding",
+    "snapshots enclose collection, CUDA cache release and host allocator trim in order",
+    "allocator helper resolves the current process library only",
+    "cleanup evidence records both snapshots and actual trim result",
+    "missing malloc_trim symbol is explicitly recorded and remains optional",
+    "unavailable process library is recorded without pretending pages were freed",
+    "unchanged low-cgroup-headroom rejection, paired=False",
+    "unchanged low-cgroup-headroom rejection, paired=True",
+    "unchanged measured headroom, cap and reserves, paired=False",
+    "unchanged measured headroom, cap and reserves, paired=True",
+    "effective host RAM below 48e9 bytes still rejected",
+    "discarded CPU tensors have no remaining Python owners",
+    "actual allocator trim preserves live CPU storage, values and strided views",
+    "actual allocator trim preserves a live CPU autograd graph",
+    "actual allocator result and physical/cgroup snapshots are recorded without inferred reclamation",
+    "previous profile matrix owners are absent before its successor budget",
+    "unchanged native/optimized engineering arguments, target=191, native=True",
+    "native cleanup follows graph/payload release while preserving its comparison bank",
+    "unchanged native/optimized engineering arguments, target=191, native=False",
+    "native bank is released and optimized bank remains live before I/O",
+    "both complete matrix banks are released before profile success publication",
+    "previous profile matrix owners are absent before its successor budget",
+    "unchanged native/optimized engineering arguments, target=190, native=True",
+    "native cleanup follows graph/payload release while preserving its comparison bank",
+    "unchanged native/optimized engineering arguments, target=190, native=False",
+    "native bank is released and optimized bank remains live before I/O",
+    "both complete matrix banks are released before profile success publication",
+    "previous profile matrix owners are absent before its successor budget",
+    "unchanged native/optimized engineering arguments, target=191, native=True",
+    "native cleanup follows graph/payload release while preserving its comparison bank",
+    "paired optimized fixture retains both reductions and the exact source/q/B8 contract",
+    "native bank is released and optimized bank remains live before I/O",
+    "both complete matrix banks are released before profile success publication",
+    "saved-tensor hook contexts close on normal and failed CPU profiles",
+    "all three frozen profiles complete in the original order",
+    "four quiescent cleanup boundaries execute per Ouro profile",
+    "cleanup cost is excluded from unchanged native, optimized and checkpoint timing windows",
+    "full lifecycle preserves budget, START, compute, cleanup and success-publication order",
+    "real full-bank parity comparator executes on every tiny CPU profile and arm",
+    "real I/O timing removes both scratch matrix files",
+    "immutable top-level START retains runtime and prompt provenance without claiming completion",
+    "profile START stays an immutable pre-compute budget record: ouro_main",
+    "profile START stays an immutable pre-compute budget record: ouro_penultimate",
+    "profile START stays an immutable pre-compute budget record: ouro_positions",
+    "previous profile matrix owners are absent before its successor budget",
+    "unchanged native/optimized engineering arguments, target=191, native=True",
+    "native cleanup follows graph/payload release while preserving its comparison bank",
+    "unchanged native/optimized engineering arguments, target=191, native=False",
+    "native bank is released and optimized bank remains live before I/O",
+    "both complete matrix banks are released before profile success publication",
+    "previous profile matrix owners are absent before its successor budget",
+    "unchanged native/optimized engineering arguments, target=190, native=True",
+    "saved-tensor hook contexts close on normal and failed CPU profiles",
+    "controlled penultimate host-budget failure propagates",
+    "failed later profile retains source/runtime and fresh-budget diagnostics without false success",
+    "failed native profile cannot start its optimized comparison",
+    "previous profile matrix owners are absent before its successor budget",
+    "unchanged native/optimized engineering arguments, target=191, native=True",
+    "native cleanup follows graph/payload release while preserving its comparison bank",
+    "unchanged native/optimized engineering arguments, target=191, native=False",
+    "native bank is released and optimized bank remains live before I/O",
+    "both complete matrix banks are released before profile success publication",
+    "saved-tensor hook contexts close on normal and failed CPU profiles",
+    "failed final cleanup cannot publish profile success or preflight COMPLETE",
+    "all CPU allocator and lifecycle checks leave CUDA uninitialized"
+  ],
+  "n_checks": 73,
+  "cuda_initialized": false,
+  "source_sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d",
+  "prior_source_sha256": "1087f6ad057b32ad866bee81283ea83e1173ca88b0f5a4ed3bc934ecb129966e",
+  "resource_and_numerical_functions_unchanged": true,
+  "actual_allocator_observation": {
+    "before": {
+      "physical_total_bytes": 33038503936,
+      "physical_available_bytes": 23890104320,
+      "effective_total_bytes": 33038503936,
+      "effective_available_bytes": 23890104320,
+      "cgroup_constraints": [
+        {
+          "path": "/sys/fs/cgroup/user.slice",
+          "limit_bytes": null,
+          "usage_bytes": 10740965376,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice",
+          "limit_bytes": null,
+          "usage_bytes": 10724573184,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service",
+          "limit_bytes": null,
+          "usage_bytes": 10720710656,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice",
+          "limit_bytes": null,
+          "usage_bytes": 3532910592,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/kitty-313389-0.scope",
+          "limit_bytes": null,
+          "usage_bytes": 2043944960,
+          "headroom_bytes": null
+        }
+      ],
+      "scope": "snapshot of physical MemAvailable and visible cgroup ancestor headroom; cgroup file cache is counted conservatively"
+    },
+    "after": {
+      "physical_total_bytes": 33038503936,
+      "physical_available_bytes": 23892197376,
+      "effective_total_bytes": 33038503936,
+      "effective_available_bytes": 23892197376,
+      "cgroup_constraints": [
+        {
+          "path": "/sys/fs/cgroup/user.slice",
+          "limit_bytes": null,
+          "usage_bytes": 10739855360,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice",
+          "limit_bytes": null,
+          "usage_bytes": 10723463168,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service",
+          "limit_bytes": null,
+          "usage_bytes": 10719600640,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice",
+          "limit_bytes": null,
+          "usage_bytes": 3531800576,
+          "headroom_bytes": null
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/kitty-313389-0.scope",
+          "limit_bytes": null,
+          "usage_bytes": 2042834944,
+          "headroom_bytes": null
+        }
+      ],
+      "scope": "snapshot of physical MemAvailable and visible cgroup ancestor headroom; cgroup file cache is counted conservatively"
+    },
+    "gc_collected": 203,
+    "malloc_trim": {
+      "available": true,
+      "return": 1
+    },
+    "scope": "released unused allocator pages only; live tensors and host/cgroup guards unchanged"
+  },
+  "python": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
+  "torch": "2.12.0.dev20260407+cu128",
+  "test_harness": {
+    "path": "/tmp/jlens_preflight_allocator_cpu_test.py",
+    "sha256": "b04ed5069f413d2c575352e2c9ab5fe3499d35358d0969f4c743d8761fc503fe"
+  }
+}

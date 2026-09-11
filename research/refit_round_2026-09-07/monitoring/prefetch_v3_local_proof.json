@@ -1,0 +1,36 @@
+{
+  "status": "passed_local_synthetic_fixtures_only",
+  "checks_count": 8,
+  "checks": [
+    "Exact source delta contains only the eight frozen replacement kinds, including exactly two publication calls",
+    "All other functions and class methods, managed groups, failure priority, deadlines, guards, hashes, locks and resume copying are AST-identical",
+    "Default status receives45 seconds and remains clipped to the original per-file remaining time",
+    "Both existing-target and new-publication branches explicitly receive15 seconds and clip it to4.25 remaining seconds",
+    "Expired original deadline refuses ordinary and publication status before launching any subprocess",
+    "Exact accepted V2 source, current V3 source and legacy V1 source are accepted with matching name variants",
+    "Wrong source byte count/hash and nonmatching V4 or prefixed operation names are refused",
+    "Synthetic describe exposes45/15 timeout bounds while retaining max5 and3600 seconds and performing no execution"
+  ],
+  "helper": {
+    "path": "/tmp/prefetch_completed_ouro06_v3.py",
+    "bytes": 40337,
+    "sha256": "d0880b9c1da9ea8f652880f31d10d3ac315ac3ff699edda9ccf166f9a49865bd"
+  },
+  "accepted_v2": {
+    "bytes": 39855,
+    "sha256": "5284ff464fdeed0029497d95feeb9cd4365cc2d5139e5de2615a32d5e068d06e"
+  },
+  "proof_source": {
+    "bytes": 12091,
+    "sha256": "16efc9d7611fda1be1e07bc66e82df5583beebac81daa9403b51d0879254df61"
+  },
+  "source_diff": {
+    "path": "/tmp/prefetch06-v3-proof-1enonkr_/SOURCE_DIFF.patch",
+    "bytes": 4941,
+    "sha256": "92bcf36d374c166209b4374eebbcaab2695a4aa14d10e3341b712254c5b91149"
+  },
+  "remote_connections": 0,
+  "actual_binary_reads": 0,
+  "actual_prefetch_executed": false,
+  "fixture_directory": "/tmp/prefetch06-v3-proof-1enonkr_"
+}

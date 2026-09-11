@@ -1,0 +1,163 @@
+{
+  "schema": "native_logit_diagnostic_verification.v1",
+  "gate": "A7 part 1: independent executable verification",
+  "verified_utc": "2026-09-10T21:40:00Z",
+  "target": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/diagnostics/native_logit_v1",
+  "freeze_sha256": "178f2f924d1421102184199842a4b06f20466ee1bff96ddd2be2e60e932970ea",
+  "verdict": "PASS_WITH_FINDINGS",
+  "verdict_basis": "Every A1-A6 claim reproduced independently, and every recorded comparison was recomputed exactly with separate code. Ledger accounting is sound. Nothing protected changed. The findings are three low-severity runbook/test hazards and four informational notes. None blocks the paid run. F1 and F2 would require editing RUNBOOK.md and re-freezing.",
+  "environment": {
+    "interpreter": "/home/moloch/ouro_project/venv/bin/python -B (torch 2.12.0.dev20260407+cu128, CPU only)",
+    "network_isolation": "Every test, controller plan, verifier and recomputation run executed under `unshare -rn` (no network namespace).",
+    "scratch": "/tmp/claude-1000/-home-moloch-jacobian-lens/18b73cc8-31a8-4b0b-b8c9-be0441298f55/scratchpad/verify_diag"
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "low",
+      "file_line": "diagnostics/native_logit_v1/RUNBOOK.md:189 (reached from :217, :222, :247)",
+      "title": "Step 10 final observation fails when no pod id was ever bound",
+      "evidence": "POD is set only in step 5 (RUNBOOK.md:100), once SSH is bound. F4 create_rejected (:222), F4 with no pod listed, and early F9/T paths route to 'steps 9 and 10' with POD unset. Running `observe_account.py --pod-id $POD --out X` with POD empty (offline, no network) exits 2 with 'argument --pod-id: expected one argument', so no final account observation is recorded.",
+      "fix": "Replace `--pod-id $POD` with `${POD:+--pod-id $POD}` at RUNBOOK.md:189, or give no-pod branches an explicit command without --pod-id. This changes RUNBOOK.md, which FREEZE.json binds, so the freeze must be rebuilt."
+    },
+    {
+      "id": "F2",
+      "severity": "low",
+      "file_line": "diagnostics/native_logit_v1/RUNBOOK.md:82-84",
+      "title": "Create is gated on user approval by step order only",
+      "evidence": "Invariant 7 requires recorded approval before create. Step 2 (RUNBOOK.md:58-62) writes $RUN/USER_APPROVAL.json, but the step-4 command does not test for it. The unchanged controller's create (bundle/controller/lease.py:827-902) takes no approval input. Nothing mechanical stops an out-of-order or pasted create.",
+      "fix": "Prefix the create line with `test -s $RUN/USER_APPROVAL.json &&` (pipelines bind tighter than &&, so tee is unaffected). Also requires re-freezing. Otherwise root must observe the order manually."
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "file_line": "diagnostics/native_logit_v1/tests/common.py:48-50; build.py:163",
+      "title": "Re-running any acceptance test overwrites frozen evidence in place",
+      "evidence": "save_evidence always writes into D/evidence with write_text. Re-running A2-A6, whether by a reviewer or as post-run re-verification, replaces files that FREEZE.json binds; A2 embeds a fresh lease name and deadlines. `build.py verify` then fails at build.py:163. To re-execute without modifying D, I redirected `common.EVIDENCE` in-process (scratch run_test.py). build.py verify still passed after all my runs and after the concurrent writer.",
+      "fix": "No bundle change is needed for the run. Anyone re-running the tests must redirect EVIDENCE as above, never run in place. If tests are edited for other reasons, make the write exclusive (open 'x') or take an output directory."
+    },
+    {
+      "id": "F4",
+      "severity": "info",
+      "file_line": "diagnostics/native_logit_v1/IMPLEMENTATION.md:124-138",
+      "title": "Ten deviations are listed, not eight",
+      "evidence": "The deviations section has items 1-10. All ten match the code: download_model.py is run at bootstrap.py:61 and is byte-identical; test_lifecycle.py is identical to precision_v1; the [160] composite is recomputed first and last; the fallback exit step is 3 (validate_outputs.py:47, which also covers zero matches); inputs are fresh contiguous copies and only target rows are saved; M2 has no physical hooks; the GPU name equals attempt05's recorded 'NVIDIA GeForce RTX 5090'; the worker diff against precision_v1 is limited to the documented removals plus the phase rename 'native_logit_measurements' and dropping bank_records from provenance; A4 has no fallback; the lease root is diagnostic_native_logit_v1.",
+      "fix": "None required. Refer to ten deviations in later documents."
+    },
+    {
+      "id": "F5",
+      "severity": "info",
+      "file_line": "diagnostics/native_logit_v1/bundle/evaluation/validate_outputs.py:55-56",
+      "title": "torch_equal is not bit-exactness",
+      "evidence": "Adversarial case signed_zero_consistent_record: a row differing from the reference only by -0.0 versus +0.0 records torch_equal=true with differing_elements=1, and the verifier correctly accepts it. No such divergence occurred on CPU (bitwise_differs_but_torch_equal = []).",
+      "fix": "Post-run analysis of objective 3 ('reproduces native final logits bit-exactly') must require differing_elements == 0. torch_equal alone is not sufficient. No code change."
+    },
+    {
+      "id": "F6",
+      "severity": "info",
+      "file_line": "diagnostics/native_logit_v1/bundle/evaluation/validate_outputs.py:117-118",
+      "title": "Verifier does not bind token_ids to the development items",
+      "evidence": "Adversarial case token_ids_substituted_same_length: token IDs replaced by same-length IDs, with a consistently regenerated record, are accepted. The binding relies on the pinned worker source (worker.py:135-139, 171) and on the exact M2-versus-M1 logits comparisons.",
+      "fix": "In the post-run CPU reanalysis, retokenize the three historical items through the unchanged old-item path and require token_ids to match (S = 20, 15, 13). No bundle change."
+    },
+    {
+      "id": "F7",
+      "severity": "info",
+      "file_line": "diagnostics/native_logit_v1/RUNBOOK.md:27, 190-192, 219",
+      "title": "Any file written into the round root during the run trips F11",
+      "evidence": "inventory.py compare allows only cloud_leases/diagnostic_native_logit_v1/. My own before/after compare flagged the concurrently written reviews/diagnostic_native_logit_v1_review.{json,md} as added_unexpected (status changed, exit 1). A RUN_LOG.md entry or review file written between steps 0 and 10 would therefore raise a false F11 'invariant violation'. Controller writes outside the lease root are limited to opening the existing cloud_leases/.lease_creation.lock in append mode, which leaves its hash unchanged.",
+      "fix": "Take the step-0 inventory only after all A7 reports are written, and defer RUN_LOG.md/review writes until after step 10. Alternatively, record intended additions and pass them as extra --allow-added prefixes."
+    }
+  ],
+  "checks_performed": {
+    "1_freeze": {
+      "result": "pass",
+      "build_py_verify": "status verified, receipt 178f2f92...970ea, at start and again after all runs",
+      "independent_hashing": "FREEZE.json sha256 matches the claim. bundle.tar.gz 2d0e2a09... (205,065 bytes). 45 members, all regular 'bundle/...' files, with no path, link or duplicate issues. Archive members == directory == FREEZE.json files. outside_bundle (5 files), evidence (12 entries) and parent_freeze match. D contains no unbound file other than FREEZE.json and IMPLEMENTATION.md.",
+      "shared_files": "41 shared files byte-identical to corrections/precision_v1/bundle and to precision_v1 FREEZE.json. Only the 4 authored files differ. Not shipped from precision_v1: analysis/*, audit_novelty, freeze, measurement, prepare_population, self_test, and frozen/{PROSPECTIVE_PLAN,annotation_review,benchmark,implementation_review,population,precision_correction}.",
+      "controller": "The six files in attempt_05 LEASE.json controller_sources are byte-identical to bundle/controller. test_lifecycle.py is identical to precision_v1.",
+      "bindings": "run_spec source_records == all 43 non-frozen bundle files. contract_record == CONTRACT.md. parent_freeze_record == precision_v1 FREEZE.json. development_item_names, model_identity, model_record and original_precision are identical to precision_v1. output_contract run_spec_sha256 matches; stages {}. run_config verifier record == validate_outputs.py."
+    },
+    "2_A2_admission": {
+      "result": "pass",
+      "evidence": "The frozen test re-run with evidence redirected admitted: bound 1.1507876712328766 for 5,100 s at 0.7064383561643836/h; prior 21.64556796376644; remaining 3.354432036233561; minimum balance 4.028675539145375. The output differs from the frozen A2 evidence only in lease name, deadlines, timestamps and work path. RUNBOOK step-3 plan run directly from bundle/controller gave identical accounting. At balance 4.0286 the plan is rejected ('lacks the job funds above its preserved balance').",
+      "ledger_read_only": "sha256 of all 120 ledger files, plus type, mode, size and mtime of all 152 entries including hidden files, identical before and after every controller run"
+    },
+    "2_A3_verifier_tests": {
+      "result": "pass",
+      "evidence": "1 conforming set accepted (158 of 255 records unequal). All 25 mutations rejected with their expected messages. Evidence content identical to the frozen A3.",
+      "own_adversarial_cases": {
+        "comparisons_reordered": "rejected (Comparison record differs) - expected",
+        "signed_zero_consistent_record": "accepted; record torch_equal=true, differing_elements=1 - expected (see F5)",
+        "signed_zero_count_tampered": "rejected - expected",
+        "items_reordered": "rejected (Diagnostic schema differs) - expected",
+        "extra_run_key": "rejected (Run schema differs) - expected",
+        "nonfinite_composite": "rejected (Invalid tensor ... lm_head_norm[160,2048]/last) - expected",
+        "geometry_mismatch": "rejected (Runtime geometry or dtype differs) - expected",
+        "runtime_gpu_missing": "rejected via KeyError 'gpu' (sync records retrieval_last_error; never accepted) - expected",
+        "token_count_inconsistent": "rejected (shape) - expected",
+        "token_ids_substituted_same_length": "accepted - verifier gap (F6)",
+        "symlinked_payload": "verifier alone accepts; the controller's verify_payload rejects linked paths before semantic validation (artifact_handoff.py:174-194, 397-402) - no action",
+        "no_exit_step_match": "accepted; M2_matching_steps [] and exit_step 3 recorded, as deviation 4 intends",
+        "torch_equal_as_integer": "accepted (JSON 1 == true); semantically harmless",
+        "comparisons_extra_top_level_key": "rejected - expected",
+        "m1_rows_swapped_record_stale": "rejected - expected"
+      }
+    },
+    "2_A4_cpu_pipeline": {
+      "result": "pass (pipeline validation only; CPU kernels, not GPU evidence)",
+      "evidence": "Real snapshot; 21.3 GiB available. Payload sha256 identical to the frozen A4 evidence (36,921,970 bytes). Token counts 20/15/13. Exit step 3, uniquely matched, for all items and both runs. 255 records, 34 unequal on CPU. The precision dictionary equals the frozen original."
+    },
+    "2_A5_lifecycle_smoke": {
+      "result": "pass",
+      "evidence": "Run with my A4 results and an isolated patched ledger: published, retrieved, verified, accepted; watch_fixture deleted with class accepted_artifacts, then 3 absence confirmations and status terminated. The real ledger was unchanged. Differences from the frozen A5 are only fixture-derived (lease-name uuid -> provenance and manifest hashes)."
+    },
+    "2_A6_bundle_audit": {
+      "result": "pass",
+      "evidence": "Evidence identical to the frozen A6: 41 shared files; controller equals the pins and the attempt_05 monitor; no bank, population, benchmark or tensor file; 160 prompts in 161 search forms, 0 matches."
+    },
+    "3_independent_recomputation": {
+      "result": "pass",
+      "method": "Separate script; validate_outputs is never imported. Bits come from raw bytes; values come from a hand bf16 decoder (checked equal to torch's exact float64 cast) and numpy float64. torch.equal semantics = numeric equality; bitwise count = any differing byte per element; math.fsum means; stable descending top-k via numpy. A first pass had a decoder bug (wrong exponent bit field), caught by the decoder self-check and fixed; every figure here is from the corrected run.",
+      "evidence": "Record names and order identical to my contract-derived list (255 = 3 + 3 x 84). All 255 records equal my recomputation field for field. exit_steps equal; every token's exit step is 3 on CPU. Every shape, dtype and finiteness value matches the contract: M1 [3,192,2048] and [3,49152] f32; runs [4,1,S,2048], [1,S,2048] and [1,S,49152] bf16 plus virtual191 [2048] f32; recomputations [2,2048] / [2,49152] bf16. The 23 M1-M4 coverage checks all pass. norm_input[3,0,-1] == virtual191.",
+      "m3_construction": "Rebuilt all shaped inputs independently and re-ran RMSNorm and F.linear from snapshot weights (model.norm.weight, lm_head.weight present, tie_word_embeddings false, eps 1e-6) on CPU. All 23 recomputation families x 2 repeats x 3 items reproduce the saved rows bit-for-bit, confirming the target-row placement and the cycled fill semantics.",
+      "layout": "Captured lm_head_input, lm_head_output and logits are contiguous with storage offset 0, so deviation 5's fresh copies match the native layout. On CPU, logits share storage with lm_head_output.",
+      "gpu_payload_estimate": "Re-serializing with separate logits storage (as GPU .cpu() copies produce) gives 46,360,421 bytes for the three large payloads, plus ~16 KB for provenance and run_spec: under the 50 MB contract limit, with ~3.6 MB margin."
+    },
+    "4_ledger_accounting": {
+      "result": "pass",
+      "enumeration": "prior_debit enumerates LEDGER.glob('*/LEASE.json') (bundle/controller/lease.py:238), with LEDGER hard-coded to this round's cloud_leases (lease.py:46); lease_root accepts any non-hidden direct child (lease.py:169-173). create refuses unless every sibling is terminated (lease.py:831-834).",
+      "simulation": "Scratch copy of the ledger with lease.LEDGER patched. A lease at cloud_leases/diagnostic_native_logit_v1 is accepted by lease_root. While not terminated, every other admission is rejected ('duplicate or unreconciled new lease debit') and create's sibling gate would refuse. Once terminated it is counted exactly once: total 21.64556796376644 + lease_spend_upper_usd, and a later make_plan sees 6 debits. The attempt_01-05 records are unchanged and still enumerated. A name collision with attempt_05 is rejected; a different prior_debit record is rejected; a terminated lease without lease_spend_upper_usd raises KeyError (the controller always sets it in confirm_absence).",
+      "collision_with_existing": "None. Controller writes are confined to the new root, plus append-mode opens of the existing cloud_leases/.lease_creation.lock."
+    },
+    "5_nothing_else_changed": {
+      "result": "pass",
+      "evidence": "Every recorded value matches the current bytes. R/FREEZE.json (8148c2ab...) matches precision_v1 FREEZE.json parent_freeze. R/bundle.tar.gz (a122f6ca...) matches R/FREEZE.json and attempt_01-03 bundle_record. precision_v1 FREEZE.json (8f05445e...) matches D FREEZE.json parent_freeze and D run_spec. precision_v1 bundle.tar.gz (5220dc9c...) matches its FREEZE.json and attempt_04/05 bundle_record. prior_debit.json (b55f5f6e...) matches the prior_debit_record in all five leases. attempt_01-05 LEASE.json match ATTEMPT05_SPENDING_AND_SHUTDOWN.json new_round_attempts (and the later leases' new_lease_debits). ATTEMPT05_NATIVE_FAILURE_PRESERVED.json (4e386e5a...) matches ATTEMPT05_SPENDING_AND_SHUTDOWN evidence. Hashes are identical before and after all my runs. A full-round sha256 inventory taken before any execution differs afterwards only by two additions, reviews/diagnostic_native_logit_v1_review.json and .md (mtimes 23:31:55 and 23:32:38 +0200, written by another process during this verification; content not read). No file changed or was removed, directories are unchanged, and D has no __pycache__."
+    },
+    "6_runbook": {
+      "result": "pass with F1, F2, F7",
+      "executed_offline": "Step 0 with RUN redirected to scratch (build.py verify: verified; inventory write: 5,146 entries, matching the implementation record). Step 3 plan (admitted; identical accounting). Step 10 inventory compare logic: lease-directory additions -> unchanged; an attempt_05 change -> changed; another lease directory -> changed. Step-10 observe_account argparse behaviour with an empty POD (F1).",
+      "gating": "Steps 0-1 are local or read-only; step 1's provider read was not executed. Step 2 is the approval checkpoint covering creation and export. Step 3 (offline plan), step 4 create (the only provider mutation that starts billing), steps 5-10, P and T all come after it. F1-F3 stop before creation, and F4-F11 are reachable only after create. Gating is procedural, not mechanical (F2).",
+      "consistency": "Deadlines (+2,400/+3,600/+4,500/+5,100 s), the $1.35 emergency, the balance floor 4.0286755391453752, the worker phases (bootstrap.py, worker.py), the accepted path handoff/accepted/<run_id>/<sha>/results, and F5-F10 behaviour all match the controller, launch and bootstrap code.",
+      "setup_budget_feasibility": "Historical long setups were bank uploads (attempt05: 3 h 27 min of uploads). Bootstrap to setup completion took <= 5 min 28 s (attempt05, 18:23:16 -> 18:28:45), 240 s (attempt01) and ~9 min 50 s from launch (attempt03). With bank_records {}, 2,400 s of setup is adequate; the download tail is the residual risk."
+    }
+  },
+  "checks_not_performed": [
+    "RUNBOOK steps 1, 2 and 4-10, and branches P and T, as live commands: they need the network, provider API, SSH or payment, all of which are forbidden.",
+    "A live observe_account.py observation (network forbidden). Only its argument handling was exercised.",
+    "Any GPU execution. The CUDA-only M0 _evaluation_runtime load and all GPU bit behaviour are unverified; CPU results are pipeline validation only.",
+    "On-pod bootstrap (venv, pinned wheel install, model download) and SSH transfer timing: requires a provider resource.",
+    "The controller's full lease.py self-test / test_lifecycle suite. Not requested; the controller is byte-identical to the pinned attempt05 sources, and only watch_fixture was exercised, via A5.",
+    "Reading reviews/diagnostic_native_logit_v1_review.{json,md}: excluded to keep this verification independent."
+  ],
+  "scratch_artifacts": {
+    "freeze_check": "check1_freeze.py, check1_freeze.out.json",
+    "unchanged_check": "check5_unchanged.py, check5.out.json, check5_after.out.json, round_inventory_{before,after}.sha256, ledger_meta_*.txt",
+    "test_wrapper": "run_test.py",
+    "rerun_evidence": "evidence/A2..A6 (A2-A6 JSON)",
+    "recomputation": "recompute_independent.py, recompute.out.json",
+    "adversarial": "adversarial_verifier.py, adversarial.out.json",
+    "ledger": "ledger_accounting.py, ledger_accounting.out.json",
+    "runbook": "runbook/"
+  }
+}

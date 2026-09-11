@@ -1,0 +1,5791 @@
+{
+  "all_consumed_file_records": {
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json": {
+      "bytes": 21869,
+      "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+      "stat_after": {
+        "bytes": 21869,
+        "ctime_ns": 1788386629046298034,
+        "device": 66306,
+        "inode": 55081504,
+        "mtime_ns": 1788386629046298034,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 21869,
+        "ctime_ns": 1788386629046298034,
+        "device": 66306,
+        "inode": 55081504,
+        "mtime_ns": 1788386629046298034,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json": {
+      "bytes": 9589,
+      "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+      "stat_after": {
+        "bytes": 9589,
+        "ctime_ns": 1788386629046298034,
+        "device": 66306,
+        "inode": 55081516,
+        "mtime_ns": 1788386629046298034,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 9589,
+        "ctime_ns": 1788386629046298034,
+        "device": 66306,
+        "inode": 55081516,
+        "mtime_ns": 1788386629046298034,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json": {
+      "bytes": 94410,
+      "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+      "stat_after": {
+        "bytes": 94410,
+        "ctime_ns": 1788807275486157826,
+        "device": 66306,
+        "inode": 55466089,
+        "mtime_ns": 1788807275486157826,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 94410,
+        "ctime_ns": 1788807275486157826,
+        "device": 66306,
+        "inode": 55466089,
+        "mtime_ns": 1788807275486157826,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_02.json": {
+      "bytes": 98110,
+      "sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95",
+      "stat_after": {
+        "bytes": 98110,
+        "ctime_ns": 1788807276289161959,
+        "device": 66306,
+        "inode": 55466090,
+        "mtime_ns": 1788807276289161959,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 98110,
+        "ctime_ns": 1788807276289161959,
+        "device": 66306,
+        "inode": 55466090,
+        "mtime_ns": 1788807276289161959,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_03.json": {
+      "bytes": 96617,
+      "sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9",
+      "stat_after": {
+        "bytes": 96617,
+        "ctime_ns": 1788807277083274793,
+        "device": 66306,
+        "inode": 55466091,
+        "mtime_ns": 1788807277083274793,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 96617,
+        "ctime_ns": 1788807277083274793,
+        "device": 66306,
+        "inode": 55466091,
+        "mtime_ns": 1788807277083274793,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_04.json": {
+      "bytes": 95461,
+      "sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba",
+      "stat_after": {
+        "bytes": 95461,
+        "ctime_ns": 1788807277879314158,
+        "device": 66306,
+        "inode": 55466092,
+        "mtime_ns": 1788807277879314158,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 95461,
+        "ctime_ns": 1788807277879314158,
+        "device": 66306,
+        "inode": 55466092,
+        "mtime_ns": 1788807277879314158,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_05.json": {
+      "bytes": 92492,
+      "sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5",
+      "stat_after": {
+        "bytes": 92492,
+        "ctime_ns": 1788807278664845152,
+        "device": 66306,
+        "inode": 55466093,
+        "mtime_ns": 1788807278664845152,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 92492,
+        "ctime_ns": 1788807278664845152,
+        "device": 66306,
+        "inode": 55466093,
+        "mtime_ns": 1788807278664845152,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json": {
+      "bytes": 19977,
+      "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+      "stat_after": {
+        "bytes": 19977,
+        "ctime_ns": 1788888000928146042,
+        "device": 66306,
+        "inode": 55472261,
+        "mtime_ns": 1788888000928146042,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 19977,
+        "ctime_ns": 1788888000928146042,
+        "device": 66306,
+        "inode": 55472261,
+        "mtime_ns": 1788888000928146042,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json": {
+      "bytes": 25792,
+      "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+      "stat_after": {
+        "bytes": 25792,
+        "ctime_ns": 1788884679011192176,
+        "device": 66306,
+        "inode": 55472279,
+        "mtime_ns": 1788884679011192176,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 25792,
+        "ctime_ns": 1788884679011192176,
+        "device": 66306,
+        "inode": 55472279,
+        "mtime_ns": 1788884679011192176,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json": {
+      "bytes": 24834,
+      "sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149",
+      "stat_after": {
+        "bytes": 24834,
+        "ctime_ns": 1788897665884970237,
+        "device": 66306,
+        "inode": 55472225,
+        "mtime_ns": 1788897665884970237,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 24834,
+        "ctime_ns": 1788897665884970237,
+        "device": 66306,
+        "inode": 55472225,
+        "mtime_ns": 1788897665884970237,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/COMPLETE.json": {
+      "bytes": 531,
+      "sha256": "fc736d09ce6fd28d4568a2c8947ede41752f73e1c91f6b875df9da166ae8db5f",
+      "stat_after": {
+        "bytes": 531,
+        "ctime_ns": 1788968036631862372,
+        "device": 66306,
+        "inode": 57576662,
+        "mtime_ns": 1788967971055555176,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 531,
+        "ctime_ns": 1788968036631862372,
+        "device": 66306,
+        "inode": 57576662,
+        "mtime_ns": 1788967971055555176,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json": {
+      "bytes": 56959,
+      "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb",
+      "stat_after": {
+        "bytes": 56959,
+        "ctime_ns": 1788968036842447344,
+        "device": 66306,
+        "inode": 57576663,
+        "mtime_ns": 1788967926301028897,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 56959,
+        "ctime_ns": 1788968036842447344,
+        "device": 66306,
+        "inode": 57576663,
+        "mtime_ns": 1788967926301028897,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/arrays.npz": {
+      "bytes": 1763217,
+      "sha256": "e8ea8502664838f915a8219ffed062dad54f4db22f5c42220cd9c2e195c95add",
+      "stat_after": {
+        "bytes": 1763217,
+        "ctime_ns": 1788968037521224741,
+        "device": 66306,
+        "inode": 57576672,
+        "mtime_ns": 1788967951826758710,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 1763217,
+        "ctime_ns": 1788968037521224741,
+        "device": 66306,
+        "inode": 57576672,
+        "mtime_ns": 1788967951826758710,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3",
+      "stat_after": {
+        "bytes": 141949409,
+        "ctime_ns": 1788968088503012588,
+        "device": 66306,
+        "inode": 57576673,
+        "mtime_ns": 1788967951873758213,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 141949409,
+        "ctime_ns": 1788968088503012588,
+        "device": 66306,
+        "inode": 57576673,
+        "mtime_ns": 1788967951873758213,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/arrays.npz": {
+      "bytes": 1763139,
+      "sha256": "ec2f5484d52bf9e967fa0476fcbfa161927f87db56bef5ebe7b6782668288aba",
+      "stat_after": {
+        "bytes": 1763139,
+        "ctime_ns": 1788968089192786938,
+        "device": 66306,
+        "inode": 57715113,
+        "mtime_ns": 1788967970622559760,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 1763139,
+        "ctime_ns": 1788968089192786938,
+        "device": 66306,
+        "inode": 57715113,
+        "mtime_ns": 1788967970622559760,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d",
+      "stat_after": {
+        "bytes": 141949409,
+        "ctime_ns": 1788968158674594726,
+        "device": 66306,
+        "inode": 57715114,
+        "mtime_ns": 1788967970717558754,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 141949409,
+        "ctime_ns": 1788968158674594726,
+        "device": 66306,
+        "inode": 57715114,
+        "mtime_ns": 1788967970717558754,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/COMPLETE.json": {
+      "bytes": 887,
+      "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e",
+      "stat_after": {
+        "bytes": 887,
+        "ctime_ns": 1788938277889993168,
+        "device": 66306,
+        "inode": 57412650,
+        "mtime_ns": 1788937697187034069,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 887,
+        "ctime_ns": 1788938277889993168,
+        "device": 66306,
+        "inode": 57412650,
+        "mtime_ns": 1788937697187034069,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/OWNER.json": {
+      "bytes": 151299,
+      "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b",
+      "stat_after": {
+        "bytes": 151299,
+        "ctime_ns": 1788938278033413435,
+        "device": 66306,
+        "inode": 57412651,
+        "mtime_ns": 1788937539216707600,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 151299,
+        "ctime_ns": 1788938278033413435,
+        "device": 66306,
+        "inode": 57412651,
+        "mtime_ns": 1788937539216707600,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/arrays.npz": {
+      "bytes": 3982267,
+      "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15",
+      "stat_after": {
+        "bytes": 3982267,
+        "ctime_ns": 1788938279101544442,
+        "device": 66306,
+        "inode": 57412653,
+        "mtime_ns": 1788937672974290578,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3982267,
+        "ctime_ns": 1788938279101544442,
+        "device": 66306,
+        "inode": 57412653,
+        "mtime_ns": 1788937672974290578,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/cache.pt": {
+      "bytes": 407374621,
+      "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4",
+      "stat_after": {
+        "bytes": 407374621,
+        "ctime_ns": 1788938372166409317,
+        "device": 66306,
+        "inode": 57412654,
+        "mtime_ns": 1788937673121289021,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 407374621,
+        "ctime_ns": 1788938372166409317,
+        "device": 66306,
+        "inode": 57412654,
+        "mtime_ns": 1788937673121289021,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_01/arrays.npz": {
+      "bytes": 3794670,
+      "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8c5f03df57dd9168142aa759",
+      "stat_after": {
+        "bytes": 3794670,
+        "ctime_ns": 1788938372994196207,
+        "device": 66306,
+        "inode": 57412715,
+        "mtime_ns": 1788937678027237047,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3794670,
+        "ctime_ns": 1788938372994196207,
+        "device": 66306,
+        "inode": 57412715,
+        "mtime_ns": 1788937678027237047,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_02/arrays.npz": {
+      "bytes": 3752472,
+      "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065",
+      "stat_after": {
+        "bytes": 3752472,
+        "ctime_ns": 1788938373791646018,
+        "device": 66306,
+        "inode": 57412718,
+        "mtime_ns": 1788937682561189015,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3752472,
+        "ctime_ns": 1788938373791646018,
+        "device": 66306,
+        "inode": 57412718,
+        "mtime_ns": 1788937682561189015,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_03/arrays.npz": {
+      "bytes": 3774084,
+      "sha256": "b1c67e5e2956a9224518b4d50b3b9c65bce75f04dfd825ef249d3637a4802989",
+      "stat_after": {
+        "bytes": 3774084,
+        "ctime_ns": 1788938374600440762,
+        "device": 66306,
+        "inode": 57412721,
+        "mtime_ns": 1788937687284138980,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3774084,
+        "ctime_ns": 1788938374600440762,
+        "device": 66306,
+        "inode": 57412721,
+        "mtime_ns": 1788937687284138980,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_04/arrays.npz": {
+      "bytes": 3764362,
+      "sha256": "173fe75b882c2d916ea9675e8828ab5a6d88bf3c2594cd5859e7c1103408012b",
+      "stat_after": {
+        "bytes": 3764362,
+        "ctime_ns": 1788938375429982454,
+        "device": 66306,
+        "inode": 57412724,
+        "mtime_ns": 1788937691956089485,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3764362,
+        "ctime_ns": 1788938375429982454,
+        "device": 66306,
+        "inode": 57412724,
+        "mtime_ns": 1788937691956089485,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_05/arrays.npz": {
+      "bytes": 3753434,
+      "sha256": "ab7345c4542907519bcb055b3f498bb4c6d9e82431181e78b7d5a6386b7d131c",
+      "stat_after": {
+        "bytes": 3753434,
+        "ctime_ns": 1788938376286907380,
+        "device": 66306,
+        "inode": 57412727,
+        "mtime_ns": 1788937696779038391,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3753434,
+        "ctime_ns": 1788938376286907380,
+        "device": 66306,
+        "inode": 57412727,
+        "mtime_ns": 1788937696779038391,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/COMPLETE.json": {
+      "bytes": 666,
+      "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f",
+      "stat_after": {
+        "bytes": 666,
+        "ctime_ns": 1788951907081685696,
+        "device": 66306,
+        "inode": 57549880,
+        "mtime_ns": 1788951635011713370,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 666,
+        "ctime_ns": 1788951907081685696,
+        "device": 66306,
+        "inode": 57549880,
+        "mtime_ns": 1788951635011713370,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/OWNER.json": {
+      "bytes": 77181,
+      "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2",
+      "stat_after": {
+        "bytes": 77181,
+        "ctime_ns": 1788951907237212438,
+        "device": 66306,
+        "inode": 57550175,
+        "mtime_ns": 1788951612009956665,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 77181,
+        "ctime_ns": 1788951907237212438,
+        "device": 66306,
+        "inode": 57550175,
+        "mtime_ns": 1788951612009956665,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/comparisons/paired_ranks.npz": {
+      "bytes": 15440995,
+      "sha256": "968bf3313ed87dee4b3329ab2d875076ff9dbb7da9513d9fae030e8177e371ff",
+      "stat_after": {
+        "bytes": 15440995,
+        "ctime_ns": 1788951910132767987,
+        "device": 66306,
+        "inode": 57550329,
+        "mtime_ns": 1788951634937714153,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 15440995,
+        "ctime_ns": 1788951910132767987,
+        "device": 66306,
+        "inode": 57550329,
+        "mtime_ns": 1788951634937714153,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/comparisons/scores.npz": {
+      "bytes": 362313,
+      "sha256": "d5da1e91ac0ce8b30fb1b53643cf306c0cd05ed6dd884e6f9123e16ff8bc2a9b",
+      "stat_after": {
+        "bytes": 362313,
+        "ctime_ns": 1788951910194482995,
+        "device": 66306,
+        "inode": 57550331,
+        "mtime_ns": 1788951632322741811,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 362313,
+        "ctime_ns": 1788951910194482995,
+        "device": 66306,
+        "inode": 57550331,
+        "mtime_ns": 1788951632322741811,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/penultimate/arrays.npz": {
+      "bytes": 3813311,
+      "sha256": "1cef42112bb2859fa4de26dcf60559b5cae90a11892ac9e4633f859d45546c7d",
+      "stat_after": {
+        "bytes": 3813311,
+        "ctime_ns": 1788951910977674590,
+        "device": 66306,
+        "inode": 57554377,
+        "mtime_ns": 1788951621483856457,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3813311,
+        "ctime_ns": 1788951910977674590,
+        "device": 66306,
+        "inode": 57554377,
+        "mtime_ns": 1788951621483856457,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/positions/diagonal/arrays.npz": {
+      "bytes": 3723655,
+      "sha256": "fbb4efa8eb0e7534dec8096480ae96eded7911339ef3c37e3b7be63b48f60d48",
+      "stat_after": {
+        "bytes": 3723655,
+        "ctime_ns": 1788951911599039484,
+        "device": 66306,
+        "inode": 57554387,
+        "mtime_ns": 1788951631803747301,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3723655,
+        "ctime_ns": 1788951911599039484,
+        "device": 66306,
+        "inode": 57554387,
+        "mtime_ns": 1788951631803747301,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/positions/sampled_sum/arrays.npz": {
+      "bytes": 3812126,
+      "sha256": "ec0a67b30847985eb475e04753c8069d7031e087c699df80c221397247859cd5",
+      "stat_after": {
+        "bytes": 3812126,
+        "ctime_ns": 1788951912248567572,
+        "device": 66306,
+        "inode": 57554390,
+        "mtime_ns": 1788951628133786119,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3812126,
+        "ctime_ns": 1788951912248567572,
+        "device": 66306,
+        "inode": 57554390,
+        "mtime_ns": 1788951628133786119,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/COMPLETE.json": {
+      "bytes": 887,
+      "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e",
+      "stat_after": {
+        "bytes": 887,
+        "ctime_ns": 1788951912276986708,
+        "device": 66306,
+        "inode": 57554396,
+        "mtime_ns": 1788937697187034069,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 887,
+        "ctime_ns": 1788951912276986708,
+        "device": 66306,
+        "inode": 57554396,
+        "mtime_ns": 1788937697187034069,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/OWNER.json": {
+      "bytes": 151299,
+      "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b",
+      "stat_after": {
+        "bytes": 151299,
+        "ctime_ns": 1788951912307573747,
+        "device": 66306,
+        "inode": 57554397,
+        "mtime_ns": 1788937539216707600,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 151299,
+        "ctime_ns": 1788951912307573747,
+        "device": 66306,
+        "inode": 57554397,
+        "mtime_ns": 1788937539216707600,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/arrays.npz": {
+      "bytes": 3982267,
+      "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15",
+      "stat_after": {
+        "bytes": 3982267,
+        "ctime_ns": 1788951912959670620,
+        "device": 66306,
+        "inode": 57554399,
+        "mtime_ns": 1788937672974290578,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3982267,
+        "ctime_ns": 1788951912959670620,
+        "device": 66306,
+        "inode": 57554399,
+        "mtime_ns": 1788937672974290578,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt": {
+      "bytes": 407374621,
+      "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4",
+      "stat_after": {
+        "bytes": 407374621,
+        "ctime_ns": 1788951987294894127,
+        "device": 66306,
+        "inode": 57554400,
+        "mtime_ns": 1788937673121289021,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 407374621,
+        "ctime_ns": 1788951987294894127,
+        "device": 66306,
+        "inode": 57554400,
+        "mtime_ns": 1788937673121289021,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_01/arrays.npz": {
+      "bytes": 3794670,
+      "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8c5f03df57dd9168142aa759",
+      "stat_after": {
+        "bytes": 3794670,
+        "ctime_ns": 1788951988003697236,
+        "device": 66306,
+        "inode": 57554406,
+        "mtime_ns": 1788937678027237047,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3794670,
+        "ctime_ns": 1788951988003697236,
+        "device": 66306,
+        "inode": 57554406,
+        "mtime_ns": 1788937678027237047,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_02/arrays.npz": {
+      "bytes": 3752472,
+      "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065",
+      "stat_after": {
+        "bytes": 3752472,
+        "ctime_ns": 1788951988690435259,
+        "device": 66306,
+        "inode": 57554409,
+        "mtime_ns": 1788937682561189015,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3752472,
+        "ctime_ns": 1788951988690435259,
+        "device": 66306,
+        "inode": 57554409,
+        "mtime_ns": 1788937682561189015,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_03/arrays.npz": {
+      "bytes": 3774084,
+      "sha256": "b1c67e5e2956a9224518b4d50b3b9c65bce75f04dfd825ef249d3637a4802989",
+      "stat_after": {
+        "bytes": 3774084,
+        "ctime_ns": 1788951989378922927,
+        "device": 66306,
+        "inode": 57554412,
+        "mtime_ns": 1788937687284138980,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3774084,
+        "ctime_ns": 1788951989378922927,
+        "device": 66306,
+        "inode": 57554412,
+        "mtime_ns": 1788937687284138980,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_04/arrays.npz": {
+      "bytes": 3764362,
+      "sha256": "173fe75b882c2d916ea9675e8828ab5a6d88bf3c2594cd5859e7c1103408012b",
+      "stat_after": {
+        "bytes": 3764362,
+        "ctime_ns": 1788951990254797602,
+        "device": 66306,
+        "inode": 57554415,
+        "mtime_ns": 1788937691956089485,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3764362,
+        "ctime_ns": 1788951990254797602,
+        "device": 66306,
+        "inode": 57554415,
+        "mtime_ns": 1788937691956089485,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_05/arrays.npz": {
+      "bytes": 3753434,
+      "sha256": "ab7345c4542907519bcb055b3f498bb4c6d9e82431181e78b7d5a6386b7d131c",
+      "stat_after": {
+        "bytes": 3753434,
+        "ctime_ns": 1788951990818181756,
+        "device": 66306,
+        "inode": 57554418,
+        "mtime_ns": 1788937696779038391,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 3753434,
+        "ctime_ns": 1788951990818181756,
+        "device": 66306,
+        "inode": 57554418,
+        "mtime_ns": 1788937696779038391,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    }
+  },
+  "counts": {
+    "calibration_identities": 8,
+    "evaluation_binaries": 23,
+    "evaluation_roots": 4,
+    "known_binaries_original_exact": 7,
+    "reconstructed_exact": 1,
+    "unresolved": 8
+  },
+  "downstream": {
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation": [
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1784226499,
+          "sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "huginn/fit_01",
+        "fit_identity_sha256": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b",
+        "lens_key": "huginn/fit_01/final/cursor_000100_7983035296a54ff2978742466ac3631e/lens.pt"
+      }
+    ],
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation": [
+      {
+        "current_binary_status": "complete_hash_verified",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+        },
+        "exact_original_or_reconstruction_available": true,
+        "fit": "ouro/fit_01",
+        "fit_identity_sha256": "ac341d7e6e98ab640417d26ab3417835660b3a6367de71821ba43d1c5cbe6f08",
+        "lens_key": "ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt"
+      },
+      {
+        "current_binary_status": "reconstructed_historical_bytes_verified",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8"
+        },
+        "exact_original_or_reconstruction_available": true,
+        "fit": "ouro/fit_02",
+        "fit_identity_sha256": "d5ef4f4b53a34f359b71c6812a7731f6b4bf5f404a4a59828ca6569c45ae3a31",
+        "lens_key": "ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt"
+      },
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "8cf117d4bfcab3e53741c98fba233ed04cae15c7b3c076b52368a403199aeb96"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "ouro/fit_03",
+        "fit_identity_sha256": "431514bb155a07d5d96a7b538b64a6f2fb84f7c2e96f0509cad84b7c5b87333f",
+        "lens_key": "ouro/fit_03/final/cursor_000100_93af310a05e04e1fac85763230e0cecc/lens.pt"
+      },
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "8e14adbe2879cf2956e19bddd13b863f159294b02a028307c2364a5b607f65b9"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "ouro/fit_04",
+        "fit_identity_sha256": "5749ec4e7757aee260e7239303b9dd8118d2cf66b1de74f214a9aade3ef9a6c5",
+        "lens_key": "ouro/fit_04/final/cursor_000100_e042314b4bd24b13bb4426b1345b294a/lens.pt"
+      },
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "1c2a7129fa0607ddced28f498279e02a42cea9d9e2385b31c57fdb88ad2be98c"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "ouro/fit_05",
+        "fit_identity_sha256": "b65d15f0983792e2f2a0e659f698d2cece5bbf110571acca231d2789d57a4c04",
+        "lens_key": "ouro/fit_05/final/cursor_000100_436f5cb2c01a409b9013b28fffb7d088/lens.pt"
+      }
+    ],
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation": [
+      {
+        "current_binary_status": "complete_hash_verified",
+        "evaluated_lens_record": {
+          "bytes": 1593887875,
+          "sha256": "dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560"
+        },
+        "exact_original_or_reconstruction_available": true,
+        "fit": "controls/ouro_penultimate/fit_01",
+        "fit_identity_sha256": "9f96d8e2e7c26e73d1436867d24e6de56d0297b5d80865a77367e3c736859308",
+        "lens_key": "controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt"
+      },
+      {
+        "current_binary_status": "complete_hash_verified",
+        "evaluated_lens_record": {
+          "bytes": 3204553347,
+          "sha256": "b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775"
+        },
+        "exact_original_or_reconstruction_available": true,
+        "fit": "controls/ouro_positions/fit_01",
+        "fit_identity_sha256": "2171215dff04c30e65bafec9f3e9cdec670b5652cffab84f1949ccaa6ec30603",
+        "lens_key": "controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt"
+      }
+    ],
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation": [
+      {
+        "current_binary_status": "complete_hash_verified",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+        },
+        "exact_original_or_reconstruction_available": true,
+        "fit": "ouro/fit_01",
+        "fit_identity_sha256": "ac341d7e6e98ab640417d26ab3417835660b3a6367de71821ba43d1c5cbe6f08",
+        "lens_key": "ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt"
+      },
+      {
+        "current_binary_status": "reconstructed_historical_bytes_verified",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8"
+        },
+        "exact_original_or_reconstruction_available": true,
+        "fit": "ouro/fit_02",
+        "fit_identity_sha256": "d5ef4f4b53a34f359b71c6812a7731f6b4bf5f404a4a59828ca6569c45ae3a31",
+        "lens_key": "ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt"
+      },
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "8cf117d4bfcab3e53741c98fba233ed04cae15c7b3c076b52368a403199aeb96"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "ouro/fit_03",
+        "fit_identity_sha256": "431514bb155a07d5d96a7b538b64a6f2fb84f7c2e96f0509cad84b7c5b87333f",
+        "lens_key": "ouro/fit_03/final/cursor_000100_93af310a05e04e1fac85763230e0cecc/lens.pt"
+      },
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "8e14adbe2879cf2956e19bddd13b863f159294b02a028307c2364a5b607f65b9"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "ouro/fit_04",
+        "fit_identity_sha256": "5749ec4e7757aee260e7239303b9dd8118d2cf66b1de74f214a9aade3ef9a6c5",
+        "lens_key": "ouro/fit_04/final/cursor_000100_e042314b4bd24b13bb4426b1345b294a/lens.pt"
+      },
+      {
+        "current_binary_status": "absent",
+        "evaluated_lens_record": {
+          "bytes": 1602276737,
+          "sha256": "1c2a7129fa0607ddced28f498279e02a42cea9d9e2385b31c57fdb88ad2be98c"
+        },
+        "exact_original_or_reconstruction_available": false,
+        "fit": "ouro/fit_05",
+        "fit_identity_sha256": "b65d15f0983792e2f2a0e659f698d2cece5bbf110571acca231d2789d57a4c04",
+        "lens_key": "ouro/fit_05/final/cursor_000100_436f5cb2c01a409b9013b28fffb7d088/lens.pt"
+      }
+    ]
+  },
+  "duplicate_evaluation_binaries": [
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/arrays.npz",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/arrays.npz"
+    },
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/cache.pt",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt"
+    },
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_01/arrays.npz",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_01/arrays.npz"
+    },
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_02/arrays.npz",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_02/arrays.npz"
+    },
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_03/arrays.npz",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_03/arrays.npz"
+    },
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_05/arrays.npz",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_05/arrays.npz"
+    },
+    {
+      "first": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_04/arrays.npz",
+      "same_full_file_sha256": true,
+      "second": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_04/arrays.npz"
+    }
+  ],
+  "evaluation_roots": {
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation": {
+      "complete_record": {
+        "bytes": 531,
+        "sha256": "fc736d09ce6fd28d4568a2c8947ede41752f73e1c91f6b875df9da166ae8db5f",
+        "stat_after": {
+          "bytes": 531,
+          "ctime_ns": 1788968036631862372,
+          "device": 66306,
+          "inode": 57576662,
+          "mtime_ns": 1788967971055555176,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 531,
+          "ctime_ns": 1788968036631862372,
+          "device": 66306,
+          "inode": 57576662,
+          "mtime_ns": 1788967971055555176,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "identity_sha256": "5744138981f9dc47382c7ccb6977d13a14fefd20ca69043e87eaad9d2ccc2d95",
+      "owner_record": {
+        "bytes": 56959,
+        "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb",
+        "stat_after": {
+          "bytes": 56959,
+          "ctime_ns": 1788968036842447344,
+          "device": 66306,
+          "inode": 57576663,
+          "mtime_ns": 1788967926301028897,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 56959,
+          "ctime_ns": 1788968036842447344,
+          "device": 66306,
+          "inode": 57576663,
+          "mtime_ns": 1788967926301028897,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "sections": [
+        {
+          "seal": {
+            "bytes": 390,
+            "sha256": "a4644347a4f7d0c58c60e377d72d84d2e730054b35341a6e30e8115b1a7f70a3"
+          },
+          "section": "population"
+        },
+        {
+          "seal": {
+            "bytes": 724,
+            "sha256": "b19fcf3375dba24fb99b86280919206b09877843d0ab08501f862d7cadec5486"
+          },
+          "section": "seeds/2026090803"
+        },
+        {
+          "seal": {
+            "bytes": 724,
+            "sha256": "b008716ebac3e9705cb181752a75a8d238292be2e4a15d337c0f01a5e420b67a"
+          },
+          "section": "seeds/2026090804"
+        }
+      ],
+      "status": "owner_complete_seal_chains_passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation": {
+      "complete_record": {
+        "bytes": 887,
+        "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e",
+        "stat_after": {
+          "bytes": 887,
+          "ctime_ns": 1788938277889993168,
+          "device": 66306,
+          "inode": 57412650,
+          "mtime_ns": 1788937697187034069,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 887,
+          "ctime_ns": 1788938277889993168,
+          "device": 66306,
+          "inode": 57412650,
+          "mtime_ns": 1788937697187034069,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "identity_sha256": "238070a6284bf7a5da54632c2559d41d907ee2d7ebd133654772cbf2d3ddb037",
+      "owner_record": {
+        "bytes": 151299,
+        "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b",
+        "stat_after": {
+          "bytes": 151299,
+          "ctime_ns": 1788938278033413435,
+          "device": 66306,
+          "inode": 57412651,
+          "mtime_ns": 1788937539216707600,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 151299,
+          "ctime_ns": 1788938278033413435,
+          "device": 66306,
+          "inode": 57412651,
+          "mtime_ns": 1788937539216707600,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "sections": [
+        {
+          "seal": {
+            "bytes": 815,
+            "sha256": "3c09faa0501c513f2b2e54ad8f8b566e49bd3e0b2abe3acf56ea5891500721f6"
+          },
+          "section": "common"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "b3e91cf43e05f190825688d0a509d5c882630b07d7a2d7d782c47dc122b2fee4"
+          },
+          "section": "fits/fit_01"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "03d6cd6d90a1bb27f6a67690e80983f645a5852be299c94291b3289fb9587c41"
+          },
+          "section": "fits/fit_02"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "55764a30a8f93c017c31aec10314351df8f16234616180a9af8d3f52e184a3f2"
+          },
+          "section": "fits/fit_03"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "d3303b62568555954b648617e1d41c21e42cab90e023e1f1392e43cfbd94604a"
+          },
+          "section": "fits/fit_04"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "ceaeeb38360e828a76c707f9dabedf5ae40f0d2e32a3d38909aa54ca15505661"
+          },
+          "section": "fits/fit_05"
+        }
+      ],
+      "status": "owner_complete_seal_chains_passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation": {
+      "complete_record": {
+        "bytes": 666,
+        "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f",
+        "stat_after": {
+          "bytes": 666,
+          "ctime_ns": 1788951907081685696,
+          "device": 66306,
+          "inode": 57549880,
+          "mtime_ns": 1788951635011713370,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 666,
+          "ctime_ns": 1788951907081685696,
+          "device": 66306,
+          "inode": 57549880,
+          "mtime_ns": 1788951635011713370,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "identity_sha256": "8898e66afec466308b22b6df25861ffa2275a6cb7a601eeddee3ab1042e50232",
+      "owner_record": {
+        "bytes": 77181,
+        "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2",
+        "stat_after": {
+          "bytes": 77181,
+          "ctime_ns": 1788951907237212438,
+          "device": 66306,
+          "inode": 57550175,
+          "mtime_ns": 1788951612009956665,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 77181,
+          "ctime_ns": 1788951907237212438,
+          "device": 66306,
+          "inode": 57550175,
+          "mtime_ns": 1788951612009956665,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "sections": [
+        {
+          "seal": {
+            "bytes": 392,
+            "sha256": "f79f904a97e9bc9b054416f3a7c807877e8c6b0910b8dd01322a077f1b7681a6"
+          },
+          "section": "penultimate"
+        },
+        {
+          "seal": {
+            "bytes": 402,
+            "sha256": "6b5e5843943a484b3f8d3c7ae42c25a3c74f2fe2b4932b3ccaf0cda1fe0b5264"
+          },
+          "section": "positions/sampled_sum"
+        },
+        {
+          "seal": {
+            "bytes": 399,
+            "sha256": "d3179ce077daf3bde468556376ab7910034075ef7c144d7d56643d871ba59219"
+          },
+          "section": "positions/diagonal"
+        },
+        {
+          "seal": {
+            "bytes": 937,
+            "sha256": "740dd45b2c253acbd85513d0c9d0d2c6a4cf6d4d5991af9f1361d5edb425b2b3"
+          },
+          "section": "comparisons"
+        }
+      ],
+      "status": "owner_complete_seal_chains_passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation": {
+      "complete_record": {
+        "bytes": 887,
+        "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e",
+        "stat_after": {
+          "bytes": 887,
+          "ctime_ns": 1788951912276986708,
+          "device": 66306,
+          "inode": 57554396,
+          "mtime_ns": 1788937697187034069,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 887,
+          "ctime_ns": 1788951912276986708,
+          "device": 66306,
+          "inode": 57554396,
+          "mtime_ns": 1788937697187034069,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "identity_sha256": "238070a6284bf7a5da54632c2559d41d907ee2d7ebd133654772cbf2d3ddb037",
+      "owner_record": {
+        "bytes": 151299,
+        "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b",
+        "stat_after": {
+          "bytes": 151299,
+          "ctime_ns": 1788951912307573747,
+          "device": 66306,
+          "inode": 57554397,
+          "mtime_ns": 1788937539216707600,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 151299,
+          "ctime_ns": 1788951912307573747,
+          "device": 66306,
+          "inode": 57554397,
+          "mtime_ns": 1788937539216707600,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "sections": [
+        {
+          "seal": {
+            "bytes": 815,
+            "sha256": "3c09faa0501c513f2b2e54ad8f8b566e49bd3e0b2abe3acf56ea5891500721f6"
+          },
+          "section": "common"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "b3e91cf43e05f190825688d0a509d5c882630b07d7a2d7d782c47dc122b2fee4"
+          },
+          "section": "fits/fit_01"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "03d6cd6d90a1bb27f6a67690e80983f645a5852be299c94291b3289fb9587c41"
+          },
+          "section": "fits/fit_02"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "55764a30a8f93c017c31aec10314351df8f16234616180a9af8d3f52e184a3f2"
+          },
+          "section": "fits/fit_03"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "d3303b62568555954b648617e1d41c21e42cab90e023e1f1392e43cfbd94604a"
+          },
+          "section": "fits/fit_04"
+        },
+        {
+          "seal": {
+            "bytes": 389,
+            "sha256": "ceaeeb38360e828a76c707f9dabedf5ae40f0d2e32a3d38909aa54ca15505661"
+          },
+          "section": "fits/fit_05"
+        }
+      ],
+      "status": "owner_complete_seal_chains_passed"
+    }
+  },
+  "files": {
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/arrays.npz": {
+      "actual": {
+        "bytes": 1763217,
+        "sha256": "e8ea8502664838f915a8219ffed062dad54f4db22f5c42220cd9c2e195c95add",
+        "stat_after": {
+          "bytes": 1763217,
+          "ctime_ns": 1788968037521224741,
+          "device": 66306,
+          "inode": 57576672,
+          "mtime_ns": 1788967951826758710,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 1763217,
+          "ctime_ns": 1788968037521224741,
+          "device": 66306,
+          "inode": 57576672,
+          "mtime_ns": 1788967951826758710,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "coda_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 606208,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "coda_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 14208,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "coda_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 4736,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "jlens_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 606208,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "jlens_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 14208,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "jlens_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 4736,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "native_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "raw_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 606208,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "raw_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 14208,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "raw_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 4736,
+          "shape": [
+            148,
+            32
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 1763217,
+        "sha256": "e8ea8502664838f915a8219ffed062dad54f4db22f5c42220cd9c2e195c95add"
+      },
+      "semantics": "Huginn exact schema, vocabulary, common name support, -1 padding, own-slot aliases and coda/native endpoint",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/cache.pt": {
+      "actual": {
+        "bytes": 141949409,
+        "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3",
+        "stat_after": {
+          "bytes": 141949409,
+          "ctime_ns": 1788968088503012588,
+          "device": 66306,
+          "inode": 57576673,
+          "mtime_ns": 1788967951873758213,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 141949409,
+          "ctime_ns": 1788968088503012588,
+          "device": 66306,
+          "inode": 57576673,
+          "mtime_ns": 1788967951873758213,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 141949409,
+        "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+      },
+      "semantics": "exact CPU FP32 cache schema/geometry and saved native argmax equality",
+      "status": "passed",
+      "tensors": {
+        "H": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            32,
+            5280
+          ]
+        },
+        "native_logits": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            65536
+          ]
+        },
+        "target_states": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            5280
+          ]
+        }
+      }
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/arrays.npz": {
+      "actual": {
+        "bytes": 1763139,
+        "sha256": "ec2f5484d52bf9e967fa0476fcbfa161927f87db56bef5ebe7b6782668288aba",
+        "stat_after": {
+          "bytes": 1763139,
+          "ctime_ns": 1788968089192786938,
+          "device": 66306,
+          "inode": 57715113,
+          "mtime_ns": 1788967970622559760,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 1763139,
+          "ctime_ns": 1788968089192786938,
+          "device": 66306,
+          "inode": 57715113,
+          "mtime_ns": 1788967970622559760,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "coda_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 606208,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "coda_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 14208,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "coda_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 4736,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "jlens_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 606208,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "jlens_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 14208,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "jlens_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 4736,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "native_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "raw_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 606208,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "raw_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 14208,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "raw_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 4736,
+          "shape": [
+            148,
+            32
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 1763139,
+        "sha256": "ec2f5484d52bf9e967fa0476fcbfa161927f87db56bef5ebe7b6782668288aba"
+      },
+      "semantics": "Huginn exact schema, vocabulary, common name support, -1 padding, own-slot aliases and coda/native endpoint",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/cache.pt": {
+      "actual": {
+        "bytes": 141949409,
+        "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d",
+        "stat_after": {
+          "bytes": 141949409,
+          "ctime_ns": 1788968158674594726,
+          "device": 66306,
+          "inode": 57715114,
+          "mtime_ns": 1788967970717558754,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 141949409,
+          "ctime_ns": 1788968158674594726,
+          "device": 66306,
+          "inode": 57715114,
+          "mtime_ns": 1788967970717558754,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 141949409,
+        "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+      },
+      "semantics": "exact CPU FP32 cache schema/geometry and saved native argmax equality",
+      "status": "passed",
+      "tensors": {
+        "H": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            32,
+            5280
+          ]
+        },
+        "native_logits": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            65536
+          ]
+        },
+        "target_states": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            5280
+          ]
+        }
+      }
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/arrays.npz": {
+      "actual": {
+        "bytes": 3982267,
+        "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15",
+        "stat_after": {
+          "bytes": 3982267,
+          "ctime_ns": 1788938279101544442,
+          "device": 66306,
+          "inode": 57412653,
+          "mtime_ns": 1788937672974290578,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3982267,
+          "ctime_ns": 1788938279101544442,
+          "device": 66306,
+          "inode": 57412653,
+          "mtime_ns": 1788937672974290578,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "exit_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 592,
+          "shape": [
+            148,
+            4
+          ]
+        },
+        "logitlens_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "logitlens_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "logitlens_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3982267,
+        "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/cache.pt": {
+      "actual": {
+        "bytes": 407374621,
+        "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4",
+        "stat_after": {
+          "bytes": 407374621,
+          "ctime_ns": 1788938372166409317,
+          "device": 66306,
+          "inode": 57412654,
+          "mtime_ns": 1788937673121289021,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 407374621,
+          "ctime_ns": 1788938372166409317,
+          "device": 66306,
+          "inode": 57412654,
+          "mtime_ns": 1788937673121289021,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 407374621,
+        "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+      },
+      "semantics": "exact CPU FP32 cache schema/geometry and saved native argmax equality",
+      "status": "passed",
+      "tensors": {
+        "H": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            192,
+            2048
+          ]
+        },
+        "exit_logits": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            4,
+            49152
+          ]
+        },
+        "target_state_logits/190": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            49152
+          ]
+        },
+        "target_state_logits/191": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            49152
+          ]
+        }
+      }
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_01/arrays.npz": {
+      "actual": {
+        "bytes": 3794670,
+        "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8c5f03df57dd9168142aa759",
+        "stat_after": {
+          "bytes": 3794670,
+          "ctime_ns": 1788938372994196207,
+          "device": 66306,
+          "inode": 57412715,
+          "mtime_ns": 1788937678027237047,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3794670,
+          "ctime_ns": 1788938372994196207,
+          "device": 66306,
+          "inode": 57412715,
+          "mtime_ns": 1788937678027237047,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3794670,
+        "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8c5f03df57dd9168142aa759"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_02/arrays.npz": {
+      "actual": {
+        "bytes": 3752472,
+        "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065",
+        "stat_after": {
+          "bytes": 3752472,
+          "ctime_ns": 1788938373791646018,
+          "device": 66306,
+          "inode": 57412718,
+          "mtime_ns": 1788937682561189015,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3752472,
+          "ctime_ns": 1788938373791646018,
+          "device": 66306,
+          "inode": 57412718,
+          "mtime_ns": 1788937682561189015,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3752472,
+        "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_03/arrays.npz": {
+      "actual": {
+        "bytes": 3774084,
+        "sha256": "b1c67e5e2956a9224518b4d50b3b9c65bce75f04dfd825ef249d3637a4802989",
+        "stat_after": {
+          "bytes": 3774084,
+          "ctime_ns": 1788938374600440762,
+          "device": 66306,
+          "inode": 57412721,
+          "mtime_ns": 1788937687284138980,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3774084,
+          "ctime_ns": 1788938374600440762,
+          "device": 66306,
+          "inode": 57412721,
+          "mtime_ns": 1788937687284138980,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3774084,
+        "sha256": "b1c67e5e2956a9224518b4d50b3b9c65bce75f04dfd825ef249d3637a4802989"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_04/arrays.npz": {
+      "actual": {
+        "bytes": 3764362,
+        "sha256": "173fe75b882c2d916ea9675e8828ab5a6d88bf3c2594cd5859e7c1103408012b",
+        "stat_after": {
+          "bytes": 3764362,
+          "ctime_ns": 1788938375429982454,
+          "device": 66306,
+          "inode": 57412724,
+          "mtime_ns": 1788937691956089485,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3764362,
+          "ctime_ns": 1788938375429982454,
+          "device": 66306,
+          "inode": 57412724,
+          "mtime_ns": 1788937691956089485,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3764362,
+        "sha256": "173fe75b882c2d916ea9675e8828ab5a6d88bf3c2594cd5859e7c1103408012b"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_05/arrays.npz": {
+      "actual": {
+        "bytes": 3753434,
+        "sha256": "ab7345c4542907519bcb055b3f498bb4c6d9e82431181e78b7d5a6386b7d131c",
+        "stat_after": {
+          "bytes": 3753434,
+          "ctime_ns": 1788938376286907380,
+          "device": 66306,
+          "inode": 57412727,
+          "mtime_ns": 1788937696779038391,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3753434,
+          "ctime_ns": 1788938376286907380,
+          "device": 66306,
+          "inode": 57412727,
+          "mtime_ns": 1788937696779038391,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3753434,
+        "sha256": "ab7345c4542907519bcb055b3f498bb4c6d9e82431181e78b7d5a6386b7d131c"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/comparisons/paired_ranks.npz": {
+      "actual": {
+        "bytes": 15440995,
+        "sha256": "968bf3313ed87dee4b3329ab2d875076ff9dbb7da9513d9fae030e8177e371ff",
+        "stat_after": {
+          "bytes": 15440995,
+          "ctime_ns": 1788951910132767987,
+          "device": 66306,
+          "inode": 57550329,
+          "mtime_ns": 1788951634937714153,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 15440995,
+          "ctime_ns": 1788951910132767987,
+          "device": 66306,
+          "inode": 57550329,
+          "mtime_ns": 1788951634937714153,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "position_main_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3618304,
+          "shape": [
+            148,
+            128,
+            191
+          ]
+        },
+        "position_main_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84804,
+          "shape": [
+            148,
+            3,
+            191
+          ]
+        },
+        "position_main_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3618304,
+          "shape": [
+            148,
+            128,
+            191
+          ]
+        },
+        "position_raw_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84804,
+          "shape": [
+            148,
+            3,
+            191
+          ]
+        },
+        "position_raw_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "target_main_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3599360,
+          "shape": [
+            148,
+            128,
+            190
+          ]
+        },
+        "target_main_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84360,
+          "shape": [
+            148,
+            3,
+            190
+          ]
+        },
+        "target_main_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3599360,
+          "shape": [
+            148,
+            128,
+            190
+          ]
+        },
+        "target_raw_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84360,
+          "shape": [
+            148,
+            3,
+            190
+          ]
+        },
+        "target_raw_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 15440995,
+        "sha256": "968bf3313ed87dee4b3329ab2d875076ff9dbb7da9513d9fae030e8177e371ff"
+      },
+      "semantics": "exact four paired rank banks equal to fixed support slices of original main/raw arrays",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/comparisons/scores.npz": {
+      "actual": {
+        "bytes": 362313,
+        "sha256": "d5da1e91ac0ce8b30fb1b53643cf306c0cd05ed6dd884e6f9123e16ff8bc2a9b",
+        "stat_after": {
+          "bytes": 362313,
+          "ctime_ns": 1788951910194482995,
+          "device": 66306,
+          "inode": 57550331,
+          "mtime_ns": 1788951632322741811,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 362313,
+          "ctime_ns": 1788951910194482995,
+          "device": 66306,
+          "inode": 57550331,
+          "mtime_ns": 1788951632322741811,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "contrast_position_diagonal_minus_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_diagonal_minus_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_diagonal_minus_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_diagonal_minus_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_diagonal_minus_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_diagonal_minus_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_main_minus_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_main_minus_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_main_minus_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_main_minus_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_main_minus_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_main_minus_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_main_minus_sampled_sum_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_main_minus_sampled_sum_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_main_minus_sampled_sum_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_main_minus_sampled_sum_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_main_minus_sampled_sum_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_main_minus_sampled_sum_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_sampled_sum_minus_diagonal_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_sampled_sum_minus_diagonal_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_sampled_sum_minus_diagonal_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_sampled_sum_minus_diagonal_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_sampled_sum_minus_diagonal_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_sampled_sum_minus_diagonal_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_sampled_sum_minus_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_sampled_sum_minus_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_sampled_sum_minus_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_sampled_sum_minus_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_position_sampled_sum_minus_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "contrast_position_sampled_sum_minus_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_main_minus_penultimate_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_main_minus_penultimate_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_main_minus_penultimate_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_main_minus_penultimate_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_main_minus_penultimate_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_main_minus_penultimate_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_main_minus_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_main_minus_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_main_minus_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_main_minus_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_main_minus_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_main_minus_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_penultimate_minus_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_penultimate_minus_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_penultimate_minus_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_penultimate_minus_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "contrast_target_penultimate_minus_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "contrast_target_penultimate_minus_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_diagonal_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_diagonal_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_diagonal_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_diagonal_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_diagonal_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "position_diagonal_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_diagonal_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_main_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_main_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_main_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "position_main_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_main_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_raw_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "position_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_sampled_sum_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_sampled_sum_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_sampled_sum_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_sampled_sum_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "position_sampled_sum_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "position_sampled_sum_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "position_sampled_sum_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_main_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_main_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_main_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "target_main_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_main_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_penultimate_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_penultimate_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_penultimate_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_penultimate_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_penultimate_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "target_penultimate_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_penultimate_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_raw_control_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_control_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_raw_delta_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_delta_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        },
+        "target_raw_eligible": {
+          "all_finite": true,
+          "dtype": "bool",
+          "elements": 148,
+          "shape": [
+            148
+          ]
+        },
+        "target_raw_own_layer": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "target_raw_own_regions": {
+          "all_finite": true,
+          "dtype": "float64",
+          "elements": 296,
+          "shape": [
+            148,
+            2
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 362313,
+        "sha256": "d5da1e91ac0ce8b30fb1b53643cf306c0cd05ed6dd884e6f9123e16ff8bc2a9b"
+      },
+      "semantics": "exact 97 score fields, saved eligibility metadata, fixed support and saved contrast arithmetic; no rank rescoring",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/penultimate/arrays.npz": {
+      "actual": {
+        "bytes": 3813311,
+        "sha256": "1cef42112bb2859fa4de26dcf60559b5cae90a11892ac9e4633f859d45546c7d",
+        "stat_after": {
+          "bytes": 3813311,
+          "ctime_ns": 1788951910977674590,
+          "device": 66306,
+          "inode": 57554377,
+          "mtime_ns": 1788951621483856457,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3813311,
+          "ctime_ns": 1788951910977674590,
+          "device": 66306,
+          "inode": 57554377,
+          "mtime_ns": 1788951621483856457,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3599360,
+          "shape": [
+            148,
+            128,
+            190
+          ]
+        },
+        "kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "kl_to_target_state": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84360,
+          "shape": [
+            148,
+            3,
+            190
+          ]
+        },
+        "rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "rank_of_target_state_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        },
+        "top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28120,
+          "shape": [
+            148,
+            190
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3813311,
+        "sha256": "1cef42112bb2859fa4de26dcf60559b5cae90a11892ac9e4633f859d45546c7d"
+      },
+      "semantics": "learned control support, exact dtypes/schema, vocabulary, -1 padding, own slots and token aliases",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/positions/diagonal/arrays.npz": {
+      "actual": {
+        "bytes": 3723655,
+        "sha256": "fbb4efa8eb0e7534dec8096480ae96eded7911339ef3c37e3b7be63b48f60d48",
+        "stat_after": {
+          "bytes": 3723655,
+          "ctime_ns": 1788951911599039484,
+          "device": 66306,
+          "inode": 57554387,
+          "mtime_ns": 1788951631803747301,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3723655,
+          "ctime_ns": 1788951911599039484,
+          "device": 66306,
+          "inode": 57554387,
+          "mtime_ns": 1788951631803747301,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3618304,
+          "shape": [
+            148,
+            128,
+            191
+          ]
+        },
+        "kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "kl_to_target_state": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84804,
+          "shape": [
+            148,
+            3,
+            191
+          ]
+        },
+        "rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "rank_of_target_state_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3723655,
+        "sha256": "fbb4efa8eb0e7534dec8096480ae96eded7911339ef3c37e3b7be63b48f60d48"
+      },
+      "semantics": "learned control support, exact dtypes/schema, vocabulary, -1 padding, own slots and token aliases",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/positions/sampled_sum/arrays.npz": {
+      "actual": {
+        "bytes": 3812126,
+        "sha256": "ec0a67b30847985eb475e04753c8069d7031e087c699df80c221397247859cd5",
+        "stat_after": {
+          "bytes": 3812126,
+          "ctime_ns": 1788951912248567572,
+          "device": 66306,
+          "inode": 57554390,
+          "mtime_ns": 1788951628133786119,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3812126,
+          "ctime_ns": 1788951912248567572,
+          "device": 66306,
+          "inode": 57554390,
+          "mtime_ns": 1788951628133786119,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3618304,
+          "shape": [
+            148,
+            128,
+            191
+          ]
+        },
+        "kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "kl_to_target_state": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 84804,
+          "shape": [
+            148,
+            3,
+            191
+          ]
+        },
+        "rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "rank_of_target_state_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        },
+        "top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28268,
+          "shape": [
+            148,
+            191
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3812126,
+        "sha256": "ec0a67b30847985eb475e04753c8069d7031e087c699df80c221397247859cd5"
+      },
+      "semantics": "learned control support, exact dtypes/schema, vocabulary, -1 padding, own slots and token aliases",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/arrays.npz": {
+      "actual": {
+        "bytes": 3982267,
+        "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15",
+        "stat_after": {
+          "bytes": 3982267,
+          "ctime_ns": 1788951912959670620,
+          "device": 66306,
+          "inode": 57554399,
+          "mtime_ns": 1788937672974290578,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3982267,
+          "ctime_ns": 1788951912959670620,
+          "device": 66306,
+          "inode": 57554399,
+          "mtime_ns": 1788937672974290578,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "exit_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 592,
+          "shape": [
+            148,
+            4
+          ]
+        },
+        "logitlens_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "logitlens_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "logitlens_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "logitlens_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3982267,
+        "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt": {
+      "actual": {
+        "bytes": 407374621,
+        "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4",
+        "stat_after": {
+          "bytes": 407374621,
+          "ctime_ns": 1788951987294894127,
+          "device": 66306,
+          "inode": 57554400,
+          "mtime_ns": 1788937673121289021,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 407374621,
+          "ctime_ns": 1788951987294894127,
+          "device": 66306,
+          "inode": 57554400,
+          "mtime_ns": 1788937673121289021,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 407374621,
+        "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+      },
+      "semantics": "exact CPU FP32 cache schema/geometry and saved native argmax equality",
+      "status": "passed",
+      "tensors": {
+        "H": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            192,
+            2048
+          ]
+        },
+        "exit_logits": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            4,
+            49152
+          ]
+        },
+        "target_state_logits/190": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            49152
+          ]
+        },
+        "target_state_logits/191": {
+          "all_finite": true,
+          "dtype": "torch.float32",
+          "shape": [
+            148,
+            49152
+          ]
+        }
+      }
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_01/arrays.npz": {
+      "actual": {
+        "bytes": 3794670,
+        "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8c5f03df57dd9168142aa759",
+        "stat_after": {
+          "bytes": 3794670,
+          "ctime_ns": 1788951988003697236,
+          "device": 66306,
+          "inode": 57554406,
+          "mtime_ns": 1788937678027237047,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3794670,
+          "ctime_ns": 1788951988003697236,
+          "device": 66306,
+          "inode": 57554406,
+          "mtime_ns": 1788937678027237047,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3794670,
+        "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8c5f03df57dd9168142aa759"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_02/arrays.npz": {
+      "actual": {
+        "bytes": 3752472,
+        "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065",
+        "stat_after": {
+          "bytes": 3752472,
+          "ctime_ns": 1788951988690435259,
+          "device": 66306,
+          "inode": 57554409,
+          "mtime_ns": 1788937682561189015,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3752472,
+          "ctime_ns": 1788951988690435259,
+          "device": 66306,
+          "inode": 57554409,
+          "mtime_ns": 1788937682561189015,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3752472,
+        "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_03/arrays.npz": {
+      "actual": {
+        "bytes": 3774084,
+        "sha256": "b1c67e5e2956a9224518b4d50b3b9c65bce75f04dfd825ef249d3637a4802989",
+        "stat_after": {
+          "bytes": 3774084,
+          "ctime_ns": 1788951989378922927,
+          "device": 66306,
+          "inode": 57554412,
+          "mtime_ns": 1788937687284138980,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3774084,
+          "ctime_ns": 1788951989378922927,
+          "device": 66306,
+          "inode": 57554412,
+          "mtime_ns": 1788937687284138980,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3774084,
+        "sha256": "b1c67e5e2956a9224518b4d50b3b9c65bce75f04dfd825ef249d3637a4802989"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_04/arrays.npz": {
+      "actual": {
+        "bytes": 3764362,
+        "sha256": "173fe75b882c2d916ea9675e8828ab5a6d88bf3c2594cd5859e7c1103408012b",
+        "stat_after": {
+          "bytes": 3764362,
+          "ctime_ns": 1788951990254797602,
+          "device": 66306,
+          "inode": 57554415,
+          "mtime_ns": 1788937691956089485,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3764362,
+          "ctime_ns": 1788951990254797602,
+          "device": 66306,
+          "inode": 57554415,
+          "mtime_ns": 1788937691956089485,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3764362,
+        "sha256": "173fe75b882c2d916ea9675e8828ab5a6d88bf3c2594cd5859e7c1103408012b"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_05/arrays.npz": {
+      "actual": {
+        "bytes": 3753434,
+        "sha256": "ab7345c4542907519bcb055b3f498bb4c6d9e82431181e78b7d5a6386b7d131c",
+        "stat_after": {
+          "bytes": 3753434,
+          "ctime_ns": 1788951990818181756,
+          "device": 66306,
+          "inode": 57554418,
+          "mtime_ns": 1788937696779038391,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 3753434,
+          "ctime_ns": 1788951990818181756,
+          "device": 66306,
+          "inode": 57554418,
+          "mtime_ns": 1788937696779038391,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "arrays": {
+        "jlens_exit3_allrank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 3637248,
+          "shape": [
+            148,
+            128,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_final": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_kl_to_local": {
+          "all_finite": true,
+          "dtype": "float32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 85248,
+          "shape": [
+            148,
+            3,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_final_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_rank_of_local_top1": {
+          "all_finite": true,
+          "dtype": "int32",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        },
+        "jlens_exit3_top1": {
+          "all_finite": true,
+          "dtype": "int64",
+          "elements": 28416,
+          "shape": [
+            148,
+            192
+          ]
+        }
+      },
+      "expected": {
+        "bytes": 3753434,
+        "sha256": "ab7345c4542907519bcb055b3f498bb4c6d9e82431181e78b7d5a6386b7d131c"
+      },
+      "semantics": "exact main/raw schema, vocabulary, full support, -1 padding, own slots, token aliases and native/identity endpoints",
+      "status": "passed"
+    }
+  },
+  "finished_utc": "2026-09-09T21:14:08.031679+00:00",
+  "prior_ledger_record": {
+    "bytes": 24584,
+    "sha256": "9f6485778110447fa0272f48e39c09695765f168825bb487f747e905c5992631",
+    "stat_after": {
+      "bytes": 24584,
+      "ctime_ns": 1788988066103739950,
+      "device": 66306,
+      "inode": 55355746,
+      "mtime_ns": 1788988066101739933,
+      "nlink": 1
+    },
+    "stat_before": {
+      "bytes": 24584,
+      "ctime_ns": 1788988066103739950,
+      "device": 66306,
+      "inode": 55355746,
+      "mtime_ns": 1788988066101739933,
+      "nlink": 1
+    },
+    "stat_guard_passed": true
+  },
+  "reconstructed_fit02_sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8",
+  "schema": "confirmation_retained_input_supplement.v1",
+  "source_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/audit_huginn_retention.py": {
+      "bytes": 6396,
+      "sha256": "3b3aae39dec8d1540435aa265d5694864bdd9a42cf49f84f423027e0fd1ab1aa",
+      "stat_after": {
+        "bytes": 6396,
+        "ctime_ns": 1788987980201000656,
+        "device": 66306,
+        "inode": 55355739,
+        "mtime_ns": 1788987980201000656,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 6396,
+        "ctime_ns": 1788987980201000656,
+        "device": 66306,
+        "inode": 55355739,
+        "mtime_ns": 1788987980201000656,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/audit_retained_inputs.py": {
+      "bytes": 15343,
+      "sha256": "f18a458e169e52691b89e68b079a5365397a63ae6807f8e0d1fb0a2b74ed4c3e",
+      "stat_after": {
+        "bytes": 15343,
+        "ctime_ns": 1788988441201839997,
+        "device": 66306,
+        "inode": 55355753,
+        "mtime_ns": 1788988441201839997,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 15343,
+        "ctime_ns": 1788988441201839997,
+        "device": 66306,
+        "inode": 55355753,
+        "mtime_ns": 1788988441201839997,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/finalize_ledger.py": {
+      "bytes": 4373,
+      "sha256": "db3bb9525c10d294a143808f17c2dac180381d42f603d4d4c9808fea6baf447e",
+      "stat_after": {
+        "bytes": 4373,
+        "ctime_ns": 1788988062124706010,
+        "device": 66306,
+        "inode": 55355744,
+        "mtime_ns": 1788988062124706010,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 4373,
+        "ctime_ns": 1788988062124706010,
+        "device": 66306,
+        "inode": 55355744,
+        "mtime_ns": 1788988062124706010,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/recover_estimators.py": {
+      "bytes": 19002,
+      "sha256": "71c47a4f6b77bd92d63885b295f8e0f49f406ebc0f390004e30c4af1b1313e80",
+      "stat_after": {
+        "bytes": 19002,
+        "ctime_ns": 1788988062039705285,
+        "device": 66306,
+        "inode": 55355728,
+        "mtime_ns": 1788988062039705285,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 19002,
+        "ctime_ns": 1788988062039705285,
+        "device": 66306,
+        "inode": 55355728,
+        "mtime_ns": 1788988062039705285,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_controls.py": {
+      "bytes": 52577,
+      "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c",
+      "stat_after": {
+        "bytes": 52577,
+        "ctime_ns": 1788888157261468772,
+        "device": 66306,
+        "inode": 55472304,
+        "mtime_ns": 1788888157261468772,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 52577,
+        "ctime_ns": 1788888157261468772,
+        "device": 66306,
+        "inode": 55472304,
+        "mtime_ns": 1788888157261468772,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py": {
+      "bytes": 58251,
+      "sha256": "b98b39d70a64db23c1544c4ce5d3cb57760363b1fd3d682db106288669f85b5e",
+      "stat_after": {
+        "bytes": 58251,
+        "ctime_ns": 1788886445854446769,
+        "device": 66306,
+        "inode": 55472305,
+        "mtime_ns": 1788886445854446769,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 58251,
+        "ctime_ns": 1788886445854446769,
+        "device": 66306,
+        "inode": 55472305,
+        "mtime_ns": 1788886445854446769,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_refits.py": {
+      "bytes": 55009,
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17",
+      "stat_after": {
+        "bytes": 55009,
+        "ctime_ns": 1788885268430928571,
+        "device": 66306,
+        "inode": 55472274,
+        "mtime_ns": 1788885268430928571,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 55009,
+        "ctime_ns": 1788885268430928571,
+        "device": 66306,
+        "inode": 55472274,
+        "mtime_ns": 1788885268430928571,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    }
+  },
+  "started_utc": "2026-09-09T21:14:02.353660+00:00",
+  "status": "passed",
+  "upstream": {
+    "controls/ouro_penultimate/fit_01": {
+      "actual": {
+        "bytes": 94410,
+        "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+        "stat_after": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json",
+      "expected_sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+      "ordered_prompts_sha256": "29b62fa5768fa6e7d92c38d78bf68903019d7a8f4267ccd365b96969d551afda",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "controls/ouro_positions/fit_01": {
+      "actual": {
+        "bytes": 94410,
+        "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+        "stat_after": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json",
+      "expected_sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+      "ordered_prompts_sha256": "29b62fa5768fa6e7d92c38d78bf68903019d7a8f4267ccd365b96969d551afda",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "huginn/fit_01": {
+      "actual": {
+        "bytes": 94410,
+        "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+        "stat_after": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json",
+      "expected_sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+      "huginn_token_recipe": {
+        "actual": {
+          "bytes": 25792,
+          "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "stat_after": {
+            "bytes": 25792,
+            "ctime_ns": 1788884679011192176,
+            "device": 66306,
+            "inode": 55472279,
+            "mtime_ns": 1788884679011192176,
+            "nlink": 1
+          },
+          "stat_before": {
+            "bytes": 25792,
+            "ctime_ns": 1788884679011192176,
+            "device": 66306,
+            "inode": 55472279,
+            "mtime_ns": 1788884679011192176,
+            "nlink": 1
+          },
+          "stat_guard_passed": true
+        },
+        "exact_runtime_binding": true,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "token_input_hash_count": 100
+      },
+      "ordered_prompts_sha256": "29b62fa5768fa6e7d92c38d78bf68903019d7a8f4267ccd365b96969d551afda",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "ouro/fit_01": {
+      "actual": {
+        "bytes": 94410,
+        "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+        "stat_after": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 94410,
+          "ctime_ns": 1788807275486157826,
+          "device": 66306,
+          "inode": 55466089,
+          "mtime_ns": 1788807275486157826,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json",
+      "expected_sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+      "ordered_prompts_sha256": "29b62fa5768fa6e7d92c38d78bf68903019d7a8f4267ccd365b96969d551afda",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "ouro/fit_02": {
+      "actual": {
+        "bytes": 98110,
+        "sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95",
+        "stat_after": {
+          "bytes": 98110,
+          "ctime_ns": 1788807276289161959,
+          "device": 66306,
+          "inode": 55466090,
+          "mtime_ns": 1788807276289161959,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 98110,
+          "ctime_ns": 1788807276289161959,
+          "device": 66306,
+          "inode": 55466090,
+          "mtime_ns": 1788807276289161959,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_02.json",
+      "expected_sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95",
+      "ordered_prompts_sha256": "5bdbb52c838769c48b71c7a4a261dc610b3614808eb9076e89bc672984ab8201",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "ouro/fit_03": {
+      "actual": {
+        "bytes": 96617,
+        "sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9",
+        "stat_after": {
+          "bytes": 96617,
+          "ctime_ns": 1788807277083274793,
+          "device": 66306,
+          "inode": 55466091,
+          "mtime_ns": 1788807277083274793,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 96617,
+          "ctime_ns": 1788807277083274793,
+          "device": 66306,
+          "inode": 55466091,
+          "mtime_ns": 1788807277083274793,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_03.json",
+      "expected_sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9",
+      "ordered_prompts_sha256": "08e77dff012cc882cd3de32e5e3d5c5da671c2e02e3dbd1501046882e49e8890",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "ouro/fit_04": {
+      "actual": {
+        "bytes": 95461,
+        "sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba",
+        "stat_after": {
+          "bytes": 95461,
+          "ctime_ns": 1788807277879314158,
+          "device": 66306,
+          "inode": 55466092,
+          "mtime_ns": 1788807277879314158,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 95461,
+          "ctime_ns": 1788807277879314158,
+          "device": 66306,
+          "inode": 55466092,
+          "mtime_ns": 1788807277879314158,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_04.json",
+      "expected_sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba",
+      "ordered_prompts_sha256": "f58236b34c6b795b3382a83842861ea8807ee4b813f9982a5d4f70692c1511e0",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    },
+    "ouro/fit_05": {
+      "actual": {
+        "bytes": 92492,
+        "sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5",
+        "stat_after": {
+          "bytes": 92492,
+          "ctime_ns": 1788807278664845152,
+          "device": 66306,
+          "inode": 55466093,
+          "mtime_ns": 1788807278664845152,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 92492,
+          "ctime_ns": 1788807278664845152,
+          "device": 66306,
+          "inode": 55466093,
+          "mtime_ns": 1788807278664845152,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "all_ordered_paragraph_hashes_match": true,
+      "bound_input_files": [
+        {
+          "actual": {
+            "bytes": 21869,
+            "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+            "stat_after": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 21869,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081504,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json"
+        },
+        {
+          "actual": {
+            "bytes": 9589,
+            "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+            "stat_after": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 9589,
+              "ctime_ns": 1788386629046298034,
+              "device": 66306,
+              "inode": 55081516,
+              "mtime_ns": 1788386629046298034,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+          "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json"
+        },
+        {
+          "actual": {
+            "bytes": 19977,
+            "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+            "stat_after": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 19977,
+              "ctime_ns": 1788888000928146042,
+              "device": 66306,
+              "inode": 55472261,
+              "mtime_ns": 1788888000928146042,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json"
+        },
+        {
+          "actual": {
+            "bytes": 25792,
+            "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+            "stat_after": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 25792,
+              "ctime_ns": 1788884679011192176,
+              "device": 66306,
+              "inode": 55472279,
+              "mtime_ns": 1788884679011192176,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "expected_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json"
+        }
+      ],
+      "calibration_path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_05.json",
+      "expected_sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5",
+      "ordered_prompts_sha256": "60acb167b9580abdc00eb41536b38508259c56d4c74543b66e0e1c9e3ab46538",
+      "paragraph_count": 100,
+      "status": "passed",
+      "token_length_and_n_valid_scope": "sealed declarations and completed diagnostics; this supplement does not retokenize"
+    }
+  }
+}

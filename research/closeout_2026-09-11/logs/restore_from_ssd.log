@@ -1,0 +1,31 @@
+{
+ "isolation": {
+  "live_research_visible": false,
+  "live_ouro_artifacts_visible": false,
+  "live_hf_cache_visible": false,
+  "HF_HUB_OFFLINE": "1",
+  "network": "unreachable (OSError)"
+ },
+ "rehash_mismatched": "skipped (destination hash verification of all 16,200 files already passed in build_archive.py)",
+ "frozen_code": {
+  "archive_matches_freeze": true,
+  "members_match_freeze": true,
+  "members": 59
+ },
+ "analysis_rerun_equals_saved_json": true,
+ "primary_from_archive": 0.23188291139240502,
+ "rescoring": {
+  "raw": {
+   "allrank": true,
+   "top10_ids": true,
+   "rank": true,
+   "top1": true
+  },
+  "fit01": {
+   "allrank": true,
+   "top10_ids": true,
+   "rank": true,
+   "top1": true
+  }
+ }
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<string>", line 29, in <module>
+    before = status()
+  File "<string>", line 19, in status
+    require(value.get('phase') == 'huginn_fit' and value.get('setup_complete') is True
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            and value.get('stop_requested', False) is False, 'Huginn fitting is not active')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 8, in require
+    if not ok: raise ValueError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Huginn fitting is not active

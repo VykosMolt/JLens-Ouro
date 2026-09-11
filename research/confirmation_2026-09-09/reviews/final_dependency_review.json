@@ -1,0 +1,111 @@
+{
+  "schema": "confirmation_final_dependency_review.v1",
+  "status": "passed",
+  "new_confirmation_results_exposed": false,
+  "scope": "Final assembled dependency and relation integration; not factual-source or tokenizer-eligibility approval.",
+  "reviewed_sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/assembled_v5.json": {
+      "bytes": 731980,
+      "sha256": "efa90047c7d6b522f895e191a67009bc94100d3a16392f8cc7ee6a9104357a05"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/dependency_audit.json": {
+      "bytes": 246431,
+      "sha256": "5640316b41c142b1054c4a53175e1cef732a4580dd3352c2aa9f00580ba2a8d7"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/finalize_dependencies.py": {
+      "bytes": 14531,
+      "sha256": "e40d1fff0fd29ae172996e6e9657823b19a13082b412abb4774111edf66ee8fd"
+    }
+  },
+  "final_benchmark": {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/final_candidates.json",
+    "bytes": 967118,
+    "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99"
+  },
+  "reviewed_content_sha256": "fcd0ddabfcdf87bb336b548a47632fa61edbda54274d9a1c551b18541e8c9d5f",
+  "approved_prompt_revision": {
+    "item": "confirmation-062",
+    "before": "Fact: The river whose delta occupies the southern tip of Vietnam has its headwaters on the ",
+    "after": "Fact: The river whose delta occupies much of southern Vietnam has its headwaters on the ",
+    "assessment": "The Mekong remains the intermediate and Tibetan Plateau the answer. The revised downstream-location clue preserves the river-headwaters template and all dependency components."
+  },
+  "checks": {
+    "precision": {
+      "population_stage": "160 annotated candidates before token eligibility filtering",
+      "group_count": 28,
+      "group_sizes_descending": [
+        42,
+        24,
+        16,
+        10,
+        10,
+        6,
+        4,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "sum_squared_group_sizes": 2968,
+      "effective_group_count": 8.625336927223719,
+      "effective_group_count_formula": "N^2 / sum_g(n_g^2)",
+      "scenarios": [
+        {
+          "assumed_SD": 0.3,
+          "approximate_95pct_halfwidth": 0.20021162553658067
+        },
+        {
+          "assumed_SD": 0.45,
+          "approximate_95pct_halfwidth": 0.300317438304871
+        },
+        {
+          "assumed_SD": 0.6,
+          "approximate_95pct_halfwidth": 0.40042325107316135
+        }
+      ],
+      "eligibility_rule": "Recompute induced dependency components and precision after eligibility exclusions before freeze."
+    },
+    "relation_counts": {
+      "familiar_fact_relation_recombined": 19,
+      "not_represented_requested_relation": 96,
+      "familiar_requested_family": 45
+    },
+    "alias_code_collisions": [
+      {
+        "left_concept": "cf014",
+        "right_concept": "cf068",
+        "left_intermediate": "tungsten",
+        "right_intermediate": "Watt",
+        "overlap": [
+          "w"
+        ],
+        "meaning": "Shared annotated surface alias/code; this does not establish semantic identity."
+      }
+    ],
+    "edge_count": 294,
+    "non_owned_metadata_preserved": true,
+    "component_membership_unchanged": true
+  },
+  "limits": [
+    "Planning precision is not an observed interval or a finite-sample coverage guarantee.",
+    "Factual/novelty/control/eligibility gates remain separate.",
+    "After eligibility exclusions, recompute induced components rather than retaining stale group counts."
+  ]
+}

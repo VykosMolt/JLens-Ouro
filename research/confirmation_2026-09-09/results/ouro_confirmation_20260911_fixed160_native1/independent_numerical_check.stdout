@@ -1,0 +1,1 @@
+{"status": "failed", "proof": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/results/ouro_confirmation_20260911_fixed160_native1/independent_numerical_check.json", "max_absolute_difference": null, "case_count": null, "error": {"type": "ValueError", "message": "Exact comparison failed: results.run_spec.frozen_record"}}

@@ -1,0 +1,625 @@
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/7af7ca0721bc3d2fdd2aad3e7914293b97e97402a6af3f1d216d56e84eb868de/RECEIPT.json",
+    "record": {
+      "bytes": 2663,
+      "sha256": "80b26da835981918dbb98cd7407be308811d54799acbe3edd6fb9e229b1bbbbd"
+    },
+    "manifest_sha256": "7af7ca0721bc3d2fdd2aad3e7914293b97e97402a6af3f1d216d56e84eb868de"
+  }
+]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60/RECEIPT.json",
+    "record": {
+      "bytes": 2315,
+      "sha256": "6ba15045fb60ad3ebb925671428691fcf5211c96b0e9ce4a98d344c93d47a149"
+    },
+    "manifest_sha256": "2b053cb8d4d0b8e68a3f2c54910046ed1e48cd4e7cbc109045340814314a7c60"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/7a81122c19b07e916d3ed5a804d4bb2c0309ab06eafeea53900e742fb22c4304/RECEIPT.json",
+    "record": {
+      "bytes": 2667,
+      "sha256": "e9bceb07f2dd406e4f454c2b4f8d91a8632f1caa03dcd25d933d01d043807eb2"
+    },
+    "manifest_sha256": "7a81122c19b07e916d3ed5a804d4bb2c0309ab06eafeea53900e742fb22c4304"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/7af7ca0721bc3d2fdd2aad3e7914293b97e97402a6af3f1d216d56e84eb868de/RECEIPT.json",
+    "record": {
+      "bytes": 2663,
+      "sha256": "80b26da835981918dbb98cd7407be308811d54799acbe3edd6fb9e229b1bbbbd"
+    },
+    "manifest_sha256": "7af7ca0721bc3d2fdd2aad3e7914293b97e97402a6af3f1d216d56e84eb868de"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/89e8f70a4faea25ce105b911f011ae2901e3b1d3015e2f7165a790f30c75a77d/RECEIPT.json",
+    "record": {
+      "bytes": 2673,
+      "sha256": "344fcdc7d9af96393cc08c34b3d460a090c17f78381bc931ec0887dbc0da0024"
+    },
+    "manifest_sha256": "89e8f70a4faea25ce105b911f011ae2901e3b1d3015e2f7165a790f30c75a77d"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/8f6822bc80c1552827580e04aaf52235108b7cd940d839bfca2ff5219b88302e/RECEIPT.json",
+    "record": {
+      "bytes": 2678,
+      "sha256": "4359ae4a7f55e51566933e4db6d1d4aaef9afae2852dbb026e130ac1be9a8b8a"
+    },
+    "manifest_sha256": "8f6822bc80c1552827580e04aaf52235108b7cd940d839bfca2ff5219b88302e"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/a1085fbb390195a4a5690b9e9e615cc2883da1ce6bc9177ce0f9a6bc7fa98c2f/RECEIPT.json",
+    "record": {
+      "bytes": 2678,
+      "sha256": "42e842a000e21fc620fe21f1d79a3a39f0180f66a32dfd25efbe7bf3f6a8886b"
+    },
+    "manifest_sha256": "a1085fbb390195a4a5690b9e9e615cc2883da1ce6bc9177ce0f9a6bc7fa98c2f"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/b355a0ea76244df587e8ea2865e40d125ba28eff09d1d8cc9a6f10e2c41aae9e/RECEIPT.json",
+    "record": {
+      "bytes": 2667,
+      "sha256": "6ab51d777679abc2e1c037283121960a0a6aa02ec828fb159e605d9e92aea7e7"
+    },
+    "manifest_sha256": "b355a0ea76244df587e8ea2865e40d125ba28eff09d1d8cc9a6f10e2c41aae9e"
+  },
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/RECEIPT.json",
+    "record": {
+      "bytes": 3882,
+      "sha256": "ce7152b6976e6c350e9d67654d247826c9674866fa6116937f16f2d31ced16f7"
+    },
+    "manifest_sha256": "ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef"
+  }
+]
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/lease.py", line 1049, in <module>
+    main()
+    ~~~~^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/lease.py", line 1043, in main
+    print(json.dumps(sync_results(args.root), indent=2))
+                     ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/lease.py", line 432, in sync_results
+    manifests = handoff.read_index(state, transport)
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/artifact_handoff.py", line 304, in read_index
+    raw = transport.read_bytes(name)
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/artifact_handoff.py", line 529, in read_bytes
+    return self._python(script, timeout=30, operation='read_metadata') or None
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/artifact_handoff.py", line 510, in _python
+    return run_bounded(command, timeout=timeout, operation=operation, processes=self.processes).stdout
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/monitor/transport.py", line 60, in run_bounded
+    raise subprocess.CalledProcessError(process.returncode, command, stdout, stderr)
+subprocess.CalledProcessError: Command '['ssh', '-i', '/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519', '-p', '22793', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15', '-o', 'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=3', '-o', 'ForwardAgent=no', '-o', 'StrictHostKeyChecking=accept-new', '-o', 'UserKnownHostsFile=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/known_hosts', 'root@194.14.47.19', 'python -c \'import base64,os,pathlib,stat,sys\np=pathlib.Path(\'"\'"\'/workspace/jlens\'"\'"\')/base64.b64decode(\'"\'"\'bWFuaWZlc3RzLzdhODExMjJjMTliMDdlOTE2ZDNlZDVhODA0ZDRiYjJjMDMwOWFiMDZlYWZlZWE1MzkwMGU3NDJmYjIyYzQzMDQuanNvbg==\'"\'"\').decode()\ndef sig(s): return s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns,s.st_ctime_ns\nfor parent in (p,*p.parents):\n if parent.is_symlink(): raise ValueError(\'"\'"\'linked manifest path\'"\'"\')\nif not p.exists(): sys.exit(0)\ns=p.stat()\nif not stat.S_ISREG(s.st_mode) or s.st_size>4000000: raise ValueError(\'"\'"\'invalid metadata file\'"\'"\')\nwith p.open(\'"\'"\'rb\'"\'"\') as f:\n data=f.read()\n if sig(os.fstat(f.fileno()))!=sig(s): raise ValueError(\'"\'"\'metadata changed\'"\'"\')\nif sig(p.stat())!=sig(s): raise ValueError(\'"\'"\'metadata path changed\'"\'"\')\nsys.stdout.buffer.write(data)\n\'']' returned non-zero exit status 255.

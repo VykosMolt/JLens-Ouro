@@ -1,0 +1,308 @@
+index,name,task,target,continuation,historical_pass,strict_numeric_pass,numeric_equivalence_pass,audit_note
+0,carnival-ocean,multihop,Atlantic," Atlantic Ocean.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+1,amazon-language,multihop,Portuguese," Portuguese.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+2,mars-color,multihop,red, not red. It,False,False,False,No further criterion error identified in the retained four-token continuation.
+3,spider-legs,multihop,8,"8.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+4,basketball-players,multihop,5,"11.
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+5,paper-continent,multihop,Asia," Asia.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+6,christmas-season,multihop,winter, the same season when,False,False,False,No further criterion error identified in the retained four-token continuation.
+7,osu-rival-mascot,multihop,wolverine, Buckeye.,False,False,False,No further criterion error identified in the retained four-token continuation.
+8,topeka-west,multihop,Colorado," Kansas.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+9,atomic-79-symbol,multihop,Au," Au.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+10,atomic-26-symbol,multihop,Fe," Fe.
+
+",True,True,True,Iron example retained; main N=100 ranks independently checked below.
+11,atomic-29-symbol,multihop,Cu," Cu.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+12,atomic-80-state,multihop,liquid," solid.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+13,atomic-29-flame,multihop,green," green.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+14,planet-3-moons,multihop,1,"1.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+15,month-3-godof,multihop,war," war, Mars.",True,True,True,No further criterion error identified in the retained four-token continuation.
+16,spaceneedle-border,multihop,Canada," Canada.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+17,rhyme-rain-neighbor,multihop,Portugal, the Atlantic Ocean.,False,False,False,No further criterion error identified in the retained four-token continuation.
+18,rhyme-door-doubled,multihop,8,12. What,False,False,False,No further criterion error identified in the retained four-token continuation.
+19,rhyme-chair-flag,multihop,California," which state?
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+20,rhyme-spoon-orbit,multihop,Earth, 'Spoon'.,False,False,False,No further criterion error identified in the retained four-token continuation.
+21,etym-wargod-month,multihop,3,"7.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+22,etym-frigg-position,multihop,5,"4.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+23,etym-saturn-position,multihop,6,"5.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+24,chem-photosynthesis-Z,multihop,8,"1.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+25,chem-atmosphere-Z,multihop,7,"8.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+26,chem-organic-Z,multihop,6,"6.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+27,chem-bones-Z,multihop,20,"24.
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+28,func-pumps-chambers,multihop,4,"4
+
+Fact",True,True,True,No further criterion error identified in the retained four-token continuation.
+29,func-filters-count,multihop,2,"2.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+30,birthstone-emerald-month,multihop,5,"5.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+31,violin-strings,multihop,4,"4.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+32,nhop-primary-planet,multihop,Earth, Uranus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+33,nhop-rings-planet,multihop,Jupiter, Uranus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+34,nhop-guitar-planet,multihop,Saturn, Uranus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+35,nhop-compass-planet,multihop,Mars, Uranus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+36,nhop-volleyball-planet,multihop,Saturn, Uranus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+37,nhop-alphabet-element,multihop,iron, phosphorus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+38,nhop-fortnight-element,multihop,silicon, calcium. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+39,nhop-cube-element,multihop,carbon, silicon. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+40,nhop-rainbow-element,multihop,nitrogen, silicon. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+41,nhop-spider-element,multihop,oxygen, tin. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+42,nhop-insect-element,multihop,carbon, silicon. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+43,nhop-week-element,multihop,nitrogen, sodium. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+44,super-largest-country-capital,multihop,Moscow," Moscow, Russia.",True,True,True,No further criterion error identified in the retained four-token continuation.
+45,super-smallest-continent,multihop,Europe," Europe.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+46,super-populous-capital,multihop,Beijing," Beijing.
+
+",True,True,True,Dataset assumes China is the most populous country; task-reference fidelity is distinct from current factual correctness.
+47,super-largest-island-nation,multihop,Jakarta, the same latitude as,False,False,False,No further criterion error identified in the retained four-token continuation.
+48,colosseum-currency,multihop,Euro," Euro.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+49,greatwall-ocean,multihop,Pacific," Pacific Ocean.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+50,holiday-independence-monthnum,multihop,7,"7.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+51,holiday-christmas-monthnum,multihop,12,"12.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+52,holiday-halloween-monthnum,multihop,10,"10.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+53,holiday-valentines-monthnum,multihop,2,"2.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+54,month-1-godof,multihop,beginnings," war, Mars.",False,False,False,No further criterion error identified in the retained four-token continuation.
+55,etym-janus-monthnum,multihop,1,"11.
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+56,month-7-namedafter,multihop,Caesar," Caesar.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+57,etym-caesar-monthnum,multihop,7,"7.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+58,nhop-soccer-element,multihop,sodium, sodium. Count the,True,True,True,No further criterion error identified in the retained four-token continuation.
+59,nhop-chess-element,multihop,sulfur, phosphorus. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+60,nhop-suit-element,multihop,aluminum, silicon. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+61,nhop-clock-element,multihop,magnesium, sodium. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+62,nhop-deck-element,multihop,tellurium, silicon. Count the,False,False,False,No further criterion error identified in the retained four-token continuation.
+63,inv-sunrise-opposite,multihop,west," west.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+64,inv-balloon-opposite,multihop,down,"down.""
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+65,inv-roots-opposite,multihop,up,"downward.""
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+66,inv-antarctica-opposite,multihop,north, the North Pole.,False,False,False,the North Pole is related to north but not an exact direction response; no semantic relabeling.
+67,rhyme-tree-squared,multihop,9,121.,False,False,False,No further criterion error identified in the retained four-token continuation.
+68,rhyme-hive-plusone,multihop,6,100.,False,False,False,No further criterion error identified in the retained four-token continuation.
+69,rhyme-fix-halved,multihop,3,10. ,False,False,False,No further criterion error identified in the retained four-token continuation.
+70,rhyme-shoe-doubled,multihop,4,12. ,False,False,False,No further criterion error identified in the retained four-token continuation.
+71,tajmahal-continent,multihop,Asia," Asia.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+72,louvre-language,multihop,French," French.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+73,firstletter-halloween-month,multihop,O,"O"" (October",True,True,True,No further criterion error identified in the retained four-token continuation.
+74,firstletter-valentines-month,multihop,F,"V"".
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+75,firstletter-populous-country,multihop,C, the same as the,False,False,False,Dataset assumes most-populous-country initial C; target validity is a separate question.
+76,firstletter-paris-country,multihop,F, the same as the,False,False,False,No further criterion error identified in the retained four-token continuation.
+77,firstletter-greatwall-country,multihop,C, the same as the,False,False,False,No further criterion error identified in the retained four-token continuation.
+78,succ-halloween-nextmonth,multihop,November," November.
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+79,pred-valentines-prevmonth,multihop,January,"Love Month.""
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+80,dual-stars-visible-opposite,multihop,day,"daytime.""
+",False,False,False,daytime fails the exact day boundary criterion but is a plausible semantic equivalent; no relabeling.
+81,dual-photosynthesis-opposite,multihop,night,"night.""
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+82,roman-rings-olympic,multihop,V," written as ""V",False,False,False,"Response contains V after written as, rather than at the required initial position; truncated after four tokens; no relabeling."
+83,roman-states-us,multihop,L," XXII.
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+84,half-clock-hours,multihop,6,12 hours.,False,False,False,No further criterion error identified in the retained four-token continuation.
+85,double-dice-faces,multihop,12,"12.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+86,letterpos-water-symbol,multihop,8,"1.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+87,letterpos-oxygen-symbol,multihop,15,"8.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+88,letterpos-carbon-symbol,multihop,3,"4.
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+89,letterpos-nitrogen-symbol,multihop,14,"14.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+90,dbl-armistice-antonym,multihop,peace,"war.""
+
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+91,dbl-obituary-antonym,multihop,birth,I'm still alive,False,False,False,No further criterion error identified in the retained four-token continuation.
+92,dbl-altitude-antonym,multihop,low,"ground level.""
+",False,False,False,No further criterion error identified in the retained four-token continuation.
+93,parens-add-mult,order-ops,20,"20
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+94,parens-sub-mult,order-ops,15,15. (,True,True,True,No further criterion error identified in the retained four-token continuation.
+95,mult-parens-add,order-ops,14,2 * 7,False,False,False,No further criterion error identified in the retained four-token continuation.
+96,mult-parens-sub,order-ops,6,"6
+
+(",True,True,True,No further criterion error identified in the retained four-token continuation.
+97,add-mult-right,order-ops,14,14. ,True,True,True,No further criterion error identified in the retained four-token continuation.
+98,mult-add-left,order-ops,14,"14
+5",True,True,True,No further criterion error identified in the retained four-token continuation.
+99,sub-mult-right,order-ops,5,17 - ,False,False,False,No further criterion error identified in the retained four-token continuation.
+100,mult-sub-left,order-ops,12,"12
+
+4",True,True,True,No further criterion error identified in the retained four-token continuation.
+101,add-sub-left-right,order-ops,12,"12
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+102,sub-add-left-right,order-ops,13,"13
+1",True,True,True,No further criterion error identified in the retained four-token continuation.
+103,div-parens-add,order-ops,4,"4
+
+The",True,True,True,No further criterion error identified in the retained four-token continuation.
+104,parens-add-div,order-ops,5,"5
+(1",True,True,True,No further criterion error identified in the retained four-token continuation.
+105,parens-sub-div,order-ops,3,"3
+
+(",True,True,True,No further criterion error identified in the retained four-token continuation.
+106,div-sub-left,order-ops,3,"3.8
+",True,False,False,False positive: 3.8 is not the integer target 3.
+107,chain-add-mult-add,order-ops,11,15. The,False,False,False,No further criterion error identified in the retained four-token continuation.
+108,chain-mult-sub-add,order-ops,7,"
+Options: ",False,False,False,No further criterion error identified in the retained four-token continuation.
+109,chain-sub-mult-sub,order-ops,5,15 - ,False,False,False,No further criterion error identified in the retained four-token continuation.
+110,nested-add-mult-sub,order-ops,5,"9
+
+((",False,False,False,Output 9 is the labeled intermediate but not the target 5; preserve as a counterexample to reasoning-step interpretation.
+111,nested-mult-add-div,order-ops,3,"3
+
+((",True,True,True,No further criterion error identified in the retained four-token continuation.
+112,nested-sub-add-mult,order-ops,15,"15
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+113,word-add-mult,order-ops,fourteen,"
+
+two plus",False,False,False,No further criterion error identified in the retained four-token continuation.
+114,word-mult-sub,order-ops,seven,"
+
+three times",False,False,False,No further criterion error identified in the retained four-token continuation.
+115,word-parens,order-ops,twenty, 20.,False,False,True,False negative for numerical meaning: initial 20 equals target twenty; retained separately.
+116,mod-add,order-ops,2,11 % ,False,False,False,No further criterion error identified in the retained four-token continuation.
+117,mod-mult,order-ops,1,16 % ,False,False,False,No further criterion error identified in the retained four-token continuation.
+118,square-sub,order-ops,9,"9
+
+(",True,True,True,No further criterion error identified in the retained four-token continuation.
+119,mult-mult-left,order-ops,24,"24
+2",True,True,True,No further criterion error identified in the retained four-token continuation.
+120,div-div-left,order-ops,3,"3. 
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+121,mult-div-left,order-ops,8,"8
+
+The",True,True,True,No further criterion error identified in the retained four-token continuation.
+122,div-mult-left,order-ops,8,"8
+
+The",True,True,True,No further criterion error identified in the retained four-token continuation.
+123,mult-div-mult,order-ops,9,"3
+
+The",False,False,False,No further criterion error identified in the retained four-token continuation.
+124,add-add-add,order-ops,10,"10, ",True,True,True,No further criterion error identified in the retained four-token continuation.
+125,sub-sub-sub,order-ops,10,10. ,True,True,True,No further criterion error identified in the retained four-token continuation.
+126,add-sub-add-sub,order-ops,10,"10
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+127,chain-mult-mult-add,order-ops,26,26. The,True,True,True,No further criterion error identified in the retained four-token continuation.
+128,nested-add-add-mult,order-ops,18,"18
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+129,nested-mult-sub-add,order-ops,9,"11
+((",False,False,False,No further criterion error identified in the retained four-token continuation.
+130,nested-div-add-sub,order-ops,5,"10
+((",False,False,False,No further criterion error identified in the retained four-token continuation.
+131,nested-sub-div-mult,order-ops,15,"15
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+132,nested4-add-mult-add-div,order-ops,3,3.75,True,False,False,False positive: 3.75 is not the integer target 3.
+133,nested4-sub-add-mult-sub,order-ops,10,15. What,False,False,False,No further criterion error identified in the retained four-token continuation.
+134,redundant-parens-mult,order-ops,11,"11
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+135,redundant-parens-div,order-ops,2,"2
+
+(",True,True,True,No further criterion error identified in the retained four-token continuation.
+136,word-sub-mult,order-ops,four,"
+
+Answer:",False,False,False,No further criterion error identified in the retained four-token continuation.
+137,word-add-add,order-ops,twelve,"
+
+<think>
+Okay",False,False,False,No further criterion error identified in the retained four-token continuation.
+138,word-div-sub,order-ops,three,"
+
+fifteen",False,False,False,No further criterion error identified in the retained four-token continuation.
+139,mixed-mult-add,order-ops,14,"14. 
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+140,mixed-parens-mult,order-ops,15,"15.
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+141,mod-sub,order-ops,1,"3
+(1",False,False,False,No further criterion error identified in the retained four-token continuation.
+142,square-div,order-ops,9,3^2 =,False,False,False,No further criterion error identified in the retained four-token continuation.
+143,square-mult,order-ops,16,"16
+(",True,True,True,No further criterion error identified in the retained four-token continuation.
+144,pystar-add,order-ops,9,"9
+
+(",True,True,True,No further criterion error identified in the retained four-token continuation.
+145,pystar-sub,order-ops,16,"16
+
+",True,True,True,No further criterion error identified in the retained four-token continuation.
+146,floordiv-add,order-ops,3,"3
+(7",True,True,True,No further criterion error identified in the retained four-token continuation.
+147,floordiv-mult,order-ops,3,"3
+(2",True,True,True,No further criterion error identified in the retained four-token continuation.

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "root_accepted_utc": "2026-09-09T11:11:24.849723+00:00",
+  "ouro_analysis_identity": "a4086b4564ddddeadd0ca6539c0b00fd17b4c4e3317c3de93452fb6c9423bd16",
+  "p4_maximum_total_gpu_seconds": 900,
+  "p4_outer_timeout_term_seconds": 895,
+  "p4_outer_timeout_kill_after_seconds": 5,
+  "p4_maximum_extraction_charge_usd": 0.1766095890410959,
+  "huginn_seconds_per_prompt_proxy": 228.86465175549978,
+  "huginn_timing_margin": 0.1,
+  "additional_gate_evaluation_interpretation_allowance_seconds": 10800,
+  "retrieval_allowance_seconds": 3600,
+  "projected_all_done_utc": "2026-09-09T22:25:59.961416+00:00",
+  "projected_combined_cost_usd": 18.574872248963455,
+  "work_deadline_utc": "2026-09-10T06:18:57Z",
+  "limitation": "Conservative proxy planning only; does not replace the later actual Huginn native/memory/measured-budget gate. P4 must finish before releasing the current one-hour Ouro wait."
+}

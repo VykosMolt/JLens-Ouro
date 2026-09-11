@@ -1,0 +1,1038 @@
+{
+  "status": "passed_with_bounded_reference_coverage",
+  "started_utc": "2026-09-07T21:27:13.116144+00:00",
+  "completed_utc": "2026-09-07T21:30:04.527921+00:00",
+  "scope": "Independent CPU artifact audit only; no model forward, backward, CUDA execution, calibration fit, or scientific recovery evaluation",
+  "verification_runtime": {
+    "torch": "2.12.0.dev20260407+cu128",
+    "numpy": "2.4.4",
+    "cpu_threads": 1,
+    "byteorder": "little",
+    "cuda_initialized": false
+  },
+  "input_artifacts": {
+    "optimized_full_b8.json": {
+      "sha256": "9ebab970daa1ae5c2af22affccb72bf01c1649e588699ff2e38402df6f502c6f",
+      "bytes": 6172
+    },
+    "offload_reference_b8_v2.json": {
+      "sha256": "e37896af36c078f6169e7b2126965594aab2c07aa6b130261fe2584ea19c60c9",
+      "bytes": 18081
+    },
+    "optimized_full_b2.json": {
+      "sha256": "f0c07a5fd05a654dc38cb31dcbd33f16d1427f1e7098b319496fa6061b822823",
+      "bytes": 22687
+    },
+    "stock_full_b2_warm.json": {
+      "sha256": "a6b971fb2e899731c4103e551042a96d8dd751d4e0505b855354b35eb43aab9d",
+      "bytes": 28814
+    },
+    "baseline_full.json": {
+      "sha256": "c5caaeb7dcb1bfef78546d41410689dd440f8f5fadf6f1bfa988fa5ef883a16f",
+      "bytes": 793
+    },
+    "optimized_full_b8.pt": {
+      "sha256": "a9c16a7dd8c5067345cbfcb73e15e82c7cf98d25b47ac50d12a220f8621cc4b1",
+      "bytes": 3204463663
+    },
+    "offload_reference_b8_v2.npz": {
+      "sha256": "d54751a189d12e9b7e03136ee09964fda1c09b79fd58f97ba93f4af6dbcdbaf6",
+      "bytes": 68847472
+    },
+    "baseline_full.pt": {
+      "bytes": 3204502175,
+      "used_slice_sha256": "6524ee779bfc3ac010078f293d63c0a4d89da59896e954cd8e7af8ba35e259ca",
+      "hash_scope": "all 191 sources, first two output rows, all 2048 input coordinates; full baseline binary not rehashed"
+    },
+    "warmup_one_check_v2.json": {
+      "sha256": "e2fea184a9870d70d48c8a0563ce8540308a079ff31fe159409ec2299d1a9117",
+      "bytes": 8745
+    }
+  },
+  "input_artifact_stat_unchanged": true,
+  "metadata_checks": [
+    {
+      "check": "common_model_revision",
+      "passed": true
+    },
+    {
+      "check": "common_prompt_sha256",
+      "passed": true
+    },
+    {
+      "check": "common_torch",
+      "passed": true
+    },
+    {
+      "check": "common_device",
+      "passed": true
+    },
+    {
+      "check": "recorded_common_torch_git",
+      "passed": true
+    },
+    {
+      "check": "recorded_common_attention",
+      "passed": true
+    },
+    {
+      "check": "no_new_research_calibration_fits",
+      "passed": true
+    },
+    {
+      "check": "all_full_runs_target_sources_and_positions",
+      "passed": true
+    },
+    {
+      "check": "all_new_full_runs_skip_and_truncation",
+      "passed": true
+    },
+    {
+      "check": "full_runs_runtime_flags_match",
+      "passed": true
+    },
+    {
+      "check": "offload_recorded_fp32_flags_match",
+      "passed": true
+    },
+    {
+      "check": "b8_engine_configuration",
+      "passed": true
+    },
+    {
+      "check": "b2_engine_configuration",
+      "passed": true
+    },
+    {
+      "check": "stock_b2_configuration",
+      "passed": true
+    },
+    {
+      "check": "b8_pass_count",
+      "passed": true
+    },
+    {
+      "check": "b2_pass_count",
+      "passed": true
+    },
+    {
+      "check": "full_b8_run_complete_and_finite",
+      "passed": true
+    },
+    {
+      "check": "full_b8_saved_artifact_size",
+      "passed": true
+    },
+    {
+      "check": "offload_run_complete_and_sampled",
+      "passed": true
+    },
+    {
+      "check": "offload_two_native_batches",
+      "passed": true
+    },
+    {
+      "check": "offload_b2_sources_positions",
+      "passed": true
+    },
+    {
+      "check": "offload_b2_payloads_released",
+      "passed": true
+    },
+    {
+      "check": "offload_b8_sources_positions",
+      "passed": true
+    },
+    {
+      "check": "offload_b8_payloads_released",
+      "passed": true
+    },
+    {
+      "check": "offload_b8_schedule",
+      "passed": true
+    },
+    {
+      "check": "offload_npz_hash_matches_final_manifest",
+      "passed": true
+    },
+    {
+      "check": "offload_baseline_manifest_hash",
+      "passed": true
+    },
+    {
+      "check": "offload_driver_source_hash",
+      "passed": true
+    },
+    {
+      "check": "full_b8_matrix_headers",
+      "passed": true
+    },
+    {
+      "check": "full_b8_independent_finiteness_scan",
+      "passed": true
+    },
+    {
+      "check": "baseline_headers_for_b2_gate",
+      "passed": true
+    },
+    {
+      "check": "offload_baseline_slice_hash",
+      "passed": true
+    },
+    {
+      "check": "offload_npz_keys",
+      "passed": true
+    },
+    {
+      "check": "group_0_shape",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          8,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "group_0_literal_bits_and_finite",
+      "passed": true
+    },
+    {
+      "check": "group_1024_shape",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          8,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "group_1024_literal_bits_and_finite",
+      "passed": true
+    },
+    {
+      "check": "group_2040_shape",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          8,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "group_2040_literal_bits_and_finite",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          8,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "repeated_start_zero_literal_bits_and_finite",
+      "passed": true
+    },
+    {
+      "check": "zero_cotangent_all_positive_zero_bits",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          2,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "b2_offload_gate_literal_bits_independently_repeated",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          2,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "first_two_convenience_slice_consistent",
+      "passed": true
+    },
+    {
+      "check": "comparison_shape_and_dtype",
+      "passed": true,
+      "details": {
+        "shape": [
+          191,
+          2,
+          2048
+        ]
+      }
+    },
+    {
+      "check": "optimized_b2_complete_stored_comparison_evidence",
+      "passed": true
+    },
+    {
+      "check": "stock_b2_warm_complete_stored_comparison_evidence",
+      "passed": true
+    },
+    {
+      "check": "old_optimized_b2_comparator_version",
+      "passed": true
+    },
+    {
+      "check": "warm_stock_comparator_reports_literal_bits",
+      "passed": true
+    },
+    {
+      "check": "sample_count_and_coverage",
+      "passed": true
+    },
+    {
+      "check": "input_artifacts_unchanged_during_audit",
+      "passed": true
+    },
+    {
+      "check": "cpu_only_audit",
+      "passed": true
+    }
+  ],
+  "common_estimator": {
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "prompt_sha256": "e3283ab440bddc5d9947d69fb0ea46f721c171e90a84c3604f25222b1b9f2a02",
+    "virtual_sources": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190
+    ],
+    "target": 191,
+    "hidden_width": 2048,
+    "max_seq_len": 128,
+    "encoded_sequence_length": 128,
+    "skip_first": 16,
+    "valid_positions": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126
+    ],
+    "n_valid": 111,
+    "source_reduction": "FP32 mean over valid source positions",
+    "target_cotangent": "one at every valid target position for the selected output coordinate"
+  },
+  "full_b8_saved_map": {
+    "matrices": 191,
+    "shape_per_matrix": [
+      2048,
+      2048
+    ],
+    "dtype": "float32",
+    "device_on_load": "cpu",
+    "entries": 801112064,
+    "independently_scanned_finite_entries": 801112064,
+    "nonfinite_entries": 0,
+    "maximum_absolute_value": 3.468266248703003,
+    "logical_matrix_payload_sha256": "c975f737f8678ad1d607c7012e4e120c95553e3a485765e26fe8cc0429452e3e",
+    "logical_hash_order": "sources 0..190, C-order float32 matrix bytes",
+    "full_binary_sha256": "a9c16a7dd8c5067345cbfcb73e15e82c7cf98d25b47ac50d12a220f8621cc4b1",
+    "saved_run_status_unchanged": "completed_unverified"
+  },
+  "b8_matching_native_reference": {
+    "status": "all_sampled_rows_match_literal_fp32_bits",
+    "unique_output_rows": 24,
+    "full_output_width": 2048,
+    "unique_values_compared": 9388032,
+    "full_matrix_values": 801112064,
+    "fraction_of_matrix_entries_verified_against_native_b8": 0.01171875,
+    "percent_of_matrix_entries_verified_against_native_b8": 1.171875,
+    "complete_native_b8_reference_available": false,
+    "groups": [
+      {
+        "output_rows": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "reference_key": "native_b8_start_0",
+        "shape": [
+          191,
+          8,
+          2048
+        ],
+        "values_compared": 3129344,
+        "all_actual_finite": true,
+        "all_reference_finite": true,
+        "exact_numerical_equality": true,
+        "exact_fp32_bits_equal": true,
+        "differing_numeric_entries": 0,
+        "differing_fp32_bit_patterns": 0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "root_mean_square_error": 0.0,
+        "relative_frobenius_error": 0.0,
+        "max_per_source_relative_frobenius_error": 0.0,
+        "median_per_source_relative_frobenius_error": 0.0,
+        "sources_with_any_bit_difference": 0,
+        "minimum_source_cosine": 0.9999999999999998,
+        "nonzero_reference_source_count": 191
+      },
+      {
+        "output_rows": [
+          1024,
+          1025,
+          1026,
+          1027,
+          1028,
+          1029,
+          1030,
+          1031
+        ],
+        "reference_key": "native_b8_start_1024",
+        "shape": [
+          191,
+          8,
+          2048
+        ],
+        "values_compared": 3129344,
+        "all_actual_finite": true,
+        "all_reference_finite": true,
+        "exact_numerical_equality": true,
+        "exact_fp32_bits_equal": true,
+        "differing_numeric_entries": 0,
+        "differing_fp32_bit_patterns": 0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "root_mean_square_error": 0.0,
+        "relative_frobenius_error": 0.0,
+        "max_per_source_relative_frobenius_error": 0.0,
+        "median_per_source_relative_frobenius_error": 0.0,
+        "sources_with_any_bit_difference": 0,
+        "minimum_source_cosine": 0.9999999999999998,
+        "nonzero_reference_source_count": 191
+      },
+      {
+        "output_rows": [
+          2040,
+          2041,
+          2042,
+          2043,
+          2044,
+          2045,
+          2046,
+          2047
+        ],
+        "reference_key": "native_b8_start_2040",
+        "shape": [
+          191,
+          8,
+          2048
+        ],
+        "values_compared": 3129344,
+        "all_actual_finite": true,
+        "all_reference_finite": true,
+        "exact_numerical_equality": true,
+        "exact_fp32_bits_equal": true,
+        "differing_numeric_entries": 0,
+        "differing_fp32_bit_patterns": 0,
+        "max_absolute_error": 0.0,
+        "mean_absolute_error": 0.0,
+        "root_mean_square_error": 0.0,
+        "relative_frobenius_error": 0.0,
+        "max_per_source_relative_frobenius_error": 0.0,
+        "median_per_source_relative_frobenius_error": 0.0,
+        "sources_with_any_bit_difference": 0,
+        "minimum_source_cosine": 0.9999999999999998,
+        "nonzero_reference_source_count": 191
+      }
+    ]
+  },
+  "controls": {
+    "repeated_start_zero": {
+      "shape": [
+        191,
+        8,
+        2048
+      ],
+      "values_compared": 3129344,
+      "all_actual_finite": true,
+      "all_reference_finite": true,
+      "exact_numerical_equality": true,
+      "exact_fp32_bits_equal": true,
+      "differing_numeric_entries": 0,
+      "differing_fp32_bit_patterns": 0,
+      "max_absolute_error": 0.0,
+      "mean_absolute_error": 0.0,
+      "root_mean_square_error": 0.0,
+      "relative_frobenius_error": 0.0,
+      "max_per_source_relative_frobenius_error": 0.0,
+      "median_per_source_relative_frobenius_error": 0.0,
+      "sources_with_any_bit_difference": 0,
+      "minimum_source_cosine": 0.9999999999999998,
+      "nonzero_reference_source_count": 191
+    },
+    "zero_cotangent": {
+      "shape": [
+        191,
+        8,
+        2048
+      ],
+      "values": 3129344,
+      "all_finite": true,
+      "numeric_nonzero_entries": 0,
+      "nonzero_fp32_bit_patterns": 0,
+      "negative_zero_entries": 0
+    },
+    "b2_offload_against_stock_gate": {
+      "shape": [
+        191,
+        2,
+        2048
+      ],
+      "values_compared": 782336,
+      "all_actual_finite": true,
+      "all_reference_finite": true,
+      "exact_numerical_equality": true,
+      "exact_fp32_bits_equal": true,
+      "differing_numeric_entries": 0,
+      "differing_fp32_bit_patterns": 0,
+      "max_absolute_error": 0.0,
+      "mean_absolute_error": 0.0,
+      "root_mean_square_error": 0.0,
+      "relative_frobenius_error": 0.0,
+      "max_per_source_relative_frobenius_error": 0.0,
+      "median_per_source_relative_frobenius_error": 0.0,
+      "sources_with_any_bit_difference": 0,
+      "minimum_source_cosine": 0.9999999999999998,
+      "nonzero_reference_source_count": 191
+    },
+    "first_two_alias": {
+      "shape": [
+        191,
+        2,
+        2048
+      ],
+      "values_compared": 782336,
+      "all_actual_finite": true,
+      "all_reference_finite": true,
+      "exact_numerical_equality": true,
+      "exact_fp32_bits_equal": true,
+      "differing_numeric_entries": 0,
+      "differing_fp32_bit_patterns": 0,
+      "max_absolute_error": 0.0,
+      "mean_absolute_error": 0.0,
+      "root_mean_square_error": 0.0,
+      "relative_frobenius_error": 0.0,
+      "max_per_source_relative_frobenius_error": 0.0,
+      "median_per_source_relative_frobenius_error": 0.0,
+      "sources_with_any_bit_difference": 0,
+      "minimum_source_cosine": 0.9999999999999998,
+      "nonzero_reference_source_count": 191
+    },
+    "offload_host_payloads_released_after_both_graphs": true
+  },
+  "cross_batch_diagnostic": {
+    "scope": "same paragraph B8 versus B2 first two rows; not an optimizer acceptance comparison",
+    "shape": [
+      191,
+      2,
+      2048
+    ],
+    "values_compared": 782336,
+    "all_actual_finite": true,
+    "all_reference_finite": true,
+    "exact_numerical_equality": false,
+    "exact_fp32_bits_equal": false,
+    "differing_numeric_entries": 777765,
+    "differing_fp32_bit_patterns": 777765,
+    "max_absolute_error": 0.029268287122249603,
+    "mean_absolute_error": 0.00028140144302202924,
+    "root_mean_square_error": 0.0007123075195571153,
+    "relative_frobenius_error": 0.04221368891331254,
+    "max_per_source_relative_frobenius_error": 0.06677939001706751,
+    "median_per_source_relative_frobenius_error": 0.0169827148557072,
+    "sources_with_any_bit_difference": 191,
+    "minimum_source_cosine": 0.9978246776014571,
+    "nonzero_reference_source_count": 191
+  },
+  "full_b2_saved_evidence": {
+    "entries_compared": 801112064,
+    "all_191_sources_report_equal": true,
+    "optimized_b2_equality_semantics": "exact numerical equality via torch.equal; signed-zero bits were not distinguished in that run",
+    "optimized_b2_artifact_retained_for_new_value_audit": false,
+    "optimized_b2_vs_warm_stock": "exact numerical equality follows from both stored full comparisons to the same original stock B2; no literal-bit claim for optimized B2",
+    "warm_stock_equality_semantics": "later comparator includes int32-view literal-bit checks as well as torch.equal",
+    "evidence_basis": "stored JSON records and inspected comparator revisions; no re-execution of the full GPU comparisons"
+  },
+  "completed_timings": [
+    {
+      "label": "original_stock_b2",
+      "source_json": "baseline_full.json",
+      "batch": 2,
+      "complete_prompt_seconds": 215.03402510800152,
+      "peak_cuda_gb": 9.961763328,
+      "complete_output_entries": 801112064,
+      "output_direction_passes": 1024,
+      "parity_scope": "original complete stock reference"
+    },
+    {
+      "label": "later_stock_b2",
+      "source_json": "stock_full_b2_warm.json",
+      "batch": 2,
+      "complete_prompt_seconds": 210.6899053220004,
+      "peak_cuda_gb": 9.961763328,
+      "complete_output_entries": 801112064,
+      "output_direction_passes": 1024,
+      "parity_scope": "stored complete literal-bit comparison against original stock B2"
+    },
+    {
+      "label": "optimized_b2_edges_no_compression",
+      "source_json": "optimized_full_b2.json",
+      "batch": 2,
+      "complete_prompt_seconds": 202.80449138100084,
+      "peak_cuda_gb": 9.768809984,
+      "complete_output_entries": 801112064,
+      "output_direction_passes": 1024,
+      "parity_scope": "stored complete numerical comparison against original stock B2; original comparator used torch.equal"
+    },
+    {
+      "label": "optimized_b8_edges_and_compression",
+      "source_json": "optimized_full_b8.json",
+      "batch": 8,
+      "complete_prompt_seconds": 192.3013439000024,
+      "peak_cuda_gb": 8.360231424,
+      "complete_output_entries": 801112064,
+      "output_direction_passes": 256,
+      "parity_scope": "complete execution and independently finite; this audit verifies 24 rows against matching native B8"
+    }
+  ],
+  "timing_comparisons": {
+    "optimized_b2_vs_later_stock_b2": {
+      "speedup_factor": 1.0388818506301498,
+      "time_reduction_percent": 3.7426633843459123,
+      "seconds_saved": 7.88541394099957,
+      "same_native_batch": true
+    },
+    "optimized_b2_vs_original_stock_b2": {
+      "speedup_factor": 1.060302085243396,
+      "time_reduction_percent": 5.687255177806561,
+      "same_native_batch": true
+    },
+    "optimized_b8_vs_later_stock_b2_descriptive_only": {
+      "time_ratio_stock_b2_over_optimized_b8": 1.095623676096409,
+      "time_reduction_percent": 8.727784747871292,
+      "same_native_batch": false,
+      "scope": "throughput comparison of different native batch engines; not a fidelity-preserving speedup proof across B2/B8"
+    }
+  },
+  "timing_scope": "Single complete fixed-paragraph executions. Timed fitter includes CPU output allocation, forward, backward, reduction/copy, and capture/warmup for graph engine; excludes model loading, file provenance work, post-fit finiteness/parity checks and final map saving. Timings are not estimates from sampled sweeps. No statistical performance uncertainty or thermal equivalence is established.",
+  "research_calibration_fits_executed": 0,
+  "independent_reference_method_review": {
+    "driver_script_sha256": "cf783d68830a78efddc358d6ff06233dd7bc6fae671045de31ff91164a17164f",
+    "source_recorder": "stock ActivationRecorder with original source tensors",
+    "backward": "ordinary native replicated-batch autograd.grad; no GradientEdges or vmap",
+    "saved_storage": "full tensors offloaded to unpinned CPU backing and reconstructed with original size/stride/offset; persistent parameters remain resident",
+    "rows_written_after_zeroing_cotangent": true,
+    "repeat_and_zero_controls_present": true,
+    "b2_gate_checked_before_b8": true,
+    "npz_hash_valid_after_final_array_write": true
+  },
+  "limitations": [
+    "Native B8 comparison covers 24 of 2048 output coordinates (1.171875%) on one fixed non-calibration paragraph. It does not establish complete B8 equality or multi-paragraph mean parity.",
+    "The completed B2 optimized comparator used torch.equal; its old bitwise-named fields establish numerical equality, including no claim about the sign bit of zero.",
+    "Changing native batch B2/B8/B32 can change BF16 numerical results. The measured matching-B8 agreement must not be represented as B2/B8 equivalence or equivalence to historical B32 fits.",
+    "All full benchmark runs record matching complete precision snapshots. The offload driver records matching FP32 matmul/TF32 and SDPA implementation fields but does not store the full BF16 reduction/split-K/SDPA-enabled flag snapshot; those missing settings are not independently certified by metadata.",
+    "B2 timing comparisons are single-run measurements; thermal state, clock variation and wider workload timing uncertainty are not quantified. B8-to-B2 timing differences also change the native batch engine.",
+    "This audit validates the listed saved benchmark artifacts and their recorded implementation revisions. It does not automatically validate later source edits or constitute new N100 scientific fits.",
+    "A later cold-process warmup=1 check reports matching sampled rows and controls, and the wrapper now defaults to one warmup. Historical full-width timings used three warmups; no extra speedup is included, and those historical implementation hashes remain unchanged."
+  ],
+  "input_artifact_stat_unchanged_scope": "Input result files were stable during this CPU audit; this does not claim source code remained unchanged since historical GPU runs.",
+  "later_warmup_one_evidence": {
+    "status": "reported_cold_sampled_checks_passed",
+    "source_json": "warmup_one_check_v2.json",
+    "source_sha256_recorded_in_that_run": {
+      "benchmark_optimized.py": "4f63957237e2cd9309c788c9af67ed5471928f6fbc0b18095e6f903adc0ff944",
+      "optimized_fitting.py": "2ec40a92685efe0fdba3bdc62dfe032d90000862a5c10513be32f29eb1e8a3c0",
+      "cuda_graph_candidate.py": "b2286fd25eb07553c8e27df3883cdce28c71907343c163d0c5db5da25a863e78",
+      "saved_tensor_candidate.py": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a",
+      "jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+      "warmup_one_check.py": "eafd3bec6689d30f56877825e6cbe33a6e683dcdf92129cb5462e4ee4a9da7e0",
+      "ouro_jlens/recurrent.py": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+    },
+    "metadata_matches_historical_b8_except_warmup": true,
+    "warmup_calls": 1,
+    "constructor_backward_calls": 2,
+    "backward_calls_before_constructor": 0,
+    "replay_python_autograd_calls": 0,
+    "comparison_cases": [
+      [
+        "first",
+        0
+      ],
+      [
+        "middle",
+        1024
+      ],
+      [
+        "tail",
+        2040
+      ],
+      [
+        "repeat_first",
+        0
+      ],
+      [
+        "zero",
+        null
+      ]
+    ],
+    "first_middle_tail_reference_values_per_group": 3129344,
+    "reported_first_middle_tail_vs_saved_b8_literal_bits_equal": true,
+    "reported_all_five_cases_vs_eager_literal_bits_equal": true,
+    "reported_repeat_and_zero_controls_passed": true,
+    "full_width_complete": false,
+    "raw_candidate_arrays_reaudited_here": false,
+    "evidence_basis": "Read-only consistency audit of saved cold-process report and matching check-driver hash; the earlier native-B8 row comparisons in this file are direct array comparisons.",
+    "current_source_setting": {
+      "file": "optimized_fitting.py",
+      "current_sha256_at_audit": "6ba31269b98cca39f9a27a0ede572abf466abfbb166bc563e85eb796aa4f616f",
+      "capture_warmup_default": 1,
+      "passes_parameter_to_CapturedVJP": true,
+      "scope": "Later wrapper setting; this is not a replacement hash for historical GPU benchmark runs."
+    },
+    "historical_full_graph_benchmarks_warmup_calls": 3,
+    "effect_on_reported_complete_prompt_timings": "None. The recorded B2 202.804491381 seconds and B8 192.301343900 seconds include three warmup calls. No completed full-width timing for the new one-warmup default is claimed.",
+    "research_calibration_fits_executed": 0
+  }
+}

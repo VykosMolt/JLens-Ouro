@@ -1,0 +1,1 @@
+{"attempt":3,"finished_utc":"2026-09-09T15:04:52.308248+00:00","local_mtime_ns":1788911501846052917,"outcome":"already_present","path":"ouro/fit_01/checkpoints/cursor_000100_04725c9ff69e4fa2a481b644e0790574/state.pt","record":{"bytes":3204501185,"sha256":"aecd994c9fdb23e3010f8012368d5bd41caabae58f6a1e71413a06c83976d111"},"remote_mtime_ns":1788911501846052917}

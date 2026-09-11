@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "archive": {
+    "bytes": 640615,
+    "sha256": "62a5397404e7617cecbc2e51b8a151878f27b02a72f3f69420fa338f20d763b5"
+  },
+  "members": 109,
+  "scientific_sources_unchanged_from_v6": 42,
+  "run_spec_sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149",
+  "changed_archive_files": [
+    "MANIFEST.json",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/README.md",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py"
+  ],
+  "added_archive_files": [
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/lease_5090_cpu_v1.json"
+  ],
+  "previous_extracted_plan_proof": "bundle_checks_v6.json",
+  "controller_proof": {
+    "bytes": 10276,
+    "sha256": "8129250dc602c448d2f1276cd0be9f55cd64da5e63c617c4b45d1d536b536e2b"
+  },
+  "prior_spend_upper_usd": 0.3316979710977009,
+  "cloud_operations": 0
+}

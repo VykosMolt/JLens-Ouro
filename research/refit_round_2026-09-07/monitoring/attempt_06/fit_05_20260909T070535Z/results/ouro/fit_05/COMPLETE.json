@@ -1,0 +1,1 @@
+{"fit_identity_sha256":"b65d15f0983792e2f2a0e659f698d2cece5bbf110571acca231d2789d57a4c04","generation":"final/cursor_000100_436f5cb2c01a409b9013b28fffb7d088","kind":"final","n_done":100,"next_idx":100,"observed_prompt_bound_seconds":66.35720167006366,"schema_version":1,"seal":{"bytes":363,"sha256":"dada0b238ff674a0c28f00bafa29849bd9bb66688b8f052fa03ae032fbb881ff"}}

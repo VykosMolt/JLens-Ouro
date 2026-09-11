@@ -1,0 +1,96 @@
+{
+  "status": "passed_local_fixtures_only",
+  "helper": {
+    "path": "/tmp/prefetch_completed_ouro06.py",
+    "bytes": 25901,
+    "sha256": "3f6bdbdabff8523da8ae23c67439daa336766e1bf38a2982adbdd73f9090ad25"
+  },
+  "checks": [
+    "Seven pinned accepted receipts bind exactly 14 binaries and 51 immutable JSON records",
+    "Atomic publication retains exact verified bytes and nanosecond mtime; no staging file is published",
+    "Incomplete or changed staged bytes never enter retrieved",
+    "An active final-collector lock prevents publication without touching staging",
+    "Phase change inside the install lock refuses publication and releases the lock",
+    "Already valid files are preserved byte-for-byte with unchanged inode and timestamps",
+    "Existing equal bytes with different mtime are preserved and refused without metadata rewriting",
+    "A conflicting existing file is never overwritten",
+    "Symlink destination is refused without following or deleting it",
+    "Staged mutation between hashing and publication is rejected",
+    "A destination appearing during the final check is preserved, never replaced",
+    "A linked synchronization lock is refused",
+    "Guard cancellation terminates and reaps the active transfer process group",
+    "Exited leader and TERM-ignoring same-group descendant are cleaned with bounded escalation",
+    "Unchanged embedded read-only logic accepts valid local gate/metadata/binary fixture",
+    "Preflight and all non-fitting phases are excluded before any binary read",
+    "STOP prevents the remote read phase",
+    "Failed measured-budget gate refuses prefetch despite a fitting status",
+    "Changed accepted remote metadata is rejected",
+    "Same-size remote binary corruption is rejected by SHA256"
+  ],
+  "checks_count": 20,
+  "expected_binary_inventory": {
+    "controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt": {
+      "bytes": 3187723651,
+      "sha256": "cc61b21e9f591c92284fe576b4119e80e73f45af6cf11e394e3fe48293ebc168"
+    },
+    "controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt": {
+      "bytes": 1593887875,
+      "sha256": "dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560"
+    },
+    "controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt": {
+      "bytes": 6409003339,
+      "sha256": "e5f4358227a8be21bfbdbdeceab8d19c276ae0e3a56238b44b82ea028b4c9eb6"
+    },
+    "controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt": {
+      "bytes": 3204553347,
+      "sha256": "b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775"
+    },
+    "ouro/fit_01/checkpoints/cursor_000100_04725c9ff69e4fa2a481b644e0790574/state.pt": {
+      "bytes": 3204501185,
+      "sha256": "aecd994c9fdb23e3010f8012368d5bd41caabae58f6a1e71413a06c83976d111"
+    },
+    "ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt": {
+      "bytes": 1602276737,
+      "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+    },
+    "ouro/fit_02/checkpoints/cursor_000100_c77feb54f72c4155ac109208b031cc81/state.pt": {
+      "bytes": 3204501185,
+      "sha256": "474c6ca7ae552889ec8a936eccd5355b796300558a5a9af443cbdb8e33a5e95b"
+    },
+    "ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt": {
+      "bytes": 1602276737,
+      "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8"
+    },
+    "ouro/fit_03/checkpoints/cursor_000100_2ef94138682144639be643b4f1fd36b5/state.pt": {
+      "bytes": 3204501185,
+      "sha256": "3d20af8b9b83bb2981b5956b8ffe87165d33ee94748b11897e1fcaa280b07a48"
+    },
+    "ouro/fit_03/final/cursor_000100_93af310a05e04e1fac85763230e0cecc/lens.pt": {
+      "bytes": 1602276737,
+      "sha256": "8cf117d4bfcab3e53741c98fba233ed04cae15c7b3c076b52368a403199aeb96"
+    },
+    "ouro/fit_04/checkpoints/cursor_000100_3cef301353914d5db4157ae81a1406f5/state.pt": {
+      "bytes": 3204501185,
+      "sha256": "e05d42cb3d5aec016207a612697dfa01b2cd18105535a67c27d58452460f0761"
+    },
+    "ouro/fit_04/final/cursor_000100_e042314b4bd24b13bb4426b1345b294a/lens.pt": {
+      "bytes": 1602276737,
+      "sha256": "8e14adbe2879cf2956e19bddd13b863f159294b02a028307c2364a5b607f65b9"
+    },
+    "ouro/fit_05/checkpoints/cursor_000100_a2e69f22561a49f39d63127bc61cb9d9/state.pt": {
+      "bytes": 3204501185,
+      "sha256": "3bb400e4226e1a7faad89bfa4cd5e786a2e44e8f57fc471c5ec279a6a42d7d0f"
+    },
+    "ouro/fit_05/final/cursor_000100_436f5cb2c01a409b9013b28fffb7d088/lens.pt": {
+      "bytes": 1602276737,
+      "sha256": "1c2a7129fa0607ddced28f498279e02a42cea9d9e2385b31c57fdb88ad2be98c"
+    }
+  },
+  "metadata_records": 51,
+  "expected_bytes": 38429057822,
+  "fixture_directory": "/tmp/prefetch06-proof-u1ba4tid",
+  "remote_connections": 0,
+  "remote_mutations": 0,
+  "model_or_gpu_calls": 0,
+  "prefetch_executed": false
+}

@@ -1,0 +1,465 @@
+{
+  "schema": "confirmation_attempt05_closure_documentation_review.v1",
+  "recorded_utc": "2026-09-10T19:11:13.714842+00:00",
+  "reviewer": "independent adversarial documentation verifier (read-only; CPU tensor loading only)",
+  "scope": "README.md, REPORT.md, CLAIMS.md, resources/SPENDING_AND_SHUTDOWN.md, three appended RUN_LOG.md entries, observe_attempt05_final_account.py, attempt05_final_account_observation.json, record_attempt05_spending_shutdown.py, ATTEMPT05_SPENDING_AND_SHUTDOWN.json",
+  "verdict": "PASS_WITH_FINDINGS",
+  "verdict_basis": "All numeric statements, hashes, the native.pt recomputation, spending arithmetic, the timeline (except two unrecorded times), links and append-only integrity verify against primary evidence. No statement implies the gate passed, that a cause is proven or that scores exist. One major completeness gap (no recorded authorization basis for attempt05 creation/export) and several minor wording and support issues need correction. The failed gate is not relaxed or reinterpreted by this review.",
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "major",
+      "file": "RUN_LOG.md",
+      "line": 152,
+      "statement": "Retrospective attempt05 admission entry (and REPORT.md:49) records creation of pod i7zq14rj0f0ief and export of the bundle and four banks to it, but says nothing about the authorization basis for that creation/export.",
+      "evidence": "The immediately preceding pre-edit entry (RUN_LOG.md:147, 14:39:00Z) states that no replacement was created and that root had requested advance approval covering the replacement and its provider-assigned address. No attempt05 authorization record exists locally: resources/ has ATTEMPT03_AUTHORIZATION.json only; no file modified between 14:39Z and 14:56Z records an approval; LEASE.json has user_notice_utc 14:54:31.769841Z but no authorization field. By contrast, the later setup-deadline amendment carries a quoted, history-referenced authorization.",
+      "correction": "Cite the record of the user approval that covered attempt05 creation and export (quote, history reference, received time), or state explicitly that no local authorization record for attempt05 creation/export was found. Do not assert authorization content without a record."
+    },
+    {
+      "id": "F02",
+      "severity": "minor",
+      "file": "RUN_LOG.md",
+      "line": 162,
+      "statement": "\"At 18:36:20Z root found no local lease watcher, receiver, uploader, systemd unit, timer or cron entry for this experiment.\"",
+      "evidence": "The string 18:36:20 appears in no file other than RUN_LOG.md; no preserved process/unit/cron listing exists. The claim is an unrecorded root assertion.",
+      "correction": "Preserve the check output as a record and cite it, or label the sentence as an unrecorded root observation."
+    },
+    {
+      "id": "F03",
+      "severity": "minor",
+      "file": "RUN_LOG.md",
+      "line": 157,
+      "statement": "\"Root authorized explicit teardown at 18:31:38Z\"",
+      "evidence": "cloud_leases/attempt_05/ROOT_TEARDOWN_EXECUTION.json contains no timestamp (fields: schema, binding, scope, authorized_by). 18:31:38Z matches only its filesystem mtime (2026-09-10 20:31:38.288 +0200).",
+      "correction": "State that the time is the record file's modification time because the authorization record carries no timestamp."
+    },
+    {
+      "id": "F04",
+      "severity": "minor",
+      "file": "README.md",
+      "line": 18,
+      "statement": "The open decision is described as whether to \"keep exact logit equality and diagnose the shape-dependent computation\" (same presupposition at REPORT.md:57 and RUN_LOG.md:162).",
+      "evidence": "REPORT.md:41, CLAIMS.md:19 and the forensics review call shape-dependent BF16 rounding the leading but unproven explanation; interpretation.not_established lists which kernel caused the differences. Calling it 'the shape-dependent computation' in the decision statement presupposes the mechanism.",
+      "correction": "Rephrase to e.g. 'keep exact logit equality and diagnose the native-versus-unembedding discrepancy (leading, unproven hypothesis: shape-dependent BF16 rounding)'."
+    },
+    {
+      "id": "F05",
+      "severity": "minor",
+      "file": "resources/SPENDING_AND_SHUTDOWN.md",
+      "line": 21,
+      "statement": "\"No further paid work fits the existing ceiling.\"",
+      "evidence": "Remaining authorization is $3.3544320362335576 (ATTEMPT05_SPENDING_AND_SHUTDOWN.json). Only two specific admissions are shown not to fit: the frozen $3.77 primary attempt (shortfall $0.415568) and the $6 Huginn admission (shortfall $2.645568). No record shows that every possible paid job, e.g. a separately capped diagnostic, exceeds $3.354432.",
+      "correction": "Restrict the statement to the frozen $3.77 primary attempt and the $6 Huginn admission, and note that any smaller job would still need its own reviewed cap and explicit authorization. README.md:18 and REPORT.md:57 are already correctly scoped to the frozen $3.77 attempt."
+    },
+    {
+      "id": "F06",
+      "severity": "minor",
+      "file": "CLAIMS.md",
+      "line": 12,
+      "statement": "Status labels 'inconclusive, not evaluated' / 'Inconclusive — not tested' (also README.md:5, REPORT.md:3, CLAIMS.md:3 and 16, RUN_LOG.md:160 and 162, ATTEMPT05_SPENDING_AND_SHUTDOWN.json scientific_status), with the RUN_LOG heading 'confirmation closed inconclusive'.",
+      "evidence": "In PROSPECTIVE_PLAN.md 'inconclusive' denotes an evaluated result whose interval leaves sign/magnitude unresolved ('we accept that it may leave the sign and magnitude unresolved'; 'A negative or inconclusive result is accepted without replacing the endpoint'), and 'The final fixed population is evaluated once.' Attempt05 produced no estimate. Reusing the plan's outcome term, plus 'closed', can be read as the one-time evaluation having occurred and ended, which conflicts with the documented continuation path.",
+      "correction": "Label the endpoint 'Not evaluated (no outcome)' or 'Incomplete — not evaluated'. State that the plan's one-time evaluation of the 160-question population has not occurred, and describe the confirmation as suspended pending authorization and a protocol decision rather than closed."
+    },
+    {
+      "id": "F07",
+      "severity": "minor",
+      "file": "REPORT.md",
+      "line": 49,
+      "statement": "\"At the user's explicit instruction, only the setup deadline was extended, from 18:20:01Z to 18:35:01Z.\"",
+      "evidence": "SETUP_DEADLINE_AMENDMENT(_INTENT).json record the quote 'Extend the deadline' (received 17:44:30.379765Z). The quote names neither which deadline nor the amount; the choice of setup_deadline_utc and +900 s was root's and was then independently reviewed. RUN_LOG.md:152 quotes the instruction accurately.",
+      "correction": "Write e.g.: 'After the user's instruction \"Extend the deadline\", root extended only setup_deadline_utc by 15 minutes, from 18:20:01Z to 18:35:01Z; independent review passed.'"
+    },
+    {
+      "id": "F08",
+      "severity": "minor",
+      "file": "README.md",
+      "line": 5,
+      "statement": "\"Status: recovery complete; ...\"",
+      "evidence": "artifacts/FINDINGS.md:11 reports 8 complete binaries out of 16. FINDINGS.md:32 says 'This recovery does not establish complete retrieval of the original experiment.' REPORT.md:5 lists eight binaries still missing or incomplete. 'Recovery complete' can be read as full recovery.",
+      "correction": "Use e.g. 'Status: recovery work concluded (8 of 16 historical binaries available, 8 unrecovered); ...'."
+    },
+    {
+      "id": "F09",
+      "severity": "minor",
+      "file": "REPORT.md",
+      "line": 39,
+      "statement": "\"Every item keeps the same top-1 token and top-10 set.\" (CLAIMS.md:20 and RUN_LOG.md:157 report the same.) This is correct, but it is the only rank-agreement evidence given.",
+      "evidence": "Independent CPU recomputation on development/native.pt found that, under a stable descending full-vocabulary sort, per-item token ranks differ for 1,322 / 1,391 / 1,374 tokens, with maximum absolute rank shift 188 / 194 / 217. The smallest rank of any rank-changed token is 707 / 2,567 / 270. The top-100 order is identical. Ties among BF16-quantized logits inflate the counts.",
+      "correction": "Add that full-vocabulary rank orderings are not identical beyond the top 100 (smallest affected rank 270 on mars-color). This strengthens the existing caveat that top-k agreement does not show scored ranks are unchanged."
+    },
+    {
+      "id": "F10",
+      "severity": "nit",
+      "file": "RUN_LOG.md",
+      "line": 157,
+      "statement": "\"It lists only the five development-stage files\" (REPORT.md:29 likewise).",
+      "evidence": "MANIFEST.json is the failed final manifest (kind 'final', stage_id null, outcome 'failed'). Of its five files, benchmark.json, population.json, run_spec.json and provenance.json are run-level metadata; only development/native.pt is development-stage output.",
+      "correction": "Say 'lists only five files: four run-level metadata files and development/native.pt'."
+    },
+    {
+      "id": "F11",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 3,
+      "statement": "The gate is described as the requirement for exact equality between native final logits and the unembedding of the saved final residual.",
+      "evidence": "worker.py:94–97 and validate_outputs.py:72–73 require three torch.equal checks: virtual vs physical states, virtual vs wrapper states, and native vs unembedded logits. The two state checks passed; only the logit check failed.",
+      "correction": "Describe the gate as three exact-equality checks, of which the logit check failed. REPORT.md:29 already does this."
+    },
+    {
+      "id": "F12",
+      "severity": "nit",
+      "file": "RUN_LOG.md",
+      "line": 152,
+      "statement": "\"Independent review confirmed that ... every scientific file, verifier and source were unchanged.\"",
+      "evidence": "attempt05_deadline_amendment_review.json compares lease-recorded identity, bundle, run_spec, run_config, output_contract and semantic_verifier records and controller/helper hashes (science_acceptance.binding_and_all_frozen_inputs_unchanged). It does not list byte re-hashes of every scientific file.",
+      "correction": "Say 'the lease's bundle, specification, configuration, output-contract, verifier and controller-source records were unchanged'."
+    },
+    {
+      "id": "F13",
+      "severity": "nit",
+      "file": "RUN_LOG.md",
+      "line": 162,
+      "statement": "\"Remaining authorization under the $25 cap is $3.354432036233558.\"",
+      "evidence": "25.0 - 21.645567963766442 = 3.3544320362335576 (float repr, as recorded in ATTEMPT05_SPENDING_AND_SHUTDOWN.json). The log's 3.354432036233558 is a 16-significant-digit rounding of the same value.",
+      "correction": "Quote the JSON value, or round consistently to $3.354432."
+    },
+    {
+      "id": "F14",
+      "severity": "nit",
+      "file": "RUN_LOG.md",
+      "line": 160,
+      "statement": "The third appended entry describes events earlier than its write time (18:36:20Z, 18:43:00Z, 18:54:22Z) without the '(recorded retrospectively)' label, and asserts 'Root rechecked the following as unchanged' without a record.",
+      "evidence": "Entries 1–2 carry the label; entry 3 does not. No record of root's recheck exists; the record script re-checks only the attempt01–04 leases. This review independently re-verified every item listed (see hashes_checked), so the substance holds.",
+      "correction": "Mark entry 3 as partly retrospective, and reference a recorded recheck or this review for the unchanged-file claims."
+    },
+    {
+      "id": "F15",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 49,
+      "statement": "\"The third ended at 18:12:50Z when an rsync child was killed, with every process group recorded quiescent.\" (RUN_LOG.md:152 similar.)",
+      "evidence": "EVENTS.jsonl 18:12:50Z: eight parallel_chunk_upload processes have returncode -9; the failed event says 'died with <Signals.SIGKILL: 9>'; 51 process groups are recorded quiescent. No record identifies who or what sent the signal. The docs correctly attribute no intent.",
+      "correction": "Optionally add 'initiator not recorded' so readers do not infer a cause, and say that eight rsync children received SIGKILL rather than one."
+    },
+    {
+      "id": "F16",
+      "severity": "nit",
+      "file": "resources/SPENDING_AND_SHUTDOWN.md",
+      "line": 17,
+      "statement": "The provider pod billing figure $1.988154 is set beside the $2.558589 bound and the $2.552261 balance decrease; REPORT.md:51 gives the billing figure alone.",
+      "evidence": "Inference: gpuAmount 1.9409322 at $0.69/h implies about 2.81 GPU-hours, while the lease ran about 3.62 h (14:55:01Z to 18:32:19Z). The whole-account balance fell $2.5522609725, only $0.006328 below the bound. The pod billing record is therefore probably incomplete or lagging, not a lower actual cost. The bound equals about 13,038.5 s at the all-in rate, essentially the billing interval with no extra margin.",
+      "correction": "Note that the pod billing record may lag, and that the balance decrease is within $0.006328 of the bound, so the bound should not be read as having a wide margin."
+    },
+    {
+      "id": "F17",
+      "severity": "nit",
+      "file": "resources/record_attempt05_spending_shutdown.py",
+      "line": 60,
+      "statement": "The evidence block and scientific_status (line 75) are recorded without verifying checks.",
+      "evidence": "The require() checks present are meaningful: lease immutability for attempts 01–04, termination with at least 3 absences, empty stage_acceptances, prior-bound equality, the combined-sum identity, observation completeness, lease-hash binding, no pods and zero spend, 404, and billing pod specificity. Not checked: that the failed manifest's canonical hash equals 144c9a93… (this review verified it); that the precreate observation matches LEASE.json starting_balance and user_notice_utc; that the caps (lines 10–12) equal the lease's combined_cap_usd and job_incremental_cap_usd; and that the forensics and preserved records actually show failure and no acknowledgement. scientific_status is hard-coded, and the observation script hash is bound only after the fact.",
+      "correction": "In any future reconciliation, derive the caps from the lease and require the manifest canonical hash, precreate/lease consistency, forensics status and preserved development_ack_present == False. Do not rewrite the existing output."
+    },
+    {
+      "id": "F18",
+      "severity": "nit",
+      "file": "resources/observe_attempt05_final_account.py",
+      "line": 30,
+      "statement": "Hash-check-before-import covers runpod_api.py source only.",
+      "evidence": "sys.dont_write_bytecode prevents writing, not reading, monitor/__pycache__/runpod_api.cpython-314.pyc (created 14:55Z). This review verified that the pyc header is valid for the current source (flags 0, matching mtime/size) and that its code object equals compile(source), so this run had no actual impact.",
+      "correction": "Future observation scripts should set sys.pycache_prefix to a fresh directory, or verify cached bytecode, so that the hash check binds the executed code."
+    },
+    {
+      "id": "F19",
+      "severity": "nit",
+      "file": "CLAIMS.md",
+      "line": 17,
+      "statement": "\"The corrected worker reproduces the frozen runtime precision on the live GPU | Supported for attempt05\"",
+      "evidence": "The evidence is equality of the recorded precision-settings dictionary (provenance.runtime.precision == run_spec.original_precision, independently rechecked). That is a settings match, not numerical reproduction. The same run's logits did not reproduce exactly.",
+      "correction": "Rename the claim to 'reproduces the frozen runtime precision-settings record'."
+    },
+    {
+      "id": "F20",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 57,
+      "statement": "Decision framing: 'formally revises and refreezes the native criterion'.",
+      "evidence": "Any revised criterion would be chosen after the attempt05 development discrepancy (max 0.03125, 112 elements) was observed. The development items are excluded from confirmation, so this does not expose new-item outcomes, but calibrating a tolerance to the observed magnitudes would be post hoc. The docs correctly say attempt05 cannot be reclassified as passing.",
+      "correction": "Add that any revised criterion must be justified independently of the observed attempt05 discrepancy magnitudes and must not reclassify attempt05."
+    },
+    {
+      "id": "F21",
+      "severity": "nit",
+      "file": "CLAIMS.md",
+      "line": 22,
+      "statement": "\"Attempt05's failed-manifest files were retrieved and hash-matched\" (REPORT.md:29 and RUN_LOG.md:157 similar).",
+      "evidence": "True locally: all five staged files match the manifest and are byte-identical to the preserved remote copies. However, the controller's own handoff never completed. Staging holds PENDING.json, LEASE.json retrieval_in_progress.phase is 'verifying_source', and the last retrieval poll failed with SSH exit 255 at 18:31:51Z. The hash match rests on the forensics review and the preserved remote bytes, not a controller retrieval receipt.",
+      "correction": "Add that the controller retrieval remained pending at teardown and that the local hash match was established by forensics and the preserved remote copies."
+    }
+  ],
+  "recomputation": {
+    "file": "cloud_leases/attempt_05/handoff/staging/ouro_confirmation_20260910_fixed160_precision1/144c9a935a46a335493e9c8c4fbd695a1b817c957fa81032d911f244cb807ad3/results/development/native.pt",
+    "load": "torch.load(weights_only=True, map_location='cpu'), PyTorch from /home/moloch/ouro_project/venv/bin/python (Python 3.14.7), CPU only",
+    "keys": {
+      "virtual_states": [
+        [
+          3,
+          192,
+          2048
+        ],
+        "torch.float32"
+      ],
+      "physical_states": [
+        [
+          3,
+          192,
+          2048
+        ],
+        "torch.float32"
+      ],
+      "wrapper_states": [
+        [
+          3,
+          192,
+          2048
+        ],
+        "torch.float32"
+      ],
+      "native_logits": [
+        [
+          3,
+          49152
+        ],
+        "torch.float32"
+      ],
+      "unembedded_logits": [
+        [
+          3,
+          49152
+        ],
+        "torch.float32"
+      ],
+      "item_names": [
+        "carnival-ocean",
+        "amazon-language",
+        "mars-color"
+      ]
+    },
+    "virtual_vs_physical": {
+      "torch_equal": true,
+      "numel": 1179648,
+      "differing": 0,
+      "per_item": [
+        0,
+        0,
+        0
+      ],
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "sign_bit_diff": 0,
+      "finite": true
+    },
+    "virtual_vs_wrapper": {
+      "torch_equal": true,
+      "numel": 1179648,
+      "differing": 0,
+      "per_item": [
+        0,
+        0,
+        0
+      ],
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "sign_bit_diff": 0,
+      "finite": true
+    },
+    "physical_vs_wrapper": {
+      "torch_equal": true,
+      "differing": 0
+    },
+    "native_vs_unembedded": {
+      "torch_equal": false,
+      "numel": 147456,
+      "differing": 112,
+      "per_item": [
+        39,
+        28,
+        45
+      ],
+      "max_abs": 0.03125,
+      "max_abs_per_item": [
+        0.03125,
+        0.03125,
+        0.03125
+      ],
+      "mean_abs": 6.051051766715116e-06,
+      "mean_abs_per_item": [
+        6.2762895443787175e-06,
+        4.925978525231282e-06,
+        6.950887230535348e-06
+      ],
+      "sign_bit_diff": 0,
+      "nan": 0,
+      "finite": true,
+      "abs_value_range_of_differing_native_logits": [
+        9.5367431640625e-05,
+        7.4375
+      ]
+    },
+    "bf16_roundtrip_exact": {
+      "native_logits": true,
+      "unembedded_logits": true,
+      "virtual_states": true
+    },
+    "bf16_code_distance_histogram": {
+      "1": 106,
+      "2": 3,
+      "3": 1,
+      "4": 1,
+      "6": 1
+    },
+    "per_item_topk": [
+      {
+        "item": "carnival-ocean",
+        "top1_equal": true,
+        "top1_token": 8464,
+        "top10_set_equal": true,
+        "top10_order_equal": true,
+        "top100_order_equal": true,
+        "tokens_with_changed_stable_full_sort_rank": 1322,
+        "best_rank_among_rank_changed_tokens": 707,
+        "best_native_rank_among_differing_logits": 719,
+        "max_abs_rank_shift": 188
+      },
+      {
+        "item": "amazon-language",
+        "top1_equal": true,
+        "top1_token": 14136,
+        "top10_set_equal": true,
+        "top10_order_equal": true,
+        "top100_order_equal": true,
+        "tokens_with_changed_stable_full_sort_rank": 1391,
+        "best_rank_among_rank_changed_tokens": 2567,
+        "best_native_rank_among_differing_logits": 2594,
+        "max_abs_rank_shift": 194
+      },
+      {
+        "item": "mars-color",
+        "top1_equal": true,
+        "top1_token": 441,
+        "top10_set_equal": true,
+        "top10_order_equal": true,
+        "top100_order_equal": true,
+        "tokens_with_changed_stable_full_sort_rank": 1374,
+        "best_rank_among_rank_changed_tokens": 270,
+        "best_native_rank_among_differing_logits": 279,
+        "max_abs_rank_shift": 217
+      }
+    ],
+    "manifest": {
+      "file_sha256": "b84a5d848658940947899ea712a1e3f6a609752ed08b2d73e56b19ad9a6586f7",
+      "file_bytes": 1715,
+      "canonical_json_sha256_sort_keys_compact": "144c9a935a46a335493e9c8c4fbd695a1b817c957fa81032d911f244cb807ad3",
+      "canonical_matches_directory_and_lease": true,
+      "files_match_manifest": {
+        "benchmark.json": true,
+        "development/native.pt": true,
+        "population.json": true,
+        "provenance.json": true,
+        "run_spec.json": true
+      },
+      "extra_result_files": []
+    },
+    "agreement_with_forensics_review": "All counts, per-item counts, max/mean absolute differences, BF16 code-distance histogram, sign-bit count, finiteness and top-1/top-10 agreement match reviews/attempt05_native_failure_forensics.json exactly.",
+    "additional_checks": [
+      "staged results byte-identical to base64 contents in resources/ATTEMPT05_NATIVE_FAILURE_PRESERVED.json (all 19 preserved entries decode to their recorded sha256)",
+      "staged MANIFEST.json byte-identical to preserved manifests/144c9a93....json",
+      "provenance.runtime.precision == run_spec.original_precision; provenance.bank_records == run_spec.bank_records; provenance.source_records == run_spec.source_records",
+      "remote bundle/evaluation/worker.py, frozen run_spec.json, output_contract.json, worker_config.json and BANKS_READY.json byte-identical to local precision_v1/launch copies",
+      "preserved status.json: phase computation_finished, outcome failed, setup_complete true, error 'Saved native development evidence fails state/logit equality'; bootstrap_stdout.log traceback at worker.py line 97",
+      "results tree in preserved record contains no common/cache.pt or readouts/*"
+    ]
+  },
+  "hashes_checked": {
+    "RUN_LOG.md first 24554 bytes": {
+      "sha256": "f75f750a1d0ac2f049c74d28e3a48f413cc903558af6cca42a3907c18c4fdc40",
+      "result": "byte-identical to pre-edit copy (cmp)"
+    },
+    "pre-edit copies vs PRE_EDIT_SHA256SUMS": "README 1ef2b011…, REPORT 12315386…, CLAIMS ab0bc33d…, RUN_LOG f75f750a…, SPENDING 6e2497db… all match",
+    "FREEZE.json": {
+      "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7",
+      "bytes": 7279,
+      "result": "matches precision_v1 FREEZE.json parent_freeze"
+    },
+    "bundle.tar.gz": {
+      "sha256": "a122f6ca0c6ef466e2c65c3f6d4ccd7131a625c5b398b0bb71bd8b9e22fbfe73",
+      "result": "matches FREEZE.json bundle; all 57 archive members and bundle/ directory files match FREEZE.json files; no extras"
+    },
+    "corrections/precision_v1/bundle.tar.gz": {
+      "sha256": "5220dc9cad0c8b6966d3659aebecdffa5a89bfa37ee95a6f863b56080d9c67d3",
+      "result": "matches precision_v1 FREEZE.json bundle, LEASE.json bundle_record and BOOTSTRAP_STARTED bundle_record; all 58 members and directory files match FREEZE.json; no extras"
+    },
+    "corrections/precision_v1/FREEZE.json": {
+      "sha256": "8f05445eae5505d9b97fef01b172d67de4b68f83cdcabf03222c75bbbffd2696",
+      "result": "informational (not bound by lease)"
+    },
+    "precision_v1 evaluation/launch.py": {
+      "sha256": "383fd097f4483132d5c7d845c998093ce170e7263068ff82626a9810e1c78a81",
+      "result": "matches both freezes, all four INVOCATION launcher_record entries and the unchanged_launcher_start event"
+    },
+    "precision_v1 evaluation/worker.py": {
+      "sha256": "386c2649e6628a45d7bcc7745d9cf4686cbb03fd6c9cf9196b65e6938b9ab0b5",
+      "result": "matches precision_v1 FREEZE, BOOTSTRAP_STARTED worker_source, provenance actual_worker_source, preserved remote copy"
+    },
+    "LEASE.json attempt05 records": "bundle, run_spec, run_config, output_contract, semantic_verifier, prior_debit, termination_authorization records all match current files",
+    "attempt05 monitor six copies": "all match LEASE.json controller_sources and controller/ directory copies",
+    "attempt01-04 LEASE.json": {
+      "sha256": [
+        "2a1a9a21…",
+        "09a6c602…",
+        "800cb93d…",
+        "a497e33d…"
+      ],
+      "result": "match ATTEMPT04_SPENDING_AND_SHUTDOWN.json and LEASE05 new_lease_debits; all status terminated, 3 absence confirmations"
+    },
+    "prior-round baseline (refit_round_2026-09-07 REPORT/CLAIMS/RUN_LOG)": "all three match resources/baseline_records.json",
+    "ATTEMPT05_SPENDING_AND_SHUTDOWN.json evidence": "failed_final_manifest, final_observation_client, native_failure_forensics, native_failure_preserved, root_teardown_execution, setup_deadline_amendment, setup_deadline_amendment_review all match; five attempt lease records, final observation record, precreate record, prior reconciliation and termination authorization all match",
+    "attempt05_final_account_observation.json": {
+      "sha256": "8deac26fa25348e7ce6016d5650c7f2d1c826b390ff07ebde15f26cfd425498c",
+      "result": "its embedded lease (449270bc…) and client (6124d239…) records match current files"
+    },
+    "ATTEMPT05_SPENDING_AND_SHUTDOWN.json": {
+      "sha256": "6dc2885c48120096f3d53a11bfc1f7e17bb6550c4f93d43c93bfda812353bd25",
+      "bytes": 7644
+    },
+    "record_attempt05_spending_shutdown.py": {
+      "sha256": "1fd255238f28b91ebfe3c0fb7ca89d3301c8bce9a5ef6032ec8c6f95502faa71",
+      "bytes": 7025
+    },
+    "forensics source_records": "all six (readouts.py, validate_outputs.py, worker.py, recurrent.py, hf.py, modeling_ouro.py) match current files",
+    "amendment": "SETUP_DEADLINE_AMENDMENT intent record matches; decoded original lease base64 matches recorded 9f24d9a8… and shows setup 18:20:01Z, work 19:20:01Z, watch 19:50:01Z, provider 20:00:01Z, caps 3.77/25.0; review source_records match current files except the live LEASE.json (expected: lease updated after review)",
+    "launch": "worker_config.json matches BOOTSTRAP_STARTED worker_config_record; deployed_controller_sources equal lease pins",
+    "helper": "parallel_upload.py sha256 512946233e30… matches all four INVOCATION helper_record entries and the amendment review",
+    "monitor __pycache__": "runpod_api, transport, artifact_handoff, run_refits .pyc headers valid for current sources and code objects equal compile(source)"
+  },
+  "checks_performed": [
+    "A: loaded native.pt on CPU; recomputed shapes, dtypes, torch.equal, differing counts (overall/per item), max/mean abs, sign bits, finiteness, BF16 round-trip and code-distance histogram, top-1/top-10/top-100 agreement, full-sort rank changes; verified all five staged file bytes/sha256 vs MANIFEST.json and canonical manifest hash 144c9a93…",
+    "B: traced each factual/numeric statement in README, REPORT, CLAIMS, SPENDING_AND_SHUTDOWN.md, the three appended RUN_LOG entries and both new JSON records to LEASE.json, EVENTS.jsonl, INVOCATION records, amendment intent/receipt/review, launch records, preserved failure record, termination intent/teardown records, retrieval.log, forensics review, observation JSON, precreate observation, ATTEMPT04 reconciliation",
+    "B: verified upload timeline 14:55:48, 15:44:30, 16:10:41, 17:42:49 (server not responding), 17:43:16, 17:52:19, 17:53:45 (server not responding), 17:55:04, 18:12:50 (SIGKILL, 51 quiescent groups), 18:14:06, 18:22:53, launcher 18:22:58, bootstrap 18:23:16, setup complete 18:28:45, failed manifest 18:29:08, preservation 18:31:29, intent 18:31:48, retrieval SSH 255 18:31:51, terminated 18:32:19, forensics 18:32:35, observation 18:43:00, reconciliation 18:54:22",
+    "B: checked native forward path in modeling_ouro.py (per-loop self.norm on full sequence; early_exit_threshold 1.0 gather path then lm_head on full-sequence tensor) and hf.py unembed (lm_head(final_norm(residual.to(bf16)))) against the 'full-sequence vs single vector' description",
+    "C: combined sum identity (|diff| 3.6e-15), prior 19.086979165492036, remaining 3.3544320362335576, shortfalls 0.41556796376644245 / 2.6455679637664424, balance decrease 2.5522609725 (Decimal), table rounding sums exactly to 21.645568, bound vs billing interval x all-in rate",
+    "D: cross-document consistency of counts, timestamps, amounts and status; gate description vs worker.py 94-97, validate_outputs.py 72-73, readouts.native_development, hf.unembed; framing vs PROSPECTIVE_PLAN.md",
+    "E: RUN_LOG prefix byte-identity; heading format; retrospective labels; sentence-level diff of REPORT/CLAIMS/README/SPENDING vs pre-edit copies (Recovery section, benchmark design paragraphs, Huginn paragraph body and untouched claim rows 7-11, 13-15, 21 verified unchanged); all freeze, bundle, lease, baseline and evidence hashes listed in hashes_checked",
+    "F: observation script is read-only (gql queries and v2 GETs with write=False use the read key on line 1; no mutation functions called), hash-checks pinned client before import, never prints credentials (Authorization header only; errors redacted), exclusive create; observation JSON supports doc claims (no pods, spend 0, 404, billing $1.988154467428103, balance 5.9138717458). Record script imports no network modules; require() checks assessed",
+    "G: all 64 relative markdown links in the four docs resolve",
+    "H: grep for stale phrases (four workers, all four, 19.086979, awaits, pending, 5.913021, in progress, replacement, no worker is active, resource-conditional): none remain in the four docs; searched for attempt05 authorization, 18:31:38, 18:36:20 sources"
+  ],
+  "checks_not_performed": [
+    "Provider-side verification of pod absence, billing and balance: not performed (no network/API calls permitted); relied on the recorded observation JSON.",
+    "Verification that observe_attempt05_final_account.py executed exactly once: not possible beyond the single exclusively created output and file mtimes.",
+    "Verification of the 18:36:20Z local process/systemd/timer/cron check: no record exists and past process state cannot be reconstructed.",
+    "Verification of the content of user authorizations (conversation history) beyond local records; no local record found for attempt05 creation/export authorization.",
+    "Independent re-derivation of the amendment review's reconstructed post-amendment lease bytes (89b024a2…): not repeated; only the preserved original-lease record and deadlines were verified.",
+    "Mechanism of the logit mismatch (normalization vs projection kernel, shape dependence): not testable without GPU/model execution, which is prohibited.",
+    "Per-element BF16 bit-pattern samples in the forensics JSON were not individually re-derived; the full histogram and counts were."
+  ]
+}

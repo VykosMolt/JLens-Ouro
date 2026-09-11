@@ -1,0 +1,264 @@
+{
+  "classification": {
+    "accepted_numerical_audit": {
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/huginn_run01_review/actual_huginn_result_review.json",
+      "record": {
+        "bytes": 33775,
+        "sha256": "7b86803b79140b58b417e976951ed0e463c801d3d76b6c59f20edd4f0a69b475"
+      }
+    },
+    "complete_binary_scope": "Complete means recorded exact file bytes/hash match an accepted sealed record. This manifest review does not independently deserialize or numerically revalidate any estimator bank.",
+    "complete_estimator_binaries": 7,
+    "complete_estimator_bytes": 22406447319,
+    "estimator_record_origin_check": "The parallel reviewer matched all14 Ouro/control binary records to the seven accepted fit receipt/pointer/SEAL chains and both Huginn records to its accepted embedded final lens record and authenticated surviving checkpoint SEAL.",
+    "known_estimator_binaries": 16,
+    "known_estimator_expected_bytes": 43781728740,
+    "original_files_without_independent_prior_record": [
+      "OURO_INTERPRETATION.json",
+      "huginn/RUN_IDENTITY.json",
+      "huginn_budget_projection.json",
+      "system_setup.log"
+    ],
+    "original_prior_record_matches": 52,
+    "original_prior_record_origins": 53,
+    "retrieved_files": 57,
+    "retrieved_logical_file_bytes": 24181744065,
+    "scientific_consumed_records_equal_accepted_numerical_audit": 127,
+    "sole_known_mismatch": {
+      "huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt": {
+        "actual": {
+          "bytes": 1745780736,
+          "sha256": "099a99fd3b1aba3ac06112411ec06d5aac5ce423f245c3cd64835150bc890473"
+        },
+        "expected": {
+          "bytes": 3568444419,
+          "sha256": "0e27aae5a6d1d974d63027cdfd71c0198e86ceffa79665a8bd53a14c9fccf1ce"
+        }
+      }
+    },
+    "unrecovered_breakdown": {
+      "absent_binaries": 8,
+      "truncated_binary": 1
+    },
+    "unrecovered_complete_estimator_binaries": 9,
+    "unrecovered_expected_bytes": 21375281421
+  },
+  "classification_after_supplementary_bindings": {
+    "files_without_independent_prior_binding": [
+      "system_setup.log"
+    ],
+    "known_truncated_mismatches": 1,
+    "matched_or_reconstructed_complete_files": 55
+  },
+  "consumed_json_and_source_records": {
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/huginn_run01_review/actual_huginn_result_review.json": {
+      "bytes": 33775,
+      "sha256": "7b86803b79140b58b417e976951ed0e463c801d3d76b6c59f20edd4f0a69b475"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/OURO_INTERPRETATION.json": {
+      "bytes": 3845,
+      "sha256": "8783c87ec68935de16cae7086b51dc50db1129f6541b4fff7e362ccce12e2dad"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/RUN_IDENTITY.json": {
+      "bytes": 18928,
+      "sha256": "525778dfed207012e3a769076ef9cbdbf75bfa1503a0f394b935ab2bb6061d7c"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn_budget_projection.json": {
+      "bytes": 544,
+      "sha256": "d5984a3a78d4d82f03cea3a0b1eb22b82e10acf3c9ec4a417d347139d255bcad"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/cloud_worker.py": {
+      "bytes": 19100,
+      "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/COPY_VERIFIED.json": {
+      "bytes": 2085,
+      "sha256": "252e67cf3a373e7ee1db379238805360a6f6f351fac1e3ef5d51cbf4e1a6cdee"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/huginn_budget_projection.json": {
+      "bytes": 544,
+      "sha256": "d5984a3a78d4d82f03cea3a0b1eb22b82e10acf3c9ec4a417d347139d255bcad"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json": {
+      "bytes": 56959,
+      "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_release_20260909T113556Z/OPERATOR.json": {
+      "bytes": 448,
+      "sha256": "011e56dd7b24d1e892c99b415dc69394bdd0e1e742ea778fcb105afb027fb69b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_release_20260909T113556Z/OURO_INTERPRETATION.json": {
+      "bytes": 3881,
+      "sha256": "05b522b0f6e60a7ef872e3166db719326e993cf8a2317b62d88a8593cb89ab04"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_release_20260909T113556Z/PUBLICATION.json": {
+      "bytes": 911,
+      "sha256": "d6661e16eef0333029b25826b44d49dbdb447f600254243099e7c59a171ae1dd"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/termination_incident/SURVIVING_ARTIFACTS.json": {
+      "bytes": 55298,
+      "sha256": "abd9ae4abb7f2347c29a7edbd086554e36027ca633275973b57f7088fe6ba4ca"
+    },
+    "/tmp/actual_huginn_surviving_fit_review.json": {
+      "bytes": 37567,
+      "sha256": "0108eed3ce17fbd799c3f80c32f4ef2046cb9292bd9f69473e9aad91dbdc7cbd"
+    }
+  },
+  "original_manifest": {
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/termination_incident/SURVIVING_ARTIFACTS.json",
+    "preserved_unchanged": true,
+    "record": {
+      "bytes": 55298,
+      "sha256": "abd9ae4abb7f2347c29a7edbd086554e36027ca633275973b57f7088fe6ba4ca"
+    },
+    "status": "partial_retrieval_documented"
+  },
+  "parallel_estimator_record_reviewer": "receipt_binding_read",
+  "reviewed_utc": "2026-09-09T15:59:45.062409+00:00",
+  "reviewer": "main_only_review",
+  "schema": "attempt06_surviving_manifest_review.v1",
+  "scope": "Independent classification/count/scope and provenance-record review. File membership and byte sizes checked with filesystem metadata. Large-file content hashes were not repeated; parent-recorded full hashes are relied upon and compared to previously accepted records. No tests, binary reads, SSH, source edits, final retrieval receipt, or mutation of the original manifest.",
+  "scope_findings": {
+    "additional_missing_H_final_metadata": "huginn/fit_01/final/cursor_000100_7983035296a54ff2978742466ac3631e/metadata.json",
+    "full_retrieval_accepted": false,
+    "limitations_retained": [
+      "Expected records are the union of prior verified handoffs and sealed fit records, not the lost complete remote inventory.",
+      "Local orphan partials in old prefetch operation directories remain preserved separately; none is accepted as a complete estimator.",
+      "Re-scoring saved evaluations remains possible; missing estimator banks cannot be used for new readouts or independently revalidated locally."
+    ],
+    "material_count_or_claim_errors_found": false,
+    "original_unmatched_list_interpretation": "The original four-file list records the initial reconstruction coverage. Three entries now gain the independent bindings above without rewriting the original manifest.",
+    "separately_preserved_prefetch_partials": "Excluded from the complete estimator counts; no partial accepted as a full bank.",
+    "unmatched_log": "system_setup.log remains only locally preserved/hash-recorded here, without independent prior-file binding."
+  },
+  "status": "passed_with_supplementary_bindings",
+  "supplementary_bindings": {
+    "OURO_INTERPRETATION.json": {
+      "canonical_serializer_source": {
+        "canonical_line": 71,
+        "new_json_line": 129,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py",
+        "record": {
+          "bytes": 51999,
+          "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+        }
+      },
+      "canonicalization": {
+        "allow_nan": false,
+        "encoding": "UTF-8",
+        "ensure_ascii": false,
+        "separators": [
+          ",",
+          ":"
+        ],
+        "sort_keys": true,
+        "trailing_newline": true
+      },
+      "method": "Exact JSON equality and exact deterministic worker reserialization of the accepted published input. Input and results-copy raw bytes intentionally differ because the worker parses then canonically rewrites JSON.",
+      "operator_record": {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_release_20260909T113556Z/OPERATOR.json",
+        "record": {
+          "bytes": 448,
+          "sha256": "011e56dd7b24d1e892c99b415dc69394bdd0e1e742ea778fcb105afb027fb69b"
+        },
+        "source": {
+          "bytes": 7080,
+          "sha256": "5b77af8ab46a0ac0e9310905ee0b8c1c52dd86317f55e9210f7af60360595f06"
+        }
+      },
+      "publication_receipt": {
+        "created_utc": "2026-09-09T11:35:59.154934+00:00",
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_release_20260909T113556Z/PUBLICATION.json",
+        "payload": {
+          "bytes": 3881,
+          "sha256": "05b522b0f6e60a7ef872e3166db719326e993cf8a2317b62d88a8593cb89ab04"
+        },
+        "record": {
+          "bytes": 911,
+          "sha256": "d6661e16eef0333029b25826b44d49dbdb447f600254243099e7c59a171ae1dd"
+        },
+        "status": "published"
+      },
+      "published_input": {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_release_20260909T113556Z/OURO_INTERPRETATION.json",
+        "record": {
+          "bytes": 3881,
+          "sha256": "05b522b0f6e60a7ef872e3166db719326e993cf8a2317b62d88a8593cb89ab04"
+        }
+      },
+      "reconstructed_raw_record": {
+        "bytes": 3845,
+        "sha256": "8783c87ec68935de16cae7086b51dc50db1129f6541b4fff7e362ccce12e2dad"
+      },
+      "retrieved_record": {
+        "bytes": 3845,
+        "sha256": "8783c87ec68935de16cae7086b51dc50db1129f6541b4fff7e362ccce12e2dad"
+      },
+      "worker_source": {
+        "behavior": "io._new_json(self.results / \"OURO_INTERPRETATION.json\", value)",
+        "line": 230,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/cloud_worker.py",
+        "record": {
+          "bytes": 19100,
+          "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51"
+        }
+      }
+    },
+    "huginn/RUN_IDENTITY.json": {
+      "accepted_evaluation_owner": {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json",
+        "record": {
+          "bytes": 56959,
+          "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb"
+        }
+      },
+      "canonical_raw_record": {
+        "bytes": 18928,
+        "sha256": "525778dfed207012e3a769076ef9cbdbf75bfa1503a0f394b935ab2bb6061d7c"
+      },
+      "independent_salvage_review": {
+        "path": "/tmp/actual_huginn_surviving_fit_review.json",
+        "record": {
+          "bytes": 37567,
+          "sha256": "0108eed3ce17fbd799c3f80c32f4ef2046cb9292bd9f69473e9aad91dbdc7cbd"
+        }
+      },
+      "method": "Exact raw canonical JSON reconstruction from the accepted Huginn evaluation fit runtime after removing only the added calibration field. This is the frozen run_huginn.execute/run_refits._bind_run_identity construction.",
+      "reconstructed_identity_sha256": "fc9a6442251e0058408e79dd230a4e72ea2489cd8f13222781a5001a087a02f8",
+      "retrieved_record": {
+        "bytes": 18928,
+        "sha256": "525778dfed207012e3a769076ef9cbdbf75bfa1503a0f394b935ab2bb6061d7c"
+      }
+    },
+    "huginn_budget_projection.json": {
+      "method": "Exact bytes match the previously verified Huginn engineering-gate handoff and its COPY_VERIFIED entry; no new budget calculation.",
+      "prior_copy_entry": {
+        "bytes": 544,
+        "path": "huginn_budget_projection.json",
+        "sha256": "d5984a3a78d4d82f03cea3a0b1eb22b82e10acf3c9ec4a417d347139d255bcad"
+      },
+      "prior_copy_receipt": {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/COPY_VERIFIED.json",
+        "record": {
+          "bytes": 2085,
+          "sha256": "252e67cf3a373e7ee1db379238805360a6f6f351fac1e3ef5d51cbf4e1a6cdee"
+        }
+      },
+      "prior_file": {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/huginn_budget_projection.json",
+        "record": {
+          "bytes": 544,
+          "sha256": "d5984a3a78d4d82f03cea3a0b1eb22b82e10acf3c9ec4a417d347139d255bcad"
+        }
+      },
+      "retrieved_record": {
+        "bytes": 544,
+        "sha256": "d5984a3a78d4d82f03cea3a0b1eb22b82e10acf3c9ec4a417d347139d255bcad"
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "absolute_tolerance": 1e-12,
+  "checks": [],
+  "code_record": {
+    "bytes": 35055,
+    "sha256": "89a7309ad04d57f61a07a1ab10779c3c8e0464041390aaaefccbd78fcb98ca1b"
+  },
+  "comparison_count": 0,
+  "input_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/primary_numerical_check.py": {
+      "bytes": 35055,
+      "sha256": "89a7309ad04d57f61a07a1ab10779c3c8e0464041390aaaefccbd78fcb98ca1b"
+    }
+  },
+  "integration_evidence": {
+    "actual_primary_results_read": false,
+    "checker_imports": [
+      "__future__",
+      "argparse",
+      "datetime",
+      "hashlib",
+      "io",
+      "json",
+      "numpy",
+      "os",
+      "pathlib",
+      "stat",
+      "sys",
+      "uuid"
+    ],
+    "fixture_generator": {
+      "bytes": 1714,
+      "path": "/tmp/primary_numerical_synthetic_integration.py",
+      "sha256": "4429dab75afaf9fe34a355dc8367aababc01b166cfd289050c75c1eec51a9eb2"
+    },
+    "fixture_seed": 777001,
+    "frozen_producer_ran_as_separate_process": true,
+    "model_or_provider_execution": false,
+    "passing_verification": {
+      "bytes": 140917,
+      "comparison_count": 230,
+      "max_absolute_difference": 2.220446049250313e-15,
+      "path": "/tmp/primary-numerical-synthetic-2_v1ps62/independent_verification_final.json",
+      "sha256": "63a09ac90f4379d26541f5e66de31387e9a6487a58f819caef2f8288d8eb6211"
+    },
+    "producer_imported_by_checker": false,
+    "synthetic_only": true,
+    "tamper_rejection": {
+      "bytes": 8379,
+      "expected_failure": {
+        "message": "Numerical comparison failed: saved.family_bootstrap; max difference 9.999999999975306e-07",
+        "type": "ValueError"
+      },
+      "path": "/tmp/primary-numerical-synthetic-2_v1ps62/tamper_rejection.json",
+      "sha256": "19cae95020a0ebb8b737e821802e92fa16ec3a6ab725317d08a0dc5ccc682edb"
+    }
+  },
+  "max_absolute_difference": 0,
+  "mode": "synthetic_self_test",
+  "numpy": "2.4.4",
+  "python": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
+  "relative_tolerance": 0,
+  "schema": "confirmation_independent_numerical_check.v1",
+  "self_test": {
+    "bootstrap_replicates_per_oracle": 20000,
+    "case_count": 11,
+    "cases": [
+      "hand_calculated_multiple_eligible_labels_equal_layers_and_equal_items_not_pooled_labels",
+      "own_name_contamination_rejected",
+      "cross_concept_alias_contamination_rejected",
+      "ineligible_labels_excluded_from_label_mean_but_all_own_names_excluded_from_controls",
+      "minimum_alias_rank_9_hits_rank_10_misses_saved_top10_crosscheck",
+      "saved_alias_rank_and_top10_disagreement_rejected",
+      "all_20000_dependency_draws_match_direct_repeated_item_oracle_unequal_groups_and_500_batch_stream",
+      "all_20000_item_sensitivity_draws_match_direct_equal_item_oracle_seed_plus_one",
+      "fixed_band_virtual_169_to_180_is_loop4_physical26_to37",
+      "hand_primary_components_and_leave_one_group_out_plus_complete_secondary_geometry",
+      "explicit_1e_minus_12_tolerance_rejects_numerical_drift"
+    ],
+    "no_model_or_provider_execution": true,
+    "primary_hand_estimate": 0.2916666666666667,
+    "producer_imports": [],
+    "temporary_or_synthetic_data_only": true
+  },
+  "status": "passed",
+  "utc": "2026-09-09T23:41:24.342820+00:00"
+}

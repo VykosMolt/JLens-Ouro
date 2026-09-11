@@ -1,0 +1,54 @@
+{
+  "schema": "H_science_wrapper_independent_checks.v1",
+  "status": "passed",
+  "source_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/preserve_gate.py": {
+      "bytes": 3871,
+      "sha256": "7a1d1648c2b1fb5b3341caa85e38d81ef504e6cabc773a8989bbf02451e5a652"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/worker.py": {
+      "bytes": 9141,
+      "sha256": "97096426b7b4f9a78dbb7e9dd6ca92713e545feea8e9d6b141fa3a442acc8073"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/artifacts.py": {
+      "bytes": 3054,
+      "sha256": "1ca7827386131ee48f304b1caf78110075c2c6dad7201056728d4a9c9559b226"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py": {
+      "bytes": 18407,
+      "sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    }
+  },
+  "no_cloud_or_ssh": true,
+  "no_pretrained_model_or_new_confirmation_results": true,
+  "scope": "Original functions and new retention wrapper on actual tiny CPU tensor fixtures; exact full-fit timing admission boundaries. This does not validate real-width GPU evidence or the forthcoming final semantic validator.",
+  "cases": [
+    {
+      "case": "wrapper_primal_matches_original_result_and_retains_all_34_actual_tensors",
+      "status": "passed",
+      "scope": "synthetic width2 BF16 CPU model; no pretrained model"
+    },
+    {
+      "case": "changed_primal_rejected_with_actual_failed_tensor_evidence_retained",
+      "status": "passed"
+    },
+    {
+      "case": "wrapper_compare_preserves_original_bitwise_result_and_both_actual_matrix_banks",
+      "status": "passed"
+    },
+    {
+      "case": "original_matrix_comparator_still_rejects_changed_value_after_retention",
+      "status": "passed"
+    },
+    {
+      "case": "full_N100_admission_rejects_invalid_or_insufficient_times_and_honors_larger_measured_bound",
+      "status": "passed",
+      "historical_required_seconds": 17210.479551757453
+    }
+  ],
+  "temporary_root": "/tmp/h-science-wrapper-independent-pft0idfq"
+}

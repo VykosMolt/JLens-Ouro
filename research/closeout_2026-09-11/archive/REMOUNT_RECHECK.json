@@ -1,0 +1,12 @@
+{
+ "utc": "2026-09-11T20:45:02.835637+00:00",
+ "remounted": true,
+ "mount": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911",
+ "manifest_sha256_after_remount": "77a13e9f6873b804578a52af386f50dd41fef06cad12d6d1fa06305f4a6d11ec",
+ "manifest_sha256_in_receipt": "77a13e9f6873b804578a52af386f50dd41fef06cad12d6d1fa06305f4a6d11ec",
+ "blkid": "36df468b-3bf9-41a9-ace8-edccfb292434 ext4",
+ "manifest_matches": true,
+ "sampled_files": 745,
+ "sampled_bytes": 15218513886,
+ "mismatched": []
+}

@@ -1,0 +1,106 @@
+{
+  "adapted_bootstrap": {
+    "change": "only planned name prefix jlens-refit to jlens-confirm",
+    "record": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "source": "research/refit_round_2026-09-07/deployment/pod_entry.sh"
+  },
+  "base_candidate": {
+    "path": "research/refit_round_2026-09-07/monitoring/attempt_06/controller_correction/lease_setup_latch_candidate.py",
+    "record": {
+      "bytes": 79741,
+      "sha256": "5493d28c8a74b6740d4a3edbbccc5229d00446357d3c192d51cb46bbbfaa1de3"
+    }
+  },
+  "copied_dependencies": {
+    "run_refits.py": {
+      "matches_frozen_source": true,
+      "record": {
+        "bytes": 51999,
+        "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+      },
+      "source": "research/refit_round_2026-09-07/deployment/run_refits.py"
+    },
+    "runpod_api.py": {
+      "matches_frozen_source": true,
+      "record": {
+        "bytes": 9601,
+        "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+      },
+      "source": "research/refit_round_2026-09-07/deployment/runpod_api.py"
+    }
+  },
+  "independent_review": {
+    "path": "research/confirmation_2026-09-09/reviews/controller_independent_review.md",
+    "record": {
+      "bytes": 6864,
+      "sha256": "86b501e70055340a7528730c38917d0e7017b32fe50a440df45265e2150c6226"
+    }
+  },
+  "proof": {
+    "path": "research/confirmation_2026-09-09/controller/proofs/lifecycle_v1/PROOF.json",
+    "record": {
+      "bytes": 6183,
+      "sha256": "9e8df7967ce6de9d8997e9ad878a9f3987d4420af8a5a349f4e79d5915e93006"
+    }
+  },
+  "schema": "confirmation_controller_sources.v1",
+  "sources": {
+    "artifact_handoff.py": {
+      "bytes": 29606,
+      "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+    },
+    "lease.py": {
+      "bytes": 56750,
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    "pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "test_lifecycle.py": {
+      "bytes": 35975,
+      "sha256": "7dc4d0d328ccb4a5661d4362179fbfef2d7d2f81ab6f14197d0f47ef444fa7de"
+    },
+    "transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    }
+  },
+  "status": "passed_local_and_independent_review",
+  "transport_reuse": "stop_process adapted from frozen monitoring/prefetch_completed_ouro06_v3.py; run_bounded adapted from collect_huginn_handoff06.py",
+  "unchanged_protection_functions": {
+    "absence_can_finish": true,
+    "account": true,
+    "bind_pod": true,
+    "checked_account": true,
+    "completed_supply_rejection": true,
+    "confirm_absence": true,
+    "endpoint": true,
+    "exact_supply_rejection": true,
+    "fail_create": true,
+    "finish_create": true,
+    "halt": true,
+    "locked": true,
+    "observe_cost": true,
+    "observe_identity": true,
+    "offer": true,
+    "owned_candidates": true,
+    "pod_identity": true,
+    "pods": true,
+    "record_rejection": true,
+    "ssh_options": true,
+    "validate_notice": true,
+    "verified_rejection": true
+  }
+}

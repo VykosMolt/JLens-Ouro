@@ -1,0 +1,28 @@
+Read from remote host 87.197.135.232: Connection reset by peer
+client_loop: send disconnect: Broken pipe
+rsync: connection unexpectedly closed (1775748038 bytes received so far) [receiver]
+rsync error: error in rsync protocol data stream (code 12) at io.c(285) [receiver=3.5.0-g471e17dc]
+rsync: connection unexpectedly closed (15349 bytes received so far) [generator]
+rsync error: unexplained error (code 255) at io.c(285) [generator=3.5.0-g471e17dc]
+rsync: [generator] write error: Broken pipe (32)
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/lease.py", line 1331, in <module>
+    main()
+    ~~~~^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/lease.py", line 1325, in main
+    sync_results(args.root)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/lease.py", line 332, in sync_results
+    _sync_results(root)
+    ~~~~~~~~~~~~~^^^^^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/lease.py", line 311, in _sync_results
+    subprocess.run(["rsync", "-a", "--partial", "--timeout=60", "--exclude=runtime_cache/",
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    "--exclude=*.lock", "-e", transport,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    f"root@{state['ssh']['host']}:{REMOTE}/results/", str(destination) + "/"], check=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['rsync', '-a', '--partial', '--timeout=60', '--exclude=runtime_cache/', '--exclude=*.lock', '-e', 'ssh -i /home/moloch/.ssh/id_ed25519_dsv4_b300 -p 40077 -o BatchMode=yes -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o ForwardAgent=no -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/known_hosts', 'root@87.197.135.232:/workspace/jlens/results/', '/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/']' returned non-zero exit status 255.

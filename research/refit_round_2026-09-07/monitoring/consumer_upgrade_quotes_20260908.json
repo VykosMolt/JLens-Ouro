@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-09-08T20:09:17.094774+00:00",
+  "quotes": {
+    "ada": [
+      {
+        "id": "NVIDIA GeForce RTX 4090",
+        "memoryInGb": 24,
+        "lowestPrice": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "minMemory": null,
+          "minVcpu": null
+        }
+      }
+    ],
+    "blackwell": [
+      {
+        "id": "NVIDIA GeForce RTX 5090",
+        "memoryInGb": 32,
+        "lowestPrice": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.69,
+          "minMemory": 91,
+          "minVcpu": 12
+        }
+      }
+    ]
+  }
+}

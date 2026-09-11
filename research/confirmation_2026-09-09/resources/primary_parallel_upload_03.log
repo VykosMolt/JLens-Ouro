@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py", line 623, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py", line 620, in main
+    upload(args)
+    ~~~~~~^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py", line 456, in upload
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 396, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py", line 445, in send
+    processes.run(['rsync', '--partial', '--partial-dir=.rsync-partial', '--protect-args', '-t',
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   '-e', shlex.join(commands), str(source), host + ':' + destination],
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  remaining, 'parallel_chunk_upload')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py", line 322, in run
+    result = self.transport.run_bounded(command, timeout=timeout,
+                                        operation=operation, processes=self.records)
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/transport.py", line 60, in run_bounded
+    raise subprocess.CalledProcessError(process.returncode, command, stdout, stderr)
+subprocess.CalledProcessError: Command '['rsync', '--partial', '--partial-dir=.rsync-partial', '--protect-args', '-t', '-e', 'ssh -i /home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 -p 22879 -o BatchMode=yes -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=3 -o ForwardAgent=no -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_03/known_hosts', '/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002952790016.part', 'root@194.14.47.19:/workspace/jlens/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002952790016.part']' returned non-zero exit status 255.

@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-09-09T15:48:13.078379+00:00",
+  "kind": "root record of completed read-only provider observation",
+  "method": "Called checked_account(state), pods(state.account_id), owned_candidates(state, listing) using the unchanged deployment lease module; no mutation. The following selected fields reproduce the tool output, not a saved raw API response.",
+  "lease_status": "terminated",
+  "termination_reason": "setup did not finish within the bounded window",
+  "owned_candidates": [],
+  "observed_account_balance": 13.676831506,
+  "lease_absence_confirmations": 3,
+  "terminated_verified_utc": "2026-09-09T15:44:51Z"
+}

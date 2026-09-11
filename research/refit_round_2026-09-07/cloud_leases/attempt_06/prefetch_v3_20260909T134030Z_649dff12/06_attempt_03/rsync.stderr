@@ -1,0 +1,6 @@
+Timeout, server 87.197.135.232 not responding.
+rsync: connection unexpectedly closed (230536847 bytes received so far) [receiver]
+rsync error: error in rsync protocol data stream (code 12) at io.c(285) [receiver=3.5.0-g471e17dc]
+rsync: connection unexpectedly closed (92 bytes received so far) [generator]
+rsync error: unexplained error (code 255) at io.c(285) [generator=3.5.0-g471e17dc]
+rsync: [generator] write error: Broken pipe (32)

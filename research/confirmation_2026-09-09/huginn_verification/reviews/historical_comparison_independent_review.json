@@ -1,0 +1,48 @@
+{
+  "external_authentication": "Caller must supply independently inspected actual receipt SHA. Receipt binds exact manifest, validation and files. Canonical manifest identity, validation passed/run/contract/manifest/full checked files and loadability/numerical checks are required. Original externally pinned acceptance remains authority; analytical tool does not rerun the model validator.",
+  "historical_authentication": "Fixed RETAINED_INPUTS_SUPPLEMENT SHA fa243c6f58ac622f4b1b5746ae85fa5b19d84892421353ff025e664f5aa05010 authenticates arrays/caches directly and COMPLETE; COMPLETE authenticates seed seals; seed seals authenticate initializations/summaries. Each consumer parses bound bytes with fd/path guards and exact expected content SHA.",
+  "mapping": "Old seeds/{2026090803,2026090804}/{arrays.npz,cache.pt,initializations.json,summaries.json} maps to accepted results/readouts/same-relative-path, and accepted results/fit/lens.pt is checked against its receipt record and compared by SHA with missing historical bank.",
+  "new_H_outcomes_read": false,
+  "no_model_or_provider_execution": true,
+  "nonblocking_limitations": [
+    {
+      "applicability": "Outside actual pinned rank/token arrays (small int32/int64) and FP32 retained tensors; root explicitly accepted this scope without broadening code.",
+      "issue": "Generic adjacent uint64 values above 2**53 can lose difference magnitude when converted to float64 before subtraction. Exact numeric/bitwise mismatch counts remain correct."
+    }
+  ],
+  "observed_historical_array_count": 26,
+  "observed_historical_numeric_entries": 74724904,
+  "passed_cases": 15,
+  "probe_source": {
+    "bytes": 11724,
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py",
+    "sha256": "29340d155585fd3c1018c87f2b71c1438a081e8b02af1b407d51e422c33de2e9"
+  },
+  "proof": {
+    "bytes": 11526,
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_independent_proof.json",
+    "sha256": "6c7b0fd504e360a695df099fafdd20f81732c142814d79a19797a0b272e83829"
+  },
+  "reports_differences_without_selection_or_repeat_authority": true,
+  "schema": "huginn_historical_comparison_independent_review.v1",
+  "signed_zero": "Float32 +0/-0 count as bitwise differences while numeric differences and absolute/RMS changes remain zero; ordinary integer and float inequalities report expected magnitudes.",
+  "source": {
+    "bytes": 12305,
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py",
+    "sha256": "7f69b568cf4a8b5dfcaa9f675d9413652117da8747930147575c42e7c02527b0"
+  },
+  "source_freeze": "Keep compared source pin unchanged for subsequent invocation; script is outside frozen scientific sources.",
+  "status": "passed_for_pinned_accepted_H_outputs",
+  "superseded_findings_fixed": [
+    "Missing upstream receipt pin and validation semantic binding",
+    "Unpinned historical supplement",
+    "Record opened-descriptor/parent checks",
+    "Unbound JSON/NPZ/Torch consumer reopen"
+  ],
+  "synthetic_fixture": {
+    "bank_substitute": "Historical cache hardlink used only because historical H bank is absent; fixture has no actual external acceptance and is never new H science.",
+    "hardlinks_only_for_retained_payloads": true,
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12",
+    "temporary_location_reason": "/tmp is a different filesystem and cannot hardlink retained files; own H reviews directory shares their filesystem."
+  }
+}

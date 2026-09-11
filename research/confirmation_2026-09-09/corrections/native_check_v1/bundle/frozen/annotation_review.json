@@ -1,0 +1,217 @@
+{
+  "schema": "confirmation_benchmark_independent_review.v1",
+  "status": "passed",
+  "new_confirmation_results_exposed": false,
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "reviewed_at_utc": "2026-09-09T22:40:41.025523+00:00",
+  "benchmark_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/final_candidates.json",
+  "benchmark_record": {
+    "bytes": 967118,
+    "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99"
+  },
+  "population_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/final_population.json",
+  "population_record": {
+    "bytes": 373077,
+    "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087"
+  },
+  "novelty_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/final_lexical_novelty.json",
+  "novelty_record": {
+    "bytes": 97272,
+    "sha256": "c1b475837aa2782c954df43306840d4aaaf91acf6e8746eb1b7b9e1192455b33"
+  },
+  "prospective_plan_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/PROSPECTIVE_PLAN.md",
+  "prospective_plan_record": {
+    "bytes": 13061,
+    "sha256": "4ea3f201cd248cf1e1792410f61e60ccbe4f0a4c380daedb8fdf45a4129b7317"
+  },
+  "discovery_path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json",
+  "discovery_record": {
+    "bytes": 21869,
+    "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416"
+  },
+  "dependency_audit_record": {
+    "bytes": 246431,
+    "sha256": "5640316b41c142b1054c4a53175e1cef732a4580dd3352c2aa9f00580ba2a8d7"
+  },
+  "final_dependency_review_record": {
+    "bytes": 3783,
+    "sha256": "f9e5131bac478f34c4660f84e8ac1f010f6c29b27f029e14c462643231988dcf"
+  },
+  "checks": {
+    "source_reference_occurrences": 468,
+    "distinct_source_urls": 154,
+    "source_and_population_row_bindings": 160,
+    "source_retrieval_modes": {
+      "direct_open_and_read_in_prior_review_windows": 55,
+      "direct_open_and_read": 259,
+      "browser_returned_indexed_source_text": 8,
+      "browser_returned_page_or_indexed_text": 29,
+      "browser_returned_page_text": 1,
+      "indexed_PDF_text_full_open_failed": 2,
+      "browser_returned_official_page_or_indexed_source_text": 33,
+      "retrieved_search_extract_direct_open_403": 10,
+      "retrieved_search_extract_Italian_primary_text_context": 1,
+      "retrieved_search_extract_full_biography_not_rendered_by_direct_open": 1,
+      "retrieved_search_extract": 24,
+      "direct_open_and_read_plus_retrieved_search_extract": 4,
+      "retrieved_search_extract_direct_open_failed": 4,
+      "retrieved_search_extract_of_archived_primary_Xerox_document": 3,
+      "direct_open_and_read_linked_concise_SI_2026_pdf_tables_1_and_2": 33,
+      "retrieved_search_extract_direct_open_rejected": 1
+    },
+    "source_audit_records": {
+      "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/country_sources.json": {
+        "bytes": 12806,
+        "sha256": "3812254ff14aad2a93caf3d69d4cab124495d3f9663cc8a7ae59f38fd910c349"
+      },
+      "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/landform_sources.json": {
+        "bytes": 13183,
+        "sha256": "5eea311bfc378ab6257036d8d19ac201ff3d9d342a459dc93eafbc0681b885a4"
+      },
+      "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/science_sources.json": {
+        "bytes": 7890,
+        "sha256": "8aad77f1c2e13c49cf14d8ca53549dcc0cb65278f8c540daa7d9a26fd99481b7"
+      },
+      "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json": {
+        "bytes": 124830,
+        "sha256": "644906627d1ffef14b6f2cc3010e2adf2733aead71890818ca650df17ab540d1"
+      },
+      "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/benchmark_sources_partial.json": {
+        "bytes": 119048,
+        "sha256": "0fb0ee8bc87d806059139f108175a7f09f24e068edfabcf930badbb3cc7fe36e"
+      }
+    },
+    "dependency_edges": 294,
+    "dependency_components": 28,
+    "group_sizes_descending": [
+      42,
+      24,
+      16,
+      10,
+      10,
+      6,
+      4,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "sum_squared_group_sizes": 2968,
+    "effective_group_count": 8.625336927223719,
+    "all_eligible_items": 160,
+    "scored_canonical_names": 80,
+    "controls_per_eligible_label": 79,
+    "cross_concept_scored_token_collisions": 0,
+    "tokenizer_common_prefixes_independently_recomputed": 160,
+    "scored_forms_independently_recomputed": 80,
+    "boundary_drop_counts": {
+      "1": 131,
+      "0": 29
+    },
+    "readout_virtual_layers": [
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180
+    ],
+    "all_preserved_current_source_and_population_bindings": true
+  },
+  "manual_review": {
+    "items_reviewed": 160,
+    "concept_identities_reviewed": 80,
+    "two_hop_structure": "Every final prompt was reviewed as clue to an absent intermediate to a distinct requested factual attribute. Earlier supplied-answer, synonym-only and malformed-definition items were replaced before any new model outcome. Explicitly requested symbol/code relations are permitted by the pre-freeze adjudication, consistent with discovery atomic-number to element to symbol.",
+    "factual_sources": "Both hops of every final question are supported by the attached actually inspected source evidence. I directly checked the sources recorded in benchmark_sources_partial.json and the final NOAA chlorine/NWS tornado corrections; separately attributed root country/landform/science and producer environment source audits were reviewed for claim and current-question support. The source excerpts and retrieval limitations are preserved; indexed/search retrieval is not represented as a successful full-page open. Audit creation dates and per-source check dates retain their recorded scope. Duplicate source evidence is not counted as independent corroboration.",
+    "exact_final_corrections": "Final confirmation-146 cites NOAA FAQ2 chlorine/ClO chain reactions for the actual chlorine-depletion clue; confirmation-155 uses the NWS rotating-column definition for hop1 and the Enhanced Fujita page for hop2. The approved confirmation-062 Mekong clue says much of southern Vietnam and is supported by the Mekong River Commission source.",
+    "intermediate_novelty": "No repeated intermediate identity among the 80 final concepts was identified against all 93 discovery intermediates, including formerly token-ineligible labels and genuine semantic aliases. The lexical N collision is Newton unit code versus nitrogen symbol, not a repeated entity. Titan/Saturn VI and Europa/Jupiter II are moon identities distinct from their parent planets. True metadata aliases do not expand scored token forms.",
+    "discovery_question_overlap": "No repeated or paraphrased full discovery question/factual instance was identified. The three automated atomic-number-to-symbol similarity flags concern an intentionally familiar construction with a different entity/fact. Familiar relation templates are allowed and grouped conservatively within confirmation.",
+    "calibration_overlap": "The final lexical audit reports 290 literal mention flags and zero prompt 8-gram matches; these are screening results, not semantic novelty proof. Three known requested component-fact overlaps are explicitly retained and disclosed: 076 nucleus/two membranes (fit03 paragraph8), 130 kelvin/temperature (fit01 paragraph42), and 151 monsoon/summer (fit01 paragraph12). Incidental concept mentions and lexical homonyms remain visible. No constituent-fact-free calibration claim is accepted.",
+    "dependency_graph": "Unique prompt/concept identifiers were not accepted as evidence of 80 independent units. I reviewed the actual shared facts, near paraphrases and concrete entity-substitution constructions, with the separate dependency audit integrated. The 294 explicit edges reconstruct exactly the 28 saved connected components. The W target/code overlap connects tungsten and watt without asserting entity identity.",
+    "difficulty_and_relations": "The common factual two-hop form provides structural comparability. The fixed mixture is 45 familiar requested-family, 19 familiar recombination and 96 requested relations not represented in discovery. Equivalent empirical difficulty and distribution matching are not established; neither is claimed in the reviewed plan.",
+    "eligibility_controls_boundary": "Independent local-tokenizer recomputation agrees on all 160 common-prefix readout contexts and all 80 canonical scored-form sets. All 160 items remain eligible with untruncated prompts, no scored intended-name leakage, no scored token collision, and exactly the other 79 names as equal-weight controls. Semantic review found no remaining own-entity control contamination.",
+    "source_assembly_history": "Legacy draft/pending-review fields inside root_revision and annotation_check are historical assembly provenance. This separate exact-file review is the authoritative blinded acceptance and does not require a circular in-file self-approval hash."
+  },
+  "precision": {
+    "item_count": 160,
+    "component_count": 28,
+    "component_sizes": [
+      42,
+      24,
+      16,
+      10,
+      10,
+      6,
+      4,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "effective_group_count": 8.625336927223719,
+    "formula": "approximate 95% half-width = 1.96*s*sqrt(sum(n_g^2))/sum(n_g); effective group count = sum(n_g)^2/sum(n_g^2)",
+    "scenarios": [
+      {
+        "assumed_group_mean_sd": 0.3,
+        "approximate_95pct_halfwidth": 0.20021162553658067
+      },
+      {
+        "assumed_group_mean_sd": 0.45,
+        "approximate_95pct_halfwidth": 0.300317438304871
+      },
+      {
+        "assumed_group_mean_sd": 0.6,
+        "approximate_95pct_halfwidth": 0.40042325107316135
+      }
+    ],
+    "interpretation": "Prospective conditional variance/dependence scenarios only. The initial approximately 0.10 target at SD 0.45 is not met; root retains the fixed 160 before any result with explicit acceptance of limited precision. No achieved precision, power, observed interval or finite-sample coverage guarantee is asserted."
+  },
+  "limits": [
+    "Acceptance is for the exact benchmark, population and source annotations above, before new confirmation results.",
+    "No claim that all component facts were absent from calibration or model pretraining.",
+    "No claim of empirically matched difficulty, a distribution-matched relation mix, or 80 independent groups.",
+    "No claim that the model actually uses the annotated intermediate.",
+    "Any post-review scientific, source, alias, eligibility or grouping change requires renewed hash-bound review before confirmation."
+  ],
+  "unresolved_findings": []
+}

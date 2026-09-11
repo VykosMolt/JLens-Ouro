@@ -1,0 +1,1 @@
+{"checks":["48e9 and50e9 provider host allocations accepted","below48e9 rejected","actual cgroup headroom and12GiB reserve unchanged"],"minimum_host_bytes":48000000000,"source_sha256":"1087f6ad057b32ad866bee81283ea83e1173ca88b0f5a4ed3bc934ecb129966e","status":"passed","torch_imported":false}

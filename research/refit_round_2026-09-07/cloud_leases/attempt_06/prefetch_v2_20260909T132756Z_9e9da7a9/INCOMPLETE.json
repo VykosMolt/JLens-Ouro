@@ -1,0 +1,1 @@
+{"error_type":"TransportFailure","reason":"Bounded status timeout reached","scope":"Only already verified published files may exist under retrieved; staged partials remain outside it.","status":"incomplete","stopped_utc":"2026-09-09T13:34:33.132543+00:00"}

@@ -1,0 +1,1225 @@
+{
+  "retrieved_utc": "2026-09-07T19:04:59.243963+00:00",
+  "endpoint": "https://api.runpod.io/graphql",
+  "purpose": "Read-only one-GPU on-demand price and stock comparison; no account query or mutation.",
+  "query": "query FollowupGpuCatalogue {\n  gpuTypes {\n    id displayName memoryInGb secureCloud communityCloud\n    secure: lowestPrice(input: {gpuCount: 1, secureCloud: true}) {\n      stockStatus uninterruptablePrice availableGpuCounts\n      minMemory minVcpu minDownload minUpload supportPublicIp\n    }\n    community: lowestPrice(input: {gpuCount: 1, secureCloud: false}) {\n      stockStatus uninterruptablePrice availableGpuCounts\n      minMemory minVcpu minDownload minUpload supportPublicIp\n    }\n  }\n}",
+  "data": {
+    "gpuTypes": [
+      {
+        "id": "AMD Instinct MI300X OAM",
+        "displayName": "MI300X",
+        "memoryInGb": 192,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 2.39,
+          "availableGpuCounts": null,
+          "minMemory": 283,
+          "minVcpu": 24,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA A100 80GB PCIe",
+        "displayName": "A100 PCIe",
+        "memoryInGb": 80,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA A100-SXM4-40GB",
+        "displayName": "A100 SXM 40GB",
+        "memoryInGb": 40,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 1,
+          "availableGpuCounts": null,
+          "minMemory": 125,
+          "minVcpu": 32,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA A100-SXM4-80GB",
+        "displayName": "A100 SXM",
+        "memoryInGb": 80,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "High",
+          "uninterruptablePrice": 1.59,
+          "availableGpuCounts": null,
+          "minMemory": 117,
+          "minVcpu": 16,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 1.39,
+          "availableGpuCounts": null,
+          "minMemory": 125,
+          "minVcpu": 32,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA A40",
+        "displayName": "A40",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA B200",
+        "displayName": "B200",
+        "memoryInGb": 180,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 6.79,
+          "availableGpuCounts": null,
+          "minMemory": 283,
+          "minVcpu": 28,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA B300 SXM6 AC",
+        "displayName": "B300",
+        "memoryInGb": 288,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 3070",
+        "displayName": "RTX 3070",
+        "memoryInGb": 8,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.13,
+          "availableGpuCounts": null,
+          "minMemory": 17,
+          "minVcpu": 18,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 3080",
+        "displayName": "RTX 3080",
+        "memoryInGb": 10,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 3080 Ti",
+        "displayName": "RTX 3080 Ti",
+        "memoryInGb": 12,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 3090",
+        "displayName": "RTX 3090",
+        "memoryInGb": 24,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.5,
+          "availableGpuCounts": null,
+          "minMemory": 117,
+          "minVcpu": 32,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.22,
+          "availableGpuCounts": null,
+          "minMemory": 30,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 3090 Ti",
+        "displayName": "RTX 3090 Ti",
+        "memoryInGb": 24,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.27,
+          "availableGpuCounts": null,
+          "minMemory": 54,
+          "minVcpu": 24,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 4070 Ti",
+        "displayName": "RTX 4070 Ti",
+        "memoryInGb": 12,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.19,
+          "availableGpuCounts": null,
+          "minMemory": 24,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 4080",
+        "displayName": "RTX 4080",
+        "memoryInGb": 16,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 4080 SUPER",
+        "displayName": "RTX 4080 SUPER",
+        "memoryInGb": 16,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.28,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 4090",
+        "displayName": "RTX 4090",
+        "memoryInGb": 24,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Medium",
+          "uninterruptablePrice": 0.74,
+          "availableGpuCounts": null,
+          "minMemory": 31,
+          "minVcpu": 9,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.34,
+          "availableGpuCounts": null,
+          "minMemory": 41,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 5080",
+        "displayName": "RTX 5080",
+        "memoryInGb": 16,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.39,
+          "availableGpuCounts": null,
+          "minMemory": 30,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA GeForce RTX 5090",
+        "displayName": "RTX 5090",
+        "memoryInGb": 32,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.99,
+          "availableGpuCounts": null,
+          "minMemory": 93,
+          "minVcpu": 16,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.69,
+          "availableGpuCounts": null,
+          "minMemory": 46,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA H100 80GB HBM3",
+        "displayName": "H100 SXM",
+        "memoryInGb": 80,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "High",
+          "uninterruptablePrice": 3.49,
+          "availableGpuCounts": null,
+          "minMemory": 125,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA H100 NVL",
+        "displayName": "H100 NVL",
+        "memoryInGb": 94,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 3.19,
+          "availableGpuCounts": null,
+          "minMemory": 141,
+          "minVcpu": 18,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 2.59,
+          "availableGpuCounts": null,
+          "minMemory": 150,
+          "minVcpu": 19,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA H100 PCIe",
+        "displayName": "H100 PCIe",
+        "memoryInGb": 80,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA H200",
+        "displayName": "H200 SXM",
+        "memoryInGb": 141,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Medium",
+          "uninterruptablePrice": 4.59,
+          "availableGpuCounts": null,
+          "minMemory": 188,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 3.59,
+          "availableGpuCounts": null,
+          "minMemory": 251,
+          "minVcpu": 16,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA H200 NVL",
+        "displayName": "H200 NVL",
+        "memoryInGb": 143,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA L4",
+        "displayName": "L4",
+        "memoryInGb": 24,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.49,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 6,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA L40",
+        "displayName": "L40",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.69,
+          "availableGpuCounts": null,
+          "minMemory": 151,
+          "minVcpu": 9,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA L40S",
+        "displayName": "L40S",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Medium",
+          "uninterruptablePrice": 1.09,
+          "availableGpuCounts": null,
+          "minMemory": 94,
+          "minVcpu": 16,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.79,
+          "availableGpuCounts": null,
+          "minMemory": 125,
+          "minVcpu": 24,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX 2000 Ada Generation",
+        "displayName": "RTX 2000 Ada",
+        "memoryInGb": 16,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.24,
+          "availableGpuCounts": null,
+          "minMemory": 31,
+          "minVcpu": 6,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX 4000 Ada Generation",
+        "displayName": "RTX 4000 Ada",
+        "memoryInGb": 20,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.28,
+          "availableGpuCounts": null,
+          "minMemory": 50,
+          "minVcpu": 9,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX 5000 Ada Generation",
+        "displayName": "RTX 5000 Ada",
+        "memoryInGb": 32,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.49,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 6,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX 6000 Ada Generation",
+        "displayName": "RTX 6000 Ada",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.84,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 16,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.74,
+          "availableGpuCounts": null,
+          "minMemory": 78,
+          "minVcpu": 14,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX A4000",
+        "displayName": "RTX A4000",
+        "memoryInGb": 16,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.17,
+          "availableGpuCounts": null,
+          "minMemory": 35,
+          "minVcpu": 5,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX A4500",
+        "displayName": "RTX A4500",
+        "memoryInGb": 20,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.25,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.19,
+          "availableGpuCounts": null,
+          "minMemory": 30,
+          "minVcpu": 7,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX A5000",
+        "displayName": "RTX A5000",
+        "memoryInGb": 24,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.27,
+          "availableGpuCounts": null,
+          "minMemory": 50,
+          "minVcpu": 9,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX A6000",
+        "displayName": "RTX A6000",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.53,
+          "availableGpuCounts": null,
+          "minMemory": 50,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 4000 Blackwell",
+        "displayName": "RTX PRO 4000",
+        "memoryInGb": 24,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Medium",
+          "uninterruptablePrice": 0.57,
+          "availableGpuCounts": null,
+          "minMemory": 31,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 4500 Blackwell",
+        "displayName": "RTX PRO 4500",
+        "memoryInGb": 32,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Medium",
+          "uninterruptablePrice": 0.72,
+          "availableGpuCounts": null,
+          "minMemory": 61,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+        "displayName": "RTX PRO 4500 SE",
+        "memoryInGb": 32,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 5000 Blackwell",
+        "displayName": "RTX PRO 5000",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.82,
+          "availableGpuCounts": null,
+          "minMemory": 54,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "displayName": "RTX PRO 6000 MaxQ",
+        "memoryInGb": 96,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "displayName": "RTX PRO 6000",
+        "memoryInGb": 96,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "High",
+          "uninterruptablePrice": 2.09,
+          "availableGpuCounts": null,
+          "minMemory": 140,
+          "minVcpu": 16,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 1.69,
+          "availableGpuCounts": null,
+          "minMemory": 125,
+          "minVcpu": 14,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb",
+        "displayName": "PRO 6000 MIG 24GB",
+        "memoryInGb": 24,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Medium",
+          "uninterruptablePrice": 0.59,
+          "availableGpuCounts": null,
+          "minMemory": 31,
+          "minVcpu": 4,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+        "displayName": "PRO 6000 MIG 48GB",
+        "memoryInGb": 48,
+        "secureCloud": true,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 1.09,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 8,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "displayName": "RTX PRO 6000 WK",
+        "memoryInGb": 96,
+        "secureCloud": true,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 2.19,
+          "availableGpuCounts": null,
+          "minMemory": 125,
+          "minVcpu": 32,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 1.69,
+          "availableGpuCounts": null,
+          "minMemory": 186,
+          "minVcpu": 12,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "Tesla V100-SXM2-16GB",
+        "displayName": "V100 SXM2",
+        "memoryInGb": 16,
+        "secureCloud": false,
+        "communityCloud": true,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 0.23,
+          "availableGpuCounts": null,
+          "minMemory": 62,
+          "minVcpu": 10,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      },
+      {
+        "id": "unknown",
+        "displayName": "unknown",
+        "memoryInGb": 0,
+        "secureCloud": false,
+        "communityCloud": false,
+        "secure": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        },
+        "community": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "availableGpuCounts": null,
+          "minMemory": null,
+          "minVcpu": null,
+          "minDownload": null,
+          "minUpload": null,
+          "supportPublicIp": null
+        }
+      }
+    ]
+  }
+}

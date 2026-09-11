@@ -1,0 +1,58 @@
+{
+  "schema": "confirmation_attempt03_spending_shutdown.v1",
+  "recorded_utc": "2026-09-10T10:45:38.693078+00:00",
+  "settled_invoice": false,
+  "scientific_status": "preflight_failed_before_development_or_confirmation",
+  "new_round_attempts": [
+    {
+      "attempt": 1,
+      "pod_id": "xugytsithv80ib",
+      "status": "terminated",
+      "lease_spend_upper_usd": 0.22588409273346807,
+      "record": {
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_01/LEASE.json",
+        "bytes": 6187,
+        "sha256": "2a1a9a21645f724a3800798d81c6eb5e838f32bc3b696b974d364d19f9f6b623"
+      }
+    },
+    {
+      "attempt": 2,
+      "pod_id": "jbuyae4289kcje",
+      "status": "terminated",
+      "lease_spend_upper_usd": 0.8404813042020144,
+      "record": {
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_02/LEASE.json",
+        "bytes": 6712,
+        "sha256": "09a6c6027b9ec4fcb3ab3cf87a60f07bc651244618b662987a03d7f3b92a8d3b"
+      }
+    },
+    {
+      "attempt": 3,
+      "pod_id": "8d5naxkec5lnaf",
+      "status": "terminated",
+      "lease_spend_upper_usd": 1.4670928849910219,
+      "record": {
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_03/LEASE.json",
+        "bytes": 14527,
+        "sha256": "800cb93d6ef0c774e4b6cd10691ba434c64629281a1d547439233b9f7803dd92"
+      }
+    }
+  ],
+  "historical_spend_upper_usd": 13.851844033145376,
+  "combined_spend_upper_usd": 16.38530231507188,
+  "combined_cap_usd": 25,
+  "account": {
+    "status": "observed",
+    "value": {
+      "id": "user_3I33u3QLWgO7POHKINt6GfLeTUw",
+      "clientBalance": 11.180741708,
+      "currentSpendPerHr": 0
+    },
+    "observed_utc": "2026-09-10T10:43:10.896081+00:00"
+  },
+  "pods": {
+    "status": "observed",
+    "value": [],
+    "observed_utc": "2026-09-10T10:43:11.631333+00:00"
+  }
+}

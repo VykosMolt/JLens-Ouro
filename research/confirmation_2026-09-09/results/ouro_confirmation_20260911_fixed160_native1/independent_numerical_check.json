@@ -1,0 +1,99 @@
+{
+  "absolute_tolerance": 1e-12,
+  "analysis_root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/results/ouro_confirmation_20260911_fixed160_native1/analysis",
+  "checks": [
+    {
+      "check": "frozen.bundle/frozen/run_spec.json",
+      "comparison": "exact",
+      "status": "passed"
+    },
+    {
+      "check": "frozen.bundle/frozen/population.json",
+      "comparison": "exact",
+      "status": "passed"
+    },
+    {
+      "check": "frozen.bundle/frozen/benchmark.json",
+      "comparison": "exact",
+      "status": "passed"
+    },
+    {
+      "check": "frozen.analysis/analyze.py",
+      "comparison": "exact",
+      "status": "passed"
+    },
+    {
+      "check": "frozen.evaluation/measurement.py",
+      "comparison": "exact",
+      "status": "passed"
+    },
+    {
+      "check": "frozen.FREEZE.json",
+      "comparison": "exact",
+      "status": "passed"
+    },
+    {
+      "check": "results.run_spec.frozen_record",
+      "comparison": "exact",
+      "status": "failed"
+    }
+  ],
+  "code_record": {
+    "bytes": 35055,
+    "sha256": "89a7309ad04d57f61a07a1ab10779c3c8e0464041390aaaefccbd78fcb98ca1b"
+  },
+  "error": {
+    "message": "Exact comparison failed: results.run_spec.frozen_record",
+    "type": "ValueError"
+  },
+  "input_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/FREEZE.json": {
+      "bytes": 7279,
+      "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/analysis/analyze.py": {
+      "bytes": 5870,
+      "sha256": "e4c3812d91d16d588d2beddab34e683e7732fc1d4ea4b1ee1ecb8b5b6b79e47f"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/benchmark.json": {
+      "bytes": 967118,
+      "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/population.json": {
+      "bytes": 373077,
+      "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/run_spec.json": {
+      "bytes": 18643,
+      "sha256": "8a4a3e6725d811d0b2584561a277d5071f097c551f40c46be9f6773a7d61181e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/benchmark.json": {
+      "bytes": 967118,
+      "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/population.json": {
+      "bytes": 373077,
+      "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/run_spec.json": {
+      "bytes": 34693,
+      "sha256": "002b91cb755a0517fc5839ef2277f14307ef9eaba41176b9298f4362e040d446"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/measurement.py": {
+      "bytes": 4277,
+      "sha256": "06c615b29285e0e4e10196ae8f15b015d5c8a362f5e7704adb38ce6e275799fe"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/primary_numerical_check.py": {
+      "bytes": 35055,
+      "sha256": "89a7309ad04d57f61a07a1ab10779c3c8e0464041390aaaefccbd78fcb98ca1b"
+    }
+  },
+  "mode": "saved_result_reconstruction",
+  "numpy": "2.4.4",
+  "python": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
+  "relative_tolerance": 0,
+  "results_root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results",
+  "schema": "confirmation_independent_numerical_check.v1",
+  "status": "failed",
+  "utc": "2026-09-11T01:07:07.648646+00:00"
+}

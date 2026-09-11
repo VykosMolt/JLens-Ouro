@@ -1,0 +1,70 @@
+{
+  "schema": "confirmation_source_coverage.v1",
+  "created_utc": "2026-09-09T22:29:32.619195+00:00",
+  "new_confirmation_results_exposed": false,
+  "candidate_record": {
+    "bytes": 476524,
+    "sha256": "98989bde420b0db3dba2cae366420f30c47c009e8ea4e3f4a1fb5fd7692ac6b3"
+  },
+  "audits": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/benchmark_sources_partial.json": {
+      "bytes": 119048,
+      "sha256": "0fb0ee8bc87d806059139f108175a7f09f24e068edfabcf930badbb3cc7fe36e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json": {
+      "bytes": 123933,
+      "sha256": "794e0779df5529f0aa921a1ab96e24c1a61b4f19a92abef88dabc9f57fd377da"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/science_sources.json": {
+      "bytes": 7890,
+      "sha256": "8aad77f1c2e13c49cf14d8ca53549dcc0cb65278f8c540daa7d9a26fd99481b7"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/country_sources.json": {
+      "bytes": 12806,
+      "sha256": "3812254ff14aad2a93caf3d69d4cab124495d3f9663cc8a7ae59f38fd910c349"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/landform_sources.json": {
+      "bytes": 13183,
+      "sha256": "5eea311bfc378ab6257036d8d19ac201ff3d9d342a459dc93eafbc0681b885a4"
+    }
+  },
+  "supported_items": 160,
+  "missing_items": [],
+  "stale_audit_rows": [
+    {
+      "name": "confirmation-045",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/benchmark_sources_partial.json",
+      "reason": "stale prompt or target"
+    },
+    {
+      "name": "confirmation-062",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/benchmark_sources_partial.json",
+      "reason": "stale prompt or target"
+    },
+    {
+      "name": "confirmation-011",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json",
+      "reason": "stale prompt or target"
+    },
+    {
+      "name": "confirmation-021",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json",
+      "reason": "stale prompt or target"
+    },
+    {
+      "name": "confirmation-022",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json",
+      "reason": "stale prompt or target"
+    },
+    {
+      "name": "confirmation-045",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json",
+      "reason": "stale prompt or target"
+    },
+    {
+      "name": "confirmation-062",
+      "audit": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/source_audit.json",
+      "reason": "stale prompt or target"
+    }
+  ]
+}

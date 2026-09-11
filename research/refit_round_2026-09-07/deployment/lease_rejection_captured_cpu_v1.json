@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "case_count": 116,
+  "actual_captured_body_exact_classifier": true,
+  "actual_capture_sha256": "e2e433d0e8de06c477236788cd73ae3fa3a86d550b03ca776451fd5de2bd2d29",
+  "captured_body_canonical_json_sha256": "9d6b75e458162fc1e5c3735025af2401cf6c1a46de22485d0d6e026383b1aced",
+  "source_sha256": {
+    "lease.py": "84db61efedfd94ec9e17894fed53f1ad690fb71924a3566dd1216f471940b807",
+    "runpod_api.py": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+  },
+  "network_calls": 0,
+  "tensor_runtime_imported": false
+}

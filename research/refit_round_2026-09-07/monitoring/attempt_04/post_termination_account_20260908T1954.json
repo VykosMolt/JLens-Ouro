@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-09-08T19:55:01Z",
+  "account": {
+    "id": "user_3I33u3QLWgO7POHKINt6GfLeTUw",
+    "clientBalance": 27.1835692972,
+    "currentSpendPerHr": 0
+  },
+  "pods": [],
+  "offer": {
+    "stockStatus": "Low",
+    "uninterruptablePrice": 0.22,
+    "minMemory": 50,
+    "minVcpu": 12,
+    "recorded_utc": "2026-09-08T19:55:02Z",
+    "gpu_type_id": "NVIDIA GeForce RTX 3090"
+  }
+}

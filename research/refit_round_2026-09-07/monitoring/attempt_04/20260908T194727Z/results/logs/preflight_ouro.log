@@ -1,0 +1,87 @@
+Traceback (most recent call last):
+  File "/workspace/jlens/bundle/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py", line 337, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/jlens/bundle/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py", line 333, in main
+    print(json.dumps(execute(args, main_contract, prepared, prerequisites), indent=2, allow_nan=False))
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/bundle/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py", line 269, in execute
+    native, length, count = estimators.jacobians_for_prompt(
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        native_model, TEXT, sources, mode="sampled" if paired else "dense",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        q=64 if paired else None, dense_engine="stock", **common)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/bundle/jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py", line 116, in jacobians_for_prompt
+    dense, seq_len, n_valid = compute(
+                              ~~~~~~~^
+        model,
+        ^^^^^^
+    ...<6 lines>...
+        **execution_options,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/workspace/jlens/bundle/jacobian-lens/jlens/fitting.py", line 165, in jacobian_for_prompt
+    model.forward(replicated_ids)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/bundle/jacobian-lens/jlens/hf.py", line 164, in forward
+    return self._text_module(input_ids=input_ids, use_cache=False)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/transformers/utils/generic.py", line 1069, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/workspace/jlens/results/preflight_ouro/runtime_cache/modules/transformers_modules/ouro/modeling_ouro.py", line 594, in forward
+    hidden_states = decoder_layer(
+        hidden_states,
+    ...<7 lines>...
+        **kwargs,
+    )
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1884, in _call_impl
+    return inner()
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1832, in inner
+    result = forward_call(*args, **kwargs)
+  File "/workspace/jlens/results/preflight_ouro/runtime_cache/modules/transformers_modules/ouro/modeling_ouro.py", line 404, in forward
+    hidden_states, _ = self.self_attn(
+                       ~~~~~~~~~~~~~~^
+        hidden_states=hidden_states,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/jlens/results/preflight_ouro/runtime_cache/modules/transformers_modules/ouro/modeling_ouro.py", line 330, in forward
+    attn_output, attn_weights = attention_interface(
+                                ~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<7 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/workspace/jlens/venv/lib/python3.14/site-packages/transformers/integrations/sdpa_attention.py", line 81, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+        query,
+    ...<6 lines>...
+        **sdpa_kwargs,
+    )
+  File "/workspace/jlens/bundle/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py", line 176, in pack
+    raise HostMemoryBudgetExceeded(f"exact_cpu_offload would retain {self.live_host_bytes + nbytes} host bytes, above budget {self.max_host_bytes}")
+optimization.bench_offload_reference.HostMemoryBudgetExceeded: exact_cpu_offload would retain 3845542608 host bytes, above budget 3844554752

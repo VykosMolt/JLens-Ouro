@@ -1,0 +1,29 @@
+{
+  "schema": "confirmation_measurement_self_test.v1",
+  "status": "passed",
+  "historical_multihop_items": 93,
+  "historical_eligible_items": 90,
+  "fit01_discovery_primary": 0.1890694150494096,
+  "legacy_fixed_layer_scores": "bitwise equal for own, control, excess, eligibility on every historical multihop layer",
+  "synthetic_tied_logits": "captured argsort top-10 agrees with original ranks; original arrays equal including argmax; two aliases per name",
+  "unequal_group_bootstrap": "every draw equals explicit whole-group item-weighted reconstruction; constant paired component preserved",
+  "new_confirmation_results_exposed": false,
+  "source_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/self_test.py": {
+      "bytes": 4751,
+      "sha256": "a2bcabcf62f42a962aa85ce8ed14040deae4c7819834eb71b5ff23fdde33789e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/measurement.py": {
+      "bytes": 4277,
+      "sha256": "06c615b29285e0e4e10196ae8f15b015d5c8a362f5e7704adb38ce6e275799fe"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/readouts.py": {
+      "bytes": 4685,
+      "sha256": "2d1762f126e9f1da9a9b7aabc2039de3697bbc5fc5b385ab6a034aa2dc931226"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/analysis/analyze.py": {
+      "bytes": 5870,
+      "sha256": "e4c3812d91d16d588d2beddab34e683e7732fc1d4ea4b1ee1ecb8b5b6b79e47f"
+    }
+  }
+}

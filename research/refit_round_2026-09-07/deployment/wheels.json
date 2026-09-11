@@ -1,0 +1,55 @@
+{
+  "recorded_utc": "2026-09-08T09:28:27.788850+00:00",
+  "purpose": "Exact public wheels staged locally; no cloud spending or GPU operation.",
+  "wheels": [
+    {
+      "package": "torch",
+      "version": "2.12.0.dev20260407+cu128",
+      "wheel": "torch-2.12.0.dev20260407+cu128-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "local_path": "/tmp/jlens-refit-wheels/torch-2.12.0.dev20260407+cu128-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "bytes": 832494036,
+      "sha256": "9a9fd987902e8d3b9424c03c605985f8d67147459d9afd51209d36fbbcee9ca7",
+      "metadata_sha256": "bb8cc0a6d990b45cf1a2fb7a8115f9204bf12012dbb9fcb2bf398d84568931b5",
+      "installed_metadata_matches": true,
+      "critical_installed_files": [
+        {
+          "path": "torch/version.py",
+          "sha256": "b7fd989478688492b7c5e5cc6d5682d0dc27c73212d40a93de0fad27b4bffaab",
+          "installed_matches_wheel": true
+        },
+        {
+          "path": "torch/lib/libtorch_cuda.so",
+          "sha256": "7bdef40ee7432df611e7f47d5dca30357359593c8e8fbab977fcea48158209a5",
+          "installed_matches_wheel": true
+        },
+        {
+          "path": "torch/lib/libtorch_cpu.so",
+          "sha256": "e318694c0eebaf0a2d5d918611acc7db5d07009ca649704eec29f8210be00e95",
+          "installed_matches_wheel": true
+        },
+        {
+          "path": "torch/_C.cpython-314-x86_64-linux-gnu.so",
+          "sha256": "8cab0ed3062f023b9dda98824c785516dab69742d635c738ecc6b1a52508b7ea",
+          "installed_matches_wheel": true
+        }
+      ]
+    },
+    {
+      "package": "triton",
+      "version": "3.7.0+git9c288bc5",
+      "wheel": "triton-3.7.0+git9c288bc5-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "local_path": "/tmp/jlens-refit-wheels/triton-3.7.0+git9c288bc5-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 292180125,
+      "sha256": "65730e9431fa2cbe46de7fab738750aae28afac303998c28e696394ad93869d7",
+      "metadata_sha256": "15be25c2c8ced19d19fad33dc94ce3fab99254f0546bb0a8b4f7496ea5c091db",
+      "installed_metadata_matches": true,
+      "critical_installed_files": [
+        {
+          "path": "triton/__init__.py",
+          "sha256": "38626da907b0142a527d991c44ce78c162e8547e0399cac08359cb3898c9c014",
+          "installed_matches_wheel": true
+        }
+      ]
+    }
+  ]
+}

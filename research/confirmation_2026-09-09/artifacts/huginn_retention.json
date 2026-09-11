@@ -1,0 +1,1565 @@
+{
+  "diagnostic_rows_checked": 100,
+  "evaluation_owner": {
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json",
+    "record": {
+      "bytes": 56959,
+      "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb",
+      "stat_after": {
+        "bytes": 56959,
+        "ctime_ns": 1788968036842447344,
+        "device": 66306,
+        "inode": 57576663,
+        "mtime_ns": 1788967926301028897,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 56959,
+        "ctime_ns": 1788968036842447344,
+        "device": 66306,
+        "inode": 57576663,
+        "mtime_ns": 1788967926301028897,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    }
+  },
+  "expected_final": {
+    "bytes": 1784226499,
+    "sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596"
+  },
+  "external_candidates": [
+    {
+      "path": "/home/moloch/ouro_project/utilities/tests/manual/bg_v3_huginn_probe.py",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 9872,
+        "ctime_ns": 1785025667910173904,
+        "device": 66306,
+        "inode": 55716005,
+        "mtime_ns": 1785025667890173773,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/SHA256SUMS",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 5901,
+        "ctime_ns": 1785048763400679295,
+        "device": 66306,
+        "inode": 55716297,
+        "mtime_ns": 1785048763400679295,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/excluded_crossing_tasks.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 8455,
+        "ctime_ns": 1785027013465015302,
+        "device": 66306,
+        "inode": 55716060,
+        "mtime_ns": 1784563399809318998,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/xloop_taps.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 172855,
+        "ctime_ns": 1785048551546666249,
+        "device": 66306,
+        "inode": 55716271,
+        "mtime_ns": 1785048551546666249,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/bootstrap_stats_v3.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 4865,
+        "ctime_ns": 1785048564237780241,
+        "device": 66306,
+        "inode": 55715964,
+        "mtime_ns": 1785048564237780241,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/ENVIRONMENT.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 261,
+        "ctime_ns": 1785048762809097344,
+        "device": 66306,
+        "inode": 55716296,
+        "mtime_ns": 1785048762809097344,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/subset_groups.jsonl",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 7291191,
+        "ctime_ns": 1785027013454015230,
+        "device": 66306,
+        "inode": 55716059,
+        "mtime_ns": 1784563404109448201,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/model_plan.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 365,
+        "ctime_ns": 1785046848315587296,
+        "device": 66306,
+        "inode": 55716061,
+        "mtime_ns": 1785046848315587296,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/train_eval_results.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 44612,
+        "ctime_ns": 1785048561688973057,
+        "device": 66306,
+        "inode": 55716289,
+        "mtime_ns": 1785048561688973057,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/EXPERIMENT_PLAN.md",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 1319,
+        "ctime_ns": 1785026083340895194,
+        "device": 66306,
+        "inode": 55716017,
+        "mtime_ns": 1785026083340895194,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0000.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 34391250,
+        "ctime_ns": 1785046993086570668,
+        "device": 66306,
+        "inode": 55716232,
+        "mtime_ns": 1785046993086570668,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0002.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 34050814,
+        "ctime_ns": 1785047201819673713,
+        "device": 66306,
+        "inode": 55716233,
+        "mtime_ns": 1785047201819673713,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0016.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33958649,
+        "ctime_ns": 1785048039144093819,
+        "device": 66306,
+        "inode": 55716248,
+        "mtime_ns": 1785048039144093819,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0003.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 34306637,
+        "ctime_ns": 1785047337726041747,
+        "device": 66306,
+        "inode": 55716235,
+        "mtime_ns": 1785047337726041747,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0007.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 16976273,
+        "ctime_ns": 1785047656916252163,
+        "device": 66306,
+        "inode": 55716239,
+        "mtime_ns": 1785047656916252163,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0006.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33952057,
+        "ctime_ns": 1785047632144003100,
+        "device": 66306,
+        "inode": 55716238,
+        "mtime_ns": 1785047632144003100,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0012.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 25464005,
+        "ctime_ns": 1785047853975233007,
+        "device": 66306,
+        "inode": 55716244,
+        "mtime_ns": 1785047853975233007,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0014.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 6792333,
+        "ctime_ns": 1785047924314939919,
+        "device": 66306,
+        "inode": 55716246,
+        "mtime_ns": 1785047924314939919,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0005.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 23605783,
+        "ctime_ns": 1785047572003398382,
+        "device": 66306,
+        "inode": 55716237,
+        "mtime_ns": 1785047572003398382,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0011.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 3820225,
+        "ctime_ns": 1785047816440855760,
+        "device": 66306,
+        "inode": 55716243,
+        "mtime_ns": 1785047816440855760,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/feature_manifest.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 99578,
+        "ctime_ns": 1785048514523268847,
+        "device": 66306,
+        "inode": 55716261,
+        "mtime_ns": 1785048514523268847,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0010.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33952313,
+        "ctime_ns": 1785047810880799876,
+        "device": 66306,
+        "inode": 55716242,
+        "mtime_ns": 1785047810880799876,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0024.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 21822958,
+        "ctime_ns": 1785048320870578487,
+        "device": 66306,
+        "inode": 55716256,
+        "mtime_ns": 1785048320870578487,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0022.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 34219720,
+        "ctime_ns": 1785048259242723586,
+        "device": 66306,
+        "inode": 55716254,
+        "mtime_ns": 1785048259242723586,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0004.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 30400103,
+        "ctime_ns": 1785047473135404059,
+        "device": 66306,
+        "inode": 55716236,
+        "mtime_ns": 1785047473135404059,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0015.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33958585,
+        "ctime_ns": 1785047981655516143,
+        "device": 66306,
+        "inode": 55716247,
+        "mtime_ns": 1785047981655516143,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0026.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33987897,
+        "ctime_ns": 1785048467278472805,
+        "device": 66306,
+        "inode": 55716258,
+        "mtime_ns": 1785048467278472805,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0008.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33951993,
+        "ctime_ns": 1785047708885774630,
+        "device": 66306,
+        "inode": 55716240,
+        "mtime_ns": 1785047708885774630,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0009.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 34292301,
+        "ctime_ns": 1785047760179290251,
+        "device": 66306,
+        "inode": 55716241,
+        "mtime_ns": 1785047760179290251,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0021.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33965753,
+        "ctime_ns": 1785048211904725792,
+        "device": 66306,
+        "inode": 55716253,
+        "mtime_ns": 1785048211904725792,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0023.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 21060289,
+        "ctime_ns": 1785048289363142487,
+        "device": 66306,
+        "inode": 55716255,
+        "mtime_ns": 1785048289363142487,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0001.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 16557368,
+        "ctime_ns": 1785047058995235019,
+        "device": 66306,
+        "inode": 55716234,
+        "mtime_ns": 1785047058995235019,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0025.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 20393113,
+        "ctime_ns": 1785048374015721487,
+        "device": 66306,
+        "inode": 55716257,
+        "mtime_ns": 1785048374015721487,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0028.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 10196225,
+        "ctime_ns": 1785048514515949689,
+        "device": 66306,
+        "inode": 55716260,
+        "mtime_ns": 1785048514515949689,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0018.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 20375385,
+        "ctime_ns": 1785048103339488440,
+        "device": 66306,
+        "inode": 55716250,
+        "mtime_ns": 1785048103339488440,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0019.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33966265,
+        "ctime_ns": 1785048150425205129,
+        "device": 66306,
+        "inode": 55716251,
+        "mtime_ns": 1785048150425205129,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0020.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 9680803,
+        "ctime_ns": 1785048163620869608,
+        "device": 66306,
+        "inode": 55716252,
+        "mtime_ns": 1785048163620869608,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0013.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 33958841,
+        "ctime_ns": 1785047912824824448,
+        "device": 66306,
+        "inode": 55716245,
+        "mtime_ns": 1785047912824824448,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0027.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 8497117,
+        "ctime_ns": 1785048488606228182,
+        "device": 66306,
+        "inode": 55716259,
+        "mtime_ns": 1785048488606228182,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/features/huginn_0017.pt",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 16979665,
+        "ctime_ns": 1785048068853392341,
+        "device": 66306,
+        "inode": 55716249,
+        "mtime_ns": 1785048068853392341,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L4_to_L5.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377628,
+        "ctime_ns": 1785048553134416569,
+        "device": 66306,
+        "inode": 55716285,
+        "mtime_ns": 1785048553134416569,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L8.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377566,
+        "ctime_ns": 1785048551546666249,
+        "device": 66306,
+        "inode": 55716270,
+        "mtime_ns": 1785048551546666249,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L1.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377781,
+        "ctime_ns": 1785048522573823157,
+        "device": 66306,
+        "inode": 55716263,
+        "mtime_ns": 1785048522573823157,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L3.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377786,
+        "ctime_ns": 1785048551785954825,
+        "device": 66306,
+        "inode": 55716273,
+        "mtime_ns": 1785048551785954825,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L2_to_L5.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377822,
+        "ctime_ns": 1785048552684574753,
+        "device": 66306,
+        "inode": 55716281,
+        "mtime_ns": 1785048552684574753,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L7.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377614,
+        "ctime_ns": 1785048552236255822,
+        "device": 66306,
+        "inode": 55716277,
+        "mtime_ns": 1785048552236255822,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L2.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377900,
+        "ctime_ns": 1785048551673835457,
+        "device": 66306,
+        "inode": 55716272,
+        "mtime_ns": 1785048551673835457,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L3.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 378134,
+        "ctime_ns": 1785048530958934463,
+        "device": 66306,
+        "inode": 55716265,
+        "mtime_ns": 1785048530958934463,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L4_to_L6.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377522,
+        "ctime_ns": 1785048553246012897,
+        "device": 66306,
+        "inode": 55716286,
+        "mtime_ns": 1785048553246012897,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L5.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377828,
+        "ctime_ns": 1785048552010253504,
+        "device": 66306,
+        "inode": 55716275,
+        "mtime_ns": 1785048552010253504,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L4_to_L7.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377565,
+        "ctime_ns": 1785048553357849407,
+        "device": 66306,
+        "inode": 55716287,
+        "mtime_ns": 1785048553357849407,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L4.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377808,
+        "ctime_ns": 1785048551898267642,
+        "device": 66306,
+        "inode": 55716274,
+        "mtime_ns": 1785048551898267642,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L2_to_L6.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377915,
+        "ctime_ns": 1785048552797027827,
+        "device": 66306,
+        "inode": 55716282,
+        "mtime_ns": 1785048552797027827,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L5.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377572,
+        "ctime_ns": 1785048538939661456,
+        "device": 66306,
+        "inode": 55716267,
+        "mtime_ns": 1785048538939661456,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L2_to_L3.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377668,
+        "ctime_ns": 1785048552460362470,
+        "device": 66306,
+        "inode": 55716279,
+        "mtime_ns": 1785048552460362470,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L6.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377709,
+        "ctime_ns": 1785048542991999304,
+        "device": 66306,
+        "inode": 55716268,
+        "mtime_ns": 1785048542991999304,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L2_to_L4.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377792,
+        "ctime_ns": 1785048552573158137,
+        "device": 66306,
+        "inode": 55716280,
+        "mtime_ns": 1785048552573158137,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L8.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377672,
+        "ctime_ns": 1785048552348088786,
+        "device": 66306,
+        "inode": 55716278,
+        "mtime_ns": 1785048552348088786,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L2.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377776,
+        "ctime_ns": 1785048526857866213,
+        "device": 66306,
+        "inode": 55716264,
+        "mtime_ns": 1785048526857866213,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L4.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377715,
+        "ctime_ns": 1785048534834287033,
+        "device": 66306,
+        "inode": 55716266,
+        "mtime_ns": 1785048534834287033,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L1_to_L6.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377722,
+        "ctime_ns": 1785048552123568975,
+        "device": 66306,
+        "inode": 55716276,
+        "mtime_ns": 1785048552123568975,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L2_to_L8.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377851,
+        "ctime_ns": 1785048553022462003,
+        "device": 66306,
+        "inode": 55716284,
+        "mtime_ns": 1785048553022462003,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L4_to_L8.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377588,
+        "ctime_ns": 1785048553469764168,
+        "device": 66306,
+        "inode": 55716288,
+        "mtime_ns": 1785048553469764168,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/transfer_0_L2_to_L7.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377819,
+        "ctime_ns": 1785048552909002222,
+        "device": 66306,
+        "inode": 55716283,
+        "mtime_ns": 1785048552909002222,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/huginn_probe_v3_20260726/predictions/refit_0_L7.json",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 377668,
+        "ctime_ns": 1785048547270677725,
+        "device": 66306,
+        "inode": 55716269,
+        "mtime_ns": 1785048547270677725,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/v3_overnight_20260726_logs/huginn_stats.log",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 77,
+        "ctime_ns": 1785048564237780241,
+        "device": 66306,
+        "inode": 55716290,
+        "mtime_ns": 1785048564237780241,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/v3_overnight_20260726_logs/huginn_traineval.log",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 2158,
+        "ctime_ns": 1785048561695492091,
+        "device": 66306,
+        "inode": 55716262,
+        "mtime_ns": 1785048561695492091,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/v3_overnight_20260726_logs/huginn_prep.log",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 81,
+        "ctime_ns": 1785046848315587296,
+        "device": 66306,
+        "inode": 55716230,
+        "mtime_ns": 1785046848315587296,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/reports/v3_overnight_20260726_logs/huginn_extract.log",
+      "relevance": "older July feature/probe project; not September N100 derivative contributions",
+      "stat": {
+        "bytes": 2701,
+        "ctime_ns": 1785048514540949430,
+        "device": 66306,
+        "inode": 55716231,
+        "mtime_ns": 1785048514540949430,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/model-00002-of-00004.safetensors",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/44bac332b204abb687b2820eb0fadcb5795fdb0cfc06b3b6f2ac5241eec5c591"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/config.json",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/f448f9b60b283751af64243818b5965d1cd7ab8c"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/model-00001-of-00004.safetensors",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/5b461584b74249e87eabec34b59a13e188791dd8a7ccf2c7be95bb7fa8383e43"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/tokenizer_config.json",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/33657b7f5efddc9b9a71ce613d42b58cbad23306"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_config_minimal.py",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/3d02eb20e5e248bd3edfe2454bde0e4d448aaffe"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/.gitattributes",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/7f696e74b8b415ee9d4ea8742fb061ff1517a64f"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/model.safetensors.index.json",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/7dd127c3bcb85de38c60a4c13e1a687e340b4450"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/model-00004-of-00004.safetensors",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/40ce4f159938857dbbfa1020962045e1b96303ff902cfa76051ce54d2d51dea4"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/model-00003-of-00004.safetensors",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/07160dce9da01918d0b0bf2159ffe11d007e1fbe661d687ad4a7b0e65bde4e84"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/README.md",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/bdd81dab215385b4d21839d948a29a2f8118fd21"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/special_tokens_map.json",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/68ea7550618dcfd65a1faf6fdfb37336eeaa96f1"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/asset2.jpeg",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/9e7d383c4d5eb27dad02a4d8f19f476055935d85"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/d57a41491acf24701e59b449fc457467d8b10c20"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/generation_config.json",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/5d625768ec0e6f0b4aacd266ca3fc0ed8a930cd5"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/tokenizer.json",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/ba898bc0ca9d948ef26ad339d5bf041b2de604ef"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c/asset1.gif",
+      "relevance": "model/tokenizer snapshot link; not an N100 fitted Jacobian input",
+      "symlink_target": "../../blobs/061ce8c13c7f0151ae0ae0287dc372f1f85a9a92951944ada57a85ea0936b586"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/refs/main",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 40,
+        "ctime_ns": 1785024217987830821,
+        "device": 66306,
+        "inode": 55715959,
+        "mtime_ns": 1785024217987830821,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/5b461584b74249e87eabec34b59a13e188791dd8a7ccf2c7be95bb7fa8383e43",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 4771970936,
+        "ctime_ns": 1785026652123933975,
+        "device": 66306,
+        "inode": 55715969,
+        "mtime_ns": 1785026652068640805,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/33657b7f5efddc9b9a71ce613d42b58cbad23306",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 6624,
+        "ctime_ns": 1785024218787450558,
+        "device": 66306,
+        "inode": 55715993,
+        "mtime_ns": 1785024218785636063,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/9e7d383c4d5eb27dad02a4d8f19f476055935d85",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 46921,
+        "ctime_ns": 1785024218251435015,
+        "device": 66306,
+        "inode": 55715977,
+        "mtime_ns": 1785024218249632523,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/7f696e74b8b415ee9d4ea8742fb061ff1517a64f",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 1566,
+        "ctime_ns": 1785024218386091458,
+        "device": 66306,
+        "inode": 55715979,
+        "mtime_ns": 1785024218384633415,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/07160dce9da01918d0b0bf2159ffe11d007e1fbe661d687ad4a7b0e65bde4e84",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 4744737616,
+        "ctime_ns": 1785026795862873429,
+        "device": 66306,
+        "inode": 55715981,
+        "mtime_ns": 1785026795600583856,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/d57a41491acf24701e59b449fc457467d8b10c20",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 88021,
+        "ctime_ns": 1785024218588696712,
+        "device": 66306,
+        "inode": 55715989,
+        "mtime_ns": 1785024218586634749,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/061ce8c13c7f0151ae0ae0287dc372f1f85a9a92951944ada57a85ea0936b586",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 3015077,
+        "ctime_ns": 1785024220032432445,
+        "device": 66306,
+        "inode": 55715965,
+        "mtime_ns": 1785024220029644280,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/7dd127c3bcb85de38c60a4c13e1a687e340b4450",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 6188,
+        "ctime_ns": 1785024218588276886,
+        "device": 66306,
+        "inode": 55715985,
+        "mtime_ns": 1785024218586634749,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/bdd81dab215385b4d21839d948a29a2f8118fd21",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 13691,
+        "ctime_ns": 1785024218339449884,
+        "device": 66306,
+        "inode": 55715972,
+        "mtime_ns": 1785024218337633104,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/44bac332b204abb687b2820eb0fadcb5795fdb0cfc06b3b6f2ac5241eec5c591",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 4744780096,
+        "ctime_ns": 1785026415606087122,
+        "device": 66306,
+        "inode": 55715967,
+        "mtime_ns": 1785026415554086780,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/ba898bc0ca9d948ef26ad339d5bf041b2de604ef",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 2726482,
+        "ctime_ns": 1785024218956030482,
+        "device": 66306,
+        "inode": 55715995,
+        "mtime_ns": 1785024218954637180,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/68ea7550618dcfd65a1faf6fdfb37336eeaa96f1",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 435,
+        "ctime_ns": 1785024218851556638,
+        "device": 66306,
+        "inode": 55715991,
+        "mtime_ns": 1785024218850636492,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/3d02eb20e5e248bd3edfe2454bde0e4d448aaffe",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 3913,
+        "ctime_ns": 1785024218540881448,
+        "device": 66306,
+        "inode": 55715987,
+        "mtime_ns": 1785024218539634438,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/5d625768ec0e6f0b4aacd266ca3fc0ed8a930cd5",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 178,
+        "ctime_ns": 1785024218233886160,
+        "device": 66306,
+        "inode": 55715975,
+        "mtime_ns": 1785024218232632411,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/f448f9b60b283751af64243818b5965d1cd7ab8c",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 1447,
+        "ctime_ns": 1785024218262276108,
+        "device": 66306,
+        "inode": 55715974,
+        "mtime_ns": 1785024218260632595,
+        "nlink": 1
+      }
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--tomg-group-umd--huginn-0125/blobs/40ce4f159938857dbbfa1020962045e1b96303ff902cfa76051ce54d2d51dea4",
+      "relevance": "inspected path; no September N100 estimator reconstruction input",
+      "stat": {
+        "bytes": 1384120448,
+        "ctime_ns": 1785025119821593893,
+        "device": 66306,
+        "inode": 55715982,
+        "mtime_ns": 1785025119780570631,
+        "nlink": 1
+      }
+    }
+  ],
+  "external_search_exclusions": [
+    "venv",
+    ".venv",
+    ".git",
+    "node_modules",
+    "symlink directories"
+  ],
+  "external_search_roots": [
+    "/tmp",
+    "/home/moloch/ouro_project"
+  ],
+  "files": {
+    "COMPLETE.json": {
+      "actual": {
+        "bytes": 369,
+        "sha256": "2df1d30d0563b9d1d94ad9902a9bd75eb4d5013da4a8648fb14d4bd1a1ef7e54",
+        "stat_after": {
+          "bytes": 369,
+          "ctime_ns": 1788968069499016912,
+          "device": 66306,
+          "inode": 57452979,
+          "mtime_ns": 1788967896966339401,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 369,
+          "ctime_ns": 1788968069499016912,
+          "device": 66306,
+          "inode": 57452979,
+          "mtime_ns": 1788967896966339401,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 369,
+        "sha256": "2df1d30d0563b9d1d94ad9902a9bd75eb4d5013da4a8648fb14d4bd1a1ef7e54"
+      },
+      "status": "authenticated"
+    },
+    "LATEST.json": {
+      "actual": {
+        "bytes": 380,
+        "sha256": "8e885c84a1b26208fe408ad1ca023b9b6c4ecf210c5698de00bbba8bc16e58e4",
+        "stat_after": {
+          "bytes": 380,
+          "ctime_ns": 1788968069499053492,
+          "device": 66306,
+          "inode": 57452980,
+          "mtime_ns": 1788967890923403365,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 380,
+          "ctime_ns": 1788968069499053492,
+          "device": 66306,
+          "inode": 57452980,
+          "mtime_ns": 1788967890923403365,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 380,
+        "sha256": "8e885c84a1b26208fe408ad1ca023b9b6c4ecf210c5698de00bbba8bc16e58e4"
+      },
+      "status": "authenticated"
+    },
+    "OWNER.json": {
+      "actual": {
+        "bytes": 48186,
+        "sha256": "b383c0ac87f98eb6368860d3a28b3ec46ac1ab4c6a6bf2e446fda0176c1ac414",
+        "stat_after": {
+          "bytes": 48186,
+          "ctime_ns": 1788968069513007435,
+          "device": 66306,
+          "inode": 57452981,
+          "mtime_ns": 1788954972563430101,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 48186,
+          "ctime_ns": 1788968069513007435,
+          "device": 66306,
+          "inode": 57452981,
+          "mtime_ns": 1788954972563430101,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "expected": {
+        "bytes": 48186,
+        "sha256": "b383c0ac87f98eb6368860d3a28b3ec46ac1ab4c6a6bf2e446fda0176c1ac414"
+      },
+      "status": "authenticated"
+    },
+    "checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/SEAL.json": {
+      "actual": {
+        "bytes": 370,
+        "sha256": "c1eb31cb461bf7d39532717371ef486f59727b1869353ce34326cdd2e7e5a538",
+        "stat_after": {
+          "bytes": 370,
+          "ctime_ns": 1788968069513079052,
+          "device": 66306,
+          "inode": 57452982,
+          "mtime_ns": 1788967890922403375,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 370,
+          "ctime_ns": 1788968069513079052,
+          "device": 66306,
+          "inode": 57452982,
+          "mtime_ns": 1788967890922403375,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "status": "authenticated"
+    },
+    "checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/metadata.json": {
+      "actual": {
+        "bytes": 165732,
+        "sha256": "50d7504743f182bda285ebbd10d19e664030dd9743d873617a6a67659bc79a6f",
+        "stat_after": {
+          "bytes": 165732,
+          "ctime_ns": 1788968069638161135,
+          "device": 66306,
+          "inode": 57452983,
+          "mtime_ns": 1788967890912403481,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 165732,
+          "ctime_ns": 1788968069638161135,
+          "device": 66306,
+          "inode": 57452983,
+          "mtime_ns": 1788967890912403481,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "status": "authenticated"
+    },
+    "final/cursor_000100_7983035296a54ff2978742466ac3631e/SEAL.json": {
+      "status": "absent"
+    },
+    "final/cursor_000100_7983035296a54ff2978742466ac3631e/lens.pt": {
+      "status": "absent"
+    },
+    "final/cursor_000100_7983035296a54ff2978742466ac3631e/metadata.json": {
+      "status": "absent"
+    }
+  },
+  "fit_identity_sha256": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b",
+  "known_partial": {
+    "actual": {
+      "bytes": 1745780736,
+      "sha256": "099a99fd3b1aba3ac06112411ec06d5aac5ce423f245c3cd64835150bc890473",
+      "stat_after": {
+        "bytes": 1745780736,
+        "ctime_ns": 1788968609375433472,
+        "device": 66306,
+        "inode": 57452984,
+        "mtime_ns": 520439385,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 1745780736,
+        "ctime_ns": 1788968609375433472,
+        "device": 66306,
+        "inode": 57452984,
+        "mtime_ns": 520439385,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "deserialized": false,
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt",
+    "status": "truncated"
+  },
+  "missing_checkpoint_bytes": 1822663683,
+  "new_readout_outcomes": false,
+  "partial_deserialized": false,
+  "prior_review": {
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/huginn_run01_review/actual_huginn_surviving_fit_review.json",
+    "record": {
+      "bytes": 37567,
+      "sha256": "0108eed3ce17fbd799c3f80c32f4ef2046cb9292bd9f69473e9aad91dbdc7cbd",
+      "stat_after": {
+        "bytes": 37567,
+        "ctime_ns": 1788969387460425485,
+        "device": 66306,
+        "inode": 58488756,
+        "mtime_ns": 1788969065047911911,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 37567,
+        "ctime_ns": 1788969387460425485,
+        "device": 66306,
+        "inode": 58488756,
+        "mtime_ns": 1788969065047911911,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    }
+  },
+  "reconstruction_decision": "No sufficient retained inputs found. No full final bank, full FP32 sum, earlier September checkpoint, or per-paragraph derivative bank survives in searched locations. Saved evaluations and July feature caches do not supply missing derivative matrices.",
+  "recorded_utc": "2026-09-09T21:06:20.707400+00:00",
+  "remote_access": false,
+  "retained_archives": [
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md"
+      ],
+      "member_count": 55,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v2.tar.gz",
+      "stat": {
+        "bytes": 415336,
+        "ctime_ns": 1788861139875934000,
+        "device": 66306,
+        "inode": 55472232,
+        "mtime_ns": 1788861139875934000,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/fresh_huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_evaluator_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_output_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_owner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_runner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py"
+      ],
+      "member_count": 109,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v7.tar.gz",
+      "stat": {
+        "bytes": 640615,
+        "ctime_ns": 1788898856938627469,
+        "device": 66306,
+        "inode": 55472362,
+        "mtime_ns": 1788898856938627469,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/fresh_huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_evaluator_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_output_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_owner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_runner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py"
+      ],
+      "member_count": 106,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v5.tar.gz",
+      "stat": {
+        "bytes": 635620,
+        "ctime_ns": 1788889636218369405,
+        "device": 66306,
+        "inode": 55472351,
+        "mtime_ns": 1788889636218369405,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/fresh_huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_evaluator_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_output_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_owner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_runner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py"
+      ],
+      "member_count": 108,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v6.tar.gz",
+      "stat": {
+        "bytes": 638345,
+        "ctime_ns": 1788897780534176792,
+        "device": 66306,
+        "inode": 55472358,
+        "mtime_ns": 1788897780534176792,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/fresh_huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_evaluator_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_output_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_owner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_runner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py"
+      ],
+      "member_count": 105,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v4.tar.gz",
+      "stat": {
+        "bytes": 634492,
+        "ctime_ns": 1788889310190388073,
+        "device": 66306,
+        "inode": 55472322,
+        "mtime_ns": 1788889310190388073,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/fresh_huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_evaluator_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_output_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_owner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_runner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py"
+      ],
+      "member_count": 110,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v8.tar.gz",
+      "stat": {
+        "bytes": 643407,
+        "ctime_ns": 1788899702702647745,
+        "device": 66306,
+        "inode": 55472366,
+        "mtime_ns": 1788899702702647745,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md"
+      ],
+      "member_count": 41,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources.tar.gz",
+      "stat": {
+        "bytes": 366306,
+        "ctime_ns": 1788858880695269497,
+        "device": 66306,
+        "inode": 55472193,
+        "mtime_ns": 1788858880695269497,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [
+        "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/fresh_huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_evaluator_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_output_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_owner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_runner_cpu_v1.json",
+        "jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py"
+      ],
+      "member_count": 103,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/ouro_sources_v3.tar.gz",
+      "stat": {
+        "bytes": 630571,
+        "ctime_ns": 1788888439559574092,
+        "device": 66306,
+        "inode": 55472338,
+        "mtime_ns": 1788888439559574092,
+        "nlink": 1
+      }
+    },
+    {
+      "candidate_members": [],
+      "member_count": 6,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/probe_extension/payload.tar.gz",
+      "stat": {
+        "bytes": 54178,
+        "ctime_ns": 1788906158293038160,
+        "device": 66306,
+        "inode": 55723337,
+        "mtime_ns": 1788906158293038160,
+        "nlink": 1
+      }
+    }
+  ],
+  "schema": "confirmation_huginn_retention.v1",
+  "status": "metadata_authenticated_bank_unrecoverable"
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "confirmation_parallel_upload_independent_review.v2",
+  "status": "passed",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "new_confirmation_results_exposed": false,
+  "helper_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py",
+  "helper_record": {
+    "bytes": 35465,
+    "sha256": "512946233e308a7918f1871eff88beca049afcf733d2382a0efc12cbab8ec2f4"
+  },
+  "independent_proof_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_proof.json",
+  "independent_proof_record": {
+    "bytes": 9437,
+    "sha256": "0fdee772b68c0f44242a44f9ea1b6ce9b5f97de36ca7c71e314d0f5a0ee0e887"
+  },
+  "self_tests_passed": 16,
+  "additional_independent_regressions_passed": 4,
+  "unresolved_findings": [],
+  "resolved_findings": [
+    {
+      "id": "UPLOAD-01",
+      "status": "resolved_in_current_revision",
+      "severity": "blocks_helper_use",
+      "source": "resources/parallel_upload.py:Processes.run/cancel",
+      "trigger": "Pause transport.run_bounded after Processes.run has checked stop but before the process is registered; call cancel once, then resume process creation.",
+      "observed": "The child started after cancellation and remained active until a second cancellation. A single cancellation can therefore miss a later registered SSH/rsync child and wait for its long original timeout.",
+      "expected": "Synchronize cancellation with registration or make later registration immediately terminate/reap the child; retain prompt process-group cleanup on one cancellation.",
+      "evidence": {
+        "process_started_after_cancel": true,
+        "future_done_after_first_cancel": false,
+        "active_record_count_before_second_cancel": 1,
+        "cleanup_after_second_cancel": true,
+        "temporary_fixture": "/tmp/parallel-cancel-review-y7rnl5p1"
+      },
+      "rejected_helper_record": {
+        "bytes": 29394,
+        "sha256": "3a2fcafd0bd29cfa1a806f9013e5169ef43b24da50bbe5f0e2969ff141ea4125"
+      }
+    },
+    {
+      "id": "UPLOAD-02",
+      "status": "resolved_in_current_revision",
+      "severity": "blocks_helper_use",
+      "source": "resources/parallel_upload.py:REMOTE_PROGRAM.hash_file",
+      "trigger": "Swap the banks parent directory only while Path.open acquires the file, restore the original directory before the read, and leave the bad canonical file metadata unchanged.",
+      "observed": "The helper hashes a different good inode, then sees unchanged pre/post path stats for the bad canonical inode and reports already_complete=true.",
+      "expected": "Compare fstat of the opened descriptor with the pre-open identity and check both descriptor/path stability after reading; apply corresponding descriptor checks to chunk reads and assembly publication.",
+      "evidence": {
+        "unexpectedly_accepted": true,
+        "remote_result": {
+          "already_complete": true
+        },
+        "actual_canonical_record": {
+          "bytes": 720,
+          "sha256": "0792609617ec036ac9bc279063995a36f601e5e1770dc2916ed50c0f091e2304"
+        },
+        "required_bank_record": {
+          "bytes": 720,
+          "sha256": "57a138ae70939c50215afb4d88572f4011809d93b317bef2fcf5b1f6c57ba142"
+        },
+        "temporary_fixture": "/tmp/parallel-open-review-xbl4txux"
+      },
+      "rejected_helper_record": {
+        "bytes": 29394,
+        "sha256": "3a2fcafd0bd29cfa1a806f9013e5169ef43b24da50bbe5f0e2969ff141ea4125"
+      }
+    },
+    {
+      "id": "UPLOAD-03",
+      "status": "resolved_in_current_revision",
+      "severity_when_observed": "blocks_helper_use",
+      "rejected_helper_record": {
+        "bytes": 34551,
+        "sha256": "ae921721ba11b1df81259eab2a38493fea3f3a4dea70fd3999d36463be9ba951"
+      },
+      "trigger": "Cancel a child after it signals readiness and installs a SIGTERM-ignoring handler.",
+      "observed": "With SIGTERM-only cancellation the child remained active and the future incomplete after 0.3 seconds; manual SIGKILL was needed for the review fixture.",
+      "evidence": {
+        "temporary_fixture": "/tmp/parallel-term-review-eg5iowrx",
+        "future_active_after_cancel_seconds": 0.3,
+        "nonquiescent_record_count": 1,
+        "manual_SIGKILL_cleanup_passed": true
+      },
+      "resolution": "The revised cancellation path immediately sends SIGKILL to its owned process groups, including late registrations, and original transport cleanup proves quiescence."
+    }
+  ],
+  "prior_rejected_records": [
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_review_rejected_v1.json",
+      "record": {
+        "bytes": 4501,
+        "sha256": "1aca704607d3fd0ef33f6ed18145dcf5e61bd3c36fdf866e75d0e898b6c9a6d1"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_review_rejected_v1.md",
+      "record": {
+        "bytes": 1630,
+        "sha256": "6062d904edebd92a69fdd0e16f13c07fa029431ca5b2575c02e2543f6d204e43"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_proof_rejected_v1.json",
+      "record": {
+        "bytes": 4770,
+        "sha256": "ce47bc4c28db0a6113b0f081e4c8870a4585d6281c591dcdc6c8837105f89e05"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_additional_rejection_v2.json",
+      "record": {
+        "bytes": 1190,
+        "sha256": "c4d1de18f3ac66edff6f58572ce562e1863c96ad5b6c8f99332ccf0dc785aa6f"
+      }
+    }
+  ],
+  "retry_plan_checks": {
+    "status": "passed",
+    "original_freeze_record": {
+      "bytes": 7279,
+      "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7"
+    },
+    "retry_plan_record": {
+      "bytes": 1311,
+      "sha256": "a3d5cab1febdc5202defe64fbdc7a5680552322e7eccf33ba1c0e33621deaab1"
+    },
+    "retry_run_config_record": {
+      "bytes": 778,
+      "sha256": "fe81ddeea1f9e939d221a14d97ebbcb7a5f19abad1c2df8edc11929e7e0c28c6"
+    },
+    "first_attempt_terminal_record": {
+      "bytes": 6187,
+      "sha256": "2a1a9a21645f724a3800798d81c6eb5e838f32bc3b696b974d364d19f9f6b623"
+    },
+    "first_attempt_absence_confirmations": 3,
+    "first_attempt_spend_upper_usd": 0.22588409273346807,
+    "retry_job_cap_usd": 3.77,
+    "retry_declared_cost_usd": 3.741061643835616,
+    "aggregate_primary_declared_cost_usd": 3.9669457365690843,
+    "aggregate_primary_maximum_cost_from_job_caps_usd": 3.9958840927334682,
+    "only_run_config_change": "setup_budget_seconds:3600 to12300",
+    "scientific_spec_bundle_and_controller_unchanged": true
+  },
+  "verified_invariants": [
+    "Four exact frozen estimator bank destinations; whole-bank SHA-256, ordered chunk hashes and byte counts, descriptor/path identity, durable atomic publication and source mtime preservation.",
+    "Fixed lease identity, owned SSH marker, STOP, immutable setup/work deadlines, setup reserve, bounded 8-stream subprocesses and single-cancel process-group cleanup including late registration and TERM-ignoring descendants.",
+    "Original pinned controller, launcher, scientific spec and bundle remain unchanged; the helper only pre-stages bank inputs before the original launcher and gates."
+  ],
+  "scope": "Accepted for the reviewed operational pre-staging helper and the prospective retry resource calculation only. Original controller admission, independent watcher, native development acceptance, frozen scientific worker, receiving validation and termination remain mandatory. This review does not certify a future paid run or acceptance outcome.",
+  "recorded_at_utc": "2026-09-09T23:19:03.002574+00:00"
+}

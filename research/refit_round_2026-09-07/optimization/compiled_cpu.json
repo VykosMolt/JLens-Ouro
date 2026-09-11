@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "torch": "2.12.0.dev20260407+cu128",
+  "source_sha256": "44ff479e9c2fc79418b218aa10aa3ca1b7842573172e23e269508a5848f4a521",
+  "note": "GPU use requires an explicit caller invocation; default execution does not fit or compile",
+  "cpu_check": {
+    "status": "passed",
+    "scope": "CPU float64 causal model only",
+    "cuda_initialized": false,
+    "config_restored": true,
+    "fresh_primals": [
+      {
+        "backend": "inductor",
+        "target_shape": [
+          2,
+          5,
+          3
+        ],
+        "n_sources": 3,
+        "dtype": "torch.float64",
+        "device": "cpu",
+        "is_grads_batched": false,
+        "n_valid": 3,
+        "dim_batch": 2,
+        "parity_atol": 1e-10,
+        "parity_rtol": 1e-10,
+        "graphs_added": [
+          {
+            "nodes": 199
+          }
+        ],
+        "total_graphs_captured": 1,
+        "eager_seconds_per_pass": 0.00026120766657792654,
+        "first_compiled_call_seconds": 3.964109524000378,
+        "compiled_seconds_per_pass": 0.0003320460000395542,
+        "estimated_first_call_overhead_seconds": 3.9637774780003383,
+        "parity": [
+          {
+            "dim_start": 0,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          },
+          {
+            "dim_start": 1,
+            "n_dims": 2,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          },
+          {
+            "dim_start": 2,
+            "n_dims": 1,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          },
+          {
+            "dim_start": 0,
+            "n_dims": 2,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          }
+        ],
+        "zero_after_nonzero": {
+          "finite": true,
+          "bitwise_equal": true,
+          "within_tolerance": true,
+          "max_abs": 0.0,
+          "relative_frobenius": 0.0,
+          "all_zero": true
+        },
+        "estimated_100_prompt_backward_seconds_if_cache_reused": 4.030186678008249,
+        "estimated_100_prompt_eager_backward_seconds": 0.05224153331558531,
+        "projection_excludes": "forward, model load, checkpoint I/O; assumes unchanged graph/shape and reusable compiler cache",
+        "status": "passed",
+        "prompt": "abcd"
+      },
+      {
+        "backend": "inductor",
+        "target_shape": [
+          2,
+          5,
+          3
+        ],
+        "n_sources": 3,
+        "dtype": "torch.float64",
+        "device": "cpu",
+        "is_grads_batched": false,
+        "n_valid": 3,
+        "dim_batch": 2,
+        "parity_atol": 1e-10,
+        "parity_rtol": 1e-10,
+        "graphs_added": [],
+        "total_graphs_captured": 1,
+        "eager_seconds_per_pass": 0.0002423103330026303,
+        "first_compiled_call_seconds": 0.0003299089985375758,
+        "compiled_seconds_per_pass": 0.00031144133329992957,
+        "estimated_first_call_overhead_seconds": 1.8467665237646258e-05,
+        "parity": [
+          {
+            "dim_start": 0,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          },
+          {
+            "dim_start": 1,
+            "n_dims": 2,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          },
+          {
+            "dim_start": 2,
+            "n_dims": 1,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          },
+          {
+            "dim_start": 0,
+            "n_dims": 2,
+            "finite": true,
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs": 0.0,
+            "relative_frobenius": 0.0
+          }
+        ],
+        "zero_after_nonzero": {
+          "finite": true,
+          "bitwise_equal": true,
+          "within_tolerance": true,
+          "max_abs": 0.0,
+          "relative_frobenius": 0.0,
+          "all_zero": true
+        },
+        "estimated_100_prompt_backward_seconds_if_cache_reused": 0.06230673432522356,
+        "estimated_100_prompt_eager_backward_seconds": 0.04846206660052606,
+        "projection_excludes": "forward, model load, checkpoint I/O; assumes unchanged graph/shape and reusable compiler cache",
+        "status": "passed",
+        "prompt": "pqrs"
+      }
+    ]
+  }
+}

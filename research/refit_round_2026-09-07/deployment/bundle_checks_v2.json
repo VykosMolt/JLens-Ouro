@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "runner_sha256": "f8c49c48f442d8d9df9a5f05c5b8ac229e7a76080c5791aedd2cfb949282d1cb",
+  "runner_cpu_cases": 23,
+  "cli_cases": 11,
+  "extracted_bundle_plan_passed": true,
+  "plan_used_python_no_site": true,
+  "readme_local_links_resolve": true,
+  "model_operations": 0,
+  "cloud_operations": 0
+}

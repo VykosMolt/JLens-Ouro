@@ -1,0 +1,1 @@
+raise RuntimeError("must not execute altered primary source")

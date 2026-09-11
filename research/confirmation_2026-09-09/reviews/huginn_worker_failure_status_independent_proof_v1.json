@@ -1,0 +1,35 @@
+{
+  "schema": "H_worker_failure_status_independent.v1",
+  "status": "passed",
+  "worker_record": {
+    "bytes": 10923,
+    "sha256": "3ed339263cf128a29a71a23124b4ab69d368037f53596d76f405136579dcbadb"
+  },
+  "export_fit_record": {
+    "bytes": 6195,
+    "sha256": "7c10cdc444b04abe7cccb9907bbb011a427de6d6616a5cba64580c2b93cf7e91"
+  },
+  "cases": [
+    {
+      "case": "actual_failed_child_and_failed_log_copy_keep_original_exception",
+      "status": "passed",
+      "original_failure": "native_gate exited7; inspect child log",
+      "recovery_error": [
+        {
+          "error": "[Errno 17] File exists: '/tmp/h-worker-failure-status-independent-m2nbbpyu/work/results/logs/.native_gate.log.b395fhkh' -> '/tmp/h-worker-failure-status-independent-m2nbbpyu/work/results/logs/native_gate.log'",
+          "error_type": "FileExistsError",
+          "label": "native_gate",
+          "operation": "copy_child_log"
+        }
+      ]
+    },
+    {
+      "case": "actual_controller_remember_worker_status_persists_cleanup_and_recovery_diagnostics",
+      "status": "passed"
+    }
+  ],
+  "temporary_root": "/tmp/h-worker-failure-status-independent-m2nbbpyu",
+  "fixture_setup_note": "The first controller persistence call omitted required fixture rate fields and raised KeyError before writing. The fixture was completed with the real controller rate constants, then the unchanged persistence function passed. Worker execution itself passed before this fixture correction.",
+  "no_cloud_or_ssh": true,
+  "no_model_or_confirmation_results": true
+}

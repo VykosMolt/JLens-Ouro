@@ -1,0 +1,48 @@
+{
+  "schema": "independent_huginn_auditor_synthetic_proof.v1",
+  "status": "passed",
+  "checks": [
+    "frozen metadata population only: 139 eligible items",
+    "all own names excluded from controls",
+    "recorded leakage independently recomputed",
+    "slot averages preserve item weights",
+    "any event per own/control name before means",
+    "matched-control denominator and signed excess",
+    "ineligible stored items remain zero and masked",
+    "negative eligible rank cannot become hit or denominator miss",
+    "unequal component sizes use item-weighted ratio means",
+    "normalized shared concepts connect transitively",
+    "both native geometries, original masks and identical aliases accepted",
+    "unsupported interior catalogue gap rejected",
+    "out-of-vocabulary supported rank rejected",
+    "top1 dtype mismatch rejected",
+    "identical token-form alias rank inconsistency rejected",
+    "three scalars use191 learned Ouro sources and average scored seeds",
+    "task item means exclude nine masked rows",
+    "seed average does not union recovery events",
+    "joint component counts and exact full archive membership",
+    "six-family simultaneous radius matches direct one-item bootstrap",
+    "percentile intervals match direct draw counts",
+    "all four physical blocks retain eight-pass means",
+    "native comparisons stay within model vocabulary and trajectory",
+    "pre-outcome ten-item random sample",
+    "readout failures require misses in both seeds",
+    "empty failure pools remain explicitly empty",
+    "complete ordered CSV geometry and endpoint labels",
+    "twelve-seed family rejected by output comparison",
+    "nonfinite report values rejected"
+  ],
+  "helper": {
+    "bytes": 40062,
+    "sha256": "97ace9daf13fbdbb4c1c4c5733b16d5a0fd769e9ff1ce5bd4037cd425da947b3"
+  },
+  "proof_source": {
+    "bytes": 11212,
+    "sha256": "a3676b1533e98f210fc71b49774cec904a83427c108f09a0986a72eae177aedf"
+  },
+  "frozen_eligibility": {
+    "bytes": 165311,
+    "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+  },
+  "scope": "Synthetic rank/top1 arrays and frozen pre-outcome population metadata only; no actual or historical scores, no network/GPU/inference; no frozen scoring/aggregation/bootstrap/example functions invoked."
+}

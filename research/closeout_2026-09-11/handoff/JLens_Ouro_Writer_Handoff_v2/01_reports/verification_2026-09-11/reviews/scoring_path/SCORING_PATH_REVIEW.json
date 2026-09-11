@@ -1,0 +1,572 @@
+{
+  "schema": "scoring_path_review.v1",
+  "date": "2026-09-11",
+  "run_id": "ouro_confirmation_20260911_fixed160_native1",
+  "mode": "read-only; CPU only; no model forward; no GPU; no network",
+  "paths": {
+    "R": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09",
+    "B": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/native_check_v1/bundle",
+    "ACC": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results",
+    "analysis": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/results/ouro_confirmation_20260911_fixed160_native1/analysis/analysis.json",
+    "model_source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/model_snapshot/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py"
+  },
+  "identity_checks": {
+    "bundle_sources_match_run_spec_pins": "50/50",
+    "provenance_worker_and_imported_modules_match_pins": true,
+    "model_source_hashes_match_manifest": true,
+    "accepted_stage_and_final_files_rehash_to_manifests": "8/8 directories, 0 mismatches; stage records equal final",
+    "bank_receiver_files_rehash_to_run_spec": "5/5 records (4 files)",
+    "receipt_verifier_equals_bundle_validate_outputs": true,
+    "plan_copies_identical": true,
+    "runtime": {
+      "gpu": "NVIDIA GeForce RTX 5090 (12.0)",
+      "torch": "2.12.0.dev20260407+cu128",
+      "transformers": "4.54.1",
+      "kernels_installed": false,
+      "attention": "sdpa"
+    }
+  },
+  "q1_per_arm": {
+    "hidden_states": {
+      "function": "evaluate.cache_states per item (worker.py:122-126; evaluate.py:478-488)",
+      "capture": "LoopTap filtered forward hook on physical block output (recurrent.py:73-78; hooks.py:49-54; modeling_ouro.py:423); pre-final-norm (modeling_ouro.py:606)",
+      "position": "-1 of readout context = common prefix encode(prompt)/encode(prompt+target), BOS prepended (evaldata.py:96-103; recurrent.py:114-117)",
+      "compute": "BF16 weights, CUDA, SDPA, batch 1, use_cache=False (evaluate_refits.py:612,615-619,627-629; hf.py:163-164)",
+      "stored": "H [160,192,2048] float32 CPU; bitwise BF16-representable (measured)"
+    },
+    "arms": {
+      "raw": {
+        "bank": null,
+        "J": null,
+        "transport": "h (evaluate.py:549)",
+        "rows_per_call": 192,
+        "identity_rows": []
+      },
+      "fit01": {
+        "bank_file": "banks/fit01.pt",
+        "key": "state['J']",
+        "keys_present": "0-190 FP16",
+        "target": 191,
+        "rows_per_call": 192,
+        "identity_rows": [
+          191
+        ]
+      },
+      "fit02": {
+        "bank_file": "banks/fit02.pt",
+        "key": "state['J']",
+        "keys_present": "0-190 FP16",
+        "target": 191,
+        "rows_per_call": 192,
+        "identity_rows": [
+          191
+        ]
+      },
+      "penultimate": {
+        "bank_file": "banks/penultimate.pt",
+        "key": "state['J']",
+        "keys_present": "0-189 FP16",
+        "target": 190,
+        "rows_per_call": 190,
+        "identity_rows": []
+      },
+      "sampled_sum": {
+        "bank_file": "banks/positions.pt",
+        "key": "state['J']['sampled_sum']",
+        "keys_present": "0-190 FP16",
+        "target": 191,
+        "rows_per_call": 191,
+        "identity_rows": []
+      },
+      "diagonal": {
+        "bank_file": "banks/positions.pt",
+        "key": "state['J']['diagonal']",
+        "keys_present": "0-190 FP16",
+        "target": 191,
+        "rows_per_call": 191,
+        "identity_rows": []
+      }
+    },
+    "bank_casts": [
+      "torch.load cpu mmap weights_only -> FP16 CPU (worker.py:134)",
+      "J.float() -> FP32 CPU (lens.py:40)",
+      "eye(2048).repeat(192) FP32 CPU, fill, .to(cuda) (evaluate.py:600-606)",
+      "slice to target (evaluate_refits.py:297-299)",
+      "slice [:columns] (worker.py:139)"
+    ],
+    "transport": {
+      "op": "torch.einsum('vde,ve->vd', J, h) FP32 CUDA, one call per item over C columns (evaluate.py:548-549)",
+      "batched_matmul_lowering": "inference",
+      "precision": {
+        "float32_matmul_precision": "highest",
+        "matmul.allow_tf32": false,
+        "matmul.fp32_precision": "none",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "deterministic_algorithms": false,
+        "recorded": "once at model load (evaluate_refits.py:631; worker.py:74-75; run_spec.json:1249-1297); no setters in executed code"
+      }
+    },
+    "unembedding": {
+      "path": "lm_head(final_norm(x.to(bf16).to(cuda))) (hf.py:166-174)",
+      "rmsnorm": "BF16 -> float32 -> rsqrt(mean sq + 1e-6) -> BF16 -> * BF16 weight (modeling_ouro.py:357-362); hub-kernel decorator inert without kernels",
+      "lm_head_dtype": "bfloat16, no bias, untied",
+      "softcap": null,
+      "input_shape": "2-D [C,2048], C=192/192/192/190/191/191",
+      "lens_arm_bf16_rounding": "fit01 item0 v170: 2048/2048 elements changed, max rel 0.37% (measured)",
+      "logits": ".float() of BF16 (evaluate.py:550); top-200 distinct-value gap up to 1/32 raw, 1/16 lens arms (measured)"
+    },
+    "ranking": {
+      "argsort": "single descending argsort over [C,49152] float32 (vis.py:119; chunk 256)",
+      "inverse": "scatter_ (vis.py:121)",
+      "alias_min": "evaluate.py:517",
+      "padding": "-1 to 128 names (evaluate.py:523-526,554)",
+      "tie_order": "ascending token ID in all 7,863,091 equal adjacent pairs (measured)",
+      "boundary_ties_pos9_pos10": "42/168 sample rows (measured)",
+      "top10_capture": "separate argsort of same tensor (readouts.py:18-19); runtime membership equivalence (readouts.py:38-42)",
+      "top1_vs_top10_first": "equal in 183,680/183,680 cells (measured)"
+    }
+  },
+  "q2_packing": {
+    "rows_per_unembed_call": {
+      "raw": 192,
+      "fit01": 192,
+      "fit02": 192,
+      "penultimate": 190,
+      "sampled_sum": 191,
+      "diagonal": 191
+    },
+    "primary_contrast_same_layout": true,
+    "historical_control_geometry_same": "evaluate_controls.py:370-380",
+    "virtual191_identity_fit01_fit02": {
+      "code": "evaluate.py:600-605",
+      "transported_equals_H_bitwise_items_0_2": true,
+      "column191_all_arrays_equal_raw_all_items": true
+    },
+    "unsupported_tails_change_packing": true,
+    "layout_evidence": {
+      "192_vs_160_rows_exit_rows_bitwise_equal": "items 0-2 at v47/95/143/191: 0 differing of 49,152 each; kl_to_final[:,191]==0 for 160/160 in raw/fit01/fit02",
+      "190_or_191_rows": "unmeasured; no retained row permits comparison"
+    }
+  },
+  "q3_exit_logits": {
+    "computation": "one unembed per ut on [160,2048] rows 47/95/143/191 (worker.py:127; recurrent.py:111-112); historical [148,2048] (evaluate_refits.py:672-675)",
+    "used_for": [
+      "kl_to_final",
+      "kl_to_local",
+      "rank_of_final_top1",
+      "rank_of_local_top1"
+    ],
+    "final_equals_local": "target_ut=3 (readouts.py:34; evaluate.py:551); arrays identical for all arms (measured)",
+    "affects_hit_at_10": false,
+    "affects_eligibility": false,
+    "citations": [
+      "evaluate.py:550-562",
+      "analyze.py:39-43",
+      "measurement.py:23-24",
+      "validate_outputs.py:78"
+    ]
+  },
+  "q4_score_definition": {
+    "matches_plan": true,
+    "intended": "min alias rank < 10 (evaluate.py:517; measurement.py:31) vs Plan:9",
+    "controls": "mean over 79 non-own names (measurement.py:28,32); population 80 names, 79 controls per row",
+    "aliases": "surface_forms x leading-space single-token (evaldata.py:50-67,86-93); forms per name {1:56,2:17,3:5,4:2}; no collisions",
+    "eligibility": "frozen rows; 160/160 eligible, one label each; leak check on readout context; retokenization shows no alias in dropped trailing space",
+    "aggregation": "/len(slots) within item; equal item mean (analyze.py:48); bootstrap ratio (analyze.py:28)",
+    "band": {
+      "zero_based_virtual": [
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180
+      ],
+      "zero_based_ut": 3,
+      "zero_based_physical": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "one_based_loop": 4,
+      "one_based_physical": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "code": "measurement.py:6",
+      "spec": "run_spec.json:1298-1314",
+      "plan": "Plan:11"
+    },
+    "fixed_vs_any_layer": "primary fixed-layer mean (measurement.py:35-39; analyze.py:47); any-layer only early_loop{1,2,3}_any_layer (measurement.py:46-47,63-73)",
+    "note": "fit01_final_third includes column 191 where fit01==raw (declared Plan:11)"
+  },
+  "q5_saved_checks": {
+    "validate_outputs": {
+      "sample_items": [
+        0,
+        1,
+        2
+      ],
+      "sample_layers": {
+        "raw": [
+          0,
+          47,
+          95,
+          143,
+          170,
+          176,
+          181,
+          189,
+          190,
+          191
+        ],
+        "fit01": [
+          0,
+          47,
+          95,
+          143,
+          170,
+          176,
+          181,
+          189,
+          190,
+          191
+        ],
+        "fit02": [
+          0,
+          47,
+          95,
+          143,
+          170,
+          176,
+          181,
+          189,
+          190,
+          191
+        ],
+        "penultimate": [
+          0,
+          47,
+          95,
+          143,
+          170,
+          176,
+          181,
+          189
+        ],
+        "sampled_sum": [
+          0,
+          47,
+          95,
+          143,
+          170,
+          176,
+          181,
+          189,
+          190
+        ],
+        "diagonal": [
+          0,
+          47,
+          95,
+          143,
+          170,
+          176,
+          181,
+          189,
+          190
+        ]
+      },
+      "band_layers_covered": [
+        170,
+        176
+      ],
+      "fp64_transport": "numpy FP64 bank[v]@h (or h) vs saved GPU FP32 transported, rtol=atol=2e-5 (validate_outputs.py:131-134); different op/precision/shape from scorer; covers J.h only; uses scorer H",
+      "full_sort": "permutation, sorts saved logits, top10=order[:10], argmax=top1, allrank=min inverse (validate_outputs.py:118-130); all from GPU-produced logits",
+      "not_exercised": "logit recomputation from transported (BF16 cast, RMSNorm, lm_head, layout); tie/layout invariance",
+      "population_wide": "top10 alias membership == allrank<10, own ranks == bank (validate_outputs.py:97-102)",
+      "counts": {
+        "transport_samples": 168,
+        "full_sort_samples": 168
+      }
+    },
+    "independent_checker": {
+      "file": "R/reviews/primary_numerical_check_native1.py",
+      "reads": [
+        "allrank",
+        "rank",
+        "top10_ids"
+      ],
+      "recomputes_ranks": false,
+      "aggregates_saved_ranks": true,
+      "citations": [
+        ":378",
+        ":207-210",
+        ":284-316"
+      ],
+      "result": "passed, 231 comparisons, max diff 8.9e-16; inputs equal final manifest",
+      "frozen_original": "R/reviews/primary_numerical_check.py failed at run_spec pin; native1 copy differs by 2 lines"
+    },
+    "measured_transport_sensitivity": {
+      "vectors": 132,
+      "elements": 270336,
+      "gpu_fp32_vs_cpu_fp32_bitdiff": 235422,
+      "bf16_gpu_vs_bf16_fp64": 51,
+      "bf16_gpu_vs_bf16_cpu_fp32": 93,
+      "max_abs_gpu_minus_fp64": 2e-06
+    }
+  },
+  "q6_inventory": {
+    "C": {
+      "raw": 192,
+      "fit01": 192,
+      "fit02": 192,
+      "penultimate": 190,
+      "sampled_sum": 191,
+      "diagonal": 191
+    },
+    "common/cache.pt": {
+      "H": [
+        "[160,192,2048]",
+        "float32 (BF16-exact)"
+      ],
+      "exit_logits": [
+        "[160,4,49152]",
+        "float32 (BF16-exact)"
+      ],
+      "continuations": [
+        "list[160]",
+        "str"
+      ]
+    },
+    "development/native.pt": {
+      "virtual_states": [
+        "[3,192,2048]",
+        "float32"
+      ],
+      "physical_states": [
+        "[3,192,2048]",
+        "float32"
+      ],
+      "wrapper_states": [
+        "[3,192,2048]",
+        "float32"
+      ],
+      "native_logits": [
+        "[3,49152]",
+        "float32"
+      ],
+      "unembedded_logits": [
+        "[3,49152]",
+        "float32"
+      ],
+      "item_names": [
+        "list[3]",
+        "str"
+      ]
+    },
+    "readouts/{arm}.npz": {
+      "rank": [
+        "[160,3,C]",
+        "int32"
+      ],
+      "allrank": [
+        "[160,128,C]",
+        "int32"
+      ],
+      "top1": [
+        "[160,C]",
+        "int64"
+      ],
+      "kl_to_final": [
+        "[160,C]",
+        "float32"
+      ],
+      "kl_to_local": [
+        "[160,C]",
+        "float32"
+      ],
+      "rank_of_final_top1": [
+        "[160,C]",
+        "int32"
+      ],
+      "rank_of_local_top1": [
+        "[160,C]",
+        "int32"
+      ],
+      "top10_ids": [
+        "[160,C,10]",
+        "int32"
+      ]
+    },
+    "readouts/{arm}_samples.pt": "list of 3 dicts: item_index; virtual_indices (10/10/10/8/9/9); transported [k,2048] float32 pre-BF16; logits [k,49152] float32 BF16 values; sorted_ids [k,49152] int32",
+    "not_retained": [
+      "logits for non-sample cells (evaluate.py:565; readouts.py:35)",
+      "transported states outside samples",
+      "J stack",
+      "model weights"
+    ],
+    "readout_only_replay": {
+      "needs_model_forward": false,
+      "inputs": [
+        "H (retained)",
+        "banks (present, rehashed)",
+        "model.norm.weight and lm_head.weight from model.safetensors 5,336,011,242 bytes sha256 2fdf9805..."
+      ],
+      "weights_available_locally": false,
+      "possible_locally_now": false,
+      "bitwise_requires": "same GPU BF16 kernels and C-row layout",
+      "cpu_replay": "approximate"
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "status": "confirmed_gap",
+      "statement": "BF16 unembedding at 190/191-row layouts (penultimate, sampled_sum, diagonal) is unmeasured; 192 vs 160 rows verified bitwise on exit rows; development gate checks only [1,S,2048].",
+      "where": [
+        "worker.py:131,143",
+        "evaluate.py:550",
+        "readouts.py:72",
+        "worker.py:94-97"
+      ],
+      "check": "GPU replay of saved H/bank transports at C=190/191 vs C=192, bitwise logits and allrank comparison (needs GPU and weights)",
+      "effect": "none on primary (192 vs 192); possible near-tie changes in the 10 secondaries involving control arms; direction unknown"
+    },
+    {
+      "id": "F2",
+      "status": "confirmed",
+      "statement": "Receiver validation never recomputes logits from transported states.",
+      "where": [
+        "validate_outputs.py:114-136"
+      ],
+      "check": "recompute norm-then-lm_head on sampled transported vectors vs saved logits (needs weights)",
+      "effect": "no direct effect; leaves F1/F4 undetected if present"
+    },
+    {
+      "id": "F3",
+      "status": "confirmed_small",
+      "statement": "Hit@10 depends on ascending-token-ID order at BF16 ties.",
+      "where": [
+        "vis.py:119",
+        "readouts.py:18"
+      ],
+      "measured": {
+        "boundary_tie_rows": "42/168",
+        "ambiguous_name_cells": "3/13,440 (raw item0 v143 helium control; fit02 item0 v95 Venus own; fit02 item2 v189 Voyager control); none in fit01 or band",
+        "band_own_cells_rank_9_10": {
+          "fit01": 37,
+          "raw": 18
+        },
+        "primary": 0.23188291139240502,
+        "adversarial_envelope": {
+          "[9,10]": [
+            0.2154,
+            0.2447
+          ],
+          "[8,11]": [
+            0.1999,
+            0.2591
+          ],
+          "[6,13]": [
+            0.1606,
+            0.2802
+          ]
+        }
+      },
+      "effect": "worst-case bounds, not estimates; sampled ambiguity about 0.02% of cells"
+    },
+    {
+      "id": "F4",
+      "status": "confirmed_small",
+      "statement": "Lens-arm FP32 transports are rounded to BF16 before the norm; FP32 bits are kernel-dependent.",
+      "where": [
+        "hf.py:170",
+        "evaluate.py:549"
+      ],
+      "measured": "87% FP32 elements differ GPU vs CPU; about 0.02-0.03% after BF16 rounding",
+      "effect": "can move only near-tie cells; by design and historical"
+    },
+    {
+      "id": "F5",
+      "status": "confirmed",
+      "statement": "Development gate layout [1,S,2048] differs from scorer layout [C,2048].",
+      "where": [
+        "readouts.py:72",
+        "evaluate.py:550"
+      ],
+      "effect": "bridged for 192-row arms by diagnostic [160,2048] plus measured [192]=[160]; see F1 for others"
+    },
+    {
+      "id": "F6",
+      "status": "confirmed_no_score_impact",
+      "statement": "kl_to_local/rank_of_local_top1 reference exit 3 for all arms (historical control evaluator used target-state logits); exit packing [160] vs historical [148].",
+      "where": [
+        "readouts.py:34",
+        "evaluate_controls.py:377-383",
+        "evaluate_refits.py:672-675"
+      ],
+      "effect": "none on hit@10, eligibility, or analysis"
+    },
+    {
+      "id": "F7",
+      "status": "confirmed_low_risk",
+      "statement": "Precision switches recorded only at model load; no setters in executed code.",
+      "where": [
+        "evaluate_refits.py:631",
+        "worker.py:73-75",
+        "run_refits.py:863-887"
+      ],
+      "effect": "none expected"
+    },
+    {
+      "id": "F8",
+      "status": "confirmed_no_effect",
+      "statement": "Leak check uses readout-context ids; 131 rows drop a trailing space; no alias affected.",
+      "where": [
+        "evaldata.py:96-103",
+        "worker.py:115"
+      ],
+      "effect": "none"
+    }
+  ],
+  "score_definition_mismatches": [],
+  "checks_run": [
+    "read executed scoring sources, plan, run_spec, both checkers",
+    "rehash bundle sources, accepted stage/final files, banks, model source files",
+    "load retained arrays on CPU for shapes/dtypes",
+    "BF16-exactness of H and exit_logits",
+    "fit01/fit02 column 191 vs raw (all arrays, all items)",
+    "192-row raw logits vs 160-row exit logits",
+    "tie order and ambiguity on 168 full-sort samples",
+    "FP64 and CPU FP32 transport vs saved GPU transport with BF16 rounding",
+    "near-boundary adversarial envelope on primary band",
+    "retokenization for leak check",
+    "filesystem search for model weights"
+  ]
+}

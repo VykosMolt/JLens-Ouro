@@ -1,0 +1,23 @@
+{
+  "finished_utc": "2026-09-10T23:02:09.229622+00:00",
+  "observations": {
+    "account": {
+      "observed_utc": "2026-09-10T23:02:08.883620+00:00",
+      "status": "observed",
+      "value": {
+        "clientBalance": 5.8385384319,
+        "currentSpendPerHr": 0,
+        "id": "user_3I33u3QLWgO7POHKINt6GfLeTUw"
+      }
+    },
+    "pods": {
+      "observed_utc": "2026-09-10T23:02:09.229596+00:00",
+      "status": "observed",
+      "value": []
+    }
+  },
+  "pod_id": null,
+  "schema": "native_logit_account_observation.v1",
+  "scope": "Read-only account, pod-list and optional single-pod and pod-billing observation.",
+  "started_utc": "2026-09-10T23:02:08.518200+00:00"
+}

@@ -1,0 +1,49 @@
+{
+ "started_utc": "2026-09-11T19:37:23.081404+00:00",
+ "destination_identity_before": {
+  "findmnt": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/run/media/moloch/ARCH_BACKUP\",\n         \"source\": \"/dev/sda1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,nosuid,nodev,relatime,errors=remount-ro\",\n         \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n         \"label\": \"ARCH_BACKUP\"\n      }\n   ]\n}\n",
+  "lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"sda\",\n         \"size\": \"465.8G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"SanDisk Extreme Portable SSD\",\n         \"serial\": \"201123804758\",\n         \"tran\": \"usb\",\n         \"vendor\": \"SanDisk \",\n         \"children\": [\n            {\n               \"name\": \"sda1\",\n               \"size\": \"465.8G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n               \"mountpoint\": \"/run/media/moloch/ARCH_BACKUP\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": null,\n               \"vendor\": null\n            }\n         ]\n      }\n   ]\n}\n",
+  "source_disk_lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"nvme0n1\",\n         \"size\": \"953.9G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"WD PC SN8000S SDEPNRK-1T00-1101\",\n         \"serial\": \"25363H803914\",\n         \"tran\": \"nvme\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"size\": \"1G\",\n               \"type\": \"part\",\n               \"fstype\": \"vfat\",\n               \"uuid\": \"8806-FDD4\",\n               \"mountpoint\": \"/boot\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            },{\n               \"name\": \"nvme0n1p2\",\n               \"size\": \"952.9G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"d06b03fe-5a17-4250-a6a2-acae19dfd890\",\n               \"mountpoint\": \"/\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            }\n         ]\n      }\n   ]\n}\n",
+  "df_dest": "Filesystem     Type    1B-blocks         Used        Avail Mounted on\n/dev/sda1      ext4 491105460224 219221151744 246862245888 /run/media/moloch/ARCH_BACKUP\n",
+  "df_source": "Filesystem     Type     1B-blocks         Used        Avail Mounted on\n/dev/nvme0n1p2 ext4 1005921464320 570846961664 383901061120 /\n",
+  "st_dev_dest": 2049,
+  "st_dev_source": 66306,
+  "separate_physical_device": true
+ },
+ "source_hash_seconds": 12.505920886993408,
+ "git": {
+  "jacobian-lens": {
+   "repo": "/home/moloch/jacobian-lens",
+   "head": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+   "bundle": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/jacobian-lens.bundle",
+   "bundle_sha256": "7b0a611bfb780e26834e19f7f4fdd22ef8f2a25ca9ea1df8958ef3618b116f43",
+   "bundle_verify": "The bundle contains these 4 refs:\n581d398613e5602a5af361e1c34d3a92ea82ba8e refs/heads/main\n581d398613e5602a5af361e1c34d3a92ea82ba8e refs/remotes/origin/HEAD\n581d398613e5602a5af361e1c34d3a92ea82ba8e refs/remotes/origin/main\n581d398613e5602a5af361e1c34d3a92ea82ba8e HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1"
+  },
+  "ouro_project": {
+   "repo": "/home/moloch/ouro_project",
+   "head": "d79562e16ee865fefe3834a644881aba42f7e3f7",
+   "bundle": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/ouro_project.bundle",
+   "bundle_sha256": "af6f9e5746084775fe7f30df045cddb8ef6d773c9f65b9b76ec31cb1488022b1",
+   "bundle_verify": "r1-v3-results/HEAD\nb6d48fbd5eecddbc39fa4a33db40a1759e7c5f57 worktrees/o1-v2-b200-runner/HEAD\n6db215fa52ee315ad1011e14cf7a12560107da56 worktrees/o1_v2_axis_bank_redesign/HEAD\n1b858d0b0ce8f0e554d7e15db18525b5820c9146 worktrees/hs-adoptions/HEAD\n38c474ebea3c6173d48d659d3edc0317c36acfd4 worktrees/o1_axis_diagnosis_v2/HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1"
+  }
+ },
+ "destination_identity_after": {
+  "findmnt": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/run/media/moloch/ARCH_BACKUP\",\n         \"source\": \"/dev/sda1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,nosuid,nodev,relatime,errors=remount-ro\",\n         \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n         \"label\": \"ARCH_BACKUP\"\n      }\n   ]\n}\n",
+  "lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"sda\",\n         \"size\": \"465.8G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"SanDisk Extreme Portable SSD\",\n         \"serial\": \"201123804758\",\n         \"tran\": \"usb\",\n         \"vendor\": \"SanDisk \",\n         \"children\": [\n            {\n               \"name\": \"sda1\",\n               \"size\": \"465.8G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n               \"mountpoint\": \"/run/media/moloch/ARCH_BACKUP\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": null,\n               \"vendor\": null\n            }\n         ]\n      }\n   ]\n}\n",
+  "source_disk_lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"nvme0n1\",\n         \"size\": \"953.9G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"WD PC SN8000S SDEPNRK-1T00-1101\",\n         \"serial\": \"25363H803914\",\n         \"tran\": \"nvme\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"size\": \"1G\",\n               \"type\": \"part\",\n               \"fstype\": \"vfat\",\n               \"uuid\": \"8806-FDD4\",\n               \"mountpoint\": \"/boot\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            },{\n               \"name\": \"nvme0n1p2\",\n               \"size\": \"952.9G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"d06b03fe-5a17-4250-a6a2-acae19dfd890\",\n               \"mountpoint\": \"/\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            }\n         ]\n      }\n   ]\n}\n",
+  "df_dest": "Filesystem     Type    1B-blocks         Used        Avail Mounted on\n/dev/sda1      ext4 491105460224 268991901696 197091495936 /run/media/moloch/ARCH_BACKUP\n",
+  "df_source": "Filesystem     Type     1B-blocks         Used        Avail Mounted on\n/dev/nvme0n1p2 ext4 1005921464320 570865598464 383882424320 /\n",
+  "st_dev_dest": 2049,
+  "st_dev_source": 66306,
+  "separate_physical_device": true
+ },
+ "files": 16200,
+ "symlinks": 23,
+ "bytes": 52152117674,
+ "problems": 0,
+ "manifest_sha256": "77a13e9f6873b804578a52af386f50dd41fef06cad12d6d1fa06305f4a6d11ec",
+ "dedup_groups": 4494,
+ "finished_utc": "2026-09-11T20:16:18.431058+00:00",
+ "elapsed_seconds": 2335.350323677063,
+ "status": "copied_and_hash_verified"
+}

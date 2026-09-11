@@ -1,0 +1,511 @@
+{
+  "schema": "huginn_controller_independent_proof.v3",
+  "status": "passed",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "source_records_record": {
+    "bytes": 5245,
+    "sha256": "d709b16066b40f7242c4440940315a4a2da35ee180d238fac3ace8b2a88f9a11"
+  },
+  "reviewed_sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/lease.py": {
+      "bytes": 79243,
+      "sha256": "098fb0d985ceca8c2226a4cffa10d6866999b4d156da2d6b8d0614253a3037aa"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/artifact_handoff.py": {
+      "bytes": 41346,
+      "sha256": "f526d44e1958fedc40ca507232bd1cc6f5043cfb27748816efb0d5a0aac0fb23"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/test_lifecycle.py": {
+      "bytes": 67551,
+      "sha256": "b763a9c096de039ddc47e04e0846d3cc6191e471fd5485295163fc7249fb46a8"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/PRIMARY_SOURCE_BASELINE.json": {
+      "bytes": 1346,
+      "sha256": "29559e40136bfd05958cff6c1b23ca9323bd254b851667fc9c13b471b2a595b5"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/IMPLEMENTATION.md": {
+      "bytes": 11303,
+      "sha256": "36d5a73f94e3e8d3c3ecce04d9b957dc20048c947e62818326cb215534985d35"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/prepare_phase_debit.py": {
+      "bytes": 2149,
+      "sha256": "66198084e838972de1d32569f1dfc96c4289a3c7744295625a892ddcdd8e696e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/PHASE_RESOURCES.json": {
+      "bytes": 1186,
+      "sha256": "c7812ed0413fc5e7a91be9508c7be4018e2e99497378c813f8cef165fb06e9ac"
+    }
+  },
+  "independently_rerun_full_suite": {
+    "cases": [
+      {
+        "case": "setup_restart_missing_false_three_transport_errors",
+        "status": "passed"
+      },
+      {
+        "case": "setup_timeout_stops_preserves_until_hard_deadline",
+        "status": "passed"
+      },
+      {
+        "case": "locked_updates_and_stale_observer",
+        "status": "passed"
+      },
+      {
+        "case": "early_preservation_survives_status_timeout",
+        "status": "passed"
+      },
+      {
+        "case": "budget_emergency_precedes_mutation_and_bypasses_collection_lock",
+        "status": "passed"
+      },
+      {
+        "case": "provider_absence_without_new_deletion",
+        "status": "passed"
+      },
+      {
+        "case": "stage_preservation_reuse_and_nonblocking_normal_delete",
+        "status": "passed"
+      },
+      {
+        "case": "stale_receipt_exact_binding_and_required_pathset",
+        "status": "passed"
+      },
+      {
+        "case": "quarantine_and_repair_payload",
+        "status": "passed"
+      },
+      {
+        "case": "quarantine_and_repair_manifest",
+        "status": "passed"
+      },
+      {
+        "case": "quarantine_and_repair_receiptless_payload",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_transfer",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_validation",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_pending_unlink",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_publication",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_before_receipt_link",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_receipt_link",
+        "status": "passed"
+      },
+      {
+        "case": "double_collector_single_publication",
+        "status": "passed"
+      },
+      {
+        "case": "source_mutation_rejects_transfer",
+        "status": "passed"
+      },
+      {
+        "case": "after_transfer_source_change_manifest",
+        "status": "passed"
+      },
+      {
+        "case": "after_transfer_source_change_pending_source_unlink",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_unloadable",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_wrong_shape",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_wrong_dtype",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_nonfinite",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_wrong_mean",
+        "status": "passed"
+      },
+      {
+        "case": "truncated_wrong_prefix_resume",
+        "status": "passed"
+      },
+      {
+        "case": "prior_debit_carried_once_and_admission_caps",
+        "status": "passed"
+      },
+      {
+        "case": "create_race_uncertainty_halt_and_absence_barriers",
+        "status": "passed"
+      },
+      {
+        "case": "verifier_pin_rechecked_before_create",
+        "status": "passed"
+      },
+      {
+        "case": "worker_complete_and_forged_ack_are_not_receiver_acceptance",
+        "status": "passed"
+      },
+      {
+        "case": "root_explicit_teardown_exact_binding_and_scope",
+        "status": "passed"
+      },
+      {
+        "case": "account_renamed_and_foreign_pod_mutation_guards",
+        "status": "passed"
+      },
+      {
+        "case": "actual_bootstrap_name_and_ssh_setup_snippet_without_system_mutation",
+        "status": "passed"
+      },
+      {
+        "case": "failed_terminal_preserved_without_full_acceptance",
+        "status": "passed"
+      },
+      {
+        "case": "bounded_process_group_cleanup",
+        "processes": [
+          {
+            "error_type": "TimeoutExpired",
+            "operation": "fixture_timeout",
+            "pid": 133,
+            "process_group_quiescent": true,
+            "returncode": -15,
+            "timeout_seconds": 0.05
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "case": "metadata_read_stat_guard_ignores_atime_only_change",
+        "status": "passed"
+      },
+      {
+        "case": "every_historical_and_primary_lease_included_exactly_once",
+        "status": "passed"
+      },
+      {
+        "case": "canonical_primary_ledger_inventory_catches_added_and_duplicate_states",
+        "status": "passed"
+      },
+      {
+        "case": "primary_complete_receipt_does_not_replace_confirmed_shutdown",
+        "status": "passed"
+      },
+      {
+        "case": "primary_termination_without_exact_complete_acceptance_blocks_phase",
+        "status": "passed"
+      },
+      {
+        "case": "stale_receipt_rejected_even_if_h_handoff_is_spoofed",
+        "status": "passed"
+      },
+      {
+        "case": "same_size_payload_corruption_fails_both_fresh_rehash_and_precreate_inventory",
+        "status": "passed"
+      },
+      {
+        "case": "payload_stat_inventory_brackets_full_rehash_and_catches_inflight_mutation",
+        "status": "passed"
+      },
+      {
+        "case": "same_byte_inode_replacement_rejects_precreate_admission",
+        "status": "passed"
+      },
+      {
+        "case": "primary_module_source_verified_before_isolated_compilation",
+        "status": "passed"
+      },
+      {
+        "case": "phase_snapshot_identity_no_pods_no_spend_and_original_balance_floor",
+        "status": "passed"
+      },
+      {
+        "case": "planned_H_reserves_fit_5_989890_but_6_cap_balance_and_combined25_remain_hard",
+        "planned_cost_usd": 5.989890410958905,
+        "status": "passed"
+      },
+      {
+        "case": "controller_itself_rechecks_primary_before_paid_mutation",
+        "status": "passed"
+      },
+      {
+        "case": "H_retry_elapsed_combined_prior_and_absence_predicates_fail_closed",
+        "status": "passed"
+      },
+      {
+        "case": "H_aggregate_six_dollar_cap_deducts_prior_bounds_and_retry_chain_is_complete",
+        "status": "passed"
+      },
+      {
+        "case": "H_retry_json_and_pin_share_bytes_and_ledger_inventory_is_rechecked",
+        "status": "passed"
+      },
+      {
+        "case": "H_retries_reuse_exact_debit_add_each_bound_once_and_reject_unreconciled_attempts",
+        "status": "passed"
+      },
+      {
+        "case": "actual_eight_stream_receive_whole_hash_skip_and_preservation_after_worker_STOP",
+        "peak_children": 8,
+        "status": "passed"
+      },
+      {
+        "case": "immutable_chunk_resume_skips_verified_range_and_rehashes_complete_file",
+        "status": "passed"
+      },
+      {
+        "case": "actual_interruption_preserves_chunks_and_retry_downloads_only_missing_ranges",
+        "reused_chunks": 7,
+        "status": "passed"
+      },
+      {
+        "case": "remote_owner_full_hash_short_range_cache_corruption_and_descriptor_swap_fail_closed",
+        "status": "passed"
+      },
+      {
+        "case": "halt_identity_deadline_and_late_registration_quiesce_actual_SIGTERM_ignoring_children_and_descendants",
+        "status": "passed"
+      }
+    ],
+    "elapsed_seconds": 22.70990753173828,
+    "no_cloud_or_ssh": true,
+    "no_paid_science": true,
+    "python": "/home/moloch/ouro_project/venv/bin/python",
+    "schema": "huginn_verification_controller_proof.v1",
+    "scope": "Real temporary files, locks, tiny CPU serialization, hashes, semantic readers and receiver; fake provider/SSH mutation boundaries.",
+    "smoke": {
+      "absence_confirmations": 3,
+      "acceptance": {
+        "manifest_sha256": "8f4becf1ca31272f4a5641e798d91077b01030e9939b4cbea2138f22043b830c",
+        "path": "/tmp/huginn-controller-independent-frozen-review/smoke/ledger/attempt_01/handoff/accepted/smoke/8f4becf1ca31272f4a5641e798d91077b01030e9939b4cbea2138f22043b830c/RECEIPT.json",
+        "record": {
+          "bytes": 3020,
+          "sha256": "6f76cfd2da0e216356168e0fcaa6ea9add11bc3b05bf2ed775215a96409f7ba2"
+        }
+      },
+      "case": "tiny_cpu_save_interrupt_resume_load_convert_accept_delete",
+      "files": {
+        "fit_01/COMPLETE.json": {
+          "bytes": 354,
+          "sha256": "027fca29b884f53931f40c1289cde22dc414a55b5e0f917349577ebd26486747"
+        },
+        "fit_01/LATEST.json": {
+          "bytes": 365,
+          "sha256": "7818ab976921438ebb4c8035b8eb857396caa39b767d3cdc5ad0a3b6bf495c75"
+        },
+        "fit_01/OWNER.json": {
+          "bytes": 7625,
+          "sha256": "b7380071dce0598396ad4a1233678a0d1fce0c59f3e66b38afa9181bbd24989e"
+        },
+        "fit_01/checkpoints/cursor_000100_232312debea040089c95dc60c58d712f/SEAL.json": {
+          "bytes": 363,
+          "sha256": "3949f6e1c29c07ec4b0cc2810c8a00a63871fc9f69d8828f2f4baf30578496b1"
+        },
+        "fit_01/checkpoints/cursor_000100_232312debea040089c95dc60c58d712f/metadata.json": {
+          "bytes": 27050,
+          "sha256": "3483b412e5c8f36e767be8c913a0d4368f1cc335917056b6785d388e15bdabb2"
+        },
+        "fit_01/checkpoints/cursor_000100_232312debea040089c95dc60c58d712f/state.pt": {
+          "bytes": 2149,
+          "sha256": "c414d27939dfb948b2b786820b8721fff48dd46565548b39d3d48798e0a703f9"
+        },
+        "fit_01/final/cursor_000100_cb62210f300f47d7ac7e1664e6bd93a3/SEAL.json": {
+          "bytes": 357,
+          "sha256": "2138aae725ca320194fdd442f9fed27c8377a35ce08c0491a785efe8c17dec24"
+        },
+        "fit_01/final/cursor_000100_cb62210f300f47d7ac7e1664e6bd93a3/lens.pt": {
+          "bytes": 1893,
+          "sha256": "588c0b06b9d01c4677c77e57d7f0918019ff7cb51e8d589963abade9afffc830"
+        },
+        "fit_01/final/cursor_000100_cb62210f300f47d7ac7e1664e6bd93a3/metadata.json": {
+          "bytes": 27452,
+          "sha256": "1e2c3d6aa9769477ff270d9ad4ffcd48bbe1dbb10e41c0b830882012a84556a0"
+        }
+      },
+      "manifest_sha256": "8f4becf1ca31272f4a5641e798d91077b01030e9939b4cbea2138f22043b830c",
+      "resumed_files": [
+        "fit_01/COMPLETE.json"
+      ],
+      "root": "/tmp/huginn-controller-independent-frozen-review/smoke/ledger/attempt_01",
+      "status": "passed",
+      "termination_class": "accepted_artifacts"
+    },
+    "source_records": {
+      "PRIMARY_SOURCE_BASELINE.json": {
+        "bytes": 1346,
+        "sha256": "29559e40136bfd05958cff6c1b23ca9323bd254b851667fc9c13b471b2a595b5"
+      },
+      "artifact_handoff.py": {
+        "bytes": 41346,
+        "sha256": "f526d44e1958fedc40ca507232bd1cc6f5043cfb27748816efb0d5a0aac0fb23"
+      },
+      "lease.py": {
+        "bytes": 79243,
+        "sha256": "098fb0d985ceca8c2226a4cffa10d6866999b4d156da2d6b8d0614253a3037aa"
+      },
+      "pod_entry.sh": {
+        "bytes": 1223,
+        "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+      },
+      "run_refits.py": {
+        "bytes": 51999,
+        "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+      },
+      "runpod_api.py": {
+        "bytes": 9601,
+        "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+      },
+      "test_lifecycle.py": {
+        "bytes": 67551,
+        "sha256": "b763a9c096de039ddc47e04e0846d3cc6191e471fd5485295163fc7249fb46a8"
+      },
+      "transport.py": {
+        "bytes": 2638,
+        "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+      }
+    },
+    "status": "passed"
+  },
+  "additional_independent_regressions": {
+    "all_declared_source_pins_match": true,
+    "all_primary_baseline_pins_match": true,
+    "cases": [
+      {
+        "case": "original_understated_two_hour_charge",
+        "rejection": "H lease understates reconciled spending",
+        "status": "passed"
+      },
+      {
+        "case": "original_uncertain_create_future_TTL",
+        "rejection": "duplicate or unreconciled new lease debit",
+        "status": "passed"
+      },
+      {
+        "case": "original_aggregate_H_phase_cap",
+        "rejection": "job cap exceeds the remaining aggregate H phase ceiling",
+        "status": "passed"
+      },
+      {
+        "case": "change_charge_after_parse",
+        "rejection": "artifact hash mismatch: /tmp/h-final-independent-regressions-f084jqox/accounting/ledger/attempt_01/LEASE.json",
+        "status": "passed"
+      },
+      {
+        "case": "append_lease_after_parse",
+        "rejection": "H lease ledger membership changed during debit scan",
+        "status": "passed"
+      },
+      {
+        "case": "valid_retry_keeps_exact_prior_charge_and_reduced_phase_cap",
+        "job_cap": 5,
+        "prior_H_charge": 1,
+        "status": "passed"
+      }
+    ],
+    "changed_existing_lease_functions": [
+      "change",
+      "prior_debit",
+      "make_plan",
+      "begin_create",
+      "create"
+    ],
+    "no_cloud_or_ssh": true,
+    "reviewed_lease_record": {
+      "bytes": 79243,
+      "sha256": "098fb0d985ceca8c2226a4cffa10d6866999b4d156da2d6b8d0614253a3037aa"
+    },
+    "schema": "H_frozen_independent_regressions.v1",
+    "source_records_record": {
+      "bytes": 5245,
+      "sha256": "d709b16066b40f7242c4440940315a4a2da35ee180d238fac3ace8b2a88f9a11"
+    },
+    "status": "passed",
+    "temporary_root": "/tmp/h-final-independent-regressions-f084jqox",
+    "unchanged_existing_lease_functions": 45
+  },
+  "original_prior_debit_record": {
+    "bytes": 4186,
+    "sha256": "b55f5f6e99a598a4c7227298b0bd9cfaf6e8d39c6ac97f39df77162bd86f652a"
+  },
+  "prior_rejected_records": [
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v1.json",
+      "record": {
+        "bytes": 7933,
+        "sha256": "b60c3fbedd10c8fb09004de6b858a60a5855de746fe98bb00c511f78f4eb0e9e"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v1.md",
+      "record": {
+        "bytes": 2505,
+        "sha256": "54cc687246760177b186ab5712765cd2f05a5234a0577acfa5e2c215bb5854e4"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_proof_rejected_v1.json",
+      "record": {
+        "bytes": 14046,
+        "sha256": "5a4ab63c22303447417960c9d0e1782629e1dd8555f299ed80659ff19ddc3099"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v2.json",
+      "record": {
+        "bytes": 6849,
+        "sha256": "125a0bcc5a810363814ecc2e1eb1e31bd1654624861bf3f34c00516eb667b5ab"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v2.md",
+      "record": {
+        "bytes": 1285,
+        "sha256": "94fd75a1439a79c2b5ef8359e3cbfd2ba8c52afdbea2b4258b111a3f275fd224"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_proof_rejected_v2.json",
+      "record": {
+        "bytes": 2779,
+        "sha256": "b8a85b73ea84a07286e306691cf6c55057b522446f38cc1ff5bc76e1ed4402f6"
+      }
+    }
+  ],
+  "no_cloud_or_ssh": true,
+  "no_new_confirmation_results_exposed": true,
+  "execution_scope": "Actual temporary files, real bounded local subprocesses, CPU synthetic tensor serialization and the original source-bound primary acceptance fixture. The remote range program was exercised locally; provider and SSH boundaries were not called.",
+  "recorded_at_utc": "2026-09-09T23:29:55.701800+00:00"
+}

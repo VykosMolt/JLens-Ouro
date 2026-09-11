@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "checks": 5546,
+  "scope": "Independent replay of seeds and list files, full selected raw parquet texts, selected token IDs, exclusion and overlap checks; no fit matrices or GPU work.",
+  "plan_sha256": "0c40584c8a0d1f7ca12eb3e78837627bb21f484984ee082095f4e4ba29f9059e",
+  "fits": [
+    {
+      "fit": 1,
+      "seed": 2026090701,
+      "file_sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712",
+      "n": 100,
+      "distinct_articles": 100,
+      "token_length_counts": {
+        "112": 1,
+        "121": 1,
+        "128": 98
+      }
+    },
+    {
+      "fit": 2,
+      "seed": 2026090702,
+      "file_sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95",
+      "n": 100,
+      "distinct_articles": 99,
+      "token_length_counts": {
+        "128": 100
+      }
+    },
+    {
+      "fit": 3,
+      "seed": 2026090703,
+      "file_sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9",
+      "n": 100,
+      "distinct_articles": 99,
+      "token_length_counts": {
+        "128": 100
+      }
+    },
+    {
+      "fit": 4,
+      "seed": 2026090704,
+      "file_sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba",
+      "n": 100,
+      "distinct_articles": 100,
+      "token_length_counts": {
+        "116": 1,
+        "121": 1,
+        "122": 2,
+        "128": 96
+      }
+    },
+    {
+      "fit": 5,
+      "seed": 2026090705,
+      "file_sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5",
+      "n": 100,
+      "distinct_articles": 100,
+      "token_length_counts": {
+        "128": 100
+      }
+    }
+  ]
+}

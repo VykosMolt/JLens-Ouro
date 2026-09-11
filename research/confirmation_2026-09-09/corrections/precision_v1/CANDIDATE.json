@@ -1,0 +1,21 @@
+{
+  "schema": "confirmation_precision_correction_candidate.v1",
+  "parent_freeze": {
+    "bytes": 7279,
+    "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7"
+  },
+  "original_worker": {
+    "bytes": 10163,
+    "sha256": "2db64e6d598623bb87dde39d55e7de67dcab762c0a148face40d6dea98e045d0"
+  },
+  "corrected_worker": {
+    "bytes": 10143,
+    "sha256": "386c2649e6628a45d7bcc7745d9cf4686cbb03fd6c9cf9196b65e6938b9ab0b5"
+  },
+  "diagnosis": {
+    "bytes": 7050,
+    "sha256": "34e44959e4a70c2a008b6d987cc1c3e6778f06e150ccd34467a9ad8f50e454f0"
+  },
+  "scientific_change": "None: restore exact original precision metadata using the identical pinned runtime defaults; retain the strict full precision comparison and all scientific gates.",
+  "new_confirmation_results_exposed": false
+}

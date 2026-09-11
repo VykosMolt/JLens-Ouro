@@ -1,0 +1,229 @@
+{
+  "schema": "confirmation_parallel_upload_independent_proof.v2",
+  "status": "passed",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "helper_record": {
+    "bytes": 35465,
+    "sha256": "512946233e308a7918f1871eff88beca049afcf733d2382a0efc12cbab8ec2f4"
+  },
+  "self_test_independently_rerun": {
+    "cases": [
+      "real_remote_program_reassembles_hashes_publishes_mtime_and_resumes",
+      "changed_chunk_rejected_without_canonical_publication",
+      "whole_bank_sha_mismatch_rejected",
+      "remote_identity_rejected",
+      "remote_fixed_deadline_reserve_rejected",
+      "remote_STOP_rejected",
+      "changed_existing_canonical_bank_not_overwritten",
+      "canonical_parent_swap_descriptor_rejected",
+      "chunk_parent_swap_descriptor_rejected",
+      "canonical_source_change_during_split_rejected",
+      "local_controller_identity_rejected",
+      "local_controller_halt_rejected",
+      "local_setup_reserve_rejected",
+      "active_process_group_cancelled",
+      "one_cancel_before_child_registration_quiesces_late_child",
+      "one_cancel_quiesces_SIGTERM_ignoring_child"
+    ],
+    "controller_sources": {
+      "artifact_handoff.py": {
+        "bytes": 29606,
+        "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+      },
+      "lease.py": {
+        "bytes": 56750,
+        "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+      },
+      "pod_entry.sh": {
+        "bytes": 1223,
+        "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+      },
+      "run_refits.py": {
+        "bytes": 51999,
+        "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+      },
+      "runpod_api.py": {
+        "bytes": 9601,
+        "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+      },
+      "transport.py": {
+        "bytes": 2638,
+        "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+      }
+    },
+    "no_cloud_or_ssh": true,
+    "schema": "parallel_upload_self_test.v1",
+    "source_record": {
+      "bytes": 35465,
+      "sha256": "512946233e308a7918f1871eff88beca049afcf733d2382a0efc12cbab8ec2f4"
+    },
+    "status": "passed",
+    "temporary_root": "/tmp/parallel-upload-self-test-7i8b1pid"
+  },
+  "independent_regressions": {
+    "schema": "independent_parallel_upload_regressions.v1",
+    "status": "passed",
+    "source_record": {
+      "bytes": 35465,
+      "sha256": "512946233e308a7918f1871eff88beca049afcf733d2382a0efc12cbab8ec2f4"
+    },
+    "no_cloud_or_ssh": true,
+    "temporary_root": "/tmp/parallel-upload-independent-regressions-tf_lvzdj",
+    "tests": [
+      {
+        "case": "original_single_cancel_before_registration",
+        "status": "passed",
+        "error": "CalledProcessError",
+        "seconds": 0.001607180995051749,
+        "processes": [
+          {
+            "operation": "late-registration",
+            "pid": 5,
+            "timeout_seconds": 30,
+            "process_group_quiescent": true,
+            "error_type": "CalledProcessError",
+            "returncode": -9
+          }
+        ]
+      },
+      {
+        "case": "original_parent_directory_swap_during_remote_open",
+        "status": "passed",
+        "rejection": "remote descriptor differs before hash",
+        "canonical_unchanged": true
+      },
+      {
+        "case": "original_single_cancel_TERM_ignoring_child",
+        "status": "passed",
+        "seconds": 0.0016821850003907457,
+        "error": "CalledProcessError",
+        "processes": [
+          {
+            "operation": "term-ignore-cancel",
+            "pid": 7,
+            "timeout_seconds": 30,
+            "process_group_quiescent": true,
+            "error_type": "CalledProcessError",
+            "returncode": -9
+          }
+        ]
+      },
+      {
+        "case": "single_cancel_TERM_ignoring_parent_and_descendant",
+        "status": "passed",
+        "seconds": 0.001645555006689392,
+        "error": "CalledProcessError",
+        "processes": [
+          {
+            "operation": "descendant-cancel",
+            "pid": 9,
+            "timeout_seconds": 30,
+            "process_group_quiescent": true,
+            "error_type": "CalledProcessError",
+            "returncode": -9
+          }
+        ]
+      }
+    ]
+  },
+  "prior_rejected_records": [
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_review_rejected_v1.json",
+      "record": {
+        "bytes": 4501,
+        "sha256": "1aca704607d3fd0ef33f6ed18145dcf5e61bd3c36fdf866e75d0e898b6c9a6d1"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_review_rejected_v1.md",
+      "record": {
+        "bytes": 1630,
+        "sha256": "6062d904edebd92a69fdd0e16f13c07fa029431ca5b2575c02e2543f6d204e43"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_proof_rejected_v1.json",
+      "record": {
+        "bytes": 4770,
+        "sha256": "ce47bc4c28db0a6113b0f081e4c8870a4585d6281c591dcdc6c8837105f89e05"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/parallel_upload_independent_additional_rejection_v2.json",
+      "record": {
+        "bytes": 1190,
+        "sha256": "c4d1de18f3ac66edff6f58572ce562e1863c96ad5b6c8f99332ccf0dc785aa6f"
+      }
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "UPLOAD-01",
+      "status": "resolved_in_current_revision",
+      "severity": "blocks_helper_use",
+      "source": "resources/parallel_upload.py:Processes.run/cancel",
+      "trigger": "Pause transport.run_bounded after Processes.run has checked stop but before the process is registered; call cancel once, then resume process creation.",
+      "observed": "The child started after cancellation and remained active until a second cancellation. A single cancellation can therefore miss a later registered SSH/rsync child and wait for its long original timeout.",
+      "expected": "Synchronize cancellation with registration or make later registration immediately terminate/reap the child; retain prompt process-group cleanup on one cancellation.",
+      "evidence": {
+        "process_started_after_cancel": true,
+        "future_done_after_first_cancel": false,
+        "active_record_count_before_second_cancel": 1,
+        "cleanup_after_second_cancel": true,
+        "temporary_fixture": "/tmp/parallel-cancel-review-y7rnl5p1"
+      },
+      "rejected_helper_record": {
+        "bytes": 29394,
+        "sha256": "3a2fcafd0bd29cfa1a806f9013e5169ef43b24da50bbe5f0e2969ff141ea4125"
+      }
+    },
+    {
+      "id": "UPLOAD-02",
+      "status": "resolved_in_current_revision",
+      "severity": "blocks_helper_use",
+      "source": "resources/parallel_upload.py:REMOTE_PROGRAM.hash_file",
+      "trigger": "Swap the banks parent directory only while Path.open acquires the file, restore the original directory before the read, and leave the bad canonical file metadata unchanged.",
+      "observed": "The helper hashes a different good inode, then sees unchanged pre/post path stats for the bad canonical inode and reports already_complete=true.",
+      "expected": "Compare fstat of the opened descriptor with the pre-open identity and check both descriptor/path stability after reading; apply corresponding descriptor checks to chunk reads and assembly publication.",
+      "evidence": {
+        "unexpectedly_accepted": true,
+        "remote_result": {
+          "already_complete": true
+        },
+        "actual_canonical_record": {
+          "bytes": 720,
+          "sha256": "0792609617ec036ac9bc279063995a36f601e5e1770dc2916ed50c0f091e2304"
+        },
+        "required_bank_record": {
+          "bytes": 720,
+          "sha256": "57a138ae70939c50215afb4d88572f4011809d93b317bef2fcf5b1f6c57ba142"
+        },
+        "temporary_fixture": "/tmp/parallel-open-review-xbl4txux"
+      },
+      "rejected_helper_record": {
+        "bytes": 29394,
+        "sha256": "3a2fcafd0bd29cfa1a806f9013e5169ef43b24da50bbe5f0e2969ff141ea4125"
+      }
+    },
+    {
+      "id": "UPLOAD-03",
+      "status": "resolved_in_current_revision",
+      "severity_when_observed": "blocks_helper_use",
+      "rejected_helper_record": {
+        "bytes": 34551,
+        "sha256": "ae921721ba11b1df81259eab2a38493fea3f3a4dea70fd3999d36463be9ba951"
+      },
+      "trigger": "Cancel a child after it signals readiness and installs a SIGTERM-ignoring handler.",
+      "observed": "With SIGTERM-only cancellation the child remained active and the future incomplete after 0.3 seconds; manual SIGKILL was needed for the review fixture.",
+      "evidence": {
+        "temporary_fixture": "/tmp/parallel-term-review-eg5iowrx",
+        "future_active_after_cancel_seconds": 0.3,
+        "nonquiescent_record_count": 1,
+        "manual_SIGKILL_cleanup_passed": true
+      },
+      "resolution": "The revised cancellation path immediately sends SIGKILL to its owned process groups, including late registrations, and original transport cleanup proves quiescence."
+    }
+  ],
+  "execution_scope": "Local temporary fixtures and real bounded local subprocesses only; actual remote program executed locally. No SSH/provider mutation or new confirmation/model output was accessed.",
+  "recorded_at_utc": "2026-09-09T23:19:03.002397+00:00"
+}

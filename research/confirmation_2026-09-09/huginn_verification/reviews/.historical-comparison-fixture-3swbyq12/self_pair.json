@@ -1,0 +1,513 @@
+{
+  "acceptance_receipt": {
+    "bytes": 1751,
+    "sha256": "ad24c16243b6ee44db3c49b532640edd1fb3c30cc3e69730d65c7d957f81aba3"
+  },
+  "bank": {
+    "historical_binary_available_for_matrix_comparison": false,
+    "historical_sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596",
+    "rerun": {
+      "bytes": 141949409,
+      "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+    },
+    "whole_file_matches_history": false
+  },
+  "binding": {
+    "output_contract_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "run_id": "synthetic-history-self-pair"
+  },
+  "category": "newly_rerun_estimator",
+  "historical_supplement": {
+    "bytes": 176379,
+    "sha256": "fa243c6f58ac622f4b1b5746ae85fa5b19d84892421353ff025e664f5aa05010"
+  },
+  "input_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/RETAINED_INPUTS_SUPPLEMENT.json": {
+      "bytes": 176379,
+      "sha256": "fa243c6f58ac622f4b1b5746ae85fa5b19d84892421353ff025e664f5aa05010"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/MANIFEST.json": {
+      "bytes": 1438,
+      "sha256": "52f3a44d62a0d7ebfc3dd55fb6138459147649d274f2aeeadf59567f8722e918"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/RECEIPT.json": {
+      "bytes": 1751,
+      "sha256": "ad24c16243b6ee44db3c49b532640edd1fb3c30cc3e69730d65c7d957f81aba3"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/VALIDATION.json": {
+      "bytes": 665,
+      "sha256": "9b88db9e5ba7d12b9d74aa3c5126bc990c7abfb72cfbf3b2a5bf008844203bcf"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/fit/lens.pt": {
+      "bytes": 141949409,
+      "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090803/arrays.npz": {
+      "bytes": 1763217,
+      "sha256": "e8ea8502664838f915a8219ffed062dad54f4db22f5c42220cd9c2e195c95add"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090803/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090803/initializations.json": {
+      "bytes": 95133,
+      "sha256": "b72e57ec5352fd7404eaf6abf737fd79dc95d0fe67296b0863465b4ba9238b43"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090803/summaries.json": {
+      "bytes": 10711,
+      "sha256": "af622b2ef7048a78e52ce2fa258947133fab0af37b391c5ca8c1056fbd777cff"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090804/arrays.npz": {
+      "bytes": 1763139,
+      "sha256": "ec2f5484d52bf9e967fa0476fcbfa161927f87db56bef5ebe7b6782668288aba"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090804/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090804/initializations.json": {
+      "bytes": 95141,
+      "sha256": "4931ef4cfd35d12ab3802f9110ee4a78442bef569a879b44dbdf1b690459be5e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090804/summaries.json": {
+      "bytes": 10869,
+      "sha256": "360655a6be29cc75f0dcf4efdc4993d3b6a0161c11bdebafb16a8f69b2fe8b4c"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/COMPLETE.json": {
+      "bytes": 531,
+      "sha256": "fc736d09ce6fd28d4568a2c8947ede41752f73e1c91f6b875df9da166ae8db5f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/SEAL.json": {
+      "bytes": 724,
+      "sha256": "b19fcf3375dba24fb99b86280919206b09877843d0ab08501f862d7cadec5486"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/arrays.npz": {
+      "bytes": 1763217,
+      "sha256": "e8ea8502664838f915a8219ffed062dad54f4db22f5c42220cd9c2e195c95add"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/initializations.json": {
+      "bytes": 95133,
+      "sha256": "b72e57ec5352fd7404eaf6abf737fd79dc95d0fe67296b0863465b4ba9238b43"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/summaries.json": {
+      "bytes": 10711,
+      "sha256": "af622b2ef7048a78e52ce2fa258947133fab0af37b391c5ca8c1056fbd777cff"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/SEAL.json": {
+      "bytes": 724,
+      "sha256": "b008716ebac3e9705cb181752a75a8d238292be2e4a15d337c0f01a5e420b67a"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/arrays.npz": {
+      "bytes": 1763139,
+      "sha256": "ec2f5484d52bf9e967fa0476fcbfa161927f87db56bef5ebe7b6782668288aba"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/initializations.json": {
+      "bytes": 95141,
+      "sha256": "4931ef4cfd35d12ab3802f9110ee4a78442bef569a879b44dbdf1b690459be5e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/summaries.json": {
+      "bytes": 10869,
+      "sha256": "360655a6be29cc75f0dcf4efdc4993d3b6a0161c11bdebafb16a8f69b2fe8b4c"
+    }
+  },
+  "interpretation": "Differences are reported, not treated as permission to tune or repeat a run. A matching rerun does not recover the lost original checkpoint.",
+  "schema": "huginn_historical_rerun_comparison.v1",
+  "seeds": {
+    "2026090803": {
+      "cached_tensors": {
+        "H": {
+          "bitwise_different_entries": 0,
+          "dtype": "float32",
+          "entries": 25006080,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32,
+            5280
+          ]
+        },
+        "native_logits": {
+          "bitwise_different_entries": 0,
+          "dtype": "float32",
+          "entries": 9699328,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            65536
+          ]
+        },
+        "target_states": {
+          "bitwise_different_entries": 0,
+          "dtype": "float32",
+          "entries": 781440,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            5280
+          ]
+        }
+      },
+      "initializations.json": {
+        "differences": [],
+        "different_fields": 0,
+        "exact_value_equality": true
+      },
+      "rank_and_argmax_arrays": {
+        "coda_allrank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 606208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "coda_rank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 14208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "coda_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 4736,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "jlens_allrank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 606208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "jlens_rank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 14208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "jlens_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 4736,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "native_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 148,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148
+          ]
+        },
+        "raw_allrank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 606208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "raw_rank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 14208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "raw_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 4736,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32
+          ]
+        }
+      },
+      "summaries.json": {
+        "differences": [],
+        "different_fields": 0,
+        "exact_value_equality": true
+      }
+    },
+    "2026090804": {
+      "cached_tensors": {
+        "H": {
+          "bitwise_different_entries": 0,
+          "dtype": "float32",
+          "entries": 25006080,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32,
+            5280
+          ]
+        },
+        "native_logits": {
+          "bitwise_different_entries": 0,
+          "dtype": "float32",
+          "entries": 9699328,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            65536
+          ]
+        },
+        "target_states": {
+          "bitwise_different_entries": 0,
+          "dtype": "float32",
+          "entries": 781440,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            5280
+          ]
+        }
+      },
+      "initializations.json": {
+        "differences": [],
+        "different_fields": 0,
+        "exact_value_equality": true
+      },
+      "rank_and_argmax_arrays": {
+        "coda_allrank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 606208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "coda_rank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 14208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "coda_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 4736,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "jlens_allrank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 606208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "jlens_rank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 14208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "jlens_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 4736,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32
+          ]
+        },
+        "native_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 148,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148
+          ]
+        },
+        "raw_allrank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 606208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            128,
+            32
+          ]
+        },
+        "raw_rank": {
+          "bitwise_different_entries": 0,
+          "dtype": "int32",
+          "entries": 14208,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            3,
+            32
+          ]
+        },
+        "raw_top1": {
+          "bitwise_different_entries": 0,
+          "dtype": "int64",
+          "entries": 4736,
+          "first_differences": [],
+          "max_absolute_difference": 0.0,
+          "numeric_different_entries": 0,
+          "rms_difference": 0.0,
+          "shape": [
+            148,
+            32
+          ]
+        }
+      },
+      "summaries.json": {
+        "differences": [],
+        "different_fields": 0,
+        "exact_value_equality": true
+      }
+    }
+  },
+  "source_record": {
+    "bytes": 12305,
+    "sha256": "7f69b568cf4a8b5dfcaa9f675d9413652117da8747930147575c42e7c02527b0"
+  },
+  "utc": "2026-09-09T23:50:43.088175+00:00"
+}

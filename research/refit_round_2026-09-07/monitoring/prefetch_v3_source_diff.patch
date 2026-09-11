@@ -1,0 +1,74 @@
+--- /tmp/prefetch_completed_ouro06_v2.py
++++ /tmp/prefetch_completed_ouro06_v3.py
+@@ -1,4 +1,4 @@
+-"""V2: bounded transport retry/resume for 14 sealed Ouro/control binaries.
++"""V3: bounded transport retry/resume for 14 sealed Ouro/control binaries.
+ 
+ Remote operations are reads only. Files are verified outside retrieved, then
+ published atomically under the final collector's short exclusive lock. This
+@@ -37,7 +37,8 @@
+ REMOTE = '/workspace/jlens/results'
+ TOTAL_BYTES = 38429057822
+ POLL_SECONDS = 5.0
+-STATUS_TIMEOUT = 20.0
++STATUS_TIMEOUT = 45.0
++PUBLICATION_STATUS_TIMEOUT = 15.0
+ HASH_TIMEOUT = 900.0
+ TRANSFER_TIMEOUT = 3600.0
+ MAX_ATTEMPTS = 5
+@@ -405,7 +406,7 @@
+     """Validate an incomplete pinned operation without changing any old bytes."""
+     prior = io._no_links(prior)
+     require(prior.parent == io._no_links(LEASE_ROOT) and prior.is_dir()
+-            and re.fullmatch(r'prefetch_(?:v2_)?[0-9]{8}T[0-9]{6}Z(?:_[0-9a-f]{8})?', prior.name),
++            and re.fullmatch(r'prefetch_(?:v[23]_)?[0-9]{8}T[0-9]{6}Z(?:_[0-9a-f]{8})?', prior.name),
+             'resume source must be a separate prior attempt06 prefetch operation')
+     plan_path, incomplete_path = prior / 'PLAN.json', prior / 'INCOMPLETE.json'
+     plan_record, _ = checked_record(plan_path)
+@@ -415,7 +416,9 @@
+             and plan.get('required_phase') == 'huginn_fit' and plan.get('inventory') == expected,
+             'prior operation lease/phase/pinned inventory mismatch')
+     source = plan.get('source', {})
+-    require(source in ({'bytes': 25901, 'sha256': V1_SOURCE_SHA256}, io._record(Path(__file__))),
++    require(source in ({'bytes': 25901, 'sha256': V1_SOURCE_SHA256},
++                       {'bytes': 39855, 'sha256': '5284ff464fdeed0029497d95feeb9cd4365cc2d5139e5de2615a32d5e068d06e'},
++                       io._record(Path(__file__))),
+             'prior operation did not use an accepted matching helper')
+     require(incomplete.get('status') == 'incomplete' and isinstance(incomplete.get('error_type'), str)
+             and isinstance(incomplete.get('stopped_utc'), str), 'prior operation lacks an INCOMPLETE receipt')
+@@ -587,7 +590,7 @@
+             after = self.snapshot(relative, 'after')
+             require(before['binary'] == after['binary'], 'remote binary or mtime changed during verification')
+             with sync_lock(LEASE_ROOT):
+-                self.status(check_lock=False, timeout=5)
++                self.status(check_lock=False, timeout=PUBLICATION_STATUS_TIMEOUT)
+                 io._no_links(target)
+                 require(signature(target.stat()) == existing_signature, 'existing target changed before acceptance')
+                 require(target.stat().st_mtime_ns == before['binary']['mtime_ns'],
+@@ -604,7 +607,7 @@
+             with staged.open('rb') as handle:
+                 os.fsync(handle.fileno())
+             outcome = install_verified(staged, target, expected, before['binary']['mtime_ns'], LEASE_ROOT,
+-                lambda: self.status(check_lock=False, timeout=5), self.status)
++                lambda: self.status(check_lock=False, timeout=PUBLICATION_STATUS_TIMEOUT), self.status)
+         return {'path': relative, 'record': expected, 'remote_mtime_ns': before['binary']['mtime_ns'],
+                 'local_mtime_ns': target.stat().st_mtime_ns, 'outcome': outcome, 'finished_utc': utc()}
+ 
+@@ -678,14 +681,16 @@
+             'metadata_records': len(expected['metadata']), 'bytes': TOTAL_BYTES,
+             'resume': resume, 'maximum_attempts_per_file': MAX_ATTEMPTS,
+             'overall_seconds_per_file': TRANSFER_TIMEOUT,
++            'status_timeout_seconds': STATUS_TIMEOUT, 'publication_status_timeout_seconds': PUBLICATION_STATUS_TIMEOUT,
+             'execution_performed': False}, indent=2))
+         return 0
+-    operation = io._no_links(LEASE_ROOT / ('prefetch_v2_' + datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
++    operation = io._no_links(LEASE_ROOT / ('prefetch_v3_' + datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+                                           + '_' + uuid.uuid4().hex[:8]))
+     operation.mkdir(exist_ok=False)
+     io._new_json(operation / 'PLAN.json', {'lease_name': NAME, 'pod_id': POD, 'required_phase': 'huginn_fit',
+         'source': io._record(Path(__file__)), 'inventory': expected, 'created_utc': utc(),
+         'retry_policy': {'maximum_attempts_per_file': MAX_ATTEMPTS, 'overall_seconds_per_file': TRANSFER_TIMEOUT,
++                         'status_timeout_seconds': STATUS_TIMEOUT, 'publication_status_timeout_seconds': PUBLICATION_STATUS_TIMEOUT,
+                          'ssh_transport_codes': [255], 'rsync_transport_codes': sorted(RSYNC_TRANSPORT_CODES),
+                          'resume_from': None if resume is None else resume['root']},
+         'scope': 'Read-only remote prefetch; all operation/staging files outside retrieved; final collector unchanged.'})

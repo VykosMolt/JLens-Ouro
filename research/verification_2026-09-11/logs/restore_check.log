@@ -1,0 +1,31 @@
+{
+ "rehash": {
+  "core": {
+   "files": 7380,
+   "bytes": 14968501364,
+   "manifest_problems": 0
+  },
+  "mismatched": []
+ },
+ "frozen_code": {
+  "archive_matches_freeze": true,
+  "extracted_members_match_freeze": true,
+  "members": 59
+ },
+ "rescoring": {
+  "raw": {
+   "allrank": true,
+   "top10_ids": true,
+   "rank": true,
+   "top1": true
+  },
+  "fit01": {
+   "allrank": true,
+   "top10_ids": true,
+   "rank": true,
+   "top1": true
+  }
+ },
+ "analysis_rerun_equals_saved_json": true
+}
+exit 0

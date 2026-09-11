@@ -1,0 +1,7 @@
+{"batch": 2, "label": "start_0", "output_rows": [0, 1], "stored_shape": [191, 2, 2048], "backward_seconds": 0.6878882659984811, "reduction_copy_seconds": 0.0060105800002929755, "all_finite": true}
+{"batch": 8, "label": "start_0", "output_rows": [0, 1, 2, 3, 4, 5, 6, 7], "stored_shape": [191, 8, 2048], "backward_seconds": 2.2013802639994537, "reduction_copy_seconds": 0.016548159001104068, "all_finite": true}
+{"batch": 8, "label": "start_1024", "output_rows": [1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031], "stored_shape": [191, 8, 2048], "backward_seconds": 2.0518848889987567, "reduction_copy_seconds": 0.013268351001897827, "all_finite": true}
+{"batch": 8, "label": "start_2040", "output_rows": [2040, 2041, 2042, 2043, 2044, 2045, 2046, 2047], "stored_shape": [191, 8, 2048], "backward_seconds": 1.99840811499962, "reduction_copy_seconds": 0.01330863099792623, "all_finite": true}
+{"batch": 8, "label": "repeat_start_0", "output_rows": [0, 1, 2, 3, 4, 5, 6, 7], "stored_shape": [191, 8, 2048], "backward_seconds": 1.9976425909990212, "reduction_copy_seconds": 0.013823605000652606, "all_finite": true}
+{"batch": 8, "label": "zero", "output_rows": [], "stored_shape": [191, 8, 2048], "backward_seconds": 2.009980118000385, "reduction_copy_seconds": 0.013169244000891922, "all_finite": true}
+{"status": "complete_sampled_reference", "batch": 8, "b2_gate": {"bitwise_equal": true, "max_absolute_error": 0.0, "relative_frobenius_error": 0.0}, "complete_jacobian_reference": false, "output": "research/refit_round_2026-09-07/optimization/offload_reference_b8_v2.json"}

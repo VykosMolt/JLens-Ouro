@@ -1,0 +1,227 @@
+{
+  "all_other_candidate_files_byte_identical_to_parent": true,
+  "ast_equivalence_after_removing_only_assignments": [
+    "torch.backends.cuda.matmul.allow_tf32 = False",
+    "torch.backends.cudnn.allow_tf32 = True"
+  ],
+  "baseline_scientific_payloads_byte_identical": {
+    "frozen/PROSPECTIVE_PLAN.md": {
+      "bytes": 13061,
+      "sha256": "4ea3f201cd248cf1e1792410f61e60ccbe4f0a4c380daedb8fdf45a4129b7317"
+    },
+    "frozen/annotation_review.json": {
+      "bytes": 11145,
+      "sha256": "df1906ffcf69d6c03dc0a25c63022f4012b5d0c4758929abd01ff92cd80ede08"
+    },
+    "frozen/benchmark.json": {
+      "bytes": 967118,
+      "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99"
+    },
+    "frozen/implementation_review.json": {
+      "bytes": 4558,
+      "sha256": "7af56d6a360bb205c62a4d0212713897c80d3683b53024a255b31c5f4075a837"
+    },
+    "frozen/output_contract.json": {
+      "bytes": 2976,
+      "sha256": "b10eff01984ab34eca3210dff272b6afc49444232e969068c6b2c0f78bc90954"
+    },
+    "frozen/population.json": {
+      "bytes": 373077,
+      "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087"
+    },
+    "frozen/run_spec.json": {
+      "bytes": 18643,
+      "sha256": "8a4a3e6725d811d0b2584561a277d5071f097c551f40c46be9f6773a7d61181e"
+    }
+  },
+  "candidate_changed_files": [
+    "evaluation/worker.py"
+  ],
+  "candidate_file_count": 57,
+  "candidate_record": {
+    "bytes": 806,
+    "sha256": "37ab4305f656e36c690b8187befa4ca0cf06d2623fc9997712949317993603fc"
+  },
+  "consumer_requirements": [
+    "Archive retains top-level bundle/ layout.",
+    "New run ID and new run-spec hash must update the output contract and config; exact config/contract schemas remain unchanged.",
+    "Use original resources/parallel_upload.py and original launcher; these resolve original controller/evaluation paths and obtain corrected archive/spec through the new lease.",
+    "Launcher, artifacts helper, controller source pins, and all four bank records remain unchanged.",
+    "Correction provenance goes into spec/freeze receipt; consumers do not substantively validate review provenance.",
+    "Fresh lease/publication namespace; preserve failed terminal attempt and original freeze.",
+    "Actual remote full precision equality and native/receiver/external development acceptance gates remain mandatory."
+  ],
+  "corrected_worker_record": {
+    "bytes": 10143,
+    "sha256": "386c2649e6628a45d7bcc7745d9cf4686cbb03fd6c9cf9196b65e6938b9ab0b5"
+  },
+  "diagnosis_record": {
+    "bytes": 7050,
+    "sha256": "34e44959e4a70c2a008b6d987cc1c3e6778f06e150ccd34467a9ad8f50e454f0"
+  },
+  "new_confirmation_results_exposed": false,
+  "original_bundle_matches_parent_freeze": true,
+  "parent_freeze_record": {
+    "bytes": 7279,
+    "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7"
+  },
+  "precision_regression": {
+    "actual_corrected_gate_accepts_defaults": true,
+    "actual_corrected_gate_rejects_original_setter_result": true,
+    "after": {
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "cudnn_fp32_precision": "none",
+      "deterministic_algorithms": false,
+      "deterministic_warn_only": false,
+      "environment": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MKL_NUM_THREADS": "8",
+        "NVIDIA_TF32_OVERRIDE": null,
+        "OMP_NUM_THREADS": "8",
+        "PYTORCH_ALLOC_CONF": "expandable_segments:True",
+        "PYTORCH_CUDA_ALLOC_CONF": null
+      },
+      "float32_matmul_precision": "highest",
+      "matmul": {
+        "allow_bf16_reduced_precision_reduction": true,
+        "allow_bf16_reduced_precision_reduction_split_k": true,
+        "allow_fp16_accumulation": false,
+        "allow_fp16_reduced_precision_reduction": true,
+        "allow_fp16_reduced_precision_reduction_split_k": true,
+        "allow_tf32": false,
+        "fp32_precision": "ieee"
+      },
+      "sdpa": {
+        "cudnn_sdp_enabled": true,
+        "flash_sdp_enabled": true,
+        "fp16_bf16_reduction_math_sdp_allowed": false,
+        "math_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true
+      },
+      "sdpa_scope": "enabled implementations; not a trace of the selected runtime kernel"
+    },
+    "before": {
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "cudnn_fp32_precision": "none",
+      "deterministic_algorithms": false,
+      "deterministic_warn_only": false,
+      "environment": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "CUDA_VISIBLE_DEVICES": "0",
+        "MKL_NUM_THREADS": "8",
+        "NVIDIA_TF32_OVERRIDE": null,
+        "OMP_NUM_THREADS": "8",
+        "PYTORCH_ALLOC_CONF": "expandable_segments:True",
+        "PYTORCH_CUDA_ALLOC_CONF": null
+      },
+      "float32_matmul_precision": "highest",
+      "matmul": {
+        "allow_bf16_reduced_precision_reduction": true,
+        "allow_bf16_reduced_precision_reduction_split_k": true,
+        "allow_fp16_accumulation": false,
+        "allow_fp16_reduced_precision_reduction": true,
+        "allow_fp16_reduced_precision_reduction_split_k": true,
+        "allow_tf32": false,
+        "fp32_precision": "none"
+      },
+      "sdpa": {
+        "cudnn_sdp_enabled": true,
+        "flash_sdp_enabled": true,
+        "fp16_bf16_reduction_math_sdp_allowed": false,
+        "math_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true
+      },
+      "sdpa_scope": "enabled implementations; not a trace of the selected runtime kernel"
+    },
+    "corrected_defaults_match_entire_original_precision": true,
+    "cuda_initialized": false,
+    "differences": [
+      {
+        "after": "ieee",
+        "before": "none",
+        "field": "matmul.fp32_precision"
+      }
+    ],
+    "original_setters_fail_entire_precision_equality": true,
+    "torch_version": "2.12.0.dev20260407+cu128"
+  },
+  "preserved_gates": [
+    "Full precision dictionary comparison",
+    "Native virtual/physical/wrapper state equality",
+    "Native logits/unembedding equality",
+    "External durable development acceptance",
+    "Receiver-side numerical validation",
+    "Scientific scoring and analysis code unchanged"
+  ],
+  "probe_interpreter": "/home/moloch/ouro_project/venv/bin/python",
+  "probe_source": "import ast,os,json,pathlib\nroot=pathlib.Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')\nspec=json.loads((root/'bundle/frozen/run_spec.json').read_text()); expected=spec['original_precision']\nfor k,v in expected['environment'].items():\n if v is None:os.environ.pop(k,None)\n else:os.environ[k]=v\nimport torch\ntorch.set_num_threads(8);torch.set_num_interop_threads(1)\nfn=next(n for n in ast.parse((root/'bundle/legacy/run_refits.py').read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='_precision')\nexec(compile(ast.Module(body=[fn],type_ignores=[]),'pinned_precision','exec'))\nworker=ast.parse((root/'corrections/precision_v1/bundle/evaluation/worker.py').read_text())\ngate=next(n for n in ast.walk(worker) if isinstance(n,ast.If) and ast.unparse(n.test)==\"runtime['precision'] != spec['original_precision']\")\ndef rejects(value):\n try:exec(compile(ast.Module(body=[gate],type_ignores=[]),'actual_corrected_gate','exec'),{'runtime':{'precision':value},'spec':spec})\n except ValueError:return True\n return False\nbefore=_precision(torch);assert before==expected;assert not rejects(before)\ntorch.backends.cuda.matmul.allow_tf32=False\ntorch.backends.cudnn.allow_tf32=True\nafter=_precision(torch);assert after!=expected;assert rejects(after)\ndiff=[{'field':f'matmul.{k}','before':before['matmul'][k],'after':v} for k,v in after['matmul'].items() if before['matmul'][k]!=v]\nassert len(diff)==1 and diff[0]['field']=='matmul.fp32_precision';rest=dict(after);rest['matmul']=dict(before['matmul']);assert rest==before\nassert not torch.cuda.is_initialized()\nprint(json.dumps({'torch_version':torch.__version__,'cuda_initialized':torch.cuda.is_initialized(),'corrected_defaults_match_entire_original_precision':True,'actual_corrected_gate_accepts_defaults':True,'original_setters_fail_entire_precision_equality':True,'actual_corrected_gate_rejects_original_setter_result':True,'differences':diff,'before':before,'after':after}))\n",
+  "reviewed_sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/analysis/analyze.py": {
+      "bytes": 5870,
+      "sha256": "e4c3812d91d16d588d2beddab34e683e7732fc1d4ea4b1ee1ecb8b5b6b79e47f"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/analysis/plot.py": {
+      "bytes": 3535,
+      "sha256": "8aa0c775c30651adaec1e4ac277e666fd43f3fd774f2aad235d576ac3893047e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/artifacts.py": {
+      "bytes": 3054,
+      "sha256": "1ca7827386131ee48f304b1caf78110075c2c6dad7201056728d4a9c9559b226"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/audit_novelty.py": {
+      "bytes": 4333,
+      "sha256": "ba84fec890961ed1400088947fc7fbf9c37ef8913a31d5e669f06f76664a0d5a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/bootstrap.py": {
+      "bytes": 4446,
+      "sha256": "712526b8d3bc6d49b3e98a5213906882fca9883399a3342a8a7e9794b0dd6964"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/download_model.py": {
+      "bytes": 459,
+      "sha256": "3ee24f0fd0e92acc74a17fb6dfa2216d814f599f69716fc6eb332b4b9b470602"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/freeze.py": {
+      "bytes": 8710,
+      "sha256": "3f3adc20b43b9a309608635857a63f25c2ac5df04abcef0461e342f5b1008802"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/launch.py": {
+      "bytes": 6518,
+      "sha256": "383fd097f4483132d5c7d845c998093ce170e7263068ff82626a9810e1c78a81"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/measurement.py": {
+      "bytes": 4277,
+      "sha256": "06c615b29285e0e4e10196ae8f15b015d5c8a362f5e7704adb38ce6e275799fe"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/prepare_population.py": {
+      "bytes": 4321,
+      "sha256": "b15724e8b25dc77a7ef6d7f9aa78542c3076d1f58f91f77bef31050497bd4b45"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/readouts.py": {
+      "bytes": 4685,
+      "sha256": "2d1762f126e9f1da9a9b7aabc2039de3697bbc5fc5b385ab6a034aa2dc931226"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/self_test.py": {
+      "bytes": 4751,
+      "sha256": "a2bcabcf62f42a962aa85ce8ed14040deae4c7819834eb71b5ff23fdde33789e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/validate_outputs.py": {
+      "bytes": 10057,
+      "sha256": "588dbf72a8f520e1fe4d7eb590704b928a4accb3ceabb85d36b56bf7296af7ed"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/worker.py": {
+      "bytes": 10143,
+      "sha256": "386c2649e6628a45d7bcc7745d9cf4686cbb03fd6c9cf9196b65e6938b9ab0b5"
+    }
+  },
+  "reviewed_utc": "2026-09-10T10:43:53.811348+00:00",
+  "reviewer": "independent precision_correction_review agent",
+  "schema": "confirmation_precision_correction_implementation_review.v1",
+  "scope": "Prospective bounded correction implementation only; no model invocation or scientific outputs inspected. Final revised spec/contract/archive/receipt require separate post-freeze verification.",
+  "source_diff": "--- original/evaluation/worker.py\n+++ corrected/evaluation/worker.py\n@@ -56,9 +56,8 @@\n         from readouts import readout, native_development\n         from measurement import ARMS, SUPPORT\n         torch.set_num_threads(8); torch.set_num_interop_threads(1)\n-        # Preserve original precision switches and record their actual values.\n-        torch.backends.cuda.matmul.allow_tf32=False\n-        torch.backends.cudnn.allow_tf32=True\n+        # Retain the pinned runtime defaults; the full precision check below\n+        # rejects any difference from the original evaluation before readouts.\n         env = json.loads((bundle/'legacy/environment.json').read_text())\n         environment = legacy._environment(torch, env)\n         model_manifest = json.loads((bundle/'legacy/model_manifest.json').read_text())\n",
+  "status": "passed"
+}

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "development/native.pt": {
+      "role": "M1: unchanged readouts.native_development tensors"
+    },
+    "diagnostic/comparisons.json": {
+      "role": "exact comparison record, recomputed by the verifier"
+    },
+    "diagnostic/tensors.pt": {
+      "role": "M2 and M4 captured tensors; M3 recomputed target rows; produced dtypes"
+    },
+    "provenance.json": {
+      "role": "runtime and provenance record: precision dictionary, versions, GPU identity"
+    },
+    "run_spec.json": {
+      "role": "frozen diagnostic run specification"
+    }
+  },
+  "required_checks": [
+    "loadability",
+    "numerical"
+  ],
+  "run_id": "ouro_native_logit_diagnostic_v1",
+  "run_spec_sha256": "a9e54b9a94de17ee4c6681094851c5268df5dc8bc57dd270ce6f2d2442e583d6",
+  "schema": "confirmation_output_contract.v1",
+  "stages": {}
+}

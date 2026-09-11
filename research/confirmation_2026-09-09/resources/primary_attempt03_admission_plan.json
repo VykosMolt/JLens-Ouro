@@ -1,0 +1,93 @@
+{
+  "compute_budget_seconds": 3600.0,
+  "output_contract_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/output_contract.json",
+  "preservation_reserve_seconds": 1800.0,
+  "run_id": "ouro_confirmation_20260909_fixed160",
+  "run_spec_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/run_spec.json",
+  "schema": "confirmation_run_config.v1",
+  "semantic_verifier": {
+    "callable": "validate_outputs",
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/evaluation/validate_outputs.py",
+    "record": {
+      "bytes": 10057,
+      "sha256": "588dbf72a8f520e1fe4d7eb590704b928a4accb3ceabb85d36b56bf7296af7ed"
+    }
+  },
+  "setup_budget_seconds": 12300.0,
+  "transfer_timeout_seconds": 900.0,
+  "run_spec_record": {
+    "bytes": 18643,
+    "sha256": "8a4a3e6725d811d0b2584561a277d5071f097c551f40c46be9f6773a7d61181e"
+  },
+  "run_spec_sha256": "8a4a3e6725d811d0b2584561a277d5071f097c551f40c46be9f6773a7d61181e",
+  "output_contract_record": {
+    "bytes": 2976,
+    "sha256": "b10eff01984ab34eca3210dff272b6afc49444232e969068c6b2c0f78bc90954"
+  },
+  "output_contract_sha256": "b10eff01984ab34eca3210dff272b6afc49444232e969068c6b2c0f78bc90954",
+  "run_config_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/run_config_retry_02.json",
+  "run_config_record": {
+    "bytes": 778,
+    "sha256": "fe81ddeea1f9e939d221a14d97ebbcb7a5f19abad1c2df8edc11929e7e0c28c6"
+  },
+  "schema_version": 2,
+  "name": "jlens-confirm-74b7c3239557472b8f38cf21eb94d47a",
+  "image": "python@sha256:9ab8d9c8514b44f90cf0029dd42fdd7e9e211e639c8b995304cc04568dee900f",
+  "gpu_type_id": "NVIDIA GeForce RTX 5090",
+  "cloud": "COMMUNITY",
+  "gpu_count": 1,
+  "container_disk_gb": 120,
+  "volume_gb": 0,
+  "max_gpu_rate": 0.69,
+  "quoted_gpu_rate": 0.69,
+  "storage_rate": 0.01643835616438356,
+  "all_in_rate": 0.7064383561643836,
+  "combined_cap_usd": 25.0,
+  "prior_spend_upper_usd": 14.918209430080859,
+  "starting_balance": 12.6214391722,
+  "preserve_balance": 8.851439172200001,
+  "billing_start_utc": "2026-09-10T08:36:21Z",
+  "provider_deadline_utc": "2026-09-10T13:41:21Z",
+  "watch_deadline_utc": "2026-09-10T13:31:21Z",
+  "work_deadline_utc": "2026-09-10T13:01:21Z",
+  "setup_deadline_utc": "2026-09-10T12:01:21Z",
+  "job_incremental_cap_usd": 3.77,
+  "prior_debit_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/prior_debit.json",
+  "prior_debit_record": {
+    "bytes": 4186,
+    "sha256": "b55f5f6e99a598a4c7227298b0bd9cfaf6e8d39c6ac97f39df77162bd86f652a"
+  },
+  "new_lease_debits": [
+    {
+      "name": "jlens-confirm-5e9d166258534ab194780388d2feffd0",
+      "record": {
+        "bytes": 6187,
+        "sha256": "2a1a9a21645f724a3800798d81c6eb5e838f32bc3b696b974d364d19f9f6b623"
+      },
+      "lease_spend_upper_usd": 0.22588409273346807
+    },
+    {
+      "name": "jlens-confirm-574ac8337bb243edb507570e695640ed",
+      "record": {
+        "bytes": 6712,
+        "sha256": "09a6c6027b9ec4fcb3ab3cf87a60f07bc651244618b662987a03d7f3b92a8d3b"
+      },
+      "lease_spend_upper_usd": 0.8404813042020144
+    }
+  ],
+  "account_id": "user_3I33u3QLWgO7POHKINt6GfLeTUw",
+  "known_manifests": {},
+  "stage_acceptances": {},
+  "user_notice_utc": null,
+  "bundle": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle.tar.gz",
+  "bundle_record": {
+    "bytes": 320841,
+    "sha256": "a122f6ca0c6ef466e2c65c3f6d4ccd7131a625c5b398b0bb71bd8b9e22fbfe73"
+  },
+  "status": "planned",
+  "mutation_phase": "not_started",
+  "halt_requested": false,
+  "pod_id": null,
+  "machine_id": null,
+  "ledger": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases"
+}

@@ -1,0 +1,185 @@
+{
+  "authorization": {
+    "intent_receipt_match": true,
+    "recorded_reference_checked_against_user_request": true,
+    "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/SETUP_DEADLINE_AMENDMENT_INTENT.json#authorization"
+  },
+  "current_state_changes_since_amendment": [
+    "last_poll_utc",
+    "observed_balance",
+    "observed_combined_spend_upper_usd",
+    "watch_heartbeat_utc",
+    "worker_status_missing_utc"
+  ],
+  "exact_amendment": {
+    "after": "2026-09-10T18:35:01Z",
+    "after_record": {
+      "bytes": 6962,
+      "sha256": "89b024a20e1d2386f06b952dbbf498523936a03ff6c67a6ff7ccaad8b221ab26"
+    },
+    "amendment_utc": "2026-09-10T18:13:54Z",
+    "applied_before_original_setup_deadline": true,
+    "before": "2026-09-10T18:20:01Z",
+    "changed_fields": [
+      "setup_deadline_utc"
+    ],
+    "extension_seconds": 900,
+    "original_record": {
+      "bytes": 6962,
+      "sha256": "9f24d9a8f66f2625367fe95cdfdb2c062e3243f05d77e6072e50ebace88176e2"
+    },
+    "preserved_original_bytes_verified": true,
+    "reconstructed_after_bytes_match_receipt": true
+  },
+  "lease_name": "jlens-confirm-e5b5cdde88044a96ab1410aa165a76e5",
+  "limitations": [
+    "The mutation is an explicit user-authorized exception to the controller rule that deadlines cannot be extended; it is not evidence that lease.change accepted an extension.",
+    "Immediate amended bytes were reconstructed using the exact canonical serializer and verified against the recorded SHA-256 because the live watcher subsequently updates observation fields.",
+    "The one-use helper does not itself enforce uploader quiescence or inspect remote launch state. Separate local uploader evidence establishes quiescence; inspected local launch directory remained empty.",
+    "The helper lacks explicit halt_requested/computation_stop_reason checks beyond local marker checks; preserved actual pre-amendment state had halt_requested=false and no computation stop reason or stop request."
+  ],
+  "locking_and_publication": {
+    "atomic_replace_and_directory_fsync": true,
+    "holds_existing_state_lock_across_read_intent_amendment_and_receipt": true,
+    "original_bytes_saved_before_amendment": true,
+    "single_use_guard": true
+  },
+  "pod_id": "i7zq14rj0f0ief",
+  "reviewed_utc": "2026-09-10T18:16:56.093599+00:00",
+  "schema": "confirmation_deadline_amendment_review.v1",
+  "science_acceptance": {
+    "binding_and_all_frozen_inputs_unchanged": true,
+    "deadline_not_part_of_handoff_binding": true,
+    "precision_and_native_gates_unchanged": true,
+    "successful_outcome_not_asserted": true
+  },
+  "scope": "Independent local evidence review; no existing file, lease, service, or cloud resource modified.",
+  "source_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/LEASE.json": {
+      "bytes": 6963,
+      "sha256": "8e54d84ca4e388dfb72bcbcab5be52617439f9162ad75a3bef9ae399aaaa64f5"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/SETUP_DEADLINE_AMENDMENT.json": {
+      "bytes": 959,
+      "sha256": "2877e977fa6277c838729fd1661182f418681889e90233a93421b0c52e1f4c45"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/SETUP_DEADLINE_AMENDMENT_INTENT.json": {
+      "bytes": 10104,
+      "sha256": "264b7c4e69db9699806d202b7be09f80fe233d9898600dc263f54020b5614741"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/monitor/artifact_handoff.py": {
+      "bytes": 29606,
+      "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/monitor/lease.py": {
+      "bytes": 56750,
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/monitor/pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/monitor/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/monitor/runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/monitor/transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/artifact_handoff.py": {
+      "bytes": 29606,
+      "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/lease.py": {
+      "bytes": 56750,
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/amend_setup_deadline.py": {
+      "bytes": 4921,
+      "sha256": "d4aca339c18e7ff2a5ea39bc7f04f04bf1b29588c77fdd74b3cb22266524eb24"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload.py": {
+      "bytes": 35465,
+      "sha256": "512946233e308a7918f1871eff88beca049afcf733d2382a0efc12cbab8ec2f4"
+    }
+  },
+  "status": "passed_actual_authorized_administrative_amendment",
+  "unchanged_hard_limits": {
+    "combined_cap_usd": 25.0,
+    "job_incremental_cap_usd": 3.77,
+    "provider_deadline_utc": "2026-09-10T20:00:01Z",
+    "watch_deadline_utc": "2026-09-10T19:50:01Z",
+    "work_deadline_utc": "2026-09-10T19:20:01Z"
+  },
+  "unchanged_identity_accounting_and_frozen_fields": [
+    "name",
+    "pod_id",
+    "machine_id",
+    "account_id",
+    "run_id",
+    "billing_start_utc",
+    "all_in_rate",
+    "max_gpu_rate",
+    "prior_spend_upper_usd",
+    "prior_debit_path",
+    "prior_debit_record",
+    "new_lease_debits",
+    "preserve_balance",
+    "controller_sources",
+    "bundle",
+    "bundle_record",
+    "run_spec_path",
+    "run_spec_record",
+    "run_spec_sha256",
+    "run_config_path",
+    "run_config_record",
+    "output_contract_path",
+    "output_contract_record",
+    "output_contract_sha256",
+    "semantic_verifier"
+  ],
+  "uploader": {
+    "all_process_groups_quiescent": true,
+    "last_pre_amendment_completion_event_utc": "2026-09-10T18:12:50.287602+00:00",
+    "new_deadline_invocations": [
+      {
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/parallel_upload_runs/jlens-confirm-e5b5cdde88044a96ab1410aa165a76e5/INVOCATION-29551da802fb433f88fedc7c28cf269a.json",
+        "record": {
+          "bytes": 4646,
+          "sha256": "031d6a4d4323721090ea895861ac88c8fa58423fed974759e4b5ebb6d7c8e2ba"
+        },
+        "setup_deadline_utc": "2026-09-10T18:35:01Z"
+      }
+    ],
+    "process_count": 51
+  },
+  "watcher": {
+    "administrative_exception_explicit": true,
+    "compatibility": "watch reloads LEASE.json each poll and enforces current setup deadline. Existing change/update compares against the latest locked state, so ordinary later updates preserve the amended value. Work, watch, provider deadlines, rates, prior debits, preservation floor and caps remain unchanged.",
+    "heartbeat_after_amendment": "2026-09-10T18:16:36Z",
+    "normal_mutation_api_allows_extension": false,
+    "source_pins_match_before_state": true,
+    "status_at_review": "running"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source_pod": "3mnl58tg6nhk8c",
+  "scope": "read-only interim preflight copy, separate from final result inventory",
+  "files": {
+    "status.json": {
+      "bytes": 264,
+      "sha256": "4108e10ab8511805dc5266c98e8fc567d37f38bdf26e6e697a695d2e944bd60c"
+    },
+    "results/preflight_ouro/ouro_main.json": {
+      "bytes": 3494,
+      "sha256": "308d563ef1fe53f830001838ba8117a3a1cc532096ec5d2fb23b47561932807b"
+    },
+    "results/logs/preflight_ouro.log": {
+      "bytes": 4947,
+      "sha256": "b5ff0c4e9b3834d118dc6b275a3b795415b8c42e040b6a3f1334d3e5fd731f03"
+    }
+  }
+}

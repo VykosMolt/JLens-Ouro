@@ -1,0 +1,241 @@
+{
+  "accepted": {
+    "comparisons": 255,
+    "result": {
+      "checked_files": [
+        "development/native.pt",
+        "diagnostic/comparisons.json",
+        "diagnostic/tensors.pt",
+        "provenance.json",
+        "run_spec.json"
+      ],
+      "checks": {
+        "loadability": true,
+        "numerical": true
+      },
+      "contract_sha256": "d143f7d8a378e3f813af35671f91470cb628320df497f103fa13358d50aa9cf7",
+      "manifest_sha256": "c648bb548cc5e297a10bcd1778f98696251cdba2307207bb3aea4da8008bd4c9",
+      "run_id": "ouro_native_logit_diagnostic_v1",
+      "schema": "confirmation_validation.v1",
+      "status": "passed"
+    },
+    "unequal_comparisons_accepted": 158
+  },
+  "bundle_records": {
+    "controller/artifact_handoff.py": {
+      "bytes": 29606,
+      "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+    },
+    "controller/lease.py": {
+      "bytes": 56750,
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    "controller/pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "controller/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "controller/runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "controller/test_lifecycle.py": {
+      "bytes": 35975,
+      "sha256": "7dc4d0d328ccb4a5661d4362179fbfef2d7d2f81ab6f14197d0f47ef444fa7de"
+    },
+    "controller/transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "evaluation/artifacts.py": {
+      "bytes": 3054,
+      "sha256": "1ca7827386131ee48f304b1caf78110075c2c6dad7201056728d4a9c9559b226"
+    },
+    "evaluation/bootstrap.py": {
+      "bytes": 4446,
+      "sha256": "712526b8d3bc6d49b3e98a5213906882fca9883399a3342a8a7e9794b0dd6964"
+    },
+    "evaluation/download_model.py": {
+      "bytes": 459,
+      "sha256": "3ee24f0fd0e92acc74a17fb6dfa2216d814f599f69716fc6eb332b4b9b470602"
+    },
+    "evaluation/launch.py": {
+      "bytes": 6518,
+      "sha256": "383fd097f4483132d5c7d845c998093ce170e7263068ff82626a9810e1c78a81"
+    },
+    "evaluation/readouts.py": {
+      "bytes": 4685,
+      "sha256": "2d1762f126e9f1da9a9b7aabc2039de3697bbc5fc5b385ab6a034aa2dc931226"
+    },
+    "evaluation/validate_outputs.py": {
+      "bytes": 10648,
+      "sha256": "0afb9d9031b1ace14435abbd318a19defc1ff7688724606c522b28311b0b64f8"
+    },
+    "evaluation/worker.py": {
+      "bytes": 10115,
+      "sha256": "cdacad32d927f4961c2bafb25a7bc919dff205d457698e3ad2092c93247baad5"
+    },
+    "frozen/output_contract.json": {
+      "bytes": 829,
+      "sha256": "d143f7d8a378e3f813af35671f91470cb628320df497f103fa13358d50aa9cf7"
+    },
+    "frozen/run_spec.json": {
+      "bytes": 8484,
+      "sha256": "a9e54b9a94de17ee4c6681094851c5268df5dc8bc57dd270ce6f2d2442e583d6"
+    },
+    "legacy/cloud_worker.py": {
+      "bytes": 19100,
+      "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51"
+    },
+    "legacy/environment.json": {
+      "bytes": 4685,
+      "sha256": "940842c822fc3a76a89e94bd7fa052c63de9d71758b9a513d17260b39c8124a7"
+    },
+    "legacy/evaluate_controls.py": {
+      "bytes": 52577,
+      "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c"
+    },
+    "legacy/evaluate_refits.py": {
+      "bytes": 55009,
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17"
+    },
+    "legacy/model_manifest.json": {
+      "bytes": 2323,
+      "sha256": "377d9e75a2f6a38d1a94ac78bbe940e0c34f369ef8f0d6f692a65b4a3f071370"
+    },
+    "legacy/requirements.lock": {
+      "bytes": 12089,
+      "sha256": "87311c22b6d2eaa50e4c819dab431ff221fc787f8bbf495cbbc455db0a0245f1"
+    },
+    "legacy/run_controls.py": {
+      "bytes": 9851,
+      "sha256": "4da1528ed692409919003a1a02ec421fcd6b7d7453d9fbe88f28771b84239543"
+    },
+    "legacy/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "ouro_project/src/ouro_jlens/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ouro_project/src/ouro_jlens/bench.py": {
+      "bytes": 6251,
+      "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d"
+    },
+    "ouro_project/src/ouro_jlens/evaldata.py": {
+      "bytes": 7527,
+      "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74"
+    },
+    "ouro_project/src/ouro_jlens/evaluate.py": {
+      "bytes": 63535,
+      "sha256": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22"
+    },
+    "ouro_project/src/ouro_jlens/evidence.py": {
+      "bytes": 12530,
+      "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879"
+    },
+    "ouro_project/src/ouro_jlens/fit_lens.py": {
+      "bytes": 72898,
+      "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0"
+    },
+    "ouro_project/src/ouro_jlens/recurrent.py": {
+      "bytes": 5777,
+      "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+    },
+    "repo/data/evaluations/lens-eval-multihop.json": {
+      "bytes": 21869,
+      "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416"
+    },
+    "repo/data/evaluations/lens-eval-order-ops.json": {
+      "bytes": 9589,
+      "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560"
+    },
+    "repo/jlens/__init__.py": {
+      "bytes": 637,
+      "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a"
+    },
+    "repo/jlens/_logging.py": {
+      "bytes": 1804,
+      "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae"
+    },
+    "repo/jlens/data/README.md": {
+      "bytes": 298,
+      "sha256": "10d36304f8bde26e2b09aa10c31ad1fd7a3c6ef2616ade1159d6d126c87da788"
+    },
+    "repo/jlens/data/blackmail.json": {
+      "bytes": 9128,
+      "sha256": "5669487c78043535450506cd3ec9aa7b0a07b8309783437c093dc165ce79b30a"
+    },
+    "repo/jlens/data/slice_vis.html": {
+      "bytes": 43663,
+      "sha256": "d19d843aa5d1fa5073c925a7723c4e9503b9b83c5622d9775033887c64bf62d9"
+    },
+    "repo/jlens/examples.py": {
+      "bytes": 6300,
+      "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d"
+    },
+    "repo/jlens/fitting.py": {
+      "bytes": 15078,
+      "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080"
+    },
+    "repo/jlens/hf.py": {
+      "bytes": 8182,
+      "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222"
+    },
+    "repo/jlens/hooks.py": {
+      "bytes": 2735,
+      "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081"
+    },
+    "repo/jlens/lens.py": {
+      "bytes": 8646,
+      "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808"
+    },
+    "repo/jlens/protocol.py": {
+      "bytes": 1774,
+      "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344"
+    },
+    "repo/jlens/vis.py": {
+      "bytes": 19984,
+      "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6"
+    }
+  },
+  "executed_by": "artifact_handoff.semantic_validate (unchanged controller copy) on the pinned verifier path",
+  "label": "Synthetic random tensors test validation logic only; they are not measurements.",
+  "rejected": {
+    "binding_provenance": "Provenance binding differs",
+    "binding_run_spec": "Run specification differs from the binding",
+    "capture_nonfinite": "Invalid tensor shape, dtype or values: carnival-ocean/norm_output",
+    "capture_wrong_dtype": "Invalid tensor shape, dtype or values: carnival-ocean/logits",
+    "capture_wrong_shape": "Invalid tensor shape, dtype or values: carnival-ocean/norm_input",
+    "comparison_count_changed": "Comparison record differs from its recomputation",
+    "comparison_equality_flipped": "Comparison record differs from its recomputation",
+    "comparison_record_removed": "Comparison record differs from its recomputation",
+    "exit_step_changed": "Comparison record differs from its recomputation",
+    "extra_manifest_file": "Manifest files differ from the contract",
+    "extra_payload_file": "Payload files differ from the manifest",
+    "failed_manifest": "Only a complete final manifest is accepted",
+    "gpu_mismatch": "GPU type differs",
+    "m1_nonfinite": "Invalid tensor shape, dtype or values: wrapper_states",
+    "m1_wrong_dtype": "Invalid tensor shape, dtype or values: native_logits",
+    "missing_contract_file": "Manifest files differ from the contract",
+    "missing_payload_file": "Payload files differ from the manifest",
+    "missing_recomputation": "Recomputation schema differs: carnival-ocean",
+    "payload_bytes_differ": "Payload bytes differ from the manifest",
+    "precision_mismatch": "Precision differs from the frozen original",
+    "recomputation_wrong_shape": "Invalid tensor shape, dtype or values: carnival-ocean/lm_head[2048]",
+    "source_mismatch": "Executed sources differ",
+    "stage_manifest": "Only a complete final manifest is accepted",
+    "stopped_manifest": "Only a complete final manifest is accepted",
+    "tensor_changed_after_record": "Comparison record differs from its recomputation"
+  },
+  "schema": "native_logit_verifier_tests.v1",
+  "status": "passed",
+  "verifier_record": {
+    "bytes": 10648,
+    "sha256": "0afb9d9031b1ace14435abbd318a19defc1ff7688724606c522b28311b0b64f8"
+  }
+}

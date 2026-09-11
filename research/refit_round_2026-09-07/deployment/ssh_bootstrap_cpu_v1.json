@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "isolated local official Python3.14.7 container; no GPU or model weights; private SSH key stayed on host",
+  "server_configuration": "openssh-server with public-key root authentication and password login disabled",
+  "authentication": "successful full SSH handshake via Docker socket proxy; Python3.14.7 and rsync command confirmed",
+  "local_port_proxy_note": "host TCP forwarding reset the connection in this local environment; direct Docker socket proxy authenticated successfully",
+  "test_container_removed": true,
+  "pod_entry_sha256": "d72cf7229b12af1fe0d218bc6edd5354740a9dd94fad06e57efa3fa59335ad32",
+  "later_change": "after handshake test, startup gained a validated provider lease-name file used to bind the worker; SSH setup unchanged"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "huginn_validator_self_test_independently_executed.v1",
+  "status": "passed",
+  "command": [
+    "/home/moloch/ouro_project/venv/bin/python",
+    "research/confirmation_2026-09-09/huginn_verification/evaluation/validate_outputs.py",
+    "--self-test"
+  ],
+  "exit_code": 0,
+  "result": {
+    "checks": [
+      "matrix_raw_bits_reject",
+      "independent_numpy_fp16_all_entries",
+      "numpy_conversion_reject",
+      "primal_all_cells_and_lanes",
+      "primal_raw_bits_reject",
+      "evidence_path_reject",
+      "authentic_benchmark_runtime_gate",
+      "changed_benchmark_seed_reject",
+      "changed_benchmark_input_reject",
+      "changed_benchmark_model_reject",
+      "fit_admission_binding_pass",
+      "changed_fit_admission_profile_reject",
+      "changed_fit_admission_arithmetic_reject",
+      "authentic_huginn_owner_pass",
+      "changed_frozen_calibration_reject",
+      "authentic_fit_initializations_pass",
+      "changed_frozen_seed_record_reject",
+      "historical_readout_owner_identity_pass",
+      "changed_historical_run_spec_reject"
+    ],
+    "cuda_initialized": false,
+    "source_sha256": "93ccdeff8ed373942fa8e2aa8db258221345a1e48a550f1311525068b2c32e38",
+    "status": "pass"
+  }
+}

@@ -1,0 +1,682 @@
+{
+  "acceptance_status": "Retrieved staging payload only; no stage acceptance exists and failed terminal output is not accepted scientific evidence.",
+  "all_payload_records_verified_against_latched_manifest": true,
+  "comparisons": [
+    {
+      "bf16_code_distance_histogram_on_differing_elements": {},
+      "difference_samples": [],
+      "differing_elements": 0,
+      "differing_fraction": 0.0,
+      "fp32_bitwise_differing_elements": 0,
+      "left": "virtual_states",
+      "left_tensor": {
+        "bf16_roundtrip_exact": true,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "elements": 1179648,
+        "finite_count": 1179648,
+        "nan_count": 0,
+        "negative_infinity_count": 0,
+        "negative_zero_count": 0,
+        "positive_infinity_count": 0,
+        "shape": [
+          3,
+          192,
+          2048
+        ]
+      },
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "mean_abs_diff_on_differing_elements": 0,
+      "per_item": [
+        {
+          "differing_elements": 0,
+          "item": "carnival-ocean",
+          "max_abs_diff": 0.0,
+          "mean_abs_diff": 0.0,
+          "top10_set_equal": null,
+          "top1_equal": null
+        },
+        {
+          "differing_elements": 0,
+          "item": "amazon-language",
+          "max_abs_diff": 0.0,
+          "mean_abs_diff": 0.0,
+          "top10_set_equal": null,
+          "top1_equal": null
+        },
+        {
+          "differing_elements": 0,
+          "item": "mars-color",
+          "max_abs_diff": 0.0,
+          "mean_abs_diff": 0.0,
+          "top10_set_equal": null,
+          "top1_equal": null
+        }
+      ],
+      "right": "physical_states",
+      "right_tensor": {
+        "bf16_roundtrip_exact": true,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "elements": 1179648,
+        "finite_count": 1179648,
+        "nan_count": 0,
+        "negative_infinity_count": 0,
+        "negative_zero_count": 0,
+        "positive_infinity_count": 0,
+        "shape": [
+          3,
+          192,
+          2048
+        ]
+      },
+      "signbit_differences": 0,
+      "torch_equal": true
+    },
+    {
+      "bf16_code_distance_histogram_on_differing_elements": {},
+      "difference_samples": [],
+      "differing_elements": 0,
+      "differing_fraction": 0.0,
+      "fp32_bitwise_differing_elements": 0,
+      "left": "virtual_states",
+      "left_tensor": {
+        "bf16_roundtrip_exact": true,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "elements": 1179648,
+        "finite_count": 1179648,
+        "nan_count": 0,
+        "negative_infinity_count": 0,
+        "negative_zero_count": 0,
+        "positive_infinity_count": 0,
+        "shape": [
+          3,
+          192,
+          2048
+        ]
+      },
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "mean_abs_diff_on_differing_elements": 0,
+      "per_item": [
+        {
+          "differing_elements": 0,
+          "item": "carnival-ocean",
+          "max_abs_diff": 0.0,
+          "mean_abs_diff": 0.0,
+          "top10_set_equal": null,
+          "top1_equal": null
+        },
+        {
+          "differing_elements": 0,
+          "item": "amazon-language",
+          "max_abs_diff": 0.0,
+          "mean_abs_diff": 0.0,
+          "top10_set_equal": null,
+          "top1_equal": null
+        },
+        {
+          "differing_elements": 0,
+          "item": "mars-color",
+          "max_abs_diff": 0.0,
+          "mean_abs_diff": 0.0,
+          "top10_set_equal": null,
+          "top1_equal": null
+        }
+      ],
+      "right": "wrapper_states",
+      "right_tensor": {
+        "bf16_roundtrip_exact": true,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "elements": 1179648,
+        "finite_count": 1179648,
+        "nan_count": 0,
+        "negative_infinity_count": 0,
+        "negative_zero_count": 0,
+        "positive_infinity_count": 0,
+        "shape": [
+          3,
+          192,
+          2048
+        ]
+      },
+      "signbit_differences": 0,
+      "torch_equal": true
+    },
+    {
+      "bf16_code_distance_histogram_on_differing_elements": {
+        "1": 106,
+        "2": 3,
+        "3": 1,
+        "4": 1,
+        "6": 1
+      },
+      "difference_samples": [
+        {
+          "absolute_difference": 7.62939453125e-06,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            99
+          ],
+          "left": 0.00164031982421875,
+          "left_bf16_bits": "3ad7",
+          "left_fp32_bits": "3ad70000",
+          "right": 0.0016326904296875,
+          "right_bf16_bits": "3ad6",
+          "right_fp32_bits": "3ad60000"
+        },
+        {
+          "absolute_difference": 3.814697265625e-06,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            2151
+          ],
+          "left": -0.00057220458984375,
+          "left_bf16_bits": "ba16",
+          "left_fp32_bits": "ba160000",
+          "right": -0.000568389892578125,
+          "right_bf16_bits": "ba15",
+          "right_fp32_bits": "ba150000"
+        },
+        {
+          "absolute_difference": 1.52587890625e-05,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            2574
+          ],
+          "left": -0.0032501220703125,
+          "left_bf16_bits": "bb55",
+          "left_fp32_bits": "bb550000",
+          "right": -0.003265380859375,
+          "right_bf16_bits": "bb56",
+          "right_fp32_bits": "bb560000"
+        },
+        {
+          "absolute_difference": 0.03125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            3214
+          ],
+          "left": 4.3125,
+          "left_bf16_bits": "408a",
+          "left_fp32_bits": "408a0000",
+          "right": 4.34375,
+          "right_bf16_bits": "408b",
+          "right_fp32_bits": "408b0000"
+        },
+        {
+          "absolute_difference": 0.000244140625,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            3876
+          ],
+          "left": -0.040283203125,
+          "left_bf16_bits": "bd25",
+          "left_fp32_bits": "bd250000",
+          "right": -0.0400390625,
+          "right_bf16_bits": "bd24",
+          "right_fp32_bits": "bd240000"
+        },
+        {
+          "absolute_difference": 1.430511474609375e-06,
+          "bf16_bit_code_distance": 3,
+          "index": [
+            0,
+            4080
+          ],
+          "left": 9.918212890625e-05,
+          "left_bf16_bits": "38d0",
+          "left_fp32_bits": "38d00000",
+          "right": 0.00010061264038085938,
+          "right_bf16_bits": "38d3",
+          "right_fp32_bits": "38d30000"
+        },
+        {
+          "absolute_difference": 0.0078125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            4417
+          ],
+          "left": -1.5546875,
+          "left_bf16_bits": "bfc7",
+          "left_fp32_bits": "bfc70000",
+          "right": -1.5625,
+          "right_bf16_bits": "bfc8",
+          "right_fp32_bits": "bfc80000"
+        },
+        {
+          "absolute_difference": 0.0078125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            5304
+          ],
+          "left": 1.84375,
+          "left_bf16_bits": "3fec",
+          "left_fp32_bits": "3fec0000",
+          "right": 1.8515625,
+          "right_bf16_bits": "3fed",
+          "right_fp32_bits": "3fed0000"
+        },
+        {
+          "absolute_difference": 0.00390625,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            6264
+          ],
+          "left": 0.7578125,
+          "left_bf16_bits": "3f42",
+          "left_fp32_bits": "3f420000",
+          "right": 0.76171875,
+          "right_bf16_bits": "3f43",
+          "right_fp32_bits": "3f430000"
+        },
+        {
+          "absolute_difference": 0.015625,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            7729
+          ],
+          "left": -3.1875,
+          "left_bf16_bits": "c04c",
+          "left_fp32_bits": "c04c0000",
+          "right": -3.203125,
+          "right_bf16_bits": "c04d",
+          "right_fp32_bits": "c04d0000"
+        },
+        {
+          "absolute_difference": 0.03125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            8174
+          ],
+          "left": -5.21875,
+          "left_bf16_bits": "c0a7",
+          "left_fp32_bits": "c0a70000",
+          "right": -5.25,
+          "right_bf16_bits": "c0a8",
+          "right_fp32_bits": "c0a80000"
+        },
+        {
+          "absolute_difference": 0.015625,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            10314
+          ],
+          "left": -3.046875,
+          "left_bf16_bits": "c043",
+          "left_fp32_bits": "c0430000",
+          "right": -3.0625,
+          "right_bf16_bits": "c044",
+          "right_fp32_bits": "c0440000"
+        },
+        {
+          "absolute_difference": 0.001953125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            12575
+          ],
+          "left": 0.3828125,
+          "left_bf16_bits": "3ec4",
+          "left_fp32_bits": "3ec40000",
+          "right": 0.384765625,
+          "right_bf16_bits": "3ec5",
+          "right_fp32_bits": "3ec50000"
+        },
+        {
+          "absolute_difference": 0.0001220703125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            12884
+          ],
+          "left": 0.01806640625,
+          "left_bf16_bits": "3c94",
+          "left_fp32_bits": "3c940000",
+          "right": 0.0179443359375,
+          "right_bf16_bits": "3c93",
+          "right_fp32_bits": "3c930000"
+        },
+        {
+          "absolute_difference": 3.814697265625e-06,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            13809
+          ],
+          "left": -0.00051116943359375,
+          "left_bf16_bits": "ba06",
+          "left_fp32_bits": "ba060000",
+          "right": -0.000507354736328125,
+          "right_bf16_bits": "ba05",
+          "right_fp32_bits": "ba050000"
+        },
+        {
+          "absolute_difference": 0.000244140625,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            14809
+          ],
+          "left": -0.036865234375,
+          "left_bf16_bits": "bd17",
+          "left_fp32_bits": "bd170000",
+          "right": -0.03662109375,
+          "right_bf16_bits": "bd16",
+          "right_fp32_bits": "bd160000"
+        },
+        {
+          "absolute_difference": 0.0009765625,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            17236
+          ],
+          "left": 0.2158203125,
+          "left_bf16_bits": "3e5d",
+          "left_fp32_bits": "3e5d0000",
+          "right": 0.216796875,
+          "right_bf16_bits": "3e5e",
+          "right_fp32_bits": "3e5e0000"
+        },
+        {
+          "absolute_difference": 3.814697265625e-06,
+          "bf16_bit_code_distance": 2,
+          "index": [
+            0,
+            20561
+          ],
+          "left": -0.0004673004150390625,
+          "left_bf16_bits": "b9f5",
+          "left_fp32_bits": "b9f50000",
+          "right": -0.0004634857177734375,
+          "right_bf16_bits": "b9f3",
+          "right_fp32_bits": "b9f30000"
+        },
+        {
+          "absolute_difference": 0.00048828125,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            22986
+          ],
+          "left": 0.07958984375,
+          "left_bf16_bits": "3da3",
+          "left_fp32_bits": "3da30000",
+          "right": 0.080078125,
+          "right_bf16_bits": "3da4",
+          "right_fp32_bits": "3da40000"
+        },
+        {
+          "absolute_difference": 3.0517578125e-05,
+          "bf16_bit_code_distance": 1,
+          "index": [
+            0,
+            23301
+          ],
+          "left": -0.004791259765625,
+          "left_bf16_bits": "bb9d",
+          "left_fp32_bits": "bb9d0000",
+          "right": -0.0047607421875,
+          "right_bf16_bits": "bb9c",
+          "right_fp32_bits": "bb9c0000"
+        }
+      ],
+      "differing_elements": 112,
+      "differing_fraction": 0.0007595486111111111,
+      "fp32_bitwise_differing_elements": 112,
+      "left": "native_logits",
+      "left_tensor": {
+        "bf16_roundtrip_exact": true,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "elements": 147456,
+        "finite_count": 147456,
+        "nan_count": 0,
+        "negative_infinity_count": 0,
+        "negative_zero_count": 0,
+        "positive_infinity_count": 0,
+        "shape": [
+          3,
+          49152
+        ]
+      },
+      "max_abs_diff": 0.03125,
+      "mean_abs_diff": 6.051051766715116e-06,
+      "mean_abs_diff_on_differing_elements": 0.007966641868863786,
+      "per_item": [
+        {
+          "differing_elements": 39,
+          "item": "carnival-ocean",
+          "max_abs_diff": 0.03125,
+          "mean_abs_diff": 6.2762895443787175e-06,
+          "top10_set_equal": true,
+          "top1_equal": true
+        },
+        {
+          "differing_elements": 28,
+          "item": "amazon-language",
+          "max_abs_diff": 0.03125,
+          "mean_abs_diff": 4.925978525231282e-06,
+          "top10_set_equal": true,
+          "top1_equal": true
+        },
+        {
+          "differing_elements": 45,
+          "item": "mars-color",
+          "max_abs_diff": 0.03125,
+          "mean_abs_diff": 6.950887230535348e-06,
+          "top10_set_equal": true,
+          "top1_equal": true
+        }
+      ],
+      "right": "unembedded_logits",
+      "right_tensor": {
+        "bf16_roundtrip_exact": true,
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "elements": 147456,
+        "finite_count": 147456,
+        "nan_count": 0,
+        "negative_infinity_count": 0,
+        "negative_zero_count": 0,
+        "positive_infinity_count": 0,
+        "shape": [
+          3,
+          49152
+        ]
+      },
+      "signbit_differences": 0,
+      "torch_equal": false
+    }
+  ],
+  "development_item_names": [
+    "carnival-ocean",
+    "amazon-language",
+    "mars-color"
+  ],
+  "execution": {
+    "bytecode_disabled": true,
+    "cuda_initialized": false,
+    "interop_threads": 2,
+    "interpreter": "/home/moloch/ouro_project/venv/bin/python",
+    "map_location": "cpu",
+    "mmap": true,
+    "threads": 2,
+    "torch_version": "2.12.0.dev20260407+cu128",
+    "weights_only": true
+  },
+  "interpretation": {
+    "established": [
+      "Virtual, independent physical, and wrapper-extracted residual states are exactly equal, finite and bit-identical.",
+      "Only the native logits/unembedded logits comparison fails. Both tensors consist of exactly BF16-representable values promoted to FP32.",
+      "Full recorded runtime precision matches the original frozen specification; the prior precision metadata problem did not recur.",
+      "The actual saved logits differ, so the checker correctly reports failure; this is not a torch.equal/serialization false alarm."
+    ],
+    "likely_cause": "Shape-dependent BF16 arithmetic in final normalization or language-model head: native path processes full [batch,sequence,hidden] tensors; development recomputation calls unembed on one [hidden] vector. The same mathematical operation need not yield identical BF16 rounding across these shapes. Sparse small differences with identical source residuals favor this explanation over recurrent semantic/index mismatch.",
+    "next_discriminating_evidence": "On already authorized bounded diagnostic compute, compare native captured final normalized states to recomputation under identical full tensor shape; separately compare native full-shape head output to last-token/1D head output. Preserve each raw tensor and source/shape binding. Do not advance confirmation scoring under this failed gate.",
+    "not_established": [
+      "Which kernel (normalization or projection) caused the differences; the artifact lacks intermediate normalized tensors or shape-matched projection evidence.",
+      "Whether the same discrepancy changes any full rank/scientific statistic beyond the inspected development logits.",
+      "Any authorization to weaken the frozen equality criterion or accept failed evidence."
+    ],
+    "scope_limit": "No new model run, GPU probe, scientific scoring, lease mutation, or cloud operation was performed. Only saved historical-development evidence was loaded."
+  },
+  "lease_name": "jlens-confirm-e5b5cdde88044a96ab1410aa165a76e5",
+  "local_payload_root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/handoff/staging/ouro_confirmation_20260910_fixed160_precision1/144c9a935a46a335493e9c8c4fbd695a1b817c957fa81032d911f244cb807ad3/results",
+  "manifest": {
+    "binding": {
+      "account_id": "user_3I33u3QLWgO7POHKINt6GfLeTUw",
+      "controller_sources": {
+        "artifact_handoff.py": {
+          "bytes": 29606,
+          "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+        },
+        "lease.py": {
+          "bytes": 56750,
+          "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+        },
+        "pod_entry.sh": {
+          "bytes": 1223,
+          "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+        },
+        "run_refits.py": {
+          "bytes": 51999,
+          "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+        },
+        "runpod_api.py": {
+          "bytes": 9601,
+          "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+        },
+        "transport.py": {
+          "bytes": 2638,
+          "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+        }
+      },
+      "lease_name": "jlens-confirm-e5b5cdde88044a96ab1410aa165a76e5",
+      "output_contract_sha256": "a7a4dea81db50b5b978623cc76c1cc3dc5352a4de5f884f846769d8fefd14423",
+      "pod_id": "i7zq14rj0f0ief",
+      "run_id": "ouro_confirmation_20260910_fixed160_precision1",
+      "run_spec_sha256": "fa23a27f0801a397579d36fbe81afa8f0d8b99a4af3b6affc2bf565be16ddf4e"
+    },
+    "files": {
+      "benchmark.json": {
+        "bytes": 967118,
+        "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99"
+      },
+      "development/native.pt": {
+        "bytes": 15337945,
+        "sha256": "aa6a79bc89a1f959e26e8a3299294c27fc0ef64e7cbe2929dfa1432afd813213"
+      },
+      "population.json": {
+        "bytes": 373077,
+        "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087"
+      },
+      "provenance.json": {
+        "bytes": 19325,
+        "sha256": "acd6043ab36dc90f5ffd5d1ecf03c1b4a157b9291daa16c2b347d3be450b3d62"
+      },
+      "run_spec.json": {
+        "bytes": 34553,
+        "sha256": "fa23a27f0801a397579d36fbe81afa8f0d8b99a4af3b6affc2bf565be16ddf4e"
+      }
+    },
+    "kind": "final",
+    "outcome": "failed",
+    "schema": "confirmation_artifact_manifest.v1",
+    "stage_id": null
+  },
+  "manifest_sha256": "144c9a935a46a335493e9c8c4fbd695a1b817c957fa81032d911f244cb807ad3",
+  "pod_id": "i7zq14rj0f0ief",
+  "recorded_utc": "2026-09-10T18:32:35.196399+00:00",
+  "reviewer": "independent precision_correction_review agent",
+  "runtime_gpu": {
+    "capability": [
+      12,
+      0
+    ],
+    "index": 0,
+    "multiprocessor_count": 170,
+    "name": "NVIDIA GeForce RTX 5090",
+    "total_memory": 33668988928,
+    "uuid": "cd026f4d-7b08-99ca-505d-f2c28376f989"
+  },
+  "runtime_precision": {
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_fp32_precision": "none",
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "MKL_NUM_THREADS": "8",
+      "NVIDIA_TF32_OVERRIDE": null,
+      "OMP_NUM_THREADS": "8",
+      "PYTORCH_ALLOC_CONF": "expandable_segments:True",
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    },
+    "float32_matmul_precision": "highest",
+    "matmul": {
+      "allow_bf16_reduced_precision_reduction": true,
+      "allow_bf16_reduced_precision_reduction_split_k": true,
+      "allow_fp16_accumulation": false,
+      "allow_fp16_reduced_precision_reduction": true,
+      "allow_fp16_reduced_precision_reduction_split_k": true,
+      "allow_tf32": false,
+      "fp32_precision": "none"
+    },
+    "sdpa": {
+      "cudnn_sdp_enabled": true,
+      "flash_sdp_enabled": true,
+      "fp16_bf16_reduction_math_sdp_allowed": false,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "sdpa_scope": "enabled implementations; not a trace of the selected runtime kernel"
+  },
+  "runtime_precision_matches_entire_frozen_record": true,
+  "schema": "confirmation_attempt05_native_failure_forensics.v1",
+  "source_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/readouts.py": {
+      "bytes": 4685,
+      "sha256": "2d1762f126e9f1da9a9b7aabc2039de3697bbc5fc5b385ab6a034aa2dc931226"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/validate_outputs.py": {
+      "bytes": 10057,
+      "sha256": "588dbf72a8f520e1fe4d7eb590704b928a4accb3ceabb85d36b56bf7296af7ed"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/evaluation/worker.py": {
+      "bytes": 10143,
+      "sha256": "386c2649e6628a45d7bcc7745d9cf4686cbb03fd6c9cf9196b65e6938b9ab0b5"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/ouro_project/src/ouro_jlens/recurrent.py": {
+      "bytes": 5777,
+      "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/corrections/precision_v1/bundle/repo/jlens/hf.py": {
+      "bytes": 8182,
+      "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/model_snapshot/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py": {
+      "bytes": 33350,
+      "sha256": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413"
+    }
+  },
+  "status": "failed_gate_characterized_not_accepted"
+}

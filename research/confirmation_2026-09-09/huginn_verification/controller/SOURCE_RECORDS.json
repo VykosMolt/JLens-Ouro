@@ -1,0 +1,140 @@
+{
+  "schema": "huginn_verification_controller_sources.v1",
+  "status": "passed_local_awaiting_independent_review",
+  "sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/lease.py": {
+      "bytes": 79243,
+      "sha256": "098fb0d985ceca8c2226a4cffa10d6866999b4d156da2d6b8d0614253a3037aa"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/artifact_handoff.py": {
+      "bytes": 41346,
+      "sha256": "f526d44e1958fedc40ca507232bd1cc6f5043cfb27748816efb0d5a0aac0fb23"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/test_lifecycle.py": {
+      "bytes": 67551,
+      "sha256": "b763a9c096de039ddc47e04e0846d3cc6191e471fd5485295163fc7249fb46a8"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/PRIMARY_SOURCE_BASELINE.json": {
+      "bytes": 1346,
+      "sha256": "29559e40136bfd05958cff6c1b23ca9323bd254b851667fc9c13b471b2a595b5"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/IMPLEMENTATION.md": {
+      "bytes": 11303,
+      "sha256": "36d5a73f94e3e8d3c3ecce04d9b957dc20048c947e62818326cb215534985d35"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/prepare_phase_debit.py": {
+      "bytes": 2149,
+      "sha256": "66198084e838972de1d32569f1dfc96c4289a3c7744295625a892ddcdd8e696e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/PHASE_RESOURCES.json": {
+      "bytes": 1186,
+      "sha256": "c7812ed0413fc5e7a91be9508c7be4018e2e99497378c813f8cef165fb06e9ac"
+    }
+  },
+  "primary_baseline": {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/PRIMARY_SOURCE_BASELINE.json",
+    "bytes": 1346,
+    "sha256": "29559e40136bfd05958cff6c1b23ca9323bd254b851667fc9c13b471b2a595b5"
+  },
+  "primary_sources_and_original_debit_unchanged": true,
+  "unchanged_runtime_files": [
+    "transport.py",
+    "run_refits.py",
+    "runpod_api.py",
+    "pod_entry.sh"
+  ],
+  "changed_existing_lease_functions": [
+    "change",
+    "prior_debit",
+    "make_plan",
+    "begin_create",
+    "create"
+  ],
+  "unchanged_lease_functions": {
+    "stamp": true,
+    "epoch": true,
+    "number": true,
+    "account": true,
+    "checked_account": true,
+    "pod_identity": true,
+    "pods": true,
+    "offer": true,
+    "locked": true,
+    "update": true,
+    "lease_root": true,
+    "load_run_config": true,
+    "validate_notice": true,
+    "bind_pod": true,
+    "endpoint": true,
+    "ssh_options": true,
+    "remote_status": true,
+    "setup_completed_for_lease": true,
+    "same_run": true,
+    "remember_worker_status": true,
+    "remember_manifest": true,
+    "request_worker_stop": true,
+    "local_inventory": true,
+    "sync_results": true,
+    "ensure_sync": true,
+    "owned_candidates": true,
+    "observe_cost": true,
+    "observe_identity": true,
+    "finish_create": true,
+    "fail_create": true,
+    "exact_supply_rejection": true,
+    "completed_supply_rejection": true,
+    "record_rejection": true,
+    "verified_rejection": true,
+    "reconcile_rejection": true,
+    "halt": true,
+    "absence_can_finish": true,
+    "confirm_absence": true,
+    "emergency_reason": true,
+    "explicit_teardown": true,
+    "reconcile_absence": true,
+    "terminate_owned": true,
+    "arm_watcher": true,
+    "watch": true,
+    "main": true
+  },
+  "added_lease_functions": [
+    "account_snapshot",
+    "original_debit",
+    "payload_stability",
+    "phase_prerequisites",
+    "pinned_path",
+    "prepare_phase_debit",
+    "primary_lease_records",
+    "revalidate_primary_acceptance"
+  ],
+  "proof": {
+    "path": "/tmp/huginn-controller-frozen-candidate/PROOF.json",
+    "bytes": 8370,
+    "sha256": "5f60bb7fcd1cd5d4edb22ca408e3e55e0d89951ff5b350eccc0cc24d974c79ac"
+  },
+  "case_count": 59,
+  "no_cloud_or_ssh": true,
+  "no_paid_science": true,
+  "real_phase_debit_exists": false,
+  "runtime_closure": "Admission runtime resides in lease.py and bounded parallel receiver in artifact_handoff.py; all execution remains inside the existing six-source closure.",
+  "changed_runtime_files": [
+    "lease.py",
+    "artifact_handoff.py"
+  ]
+}

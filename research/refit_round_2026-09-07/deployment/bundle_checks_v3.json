@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "archive": "ouro_sources_v3.tar.gz",
+  "archive_bytes": 630571,
+  "archive_sha256": "8128b4e23c0b6a2488b48d6464ec799ffce7781a1e370c99aa2c12de144fd079",
+  "source_files": 102,
+  "archive_members": 103,
+  "calibration_counts": [
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "distinct_calibration_texts": 500,
+  "all_archive_members_verified": true,
+  "gpu_operations": 0,
+  "external_transfers": 0,
+  "cloud_operations": 0
+}

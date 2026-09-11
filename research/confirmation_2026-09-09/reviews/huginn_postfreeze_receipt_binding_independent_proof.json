@@ -1,0 +1,52 @@
+{
+  "all_115_freeze_file_records_equal_independently_checked_directory_records": true,
+  "archive_check": {
+    "archive_content_read_by_this_reviewer": false,
+    "archive_hashed_by_this_reviewer": false,
+    "root_reported_check_session": 28917,
+    "status": "delegated_to_root_streaming_check"
+  },
+  "archive_size_observed": 223965405,
+  "complete_run_id_and_time_bindings_match": true,
+  "completed_freeze_record": {
+    "bytes": 16770,
+    "sha256": "2e4677d312dcff1b0b53e69536ff352d5accfdbe857dbd1e7a8f6bbf59999603"
+  },
+  "declared_archive_record": {
+    "bytes": 223965405,
+    "sha256": "2d3b4cae0f6e22600f1d8c12e419f2f285118d2e52a52bc3bacf81162e041d30"
+  },
+  "directory_proof": {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_postfreeze_directory_independent_proof.json",
+    "record": {
+      "bytes": 29149,
+      "sha256": "48407490d925bb196780debf5f3e79beae4739fffabadf265cf29bc93feb57b6"
+    }
+  },
+  "no_cloud_or_model_actions": true,
+  "no_source_or_bundle_edits": true,
+  "output_contract_record": {
+    "bytes": 4943,
+    "sha256": "cb1b8af2389b727b378c430836ceb61c046d1f2e749c887f41ad282c29c06a45"
+  },
+  "run_config_record": {
+    "bytes": 758,
+    "sha256": "8fb144a35dc15e58ff9f99e267aca325bebf84973745b99879f4d85ac8c672d8"
+  },
+  "run_id": "huginn_verification_20260910_n100",
+  "run_spec_record": {
+    "bytes": 17725,
+    "sha256": "11cf51430d915b5efcae1313a80ff306bb1947b029cfc80b7472932ce9570d62"
+  },
+  "schema": "huginn_postfreeze_receipt_binding_independent.v1",
+  "semantic_verifier": {
+    "callable": "validate_outputs",
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/bundle/evaluation/validate_outputs.py",
+    "record": {
+      "bytes": 77508,
+      "sha256": "93ccdeff8ed373942fa8e2aa8db258221345a1e48a550f1311525068b2c32e38"
+    }
+  },
+  "status": "passed_receipt_and_directory_bindings",
+  "utc": "2026-09-10T00:23:54.749865+00:00"
+}

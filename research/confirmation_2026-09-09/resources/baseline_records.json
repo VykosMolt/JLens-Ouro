@@ -1,0 +1,17 @@
+{
+  "CLAIMS.md": {
+    "bytes": 8441,
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/CLAIMS.md",
+    "sha256": "ef7a5d096317d9cf70ab427fd92b0fb10bc28d463525eefe59fe512ad14d7c98"
+  },
+  "REPORT.md": {
+    "bytes": 34931,
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/REPORT.md",
+    "sha256": "d91836c1c4365910ae690ec31938f137324e36c12505f7d0bf18f267ed9879bf"
+  },
+  "RUN_LOG.md": {
+    "bytes": 180458,
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/RUN_LOG.md",
+    "sha256": "93c09d5e7bf7f17be42548eefce6e20decc7a89630cd88e10115cc319c72b562"
+  }
+}

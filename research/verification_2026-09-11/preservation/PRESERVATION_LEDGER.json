@@ -1,0 +1,1249 @@
+{
+ "bank_load_check_this_pass": {
+  "diagonal": {
+   "all_2048x2048_fp16": true,
+   "file": "banks/positions.pt",
+   "first_middle_last_finite": true,
+   "keys_are_sources_0_to_target": true,
+   "record_matches_run_spec": true
+  },
+  "fit01": {
+   "all_2048x2048_fp16": true,
+   "file": "banks/fit01.pt",
+   "first_middle_last_finite": true,
+   "keys_are_sources_0_to_target": true,
+   "record_matches_run_spec": true
+  },
+  "fit02": {
+   "all_2048x2048_fp16": true,
+   "file": "banks/fit02.pt",
+   "first_middle_last_finite": true,
+   "keys_are_sources_0_to_target": true,
+   "record_matches_run_spec": true
+  },
+  "penultimate": {
+   "all_2048x2048_fp16": true,
+   "file": "banks/penultimate.pt",
+   "first_middle_last_finite": true,
+   "keys_are_sources_0_to_target": true,
+   "record_matches_run_spec": true
+  },
+  "sampled_sum": {
+   "all_2048x2048_fp16": true,
+   "file": "banks/positions.pt",
+   "first_middle_last_finite": true,
+   "keys_are_sources_0_to_target": true,
+   "record_matches_run_spec": true
+  }
+ },
+ "bundle": {
+  "bytes": 14968501364,
+  "copy_problems": [],
+  "core_manifest": {
+   "path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/BUNDLE_MANIFEST_core.json",
+   "sha256": "89c66aa6d038b10a3fef391aa0e5b5b631d9c259312eab652accd6f5646566e0"
+  },
+  "destination": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle",
+  "files": 7380
+ },
+ "class_labels": {
+  "a": "verified_duplicate",
+  "b": "reconstructible_from_verified_retained_inputs",
+  "c": "unique_and_lost",
+  "d": "status_unresolved"
+ },
+ "classification_rules": {
+  "a": "An intact copy exists now (anywhere under /home/moloch, including re-materialization at the original path) and its SHA-256 and size were recomputed in this audit and match the purge manifest.",
+  "b": "No copy exists, but exact bytes are derivable from retained inputs whose hashes were verified in this audit, with the derived bytes' hash checked.",
+  "c": "No copy found (exact-size search of all regular files under /home/moloch, then hashing), no verified derivation, and no local record of a remote copy.",
+  "d": "No local copy, but a local record indicates a remote copy that cannot be verified offline."
+ },
+ "created_utc": "2026-09-11T13:35:01.155576+00:00",
+ "distinct_contents": {
+  "all_roots": {
+   "a": {
+    "bytes": 24454151677,
+    "files": 126
+   },
+   "b": {
+    "bytes": 179527232,
+    "files": 1
+   },
+   "c": {
+    "bytes": 54607940184,
+    "files": 43
+   },
+   "d": {
+    "bytes": 19168670984,
+    "files": 19
+   }
+  },
+  "alternative_count_if_rematerialized_chunks_are_class_b": {
+   "confirmation_root": {
+    "a": {
+     "bytes": 5336011242,
+     "files": 1
+    },
+    "b": {
+     "bytes": 7902173954,
+     "files": 118
+    }
+   }
+  },
+  "class_c_distinct_sha256": 33,
+  "class_d_distinct_sha256": 15
+ },
+ "evidence_levels_by_claim_audit": [
+  {
+   "L1": {
+    "depends_on": "RECOVERY_LEDGER.json, inventory.json, three purge manifests, this audit",
+    "status": "available (records)"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "All historical estimator binaries were preserved",
+   "note": "Post-purge only 3 of the 7 original complete binaries physically survive (fit01, penultimate, positions finals) plus the fit02 exact reconstruction; all four complete FP32 checkpoints, the duplicate fit01 final and the partial copies were deleted.",
+   "verdict": "Contradicted"
+  },
+  {
+   "L1": {
+    "depends_on": "reconstructed bank re-hashed today = historical SHA-256 101f31db; tensor_audit.json record",
+    "status": "available"
+   },
+   "L2": {
+    "depends_on": "payload common/cache.pt (H 160x192x2048 FP32, exit_logits 160x4x49152; hash-verified) + verified bank(s) fit02 + verified Ouro-2.6B weights for norm/BF16 unembedding + frozen bundle code. Bitwise rank equality off the original RTX 5090 BF16 lm_head is not established (native_logit_v1 shows shape/kernel-dependent BF16 logits).",
+    "status": "available in principle, not executed"
+   },
+   "L3": {
+    "depends_on": "Ouro-2.6B snapshot 1ed04250 (all 13 files match model_manifest 377d9e75, weights blob verified) + frozen population/benchmark/run_spec + bundle code + pinned runtime (bundle/legacy/requirements.lock with wheel hashes, install needs network; local venv shows matching torch/numpy/transformers/tokenizers/safetensors versions only) + an RTX 5090-class GPU for bit-level comparability",
+    "status": "available in principle, not executed (needs GPU)"
+   },
+   "L4": {
+    "depends_on": "source checkpoint 474c6ca7 purged, so checkpoint->bank conversion cannot be repeated; the purged partial final is reproducible as a prefix of the bank (verified)",
+    "status": "lost for the conversion step"
+   },
+   "claim": "Ouro fit02 can be recovered without another fit",
+   "verdict": "Supported as reconstruction"
+  },
+  {
+   "L1": {
+    "depends_on": "tensor_audit.json (4,001,366,016 entries compared, 60 retained samples)",
+    "status": "record only"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L4": {
+    "depends_on": "all four FP32 checkpoints (aecd994c, 474c6ca7, cc61b21e, e5f43582) purged; independent re-audit impossible; banks remain hash/schema-verifiable",
+    "status": "lost"
+   },
+   "claim": "Available Ouro banks implement their recorded checkpoint conversion",
+   "verdict": "Supported for retained artifacts"
+  },
+  {
+   "L1": {
+    "depends_on": "huginn_retention.json",
+    "status": "record only"
+   },
+   "L2": {
+    "depends_on": "no bank; seed caches purged",
+    "status": "unavailable"
+   },
+   "L3": {
+    "depends_on": "no bank",
+    "status": "unavailable for J-Lens"
+   },
+   "L4": {
+    "depends_on": "truncated checkpoint 099a99fd purged; only a rerun is possible",
+    "status": "unavailable for the original"
+   },
+   "claim": "Historical Huginn matrices can be recovered from retained scores or logs",
+   "verdict": "Unsupported"
+  },
+  {
+   "L1": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "huginn-0125 snapshot bb6621b6: all 16 files match refit deployment/huginn_model_manifest.json (verified today)",
+    "status": "rerun inputs present"
+   },
+   "L4": {
+    "depends_on": "deployment/huginn_calibration.json retained, fitter code retained, GPU+budget needed; the frozen archive huginn_verification/bundle.tar.gz was purged (directory tree retained minus its cache.pt); the plan's elementwise state comparison is no longer possible because both historical seed caches were purged; ranks and initializations remain comparable from arrays.npz and initializations.json",
+    "status": "rerun possible, original not"
+   },
+   "claim": "A newly seeded-identical Huginn rerun would be the recovered original",
+   "verdict": "Not an allowed inference"
+  },
+  {
+   "L1": {
+    "depends_on": "hash-verified accepted payload readouts/*.npz + population.json; frozen analysis/analyze.py and evaluation/measurement.py",
+    "status": "available, executed in this audit"
+   },
+   "L2": {
+    "depends_on": "payload common/cache.pt (H 160x192x2048 FP32, exit_logits 160x4x49152; hash-verified) + verified bank(s) fit01 (raw needs none) + verified Ouro-2.6B weights for norm/BF16 unembedding + frozen bundle code. Bitwise rank equality off the original RTX 5090 BF16 lm_head is not established (native_logit_v1 shows shape/kernel-dependent BF16 logits).",
+    "status": "available in principle, not executed"
+   },
+   "L3": {
+    "depends_on": "Ouro-2.6B snapshot 1ed04250 (all 13 files match model_manifest 377d9e75, weights blob verified) + frozen population/benchmark/run_spec + bundle code + pinned runtime (bundle/legacy/requirements.lock with wheel hashes, install needs network; local venv shows matching torch/numpy/transformers/tokenizers/safetensors versions only) + an RTX 5090-class GPU for bit-level comparability",
+    "status": "available in principle, not executed (needs GPU)"
+   },
+   "L4": {
+    "depends_on": "calibration input audit/calibration_fit_01.json retained, fitter code retained (bundle/legacy, refit deployment/), model verified; the FP32 N100 checkpoint (aecd994c) was purged; bitwise agreement with the historical bank is not established (optimization/RESULTS.md: BF16 Jacobians change with batch geometry)",
+    "status": "partially available (needs GPU and budget; result would be a new fit)"
+   },
+   "claim": "Ouro loop-4 layers 26-37 advantage generalizes to new items (fit01 vs raw +0.23188)",
+   "verdict": "Supported for this population and fit01"
+  },
+  {
+   "L1": {
+    "depends_on": "hash-verified accepted payload readouts/*.npz + population.json; frozen analysis/analyze.py and evaluation/measurement.py",
+    "status": "available, executed in this audit"
+   },
+   "L2": {
+    "depends_on": "payload common/cache.pt (H 160x192x2048 FP32, exit_logits 160x4x49152; hash-verified) + verified bank(s) fit01 + verified Ouro-2.6B weights for norm/BF16 unembedding + frozen bundle code. Bitwise rank equality off the original RTX 5090 BF16 lm_head is not established (native_logit_v1 shows shape/kernel-dependent BF16 logits).",
+    "status": "available in principle, not executed"
+   },
+   "L3": {
+    "depends_on": "Ouro-2.6B snapshot 1ed04250 (all 13 files match model_manifest 377d9e75, weights blob verified) + frozen population/benchmark/run_spec + bundle code + pinned runtime (bundle/legacy/requirements.lock with wheel hashes, install needs network; local venv shows matching torch/numpy/transformers/tokenizers/safetensors versions only) + an RTX 5090-class GPU for bit-level comparability",
+    "status": "available in principle, not executed (needs GPU)"
+   },
+   "L4": {
+    "depends_on": "calibration input audit/calibration_fit_01.json retained, fitter code retained (bundle/legacy, refit deployment/), model verified; the FP32 N100 checkpoint (aecd994c) was purged; bitwise agreement with the historical bank is not established (optimization/RESULTS.md: BF16 Jacobians change with batch geometry)",
+    "status": "partially available (needs GPU and budget; result would be a new fit)"
+   },
+   "claim": "Any positive excess means increased intended-concept recovery",
+   "verdict": "Not by excess alone; here intended recovery increased"
+  },
+  {
+   "L1": {
+    "depends_on": "benchmark.json, population.json (hash-verified), reviews/benchmark_review.md",
+    "status": "available"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "The new benchmark is a matched-distribution replication",
+   "verdict": "Unsupported"
+  },
+  {
+   "L1": {
+    "depends_on": "new items: payload fit02.npz/fit01.npz (executed); old items: 19 historical NPZ in refit monitoring handoffs (current hashes present in RETAINED_INPUTS_SUPPLEMENT)",
+    "status": "available"
+   },
+   "L2": {
+    "depends_on": "new: cache.pt + fit01/fit02 banks + model; old: historical Ouro common cache fb51d115 purged in all 4 copies and fits03-05 banks were never recovered",
+    "status": "new items available in principle; old items unavailable"
+   },
+   "L3": {
+    "depends_on": "fits03-05 have no bank",
+    "status": "new items as primary; old items fit01/fit02 only"
+   },
+   "L4": {
+    "depends_on": "calibration_fit_01..05.json retained; every FP32 checkpoint purged",
+    "status": "partial"
+   },
+   "claim": "Calibration stability on old items establishes new-item replication",
+   "verdict": "Unsupported"
+  },
+  {
+   "L1": {
+    "depends_on": "hash-verified accepted payload readouts/*.npz + population.json; frozen analysis/analyze.py and evaluation/measurement.py",
+    "status": "available, executed in this audit"
+   },
+   "L2": {
+    "depends_on": "payload common/cache.pt (H 160x192x2048 FP32, exit_logits 160x4x49152; hash-verified) + verified bank(s) fit01 + verified Ouro-2.6B weights for norm/BF16 unembedding + frozen bundle code. Bitwise rank equality off the original RTX 5090 BF16 lm_head is not established (native_logit_v1 shows shape/kernel-dependent BF16 logits).",
+    "status": "available in principle, not executed"
+   },
+   "L3": {
+    "depends_on": "Ouro-2.6B snapshot 1ed04250 (all 13 files match model_manifest 377d9e75, weights blob verified) + frozen population/benchmark/run_spec + bundle code + pinned runtime (bundle/legacy/requirements.lock with wheel hashes, install needs network; local venv shows matching torch/numpy/transformers/tokenizers/safetensors versions only) + an RTX 5090-class GPU for bit-level comparability",
+    "status": "available in principle, not executed (needs GPU)"
+   },
+   "L4": {
+    "depends_on": "calibration input audit/calibration_fit_01.json retained, fitter code retained (bundle/legacy, refit deployment/), model verified; the FP32 N100 checkpoint (aecd994c) was purged; bitwise agreement with the historical bank is not established (optimization/RESULTS.md: BF16 Jacobians change with batch geometry)",
+    "status": "partially available (needs GPU and budget; result would be a new fit)"
+   },
+   "claim": "The early multihop deficit transfers",
+   "verdict": "Supported"
+  },
+  {
+   "L1": {
+    "depends_on": "hash-verified accepted payload readouts/*.npz + population.json; frozen analysis/analyze.py and evaluation/measurement.py",
+    "status": "available, executed in this audit"
+   },
+   "L2": {
+    "depends_on": "payload common/cache.pt (H 160x192x2048 FP32, exit_logits 160x4x49152; hash-verified) + verified bank(s) penultimate dc6354df and positions b8e8b7d2 (sampled_sum and diagonal in one file), plus fit01 + verified Ouro-2.6B weights for norm/BF16 unembedding + frozen bundle code. Bitwise rank equality off the original RTX 5090 BF16 lm_head is not established (native_logit_v1 shows shape/kernel-dependent BF16 logits).",
+    "status": "available in principle, not executed"
+   },
+   "L3": {
+    "depends_on": "Ouro-2.6B snapshot 1ed04250 (all 13 files match model_manifest 377d9e75, weights blob verified) + frozen population/benchmark/run_spec + bundle code + pinned runtime (bundle/legacy/requirements.lock with wheel hashes, install needs network; local venv shows matching torch/numpy/transformers/tokenizers/safetensors versions only) + an RTX 5090-class GPU for bit-level comparability",
+    "status": "available in principle, not executed (needs GPU)"
+   },
+   "L4": {
+    "depends_on": "control calibration identities recorded in RETAINED_INPUTS_SUPPLEMENT; control code deployment/control_estimators.py; control FP32 checkpoints cc61b21e and e5f43582 purged",
+    "status": "partially available (needs GPU; new fit)"
+   },
+   "claim": "The final target and cross-position aggregation each add to the advantage",
+   "verdict": "Supported by secondary contrasts"
+  },
+  {
+   "L1": {
+    "depends_on": "payload provenance.json runtime.precision vs run_spec original_precision; reviews/attempt05_native_failure_forensics.json",
+    "status": "available (records)"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "pinned runtime + RTX 5090-class GPU",
+    "status": "re-observation needs the same GPU runtime"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "The corrected worker's precision settings match the frozen record on the live GPU",
+   "verdict": "Supported"
+  },
+  {
+   "L1": {
+    "depends_on": "resources/ATTEMPT05_NATIVE_FAILURE_PRESERVED.json (22 MB, retained), diagnostics/native_logit_v1 records; nothing under diagnostics was in a purge manifest",
+    "status": "available (preserved evidence)"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "RTX 5090 (capability 12.0) + verified model + pinned runtime; kernel behaviour is hardware-specific",
+    "status": "needs deployed GPU type"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "Native final logits equal unembedding of one final residual vector on the deployed runtime",
+   "verdict": "Contradicted for the development items"
+  },
+  {
+   "L1": {
+    "depends_on": "reviews/diagnostic_native_logit_v1_reanalysis.md and diagnostics records",
+    "status": "available (records)"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "as above",
+    "status": "needs deployed GPU type"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "The mismatch arises in lm_head applied to a single row",
+   "verdict": "Supported for three items, this GPU type, runtime and shapes"
+  },
+  {
+   "L1": {
+    "depends_on": "payload development/native.pt: states and logits torch.equal on CPU",
+    "status": "available, executed in this audit"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "model + pinned runtime + comparable GPU",
+    "status": "needs GPU"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "Exact native-logit equality is achievable with a defined recomputation; passed on the confirmation run",
+   "verdict": "Supported"
+  },
+  {
+   "L1": {
+    "depends_on": "reviews/attempt05_closure_documentation_review.json, preserved attempt05 evidence",
+    "status": "available (records)"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "Top-k agreement means the native gate effectively passed",
+   "verdict": "Not an allowed inference"
+  },
+  {
+   "L1": {
+    "depends_on": "huginn_handoff seeds/2026090803 and 2026090804 arrays.npz, summaries, initializations, seals; refit analysis/huginn_run01 outputs",
+    "status": "available"
+   },
+   "L2": {
+    "depends_on": "no Huginn bank; both seed caches purged (all 8 copies)",
+    "status": "unavailable"
+   },
+   "L3": {
+    "depends_on": "verified huginn-0125 snapshot + GPU; no J-Lens bank",
+    "status": "J-Lens arm unavailable; raw/coda arms possible in principle"
+   },
+   "L4": {
+    "depends_on": "huginn_calibration.json + code + model; not the original estimator",
+    "status": "rerun only"
+   },
+   "claim": "Historical Huginn supports the predicted relative improvement",
+   "verdict": "Unsupported by the prior experiment"
+  },
+  {
+   "L1": {
+    "depends_on": "all 8 accepted directories: canonical manifest digests, receipts, validation records, NUL-separated FILES_FROM and 71 file hashes consistent",
+    "status": "available, executed in this audit"
+   },
+   "L2": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L3": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "L4": {
+    "depends_on": "record/provenance claim",
+    "status": "not applicable"
+   },
+   "claim": "Controller tests alone establish deployed preservation",
+   "verdict": "Insufficient alone; demonstrated live"
+  }
+ ],
+ "historical_huginn_pilot": {
+  "conversion_limitation": "The FP16 bank = FP32 N100 sum / 100 relation is only the producer's validation assertion (refit REPORT.md 'Huginn validation and fit provenance'; CLAIMS row on retrieval). Because neither the complete checkpoint nor the final bank was recovered, it was never independently repeated locally, unlike the Ouro arms (NumPy re-conversion of 4,001,366,016 entries, zero differences). It can no longer be repeated for the original estimator.",
+  "historical_result": "N100/R8 pilot, one fit, two fixed evaluation trajectories (seeds 2026090803/04). J-minus-raw negative in all six fixed task/summary combinations in both seeds; relative-improvement prediction unresolved (all six simultaneous intervals include zero).",
+  "missing_estimator": {
+   "checkpoint_expected_bytes": 3568444419,
+   "checkpoint_missing_bytes": 1822663683,
+   "checkpoint_partial_deserialized": false,
+   "checkpoint_partial_sha256": "099a99fd3b1aba3ac06112411ec06d5aac5ce423f245c3cd64835150bc890473",
+   "checkpoint_retrieved_bytes": 1745780736,
+   "final_bank_expected": {
+    "bytes": 1784226499,
+    "sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596"
+   },
+   "final_bank_retrieved": false,
+   "final_seal_and_metadata": "absent",
+   "per_paragraph_contributions": "none found",
+   "post_purge": "truncated checkpoint deleted; both seed caches (226437a4, de18bf96) deleted in all copies; frozen verification archive (2d3b4cae) deleted"
+  },
+  "rerun": "huginn_verification/VERIFICATION_PLAN.md not run; any new fit is a 'newly rerun estimator'",
+  "retained": "OWNER/COMPLETE/LATEST/checkpoint seal/metadata authenticated; 100 diagnostic row identities; evaluation arrays.npz for both seeds; huginn_calibration.json; huginn-0125 snapshot verified today against its manifest",
+  "status": "metadata_authenticated_bank_unrecoverable (huginn_retention.json); evaluation completed; J-Lens arm cannot be rescored or replayed; only level-1 evidence remains"
+ },
+ "purge_reconciliation_by_root": {
+  "/home/moloch/jacobian-lens/research/confirmation_2026-09-09": {
+   "a": {
+    "bytes": 13238185196,
+    "files": 119,
+    "label": "verified_duplicate"
+   },
+   "b": {
+    "bytes": 0,
+    "files": 0,
+    "label": "reconstructible_from_verified_retained_inputs"
+   },
+   "c": {
+    "bytes": 1890411101,
+    "files": 9,
+    "label": "unique_and_lost"
+   },
+   "d": {
+    "bytes": 0,
+    "files": 0,
+    "label": "status_unresolved"
+   },
+   "total": {
+    "bytes": 15128596297,
+    "executed_utc": "2026-09-10T22:17:17.654971+00:00",
+    "files": 128,
+    "manifest_deleted_bytes": 15128596297
+   }
+  },
+  "/home/moloch/jacobian-lens/research/refit_round_2026-09-07": {
+   "a": {
+    "bytes": 1602276737,
+    "files": 1,
+    "label": "verified_duplicate"
+   },
+   "b": {
+    "bytes": 179527232,
+    "files": 1,
+    "label": "reconstructible_from_verified_retained_inputs"
+   },
+   "c": {
+    "bytes": 31082524066,
+    "files": 14,
+    "label": "unique_and_lost"
+   },
+   "d": {
+    "bytes": 0,
+    "files": 0,
+    "label": "status_unresolved"
+   },
+   "total": {
+    "bytes": 32864328035,
+    "executed_utc": "2026-09-10T22:06:42.966918+00:00",
+    "files": 16,
+    "manifest_deleted_bytes": 32864328035
+   }
+  },
+  "/home/moloch/ouro_project/artifacts/jlens": {
+   "a": {
+    "bytes": 9613689744,
+    "files": 6,
+    "label": "verified_duplicate"
+   },
+   "b": {
+    "bytes": 0,
+    "files": 0,
+    "label": "reconstructible_from_verified_retained_inputs"
+   },
+   "c": {
+    "bytes": 21635005017,
+    "files": 20,
+    "label": "unique_and_lost"
+   },
+   "d": {
+    "bytes": 19168670984,
+    "files": 19,
+    "label": "status_unresolved"
+   },
+   "total": {
+    "bytes": 50417365745,
+    "executed_utc": "2026-09-10T22:06:42.921849+00:00",
+    "files": 45,
+    "manifest_deleted_bytes": 50417365745
+   }
+  }
+ },
+ "recovery_attempts_this_pass": [
+  {
+   "effect": "classification unchanged",
+   "outcome": "not attempted: no Hugging Face credential on this machine (huggingface_hub.get_token() returned None)",
+   "target": "the 19 unresolved files recorded in private Hub repository Vykos/ouro-jlens-results"
+  },
+  {
+   "effect": "classification unchanged",
+   "outcome": "no intact copy or retained derivation exists; nothing recoverable locally",
+   "target": "unique-and-lost files"
+  }
+ ],
+ "restoration_check": {
+  "analysis_rerun_equals_saved_json": true,
+  "frozen_code": {
+   "archive_matches_freeze": true,
+   "extracted_members_match_freeze": true,
+   "members": 59
+  },
+  "path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/RESTORATION_CHECK.json",
+  "rehash": {
+   "core": {
+    "bytes": 14968501364,
+    "files": 7380,
+    "manifest_problems": 0
+   },
+   "mismatched": []
+  },
+  "rescoring": {
+   "fit01": {
+    "allrank": true,
+    "rank": true,
+    "top1": true,
+    "top10_ids": true
+   },
+   "raw": {
+    "allrank": true,
+    "rank": true,
+    "top1": true,
+    "top10_ids": true
+   }
+  },
+  "sha256": "0bd62bcfa918c9883128950e76bf5261f9a8409ceaa164b37cbc53a0edb77ef3"
+ },
+ "schema": "preservation_ledger.v1",
+ "script_sha256": "0680bc99b2c3bff914d35c07d090adf7e5584c722df4ee2c19407384480ea525",
+ "single_copy_risk": "Every surviving copy, including this bundle, the Hugging Face cache and the originals, is on one physical NVMe disk. No second durable destination is available or authorized, so the bundle protects against accidental deletion, not device loss. The model weights are also retrievable by pinned revision from the Hugging Face Hub.",
+ "sources": {
+  "artifact_audit": {
+   "path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/artifact_audit/ARTIFACT_AUDIT.json",
+   "sha256": "b4179573ee0e2e3ed34e4131be65104ca087529e7c9c60028d1facec00af13f3"
+  },
+  "purge_manifests": [
+   "/home/moloch/ouro_project/artifacts/jlens/PURGE_MANIFEST_2026-09-11.json",
+   "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/PURGE_MANIFEST_2026-09-11.json",
+   "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/PURGE_MANIFEST_2026-09-11.json"
+  ]
+ },
+ "storage": {
+  "assessment": "One physical disk (NVMe WD PC SN8000S 1 TB, serial 25363H803914): p1 /boot vfat, p2 / ext4. zram0 is RAM-backed swap. No RAID, removable or network storage mounted. Every surviving copy (four banks, payload, model snapshots, HF cache, re-materialized chunks) is on this single device, so verified duplicates give no device-failure independence.",
+  "df_B1": [
+   "Filesystem     Type         1B-blocks         Used        Avail Use% Mounted on",
+   "dev            devtmpfs   16373669888            0  16373669888   0% /dev",
+   "run            tmpfs      16519258112      6393856  16512864256   1% /run",
+   "efivarfs       efivarfs        274332       164543       104669  62% /sys/firmware/efi/efivars",
+   "/dev/nvme0n1p2 ext4     1005921464320 551182368768 403565654016  58% /",
+   "tmpfs          tmpfs      16519258112      8929280  16510328832   1% /dev/shm",
+   "none           tmpfs          1048576            0      1048576   0% /run/credentials/systemd-journald.service",
+   "tmpfs          tmpfs      16519258112   2667933696  13851324416  17% /tmp",
+   "/dev/nvme0n1p1 vfat        1071628288    486060032    585568256  46% /boot",
+   "tmpfs          tmpfs       3303849984     40398848   3263451136   2% /run/user/1000"
+  ],
+  "lsblk": {
+   "blockdevices": [
+    {
+     "fstype": "swap",
+     "model": null,
+     "mountpoints": [
+      "[SWAP]"
+     ],
+     "name": "zram0",
+     "rm": false,
+     "rota": false,
+     "serial": null,
+     "size": 4294967296,
+     "tran": null,
+     "type": "disk"
+    },
+    {
+     "children": [
+      {
+       "fstype": "vfat",
+       "model": null,
+       "mountpoints": [
+        "/boot"
+       ],
+       "name": "nvme0n1p1",
+       "rm": false,
+       "rota": false,
+       "serial": null,
+       "size": 1073741824,
+       "tran": "nvme",
+       "type": "part"
+      },
+      {
+       "fstype": "ext4",
+       "model": null,
+       "mountpoints": [
+        "/"
+       ],
+       "name": "nvme0n1p2",
+       "rm": false,
+       "rota": false,
+       "serial": null,
+       "size": 1023133351936,
+       "tran": "nvme",
+       "type": "part"
+      }
+     ],
+     "fstype": null,
+     "model": "WD PC SN8000S SDEPNRK-1T00-1101",
+     "mountpoints": [],
+     "name": "nvme0n1",
+     "rm": false,
+     "rota": false,
+     "serial": "25363H803914",
+     "size": 1024209543168,
+     "tran": "nvme",
+     "type": "disk"
+    }
+   ]
+  },
+  "second_physical_device": false,
+  "swap": "/swapfile 32G (on /) and zram0 4G"
+ },
+ "surviving_banks_and_arms": {
+  "diagonal": {
+   "bank_sha256": "b8e8b7d2...",
+   "selection": "state['J']['diagonal']",
+   "support_columns": 191,
+   "target": 191,
+   "worker_path": "banks/positions.pt"
+  },
+  "fit01": {
+   "bank_sha256": "90f01f6a...",
+   "selection": "state['J']",
+   "support_columns": 192,
+   "target": 191,
+   "worker_path": "banks/fit01.pt"
+  },
+  "fit02": {
+   "bank_sha256": "101f31db...",
+   "selection": "state['J']",
+   "support_columns": 192,
+   "target": 191,
+   "worker_path": "banks/fit02.pt"
+  },
+  "interpretation": "Four files, five bank arms, six evaluated arms. fit01 and fit02 are the same estimator (two calibration fits), penultimate changes the target, sampled_sum and diagonal are two aggregation variants stored in one file, and raw uses no bank.",
+  "penultimate": {
+   "bank_sha256": "dc6354df...",
+   "selection": "state['J']",
+   "support_columns": 190,
+   "target": 190,
+   "worker_path": "banks/penultimate.pt"
+  },
+  "raw": {
+   "bank": null,
+   "note": "worker skips bank loading for raw",
+   "support_columns": 192
+  },
+  "sampled_sum": {
+   "bank_sha256": "b8e8b7d2...",
+   "selection": "state['J']['sampled_sum']",
+   "support_columns": 191,
+   "target": 191,
+   "worker_path": "banks/positions.pt"
+  },
+  "source": "corrections/native_check_v1/bundle/frozen/run_spec.json bank_records (sha256 002b91cb..., equal to the payload binding) and bundle/evaluation/worker.py lines 129-140; SUPPORT from bundle/evaluation/measurement.py"
+ },
+ "unique_and_lost": [
+  {
+   "bytes": 394278314,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit0/exit0_p0-24.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "36b3d5ee1001845768d3aaea3c45b967faf37549898f17a1ba043c1abe020c3b"
+  },
+  {
+   "bytes": 796944858,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit1/exit1_p0-24.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "c9484f225364a3390a069ff8c7a86c02a6a3cc324265b5ff261375ec36dcf79b"
+  },
+  {
+   "bytes": 1199611445,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit2/exit2_p0-24.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "772878a1fd90a6bae238ea27e97ea6dc32f57287c556db73732e2594f96d4f79"
+  },
+  {
+   "bytes": 1602278298,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_merged.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "44cc08ce3faba08725d7e47e614c02b4db291b75ab48496bf6aeffa8c4d5a899"
+  },
+  {
+   "bytes": 1602277707,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_n56.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "beb0592c86bcd1fb74c96eab380d955989b877ad63e1c9ff246c06771584e5ab"
+  },
+  {
+   "bytes": 1602277707,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_n80.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "cd49c026edd81ac0369214f52c1b1a79e750a2eedc8756dbbcab0933e08793b7"
+  },
+  {
+   "bytes": 1602277904,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p0-8.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "e5fd1d3c51379abcd33724ac85a5d6e8337bfdebadfa236b7023c18adab01349"
+  },
+  {
+   "bytes": 1602278298,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p32-56.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "caa6fc6b9dc3203aa0b283e45337cee2e6ec55d4413be17c52e9d708933360bc"
+  },
+  {
+   "bytes": 1602278298,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p56-80.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "669faf131c859937da267d1eced4420eaf07605b690939df64b0c29fd92a581a"
+  },
+  {
+   "bytes": 1602278101,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p8-32.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "fdc10b6a2054f96f1d11fbf8fc43fe9e1bb35f308bcb08dc1d0d1de5fe255d83"
+  },
+  {
+   "bytes": 394278685,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit0.pt",
+   "reason": "Locally merged N100 lens (sidecar lens/n100/exit0.json lists its shard inputs). Its shard inputs have no local copy (remote receipts only, class d). Numerical re-merge would need Hub retrieval; Two merges of the identical five exit3 shard inputs (lens/n100/exit3.json and retrieved/.../exit3.json shard_records) have different SHA-256 at equal size (d3bc7c42... deleted, d7c26297... surviving), so byte-exact re-merging is not expected.",
+   "sha256": "3693469edc1b060cc2da46751792d0c85b75635c25ac976133fa2f64ecfe3665"
+  },
+  {
+   "bytes": 796945565,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit1.pt",
+   "reason": "Locally merged N100 lens (sidecar lens/n100/exit1.json lists its shard inputs). Its shard inputs have no local copy (remote receipts only, class d). Numerical re-merge would need Hub retrieval; Two merges of the identical five exit3 shard inputs (lens/n100/exit3.json and retrieved/.../exit3.json shard_records) have different SHA-256 at equal size (d3bc7c42... deleted, d7c26297... surviving), so byte-exact re-merging is not expected.",
+   "sha256": "12c1a43451bcf9e36515f29f3e779c025d47c75f9b0a39eca67bb71736d62f58"
+  },
+  {
+   "bytes": 1199612552,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2.pt",
+   "reason": "Locally merged N100 lens (sidecar lens/n100/exit2.json lists its shard inputs). Its shard inputs have no local copy (remote receipts only, class d). Numerical re-merge would need Hub retrieval; Two merges of the identical five exit3 shard inputs (lens/n100/exit3.json and retrieved/.../exit3.json shard_records) have different SHA-256 at equal size (d3bc7c42... deleted, d7c26297... surviving), so byte-exact re-merging is not expected.",
+   "sha256": "a5e6e1e7cab5d377dc94c92878b07b3499d57cd8196f335546fb54229b93b2e2"
+  },
+  {
+   "bytes": 1602279480,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3.pt",
+   "reason": "Locally merged N100 lens (sidecar lens/n100/exit3.json lists its shard inputs). Four of its five shard inputs survive (verified HF cache); shard 0080_0100 is unresolved. Two merges of the identical five exit3 shard inputs (lens/n100/exit3.json and retrieved/.../exit3.json shard_records) have different SHA-256 at equal size (d3bc7c42... deleted, d7c26297... surviving), so byte-exact re-merging is not expected. A surviving merge of the same inputs (d7c26297...) may be tensor-equivalent; untested.",
+   "sha256": "d3bc7c4291d130417464919f9c6b420fe965bce135a23d63e93f0ac43df76da5"
+  },
+  {
+   "bytes": 1602277904,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/pilot/exit3_p0-8.pt",
+   "reason": "Application-era lens file (listed in jlens MANIFEST.json group retained_raw_inputs); no size/hash match under /home/moloch and no remote receipt.",
+   "sha256": "e5fd1d3c51379abcd33724ac85a5d6e8337bfdebadfa236b7023c18adab01349"
+  },
+  {
+   "bytes": 510421966,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/history/recovered-2026-09-04/gpu_cache.npz",
+   "reason": "Probe activation cache; no size/hash match anywhere under /home/moloch and no remote receipt.",
+   "sha256": "bfbb9308d00c511b80050325855d37d44a44b9f5ed3ab59aa71a6098dffb3c02"
+  },
+  {
+   "bytes": 510101594,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/n80/gpu_cache.npz",
+   "reason": "Probe activation cache; no size/hash match anywhere under /home/moloch and no remote receipt.",
+   "sha256": "912a0a098a34e3491cd06a450a071820be28d079961e357d03b2a20b0f272657"
+  },
+  {
+   "bytes": 392103153,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/n80_v2/gpu_cache.npz",
+   "reason": "Probe activation cache; no size/hash match anywhere under /home/moloch and no remote receipt. jlens MANIFEST.json records a different file at this path (392103392 bytes, 0e8418c9...), so the manifested bytes had already been replaced before the purge.",
+   "sha256": "4cb03e201dd27b21fd296a9a2b4d98f3254612d1c08c34deecfdd590b081aad6"
+  },
+  {
+   "bytes": 510101594,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/pilot/gpu_cache.npz",
+   "reason": "Probe activation cache; no size/hash match anywhere under /home/moloch and no remote receipt.",
+   "sha256": "f07bbade6226edcfe0928ace00c2222e705a5d43f6c12905fa1a2fca6d2d8607"
+  },
+  {
+   "bytes": 510101594,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/round1_exit3x32/gpu_cache.npz",
+   "reason": "Probe activation cache; no size/hash match anywhere under /home/moloch and no remote receipt.",
+   "sha256": "ceacedaa85d2bd9c4fe85f95c658c24ee29b72e7aaa7c57e81cb4713dea7d7d7"
+  },
+  {
+   "bytes": 1779204096,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_20260909T120245Z/staging/controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt",
+   "reason": "Truncated prefix copy of an FP32 N100 checkpoint whose complete copy was also deleted; no surviving source.",
+   "sha256": "97a3059dca3c21a6c466f34ead93b6bdecb8d6c0ffac90c468c1b69a80af9aad"
+  },
+  {
+   "bytes": 3975348504,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v2_20260909T123125Z_58b81f3b/staging/controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt",
+   "reason": "Truncated prefix copy of an FP32 N100 checkpoint whose complete copy was also deleted; no surviving source.",
+   "sha256": "c4912ff4e1f21aae3e60094d26f66f9399f96bb0efcfe47ba3b095b88cae61c1"
+  },
+  {
+   "bytes": 3187723651,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt",
+   "reason": "Complete FP32 N100 checkpoint (historically hash-verified); sole copy. Its FP16 final bank survives, but the sum/100 FP16 conversion is not invertible.",
+   "sha256": "cc61b21e9f591c92284fe576b4119e80e73f45af6cf11e394e3fe48293ebc168"
+  },
+  {
+   "bytes": 6409003339,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt",
+   "reason": "Complete FP32 N100 checkpoint (historically hash-verified); sole copy. Its FP16 final bank survives, but the sum/100 FP16 conversion is not invertible.",
+   "sha256": "e5f4358227a8be21bfbdbdeceab8d19c276ae0e3a56238b44b82ea028b4c9eb6"
+  },
+  {
+   "bytes": 1745780736,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt",
+   "reason": "Sole Huginn N100 FP32 checkpoint evidence, itself truncated (1,745,780,736 of 3,568,444,419 bytes); no other copy.",
+   "sha256": "099a99fd3b1aba3ac06112411ec06d5aac5ce423f245c3cd64835150bc890473"
+  },
+  {
+   "bytes": 3204501185,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_01/checkpoints/cursor_000100_04725c9ff69e4fa2a481b644e0790574/state.pt",
+   "reason": "Complete FP32 N100 checkpoint (historically hash-verified); sole copy. Its FP16 final bank survives, but the sum/100 FP16 conversion is not invertible.",
+   "sha256": "aecd994c9fdb23e3010f8012368d5bd41caabae58f6a1e71413a06c83976d111"
+  },
+  {
+   "bytes": 3204501185,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_02/checkpoints/cursor_000100_c77feb54f72c4155ac109208b031cc81/state.pt",
+   "reason": "Complete FP32 N100 checkpoint (historically hash-verified); sole copy. Its FP16 final bank survives, but the sum/100 FP16 conversion is not invertible.",
+   "sha256": "474c6ca7ae552889ec8a936eccd5355b796300558a5a9af443cbdb8e33a5e95b"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/cache.pt",
+   "reason": "Historical Huginn evaluation tensor cache; every copy (2 here, 6 review-fixture copies in the confirmation root) was deleted.",
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/cache.pt",
+   "reason": "Historical Huginn evaluation tensor cache; every copy (2 here, 6 review-fixture copies in the confirmation root) was deleted.",
+   "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+  },
+  {
+   "bytes": 407374621,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/cache.pt",
+   "reason": "Historical Ouro evaluation state cache (main_only and ouro_handoff copies identical); all 4 copies across roots deleted. Regeneration would be GPU replay, not bit-guaranteed.",
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "bytes": 407374621,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt",
+   "reason": "Historical Ouro evaluation state cache (main_only and ouro_handoff copies identical); all 4 copies across roots deleted. Regeneration would be GPU replay, not bit-guaranteed.",
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "bytes": 3204502175,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/baseline_full.pt",
+   "reason": "Fitting-throughput optimization output (2026-09-07); JSON/log summaries retained, binary has no copy.",
+   "sha256": "167fc1edb1b2387f7358f04d5f8829bdf1aca547d3952aef5fbd13e548e36890"
+  },
+  {
+   "bytes": 68847472,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/offload_reference_b8_v2.npz",
+   "reason": "Fitting-throughput optimization output (2026-09-07); JSON/log summaries retained, binary has no copy.",
+   "sha256": "d54751a189d12e9b7e03136ee09964fda1c09b79fd58f97ba93f4af6dbcdbaf6"
+  },
+  {
+   "bytes": 3204463663,
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_full_b8.pt",
+   "reason": "Fitting-throughput optimization output (2026-09-07); JSON/log summaries retained, binary has no copy.",
+   "sha256": "a9c16a7dd8c5067345cbfcb73e15e82c7cf98d25b47ac50d12a220f8621cc4b1"
+  },
+  {
+   "bytes": 223965405,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/bundle.tar.gz",
+   "reason": "Frozen Huginn verification archive; its member prerequisites/ouro_evaluation/common/cache.pt (fb51d115...) is lost everywhere, and tar/gzip headers make byte-exact rebuild unlikely even with members.",
+   "sha256": "2d3b4cae0f6e22600f1d8c12e419f2f285118d2e52a52bc3bacf81162e041d30"
+  },
+  {
+   "bytes": 407374621,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/bundle/prerequisites/ouro_evaluation/common/cache.pt",
+   "reason": "Copy of the historical Ouro evaluation state cache (fb51d115...); all copies deleted.",
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "bytes": 407374621,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/contract_probe/prerequisites/ouro_evaluation/common/cache.pt",
+   "reason": "Copy of the historical Ouro evaluation state cache (fb51d115...); all copies deleted.",
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/fit/lens.pt",
+   "reason": "Synthetic review-fixture copy whose bytes equal a lost historical Huginn cache; no copy survives.",
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090803/cache.pt",
+   "reason": "Synthetic review-fixture copy whose bytes equal a lost historical Huginn cache; no copy survives.",
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090804/cache.pt",
+   "reason": "Synthetic review-fixture copy whose bytes equal a lost historical Huginn cache; no copy survives.",
+   "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/synthetic_accepted/results/fit/lens.pt",
+   "reason": "Synthetic review-fixture copy whose bytes equal a lost historical Huginn cache; no copy survives.",
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/synthetic_accepted/results/readouts/seeds/2026090803/cache.pt",
+   "reason": "Synthetic review-fixture copy whose bytes equal a lost historical Huginn cache; no copy survives.",
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "bytes": 141949409,
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/synthetic_accepted/results/readouts/seeds/2026090804/cache.pt",
+   "reason": "Synthetic review-fixture copy whose bytes equal a lost historical Huginn cache; no copy survives.",
+   "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+  }
+ ],
+ "unresolved": [
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0000_0025.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0000_0025.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0000_0025.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0000_0025.pt",
+    "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a",
+    "size": 1199615000
+   },
+   "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0025_0050.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0025_0050.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0025_0050.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0025_0050.pt",
+    "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368",
+    "size": 1199615000
+   },
+   "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0050_0075.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0050_0075.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0050_0075.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0050_0075.pt",
+    "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c",
+    "size": 1199615000
+   },
+   "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0075_0100.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0075_0100.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0075_0100.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0075_0100.pt",
+    "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c",
+    "size": 1199615000
+   },
+   "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c"
+  },
+  {
+   "bytes": 1602282696,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3_shard_0080_0100.pt",
+   "reason": "No local copy and no retrieval receipt. The four sibling exit3 shards are present in the local HF cache of Vykos/ouro-jlens-results at successive revisions, which suggests but does not establish that this fifth shard was uploaded; unverifiable offline.",
+   "remote_record": null,
+   "sha256": "a803d687e674b481c599ddf27aca9adb19ca62998b2389c522ad0fa17cb3a759"
+  },
+  {
+   "bytes": 394279661,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0000_0025.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0000_0025.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit0_shard_0000_0025.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0000_0025.pt",
+    "sha256": "480418049589449c2754d0d899d5457673dffd55563ce4ffda67a4aa7c2d4d42",
+    "size": 394279661
+   },
+   "sha256": "480418049589449c2754d0d899d5457673dffd55563ce4ffda67a4aa7c2d4d42"
+  },
+  {
+   "bytes": 394279661,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0025_0050.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0025_0050.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit0_shard_0025_0050.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0025_0050.pt",
+    "sha256": "e4872d1cb58089fdc580ec1927ec0a622506080b948093c50c36d062fe537259",
+    "size": 394279661
+   },
+   "sha256": "e4872d1cb58089fdc580ec1927ec0a622506080b948093c50c36d062fe537259"
+  },
+  {
+   "bytes": 394279661,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0050_0075.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0050_0075.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit0_shard_0050_0075.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0050_0075.pt",
+    "sha256": "a9c8a74d50fb9ab588207e1cfec82f075dabab9609ad8c8691785c7e91d8296d",
+    "size": 394279661
+   },
+   "sha256": "a9c8a74d50fb9ab588207e1cfec82f075dabab9609ad8c8691785c7e91d8296d"
+  },
+  {
+   "bytes": 394279661,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0075_0100.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0075_0100.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit0_shard_0075_0100.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0075_0100.pt",
+    "sha256": "fa4823d769a9ef0cd10de87504867b6a8f9a0fe22b9c084b923baa9e3a45b254",
+    "size": 394279661
+   },
+   "sha256": "fa4823d769a9ef0cd10de87504867b6a8f9a0fe22b9c084b923baa9e3a45b254"
+  },
+  {
+   "bytes": 796947245,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0000_0025.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0000_0025.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit1_shard_0000_0025.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0000_0025.pt",
+    "sha256": "4da502ff6be8963440f30c3514a289bedeaf3b3df96c30bb4ecd13fa80ba02c6",
+    "size": 796947245
+   },
+   "sha256": "4da502ff6be8963440f30c3514a289bedeaf3b3df96c30bb4ecd13fa80ba02c6"
+  },
+  {
+   "bytes": 796947245,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0025_0050.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0025_0050.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit1_shard_0025_0050.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0025_0050.pt",
+    "sha256": "5a8126e1040e7e8ab7e724f4a3fb7864b0852e744da79798f98fcccefbd2c843",
+    "size": 796947245
+   },
+   "sha256": "5a8126e1040e7e8ab7e724f4a3fb7864b0852e744da79798f98fcccefbd2c843"
+  },
+  {
+   "bytes": 796947245,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0050_0075.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0050_0075.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit1_shard_0050_0075.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0050_0075.pt",
+    "sha256": "654928cbc4f1df0324a6d91d1f6cd5c4685eab903700b6f6a23082c119bb903d",
+    "size": 796947245
+   },
+   "sha256": "654928cbc4f1df0324a6d91d1f6cd5c4685eab903700b6f6a23082c119bb903d"
+  },
+  {
+   "bytes": 796947245,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0075_0100.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0075_0100.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit1_shard_0075_0100.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0075_0100.pt",
+    "sha256": "3f5c7ef5d69f5e837fffaaa0e4ffd4e52bef77951373122f6283e63ceaf9a504",
+    "size": 796947245
+   },
+   "sha256": "3f5c7ef5d69f5e837fffaaa0e4ffd4e52bef77951373122f6283e63ceaf9a504"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0000_0025.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0000_0025.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0000_0025.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0000_0025.pt",
+    "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a",
+    "size": 1199615000
+   },
+   "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0025_0050.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0025_0050.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0025_0050.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0025_0050.pt",
+    "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368",
+    "size": 1199615000
+   },
+   "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0050_0075.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0050_0075.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0050_0075.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0050_0075.pt",
+    "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c",
+    "size": 1199615000
+   },
+   "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c"
+  },
+  {
+   "bytes": 1199615000,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0075_0100.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0075_0100.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "shard",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit2_shard_0075_0100.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0075_0100.pt",
+    "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c",
+    "size": 1199615000
+   },
+   "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c"
+  },
+  {
+   "bytes": 1602280332,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit3_n32.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit3_n32.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "prefix_lens",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit3_n32.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit3_n32.pt",
+    "sha256": "eea0d69232ff4d14598028b1c9010773c9f4ff49779a118dea0b040486bbec1a",
+    "size": 1602280332
+   },
+   "sha256": "eea0d69232ff4d14598028b1c9010773c9f4ff49779a118dea0b040486bbec1a"
+  },
+  {
+   "bytes": 1602280332,
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit3_n56.pt",
+   "reason": "A local retrieval receipt records this exact size and SHA-256 at remote_path 'jlens-b300-20260905-0359/artifacts/lens/n100/exit3_n56.pt' in the private Hub results repository Vykos/ouro-jlens-results (run jlens-b300-20260905-0359). No local copy exists; remote existence and integrity cannot be verified offline.",
+   "remote_record": {
+    "kind": "prefix_lens",
+    "receipt": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359.receipts/lens/n100/exit3_n56.pt.receipt.json",
+    "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit3_n56.pt",
+    "sha256": "9ec2189df2622fb1eaff05e94700edc45fe27cc1b63d2377a7cd0d1e90005964",
+    "size": 1602280332
+   },
+   "sha256": "9ec2189df2622fb1eaff05e94700edc45fe27cc1b63d2377a7cd0d1e90005964"
+  }
+ ]
+}

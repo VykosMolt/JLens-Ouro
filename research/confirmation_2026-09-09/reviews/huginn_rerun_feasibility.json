@@ -1,0 +1,427 @@
+{
+  "budget": {
+    "admission_formula_after_gate": "remaining work time must cover 100*1.25*max(measured complete preflight prompt+checkpoint,130.4838364141) plus900 readout seconds; preservation4680 and termination600 remain outside work deadline. Remaining reconciled account/combined/job funds must cover full envelope.",
+    "combined_cap_usd": 25,
+    "configuration_shape": {
+      "compute_budget_seconds": 20880,
+      "preservation_reserve_seconds": 4680,
+      "setup_budget_seconds": 3600,
+      "termination_reserve_seconds": 600
+    },
+    "declared_cost_plus_controller_015_latency_margin_usd": 5.989904000000001,
+    "primary_planning_cap_usd": 4,
+    "rate_ceiling_usd_per_hour": 0.70644,
+    "reconciliation": "Use actual final primary debit and current available account balance after accepted primary termination; do not substitute expected primary spend. This report does not establish current provider availability or actual setup/network speed.",
+    "remaining_after_full_primary_cap_usd": 7.148,
+    "remaining_after_two_dollar_primary_usd": 9.148,
+    "remaining_before_primary_usd": 11.148,
+    "same_allowances_with_historical_fit_bound_cost_plus_margin_usd": 5.33612981656523,
+    "stages": [
+      {
+        "basis": "planning allowance; no complete authenticated setup elapsed measurement found",
+        "seconds": 3600,
+        "stage": "setup and complete original model/tokenizer snapshots"
+      },
+      {
+        "basis": "1142.836 s measured native+optimized derivatives, plus retained matrices/primal tensor transfer and verification; requires measured receiver throughput around 5 MB/s",
+        "seconds": 3600,
+        "stage": "native derivative/primal gate plus outside-worker tensor acceptance"
+      },
+      {
+        "basis": "4.55 h; exceeds 1.25 * 100 * historical observed per-prompt bound 130.483836 s",
+        "seconds": 16380,
+        "stage": "all 100 paragraph fits including checkpoint writes"
+      },
+      {
+        "basis": "37.12255 s measured item loops; remaining time is operational allowance",
+        "seconds": 900,
+        "stage": "both original 148-item readout seeds, model load, hashing and sealing"
+      },
+      {
+        "basis": "78 min reserve; approximately 5.641 GB payload takes47 min at2 MB/s; no full historical estimator-transfer throughput was established",
+        "seconds": 4680,
+        "stage": "complete final checkpoint, bank and readout retrieval plus outside-worker validation"
+      },
+      {
+        "basis": "existing reviewed controller constant",
+        "seconds": 600,
+        "stage": "provider termination reserve"
+      }
+    ],
+    "suggested_separate_huginn_cap_usd": 6,
+    "total_declared_hours_including_termination": 8.266666666666667,
+    "total_declared_seconds_including_termination": 29760,
+    "unallocated_combined_after_four_plus_six_usd": 1.148
+  },
+  "entrypoint_templates_not_executed": {
+    "evaluate": [
+      "python",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+      "--run-spec",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/run_spec.json",
+      "--combined-contract",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/combined_contract.json",
+      "--huginn-calibration",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+      "--ouro-manifest",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/model_manifest.json",
+      "--huginn-manifest",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+      "--eligibility",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+      "--ouro-snapshot",
+      "/workspace/jlens/huginn_verification/models/ouro",
+      "--huginn-snapshot",
+      "/workspace/jlens/huginn_verification/models/huginn",
+      "--ouro-src",
+      "/workspace/jlens/huginn_verification/bundle/ouro_project/src",
+      "--fit-dir",
+      "/workspace/jlens/huginn_verification/results/huginn/fit_01",
+      "--out",
+      "/workspace/jlens/huginn_verification/results/huginn_evaluation",
+      "--stop-at-utc",
+      "<frozen-work-deadline>",
+      "--reserve-seconds",
+      "600"
+    ],
+    "fit": [
+      "python",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/run_huginn.py",
+      "--run-spec",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/run_spec.json",
+      "--combined-contract",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/combined_contract.json",
+      "--calibration",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+      "--snapshot",
+      "/workspace/jlens/huginn_verification/models/huginn",
+      "--ouro-src",
+      "/workspace/jlens/huginn_verification/bundle/ouro_project/src",
+      "--ouro-evaluation-dir",
+      "/workspace/jlens/huginn_verification/prerequisites/ouro_evaluation",
+      "--controls-evaluation-dir",
+      "/workspace/jlens/huginn_verification/prerequisites/controls_evaluation",
+      "--output-dir",
+      "/workspace/jlens/huginn_verification/results/huginn",
+      "--stop-at-utc",
+      "<frozen-work-deadline>",
+      "--reserve-seconds",
+      "900",
+      "--initial-prompt-bound-seconds",
+      "1200"
+    ],
+    "preflight": [
+      "python",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+      "--kind",
+      "huginn",
+      "--run-spec",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/run_spec.json",
+      "--combined-contract",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/combined_contract.json",
+      "--calibration",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+      "--snapshot",
+      "/workspace/jlens/huginn_verification/models/huginn",
+      "--ouro-src",
+      "/workspace/jlens/huginn_verification/bundle/ouro_project/src",
+      "--ouro-evaluation-dir",
+      "/workspace/jlens/huginn_verification/prerequisites/ouro_evaluation",
+      "--controls-evaluation-dir",
+      "/workspace/jlens/huginn_verification/prerequisites/controls_evaluation",
+      "--output-dir",
+      "/workspace/jlens/huginn_verification/results/preflight_huginn"
+    ],
+    "validate": [
+      "python",
+      "/workspace/jlens/huginn_verification/bundle/repo/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+      "--validate-output",
+      "/workspace/jlens/huginn_verification/results/huginn_evaluation"
+    ]
+  },
+  "launch_authorized_now": false,
+  "measurements": {
+    "N100_using_observed_bound_seconds": 13048.383641405962,
+    "checkpoint_io_seconds": 8.608424726990052,
+    "evaluation_item_loop_seconds_by_seed": {
+      "2026090803": 18.859983380069025,
+      "2026090804": 18.262566844001412
+    },
+    "fit_compute_mean_seconds": 120.75023338935222,
+    "fit_compute_only_seconds": 12075.023338935222,
+    "fit_observed_max_prompt_including_checkpoint_bound_seconds": 130.48383641405962,
+    "full_derivative_values_compared": 892108800,
+    "hardware": "NVIDIA GeForce RTX 5090; recorded old capability[12,0],33668857856 VRAM bytes",
+    "minimum_effective_host_headroom_bytes": 48000000000,
+    "native_offload_peak_host_payload_bytes": 4473934616,
+    "native_optimized_bitwise_parity": true,
+    "native_peak_cuda_bytes": 12367640576,
+    "native_reference_seconds": 1023.6601706120418,
+    "optimized_full_paragraph_seconds": 119.17579462903086,
+    "optimized_peak_cuda_bytes": 12656413184,
+    "preflight_prompt_plus_checkpoint_seconds": 127.78421935602091,
+    "setup_elapsed_and_full_estimator_transfer_rate": "not established; planning allowances must be replaced by actual timing/throughput before admitting N100"
+  },
+  "new_model_outcomes_exposed": false,
+  "original_metadata_plan_probe": {
+    "combined_contract_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+    "evaluation_prerequisites": "verified",
+    "gpu_initialized": false,
+    "huginn_calibration_sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4",
+    "model_loaded": false,
+    "output_directory": "/planned/huginn_verification (not created)",
+    "run_spec_sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149",
+    "status": "plan"
+  },
+  "preservation": {
+    "complete_snapshot_input_bytes_huginn_plus_ouro": 20993238623,
+    "estimated_final_minimum_payload_bytes": 5640770377,
+    "full_gate_payload_bytes_estimate": 8419868672,
+    "full_native_and_optimized_gate_matrix_payload_bytes": 7136870400,
+    "full_primal_and_initial_state_tensor_payload_bytes_estimate": 1282998272,
+    "historical_checkpoint_hash_policy": "Do not expect whole-checkpoint bytes to match: fit_identity_sha256 embeds a new runtime identity. The absent old matrix values cannot be numerically compared.",
+    "historical_final_bank_sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596",
+    "new_output_comparison": "Compare historical final-bank hash if serialization matches; compare both retained seed initializations, H/target/native logits and raw/J/coda ranks/top1 elementwise. Report equality and mismatches without selecting another seed, band, tolerance or fit. A new accepted chain does not relabel the old missing chain as recovered.",
+    "old_evaluation_handoff_bytes": 288099459,
+    "original_bank_bytes": 1784226499,
+    "original_checkpoint_bytes": 3568444419,
+    "ouro_snapshot_reason": "Original evaluator only uses Ouro tokenizer, but _tokenizer_files requires all original manifest members, including presence of the safetensors file. Supply the complete authentic snapshot; no placeholder files.",
+    "outside_worker_conversion": "hash exact sealed current N100 checkpoint/final generation; mmap weights_only CPU; independently compute np.divide(FP32 sum,np.float32(100),dtype=float32).astype(float16), compare uint16 bits for all892108800 values; validate shapes/finite/source order/N100/prefix and all100 seed diagnostics"
+  },
+  "required_separate_mechanism": [
+    "Current immutable controller/debit permits only initial_ouro_job_incremental_cap_usd=4; a6USD Huginn plan is correctly rejected. A separately reviewed phase ceiling and reconciled ledger/debit is required; do not overwrite the existing debit or frozen controller.",
+    "Require the exact externally accepted primary final receipt and reconciled termination before any Huginn provider launch. The original run_huginn historical five-fit/control gate does not implement this new prerequisite.",
+    "Preserve the original repo/research/refit_round_2026-09-07/deployment layout, all42 original source files, environment+requirements, both model manifests, allfive small calibration JSON inputs required by _contract, and complete old Ouro/control evaluation prerequisites. Flat bundle/legacy cannot resolve these contracts unchanged.",
+    "Existing preflight_gpu compares all native/optimized matrices then discards them and retains assertions/hashes. A separately source-bound save-only gate wrapper is needed if outside-worker tensor acceptance is required; preserve primal tensors and both complete matrix banks before beginning N100. This report implements no wrapper.",
+    "Use the reviewed receipt/process/deadline machinery under a separately frozen Huginn contract with distinct stages for native gate, complete checkpoint+bank, both evaluation seeds and terminal acceptance. No terminal status or partialN may stand in for a verifiedN100 bank."
+  ],
+  "schema": "huginn_n100_rerun_feasibility.v1",
+  "scientific_scope": {
+    "calibration_fit_id": 1,
+    "calibration_paragraph_order": "original calibration_fit_01.json, all100 in original order",
+    "estimator": "Per paragraph: (1/|V|) sum over valid output positions q and valid source positions p of G(q,p), with V=16..T-2; equal-paragraph FP32 sum divided by100 once and converted to FP16. No extra source-position divisor.",
+    "initialization": {
+      "benchmark_base_seed": 2026090899,
+      "benchmark_namespace": "benchmark",
+      "benchmark_prompt_seed": 8544906854076094770,
+      "calibration_base_seed": 2026090802,
+      "calibration_seed_namespace": "calibration",
+      "draw": "native BF16/device randn draw, then trunc_normal(std=sqrt(2/(5D)),bounds=+-3std), then multiply sqrt(D); draw once per prompt and clone identical state into all8 derivative lanes",
+      "evaluation_base_seeds": [
+        2026090803,
+        2026090804
+      ],
+      "evaluation_namespace": "evaluation",
+      "paragraph_base_rule": "2026090802 + zero-based paragraph index",
+      "prompt_seed_rule": "SHA256 canonical JSON(version=1,base_seed,namespace,input_ids); first8 bytes big-endian modulo2^63",
+      "test_time_noise": 0
+    },
+    "model": {
+      "manifest_bytes": 15651519639,
+      "manifest_files": 16,
+      "repo_id": "tomg-group-umd/huginn-0125",
+      "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c"
+    },
+    "n_prompts": 100,
+    "old_readout": "148 old items, both fixed seeds, 32 learned source cells, original joint-tokenizer eligibility, original min-alias full-sort ranks, raw/J-Lens/full-sequence coda; no new questions or architecture/depth searches",
+    "settings": {
+      "accumulation_dtype": "float32",
+      "checkpoint_every": 1,
+      "compress_saved_tensors": true,
+      "d_model": 5280,
+      "dense_engine": "cuda_graph",
+      "dim_batch": 8,
+      "max_seq_len": 128,
+      "mode": "dense",
+      "n_coda": 2,
+      "n_physical": 4,
+      "n_prelude": 2,
+      "n_ut": 8,
+      "saved_dtype": "float16",
+      "skip_first": 16,
+      "source_layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "target_layer": 33
+    }
+  },
+  "scope": "Read-only preparation; no model weights loaded, GPU initialized, new model outcomes, paid actions, provider/network operations, or frozen source changes. Only the original --plan entry point was executed.",
+  "source_and_evidence_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/lease.py": {
+      "bytes": 56750,
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json": {
+      "bytes": 94410,
+      "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/COMPLETE.json": {
+      "bytes": 369,
+      "sha256": "2df1d30d0563b9d1d94ad9902a9bd75eb4d5013da4a8648fb14d4bd1a1ef7e54"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/OWNER.json": {
+      "bytes": 48186,
+      "sha256": "b383c0ac87f98eb6368860d3a28b3ec46ac1ab4c6a6bf2e446fda0176c1ac414"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/metadata.json": {
+      "bytes": 165732,
+      "sha256": "50d7504743f182bda285ebbd10d19e664030dd9743d873617a6a67659bc79a6f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json": {
+      "bytes": 19977,
+      "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/environment.json": {
+      "bytes": 4685,
+      "sha256": "940842c822fc3a76a89e94bd7fa052c63de9d71758b9a513d17260b39c8124a7"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_controls.py": {
+      "bytes": 52577,
+      "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py": {
+      "bytes": 58251,
+      "sha256": "b98b39d70a64db23c1544c4ce5d3cb57760363b1fd3d682db106288669f85b5e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_refits.py": {
+      "bytes": 55009,
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py": {
+      "bytes": 33463,
+      "sha256": "2d30747defd1fe98f72976a1959e9d554fafb9bbbc001374e1d2404127f72e88"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json": {
+      "bytes": 25792,
+      "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json": {
+      "bytes": 165311,
+      "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json": {
+      "bytes": 2842,
+      "sha256": "4e9bed3327f63bb31d9cd300b40c329601ace4fd2b1c135b9811c178230ed0db"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/model_manifest.json": {
+      "bytes": 2323,
+      "sha256": "377d9e75a2f6a38d1a94ac78bbe940e0c34f369ef8f0d6f692a65b4a3f071370"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py": {
+      "bytes": 18407,
+      "sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/requirements.lock": {
+      "bytes": 12089,
+      "sha256": "87311c22b6d2eaa50e4c819dab431ff221fc787f8bbf495cbbc455db0a0245f1"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py": {
+      "bytes": 37695,
+      "sha256": "78cf3c76b58a7d5d6bc184a8828200d29d618775a142d253f6188e30a4df8ff2"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json": {
+      "bytes": 24834,
+      "sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py": {
+      "bytes": 10107,
+      "sha256": "1438816d87b730e45e4ae2df79113baa645f19b3c84eb690194c13ac622e8a8d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/COMPLETE.json": {
+      "bytes": 27530,
+      "sha256": "ead7e832a07aebb8e6a4740ec8a82de666540684dd67d5ff536f4020c548b75e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/START.json": {
+      "bytes": 19877,
+      "sha256": "e71d1d636a90941a52d3f8b79d4d7e206a7b6b13198d099aa7853555c284493d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/huginn_r8.json": {
+      "bytes": 6900,
+      "sha256": "d33fd9f8a8d1c6911438aeee78f17c4e2f5babbbb037326e614b72f1174a4581"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_AFTER.json": {
+      "bytes": 5211,
+      "sha256": "70185e5d78f5514149d674e6e5973579a38fef3c64bf3c387721e36c594d2537"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json": {
+      "bytes": 56959,
+      "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/metadata.json": {
+      "bytes": 11132,
+      "sha256": "770638b050ee1622b7918b5c9ad1e7427f5c68eab98994ec65e879b7b22dfe9f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/metadata.json": {
+      "bytes": 11132,
+      "sha256": "19465c6009dceecb20a5459c5eb6134b349999884ae00d61612b00cf842f687e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/COMPLETE.json": {
+      "bytes": 666,
+      "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/OWNER.json": {
+      "bytes": 77181,
+      "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/COMPLETE.json": {
+      "bytes": 887,
+      "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/OWNER.json": {
+      "bytes": 151299,
+      "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py": {
+      "bytes": 28285,
+      "sha256": "cf783d68830a78efddc358d6ff06233dd7bc6fae671045de31ff91164a17164f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py": {
+      "bytes": 23288,
+      "sha256": "b2286fd25eb07553c8e27df3883cdce28c71907343c163d0c5db5da25a863e78"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_fitting.py": {
+      "bytes": 9498,
+      "sha256": "6ba31269b98cca39f9a27a0ede572abf466abfbb166bc563e85eb796aa4f616f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py": {
+      "bytes": 21300,
+      "sha256": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a"
+    }
+  },
+  "status": "financially_feasible_pending_primary_acceptance_and_separate_admission"
+}

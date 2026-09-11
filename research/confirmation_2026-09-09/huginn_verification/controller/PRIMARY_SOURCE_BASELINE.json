@@ -1,0 +1,39 @@
+{
+  "schema": "huginn_controller_primary_baseline.v1",
+  "sources": {
+    "lease.py": {
+      "bytes": 56750,
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    "artifact_handoff.py": {
+      "bytes": 29606,
+      "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+    },
+    "transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "test_lifecycle.py": {
+      "bytes": 35975,
+      "sha256": "7dc4d0d328ccb4a5661d4362179fbfef2d7d2f81ab6f14197d0f47ef444fa7de"
+    }
+  },
+  "primary_controller": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller",
+  "primary_debit": {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/prior_debit.json",
+    "bytes": 4186,
+    "sha256": "b55f5f6e99a598a4c7227298b0bd9cfaf6e8d39c6ac97f39df77162bd86f652a"
+  }
+}

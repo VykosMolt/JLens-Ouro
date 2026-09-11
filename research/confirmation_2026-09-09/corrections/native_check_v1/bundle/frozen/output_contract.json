@@ -1,0 +1,134 @@
+{
+  "files": {
+    "benchmark.json": {
+      "role": "frozen input or native development evidence"
+    },
+    "common/cache.pt": {
+      "role": "all new-item hidden states, native exit logits and continuations"
+    },
+    "development/native.pt": {
+      "role": "frozen input or native development evidence"
+    },
+    "population.json": {
+      "role": "frozen input or native development evidence"
+    },
+    "provenance.json": {
+      "role": "frozen input or native development evidence"
+    },
+    "readouts/diagonal.npz": {
+      "role": "diagonal raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/diagonal_samples.pt": {
+      "role": "diagonal raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/fit01.npz": {
+      "role": "fit01 raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/fit01_samples.pt": {
+      "role": "fit01 raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/fit02.npz": {
+      "role": "fit02 raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/fit02_samples.pt": {
+      "role": "fit02 raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/penultimate.npz": {
+      "role": "penultimate raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/penultimate_samples.pt": {
+      "role": "penultimate raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/raw.npz": {
+      "role": "raw raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/raw_samples.pt": {
+      "role": "raw raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/sampled_sum.npz": {
+      "role": "sampled_sum raw per-item ranks/top10 or numerical samples"
+    },
+    "readouts/sampled_sum_samples.pt": {
+      "role": "sampled_sum raw per-item ranks/top10 or numerical samples"
+    },
+    "run_spec.json": {
+      "role": "frozen input or native development evidence"
+    }
+  },
+  "required_checks": [
+    "loadability",
+    "numerical"
+  ],
+  "run_id": "ouro_confirmation_20260911_fixed160_native1",
+  "run_spec_sha256": "002b91cb755a0517fc5839ef2277f14307ef9eaba41176b9298f4362e040d446",
+  "schema": "confirmation_output_contract.v1",
+  "stages": {
+    "development": [
+      "benchmark.json",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "run_spec.json"
+    ],
+    "diagonal": [
+      "benchmark.json",
+      "common/cache.pt",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "readouts/diagonal.npz",
+      "readouts/diagonal_samples.pt",
+      "run_spec.json"
+    ],
+    "fit01": [
+      "benchmark.json",
+      "common/cache.pt",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "readouts/fit01.npz",
+      "readouts/fit01_samples.pt",
+      "run_spec.json"
+    ],
+    "fit02": [
+      "benchmark.json",
+      "common/cache.pt",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "readouts/fit02.npz",
+      "readouts/fit02_samples.pt",
+      "run_spec.json"
+    ],
+    "penultimate": [
+      "benchmark.json",
+      "common/cache.pt",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "readouts/penultimate.npz",
+      "readouts/penultimate_samples.pt",
+      "run_spec.json"
+    ],
+    "raw": [
+      "benchmark.json",
+      "common/cache.pt",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "readouts/raw.npz",
+      "readouts/raw_samples.pt",
+      "run_spec.json"
+    ],
+    "sampled_sum": [
+      "benchmark.json",
+      "common/cache.pt",
+      "development/native.pt",
+      "population.json",
+      "provenance.json",
+      "readouts/sampled_sum.npz",
+      "readouts/sampled_sum_samples.pt",
+      "run_spec.json"
+    ]
+  }
+}

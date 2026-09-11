@@ -1,0 +1,1226 @@
+{
+  "schema_version": 1,
+  "status": "EXACT_VERSION_WHEEL_ROUTE_IDENTIFIED_NOT_INSTALLED_OR_GPU_VALIDATED",
+  "recorded_at_utc": "2026-09-08T09:31:56.490064+00:00",
+  "scope": "Local package metadata and CPU-only Torch inspection, public official wheel HEAD requests and small metadata sidecars. No GPU work, account access, cloud lease, package installation, model download, or wheel archive download.",
+  "network_observation_provenance": "HEAD and metadata values transcribed from successful direct original-host responses at the recorded timestamps; the artifact writer independently rechecked both installed metadata hashes.",
+  "python": {
+    "version": "3.14.7",
+    "version_full": "3.14.7 (main, Aug 10 2026, 07:46:56) [GCC 16.1.1 20260728]",
+    "executable": "/home/moloch/ouro_project/venv/bin/python",
+    "resolved_executable": "/usr/bin/python3.14",
+    "soabi": "cpython-314-x86_64-linux-gnu",
+    "platform": "linux-x86_64",
+    "libc": [
+      "glibc",
+      "2.44"
+    ],
+    "gil_disabled_build": false,
+    "gil_enabled": true,
+    "venv_creation_configuration": "home = /usr/bin\ninclude-system-site-packages = false\nversion = 3.14.4\nexecutable = /usr/bin/python3.14\ncommand = /usr/bin/python -m venv /home/moloch/ouro_project/venv\n",
+    "portability_note": "The venv uses the external /usr/bin/python3.14 interpreter. Its creation file records 3.14.4 while the current interpreter is 3.14.7; the venv alone is not portable."
+  },
+  "installed_packages": {
+    "torch": {
+      "version": "2.12.0.dev20260407+cu128",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch-2.12.0.dev20260407+cu128.dist-info/METADATA",
+      "metadata_sha256": "bb8cc0a6d990b45cf1a2fb7a8115f9204bf12012dbb9fcb2bf398d84568931b5",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (81.0.0)\nRoot-Is-Purelib: false\nTag: cp314-cp314-manylinux_2_28_x86_64\n\n",
+      "direct_url_metadata_present": false
+    },
+    "transformers": {
+      "version": "4.54.1",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/transformers-4.54.1.dist-info/METADATA",
+      "metadata_sha256": "1b5f0e2a950e2ef001f7906f176013f0e87a14865ae38628dcc51d4337320aa7",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (80.9.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n",
+      "direct_url_metadata_present": false
+    },
+    "numpy": {
+      "version": "2.4.4",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/numpy-2.4.4.dist-info/METADATA",
+      "metadata_sha256": "8f9e04338ffa930868a2d157ce44f6e4cb7ac524b968fb13d04187a6ac575282",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: meson\nRoot-Is-Purelib: false\nTag: cp314-cp314-manylinux_2_27_x86_64\nTag: cp314-cp314-manylinux_2_28_x86_64\n\n",
+      "direct_url_metadata_present": false
+    },
+    "tokenizers": {
+      "version": "0.21.4",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/tokenizers-0.21.4.dist-info/METADATA",
+      "metadata_sha256": "ef1cc38a5ceceb768e2963515069bc1a6f539408fb0262443765caa8773e7123",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: maturin (1.9.2)\nRoot-Is-Purelib: false\nTag: cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64\n",
+      "direct_url_metadata_present": false
+    },
+    "safetensors": {
+      "version": "0.7.0",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/safetensors-0.7.0.dist-info/METADATA",
+      "metadata_sha256": "6809326fbf17444dd520ab19f0a55b7a18476dbe52a430466bbf5389967c2aaa",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: maturin (1.10.2)\nRoot-Is-Purelib: false\nTag: cp38-abi3-manylinux_2_17_x86_64\nTag: cp38-abi3-manylinux2014_x86_64\n",
+      "direct_url_metadata_present": false
+    },
+    "huggingface-hub": {
+      "version": "0.36.2",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/huggingface_hub-0.36.2.dist-info/METADATA",
+      "metadata_sha256": "4dc2b0a3fb27bcba8b091f98bccff4b94369d269c9768aeaecd0b99d970665d9",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (79.0.1)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n",
+      "direct_url_metadata_present": false
+    },
+    "accelerate": {
+      "version": "1.13.0",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/accelerate-1.13.0.dist-info/METADATA",
+      "metadata_sha256": "513a92b6951d259a4db9cb17dc41618e9525302d950bb2eecd6885df48e4224f",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (78.1.1)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n",
+      "direct_url_metadata_present": false
+    },
+    "triton": {
+      "version": "3.7.0+git9c288bc5",
+      "metadata_path": "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/triton-3.7.0+git9c288bc5.dist-info/METADATA",
+      "metadata_sha256": "15be25c2c8ced19d19fad33dc94ce3fab99254f0546bb0a8b4f7496ea5c091db",
+      "wheel_metadata": "Wheel-Version: 1.0\nGenerator: setuptools (78.1.0)\nRoot-Is-Purelib: false\nTag: cp314-cp314-manylinux_2_27_x86_64\nTag: cp314-cp314-manylinux_2_28_x86_64\n\n",
+      "direct_url_metadata_present": false
+    }
+  },
+  "torch_runtime": {
+    "version": "2.12.0.dev20260407+cu128",
+    "git_version": "6a13e444ee88996ff01cd2bab41d7f2857291646",
+    "cuda_build_version": "12.8",
+    "cudnn_runtime_integer": 92000,
+    "config": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.10.2 (Git Hash f1d471933dc852f956fd05389f9313c7148783d5)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=6a13e444ee88996ff01cd2bab41d7f2857291646, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all -DONNX_NAMESPACE=onnx_torch -gencode arch=compute_75,code=sm_75 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_90,code=sm_90 -gencode arch=compute_100,code=sm_100 -gencode arch=compute_120,code=sm_120 -Xcudafe --diag_suppress=cc_clobber_ignored,--diag_suppress=field_without_dll_interface,--diag_suppress=base_class_has_different_dll_interface,--diag_suppress=dll_interface_conflict_none_assumed,--diag_suppress=dll_interface_conflict_dllexport_assumed,--diag_suppress=bad_friend_decl --expt-relaxed-constexpr --expt-extended-lambda -Xfatbin -compress-all --threads 2 -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CUDA_VERSION=12.8, CUDNN_VERSION=9.20.0, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_MSLK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.12.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+    "cuda_initialized_before": false,
+    "cuda_initialized_after": false
+  },
+  "cuda_library_package_versions": {
+    "cuda-bindings": "12.9.4",
+    "cuda-pathfinder": "1.2.2",
+    "cuda-toolkit": "12.8.1",
+    "nvidia-cublas-cu12": "12.8.4.1",
+    "nvidia-cuda-cupti-cu12": "12.8.90",
+    "nvidia-cuda-nvrtc-cu12": "12.8.93",
+    "nvidia-cuda-runtime-cu12": "12.8.90",
+    "nvidia-cudnn-cu12": "9.20.0.48",
+    "nvidia-cufft-cu12": "11.3.3.83",
+    "nvidia-cufile-cu12": "1.13.1.3",
+    "nvidia-curand-cu12": "10.3.9.90",
+    "nvidia-cusolver-cu12": "11.7.3.90",
+    "nvidia-cusparse-cu12": "12.5.8.93",
+    "nvidia-cusparselt-cu12": "0.7.1",
+    "nvidia-nccl-cu12": "2.29.7",
+    "nvidia-nvjitlink-cu12": "12.8.93",
+    "nvidia-nvshmem-cu12": "3.4.5",
+    "nvidia-nvtx-cu12": "12.8.90"
+  },
+  "core_dependency_closure": {
+    "roots": [
+      "torch",
+      "transformers",
+      "numpy"
+    ],
+    "marker_environment": {
+      "implementation_name": "cpython",
+      "implementation_version": "3.14.7",
+      "os_name": "posix",
+      "platform_machine": "x86_64",
+      "platform_release": "7.2.3-1-cachyos",
+      "platform_system": "Linux",
+      "platform_version": "#1 SMP PREEMPT_DYNAMIC Sun, 06 Sep 2026 22:01:30 +0000",
+      "python_full_version": "3.14.7",
+      "platform_python_implementation": "CPython",
+      "python_version": "3.14",
+      "sys_platform": "linux"
+    },
+    "package_count": 44,
+    "active_requirement_mismatches": [],
+    "packages": {
+      "certifi": {
+        "installed_name": "certifi",
+        "version": "2026.4.22",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "4ed6ffe9ccbed05046ab7bff2024cd3ca717295b368bed1fe20a73e365bc415a"
+      },
+      "charset-normalizer": {
+        "installed_name": "charset-normalizer",
+        "version": "3.4.7",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "2bc94af0bf0b699d5898abd62eddf3124a48c6208e0b9f31361cc542b7d02714"
+      },
+      "cuda-bindings": {
+        "installed_name": "cuda-bindings",
+        "version": "12.9.4",
+        "requested_extras": [],
+        "active_requirements": [
+          "cuda-pathfinder~=1.1"
+        ],
+        "installed_metadata_sha256": "e89661f414ebd3b325b664a9f671274c0e0ea1889eb8b02c441ee0d5375249c4"
+      },
+      "cuda-pathfinder": {
+        "installed_name": "cuda-pathfinder",
+        "version": "1.2.2",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "7e69ef0bec6687d32f7c1460d74e73348ee49e44cd215e5daf2e9b0ad6db30b7"
+      },
+      "cuda-toolkit": {
+        "installed_name": "cuda-toolkit",
+        "version": "12.8.1",
+        "requested_extras": [
+          "cublas",
+          "cudart",
+          "cufft",
+          "cufile",
+          "cupti",
+          "curand",
+          "cusolver",
+          "cusparse",
+          "nvjitlink",
+          "nvrtc",
+          "nvtx"
+        ],
+        "active_requirements": [
+          "nvidia-cublas-cu12==12.8.4.1.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cublas\"",
+          "nvidia-cuda-runtime-cu12==12.8.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cudart\"",
+          "nvidia-cufft-cu12==11.3.3.83.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cufft\"",
+          "nvidia-cufile-cu12==1.13.1.3.*; sys_platform == \"linux\" and extra == \"cufile\"",
+          "nvidia-cuda-cupti-cu12==12.8.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cupti\"",
+          "nvidia-curand-cu12==10.3.9.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"curand\"",
+          "nvidia-cusolver-cu12==11.7.3.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cusolver\"",
+          "nvidia-cusparse-cu12==12.5.8.93.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cusparse\"",
+          "nvidia-nvjitlink-cu12==12.8.93.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"nvjitlink\"",
+          "nvidia-cuda-nvrtc-cu12==12.8.93.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"nvrtc\"",
+          "nvidia-nvtx-cu12==12.8.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"nvtx\""
+        ],
+        "installed_metadata_sha256": "e91c046f5f28312b1c9e1a22807800ac05f5c8e1738b0e02b680539249e6650b"
+      },
+      "filelock": {
+        "installed_name": "filelock",
+        "version": "3.29.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "21335d1940ca00830e17594e81e9ed7b393211b1e03eda3c411a3507bf59f4b7"
+      },
+      "fsspec": {
+        "installed_name": "fsspec",
+        "version": "2026.2.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "3f0e9085bc977a0f9e95bd21a563e2411a4078c0ff02927dbdd345a180a7acfb"
+      },
+      "hf-xet": {
+        "installed_name": "hf-xet",
+        "version": "1.5.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "9224634b9a526f234a5472c3e6961c969f3b3168e29c0c10ae6b8f8ca257f320"
+      },
+      "huggingface-hub": {
+        "installed_name": "huggingface_hub",
+        "version": "0.36.2",
+        "requested_extras": [],
+        "active_requirements": [
+          "filelock",
+          "fsspec>=2023.5.0",
+          "hf-xet<2.0.0,>=1.1.3; platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"arm64\" or platform_machine == \"aarch64\"",
+          "packaging>=20.9",
+          "pyyaml>=5.1",
+          "requests",
+          "tqdm>=4.42.1",
+          "typing-extensions>=3.7.4.3"
+        ],
+        "installed_metadata_sha256": "4dc2b0a3fb27bcba8b091f98bccff4b94369d269c9768aeaecd0b99d970665d9"
+      },
+      "idna": {
+        "installed_name": "idna",
+        "version": "3.13",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "68224f3fd8881eda7d359484348af33f9dab823431c34f8f58d7c7189edf7d00"
+      },
+      "jinja2": {
+        "installed_name": "Jinja2",
+        "version": "3.1.6",
+        "requested_extras": [],
+        "active_requirements": [
+          "MarkupSafe>=2.0"
+        ],
+        "installed_metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+      },
+      "markupsafe": {
+        "installed_name": "MarkupSafe",
+        "version": "3.0.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "12b4cc61a7fa288cf7667ee3f213786d9619db57fb33ff6f934afbcb5c12ec81"
+      },
+      "mpmath": {
+        "installed_name": "mpmath",
+        "version": "1.3.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406"
+      },
+      "networkx": {
+        "installed_name": "networkx",
+        "version": "3.6.1",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a"
+      },
+      "numpy": {
+        "installed_name": "numpy",
+        "version": "2.4.4",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "8f9e04338ffa930868a2d157ce44f6e4cb7ac524b968fb13d04187a6ac575282"
+      },
+      "nvidia-cublas-cu12": {
+        "installed_name": "nvidia-cublas-cu12",
+        "version": "12.8.4.1",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "310556f1c2c31ec517d4b049eaf12374081d1c52c8ef4d8eceab2aaf1edff2df"
+      },
+      "nvidia-cuda-cupti-cu12": {
+        "installed_name": "nvidia-cuda-cupti-cu12",
+        "version": "12.8.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "6df7fa2fcdfa046eb952f3f8c172f524b2e19a654ec037da3dbb32e93d9671d1"
+      },
+      "nvidia-cuda-nvrtc-cu12": {
+        "installed_name": "nvidia-cuda-nvrtc-cu12",
+        "version": "12.8.93",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "376458a22054b4a36e110dfab570df4bc658c037a2fb47184bdc4dff7ab90d23"
+      },
+      "nvidia-cuda-runtime-cu12": {
+        "installed_name": "nvidia-cuda-runtime-cu12",
+        "version": "12.8.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "00431338ea983d4be2f46f9fd29cec2fd9bfa39553933ca59fd37192e7d0f82f"
+      },
+      "nvidia-cudnn-cu12": {
+        "installed_name": "nvidia-cudnn-cu12",
+        "version": "9.20.0.48",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-cublas-cu12"
+        ],
+        "installed_metadata_sha256": "5b7638b0f4e4dbc42890d02041fdba75dde6ffbc0e4a3543458b5d11da5e4bd9"
+      },
+      "nvidia-cufft-cu12": {
+        "installed_name": "nvidia-cufft-cu12",
+        "version": "11.3.3.83",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-nvjitlink-cu12"
+        ],
+        "installed_metadata_sha256": "ed11d2273b98e3897dc87ae88fcd7a0661b8a4c96529b93a5d22799fd4898de5"
+      },
+      "nvidia-cufile-cu12": {
+        "installed_name": "nvidia-cufile-cu12",
+        "version": "1.13.1.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "df713a26389a8052d17fee3c1521563e060b24a037983b3889fff54f906ef288"
+      },
+      "nvidia-curand-cu12": {
+        "installed_name": "nvidia-curand-cu12",
+        "version": "10.3.9.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "7d4df14884c3de2ec922c546d995cee62f9a0e5225b3eaf2d8951520212cbf6f"
+      },
+      "nvidia-cusolver-cu12": {
+        "installed_name": "nvidia-cusolver-cu12",
+        "version": "11.7.3.90",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-cublas-cu12",
+          "nvidia-nvjitlink-cu12",
+          "nvidia-cusparse-cu12"
+        ],
+        "installed_metadata_sha256": "1f06a55dc8f2aef9eb20f018044bfa7731124698ba7b435d11c250c62eaf4dc3"
+      },
+      "nvidia-cusparse-cu12": {
+        "installed_name": "nvidia-cusparse-cu12",
+        "version": "12.5.8.93",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-nvjitlink-cu12"
+        ],
+        "installed_metadata_sha256": "e83b3bf81e6a2c1dc4d4ddcd73b283a88e6f7f9d20385d280ec030dbf5384f22"
+      },
+      "nvidia-cusparselt-cu12": {
+        "installed_name": "nvidia-cusparselt-cu12",
+        "version": "0.7.1",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "b264cea6951b70b52a3fd2ffaa88f9109eaf379633aa8d6e0832ecc92ddf6fba"
+      },
+      "nvidia-nccl-cu12": {
+        "installed_name": "nvidia-nccl-cu12",
+        "version": "2.29.7",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "a4d895bab84f4d65feb0e37a371078a71d1ef9e7d673276369a8f9aa4c96bb3a"
+      },
+      "nvidia-nvjitlink-cu12": {
+        "installed_name": "nvidia-nvjitlink-cu12",
+        "version": "12.8.93",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "776feab012c1f3efce8918975dc08aa01793aa33832d87b377caa0448cad4435"
+      },
+      "nvidia-nvshmem-cu12": {
+        "installed_name": "nvidia-nvshmem-cu12",
+        "version": "3.4.5",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "c6c10473179c8c2a45a5f06dbffa3ab5aface4a5363a810c6b68a72e2f8de452"
+      },
+      "nvidia-nvtx-cu12": {
+        "installed_name": "nvidia-nvtx-cu12",
+        "version": "12.8.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "c63c23e04e8cf04143721ff718cba87a2ae5630a50451b77f8357a0d26133cf1"
+      },
+      "packaging": {
+        "installed_name": "packaging",
+        "version": "26.2",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "4f9cbcd7933415a4793f7767c98a2b6a512c823fc81c87337815705f230ecabf"
+      },
+      "pyyaml": {
+        "installed_name": "PyYAML",
+        "version": "6.0.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34"
+      },
+      "regex": {
+        "installed_name": "regex",
+        "version": "2026.5.9",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "463d12c4755958eaa7a11d0aed2d0e5e629f67d03ef484677ee3c72d70eccf81"
+      },
+      "requests": {
+        "installed_name": "requests",
+        "version": "2.33.1",
+        "requested_extras": [],
+        "active_requirements": [
+          "charset_normalizer<4,>=2",
+          "idna<4,>=2.5",
+          "urllib3<3,>=1.26",
+          "certifi>=2023.5.7"
+        ],
+        "installed_metadata_sha256": "a984181a5ecc84a63e6f0b60eb575890ffe34426e5351955d342aa2b3147b823"
+      },
+      "safetensors": {
+        "installed_name": "safetensors",
+        "version": "0.7.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "6809326fbf17444dd520ab19f0a55b7a18476dbe52a430466bbf5389967c2aaa"
+      },
+      "setuptools": {
+        "installed_name": "setuptools",
+        "version": "78.1.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "4444a6b549a8ebb02e1739f4375af7756c841f96f0c31077a183273c7462bd10"
+      },
+      "sympy": {
+        "installed_name": "sympy",
+        "version": "1.14.0",
+        "requested_extras": [],
+        "active_requirements": [
+          "mpmath<1.4,>=1.1.0"
+        ],
+        "installed_metadata_sha256": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595"
+      },
+      "tokenizers": {
+        "installed_name": "tokenizers",
+        "version": "0.21.4",
+        "requested_extras": [],
+        "active_requirements": [
+          "huggingface-hub<1.0,>=0.16.4"
+        ],
+        "installed_metadata_sha256": "ef1cc38a5ceceb768e2963515069bc1a6f539408fb0262443765caa8773e7123"
+      },
+      "torch": {
+        "installed_name": "torch",
+        "version": "2.12.0.dev20260407+cu128",
+        "requested_extras": [],
+        "active_requirements": [
+          "filelock",
+          "typing-extensions>=4.10.0",
+          "setuptools<82",
+          "sympy>=1.13.3",
+          "networkx>=2.5.1",
+          "jinja2",
+          "fsspec>=0.8.5",
+          "cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == \"Linux\"",
+          "cuda-bindings<13,>=12.9.4; platform_system == \"Linux\"",
+          "nvidia-cudnn-cu12==9.20.0.48; platform_system == \"Linux\"",
+          "nvidia-cusparselt-cu12==0.7.1; platform_system == \"Linux\"",
+          "nvidia-nccl-cu12==2.29.7; platform_system == \"Linux\"",
+          "nvidia-nvshmem-cu12==3.4.5; platform_system == \"Linux\"",
+          "triton==3.7.0+git9c288bc5; platform_system == \"Linux\""
+        ],
+        "installed_metadata_sha256": "bb8cc0a6d990b45cf1a2fb7a8115f9204bf12012dbb9fcb2bf398d84568931b5"
+      },
+      "tqdm": {
+        "installed_name": "tqdm",
+        "version": "4.67.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "7c0e9a662c19095f339a4b761201eb06cff9c61fb9581535b2f96f44e718ed29"
+      },
+      "transformers": {
+        "installed_name": "transformers",
+        "version": "4.54.1",
+        "requested_extras": [],
+        "active_requirements": [
+          "filelock",
+          "huggingface-hub<1.0,>=0.34.0",
+          "numpy>=1.17",
+          "packaging>=20.0",
+          "pyyaml>=5.1",
+          "regex!=2019.12.17",
+          "requests",
+          "tokenizers<0.22,>=0.21",
+          "safetensors>=0.4.3",
+          "tqdm>=4.27"
+        ],
+        "installed_metadata_sha256": "1b5f0e2a950e2ef001f7906f176013f0e87a14865ae38628dcc51d4337320aa7"
+      },
+      "triton": {
+        "installed_name": "triton",
+        "version": "3.7.0+git9c288bc5",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "15be25c2c8ced19d19fad33dc94ce3fab99254f0546bb0a8b4f7496ea5c091db"
+      },
+      "typing-extensions": {
+        "installed_name": "typing_extensions",
+        "version": "4.15.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "c138378fe8f18934ac99de060535c53ec6c13aeed65e94c32641da7ee3192a72"
+      },
+      "urllib3": {
+        "installed_name": "urllib3",
+        "version": "2.7.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "66147856d30bbb6bed01c6ce3326d0f48d84ed5f286ac177633a1486b82eace5"
+      }
+    }
+  },
+  "matched_runtime_dependency_closure": {
+    "roots": [
+      "torch",
+      "transformers",
+      "numpy",
+      "accelerate"
+    ],
+    "marker_environment": {
+      "implementation_name": "cpython",
+      "implementation_version": "3.14.7",
+      "os_name": "posix",
+      "platform_machine": "x86_64",
+      "platform_release": "7.2.3-1-cachyos",
+      "platform_system": "Linux",
+      "platform_version": "#1 SMP PREEMPT_DYNAMIC Sun, 06 Sep 2026 22:01:30 +0000",
+      "python_full_version": "3.14.7",
+      "platform_python_implementation": "CPython",
+      "python_version": "3.14",
+      "sys_platform": "linux"
+    },
+    "package_count": 46,
+    "active_requirement_mismatches": [],
+    "packages": {
+      "accelerate": {
+        "installed_name": "accelerate",
+        "version": "1.13.0",
+        "requested_extras": [],
+        "active_requirements": [
+          "numpy>=1.17",
+          "packaging>=20.0",
+          "psutil",
+          "pyyaml",
+          "torch>=2.0.0",
+          "huggingface_hub>=0.21.0",
+          "safetensors>=0.4.3"
+        ],
+        "installed_metadata_sha256": "513a92b6951d259a4db9cb17dc41618e9525302d950bb2eecd6885df48e4224f"
+      },
+      "certifi": {
+        "installed_name": "certifi",
+        "version": "2026.4.22",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "4ed6ffe9ccbed05046ab7bff2024cd3ca717295b368bed1fe20a73e365bc415a"
+      },
+      "charset-normalizer": {
+        "installed_name": "charset-normalizer",
+        "version": "3.4.7",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "2bc94af0bf0b699d5898abd62eddf3124a48c6208e0b9f31361cc542b7d02714"
+      },
+      "cuda-bindings": {
+        "installed_name": "cuda-bindings",
+        "version": "12.9.4",
+        "requested_extras": [],
+        "active_requirements": [
+          "cuda-pathfinder~=1.1"
+        ],
+        "installed_metadata_sha256": "e89661f414ebd3b325b664a9f671274c0e0ea1889eb8b02c441ee0d5375249c4"
+      },
+      "cuda-pathfinder": {
+        "installed_name": "cuda-pathfinder",
+        "version": "1.2.2",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "7e69ef0bec6687d32f7c1460d74e73348ee49e44cd215e5daf2e9b0ad6db30b7"
+      },
+      "cuda-toolkit": {
+        "installed_name": "cuda-toolkit",
+        "version": "12.8.1",
+        "requested_extras": [
+          "cublas",
+          "cudart",
+          "cufft",
+          "cufile",
+          "cupti",
+          "curand",
+          "cusolver",
+          "cusparse",
+          "nvjitlink",
+          "nvrtc",
+          "nvtx"
+        ],
+        "active_requirements": [
+          "nvidia-cublas-cu12==12.8.4.1.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cublas\"",
+          "nvidia-cuda-runtime-cu12==12.8.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cudart\"",
+          "nvidia-cufft-cu12==11.3.3.83.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cufft\"",
+          "nvidia-cufile-cu12==1.13.1.3.*; sys_platform == \"linux\" and extra == \"cufile\"",
+          "nvidia-cuda-cupti-cu12==12.8.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cupti\"",
+          "nvidia-curand-cu12==10.3.9.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"curand\"",
+          "nvidia-cusolver-cu12==11.7.3.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cusolver\"",
+          "nvidia-cusparse-cu12==12.5.8.93.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"cusparse\"",
+          "nvidia-nvjitlink-cu12==12.8.93.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"nvjitlink\"",
+          "nvidia-cuda-nvrtc-cu12==12.8.93.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"nvrtc\"",
+          "nvidia-nvtx-cu12==12.8.90.*; (sys_platform == \"win32\" or sys_platform == \"linux\") and extra == \"nvtx\""
+        ],
+        "installed_metadata_sha256": "e91c046f5f28312b1c9e1a22807800ac05f5c8e1738b0e02b680539249e6650b"
+      },
+      "filelock": {
+        "installed_name": "filelock",
+        "version": "3.29.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "21335d1940ca00830e17594e81e9ed7b393211b1e03eda3c411a3507bf59f4b7"
+      },
+      "fsspec": {
+        "installed_name": "fsspec",
+        "version": "2026.2.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "3f0e9085bc977a0f9e95bd21a563e2411a4078c0ff02927dbdd345a180a7acfb"
+      },
+      "hf-xet": {
+        "installed_name": "hf-xet",
+        "version": "1.5.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "9224634b9a526f234a5472c3e6961c969f3b3168e29c0c10ae6b8f8ca257f320"
+      },
+      "huggingface-hub": {
+        "installed_name": "huggingface_hub",
+        "version": "0.36.2",
+        "requested_extras": [],
+        "active_requirements": [
+          "filelock",
+          "fsspec>=2023.5.0",
+          "hf-xet<2.0.0,>=1.1.3; platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"arm64\" or platform_machine == \"aarch64\"",
+          "packaging>=20.9",
+          "pyyaml>=5.1",
+          "requests",
+          "tqdm>=4.42.1",
+          "typing-extensions>=3.7.4.3"
+        ],
+        "installed_metadata_sha256": "4dc2b0a3fb27bcba8b091f98bccff4b94369d269c9768aeaecd0b99d970665d9"
+      },
+      "idna": {
+        "installed_name": "idna",
+        "version": "3.13",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "68224f3fd8881eda7d359484348af33f9dab823431c34f8f58d7c7189edf7d00"
+      },
+      "jinja2": {
+        "installed_name": "Jinja2",
+        "version": "3.1.6",
+        "requested_extras": [],
+        "active_requirements": [
+          "MarkupSafe>=2.0"
+        ],
+        "installed_metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+      },
+      "markupsafe": {
+        "installed_name": "MarkupSafe",
+        "version": "3.0.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "12b4cc61a7fa288cf7667ee3f213786d9619db57fb33ff6f934afbcb5c12ec81"
+      },
+      "mpmath": {
+        "installed_name": "mpmath",
+        "version": "1.3.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406"
+      },
+      "networkx": {
+        "installed_name": "networkx",
+        "version": "3.6.1",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "aca5d94a97d1f70f301d033addb635f6e66be8973a00aba4127637eed2ef316a"
+      },
+      "numpy": {
+        "installed_name": "numpy",
+        "version": "2.4.4",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "8f9e04338ffa930868a2d157ce44f6e4cb7ac524b968fb13d04187a6ac575282"
+      },
+      "nvidia-cublas-cu12": {
+        "installed_name": "nvidia-cublas-cu12",
+        "version": "12.8.4.1",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "310556f1c2c31ec517d4b049eaf12374081d1c52c8ef4d8eceab2aaf1edff2df"
+      },
+      "nvidia-cuda-cupti-cu12": {
+        "installed_name": "nvidia-cuda-cupti-cu12",
+        "version": "12.8.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "6df7fa2fcdfa046eb952f3f8c172f524b2e19a654ec037da3dbb32e93d9671d1"
+      },
+      "nvidia-cuda-nvrtc-cu12": {
+        "installed_name": "nvidia-cuda-nvrtc-cu12",
+        "version": "12.8.93",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "376458a22054b4a36e110dfab570df4bc658c037a2fb47184bdc4dff7ab90d23"
+      },
+      "nvidia-cuda-runtime-cu12": {
+        "installed_name": "nvidia-cuda-runtime-cu12",
+        "version": "12.8.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "00431338ea983d4be2f46f9fd29cec2fd9bfa39553933ca59fd37192e7d0f82f"
+      },
+      "nvidia-cudnn-cu12": {
+        "installed_name": "nvidia-cudnn-cu12",
+        "version": "9.20.0.48",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-cublas-cu12"
+        ],
+        "installed_metadata_sha256": "5b7638b0f4e4dbc42890d02041fdba75dde6ffbc0e4a3543458b5d11da5e4bd9"
+      },
+      "nvidia-cufft-cu12": {
+        "installed_name": "nvidia-cufft-cu12",
+        "version": "11.3.3.83",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-nvjitlink-cu12"
+        ],
+        "installed_metadata_sha256": "ed11d2273b98e3897dc87ae88fcd7a0661b8a4c96529b93a5d22799fd4898de5"
+      },
+      "nvidia-cufile-cu12": {
+        "installed_name": "nvidia-cufile-cu12",
+        "version": "1.13.1.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "df713a26389a8052d17fee3c1521563e060b24a037983b3889fff54f906ef288"
+      },
+      "nvidia-curand-cu12": {
+        "installed_name": "nvidia-curand-cu12",
+        "version": "10.3.9.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "7d4df14884c3de2ec922c546d995cee62f9a0e5225b3eaf2d8951520212cbf6f"
+      },
+      "nvidia-cusolver-cu12": {
+        "installed_name": "nvidia-cusolver-cu12",
+        "version": "11.7.3.90",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-cublas-cu12",
+          "nvidia-nvjitlink-cu12",
+          "nvidia-cusparse-cu12"
+        ],
+        "installed_metadata_sha256": "1f06a55dc8f2aef9eb20f018044bfa7731124698ba7b435d11c250c62eaf4dc3"
+      },
+      "nvidia-cusparse-cu12": {
+        "installed_name": "nvidia-cusparse-cu12",
+        "version": "12.5.8.93",
+        "requested_extras": [],
+        "active_requirements": [
+          "nvidia-nvjitlink-cu12"
+        ],
+        "installed_metadata_sha256": "e83b3bf81e6a2c1dc4d4ddcd73b283a88e6f7f9d20385d280ec030dbf5384f22"
+      },
+      "nvidia-cusparselt-cu12": {
+        "installed_name": "nvidia-cusparselt-cu12",
+        "version": "0.7.1",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "b264cea6951b70b52a3fd2ffaa88f9109eaf379633aa8d6e0832ecc92ddf6fba"
+      },
+      "nvidia-nccl-cu12": {
+        "installed_name": "nvidia-nccl-cu12",
+        "version": "2.29.7",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "a4d895bab84f4d65feb0e37a371078a71d1ef9e7d673276369a8f9aa4c96bb3a"
+      },
+      "nvidia-nvjitlink-cu12": {
+        "installed_name": "nvidia-nvjitlink-cu12",
+        "version": "12.8.93",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "776feab012c1f3efce8918975dc08aa01793aa33832d87b377caa0448cad4435"
+      },
+      "nvidia-nvshmem-cu12": {
+        "installed_name": "nvidia-nvshmem-cu12",
+        "version": "3.4.5",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "c6c10473179c8c2a45a5f06dbffa3ab5aface4a5363a810c6b68a72e2f8de452"
+      },
+      "nvidia-nvtx-cu12": {
+        "installed_name": "nvidia-nvtx-cu12",
+        "version": "12.8.90",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "c63c23e04e8cf04143721ff718cba87a2ae5630a50451b77f8357a0d26133cf1"
+      },
+      "packaging": {
+        "installed_name": "packaging",
+        "version": "26.2",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "4f9cbcd7933415a4793f7767c98a2b6a512c823fc81c87337815705f230ecabf"
+      },
+      "psutil": {
+        "installed_name": "psutil",
+        "version": "7.2.2",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "525f8ba78523cf7bc3759d62a105e7c57fd679ea702402b9449fb0746aa0217f"
+      },
+      "pyyaml": {
+        "installed_name": "PyYAML",
+        "version": "6.0.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34"
+      },
+      "regex": {
+        "installed_name": "regex",
+        "version": "2026.5.9",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "463d12c4755958eaa7a11d0aed2d0e5e629f67d03ef484677ee3c72d70eccf81"
+      },
+      "requests": {
+        "installed_name": "requests",
+        "version": "2.33.1",
+        "requested_extras": [],
+        "active_requirements": [
+          "charset_normalizer<4,>=2",
+          "idna<4,>=2.5",
+          "urllib3<3,>=1.26",
+          "certifi>=2023.5.7"
+        ],
+        "installed_metadata_sha256": "a984181a5ecc84a63e6f0b60eb575890ffe34426e5351955d342aa2b3147b823"
+      },
+      "safetensors": {
+        "installed_name": "safetensors",
+        "version": "0.7.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "6809326fbf17444dd520ab19f0a55b7a18476dbe52a430466bbf5389967c2aaa"
+      },
+      "setuptools": {
+        "installed_name": "setuptools",
+        "version": "78.1.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "4444a6b549a8ebb02e1739f4375af7756c841f96f0c31077a183273c7462bd10"
+      },
+      "sympy": {
+        "installed_name": "sympy",
+        "version": "1.14.0",
+        "requested_extras": [],
+        "active_requirements": [
+          "mpmath<1.4,>=1.1.0"
+        ],
+        "installed_metadata_sha256": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595"
+      },
+      "tokenizers": {
+        "installed_name": "tokenizers",
+        "version": "0.21.4",
+        "requested_extras": [],
+        "active_requirements": [
+          "huggingface-hub<1.0,>=0.16.4"
+        ],
+        "installed_metadata_sha256": "ef1cc38a5ceceb768e2963515069bc1a6f539408fb0262443765caa8773e7123"
+      },
+      "torch": {
+        "installed_name": "torch",
+        "version": "2.12.0.dev20260407+cu128",
+        "requested_extras": [],
+        "active_requirements": [
+          "filelock",
+          "typing-extensions>=4.10.0",
+          "setuptools<82",
+          "sympy>=1.13.3",
+          "networkx>=2.5.1",
+          "jinja2",
+          "fsspec>=0.8.5",
+          "cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==12.8.1; platform_system == \"Linux\"",
+          "cuda-bindings<13,>=12.9.4; platform_system == \"Linux\"",
+          "nvidia-cudnn-cu12==9.20.0.48; platform_system == \"Linux\"",
+          "nvidia-cusparselt-cu12==0.7.1; platform_system == \"Linux\"",
+          "nvidia-nccl-cu12==2.29.7; platform_system == \"Linux\"",
+          "nvidia-nvshmem-cu12==3.4.5; platform_system == \"Linux\"",
+          "triton==3.7.0+git9c288bc5; platform_system == \"Linux\""
+        ],
+        "installed_metadata_sha256": "bb8cc0a6d990b45cf1a2fb7a8115f9204bf12012dbb9fcb2bf398d84568931b5"
+      },
+      "tqdm": {
+        "installed_name": "tqdm",
+        "version": "4.67.3",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "7c0e9a662c19095f339a4b761201eb06cff9c61fb9581535b2f96f44e718ed29"
+      },
+      "transformers": {
+        "installed_name": "transformers",
+        "version": "4.54.1",
+        "requested_extras": [],
+        "active_requirements": [
+          "filelock",
+          "huggingface-hub<1.0,>=0.34.0",
+          "numpy>=1.17",
+          "packaging>=20.0",
+          "pyyaml>=5.1",
+          "regex!=2019.12.17",
+          "requests",
+          "tokenizers<0.22,>=0.21",
+          "safetensors>=0.4.3",
+          "tqdm>=4.27"
+        ],
+        "installed_metadata_sha256": "1b5f0e2a950e2ef001f7906f176013f0e87a14865ae38628dcc51d4337320aa7"
+      },
+      "triton": {
+        "installed_name": "triton",
+        "version": "3.7.0+git9c288bc5",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "15be25c2c8ced19d19fad33dc94ce3fab99254f0546bb0a8b4f7496ea5c091db"
+      },
+      "typing-extensions": {
+        "installed_name": "typing_extensions",
+        "version": "4.15.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "c138378fe8f18934ac99de060535c53ec6c13aeed65e94c32641da7ee3192a72"
+      },
+      "urllib3": {
+        "installed_name": "urllib3",
+        "version": "2.7.0",
+        "requested_extras": [],
+        "active_requirements": [],
+        "installed_metadata_sha256": "66147856d30bbb6bed01c6ce3326d0f48d84ed5f286ac177633a1486b82eace5"
+      }
+    }
+  },
+  "official_wheel_evidence": {
+    "torch": {
+      "url": "https://download.pytorch.org/whl/nightly/cu128/torch-2.12.0.dev20260407%2Bcu128-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "head": {
+        "observed_at_utc": "2026-09-08T09:28:41.401711+00:00",
+        "status": 200,
+        "content_length": 832494036,
+        "archive_body_downloaded": false
+      },
+      "metadata": {
+        "url": "https://download.pytorch.org/whl/nightly/cu128/torch-2.12.0.dev20260407%2Bcu128-cp314-cp314-manylinux_2_28_x86_64.whl.metadata",
+        "observed_at_utc": "2026-09-08T09:28:41.743756+00:00",
+        "status": 200,
+        "bytes": 31933,
+        "sha256": "bb8cc0a6d990b45cf1a2fb7a8115f9204bf12012dbb9fcb2bf398d84568931b5",
+        "installed_metadata_sha256": "bb8cc0a6d990b45cf1a2fb7a8115f9204bf12012dbb9fcb2bf398d84568931b5",
+        "exactly_matches_installed_metadata": true,
+        "name": "torch",
+        "version": "2.12.0.dev20260407+cu128"
+      },
+      "archive_sha256": null,
+      "archive_hash_status": "Not acquired: archive was not downloaded; metadata hashes and multipart ETags are not archive SHA256 values."
+    },
+    "triton": {
+      "url": "https://download.pytorch.org/whl/nightly/triton-3.7.0%2Bgit9c288bc5-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "head": {
+        "observed_at_utc": "2026-09-08T09:28:42.118513+00:00",
+        "status": 200,
+        "content_length": 292180125,
+        "archive_body_downloaded": false
+      },
+      "metadata": {
+        "url": "https://download.pytorch.org/whl/nightly/triton-3.7.0%2Bgit9c288bc5-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata",
+        "observed_at_utc": "2026-09-08T09:28:42.441980+00:00",
+        "status": 200,
+        "bytes": 1675,
+        "sha256": "15be25c2c8ced19d19fad33dc94ce3fab99254f0546bb0a8b4f7496ea5c091db",
+        "installed_metadata_sha256": "15be25c2c8ced19d19fad33dc94ce3fab99254f0546bb0a8b4f7496ea5c091db",
+        "exactly_matches_installed_metadata": true,
+        "name": "triton",
+        "version": "3.7.0+git9c288bc5"
+      },
+      "archive_sha256": null,
+      "archive_hash_status": "Not acquired: archive was not downloaded; metadata hashes and multipart ETags are not archive SHA256 values."
+    }
+  },
+  "official_index_observation": {
+    "observed_date_utc": "2026-09-08",
+    "torch_index_url": "https://download.pytorch.org/whl/nightly/cu128/torch/",
+    "torch_index_observed_versions": [
+      "2.12.0.dev20260408+cu128"
+    ],
+    "exact_installed_torch_version_listed": false,
+    "triton_index_url": "https://download.pytorch.org/whl/nightly/cu128/triton/",
+    "exact_installed_triton_version_found_in_index": false,
+    "limitation": "Index membership differs from retained object availability. Direct original-host HEAD and metadata responses establish observed availability; earlier corresponding download-r2.pytorch.org HEAD checks returned 403."
+  },
+  "python_release_source": {
+    "url": "https://www.python.org/downloads/release/python-3147/",
+    "release_date": "2026-08-05",
+    "source_archive_downloaded": false,
+    "linux_container_image_digest_verified": false
+  },
+  "cache_scan": [
+    {
+      "root": "/home/moloch/.cache/pip",
+      "exists": true,
+      "wheel_files": [],
+      "large_nonwheel_pip_cache_files": [
+        {
+          "path": "/home/moloch/.cache/pip/http-v2/e/c/a/2/e/eca2e14b5022b69265bfa79a2fa98c3d4bf6f14b68bb0f3304c0e12a.body",
+          "bytes": 832494036
+        },
+        {
+          "path": "/home/moloch/.cache/pip/http-v2/f/6/c/b/8/f6cb8796cc9f094c924233221469f857f37ca7159fbe680c8e967fc7.body",
+          "bytes": 292180125
+        }
+      ],
+      "inaccessible_directory_count": 0,
+      "excluded_directory_names": [
+        ".git",
+        "node_modules",
+        "venv",
+        "artifacts",
+        "__pycache__"
+      ]
+    },
+    {
+      "root": "/home/moloch/.cache/uv",
+      "exists": true,
+      "wheel_files": [],
+      "large_nonwheel_pip_cache_files": [],
+      "inaccessible_directory_count": 0,
+      "excluded_directory_names": [
+        ".git",
+        "node_modules",
+        "venv",
+        "artifacts",
+        "__pycache__"
+      ]
+    },
+    {
+      "root": "/tmp",
+      "exists": true,
+      "wheel_files": [
+        "/tmp/jlens-refit-wheels/triton-3.7.0+git9c288bc5-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "/tmp/jlens-refit-wheels/torch-2.12.0.dev20260407+cu128-cp314-cp314-manylinux_2_28_x86_64.whl"
+      ],
+      "large_nonwheel_pip_cache_files": [],
+      "inaccessible_directory_count": 9,
+      "excluded_directory_names": [
+        ".git",
+        "node_modules",
+        "venv",
+        "artifacts",
+        "__pycache__"
+      ]
+    },
+    {
+      "root": "/home/moloch/ouro_project",
+      "exists": true,
+      "wheel_files": [],
+      "large_nonwheel_pip_cache_files": [],
+      "inaccessible_directory_count": 0,
+      "excluded_directory_names": [
+        ".git",
+        "node_modules",
+        "venv",
+        "artifacts",
+        "__pycache__"
+      ]
+    }
+  ],
+  "local_source_requirement_conflict": {
+    "package": "jlens",
+    "installed_version": "0.1.0",
+    "declared_requirement": "transformers>=5.5",
+    "accepted_transformers_version": "4.54.1",
+    "pip_check_result": "One incompatibility: jlens requires transformers>=5.5 but 4.54.1 is installed.",
+    "recommendation": "Stage pinned jlens and ouro_jlens source trees via PYTHONPATH, or install local packages with --no-deps after locking runtime dependencies. Do not let dependency resolution upgrade Transformers."
+  },
+  "portable_setup_recommendation": {
+    "base_runtime": "CPython 3.14.7, normal GIL-enabled cp314 build, Linux x86_64 with glibc>=2.28. Select and record a concrete base image/interpreter build.",
+    "minimal_core_package_count": 44,
+    "matched_runtime_package_count": 46,
+    "matched_runtime_reason": "The core closure includes tokenizers and safetensors. Retaining installed accelerate adds accelerate and psutil, avoiding a gratuitous change to model-loading package availability.",
+    "version_pins": [
+      "accelerate==1.13.0",
+      "certifi==2026.4.22",
+      "charset-normalizer==3.4.7",
+      "cuda-bindings==12.9.4",
+      "cuda-pathfinder==1.2.2",
+      "cuda-toolkit==12.8.1",
+      "filelock==3.29.0",
+      "fsspec==2026.2.0",
+      "hf-xet==1.5.0",
+      "huggingface-hub==0.36.2",
+      "idna==3.13",
+      "jinja2==3.1.6",
+      "markupsafe==3.0.3",
+      "mpmath==1.3.0",
+      "networkx==3.6.1",
+      "numpy==2.4.4",
+      "nvidia-cublas-cu12==12.8.4.1",
+      "nvidia-cuda-cupti-cu12==12.8.90",
+      "nvidia-cuda-nvrtc-cu12==12.8.93",
+      "nvidia-cuda-runtime-cu12==12.8.90",
+      "nvidia-cudnn-cu12==9.20.0.48",
+      "nvidia-cufft-cu12==11.3.3.83",
+      "nvidia-cufile-cu12==1.13.1.3",
+      "nvidia-curand-cu12==10.3.9.90",
+      "nvidia-cusolver-cu12==11.7.3.90",
+      "nvidia-cusparse-cu12==12.5.8.93",
+      "nvidia-cusparselt-cu12==0.7.1",
+      "nvidia-nccl-cu12==2.29.7",
+      "nvidia-nvjitlink-cu12==12.8.93",
+      "nvidia-nvshmem-cu12==3.4.5",
+      "nvidia-nvtx-cu12==12.8.90",
+      "packaging==26.2",
+      "psutil==7.2.2",
+      "pyyaml==6.0.3",
+      "regex==2026.5.9",
+      "requests==2.33.1",
+      "safetensors==0.7.0",
+      "setuptools==78.1.0",
+      "sympy==1.14.0",
+      "tokenizers==0.21.4",
+      "torch==2.12.0.dev20260407+cu128",
+      "tqdm==4.67.3",
+      "transformers==4.54.1",
+      "triton==3.7.0+git9c288bc5",
+      "typing-extensions==4.15.0",
+      "urllib3==2.7.0"
+    ],
+    "bootstrap_requirements_with_exact_official_wheel_urls": [
+      "accelerate==1.13.0",
+      "certifi==2026.4.22",
+      "charset-normalizer==3.4.7",
+      "cuda-bindings==12.9.4",
+      "cuda-pathfinder==1.2.2",
+      "cuda-toolkit==12.8.1",
+      "filelock==3.29.0",
+      "fsspec==2026.2.0",
+      "hf-xet==1.5.0",
+      "huggingface-hub==0.36.2",
+      "idna==3.13",
+      "jinja2==3.1.6",
+      "markupsafe==3.0.3",
+      "mpmath==1.3.0",
+      "networkx==3.6.1",
+      "numpy==2.4.4",
+      "nvidia-cublas-cu12==12.8.4.1",
+      "nvidia-cuda-cupti-cu12==12.8.90",
+      "nvidia-cuda-nvrtc-cu12==12.8.93",
+      "nvidia-cuda-runtime-cu12==12.8.90",
+      "nvidia-cudnn-cu12==9.20.0.48",
+      "nvidia-cufft-cu12==11.3.3.83",
+      "nvidia-cufile-cu12==1.13.1.3",
+      "nvidia-curand-cu12==10.3.9.90",
+      "nvidia-cusolver-cu12==11.7.3.90",
+      "nvidia-cusparse-cu12==12.5.8.93",
+      "nvidia-cusparselt-cu12==0.7.1",
+      "nvidia-nccl-cu12==2.29.7",
+      "nvidia-nvjitlink-cu12==12.8.93",
+      "nvidia-nvshmem-cu12==3.4.5",
+      "nvidia-nvtx-cu12==12.8.90",
+      "packaging==26.2",
+      "psutil==7.2.2",
+      "pyyaml==6.0.3",
+      "regex==2026.5.9",
+      "requests==2.33.1",
+      "safetensors==0.7.0",
+      "setuptools==78.1.0",
+      "sympy==1.14.0",
+      "tokenizers==0.21.4",
+      "torch @ https://download.pytorch.org/whl/nightly/cu128/torch-2.12.0.dev20260407%2Bcu128-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "tqdm==4.67.3",
+      "transformers==4.54.1",
+      "triton @ https://download.pytorch.org/whl/nightly/triton-3.7.0%2Bgit9c288bc5-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "typing-extensions==4.15.0",
+      "urllib3==2.7.0"
+    ],
+    "compiler_stack_required_by_accepted_engine": false,
+    "accepted_engine_dependencies": "Ordinary autograd.grad, public gradient edges, saved_tensors_hooks and torch.cuda.CUDAGraph from the exact Torch wheel. Triton remains pinned because Torch declares it; the accepted fitter does not use torch.compile or custom Triton kernels.",
+    "unneeded_for_this_ouro_fit": [
+      "flash-attn",
+      "torchvision",
+      "torchaudio",
+      "datasets/pyarrow (calibration lists are already JSON)",
+      "SciPy",
+      "CMake",
+      "Ninja",
+      "NVCC",
+      "Inductor caches",
+      "Huginn-only adapter packages"
+    ],
+    "model_sources": "Stage every pinned model snapshot file and the root-selected source trees. Do not substitute an unpinned remote-code snapshot."
+  },
+  "remaining_validation": [
+    "Acquire exact wheel archives during authorized staging, record SHA256 values, and verify available official provenance. Metadata SHA256 and multipart ETags are not archive SHA256 values.",
+    "Archive availability and hashes for every other package in the installed closure have not been independently checked; unavailable pins must fail instead of upgrading.",
+    "Create and verify the selected Linux CPython 3.14.7 environment; no fresh environment or container was created in this audit.",
+    "On the rental, record driver/device, complete Torch precision/attention flags, package versions and source hashes; complete the required matching-batch stock-versus-optimized numerical parity, memory and complete-prompt timing checks before N100 fitting.",
+    "Identical package versions on RTX 4090 do not prove identical kernels or numerical outputs to RTX 5070 Ti Laptop GPU. Validate changed runtimes/configurations and freeze the chosen numerical configuration across all five fits."
+  ]
+}

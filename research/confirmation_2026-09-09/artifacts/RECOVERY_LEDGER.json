@@ -1,0 +1,676 @@
+{
+  "additional_complete_copy_validation": [
+    {
+      "all_finite": true,
+      "equivalence_to_compared_physical_copy": "full-file SHA256 equals same historical sealed binary",
+      "exact_schema": true,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+      "stat_after": {
+        "bytes": 1602276737,
+        "ctime_ns": 1788966492919878722,
+        "device": 66306,
+        "inode": 55744282,
+        "mtime_ns": 1788911507817989480,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 1602276737,
+        "ctime_ns": 1788966492919878722,
+        "device": 66306,
+        "inode": 55744282,
+        "mtime_ns": 1788911507817989480,
+        "nlink": 1
+      },
+      "status": "passed",
+      "tensor_count": 191,
+      "total_elements": 801112064
+    }
+  ],
+  "binaries": {
+    "controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 3187723651,
+        "sha256": "cc61b21e9f591c92284fe576b4119e80e73f45af6cf11e394e3fe48293ebc168"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 1779204096,
+            "sha256": "97a3059dca3c21a6c466f34ead93b6bdecb8d6c0ffac90c468c1b69a80af9aad",
+            "stat_after": {
+              "bytes": 1779204096,
+              "ctime_ns": 1788955819988834042,
+              "device": 66306,
+              "inode": 57554471,
+              "mtime_ns": 729955724,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 1779204096,
+              "ctime_ns": 1788955819988834042,
+              "device": 66306,
+              "inode": 57554471,
+              "mtime_ns": 729955724,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_20260909T120245Z/staging/controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt",
+          "status": "truncated"
+        },
+        {
+          "actual": {
+            "bytes": 3187723651,
+            "sha256": "cc61b21e9f591c92284fe576b4119e80e73f45af6cf11e394e3fe48293ebc168",
+            "stat_after": {
+              "bytes": 3187723651,
+              "ctime_ns": 1788957920881595651,
+              "device": 66306,
+              "inode": 56142246,
+              "mtime_ns": 1788944151729955724,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 3187723651,
+              "ctime_ns": 1788957920881595651,
+              "device": 66306,
+              "inode": 56142246,
+              "mtime_ns": 1788944151729955724,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 1593887875,
+        "sha256": "dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 1593887875,
+            "sha256": "dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560",
+            "stat_after": {
+              "bytes": 1593887875,
+              "ctime_ns": 1788958353261695135,
+              "device": 66306,
+              "inode": 56919437,
+              "mtime_ns": 1788944157682892728,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 1593887875,
+              "ctime_ns": 1788958353261695135,
+              "device": 66306,
+              "inode": 56919437,
+              "mtime_ns": 1788944157682892728,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 6409003339,
+        "sha256": "e5f4358227a8be21bfbdbdeceab8d19c276ae0e3a56238b44b82ea028b4c9eb6"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 3975348504,
+            "sha256": "c4912ff4e1f21aae3e60094d26f66f9399f96bb0efcfe47ba3b095b88cae61c1",
+            "stat_after": {
+              "bytes": 3975348504,
+              "ctime_ns": 1788960391207061760,
+              "device": 66306,
+              "inode": 57049796,
+              "mtime_ns": 389492089,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 3975348504,
+              "ctime_ns": 1788960391207061760,
+              "device": 66306,
+              "inode": 57049796,
+              "mtime_ns": 389492089,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v2_20260909T123125Z_58b81f3b/staging/controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt",
+          "status": "truncated"
+        },
+        {
+          "actual": {
+            "bytes": 6409003339,
+            "sha256": "e5f4358227a8be21bfbdbdeceab8d19c276ae0e3a56238b44b82ea028b4c9eb6",
+            "stat_after": {
+              "bytes": 6409003339,
+              "ctime_ns": 1788962140081792262,
+              "device": 66306,
+              "inode": 55730007,
+              "mtime_ns": 1788951561389492089,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 6409003339,
+              "ctime_ns": 1788962140081792262,
+              "device": 66306,
+              "inode": 55730007,
+              "mtime_ns": 1788951561389492089,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 3204553347,
+        "sha256": "b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 3204553347,
+            "sha256": "b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775",
+            "stat_after": {
+              "bytes": 3204553347,
+              "ctime_ns": 1788962960661645259,
+              "device": 66306,
+              "inode": 55730328,
+              "mtime_ns": 1788951573768361155,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 3204553347,
+              "ctime_ns": 1788962960661645259,
+              "device": 66306,
+              "inode": 55730328,
+              "mtime_ns": 1788951573768361155,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt": {
+      "current_status": "partial_only",
+      "expected": {
+        "bytes": 3568444419,
+        "sha256": "0e27aae5a6d1d974d63027cdfd71c0198e86ceffa79665a8bd53a14c9fccf1ce"
+      },
+      "historical_retrieval_status": "partial_only",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 1745780736,
+            "sha256": "099a99fd3b1aba3ac06112411ec06d5aac5ce423f245c3cd64835150bc890473",
+            "stat_after": {
+              "bytes": 1745780736,
+              "ctime_ns": 1788968609375433472,
+              "device": 66306,
+              "inode": 57452984,
+              "mtime_ns": 520439385,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 1745780736,
+              "ctime_ns": 1788968609375433472,
+              "device": 66306,
+              "inode": 57452984,
+              "mtime_ns": 520439385,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt",
+          "status": "truncated"
+        }
+      ]
+    },
+    "huginn/fit_01/final/cursor_000100_7983035296a54ff2978742466ac3631e/lens.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 1784226499,
+        "sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    },
+    "ouro/fit_01/checkpoints/cursor_000100_04725c9ff69e4fa2a481b644e0790574/state.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 3204501185,
+        "sha256": "aecd994c9fdb23e3010f8012368d5bd41caabae58f6a1e71413a06c83976d111"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 3204501185,
+            "sha256": "aecd994c9fdb23e3010f8012368d5bd41caabae58f6a1e71413a06c83976d111",
+            "stat_after": {
+              "bytes": 3204501185,
+              "ctime_ns": 1788963654913970543,
+              "device": 66306,
+              "inode": 55730696,
+              "mtime_ns": 1788911501846052917,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 3204501185,
+              "ctime_ns": 1788963654913970543,
+              "device": 66306,
+              "inode": 55730696,
+              "mtime_ns": 1788911501846052917,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_01/checkpoints/cursor_000100_04725c9ff69e4fa2a481b644e0790574/state.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 1602276737,
+        "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 1602276737,
+            "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f",
+            "stat_after": {
+              "bytes": 1602276737,
+              "ctime_ns": 1788964875474315745,
+              "device": 66306,
+              "inode": 55734097,
+              "mtime_ns": 1788911507817989480,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 1602276737,
+              "ctime_ns": 1788964875474315745,
+              "device": 66306,
+              "inode": 55734097,
+              "mtime_ns": 1788911507817989480,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+          "status": "complete_hash_verified"
+        },
+        {
+          "actual": {
+            "bytes": 1602276737,
+            "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f",
+            "stat_after": {
+              "bytes": 1602276737,
+              "ctime_ns": 1788966492919878722,
+              "device": 66306,
+              "inode": 55744282,
+              "mtime_ns": 1788911507817989480,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 1602276737,
+              "ctime_ns": 1788966492919878722,
+              "device": 66306,
+              "inode": 55744282,
+              "mtime_ns": 1788911507817989480,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "ouro/fit_02/checkpoints/cursor_000100_c77feb54f72c4155ac109208b031cc81/state.pt": {
+      "current_status": "complete_hash_verified",
+      "expected": {
+        "bytes": 3204501185,
+        "sha256": "474c6ca7ae552889ec8a936eccd5355b796300558a5a9af443cbdb8e33a5e95b"
+      },
+      "historical_retrieval_status": "complete_hash_verified",
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 3204501185,
+            "sha256": "474c6ca7ae552889ec8a936eccd5355b796300558a5a9af443cbdb8e33a5e95b",
+            "stat_after": {
+              "bytes": 3204501185,
+              "ctime_ns": 1788967474344973120,
+              "device": 66306,
+              "inode": 55744438,
+              "mtime_ns": 1788917985583143716,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 3204501185,
+              "ctime_ns": 1788967474344973120,
+              "device": 66306,
+              "inode": 55744438,
+              "mtime_ns": 1788917985583143716,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_02/checkpoints/cursor_000100_c77feb54f72c4155ac109208b031cc81/state.pt",
+          "status": "complete_hash_verified"
+        }
+      ]
+    },
+    "ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt": {
+      "current_status": "reconstructed_historical_bytes_verified",
+      "expected": {
+        "bytes": 1602276737,
+        "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8"
+      },
+      "historical_retrieval_status": "partial_only",
+      "reconstructed_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/reconstructed/ouro/fit_02/lens.pt",
+      "reconstructed_record": {
+        "bytes": 1602276737,
+        "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8",
+        "stat_after": {
+          "bytes": 1602276737,
+          "ctime_ns": 1788987933558617694,
+          "device": 66306,
+          "inode": 55355737,
+          "mtime_ns": 1788987933509617338,
+          "nlink": 1
+        },
+        "stat_before": {
+          "bytes": 1602276737,
+          "ctime_ns": 1788987933558617694,
+          "device": 66306,
+          "inode": 55355737,
+          "mtime_ns": 1788987933509617338,
+          "nlink": 1
+        },
+        "stat_guard_passed": true
+      },
+      "retained_copies": [
+        {
+          "actual": {
+            "bytes": 179527232,
+            "sha256": "43bf646d0932378ca9b79e4b1cc3443fbde9f3d9eb815a7dc5df1d5102abaa86",
+            "stat_after": {
+              "bytes": 179527232,
+              "ctime_ns": 1788967926393657328,
+              "device": 66306,
+              "inode": 55744759,
+              "mtime_ns": 646078719,
+              "nlink": 1
+            },
+            "stat_before": {
+              "bytes": 179527232,
+              "ctime_ns": 1788967926393657328,
+              "device": 66306,
+              "inode": 55744759,
+              "mtime_ns": 646078719,
+              "nlink": 1
+            },
+            "stat_guard_passed": true
+          },
+          "deserialized": false,
+          "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T144501Z_646f716f/staging/ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt",
+          "status": "truncated"
+        }
+      ]
+    },
+    "ouro/fit_03/checkpoints/cursor_000100_2ef94138682144639be643b4f1fd36b5/state.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 3204501185,
+        "sha256": "3d20af8b9b83bb2981b5956b8ffe87165d33ee94748b11897e1fcaa280b07a48"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    },
+    "ouro/fit_03/final/cursor_000100_93af310a05e04e1fac85763230e0cecc/lens.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 1602276737,
+        "sha256": "8cf117d4bfcab3e53741c98fba233ed04cae15c7b3c076b52368a403199aeb96"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    },
+    "ouro/fit_04/checkpoints/cursor_000100_3cef301353914d5db4157ae81a1406f5/state.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 3204501185,
+        "sha256": "e05d42cb3d5aec016207a612697dfa01b2cd18105535a67c27d58452460f0761"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    },
+    "ouro/fit_04/final/cursor_000100_e042314b4bd24b13bb4426b1345b294a/lens.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 1602276737,
+        "sha256": "8e14adbe2879cf2956e19bddd13b863f159294b02a028307c2364a5b607f65b9"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    },
+    "ouro/fit_05/checkpoints/cursor_000100_a2e69f22561a49f39d63127bc61cb9d9/state.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 3204501185,
+        "sha256": "3bb400e4226e1a7faad89bfa4cd5e786a2e44e8f57fc471c5ec279a6a42d7d0f"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    },
+    "ouro/fit_05/final/cursor_000100_436f5cb2c01a409b9013b28fffb7d088/lens.pt": {
+      "current_status": "absent",
+      "expected": {
+        "bytes": 1602276737,
+        "sha256": "1c2a7129fa0607ddced28f498279e02a42cea9d9e2385b31c57fdb88ad2be98c"
+      },
+      "historical_retrieval_status": "absent",
+      "retained_copies": []
+    }
+  },
+  "currently_complete_known_binaries": 8,
+  "historical_binaries": 16,
+  "independent_conversion_differing_elements": 0,
+  "independent_conversion_total_elements": 4001366016,
+  "limitations": [
+    "Huginn final and complete checkpoint unavailable; no independent full-matrix verification is possible.",
+    "Ouro fits03\u201305 still lack both binaries.",
+    "No new readouts, inference, refit, GPU allocation, or remote retrieval were performed.",
+    "This is not a claim of full original experiment retrieval."
+  ],
+  "loaded_original_complete_physical_files": 8,
+  "original_complete_binaries": 7,
+  "reconstructed_historical_exact_binaries": 1,
+  "recorded_utc": "2026-09-09T21:07:46.099980+00:00",
+  "remaining_unavailable_known_binaries": 8,
+  "schema": "confirmation_recovery_ledger.v1",
+  "source_records": {
+    "audit_huginn_retention.py": {
+      "bytes": 6396,
+      "sha256": "3b3aae39dec8d1540435aa265d5694864bdd9a42cf49f84f423027e0fd1ab1aa",
+      "stat_after": {
+        "bytes": 6396,
+        "ctime_ns": 1788987980201000656,
+        "device": 66306,
+        "inode": 55355739,
+        "mtime_ns": 1788987980201000656,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 6396,
+        "ctime_ns": 1788987980201000656,
+        "device": 66306,
+        "inode": 55355739,
+        "mtime_ns": 1788987980201000656,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "finalize_ledger.py": {
+      "bytes": 4373,
+      "sha256": "db3bb9525c10d294a143808f17c2dac180381d42f603d4d4c9808fea6baf447e",
+      "stat_after": {
+        "bytes": 4373,
+        "ctime_ns": 1788988062124706010,
+        "device": 66306,
+        "inode": 55355744,
+        "mtime_ns": 1788988062124706010,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 4373,
+        "ctime_ns": 1788988062124706010,
+        "device": 66306,
+        "inode": 55355744,
+        "mtime_ns": 1788988062124706010,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "huginn_retention.json": {
+      "bytes": 61486,
+      "sha256": "a7efe441996fa219f1c9fe354340958a76f9dd80a9b13309f1fdbf152ceb84ad",
+      "stat_after": {
+        "bytes": 61486,
+        "ctime_ns": 1788987980709005070,
+        "device": 66306,
+        "inode": 55355741,
+        "mtime_ns": 1788987980708005062,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 61486,
+        "ctime_ns": 1788987980709005070,
+        "device": 66306,
+        "inode": 55355741,
+        "mtime_ns": 1788987980708005062,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "inventory.json": {
+      "bytes": 499340,
+      "sha256": "d56a57852dbfc9744a4e438671f9dcf243eeb918249dc9946bfd09ebd8d5d77f",
+      "stat_after": {
+        "bytes": 499340,
+        "ctime_ns": 1788987868608146995,
+        "device": 66306,
+        "inode": 55355730,
+        "mtime_ns": 1788987868605146973,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 499340,
+        "ctime_ns": 1788987868608146995,
+        "device": 66306,
+        "inode": 55355730,
+        "mtime_ns": 1788987868605146973,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "recover_estimators.py": {
+      "bytes": 19002,
+      "sha256": "71c47a4f6b77bd92d63885b295f8e0f49f406ebc0f390004e30c4af1b1313e80",
+      "stat_after": {
+        "bytes": 19002,
+        "ctime_ns": 1788988062039705285,
+        "device": 66306,
+        "inode": 55355728,
+        "mtime_ns": 1788988062039705285,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 19002,
+        "ctime_ns": 1788988062039705285,
+        "device": 66306,
+        "inode": 55355728,
+        "mtime_ns": 1788988062039705285,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    },
+    "tensor_audit.json": {
+      "bytes": 741639,
+      "sha256": "d67318c306eb3020e858a4d6234d3591da6843347f0616ebb39b0f0b75be5d0d",
+      "stat_after": {
+        "bytes": 741639,
+        "ctime_ns": 1788987943244688008,
+        "device": 66306,
+        "inode": 55355738,
+        "mtime_ns": 1788987943235687943,
+        "nlink": 1
+      },
+      "stat_before": {
+        "bytes": 741639,
+        "ctime_ns": 1788987943244688008,
+        "device": 66306,
+        "inode": 55355738,
+        "mtime_ns": 1788987943235687943,
+        "nlink": 1
+      },
+      "stat_guard_passed": true
+    }
+  },
+  "status": "partial_recovery_verified",
+  "unavailable_banks": [
+    "Ouro main fit03",
+    "Ouro main fit04",
+    "Ouro main fit05",
+    "Huginn fit01"
+  ],
+  "usable_banks": [
+    "Ouro main fit01",
+    "Ouro main fit02",
+    "Ouro penultimate fit01",
+    "Ouro positions sampled_sum fit01",
+    "Ouro positions diagonal fit01"
+  ]
+}

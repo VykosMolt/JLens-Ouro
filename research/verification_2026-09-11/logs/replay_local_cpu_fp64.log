@@ -1,0 +1,7 @@
+{"arm": "raw", "seconds": 47.2}
+{"arm": "fit01", "seconds": 69.0}
+{"arm": "fit02", "seconds": 76.9}
+{"arm": "penultimate", "seconds": 80.9}
+{"arm": "sampled_sum", "seconds": 78.7}
+{"arm": "diagonal", "seconds": 74.4}
+cpu exit 0

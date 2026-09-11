@@ -1,0 +1,2100 @@
+{
+  "started_utc": "2026-09-07T20:32:58.997663+00:00",
+  "purpose": "Numerical isolation and short timing of the modern reduced-source candidate.",
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "attention": "sdpa",
+  "native_b1_vs_b2": {
+    "bitwise": false,
+    "finite": true,
+    "max_absolute": 0.8779934644699097,
+    "relative_frobenius": 1.5171907863527905,
+    "max_layer_relative": 2.229343100520653,
+    "max_layer": 31
+  },
+  "legacy_batched_vs_native_b1": {
+    "bitwise": false,
+    "finite": true,
+    "max_absolute": 0.10910612344741821,
+    "relative_frobenius": 0.06608092379979884,
+    "max_layer_relative": 0.10160270201780339,
+    "max_layer": 0
+  },
+  "primal_errors": {
+    "layer:0": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:1": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:2": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:3": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:4": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:5": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:6": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:7": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:8": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:9": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:10": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:11": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:12": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:13": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:14": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:15": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:16": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:17": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:18": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:19": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:20": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:21": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:22": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:23": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:24": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:25": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:26": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:27": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:28": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:29": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:30": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:31": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:32": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:33": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:34": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:35": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:36": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:37": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:38": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:39": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:40": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:41": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:42": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:43": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:44": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:45": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:46": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:47": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:48": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:49": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:50": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:51": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:52": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:53": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:54": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:55": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:56": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:57": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:58": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:59": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:60": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:61": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:62": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:63": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:64": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:65": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:66": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:67": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:68": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:69": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:70": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:71": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:72": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:73": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:74": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:75": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:76": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:77": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:78": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:79": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:80": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:81": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:82": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:83": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:84": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:85": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:86": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:87": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:88": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:89": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:90": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:91": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:92": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:93": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:94": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:95": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:96": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:97": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:98": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:99": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:100": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:101": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:102": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:103": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:104": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:105": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:106": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:107": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:108": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:109": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:110": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:111": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:112": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:113": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:114": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:115": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:116": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:117": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:118": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:119": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:120": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:121": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:122": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:123": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:124": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:125": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:126": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:127": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:128": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:129": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:130": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:131": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:132": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:133": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:134": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:135": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:136": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:137": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:138": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:139": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:140": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:141": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:142": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:143": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:144": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:145": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:146": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:147": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:148": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:149": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:150": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:151": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:152": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:153": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:154": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:155": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:156": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:157": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:158": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:159": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:160": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:161": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:162": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:163": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:164": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:165": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:166": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:167": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:168": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:169": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:170": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:171": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:172": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:173": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:174": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:175": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:176": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:177": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:178": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:179": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:180": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:181": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:182": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:183": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:184": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:185": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:186": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:187": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:188": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:189": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:190": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "layer:191": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ],
+    "module:loop_norm": [
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      },
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      },
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      },
+      {
+        "bitwise": true,
+        "finite": true,
+        "max_absolute": 0.0,
+        "relative_frobenius": 0.0,
+        "max_layer_relative": 0.0,
+        "max_layer": 0
+      }
+    ]
+  },
+  "reduced_scalar_vs_native_b1": {
+    "bitwise": true,
+    "finite": true,
+    "max_absolute": 0.0,
+    "relative_frobenius": 0.0,
+    "max_layer_relative": 0.0,
+    "max_layer": 0
+  },
+  "reduced_batched_vs_scalar": {
+    "bitwise": false,
+    "finite": true,
+    "max_absolute": 0.10910612344741821,
+    "relative_frobenius": 0.06608092379979884,
+    "max_layer_relative": 0.10160270201780339,
+    "max_layer": 0
+  },
+  "reduced_batched_vs_native_b1": {
+    "bitwise": false,
+    "finite": true,
+    "max_absolute": 0.10910612344741821,
+    "relative_frobenius": 0.06608092379979884,
+    "max_layer_relative": 0.10160270201780339,
+    "max_layer": 0
+  },
+  "timings": [
+    {
+      "batch": 2,
+      "sweeps": [
+        {
+          "backward": 0.20328571500067483,
+          "total": 0.2037405379996926
+        },
+        {
+          "backward": 0.200678485998651,
+          "total": 0.20119739700021455
+        },
+        {
+          "backward": 0.22544787199876737,
+          "total": 0.22593046399924788
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 0.2130631789987092,
+        "total": 0.2135639304997312
+      },
+      "estimated_prompt_seconds": 218.68946483172476,
+      "peak_cuda_gb": 7.480044032,
+      "executed": true
+    },
+    {
+      "batch": 8,
+      "sweeps": [
+        {
+          "backward": 0.5702579569988302,
+          "total": 0.5714481649993104
+        },
+        {
+          "backward": 0.6034575249977934,
+          "total": 0.6046013470004254
+        },
+        {
+          "backward": 0.5720229539983848,
+          "total": 0.5731572760014387
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 0.5877402394980891,
+        "total": 0.5888793115009321
+      },
+      "estimated_prompt_seconds": 150.75310374423862,
+      "peak_cuda_gb": 7.519578624,
+      "executed": true
+    },
+    {
+      "batch": 32,
+      "sweeps": [
+        {
+          "backward": 2.744203047001065,
+          "total": 2.7484574199988856
+        },
+        {
+          "backward": 2.747457540001051,
+          "total": 2.757675505003135
+        },
+        {
+          "backward": 2.746737077999569,
+          "total": 2.7584985319990665
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 2.74709730900031,
+        "total": 2.758087018501101
+      },
+      "estimated_prompt_seconds": 176.51756918407045,
+      "peak_cuda_gb": 7.672474112,
+      "executed": true
+    },
+    {
+      "batch": 64,
+      "sweeps": [
+        {
+          "backward": 5.624915175998467,
+          "total": 5.643811693000316
+        },
+        {
+          "backward": 5.625054936997913,
+          "total": 5.650401253999007
+        },
+        {
+          "backward": 5.637011743001494,
+          "total": 5.659044551000989
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 5.6310333399997035,
+        "total": 5.654722902499998
+      },
+      "estimated_prompt_seconds": 180.95113287999993,
+      "peak_cuda_gb": 7.877732864,
+      "executed": true
+    }
+  ]
+}

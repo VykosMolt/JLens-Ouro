@@ -1,0 +1,6 @@
+[sender] io timeout after 60 seconds -- exiting
+rsync error: timeout in data send/receive (code 30) at io.c(201) [sender=3.2.7]
+rsync: connection unexpectedly closed (41407859 bytes received so far) [receiver]
+rsync error: error in rsync protocol data stream (code 12) at io.c(285) [receiver=3.5.0-g471e17dc]
+rsync: connection unexpectedly closed (64 bytes received so far) [generator]
+rsync error: timeout in data send/receive (code 30) at io.c(285) [generator=3.5.0-g471e17dc]

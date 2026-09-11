@@ -1,0 +1,372 @@
+{
+ "started_utc": "2026-09-11T19:37:23.081404+00:00",
+ "destination_identity_before": {
+  "findmnt": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/run/media/moloch/ARCH_BACKUP\",\n         \"source\": \"/dev/sda1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,nosuid,nodev,relatime,errors=remount-ro\",\n         \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n         \"label\": \"ARCH_BACKUP\"\n      }\n   ]\n}\n",
+  "lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"sda\",\n         \"size\": \"465.8G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"SanDisk Extreme Portable SSD\",\n         \"serial\": \"201123804758\",\n         \"tran\": \"usb\",\n         \"vendor\": \"SanDisk \",\n         \"children\": [\n            {\n               \"name\": \"sda1\",\n               \"size\": \"465.8G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n               \"mountpoint\": \"/run/media/moloch/ARCH_BACKUP\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": null,\n               \"vendor\": null\n            }\n         ]\n      }\n   ]\n}\n",
+  "source_disk_lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"nvme0n1\",\n         \"size\": \"953.9G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"WD PC SN8000S SDEPNRK-1T00-1101\",\n         \"serial\": \"25363H803914\",\n         \"tran\": \"nvme\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"size\": \"1G\",\n               \"type\": \"part\",\n               \"fstype\": \"vfat\",\n               \"uuid\": \"8806-FDD4\",\n               \"mountpoint\": \"/boot\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            },{\n               \"name\": \"nvme0n1p2\",\n               \"size\": \"952.9G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"d06b03fe-5a17-4250-a6a2-acae19dfd890\",\n               \"mountpoint\": \"/\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            }\n         ]\n      }\n   ]\n}\n",
+  "df_dest": "Filesystem     Type    1B-blocks         Used        Avail Mounted on\n/dev/sda1      ext4 491105460224 219221151744 246862245888 /run/media/moloch/ARCH_BACKUP\n",
+  "df_source": "Filesystem     Type     1B-blocks         Used        Avail Mounted on\n/dev/nvme0n1p2 ext4 1005921464320 570846961664 383901061120 /\n",
+  "st_dev_dest": 2049,
+  "st_dev_source": 66306,
+  "separate_physical_device": true
+ },
+ "source_hash_seconds": 12.505920886993408,
+ "git": {
+  "jacobian-lens": {
+   "repo": "/home/moloch/jacobian-lens",
+   "head": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+   "bundle": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/jacobian-lens.bundle",
+   "bundle_sha256": "7b0a611bfb780e26834e19f7f4fdd22ef8f2a25ca9ea1df8958ef3618b116f43",
+   "bundle_verify": "The bundle contains these 4 refs:\n581d398613e5602a5af361e1c34d3a92ea82ba8e refs/heads/main\n581d398613e5602a5af361e1c34d3a92ea82ba8e refs/remotes/origin/HEAD\n581d398613e5602a5af361e1c34d3a92ea82ba8e refs/remotes/origin/main\n581d398613e5602a5af361e1c34d3a92ea82ba8e HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1"
+  },
+  "ouro_project": {
+   "repo": "/home/moloch/ouro_project",
+   "head": "d79562e16ee865fefe3834a644881aba42f7e3f7",
+   "bundle": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/ouro_project.bundle",
+   "bundle_sha256": "af6f9e5746084775fe7f30df045cddb8ef6d773c9f65b9b76ec31cb1488022b1",
+   "bundle_verify": "r1-v3-results/HEAD\nb6d48fbd5eecddbc39fa4a33db40a1759e7c5f57 worktrees/o1-v2-b200-runner/HEAD\n6db215fa52ee315ad1011e14cf7a12560107da56 worktrees/o1_v2_axis_bank_redesign/HEAD\n1b858d0b0ce8f0e554d7e15db18525b5820c9146 worktrees/hs-adoptions/HEAD\n38c474ebea3c6173d48d659d3edc0317c36acfd4 worktrees/o1_axis_diagnosis_v2/HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1"
+  }
+ },
+ "destination_identity_after": {
+  "findmnt": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/run/media/moloch/ARCH_BACKUP\",\n         \"source\": \"/dev/sda1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,nosuid,nodev,relatime,errors=remount-ro\",\n         \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n         \"label\": \"ARCH_BACKUP\"\n      }\n   ]\n}\n",
+  "lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"sda\",\n         \"size\": \"465.8G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"SanDisk Extreme Portable SSD\",\n         \"serial\": \"201123804758\",\n         \"tran\": \"usb\",\n         \"vendor\": \"SanDisk \",\n         \"children\": [\n            {\n               \"name\": \"sda1\",\n               \"size\": \"465.8G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"36df468b-3bf9-41a9-ace8-edccfb292434\",\n               \"mountpoint\": \"/run/media/moloch/ARCH_BACKUP\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": null,\n               \"vendor\": null\n            }\n         ]\n      }\n   ]\n}\n",
+  "source_disk_lsblk": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"nvme0n1\",\n         \"size\": \"953.9G\",\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"uuid\": null,\n         \"mountpoint\": null,\n         \"model\": \"WD PC SN8000S SDEPNRK-1T00-1101\",\n         \"serial\": \"25363H803914\",\n         \"tran\": \"nvme\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"size\": \"1G\",\n               \"type\": \"part\",\n               \"fstype\": \"vfat\",\n               \"uuid\": \"8806-FDD4\",\n               \"mountpoint\": \"/boot\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            },{\n               \"name\": \"nvme0n1p2\",\n               \"size\": \"952.9G\",\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"uuid\": \"d06b03fe-5a17-4250-a6a2-acae19dfd890\",\n               \"mountpoint\": \"/\",\n               \"model\": null,\n               \"serial\": null,\n               \"tran\": \"nvme\"\n            }\n         ]\n      }\n   ]\n}\n",
+  "df_dest": "Filesystem     Type    1B-blocks         Used        Avail Mounted on\n/dev/sda1      ext4 491105460224 268991901696 197091495936 /run/media/moloch/ARCH_BACKUP\n",
+  "df_source": "Filesystem     Type     1B-blocks         Used        Avail Mounted on\n/dev/nvme0n1p2 ext4 1005921464320 570865598464 383882424320 /\n",
+  "st_dev_dest": 2049,
+  "st_dev_source": 66306,
+  "separate_physical_device": true
+ },
+ "files": 16200,
+ "symlinks": 23,
+ "bytes": 52152117674,
+ "problems": 0,
+ "manifest_sha256": "77a13e9f6873b804578a52af386f50dd41fef06cad12d6d1fa06305f4a6d11ec",
+ "dedup_groups": 4494,
+ "finished_utc": "2026-09-11T20:16:18.431058+00:00",
+ "elapsed_seconds": 2335.350323677063,
+ "status": "copied_and_hash_verified",
+ "schema": "jlens_cold_archive_acceptance_receipt.v1",
+ "archive_root": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911",
+ "destination_identity_summary": {
+  "device": "/dev/sda1 (SanDisk Extreme Portable SSD, USB)",
+  "filesystem": "ext4",
+  "uuid": "36df468b-3bf9-41a9-ace8-edccfb292434",
+  "mountpoint": "/run/media/moloch/ARCH_BACKUP",
+  "label": "ARCH_BACKUP",
+  "separate_from_source_disk": true,
+  "source_disk": "nvme0n1p2 (WD PC SN8000S) UUID d06b03fe-5a17-4250-a6a2-acae19dfd890"
+ },
+ "full_manifest_sha256": "77a13e9f6873b804578a52af386f50dd41fef06cad12d6d1fa06305f4a6d11ec",
+ "counts": {
+  "files": 16200,
+  "symlinks": 23,
+  "bytes": 52152117674,
+  "dedup_groups": 4494
+ },
+ "index_by_root": {
+  "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation": {
+   "files": 7644,
+   "symlinks": 0,
+   "bytes": 15064002186
+  },
+  "/home/moloch/jacobian-lens": {
+   "files": 8077,
+   "symlinks": 0,
+   "bytes": 23116015378
+  },
+  "/home/moloch/ouro_project/artifacts/jlens": {
+   "files": 354,
+   "symlinks": 0,
+   "bytes": 457328281
+  },
+  "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B": {
+   "files": 13,
+   "symlinks": 13,
+   "bytes": 5341718984
+  },
+  "/home/moloch/ouro_project/artifacts/hf_cache/hub/datasets--Salesforce--wikitext": {
+   "files": 6,
+   "symlinks": 2,
+   "bytes": 156998312
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens": {
+   "files": 33,
+   "symlinks": 0,
+   "bytes": 1138198
+  },
+  "/home/moloch/ouro_project/docs/jlens": {
+   "files": 54,
+   "symlinks": 0,
+   "bytes": 3471272
+  },
+  "/home/moloch/.cache/huggingface/hub/models--Vykos--ouro-jlens-results": {
+   "files": 19,
+   "symlinks": 8,
+   "bytes": 8011445063
+  }
+ },
+ "restoration_from_ssd": {
+  "schema": "ssd_restoration_check.v1",
+  "started_utc": "2026-09-11T20:35:26.643127+00:00",
+  "archive": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911",
+  "bundle": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle",
+  "isolation": {
+   "live_research_visible": false,
+   "live_ouro_artifacts_visible": false,
+   "live_hf_cache_visible": false,
+   "HF_HUB_OFFLINE": "1",
+   "network": "unreachable (OSError)"
+  },
+  "rehash_mismatched": "skipped (destination hash verification of all 16,200 files already passed in build_archive.py)",
+  "frozen_code": {
+   "archive_matches_freeze": true,
+   "members_match_freeze": true,
+   "members": 59
+  },
+  "banks": {
+   "diagonal": {
+    "file": "banks/positions.pt",
+    "record_matches_run_spec": true,
+    "keys_are_sources_0_to_target": true,
+    "all_2048x2048_fp16": true,
+    "first_middle_last_finite": true
+   },
+   "fit01": {
+    "file": "banks/fit01.pt",
+    "record_matches_run_spec": true,
+    "keys_are_sources_0_to_target": true,
+    "all_2048x2048_fp16": true,
+    "first_middle_last_finite": true
+   },
+   "fit02": {
+    "file": "banks/fit02.pt",
+    "record_matches_run_spec": true,
+    "keys_are_sources_0_to_target": true,
+    "all_2048x2048_fp16": true,
+    "first_middle_last_finite": true
+   },
+   "penultimate": {
+    "file": "banks/penultimate.pt",
+    "record_matches_run_spec": true,
+    "keys_are_sources_0_to_target": true,
+    "all_2048x2048_fp16": true,
+    "first_middle_last_finite": true
+   },
+   "sampled_sum": {
+    "file": "banks/positions.pt",
+    "record_matches_run_spec": true,
+    "keys_are_sources_0_to_target": true,
+    "all_2048x2048_fp16": true,
+    "first_middle_last_finite": true
+   }
+  },
+  "analysis_rerun_equals_saved_json": true,
+  "primary_from_archive": 0.23188291139240502,
+  "primary_interval_from_archive": [
+   0.1628899320083425,
+   0.3289769593495046
+  ],
+  "secondary_from_archive": [
+   [
+    "early_loop1_fixed_mean",
+    -0.08827465717299579,
+    [
+     -0.13641974092762596,
+     -0.040129573418365615
+    ]
+   ],
+   [
+    "early_loop1_any_layer",
+    -0.4440664556962024,
+    [
+     -0.5902854897612019,
+     -0.2978474216312029
+    ]
+   ],
+   [
+    "early_loop2_fixed_mean",
+    -0.14858089398734178,
+    [
+     -0.19540695469825603,
+     -0.10175483327642752
+    ]
+   ],
+   [
+    "early_loop2_any_layer",
+    -0.5736550632911395,
+    [
+     -0.7200754085098435,
+     -0.4272347180724354
+    ]
+   ],
+   [
+    "early_loop3_fixed_mean",
+    -0.15586926424050637,
+    [
+     -0.2240409794100318,
+     -0.08769754907098096
+    ]
+   ],
+   [
+    "early_loop3_any_layer",
+    -0.6108386075949369,
+    [
+     -0.7959090115574546,
+     -0.4257682036324192
+    ]
+   ],
+   [
+    "fit01_final_third",
+    0.11542721518987345,
+    [
+     0.04672864781503934,
+     0.18412578256470757
+    ]
+   ],
+   [
+    "fit01_layer32",
+    0.2468354430379748,
+    [
+     0.10717055882185947,
+     0.3865003272540901
+    ]
+   ],
+   [
+    "fit02_local",
+    0.22558016877637127,
+    [
+     0.09523375118988045,
+     0.3559265863628621
+    ]
+   ],
+   [
+    "fit01_minus_fit02_local",
+    0.006302742616033756,
+    [
+     -0.007270138454696015,
+     0.019875623686763527
+    ]
+   ],
+   [
+    "penultimate_local",
+    0.08804061181434597,
+    [
+     0.007594657812076772,
+     0.16848656581661517
+    ]
+   ],
+   [
+    "penultimate_final_third",
+    -0.04871722423146473,
+    [
+     -0.08741914570950507,
+     -0.010015302753424389
+    ]
+   ],
+   [
+    "sampled_sum_local",
+    0.2172402426160338,
+    [
+     0.09155303182978272,
+     0.3429274534022849
+    ]
+   ],
+   [
+    "sampled_sum_final_third",
+    0.11439345991561176,
+    [
+     0.03955537360940145,
+     0.18923154622182206
+    ]
+   ],
+   [
+    "diagonal_local",
+    0.05952004219409286,
+    [
+     -0.003395438727201716,
+     0.12243552311538744
+    ]
+   ],
+   [
+    "diagonal_final_third",
+    0.0017088607594936685,
+    [
+     -0.046635610873610206,
+     0.050053332392597544
+    ]
+   ],
+   [
+    "fit01_minus_penultimate_local",
+    0.1438422995780591,
+    [
+     0.07699378313022422,
+     0.210690816025894
+    ]
+   ],
+   [
+    "fit01_minus_penultimate_final_third",
+    0.1691681735985534,
+    [
+     0.09715874999930492,
+     0.2411775971978019
+    ]
+   ],
+   [
+    "sampled_sum_minus_diagonal_local",
+    0.15772020042194096,
+    [
+     0.05796365904793578,
+     0.25747674179594615
+    ]
+   ],
+   [
+    "sampled_sum_minus_diagonal_final_third",
+    0.11268459915611814,
+    [
+     0.04515142185812439,
+     0.1802177764541119
+    ]
+   ]
+  ],
+  "rescoring": {
+   "raw": {
+    "allrank": true,
+    "top10_ids": true,
+    "rank": true,
+    "top1": true
+   },
+   "fit01": {
+    "allrank": true,
+    "top10_ids": true,
+    "rank": true,
+    "top1": true
+   }
+  },
+  "replay_levels": {
+   "level1_tables_from_saved_scores": "executed (analysis rerun)",
+   "level2_rescoring_from_archived_banks_and_states": "executed for raw and fit01 (all 160 items, executed layout)",
+   "level2_other_arms": "NOT rerun here (fit02, penultimate, sampled_sum, diagonal loaded and shape/finite-checked only)",
+   "level3_regeneration_from_prompts": "NOT run",
+   "numerical_sensitivity_suite": "NOT repeated (see verification_2026-09-11)"
+  },
+  "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "finished_utc": "2026-09-11T20:38:26.757742+00:00"
+ },
+ "supplement": {
+  "path": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/supplement_closeout_2026-09-11",
+  "files": 359,
+  "bytes": 229840838,
+  "manifest_sha256": "3dece7f5985b726d5d44769154e7395e29f397eae0340e80501696f2fffa0605",
+  "problems": 0
+ },
+ "copy_status": "SINGLE-COPY ARCHIVE once laptop copies are removed: this SSD is the only off-device copy; no second physical destination was available or authorized",
+ "excluded": "see EXCLUSIONS.json and SECRETS_FLAGGED.json (SSH private key kept out)",
+ "symlink_note": "two absolute symlinks (huginn_verification review fixtures linked_parent) point at laptop paths; their targets are archived under tree/ and they are not needed for restoration; HF cache symlinks are relative and resolve inside the archive",
+ "unresolved_dependencies": [
+  "venv (8 GB) not copied: requirements.lock + DEPENDENCIES.json pip freeze",
+  "public model weights other than Ouro-2.6B not copied (Huginn 15 GB, Ouro-Thinking, MiniCPM, DeBERTa): repo ids in DEPENDENCIES.json",
+  "private Hub repo Vykos/ouro-jlens-results: 19 files not retrievable here"
+ ],
+ "finalized_utc": "2026-09-11T20:44:20.288230+00:00"
+}

@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/launch.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/launch.py", line 72, in main
+    upload(source,'/workspace/jlens/'+entry['worker_path'],remaining())
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/evaluation/launch.py", line 38, in upload
+    run_bounded(['rsync','--partial','--partial-dir=.rsync-partial','--protect-args','-t','-e',shlex.join(commands),str(path),host+':'+dest],
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                timeout=timeout,operation='confirmation_upload')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/transport.py", line 58, in run_bounded
+    stdout, stderr = process.communicate(timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 2153, in _communicate
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.14/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

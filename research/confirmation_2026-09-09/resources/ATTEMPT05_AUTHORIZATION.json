@@ -1,0 +1,8 @@
+{
+  "recorded_utc": "2026-09-10T20:12:31+00:00",
+  "user_authorization": "YOu have authorisation.",
+  "scope": "Creation of attempt05 worker i7zq14rj0f0ief and export of the frozen precision_v1 bundle and four bank files to it; attempt cap $3.77 within unchanged $25 combined cap.",
+  "given": "Retrospectively, after attempt05 ended, in reply to root's report that no local authorization record existed.",
+  "not_interpreted_as": "Authorization for new spending, a further attempt or a protocol change.",
+  "prior_spend_upper_usd": 19.086979165492036
+}

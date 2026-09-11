@@ -1,0 +1,161 @@
+group,size,item,intermediate,domain,target,prompt
+dg001,2,confirmation-001,Venus,astronomy,carbon dioxide,Fact: The planet whose sidereal rotation takes longer than its orbital period has an atmosphere dominated by 
+dg001,2,confirmation-002,Venus,astronomy,retrograde,Fact: The planet with persistent sulfuric-acid clouds rotates in the direction described as 
+dg002,4,confirmation-003,Uranus,astronomy,1977,Fact: The planet whose rotation axis is tilted nearly into its orbital plane had its rings discovered in 
+dg002,4,confirmation-004,Uranus,astronomy,ice giant,Fact: The planet whose rings were discovered in a 1977 stellar-occultation observation is classified as an 
+dg002,4,confirmation-117,Voyager,technology,copper,Fact: The pair of space probes launched in 1977 carries gold-plated message records whose underlying metal is 
+dg002,4,confirmation-118,Voyager,technology,1977,Fact: The space-probe program whose first spacecraft crossed the heliopause in 2012 began with two launches in the year 
+dg003,10,confirmation-005,Neptune,astronomy,1989,Fact: The outer planet with the fastest measured winds was visited by the Voyager 2 spacecraft in 
+dg003,10,confirmation-006,Neptune,astronomy,methane,Fact: The planet where Voyager 2 observed the Great Dark Spot has an atmosphere containing the light-absorbing gas 
+dg003,10,confirmation-011,Titan,astronomy,methane,Fact: The largest moon of Saturn has northern surface lakes composed mainly of liquid 
+dg003,10,confirmation-012,Titan,astronomy,Saturn,Fact: The moon on which the Huygens probe landed in 2005 orbits the planet 
+dg003,10,confirmation-013,Europa,astronomy,water,Fact: The smallest of Jupiter's four large Galilean moons is thought to have an ocean composed mainly of liquid 
+dg003,10,confirmation-014,Europa,astronomy,ice,Fact: The Galilean moon whose name comes from a Phoenician princess is covered chiefly by a crust of 
+dg003,10,confirmation-015,Io,astronomy,volcanoes,Fact: The innermost of Jupiter's four large Galilean moons is especially notable for active 
+dg003,10,confirmation-016,Io,astronomy,Jupiter,Fact: The moon whose volcanic eruption was detected in Voyager 1 images in 1979 orbits the planet 
+dg003,10,confirmation-159,permafrost,environment_geology,active layer,Fact: Ground that remains frozen for at least two consecutive years has a seasonally thawed surface zone called the 
+dg003,10,confirmation-160,permafrost,environment_geology,methane,"Fact: When long-frozen soil thaws, decomposition of its organic matter can release carbon dioxide and the greenhouse gas "
+dg004,2,confirmation-007,Pluto,astronomy,Kuiper belt,Fact: The dwarf planet whose largest moon is Charon lies mainly in the region called the 
+dg004,2,confirmation-008,Pluto,astronomy,Tombaugh,"Fact: The dwarf planet visited by New Horizons in 2015 has a heart-shaped region named after its discoverer, Clyde "
+dg005,2,confirmation-009,Ceres,astronomy,salts,Fact: The largest object in the asteroid belt has bright deposits in Occator crater composed largely of 
+dg005,2,confirmation-010,Ceres,astronomy,Dawn,Fact: The dwarf planet with the bright deposits in Occator crater was visited by the spacecraft named 
+dg006,42,confirmation-017,helium,chemistry,2,Fact: The gas used to fill balloons without supporting combustion has atomic number 
+dg006,42,confirmation-018,helium,chemistry,noble gases,Fact: The element with atomic number two belongs to the chemical family called the 
+dg006,42,confirmation-019,lithium,chemistry,3,Fact: The lightest solid element used in rechargeable batteries has atomic number 
+dg006,42,confirmation-020,lithium,chemistry,Li,Fact: The element with atomic number three has the chemical symbol 
+dg006,42,confirmation-021,boron,chemistry,solid,Fact: The element with atomic number five has a physical state at twenty degrees Celsius described as 
+dg006,42,confirmation-022,boron,chemistry,5,Fact: The element independently isolated in 1808 by Gay-Lussac and Thenard and by Humphry Davy has atomic number 
+dg006,42,confirmation-023,cobalt,chemistry,Co,Fact: The metal at the center of vitamin B12 has the chemical symbol 
+dg006,42,confirmation-024,cobalt,chemistry,27,Fact: The blue-pigment metal whose name derives from the German word for goblin has atomic number 
+dg006,42,confirmation-025,nickel,chemistry,Ni,Fact: The element with atomic number twenty-eight has the chemical symbol 
+dg006,42,confirmation-026,nickel,chemistry,28,Fact: The metal that gives its name to the United States five-cent coin has atomic number 
+dg006,42,confirmation-027,tungsten,chemistry,W,Fact: The metal with the highest melting point has the chemical symbol 
+dg006,42,confirmation-028,tungsten,chemistry,74,Fact: The metal traditionally used for incandescent lamp filaments has atomic number 
+dg006,42,confirmation-029,radon,chemistry,Rn,Fact: The radioactive noble gas produced in the uranium decay series has the chemical symbol 
+dg006,42,confirmation-030,radon,chemistry,86,Fact: The radioactive gas that can accumulate in basements has atomic number 
+dg006,42,confirmation-031,neon,chemistry,Ne,Fact: The noble gas used in orange-red discharge tubes has the chemical symbol 
+dg006,42,confirmation-032,neon,chemistry,orange-red,Fact: The element with atomic number ten produces a characteristic discharge glow that is 
+dg006,42,confirmation-053,Andes,landforms,South America,Fact: The mountain range containing Aconcagua is located on the continent of 
+dg006,42,confirmation-054,Andes,landforms,Aconcagua,Fact: The mountain range forming much of the border between Chile and Argentina has its highest summit at 
+dg006,42,confirmation-059,Alps,landforms,Europe,Fact: The mountain range whose highest summit is Mont Blanc is located on the continent of 
+dg006,42,confirmation-060,Alps,landforms,Mont Blanc,Fact: The European mountain range containing the Matterhorn has its highest summit at 
+dg006,42,confirmation-063,Borneo,landforms,3,Fact: The island containing Mount Kinabalu is politically divided among how many countries? The answer is 
+dg006,42,confirmation-064,Borneo,landforms,Kinabalu,"Fact: The island shared by Brunei, Indonesia and Malaysia has its highest summit at Mount "
+dg006,42,confirmation-075,nucleus,biology,nucleolus,Fact: The membrane-bound compartment housing most eukaryotic chromosomes contains a ribosome-assembly structure called the 
+dg006,42,confirmation-076,nucleus,biology,2,Fact: The compartment housing most eukaryotic chromosomes is surrounded by how many membranes? The answer is 
+dg006,42,confirmation-129,Kelvin,si_units,K,Fact: The SI base unit defined by fixing the Boltzmann constant has the symbol 
+dg006,42,confirmation-130,Kelvin,si_units,temperature,Fact: The SI unit associated with the physicist William Thomson measures the physical quantity 
+dg006,42,confirmation-131,Pascal,si_units,pressure,Fact: The SI unit named after a seventeenth-century French mathematician measures the physical quantity 
+dg006,42,confirmation-132,Pascal,si_units,Pa,Fact: The derived SI unit equal to one newton per square metre has the symbol 
+dg006,42,confirmation-133,Newton,si_units,N,Fact: The SI unit named after the discoverer of universal gravitation has the symbol 
+dg006,42,confirmation-134,Newton,si_units,force,Fact: The SI unit equal to one kilogram metre per second squared measures the physical quantity 
+dg006,42,confirmation-135,Watt,si_units,power,Fact: The SI unit named after the Scottish engineer who improved the steam engine measures the physical quantity 
+dg006,42,confirmation-136,Watt,si_units,W,Fact: The SI unit equal to one joule per second has the symbol 
+dg006,42,confirmation-137,Tesla,si_units,T,Fact: The SI unit named after the Serbian-American inventor associated with alternating-current systems has the symbol 
+dg006,42,confirmation-138,Tesla,si_units,magnetic flux density,Fact: The SI unit equal to one weber per square metre measures the physical quantity 
+dg006,42,confirmation-139,volt,si_units,V,Fact: The SI unit named after the inventor of the first electric battery has the symbol 
+dg006,42,confirmation-140,volt,si_units,electric potential difference,Fact: The SI unit equal to one joule per coulomb measures the physical quantity 
+dg006,42,confirmation-141,mole,si_units,mol,Fact: The SI base unit containing exactly Avogadro's number of entities has the symbol 
+dg006,42,confirmation-142,mole,si_units,amount of substance,Fact: The SI base unit added to the system in 1971 measures the physical quantity 
+dg006,42,confirmation-143,gray,si_units,Gy,Fact: The SI unit named after a British radiation physicist has the symbol 
+dg006,42,confirmation-144,gray,si_units,100,Fact: The SI unit adopted in 1975 for absorbed radiation dose is equivalent to how many rads? The answer is 
+dg006,42,confirmation-145,ozone,environment_geology,O3,Fact: The molecule principally responsible for the stratospheric shield against ultraviolet light has the formula 
+dg006,42,confirmation-146,ozone,environment_geology,3,Fact: The oxygen allotrope depleted by stratospheric chlorine radicals contains how many atoms per molecule? The answer is 
+dg007,16,confirmation-033,Japan,countries,yen,Fact: The island nation whose capital lies on Honshu uses the currency called the 
+dg007,16,confirmation-034,Japan,countries,Tokyo,Fact: The country whose highest mountain is Mount Fuji has its capital in 
+dg007,16,confirmation-035,Kenya,countries,shilling,Fact: The East African country containing the Maasai Mara uses a currency called the 
+dg007,16,confirmation-036,Kenya,countries,equator,Fact: The country whose capital is Nairobi straddles the geographical line called the 
+dg007,16,confirmation-037,Chile,countries,peso,Fact: The country containing the desert town of San Pedro de Atacama uses a currency called the 
+dg007,16,confirmation-038,Chile,countries,Santiago,Fact: The South American country containing the city of Valparaiso has its capital in 
+dg007,16,confirmation-039,Norway,countries,krone,Fact: The Scandinavian country containing the Svalbard archipelago uses the currency called the 
+dg007,16,confirmation-040,Norway,countries,17,Fact: The Nordic country whose capital is Oslo celebrates its Constitution Day on May 
+dg007,16,confirmation-041,Egypt,countries,pound,Fact: The country containing the Valley of the Kings uses a currency called the 
+dg007,16,confirmation-042,Egypt,countries,Cairo,Fact: The country containing the Great Pyramid of Giza has its capital in 
+dg007,16,confirmation-043,Peru,countries,sol,Fact: The country containing Machu Picchu uses the currency called the 
+dg007,16,confirmation-044,Peru,countries,Lima,Fact: The South American country containing the city of Cusco has its capital in 
+dg007,16,confirmation-045,Thailand,countries,baht,Fact: The country whose highest mountain is Doi Inthanon uses the currency called the 
+dg007,16,confirmation-046,Thailand,countries,Bangkok,Fact: The Southeast Asian country containing the city of Chiang Mai has its capital in 
+dg007,16,confirmation-047,Sweden,countries,krona,Fact: The Nordic country whose flag has a yellow cross on blue uses the currency called the 
+dg007,16,confirmation-048,Sweden,countries,Stockholm,Fact: The country containing the cities of Gothenburg and Malmo has its capital in 
+dg008,4,confirmation-049,Everest,landforms,Himalayas,Fact: The world's highest mountain above sea level belongs to the mountain range called the 
+dg008,4,confirmation-050,Everest,landforms,China,Fact: The mountain first summited by Edmund Hillary and Tenzing Norgay in 1953 lies on the border between Nepal and 
+dg008,4,confirmation-093,Confucius,historical_people,China,Fact: The ancient teacher whose sayings are collected in the Analects lived in the country now called 
+dg008,4,confirmation-094,Confucius,historical_people,Analects,Fact: The ancient Chinese teacher traditionally dated to 551–479 BCE is associated with the collection known as the 
+dg009,2,confirmation-051,Sahara,landforms,Africa,Fact: The world's largest hot desert occupies much of the continent called 
+dg009,2,confirmation-052,Sahara,landforms,Atlantic,"Fact: The ocean at the western edge of the hot desert spanning Algeria, Libya and Chad is the "
+dg010,6,confirmation-055,Nile,landforms,Mediterranean Sea,Fact: The river whose principal branches are called the White and Blue branches empties into the 
+dg010,6,confirmation-056,Nile,landforms,Khartoum,Fact: The principal north-flowing river through Egypt has two major branches that meet at the city of 
+dg010,6,confirmation-057,Danube,landforms,Black Sea,Fact: The large European river passing through Vienna and Bratislava empties into the 
+dg010,6,confirmation-058,Danube,landforms,Germany,Fact: The river dividing Buda from Pest has its headwaters in the country of 
+dg010,6,confirmation-061,Mekong,landforms,Vietnam,Fact: The river flowing through both Vientiane and Phnom Penh has its delta in the country of 
+dg010,6,confirmation-062,Mekong,landforms,Tibetan Plateau,Fact: The river whose delta occupies much of southern Vietnam has its headwaters on the 
+dg011,4,confirmation-065,DNA,biology,deoxyribose,Fact: The hereditary molecule with a double-helical structure contains the sugar 
+dg011,4,confirmation-066,DNA,biology,adenine,"Fact: In the hereditary molecule that uses thymine as a canonical base, thymine pairs with "
+dg011,4,confirmation-067,RNA,biology,ribose,Fact: The nucleic acid that normally uses uracil instead of thymine contains the sugar 
+dg011,4,confirmation-068,RNA,biology,uracil,"Fact: The nucleic acid whose backbone contains ribose normally uses, in place of thymine, the base "
+dg012,2,confirmation-069,insulin,biology,pancreas,Fact: The peptide hormone that lowers blood glucose is secreted by the organ called the 
+dg012,2,confirmation-070,insulin,biology,beta cells,Fact: The hormone deficient in type 1 diabetes is normally secreted by pancreatic cells known as 
+dg013,10,confirmation-071,hemoglobin,biology,iron,Fact: The oxygen-carrying protein in human red blood cells contains the metal 
+dg013,10,confirmation-072,hemoglobin,biology,4,Fact: The principal oxygen-carrying protein in adult human red blood cells contains how many globin chains? The answer is 
+dg013,10,confirmation-077,chlorophyll,biology,magnesium,Fact: The green photosynthetic pigment in plants contains a central atom of the metal 
+dg013,10,confirmation-078,chlorophyll,biology,chloroplasts,Fact: The light-absorbing plant pigment with a magnesium-containing ring is located mainly in organelles called 
+dg013,10,confirmation-113,Linux,technology,GPL,Fact: The Unix-like kernel created by Linus Torvalds is distributed under the license abbreviated 
+dg013,10,confirmation-114,Linux,technology,1991,Fact: The operating-system kernel whose mascot is the penguin Tux was first released in 
+dg013,10,confirmation-115,Python,technology,1991,Fact: The programming language created by Guido van Rossum was first publicly released in 
+dg013,10,confirmation-116,Python,technology,Guido van Rossum,Fact: The programming language whose enhancement proposals are abbreviated PEP was created by 
+dg013,10,confirmation-123,Unicode,technology,1991,Fact: The character standard whose code points are conventionally written with a U+ prefix first published Version 1.0 in 
+dg013,10,confirmation-124,Unicode,technology,4,Fact: The UTF-8 encoding of the character standard managed by the consortium responsible for emoji uses at most how many bytes per code point? The answer is 
+dg014,2,confirmation-073,neuron,biology,synapse,Fact: The cell with an axon and dendrites typically communicates with another such cell across a 
+dg014,2,confirmation-074,neuron,biology,myelin,Fact: The cells carrying nerve impulses often have axons insulated by a material called 
+dg015,2,confirmation-079,collagen,biology,triple helix,Fact: The structural protein providing much of the tensile strength of tendons has a characteristic molecular arrangement called a 
+dg015,2,confirmation-080,collagen,biology,glycine,Fact: The structural protein whose molecules form a triple helix has every third amino-acid residue occupied by 
+dg016,24,confirmation-081,Napoleon,historical_people,Saint Helena,Fact: The French emperor defeated at Waterloo was finally exiled to the island of 
+dg016,24,confirmation-082,Napoleon,historical_people,Corsica,Fact: The French commander victorious at Austerlitz in 1805 was born on the island of 
+dg016,24,confirmation-083,Darwin,historical_people,Beagle,Fact: The naturalist who wrote On the Origin of Species travelled aboard HMS 
+dg016,24,confirmation-084,Darwin,historical_people,Shrewsbury,Fact: The naturalist associated with the Beagle voyage and evolution by natural selection was born in the English town of 
+dg016,24,confirmation-085,Einstein,historical_people,Ulm,Fact: The physicist awarded the Nobel Prize for the photoelectric effect was born in the town of 
+dg016,24,confirmation-086,Einstein,historical_people,1921,Fact: The physicist who published special relativity in 1905 received the Physics Nobel Prize designated for the year 
+dg016,24,confirmation-087,Galileo,historical_people,Pisa,Fact: The astronomer who first reported four moons of Jupiter in 1610 was born in the city of 
+dg016,24,confirmation-088,Galileo,historical_people,1633,Fact: The author of Dialogue Concerning the Two Chief World Systems was tried by the Roman Inquisition in 
+dg016,24,confirmation-095,Shakespeare,historical_people,Stratford-upon-Avon,Fact: The author of Hamlet was born in the town of 
+dg016,24,confirmation-096,Shakespeare,historical_people,1564,Fact: The author of Romeo and Juliet was born in the year 
+dg016,24,confirmation-097,Beethoven,arts_music,Bonn,Fact: The composer of the Ninth Symphony containing the Ode to Joy was born in the city of 
+dg016,24,confirmation-098,Beethoven,arts_music,Vienna,Fact: The composer of the opera Fidelio died in the city of 
+dg016,24,confirmation-099,Mozart,arts_music,Salzburg,Fact: The composer of The Magic Flute was born in the city of 
+dg016,24,confirmation-100,Mozart,arts_music,1756,Fact: The composer of the opera Don Giovanni was born in the year 
+dg016,24,confirmation-101,Picasso,arts_music,Malaga,Fact: The painter of Guernica was born in the Spanish city of 
+dg016,24,confirmation-102,Picasso,arts_music,Cubism,Fact: The painter of Les Demoiselles d'Avignon helped develop the movement called 
+dg016,24,confirmation-103,Monet,arts_music,Giverny,Fact: The painter famous for the Water Lilies series cultivated his garden at 
+dg016,24,confirmation-104,Monet,arts_music,Impressionism,"Fact: The painter of Impression, Sunrise is associated with the movement called "
+dg016,24,confirmation-105,Tolkien,arts_music,Oxford,Fact: The author of The Hobbit held professorships at the University of 
+dg016,24,confirmation-106,Tolkien,arts_music,Bloemfontein,Fact: The author of The Lord of the Rings was born in the city of 
+dg016,24,confirmation-107,Bach,arts_music,Eisenach,Fact: The composer of the Brandenburg Concertos was born in the town of 
+dg016,24,confirmation-108,Bach,arts_music,Baroque,Fact: The composer of the Goldberg Variations worked in the musical period known as the 
+dg016,24,confirmation-111,Raphael,arts_music,Urbino,Fact: The painter of The School of Athens was born in the town of 
+dg016,24,confirmation-112,Raphael,arts_music,High Renaissance,Fact: The painter of the Sistine Madonna worked in the artistic period known as the 
+dg017,2,confirmation-089,Cleopatra,historical_people,Ptolemaic dynasty,Fact: The queen allied with both Julius Caesar and Mark Antony belonged to the dynasty called the 
+dg017,2,confirmation-090,Cleopatra,historical_people,30 BCE,Fact: The Egyptian queen who supported Mark Antony at the Battle of Actium died in the year 
+dg018,2,confirmation-091,Gutenberg,historical_people,Mainz,Fact: The printer associated with the first major European movable-type Bible developed his press in the city of 
+dg018,2,confirmation-092,Gutenberg,historical_people,goldsmith,Fact: The inventor associated with printing a forty-two-line Bible in the fifteenth century originally worked as a 
+dg019,2,confirmation-109,Chopin,arts_music,piano,Fact: The composer of the Revolutionary Etude wrote chiefly for the instrument called the 
+dg019,2,confirmation-110,Chopin,arts_music,Paris,Fact: The composer of the Minute Waltz spent much of his adult career in the city of 
+dg020,2,confirmation-119,Hubble,technology,Earth,Fact: The space telescope deployed by the shuttle Discovery in 1990 operates in low orbit around 
+dg020,2,confirmation-120,Hubble,technology,2.4 metres,Fact: The space telescope repaired during the STS-61 mission has a primary mirror with a diameter of 
+dg021,2,confirmation-121,Wikipedia,technology,2001,Fact: The online encyclopedia launched by Jimmy Wales and Larry Sanger began in the year 
+dg021,2,confirmation-122,Wikipedia,technology,Wikimedia Foundation,Fact: The online encyclopedia whose logo is an unfinished globe made of puzzle pieces is supported by the 
+dg022,2,confirmation-125,Ethernet,technology,Xerox PARC,Fact: The local-area networking technology standardized as IEEE 802.3 was first developed at 
+dg022,2,confirmation-126,Ethernet,technology,48,Fact: The networking technology proposed by Robert Metcalfe in 1973 conventionally uses MAC addresses containing how many bits? The answer is 
+dg023,2,confirmation-127,Arduino,technology,Italy,Fact: The open-source electronics platform founded around the Interaction Design Institute Ivrea originated in the country of 
+dg023,2,confirmation-128,Arduino,technology,2005,Fact: The open-source electronics platform named after a bar in Ivrea was founded in the year 
+dg024,4,confirmation-147,basalt,environment_geology,extrusive igneous rock,Fact: The rock forming the columns of the Giant's Causeway is classified as an 
+dg024,4,confirmation-148,basalt,environment_geology,mafic,Fact: The most abundant volcanic rock of the oceanic crust is compositionally classified as 
+dg024,4,confirmation-149,granite,environment_geology,intrusive igneous rock,Fact: The rock into which Mount Rushmore was carved is classified as an 
+dg024,4,confirmation-150,granite,environment_geology,feldspar,"Fact: The rock historically quarried at Rubislaw in Aberdeen commonly contains quartz, mica and "
+dg025,2,confirmation-151,monsoon,environment_geology,summer,Fact: The wind system responsible for much of South Asia's annual rain typically brings its wet phase during 
+dg025,2,confirmation-152,monsoon,environment_geology,season,Fact: The wind system responsible for South Asia's annual rains takes its name from an Arabic word meaning 
+dg026,2,confirmation-153,glacier,environment_geology,gravity,Fact: The slowly moving perennial ice body that carves U-shaped valleys flows mainly under the force of 
+dg026,2,confirmation-154,glacier,environment_geology,moraines,Fact: The moving ice body that carves U-shaped valleys leaves ridges of debris called 
+dg027,2,confirmation-155,tornado,environment_geology,Enhanced Fujita scale,Fact: The violently rotating column of air connecting a thunderstorm to the ground is rated in the United States on the 
+dg027,2,confirmation-156,tornado,environment_geology,cumulonimbus,Fact: The weather phenomenon ranked by the Enhanced Fujita scale develops beneath thunderstorm clouds known as 
+dg028,2,confirmation-157,earthquake,environment_geology,epicenter,Fact: The surface point directly above the origin of a sudden fault-rupture event is called the 
+dg028,2,confirmation-158,earthquake,environment_geology,hypocenter,Fact: The natural event historically measured using the Richter scale has an underground point of origin called the 

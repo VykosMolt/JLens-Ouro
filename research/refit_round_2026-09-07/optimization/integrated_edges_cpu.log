@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/design_audit/verify_estimators.py", line 425, in <module>
+    main()
+    ~~~~^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/design_audit/verify_estimators.py", line 417, in main
+    result["optimized_eager"] = optimized_eager_checks()
+                                ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/design_audit/verify_estimators.py", line 370, in optimized_eager_checks
+    assert storage.stats()["counts"].get("compressed_payloads", 0) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

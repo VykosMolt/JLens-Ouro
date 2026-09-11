@@ -1,0 +1,27 @@
+{
+  "status": "interpreted",
+  "lease_name": "jlens-refit-14ca9417eb6145c8979fb87ea9fde68c",
+  "bindings": {
+    "combined_contract_sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0",
+    "controls_complete": {
+      "bytes": 666,
+      "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+    },
+    "main_complete": {
+      "bytes": 887,
+      "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+    },
+    "run_spec_sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149"
+  },
+  "root_accepted_utc": "2026-09-09T11:11:24.849723+00:00",
+  "findings": "Root has inspected and independently reconciled the complete frozen Ouro P1/P2 analysis and rank-based audit. P1 is exactly unchanged from the previously accepted five-fit main analysis. All five independent N100 main fits preserve a multihop loop-4 historically selected layers26–37 mean advantage, averaging+0.187171 with fit SD0.003939 and all five descriptive peaks at physical32. Main historical final-third mean is+0.061314. Full-family shared-concept uncertainty still includes zero for the positive bands, and this is not general loop-4 superiority. Early multihop loop1–3 aggregate deficits persist in all five fits.\nP2 is conditional on preselected fit01, with matched calibration and derivative budgets, 90 multihop items/100 eligible slots and51 arithmetic items/slots. Target support is virtual0–189 and position support0–190; their final-third intersections start at176. On target support, main local/late effects versus raw are+0.189069/+0.071432, whereas penultimate gives+0.044545/−0.094141. On position support, main gives+0.189069/+0.066069, sampled-sum+0.181057/+0.054742 and diagonal+0.057085/−0.047113. Thus sampled-sum approximately preserves the local point estimate, while penultimate target and diagonal fitting materially attenuate it and reverse the matched late-band average. Main-minus-penultimate local is+0.144524 and sampled-sum-minus-diagonal local+0.123972; pointwise item/component intervals exclude zero, but the352-contrast simultaneous intervals include zero. This is bounded evidence of estimator sensitivity, not a control fit-variance estimate or universal choice-independent superiority. All four methods retain negative multihop full-loop means in loops1–3; individual layer signs must not be conflated with the five-fit grand-mean curve. Arithmetic remains mixed, with penultimate-target late deficits.\nIndependent reconstruction verified rank scoring, controls, aliases, item weighting, support exclusions, all10000 retained conditional item/component bootstrap memberships,352-family uncertainty, exact P1 equality and all frozen random/failure examples. Maximum discrepancy is1.23e−15. Root separately inspected all control metric means, relevant intervals, full loop-4 curves and own/control decomposition; the local sampled-sum gain is not explained by suppressed control hits. Examples include counterexamples to uniform target degradation and positive recovery despite incorrect continuations. Frozen historical prefix-matcher labels remain distinct from factual correctness. These results establish readability effects, not causal use. Ouro supervision causality remains unresolved. Huginn has not been tested yet; it must pass the frozen native/runtime/budget gate before its bank and evaluations. The predeclared prediction remains exactly: “If J-Lens recovers content outside the native output basis, its advantage over raw logit lens should be larger in Huginn than in Ouro.”",
+  "analysis_complete": {
+    "bytes": 1142,
+    "sha256": "523a23d6a662357fe58eea20d0cf44327cdfd108563e6f0d1fe91c2d90aa082d"
+  },
+  "independent_audit": {
+    "bytes": 598249,
+    "sha256": "d524467558fbcd35b5bdfe33ab09bc131411de15f760a5ac5f71f164f637552a"
+  },
+  "publication_state": "Prepared locally after root acceptance; not yet released remotely. P4 must be quiescent before publication."
+}

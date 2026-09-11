@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "archive": {
+    "bytes": 638345,
+    "sha256": "ef368094400c6b88c15ea367323fa6963bc26495aec5ea7c46a540e1ce3301a9"
+  },
+  "members": 108,
+  "bound_sources": 42,
+  "unchanged_bound_sources": 41,
+  "changed_source_records": [
+    {
+      "before": {
+        "root": "jlens",
+        "path": "research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+        "sha256": "1087f6ad057b32ad866bee81283ea83e1173ca88b0f5a4ed3bc934ecb129966e"
+      },
+      "after": {
+        "root": "jlens",
+        "path": "research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+        "sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d"
+      }
+    }
+  ],
+  "scientific_settings_unchanged": true,
+  "changed_archive_files": [
+    "MANIFEST.json",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/README.md",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json"
+  ],
+  "new_archive_files": [
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/lease_host64_cpu_v1.json",
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_allocator_cpu_v1.json"
+  ],
+  "extracted_standard_library_plans": {
+    "main": {
+      "status": "passed",
+      "stdout_sha256": "6f625046ec8fa61b5c0ef9558cc929e82abd2f9dd293d5b42b1f1423a55a6ce7"
+    },
+    "controls": {
+      "status": "passed",
+      "stdout_sha256": "fd5405e2b8e794f3e724a7ff76a009721c1c0c99e6206028c06eb9967a40f2ec"
+    },
+    "huginn": {
+      "status": "passed",
+      "stdout_sha256": "46ba561b7089ce3c78fc1c2ad281bd34631d2fb3877a8ef0146f684588d46ba8"
+    }
+  },
+  "run_spec_sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149",
+  "preflight_cpu_proof": {
+    "path": "preflight_allocator_cpu_v1.json",
+    "sha256": "8ba8b104fdb0f71958f6601905e211c2979e47486ef3e29fd783a7e1ba6a1f8b"
+  },
+  "controller_cpu_proof": {
+    "path": "lease_host64_cpu_v1.json",
+    "sha256": "e792573a1d66723b3c95ded74a249cda0491e9fcaf00647084a090db8e4a47aa"
+  },
+  "cloud_operations": 0
+}

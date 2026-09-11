@@ -1,0 +1,59 @@
+--- a/research/refit_round_2026-09-07/deployment/lease.py
++++ b/research/refit_round_2026-09-07/deployment/lease.py
+@@ -5,6 +5,10 @@
+ a detached systemd watcher first. The provider also receives a fixed deletion
+ deadline. An uncertain create is reconciled by the unique name, never retried.
+ Credentials stay in the local account client and are never sent to the GPU.
++
++Future-use correction: pre-latch controllers can terminate a completed worker
++when a later status read is missing after the setup deadline. Apply this
++revision only before a new lease; preserve existing pinned controllers.
+ """
+ from __future__ import annotations
+ 
+@@ -249,6 +253,27 @@
+     if value.get("lease_name") != state["name"]:
+         raise ValueError("remote status belongs to another run")
+     return value
++
++
++def setup_completed_for_lease(state):
++    pod = state.get("pod_id")
++    return (isinstance(pod, str) and bool(pod)
++            and state.get("setup_completion") == {"lease_name": state["name"], "pod_id": pod})
++
++
++def remember_worker_status(root, observed_state, status):
++    """Persist the first setup success for this lease/pod under the state lock."""
++    def apply(state):
++        if (state["name"] != observed_state["name"]
++                or state.get("pod_id") != observed_state.get("pod_id")
++                or status.get("lease_name") != state["name"]):
++            raise ValueError("worker status identity changed before persistence")
++        state["last_worker_status"] = status
++        if status.get("setup_complete") is True and not setup_completed_for_lease(state):
++            if not isinstance(state.get("pod_id"), str) or not state["pod_id"]:
++                raise ValueError("setup completion needs the bound pod identity")
++            state["setup_completion"] = {"lease_name": state["name"], "pod_id": state["pod_id"]}
++    return change(root, apply)
+ 
+ 
+ def request_worker_stop(root, state):
+@@ -701,7 +726,7 @@
+                 spend = state["prior_spend_upper_usd"] + max(0.0, elapsed) / 3600 * state["all_in_rate"]
+                 status = remote_status(root, state)
+                 if status:
+-                    state = update(root, last_worker_status=status)
++                    state = remember_worker_status(root, state, status)
+                 if status and status.get("phase") in ("complete", "stopped", "failed"):
+                     ensure_sync(root)
+                 elif time.time() >= epoch(state["work_deadline_utc"]):
+@@ -713,7 +738,7 @@
+                     reason = "combined spending deadline"
+                 elif live["clientBalance"] <= state["preserve_balance"] + 0.15:
+                     reason = "account balance reaches the experiment allocation"
+-                elif time.time() >= epoch(state["setup_deadline_utc"]) and not (status and status.get("setup_complete")):
++                elif time.time() >= epoch(state["setup_deadline_utc"]) and not setup_completed_for_lease(state):
+                     reason = "setup did not finish within the bounded window"
+                 elif not candidates and elapsed > 600:
+                     reason = "creation or provisioning remained unresolved"

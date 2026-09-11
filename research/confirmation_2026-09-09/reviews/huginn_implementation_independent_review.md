@@ -1,0 +1,15 @@
+# Huginn implementation independent review
+
+Status: **passed for implementation readiness**. The nine exact evaluation source records are bound in the adjacent JSON. This does not accept a new scientific result or admit a paid worker.
+
+The separate wrappers preserve the original R8, 32-source, width5280 N100 definition and original two-seed148-item evaluator. The original forty-two-source closure and five calibration inputs still match their historical digests. The freeze checks copied source bytes against the captured reviews and historical pins, then runs the original contract in its packaged layout.
+
+The receiver checks the retained engineering primal and complete native/optimized banks, the exact external development acknowledgement and timing admission, the original sealed fit identity and all100 paragraph initializations, and NumPy FP32-to-FP16 conversion of every returned matrix entry. Readouts must bind the exact fitted generation and pass the original seventeen-file validator. Failed or stopped children retain closed logs and available sealed checkpoint/readout evidence after quiescence; partial fits remain incomplete.
+
+The review found and resolved benchmark/calibration seed confusion, historical versus wrapper run-spec confusion, missing original owner/seed validation, incomplete gate/admission bindings, source replacement before compile and after review, failed-child preservation, and extracted-bundle source lookup. No unresolved implementation finding remains.
+
+Validation passed: nineteen same-source self-tests, thirteen independent validator checks, five native-retention/timing wrapper checks, two freeze-binding rejection checks, three worker-failure cases, two final status/preservation cases, and twelve final admission boundary cases. The independent validator run used a relocated source closure from an unrelated cwd and all seventeen authenticated historical readout files. Semantic negative cases resealed altered OWNER/paragraph metadata, changed fit identity, changed signed-zero bits, and replaced a source between selection and compilation. All nine current evaluation files compile; the eleven previously reviewed controller sources are unchanged.
+
+These are CPU fixtures and historical-artifact checks. No model weights, new confirmation outputs, new Huginn outcomes, provider or SSH actions were used. Actual full-width native parity, fullN100 conversion, new readout acceptance, historical comparison, budget and shutdown remain runtime evidence requirements. Primary160 acceptance and reconciled shutdown still precede any Huginn allocation.
+
+The adjacent JSON pins the complete proof chain and the separate accepted historical-comparison review. The earlier worker-failure proof covered the immediately prior worker; an AST comparison shows the final change adds only two status diagnostic fields, which were separately executed against the final worker. Two fixture-only corrections in the independent validator probe are recorded in the proof.

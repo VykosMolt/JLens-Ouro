@@ -1,0 +1,82 @@
+[
+  {
+    "prompt": "(7 + 9) * 2 = ",
+    "intermediate": 16,
+    "target": 32,
+    "model_passes_saved_check": true,
+    "probe_prediction": 15,
+    "probe_true_rank": 5,
+    "logit_lens_true_rank": 3,
+    "J_lens_true_rank": 0
+  },
+  {
+    "prompt": "(8 + 6) * 3 = ",
+    "intermediate": 14,
+    "target": 42,
+    "model_passes_saved_check": true,
+    "probe_prediction": 14,
+    "probe_true_rank": 0,
+    "logit_lens_true_rank": 0,
+    "J_lens_true_rank": 2
+  },
+  {
+    "prompt": "(5 + 7) * 9 = ",
+    "intermediate": 12,
+    "target": 108,
+    "model_passes_saved_check": false,
+    "probe_prediction": 14,
+    "probe_true_rank": 2,
+    "logit_lens_true_rank": 1,
+    "J_lens_true_rank": 6
+  },
+  {
+    "prompt": "(7 + 7) * 6 = ",
+    "intermediate": 14,
+    "target": 84,
+    "model_passes_saved_check": true,
+    "probe_prediction": 16,
+    "probe_true_rank": 3,
+    "logit_lens_true_rank": 0,
+    "J_lens_true_rank": 5
+  },
+  {
+    "prompt": "(5 + 8) * 8 = ",
+    "intermediate": 13,
+    "target": 104,
+    "model_passes_saved_check": false,
+    "probe_prediction": 11,
+    "probe_true_rank": 3,
+    "logit_lens_true_rank": 1,
+    "J_lens_true_rank": 1
+  },
+  {
+    "prompt": "(4 + 4) * 9 = ",
+    "intermediate": 8,
+    "target": 72,
+    "model_passes_saved_check": true,
+    "probe_prediction": 8,
+    "probe_true_rank": 0,
+    "logit_lens_true_rank": 0,
+    "J_lens_true_rank": 0
+  },
+  {
+    "prompt": "(3 + 4) * 4 = ",
+    "intermediate": 7,
+    "target": 28,
+    "model_passes_saved_check": true,
+    "probe_prediction": 7,
+    "probe_true_rank": 0,
+    "logit_lens_true_rank": 0,
+    "J_lens_true_rank": 0
+  },
+  {
+    "prompt": "(2 + 3) * 5 = ",
+    "intermediate": 5,
+    "target": 25,
+    "model_passes_saved_check": true,
+    "probe_prediction": 5,
+    "probe_true_rank": 0,
+    "logit_lens_true_rank": 0,
+    "J_lens_true_rank": 0
+  }
+]

@@ -1,0 +1,4 @@
+rsync error: unexplained error (code 255) at rsync.c(874) [generator=3.5.0-g471e17dc]
+rsync: [generator] write error: Broken pipe (32)
+rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at io.c(586) [receiver=3.5.0-g471e17dc]
+rsync: [receiver] write error: Broken pipe (32)

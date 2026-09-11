@@ -1,0 +1,312 @@
+{
+  "actual_patch_application": {
+    "directory": "/tmp/lease-setup-latch-proof-hyqixdgu/patch-application",
+    "matches_candidate_byte_exactly": true,
+    "returncode": 0
+  },
+  "base": {
+    "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py",
+    "record": {
+      "bytes": 78452,
+      "sha256": "a7f5d92cf62f4e1d40773c6edb16c07811bb4568f2dc23018d91d9852b340992"
+    }
+  },
+  "candidate": {
+    "path": "/tmp/lease_setup_latch_candidate.py",
+    "record": {
+      "bytes": 79741,
+      "sha256": "5493d28c8a74b6740d4a3edbbccc5229d00446357d3c192d51cb46bbbfaa1de3"
+    }
+  },
+  "cases": [
+    {
+      "absence_confirmations": 3,
+      "calls": [
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 0
+        },
+        "collector_spawn",
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 255
+        },
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 0
+        },
+        "collector_spawn",
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 255
+        },
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods"
+      ],
+      "case": "success_restart_missing_then_verified",
+      "collector_spawns": 2,
+      "retrieval_marker_exists": true,
+      "setup_completion": {
+        "lease_name": "jlens-refit-1bee3478ad9641f6b69937e098af292e",
+        "pod_id": "synthetic-pod"
+      },
+      "status": "terminated",
+      "termination_calls": [
+        {
+          "pod_id": "synthetic-pod",
+          "reason": "artifacts retrieved and verified"
+        }
+      ],
+      "termination_reason": "artifacts retrieved and verified",
+      "watch_last_error_type": null
+    },
+    {
+      "absence_confirmations": 3,
+      "calls": [
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 255
+        },
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods"
+      ],
+      "case": "never_setup",
+      "collector_spawns": 0,
+      "retrieval_marker_exists": false,
+      "setup_completion": null,
+      "status": "terminated",
+      "termination_calls": [
+        {
+          "pod_id": "synthetic-pod",
+          "reason": "setup did not finish within the bounded window"
+        }
+      ],
+      "termination_reason": "setup did not finish within the bounded window",
+      "watch_last_error_type": null
+    },
+    {
+      "absence_confirmations": 3,
+      "calls": [
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 255
+        },
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods"
+      ],
+      "case": "mismatched_lease_latch",
+      "collector_spawns": 0,
+      "retrieval_marker_exists": false,
+      "setup_completion": {
+        "lease_name": "wrong-binding",
+        "pod_id": "synthetic-pod"
+      },
+      "status": "terminated",
+      "termination_calls": [
+        {
+          "pod_id": "synthetic-pod",
+          "reason": "setup did not finish within the bounded window"
+        }
+      ],
+      "termination_reason": "setup did not finish within the bounded window",
+      "watch_last_error_type": null
+    },
+    {
+      "absence_confirmations": 3,
+      "calls": [
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 255
+        },
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods"
+      ],
+      "case": "mismatched_pod_latch",
+      "collector_spawns": 0,
+      "retrieval_marker_exists": false,
+      "setup_completion": {
+        "lease_name": "jlens-refit-561512ac0e504d3e9b0da615dd244268",
+        "pod_id": "wrong-binding"
+      },
+      "status": "terminated",
+      "termination_calls": [
+        {
+          "pod_id": "synthetic-pod",
+          "reason": "setup did not finish within the bounded window"
+        }
+      ],
+      "termination_reason": "setup did not finish within the bounded window",
+      "watch_last_error_type": null
+    },
+    {
+      "absence_confirmations": null,
+      "calls": [
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 0
+        }
+      ],
+      "case": "unvalidated_status_cannot_latch",
+      "collector_spawns": 0,
+      "retrieval_marker_exists": false,
+      "setup_completion": null,
+      "status": "running",
+      "termination_calls": [],
+      "termination_reason": null,
+      "watch_last_error_type": "ValueError"
+    },
+    {
+      "absence_confirmations": 3,
+      "calls": [
+        "checked_account",
+        "checked_account",
+        "pods",
+        {
+          "ssh_returncode": 0
+        },
+        "collector_spawn",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods",
+        "checked_account",
+        "pods"
+      ],
+      "case": "truthy_non_boolean_cannot_latch",
+      "collector_spawns": 1,
+      "retrieval_marker_exists": false,
+      "setup_completion": null,
+      "status": "terminated",
+      "termination_calls": [
+        {
+          "pod_id": "synthetic-pod",
+          "reason": "setup did not finish within the bounded window"
+        }
+      ],
+      "termination_reason": "setup did not finish within the bounded window",
+      "watch_last_error_type": null
+    },
+    {
+      "absence_confirmations": null,
+      "calls": [],
+      "case": "stale_observer_identity_cannot_persist",
+      "collector_spawns": 0,
+      "retrieval_marker_exists": false,
+      "setup_completion": null,
+      "status": "running",
+      "termination_calls": [],
+      "termination_reason": null,
+      "watch_last_error_type": null
+    }
+  ],
+  "execution_scope": "Actual candidate watcher loop, remote_status, state persistence, async-collector dispatch, termination and absence-confirmation logic; only account/provider/SSH/process-spawn/time boundaries are synthetic. Real temporary files and locks are used. No cloud, SSH, provider mutation, pinned source edit, broad self-test, or actual experiment outcome read.",
+  "patch": {
+    "path": "/tmp/lease_setup_latch.patch",
+    "record": {
+      "bytes": 3169,
+      "sha256": "513a29428698161dd02ef4c66ccc29591a74a1143df24a4015272ab02ca073d3"
+    }
+  },
+  "proof_source": {
+    "path": "/tmp/prove_lease_setup_latch.py",
+    "record": {
+      "bytes": 14067,
+      "sha256": "7c1233312c7d3687a7c53aa82450e6711ec3d5d5718e76d11d6b33c55148de0d"
+    }
+  },
+  "static_scope": {
+    "future_use_note_present": true,
+    "new_functions": [
+      "setup_completed_for_lease",
+      "remember_worker_status"
+    ],
+    "unchanged_functions": [
+      "stamp",
+      "epoch",
+      "number",
+      "account",
+      "checked_account",
+      "pod_identity",
+      "pods",
+      "offer",
+      "locked",
+      "change",
+      "update",
+      "lease_root",
+      "make_plan",
+      "validate_notice",
+      "bind_pod",
+      "endpoint",
+      "ssh_options",
+      "remote_status",
+      "request_worker_stop",
+      "local_inventory",
+      "_sync_results",
+      "sync_results",
+      "ensure_sync",
+      "owned_candidates",
+      "observe_cost",
+      "observe_identity",
+      "begin_create",
+      "finish_create",
+      "fail_create",
+      "exact_supply_rejection",
+      "completed_supply_rejection",
+      "record_rejection",
+      "verified_rejection",
+      "reconcile_rejection",
+      "halt",
+      "absence_can_finish",
+      "confirm_absence",
+      "terminate_owned",
+      "arm_watcher",
+      "create",
+      "self_test",
+      "main"
+    ],
+    "watch_changes_only_two_frozen_call_sites": true
+  },
+  "status": "passed"
+}

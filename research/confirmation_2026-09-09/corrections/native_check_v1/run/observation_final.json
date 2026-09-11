@@ -1,0 +1,72 @@
+{
+  "finished_utc": "2026-09-11T01:08:40.619765+00:00",
+  "observations": {
+    "account": {
+      "observed_utc": "2026-09-11T01:08:39.228865+00:00",
+      "status": "observed",
+      "value": {
+        "clientBalance": 4.4052596179,
+        "currentSpendPerHr": 0,
+        "id": "user_3I33u3QLWgO7POHKINt6GfLeTUw"
+      }
+    },
+    "billing": {
+      "observed_utc": "2026-09-11T01:08:40.619745+00:00",
+      "status": "observed",
+      "value": {
+        "metadata": {
+          "query": {
+            "bucketSize": "day",
+            "endTime": "2026-09-12T00:00:00Z",
+            "podId": "gj9dwkkqtb3e14",
+            "startTime": "2026-09-05T00:00:00Z"
+          },
+          "recordCount": 2,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0.019444444915279746,
+            "gpuAmount": 0.7668328452855349,
+            "totalAmount": 0.7862772902008146
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.016666667070239782,
+            "endTime": "2026-09-11T00:00:00Z",
+            "gpuAmount": 0.6521747764199972,
+            "podId": "gj9dwkkqtb3e14",
+            "startTime": "2026-09-10T00:00:00Z",
+            "totalAmount": 0.668841443490237
+          },
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.0027777778450399637,
+            "endTime": "2026-09-12T00:00:00Z",
+            "gpuAmount": 0.11465806886553764,
+            "podId": "gj9dwkkqtb3e14",
+            "startTime": "2026-09-11T00:00:00Z",
+            "totalAmount": 0.11743584671057761
+          }
+        ]
+      }
+    },
+    "pod": {
+      "observed_utc": "2026-09-11T01:08:40.311814+00:00",
+      "status": "observed",
+      "value": {
+        "lookup": "not_found_http_404"
+      }
+    },
+    "pods": {
+      "observed_utc": "2026-09-11T01:08:39.528637+00:00",
+      "status": "observed",
+      "value": []
+    }
+  },
+  "pod_id": "gj9dwkkqtb3e14",
+  "schema": "native_logit_account_observation.v1",
+  "scope": "Read-only account, pod-list and optional single-pod and pod-billing observation.",
+  "started_utc": "2026-09-11T01:08:38.871252+00:00"
+}

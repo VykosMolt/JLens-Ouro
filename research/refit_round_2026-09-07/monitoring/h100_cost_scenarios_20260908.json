@@ -1,0 +1,66 @@
+{
+  "recorded_utc": "2026-09-08T20:06:48.750105+00:00",
+  "status": "conditional_scenarios_not_performance_predictions",
+  "scope": "five Ouro N100fits, N100penultimate, N100pairedposition, N100HuginnR8 and evaluation/retrieval",
+  "measured_main": 184.54908992800483,
+  "compute_hours_at_3090_speed": 53.63145798200859,
+  "checkpoint_io_hours_proxy": 1.6142243951033797,
+  "assumptions": [
+    "penultimate compute and I/O use main proxy",
+    "paired positions use main compute and double main I/O proxy",
+    "Huginn compute uses3.8363main and I/O uses bank-size ratio",
+    "same compute speedup across all workloads",
+    "unchanged checkpoint I/O",
+    "10percent fit margin",
+    "5hours fixed allowance:1hour setup and initial gate,3hours later gate/evaluation/interpretation,1hour retrieval"
+  ],
+  "prior_spend_upper_usd": 0.33169797109770083,
+  "h100_nvl_gpu_rate": 2.59,
+  "disk_rate": 0.016438356164383716,
+  "remaining_budget_usd": 24.6683020289023,
+  "rows": [
+    {
+      "compute_speedup": 1,
+      "fitting_hours": 55.24568237711197,
+      "hours_with_margin_and_allowances": 65.77025061482317,
+      "h100_nvl_cost_including_prior_usd": 171.75780186811693,
+      "rtx3090_cost_including_prior_usd": 15.88230791098605
+    },
+    {
+      "compute_speedup": 2,
+      "fitting_hours": 28.429953386107677,
+      "hours_with_margin_and_allowances": 36.27294872471845,
+      "h100_nvl_cost_including_prior_usd": 94.87490281838782,
+      "rtx3090_cost_including_prior_usd": null
+    },
+    {
+      "compute_speedup": 3,
+      "fitting_hours": 19.49137705577291,
+      "hours_with_margin_and_allowances": 26.440514761350205,
+      "h100_nvl_cost_including_prior_usd": 69.24726980181144,
+      "rtx3090_cost_including_prior_usd": null
+    },
+    {
+      "compute_speedup": 4,
+      "fitting_hours": 15.022088890605527,
+      "hours_with_margin_and_allowances": 21.52429777966608,
+      "h100_nvl_cost_including_prior_usd": 56.43345329352326,
+      "rtx3090_cost_including_prior_usd": null
+    },
+    {
+      "compute_speedup": 6,
+      "fitting_hours": 10.552800725438145,
+      "hours_with_margin_and_allowances": 16.608080797981962,
+      "h100_nvl_cost_including_prior_usd": 43.61963678523507,
+      "rtx3090_cost_including_prior_usd": null
+    },
+    {
+      "compute_speedup": 8,
+      "fitting_hours": 8.318156642854454,
+      "hours_with_margin_and_allowances": 14.149972307139901,
+      "h100_nvl_cost_including_prior_usd": 37.212728531090974,
+      "rtx3090_cost_including_prior_usd": null
+    }
+  ],
+  "speed_required_under_cap": 21.941478423145202
+}

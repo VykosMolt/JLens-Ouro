@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/warmup_one_check.py", line 108, in run
+    check_reference_metadata(metadata, {name: result[name] for name in (
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "torch", "torch_git", "dim_batch", "max_seq_len", "skip_first",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "target", "source_count", "source_layers", "compress", "source_edges",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        "engine", "prompt_sha256",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )})
+    ^^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py", line 106, in check_reference_metadata
+    raise ReferenceValidationError(f"reference metadata mismatch: {json.dumps(mismatches)}")
+benchmark_optimized.ReferenceValidationError: reference metadata mismatch: {"torch": {"expected": "2.12.0.dev20260407+cu128", "observed": "2.12.0.dev20260407+cu128"}}
+{"status": "error", "autograd_grad_calls": {"before_capture": 0, "constructor": 0, "replay": 0, "eager": 0}, "reference": {"path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_full_b8.pt", "status": "unavailable"}, "elapsed_seconds": 0.0005332340006134473}

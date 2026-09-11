@@ -1,0 +1,268 @@
+{
+  "schema": "confirmation_country_source_audit.v1",
+  "new_confirmation_results_exposed": false,
+  "created_utc": "2026-09-09T22:10:18.150573+00:00",
+  "scope": "Country rows033-048; primary-publisher factual support. A search excerpt is explicitly recorded where full PDF retrieval failed. No travel advice or model readout.",
+  "sources": {
+    "japan_capital": {
+      "publisher": "Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/destinations/kanto/tokyo/",
+      "observed_support": "Tokyo is identified as the Japanese capital, on Honshu in the Kanto region.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "japan_currency": {
+      "publisher": "Government of Japan",
+      "url": "https://www.japan.go.jp/japan/index.html",
+      "observed_support": "The national overview identifies Tokyo as capital and the Japanese yen as currency.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "japan_fuji": {
+      "publisher": "Japan National Tourism Organization",
+      "url": "https://www.japan.travel/en/sports/hiking/courses/mt-fuji/",
+      "observed_support": "Mount Fuji is identified as the highest Japanese mountain, at 3,776 metres.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "kenya_profile": {
+      "publisher": "Kenya Ministry of Foreign Affairs, embassy Bangkok",
+      "url": "https://kenyaembassybangkok.mfa.go.ke/country-profile",
+      "observed_support": "The profile identifies Nairobi, the Kenyan shilling, and the equatorial location in East Africa.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "kenya_mara": {
+      "publisher": "Kenya Tourism Board",
+      "url": "https://magicalkenya.com/wp-content/uploads/2025/01/A-Reason-for-Safari-Calender-Final.pdf",
+      "observed_support": "The South Rift section places the Maasai Mara game reserve among Kenyan attractions.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "chile_places": {
+      "publisher": "Chilean Ministry of Foreign Affairs",
+      "url": "https://www.chile.gob.cl/teheran/sobre-chile/turismo-chileno/turismo-chileno",
+      "observed_support": "The page identifies Santiago as the capital, Valparaiso as a Chilean port, and San Pedro de Atacama in the Atacama Desert.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "chile_currency": {
+      "publisher": "Banco Central de Chile",
+      "url": "https://www.bcentral.cl/web/portal-biblioteca/contenido/-/detalle/publicacion-la-emision-de-dinero-en-chile",
+      "observed_support": "The central-bank monetary-history publication describes the return to the peso in 1975.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "norway": {
+      "publisher": "Nordic Council / Nordic Council of Ministers",
+      "url": "https://www.norden.org/en/information/facts-about-norway",
+      "observed_support": "The official profile places Svalbard in Norway, names Oslo and the krone, and dates Constitution Day to 17 May.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "egypt_valley": {
+      "publisher": "Egypt Ministry of Tourism and Antiquities",
+      "url": "https://egymonuments.gov.eg/en/archaeological-sites/valley-of-the-kings/",
+      "observed_support": "The burial valley lies across the river from ancient Thebes, modern Luxor, in Egypt.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "egypt_profile": {
+      "publisher": "Egypt State Information Service",
+      "url": "https://africa.sis.gov.eg/english/egypt/basic-information/",
+      "observed_support": "The profile identifies the Egyptian pound, Cairo as capital, and the Giza pyramids in Egypt.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "peru_places": {
+      "publisher": "PROMPERU",
+      "url": "https://target2.promperu.gob.pe/destinos/cusco",
+      "observed_support": "The Peru destination page identifies Cusco and its Inca site Machu Picchu.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "peru_currency": {
+      "publisher": "Presidency of the Council of Ministers, Peru",
+      "url": "https://www.gob.pe/en/29306-general-information-about-lima",
+      "observed_support": "The page explicitly names the Peruvian currency as the Sol.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "peru_capital": {
+      "publisher": "PROMPERU",
+      "url": "https://www.peru.travel/lafinalenlima/conoce-lima/imperdibles.html",
+      "observed_support": "The Lima page explicitly calls the city the capital of Peru.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "ro_thailand": {
+      "publisher": "Royal Thai Consulate General, Los Angeles",
+      "url": "https://thaiconsulatela.thaiembassy.org/en/page/thailand-in-brief",
+      "observed_support": "The profile records the former name Siam, the baht currency and Bangkok capital.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "chiangmai": {
+      "publisher": "Chiang Mai provincial government",
+      "url": "https://www.chiangmai.go.th/english/",
+      "observed_support": "The official provincial page places the city of Chiang Mai in northern Thailand.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "sweden_flagcurrency": {
+      "publisher": "Council of the European Union",
+      "url": "https://www.consilium.europa.eu/media/45459/qc0420093enn_002.pdf",
+      "observed_support": "The indexed Sweden infographic gives a blue/yellow Nordic-cross flag, krona currency, Stockholm capital and Gothenburg/Malmo on its map.",
+      "access": "indexed_PDF_text_full_open_failed"
+    },
+    "sweden_cities": {
+      "publisher": "Swedish Institute, Sharing Sweden",
+      "url": "https://sharingsweden.se/app/uploads/2024/12/Switch_to_Sweden_24-12-09.pdf",
+      "observed_support": "Page 15 names Stockholm, Gothenburg and Malmo as the three major Swedish cities and Stockholm as capital.",
+      "access": "browser_returned_page_or_indexed_text"
+    },
+    "doi_inthanon": {
+      "publisher": "Government of Thailand",
+      "url": "https://thailand.go.th/issue-focus-detail/009-012?hl=en",
+      "observed_support": "The official regional overview explicitly identifies Doi Inthanon, Chiang Mai province, as the highest point of Thailand.",
+      "access": "browser_returned_page_text"
+    }
+  },
+  "rows": [
+    {
+      "name": "confirmation-033",
+      "prompt": "Fact: The island nation whose capital lies on Honshu uses the currency called the ",
+      "target": "yen",
+      "intermediate": "Japan",
+      "hop1_source": "japan_capital",
+      "hop2_source": "japan_currency",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-034",
+      "prompt": "Fact: The country whose highest mountain is Mount Fuji has its capital in ",
+      "target": "Tokyo",
+      "intermediate": "Japan",
+      "hop1_source": "japan_fuji",
+      "hop2_source": "japan_capital",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-035",
+      "prompt": "Fact: The East African country containing the Maasai Mara uses a currency called the ",
+      "target": "shilling",
+      "intermediate": "Kenya",
+      "hop1_source": "kenya_mara",
+      "hop2_source": "kenya_profile",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-036",
+      "prompt": "Fact: The country whose capital is Nairobi straddles the geographical line called the ",
+      "target": "equator",
+      "intermediate": "Kenya",
+      "hop1_source": "kenya_profile",
+      "hop2_source": "kenya_profile",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-037",
+      "prompt": "Fact: The country containing the desert town of San Pedro de Atacama uses a currency called the ",
+      "target": "peso",
+      "intermediate": "Chile",
+      "hop1_source": "chile_places",
+      "hop2_source": "chile_currency",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-038",
+      "prompt": "Fact: The South American country containing the city of Valparaiso has its capital in ",
+      "target": "Santiago",
+      "intermediate": "Chile",
+      "hop1_source": "chile_places",
+      "hop2_source": "chile_places",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-039",
+      "prompt": "Fact: The Scandinavian country containing the Svalbard archipelago uses the currency called the ",
+      "target": "krone",
+      "intermediate": "Norway",
+      "hop1_source": "norway",
+      "hop2_source": "norway",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-040",
+      "prompt": "Fact: The Nordic country whose capital is Oslo celebrates its Constitution Day on May ",
+      "target": "17",
+      "intermediate": "Norway",
+      "hop1_source": "norway",
+      "hop2_source": "norway",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-041",
+      "prompt": "Fact: The country containing the Valley of the Kings uses a currency called the ",
+      "target": "pound",
+      "intermediate": "Egypt",
+      "hop1_source": "egypt_valley",
+      "hop2_source": "egypt_profile",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-042",
+      "prompt": "Fact: The country containing the Great Pyramid of Giza has its capital in ",
+      "target": "Cairo",
+      "intermediate": "Egypt",
+      "hop1_source": "egypt_profile",
+      "hop2_source": "egypt_profile",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-043",
+      "prompt": "Fact: The country containing Machu Picchu uses the currency called the ",
+      "target": "sol",
+      "intermediate": "Peru",
+      "hop1_source": "peru_places",
+      "hop2_source": "peru_currency",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-044",
+      "prompt": "Fact: The South American country containing the city of Cusco has its capital in ",
+      "target": "Lima",
+      "intermediate": "Peru",
+      "hop1_source": "peru_places",
+      "hop2_source": "peru_capital",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-045",
+      "prompt": "Fact: The country whose highest mountain is Doi Inthanon uses the currency called the ",
+      "target": "baht",
+      "intermediate": "Thailand",
+      "hop1_source": "doi_inthanon",
+      "hop2_source": "ro_thailand",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-046",
+      "prompt": "Fact: The Southeast Asian country containing the city of Chiang Mai has its capital in ",
+      "target": "Bangkok",
+      "intermediate": "Thailand",
+      "hop1_source": "chiangmai",
+      "hop2_source": "ro_thailand",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-047",
+      "prompt": "Fact: The Nordic country whose flag has a yellow cross on blue uses the currency called the ",
+      "target": "krona",
+      "intermediate": "Sweden",
+      "hop1_source": "sweden_flagcurrency",
+      "hop2_source": "sweden_flagcurrency",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    },
+    {
+      "name": "confirmation-048",
+      "prompt": "Fact: The country containing the cities of Gothenburg and Malmo has its capital in ",
+      "target": "Stockholm",
+      "intermediate": "Sweden",
+      "hop1_source": "sweden_cities",
+      "hop2_source": "sweden_cities",
+      "status": "supported_by_inspected_official_page_or_indexed_source_text"
+    }
+  ],
+  "notes": [
+    "Egypt capital claim is supported by current official SIS profile; new administrative capital transition makes historical anchoring preferable if reviewer requires.",
+    "The country currency facts use unchanged unit names, not exchange rates.",
+    "Root changed037 to precise San Pedro location and040 to Constitution Day to remove geographic ambiguity before outcomes.",
+    "Root45 correction: Siam is a true historical identity alias of Thailand and would explicitly supply the intended concept; replaced it with the highest-mountain clue and restored Siam to semantic-alias metadata."
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "schema": "confirmation_precision_design_review.v1",
+  "status": "conditionally_acceptable_after_preoutcome_plan_amendment",
+  "new_confirmation_results_exposed": false,
+  "reviewed_sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/PROSPECTIVE_PLAN.md": {
+      "bytes": 10908,
+      "sha256": "929289efbd5956ca6f54ebbb7ff3c8d8dfaf0083e0816ddc97a93e2456e4e795"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/root_revised_candidates.json": {
+      "bytes": 476527,
+      "sha256": "ac2e54822d10d89743a9857d0225377db1c161ccf6ea686c9d36550001697a75"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/dependency_audit.json": {
+      "bytes": 246431,
+      "sha256": "5640316b41c142b1054c4a53175e1cef732a4580dd3352c2aa9f00580ba2a8d7"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/benchmark/dependency_audit.md": {
+      "bytes": 9441,
+      "sha256": "8a8e9b3a2feb53239656ef16c5a1853d3ea5d4b153728733cd7f4d48a826a854"
+    },
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json": {
+      "bytes": 21869,
+      "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416"
+    }
+  },
+  "recommendation": {
+    "action": "Retain the fixed 160-item mixed-relation population and audited dependency graph; amend the prospective plan before freeze to state the unmet original precision target and the stronger relation shift. Do not regenerate or rebalance the benchmark solely to obtain a narrower interval.",
+    "mandatory_item_design_change": false,
+    "mandatory_documentation_change": true,
+    "authorization_question_required": false,
+    "reason": "The user specifies a useful precision basis but no hard minimum detectable effect, attained half-width, or requirement for a decisive result. The user explicitly accepts a negative or inconclusive replication and prohibits continuation until success. The existing prospective plan explicitly anticipates recomputing precision if grouping reduces independence. A transparent pre-outcome limitation preserves the intended new-population experiment; it does not establish that the original precision target was met."
+  },
+  "user_requirement_interpretation": {
+    "new_population": "New facts/questions and intermediate identities, with comparable multihop task type and independently checked annotations.",
+    "relation_shift": "Distinguish familiar relations with new entities from genuinely new requested relations; the latter is stronger distribution shift.",
+    "precision": "Choose and record sample size, coverage, exclusions and stopping before outcomes using a useful target, plausible dependence and resources; do not assume the selected discovery effect. No numerical hard threshold was prescribed.",
+    "inconclusive_results": "An inconclusive or negative replication is explicitly valid. Do not optimize for rescuing J-Lens.",
+    "scope_limit": "This review does not turn limited precision into attainment of a precision requirement or certify factual/eligibility/resource gates."
+  },
+  "quantitative_findings": {
+    "N": 160,
+    "concept_pairs": 80,
+    "audited_components": 28,
+    "component_sizes": [
+      42,
+      24,
+      16,
+      10,
+      10,
+      6,
+      4,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "effective_groups": 8.625336927223719,
+    "planning_scenarios": [
+      {
+        "assumed_SD": 0.3,
+        "approximate_95pct_halfwidth": 0.20021162553658067
+      },
+      {
+        "assumed_SD": 0.45,
+        "approximate_95pct_halfwidth": 0.300317438304871
+      },
+      {
+        "assumed_SD": 0.6,
+        "approximate_95pct_halfwidth": 0.40042325107316135
+      }
+    ],
+    "initial_target_halfwidth": 0.1,
+    "initial_target_SD": 0.45,
+    "initial_target_achieved": false,
+    "effective_groups_needed_for_halfwidth_0_10": [
+      {
+        "SD": 0.3,
+        "effective_groups_required": 34.57439999999999
+      },
+      {
+        "SD": 0.45,
+        "effective_groups_required": 77.7924
+      },
+      {
+        "SD": 0.6,
+        "effective_groups_required": 138.29759999999996
+      }
+    ],
+    "largest_component_item_weight": 0.2625,
+    "three_largest_component_item_weight": 0.5125,
+    "relation_mix": {
+      "familiar_fact_relation_recombined": 19,
+      "not_represented_requested_relation": 96,
+      "familiar_requested_family": 45
+    },
+    "restricted_relation_subsets": [
+      {
+        "status": "familiar_requested_family",
+        "item_count": 45,
+        "nonempty_original_components": 10,
+        "weights_within_original_components": [
+          2,
+          1,
+          20,
+          14,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "effective_group_count_retaining_full_population_dependencies": 3.3034257748776508
+      },
+      {
+        "status": "familiar_fact_relation_recombined",
+        "item_count": 19,
+        "nonempty_original_components": 11,
+        "weights_within_original_components": [
+          1,
+          1,
+          5,
+          1,
+          1,
+          3,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "effective_group_count_retaining_full_population_dependencies": 7.36734693877551
+      },
+      {
+        "status": "not_represented_requested_relation",
+        "item_count": 96,
+        "nonempty_original_components": 26,
+        "weights_within_original_components": [
+          1,
+          3,
+          3,
+          1,
+          1,
+          22,
+          1,
+          3,
+          3,
+          2,
+          2,
+          6,
+          2,
+          1,
+          24,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3,
+          2,
+          2,
+          2
+        ],
+        "effective_group_count_retaining_full_population_dependencies": 7.731543624161074
+      }
+    ]
+  },
+  "validity_rationale": [
+    "The held-out status of questions/concept identities and the frozen estimator/measurement make this a prospective transfer experiment even when information is limited. The audit found no outcome-based item selection.",
+    "Low precision does not by itself bias the equal-item point estimate for the fixed eligible population. It can make direction, magnitude and generalization beyond that population unresolved.",
+    "The initial 80-independent-group approximation is materially false for this graph. At SD .45, the revised planning half-width is about .30, three times the initial target; calling it adequately powered or precision-target achieved would be unsupported.",
+    "All prompts preserve a broadly comparable factual two-hop construction, but the 45/19/96 mixture is not a matched-distribution replication of discovery relations. Structural comparability does not prove matched empirical difficulty.",
+    "The largest component contains 26.25% of items and the top three contain 51.25%; family influence and component decomposition are essential to interpretation. The cluster-bootstrap interval is prespecified uncertainty conditional on this design, not an independently proven finite-sample coverage guarantee.",
+    "A familiar-only primary would change the fixed target population and be even more concentrated: 45 items span 10 original components with effective groups about 3.30. It is not an automatic precision or comparability repair.",
+    "Obtaining the original .10 half-width at SD .45 requires roughly 78 effective groups. Repeating existing templates or adding extra questions to existing concepts cannot supply those groups; cosmetic paraphrases must stay connected. A large replacement program aimed at distinct relations could increase the already substantial relation shift."
+  ],
+  "pre_freeze_acceptance_conditions": [
+    "Insert the concrete precision and relation-mixture amendment before hashing the final plan; state the initial target is unmet.",
+    "Keep the audited grouping rule, equal-item primary endpoint, fixed estimators/band and outcome-blind stopping rule unchanged.",
+    "After factual or eligibility corrections, re-audit affected dependencies and recompute exact eligible group sizes and planning precision; retain exclusions and source bindings.",
+    "Complete the independent factual, novelty, calibration-overlap and control/eligibility gates before science-start admission. Their pass status is outside this review.",
+    "Reconcile the actual paid-job resource bound separately. This review makes no claim that collecting more items is computationally impossible or that the spending cap itself proves N=160 optimal."
+  ],
+  "proposed_plan_amendment": "The blinded dependency audit resolves the 160 candidate questions into 28 connected components, with sizes 42,24,16,10,10,6, four groups of 4 and eighteen groups of 2. The weighted effective group count N\u00b2/\u03a3n_g\u00b2 is 8.6253. For assumed SDs of paired group means 0.30, 0.45 and 0.60, the planning 95% half-widths are approximately 0.200, 0.300 and 0.400. The initial approximately 0.10 precision target at SD 0.45 is not met. These are dependence/variance scenarios, not an assumed effect, a realized confidence interval, or a power guarantee. We retain the fixed 160-question design before any new outcomes because it still estimates transfer to a genuinely new, explicitly defined population; we accept that it may leave the sign and magnitude unresolved. We will not describe this design as achieving the initial precision target, alter dependency edges, change item weights, or add questions after seeing results. Eligibility exclusions require recomputing the graph and planning quantities before final freeze.\n\nThe curated relation mixture consists of 45 questions with a familiar requested-relation family, 19 recombining familiar fact relations in a different hop or requested slot, and 96 whose typed requested relation was not represented in the 93 discovery prompts. It therefore tests new-concept/new-question transfer across this fixed mixture, including a substantial relation shift. It is not an interchangeable replication confined to familiar relations. The common factual clue-to-entity-to-property task form provides structural comparability, while equivalent empirical difficulty is not established and will not be enforced by filtering on model outcomes. The primary endpoint remains the prespecified equal-item excess difference; neither the familiar-only subset nor a favorable relation subgroup may replace it. The group bootstrap and group influence summaries are conditional analyses of this curated population and fit, with limited information from large unequal groups; they are not a guarantee of coverage over all possible multihop tasks or relation mixtures.",
+  "non_recommendations": [
+    "Do not delete edges or relabel templates to restore 80 independent groups.",
+    "Do not change to equal-group weighting; the requested primary estimand gives items equal weight.",
+    "Do not replace the primary by the familiar-relation subset.",
+    "Do not add post-outcome samples or interpret an inconclusive interval as equivalence.",
+    "Do not assert that 96 unfamiliar requested predicates are necessarily 96 new reasoning mechanisms."
+  ],
+  "final_assessment": "Scientifically usable as a limited-precision, prospective test of transfer to the explicitly fixed mixed-relation population. It is not a precision-target-achieving or distribution-matched replication. The bounded necessary action is a pre-outcome plan amendment, not mandatory benchmark regeneration."
+}

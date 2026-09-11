@@ -1,0 +1,17 @@
+{
+  "schema": "confirmation_prior_setup_timing.v1",
+  "bootstrap_started_utc": "2026-09-09T22:44:13.564336+00:00",
+  "all_packages_and_ouro_model_ready_utc": "2026-09-09T22:48:13.706663+00:00",
+  "elapsed_seconds": 240.142327,
+  "phase": "awaiting_verified_bank_uploads",
+  "bank_upload_complete": false,
+  "bootstrap_record": {
+    "bytes": 2117,
+    "sha256": "85baa70658891ad1c73d3c77023506a684cdba6ab97d3ec236f359ffe853dd5e"
+  },
+  "salvage_record": {
+    "bytes": 49148,
+    "sha256": "93c6e5f0e139f0756b327e8a0a85e5b0986df32e0455f5e3c16d7c5fb7f79d89"
+  },
+  "interpretation": "Observed first-attempt pinned package install and complete Ouro model download, before input banks. Not a guarantee for retry or larger Huginn snapshot."
+}

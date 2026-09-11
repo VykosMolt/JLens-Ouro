@@ -1,0 +1,787 @@
+{
+ "schema": "jlens_storage_purge.v1",
+ "planned_utc": "2026-09-10T22:04:12.297882+00:00",
+ "root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09",
+ "rule": "Delete regular files of at least 50 MiB, except one verified copy of each confirmation lens bank; keep every smaller file.",
+ "reason": "User request to purge jlens storage while keeping what a paper would need.",
+ "kept_large_files": [
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/reconstructed/ouro/fit_02/lens.pt",
+   "bytes": 1602276737,
+   "mtime_ns": 1788987933509617338,
+   "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8"
+  }
+ ],
+ "deleted_files": [
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/bundle.tar.gz",
+   "bytes": 223965405,
+   "mtime_ns": 1788999655990239599,
+   "sha256": "2d3b4cae0f6e22600f1d8c12e419f2f285118d2e52a52bc3bacf81162e041d30"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/bundle/prerequisites/ouro_evaluation/common/cache.pt",
+   "bytes": 407374621,
+   "mtime_ns": 1788999155473086617,
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/contract_probe/prerequisites/ouro_evaluation/common/cache.pt",
+   "bytes": 407374621,
+   "mtime_ns": 1788995957886190836,
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/fit/lens.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967951873758213,
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090803/cache.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967951873758213,
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/synthetic_accepted/results/readouts/seeds/2026090804/cache.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967970717558754,
+   "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/synthetic_accepted/results/fit/lens.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967951873758213,
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/synthetic_accepted/results/readouts/seeds/2026090803/cache.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967951873758213,
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/synthetic_accepted/results/readouts/seeds/2026090804/cache.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967970717558754,
+   "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000000000000.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240589890417,
+   "sha256": "dfb4c129b0c632fa131642a49eed1b4552313f1ca10c14e5efab0ad15e2cab71"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000067108864.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240704682556,
+   "sha256": "87c9a5745d23af55e599e07222bc3d53155c604e8423fea3212550ec8ec3567d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000134217728.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240815901604,
+   "sha256": "622ca1b25732da6b75c4295d86431ebd57d5cfc248dab202997939d342a5d79e"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000201326592.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240927248966,
+   "sha256": "d4e39d585f2b894e30400d7b1e04a6db8e179a0b759c47439006ceb33debffd5"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000268435456.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241037778491,
+   "sha256": "b6029c6b58d9f8a9181a2f83b99c85bb8a5854ffdd2408e4b2d257aa6084eee4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000335544320.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241148316260,
+   "sha256": "da5a3eeb544c18972a0613b52d8e0042e5a8f7458e01217224a3e666d28f7a5c"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000402653184.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241258238180,
+   "sha256": "3d3ca2913d09be0836c5851602f5ffd27ed591ed16b19fa4b0f154b1f070035d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000469762048.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241370943319,
+   "sha256": "5646f74e8ad229e7d794a56c3253483cafa01617ebd6605d35e029b49d700d3b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000536870912.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241480509398,
+   "sha256": "f3a99315a80be820390143b9002f190b89d6e83eaca6179e5d01be978431450e"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000603979776.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241589408152,
+   "sha256": "64920ac370a3b7258aee0b9e20710b87f89e842c3473f246e22e3fe302154359"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000671088640.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241698762774,
+   "sha256": "cfefa92eb267d85fa058e17408bf970aa96dee6d3bffba3eee40b47bb538c34f"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000738197504.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241808452619,
+   "sha256": "44110ebfaf36710cca19e76f6e83040c725e9b7840d92bbd32f1d805321f1487"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000805306368.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995241919842266,
+   "sha256": "ac2494cffd219e24b3a77d662a39602be14f856be818a903589ddc70c21264d2"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000872415232.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242028669427,
+   "sha256": "bec00aa299233ce66c53b7b2b2430f805f56c94d8d439b84bc35f8056a7eccab"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/000939524096.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242137003863,
+   "sha256": "69018e4528456f4be9cf95e07a1ca56ee5c002fd238c0aa4516100d9c02706d8"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001006632960.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242251629002,
+   "sha256": "9f9f77bfb2758a8b6a41121e49a53d758bdee5bed52d97a4b000a697179190ea"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001073741824.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242371662325,
+   "sha256": "86e2edfe163364745fed82e0ebb764d8be4350d6a39c168addf51226fc83e267"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001140850688.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242487441127,
+   "sha256": "ba81253097ec5b41d8b6b5e4fe1e74f2e3eea3de352ff5b91f37721d5e9364fb"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001207959552.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242603148249,
+   "sha256": "7e7345192cdd8ff8e173b370fe0b397050d6edec343361d095792378fd793ad3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001275068416.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242719577310,
+   "sha256": "28669ca0ea91f0c2becf55066b7b6863d1bcaaf7c3b71397424c94ed02b5bd88"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001342177280.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242833595405,
+   "sha256": "e39d684e6182677b2ee6da4479a9f5ef4b13a0aa97587960bdc1b8452a8129a6"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001409286144.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995242947512419,
+   "sha256": "8d3c70e944184edaea12c117b15af25c1161ab4ed0d7a4eef4f97701735e6da5"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001476395008.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995243062772659,
+   "sha256": "b505ca0ab5502829cfed76315dc63dedbc90b275f168fe40bf6b8198a25c99bb"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8/001543503872.part",
+   "bytes": 58772865,
+   "mtime_ns": 1788995243166556304,
+   "sha256": "9c75a518b694e15658e8a427559ae975035ce3e8c30438c9caa2bacdd4a106c1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000000000000.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237978683083,
+   "sha256": "cfc27d92f1a8c797b635785947c1f964bf1aea69a77418d27bc1348a479eaab4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000067108864.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238089394516,
+   "sha256": "090cd4e27f827717b5a5ef8092bc258ff93d867dd1521191fc0cdcb526bd5de3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000134217728.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238199521206,
+   "sha256": "fba6e4cacbc040cf8a850d35c0b010e29f321442dff630c0c09cbd1946db77bf"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000201326592.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238309242093,
+   "sha256": "ac48a647acd97d7eb88a4bebfe14ee5382de74a6adcbbfad94f33702cf05ad05"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000268435456.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238416837970,
+   "sha256": "6027bb678d38b9f6b2b20af3fd4edd41961e413a87bd5df66d6f05f9b5b408b1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000335544320.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238527902215,
+   "sha256": "85310c75a268e2904b544c8ef5b24a6ec1036e3e7728bcef4ae48ef9b9f0fae1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000402653184.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238637501255,
+   "sha256": "e3cd0d7a483073b0f39f223e087a98e753220900e7e1fde132f2e58fe3c1a7cf"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000469762048.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238746628394,
+   "sha256": "65cfc3c17c96911449b2bbcce3efe0f5e6db4f7eca7b8ea605319526a5537eae"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000536870912.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238853521029,
+   "sha256": "e9a8d9966e4e74fa4c7b71293822ea10e927c32974d47300a5d0a17ce0838bb4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000603979776.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995238962296770,
+   "sha256": "f67d1eeeec3a40c96323e16d2a3a05a47efef48d8c19705f1086cb5514d0e799"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000671088640.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239068983033,
+   "sha256": "5ac07b59b56272310cc918cd596cb36cd65ac724d10404dd4b27ede609180b33"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000738197504.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239179874301,
+   "sha256": "ced42ed7f96ea45e66f98a1e52fa3e3a798f58d32257c45d982d6251a1675bbe"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000805306368.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239292232704,
+   "sha256": "78092cd5fdcd7136b68cc33628484f7608819330d50932075bae1a1919f389a8"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000872415232.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239401290169,
+   "sha256": "510a60a118aa3fbd320d76364c3e607dc21c453bf276cd0871f7ab00006537d1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/000939524096.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239510885679,
+   "sha256": "423214d8b19dd4381843c02b8c271239274fb54ec2f524f7eb0f000bef03b509"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001006632960.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239615695526,
+   "sha256": "cf903dffda19a3a3a32d97918e63bf261acfddfba6d0a276c7602cd420d9dbba"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001073741824.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239724212391,
+   "sha256": "20544815772237abbaf8ce24b41f9e965b4668c863c29b6bb59b5837adf2441b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001140850688.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239834048045,
+   "sha256": "a42a226805d7680e472dba005272b510c123cbe96f65178dcf309dfd8e8cf396"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001207959552.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995239942663761,
+   "sha256": "5c9bbcf81209c21328af43cd78b38d854754eed7693e6f8c9159a8894a45f17b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001275068416.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240053705394,
+   "sha256": "bfebb67d6a193c28df0bc6433525870b6c70df5632ba8219dcee69c649b82a91"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001342177280.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240163151928,
+   "sha256": "4d43a0567617a5bce236dd4d4802960a50440d9bb3864284731b7aeccea9730a"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001409286144.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240272321973,
+   "sha256": "2599da7582d20a60649fa94c928846f22bba46d1215eb883a165620fe5d33036"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001476395008.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995240379642431,
+   "sha256": "5c78aed50dc6a4a3597ce4d2b3f8487ba3a2b4d799e14bb615240449cdc79b89"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f/001543503872.part",
+   "bytes": 58772865,
+   "mtime_ns": 1788995240479226204,
+   "sha256": "3d5b77ca5dfdce0e00db776bbdcdf9fa06c19afab33bca160abc455d8a88bfd2"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000000000000.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995232706429298,
+   "sha256": "3c197e6563f98782f1ed080637d22f297bc0d6511708fcb23d3ee649c8622db8"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000067108864.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995232817443387,
+   "sha256": "b80402e18af260559e8cfce25cf7a209035e889c1ac6110aa413384959cc09c8"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000134217728.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995232925646129,
+   "sha256": "0d6d78abe8e243aeb1377347c210a40d2f7446d80a8d5d967af4dda47ba73ffd"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000201326592.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233048860588,
+   "sha256": "df4772e181bc1e2e95bc17b76acb248e45223bf6da97f9b1a8a979d2f4e20aec"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000268435456.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233173800898,
+   "sha256": "7487aea5d4c7d2b4bdc8f779011e1ebecada0fecd015e0430d41bfc21c92539c"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000335544320.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233310420565,
+   "sha256": "fe372034ab2aff59d068b5cb2785b776e8f01b84bf9e5bb6aef0c7da6a12c9f2"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000402653184.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233427463143,
+   "sha256": "10658d57d589ac0c095a1752bac6dce8f766596a4e3148332127f850a958df44"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000469762048.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233537444130,
+   "sha256": "75d103efe9e7cfefe803a20bb35ce37d05e169debdfd222037d282354abb3d57"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000536870912.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233648703659,
+   "sha256": "2c9c32949a8c525e287f09207f1a7ee77491075ba059ce640636400ee434244e"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000603979776.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233761636991,
+   "sha256": "3827d55bf00906e4e9ede4b429fe924616279b3ab312a54fa02b4028a21cfdf3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000671088640.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233874338931,
+   "sha256": "017b15ebe62547dcd7a17c51eec75f66c6ef6d9bb024be2244a78534185d95d6"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000738197504.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995233987748962,
+   "sha256": "9d2fc41bf573a4b16eeea49b7c437fe0ef162a0398036f3fdc20035d8f8eb9dc"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000805306368.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234100352461,
+   "sha256": "c9c3066225b31f53a1fc3cc81e3715b215db299969843662364e8f27853e1966"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000872415232.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234211654069,
+   "sha256": "1fd666994161c3a28e743a551a7da95dae19bee338887a71a2297676b6a4872c"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/000939524096.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234322246414,
+   "sha256": "d02d0033690b2187c5127a8febebd45a0369d894ea102499049f3debeefbbd28"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001006632960.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234433740621,
+   "sha256": "783a85bcd25ec653aeea4a44223ba3203ce08469435c5810eb3db182187fc77f"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001073741824.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234544296861,
+   "sha256": "8f4cd1bff3c90c3f8b290702d6091ff494be4f1bae4381aacdacd112af8e585c"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001140850688.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234653633164,
+   "sha256": "b5fb19387988451447a0e4da57df6cc04f39aff0a919bc6143fc7011a7d0438d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001207959552.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234765527302,
+   "sha256": "c9f1732461c564cab3f7716d8a76b7f98e6300274120026733f2046bba4f139b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001275068416.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234875875789,
+   "sha256": "810dee7bd9bd7be3a3921f2d86d08a0bd8d390135172ca14cb35dda06adcf82f"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001342177280.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995234986184507,
+   "sha256": "c090c755df40ff67084d6eab335fa12d730b7390f8a7a508bf4c96641c8aabef"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001409286144.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235094556943,
+   "sha256": "9e5bf61ed664a5094dbaabc1dbcfe4bbef571281b1225c3eb9b4434b2badbb38"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001476395008.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235205842241,
+   "sha256": "c1c880f4b87dbb161da37dd4f94e0b5e85c77e0c1da02a045da42f6410e506d4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001543503872.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235314346416,
+   "sha256": "695c67b335eec9f0b083eeacfeeb29fcc388be189f212d417ea630b09c66694a"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001610612736.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235421959036,
+   "sha256": "ad5656bce8ea02fffe1de3ce2a0fd22e374d8ca21350c5435d7c5529762062b1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001677721600.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235533258679,
+   "sha256": "c1bf554fbc3054e0bd370ebe9638b2485aef5033dbb5bdc81113c4d2cba4489b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001744830464.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235642589029,
+   "sha256": "6a8380a69292ca66972236fa8d72a272cd70c125c7119219e8f6234583fb798a"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001811939328.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235750851911,
+   "sha256": "eb86ca9097f3d054608865496fc91d72fa6b58d09061705c0325fc1fcd61f5b0"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001879048192.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235849925165,
+   "sha256": "0daea22ffea24341d640f971209aad7ec72b6bfd69070ca0b3523fae725da4a6"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/001946157056.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995235952155518,
+   "sha256": "a0b8402ecc237478342cfac5d272a636d7883e1ee00b8e20588f753dcf1bf8c1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002013265920.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236062945655,
+   "sha256": "ce869f2cc2f753d37b0afc3e18f24578d49398ad3c579b43896775ff054a060a"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002080374784.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236168153252,
+   "sha256": "10d41a2d4bdd883e256b87f43e518316d02ee4ca8a7a0b39ff933145b73337f9"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002147483648.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236274461557,
+   "sha256": "b7088c965704182373d697909a0295e5ec4fb0557f53e42d917e462f8edc2259"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002214592512.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236382076505,
+   "sha256": "a0c8d6000287d4bba09e2db4e8b1d12eab7eb04644c4615171fce2570803b086"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002281701376.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236490338097,
+   "sha256": "b931b8499f7dff41b6455c09c939bd037c3f834618ae56f28218811b96ac73fa"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002348810240.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236596327443,
+   "sha256": "730ce5f9e6d67e6342727484fc3817d7f3b39e8eb6e3ce84094efc58299416bc"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002415919104.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236704000377,
+   "sha256": "c3340e31bb77721a6b114d817b6289f9c88d87296f2a28c42539cbb3e0fab4ee"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002483027968.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236810501918,
+   "sha256": "6d0971f037a5e22357a5586a37e29afcd3f5bd504efd157f416755d8e2e42786"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002550136832.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995236919955157,
+   "sha256": "7a83b1ec2443e4442b52e7624c5a60b00b6166e1c639c74ef4a9a4cb072b0be3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002617245696.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237030184081,
+   "sha256": "e6f8576ad16be57efd3be1f11ee6aae2b5504c1afcbe4399c3e37e9a67b7011d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002684354560.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237138460294,
+   "sha256": "3e8d3e46406f0b17f13a3f02ffa2692f75860a175dace5ca9e375f200b9bd021"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002751463424.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237244278087,
+   "sha256": "24eadf93c0b225b6003f865fcadafc0c24d60dc21a1a6d55b5070f7ed7b21198"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002818572288.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237349967398,
+   "sha256": "978862357e8627f17c58b1c3762700ed2f56127c431a48fe136f73c2cc3b8b55"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002885681152.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237456873911,
+   "sha256": "680be18d31adef05e2b101a6956def1d2e2a3bdaf80b96e15478c197621f4e66"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/002952790016.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237565229828,
+   "sha256": "12823f2859e58fb93dea0a01e142013f105ee945b15e94624f29bab1f71693b1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/003019898880.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237674443716,
+   "sha256": "a095c6a0837b34d3ffc0b6f41b01cd992a6e792db29c1fb7351a399c6da11a16"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/003087007744.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995237783179259,
+   "sha256": "fc6d9f1a2819cfb5da44a6ba5b067368d1145aa86102e187a92c936cfd20b9ef"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000000000000.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995243278685219,
+   "sha256": "d4504d10fc370c8507012c32daf32f810acad03e2a525348521d509757b4cb95"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000067108864.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995243392678877,
+   "sha256": "0d6cdcb8a65f2b48c2e20f65427f0e7f68bffb07adb0b7e721f5ecf671472532"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000134217728.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995243534161038,
+   "sha256": "d41ce8554690329f2a637679d7f3401fa7da494437dc68143bb054184c97839d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000201326592.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995243738925694,
+   "sha256": "1eab65558e41750763cb4392744b403dc70d975ac42cc8cc80fc554979c41cea"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000268435456.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995243964240679,
+   "sha256": "28075081dec3568c0bc4768ec531e8039348a57e7129c0bdaeca42104aa26401"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000335544320.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995244190919369,
+   "sha256": "1bf2e99980447b84622e76219f1579c6dd7d8c98adfc9522134542e44f0e99c2"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000402653184.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995244472740641,
+   "sha256": "1ea5cd6d9cec3db442c9c3b0f18e430bb4f39cb27e30df2a3653cf9f437551e3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000469762048.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995244780264126,
+   "sha256": "9c515d329ef52e1e5d980dff195cdc624986dc717b509c1008d548e7d3d6c7ca"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000536870912.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995244953875716,
+   "sha256": "cab4ab6aa2e2351d0d78c99c711e2da59aa6c77787691c8c7e5f10e60ce6433f"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000603979776.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245101881919,
+   "sha256": "6c9ab48cd262d48bac3d48f725caa7cb0dff558e7165ea6290de2208944de5d1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000671088640.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245242996482,
+   "sha256": "b3cc1a3a96c2e4f39754bae2e831d7a63af18205f5242754d874872dc3c64f5b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000738197504.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245392620862,
+   "sha256": "bcd375c8a0e0770db76258acd0ff1076cd7a19703e458df0f62c68f3762725a4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000805306368.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245543696691,
+   "sha256": "44c28ea77075ce7ba84c4f43abab32feffceaecdf0deafbe236be1b1575b9742"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000872415232.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245688919549,
+   "sha256": "289abaaf717da6185670040b8a65a0427dbd782d8b431258b9299c017aa35060"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/000939524096.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245846059376,
+   "sha256": "4ddf8a636d4610c1a75bac9af412da45f57fc651b5eb4b47f86c0abc58fc9af5"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001006632960.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995245997759595,
+   "sha256": "dfc16e427af00380d08b8194cd48e4477667ffe1d48004e53297e1fdf3ccaf9e"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001073741824.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995246150998454,
+   "sha256": "b671d757633c09963198f24fe2f6a444db51b7e4ca63d0356dcd89209c8c28d2"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001140850688.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995246388869789,
+   "sha256": "9250e07af96fa744d78b5e6771da43ad43fc3434840565778772050de386ceb8"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001207959552.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995246600291577,
+   "sha256": "daccfbd9a0ce877f538a10d6df0ab7da1c66d936aedaefeadb8bed85eccbd363"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001275068416.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995246816459385,
+   "sha256": "5e791a4f8b508359b3b8756d01e0ad67b6fa336e4095dbda47c29a8ec858c843"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001342177280.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995246985217468,
+   "sha256": "f6c7f7090f98da707d7ad829d6cf607ef8dd73afb1222354a86842d621f5b89d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001409286144.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995247119660128,
+   "sha256": "66e8dbc2c7f3093f1d4032ae2fdd163bb0a5463960c04c5459fcbe02683690e9"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560/001476395008.part",
+   "bytes": 67108864,
+   "mtime_ns": 1788995247263268221,
+   "sha256": "1bb0e58e5a51d0aa5dc25cf42cb2218ffe014d09bb29df06d0947be17a6713c7"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/model_snapshot/1ed04250da1a9936042725d302e81c8fa2ab5abd/model.safetensors",
+   "bytes": 5336011242,
+   "mtime_ns": 1788988697108878967,
+   "sha256": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba"
+  }
+ ],
+ "deleted_bytes": 15128596297,
+ "executed_utc": "2026-09-10T22:17:17.654971+00:00"
+}

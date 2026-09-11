@@ -1,0 +1,3108 @@
+{
+  "schema": "independent_benchmark_source_audit.v1",
+  "status": "partial_in_progress",
+  "created_at_utc": "2026-09-09T22:13:01.457875+00:00",
+  "new_confirmation_results_exposed": false,
+  "benchmark_record": {
+    "path": "research/confirmation_2026-09-09/benchmark/root_revised_candidates.json",
+    "size_bytes": 476524,
+    "sha256": "98989bde420b0db3dba2cae366420f30c47c009e8ea4e3f4a1fb5fd7692ac6b3"
+  },
+  "scope": "Accumulated independent source records published first; this audit is being extended only for landform confirmations 049-064 and environment confirmations 145-160. Source-status claims are conservative and do not accept the benchmark.",
+  "sources": {
+    "venus": {
+      "url": "https://science.nasa.gov/venus/venus-facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Rotation takes longer than orbit; dense atmosphere mainly carbon dioxide; sulfuric-acid clouds; retrograde rotation."
+    },
+    "uranus": {
+      "url": "https://science.nasa.gov/uranus/uranus-facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Near-sideways axial tilt; rings discovered in 1977; ice-giant classification."
+    },
+    "neptune": {
+      "url": "https://science.nasa.gov/neptune/neptune-facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Fast winds; Voyager 2 visit in 1989; Great Dark Spot; atmospheric methane."
+    },
+    "pluto": {
+      "url": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Charon largest moon; Kuiper Belt location; New Horizons visit in 2015; heart-shaped Tombaugh Regio."
+    },
+    "ceres": {
+      "url": "https://science.nasa.gov/dwarf-planets/1-ceres/facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Largest asteroid-belt object; Occator bright salts; Dawn mission."
+    },
+    "titan": {
+      "url": "https://science.nasa.gov/saturn/moons/titan/overview/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Largest Saturnian moon; hydrocarbon lakes; Huygens landing in 2005."
+    },
+    "europa": {
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/europa-facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Smallest Galilean moon; inferred liquid-water ocean; water-ice crust."
+    },
+    "io": {
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Innermost Galilean moon; strong volcanic activity."
+    },
+    "helium": {
+      "url": "https://www.rsc.org/periodic-table/element/2/helium",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Helium: atomic number 2; nonflammable balloon gas; noble gas."
+    },
+    "lithium": {
+      "url": "https://www.rsc.org/periodic-table/element/3/lithium",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Lithium: atomic number 3; symbol Li; lightest metal; rechargeable batteries."
+    },
+    "boron": {
+      "url": "https://www.rsc.org/periodic-table/element/5/boron",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Boron: atomic number 5; metalloid; oxide used in borosilicate glass."
+    },
+    "cobalt": {
+      "url": "https://www.rsc.org/periodic-table/element/27/cobalt",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Cobalt: atomic number 27; symbol Co; vitamin B12; blue pigment; German kobold etymology."
+    },
+    "nickel": {
+      "url": "https://www.rsc.org/periodic-table/element/28/nickel",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Nickel: atomic number 28; symbol Ni; US five-cent coin."
+    },
+    "tungsten": {
+      "url": "https://www.rsc.org/periodic-table/element/74/tungsten",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Tungsten: atomic number 74; symbol W; highest metal melting point; lamp filaments."
+    },
+    "radon": {
+      "url": "https://www.rsc.org/periodic-table/element/86/radon",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Radon: atomic number 86; symbol Rn; radioactive gas from radium decay; indoor accumulation."
+    },
+    "neon": {
+      "url": "https://www.rsc.org/periodic-table/element/10/neon",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Neon: atomic number 10; symbol Ne; orange-red discharge."
+    },
+    "cellchem": {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9879/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "DNA/RNA structures, sugars and base pairing; insulin chains; hemoglobin four globin chains and heme."
+    },
+    "neurons": {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK28209/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Neurons: axons, dendrites, synapses and myelin."
+    },
+    "nucleus": {
+      "url": "https://www.genome.gov/genetics-glossary/Nucleus",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Nucleus encloses chromosomes in a membrane."
+    },
+    "insulin": {
+      "url": "https://www.niddk.nih.gov/news/archive/2023/how-eating-fasting-regulate-insulin",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Insulin from beta cells in pancreatic islets lowers blood glucose."
+    },
+    "hemoglobin": {
+      "url": "https://www.nhlbi.nih.gov/health/anemia/diagnosis",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Red blood cells contain oxygen-carrying iron-rich hemoglobin."
+    },
+    "chlorophyll": {
+      "url": "https://plantscience.psu.edu/research/labs/roots/methods/methods-info/nutritional-disorders-displayed/magnesium-deficiency",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Magnesium occupies the central position in chlorophyll, the green plant pigment."
+    },
+    "collagen": {
+      "url": "https://pdb101.rcsb.org/motm/4",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Collagen gives structural strength to tendons; three chains form a triple helix; glycine occurs every third residue."
+    },
+    "danube": {
+      "url": "https://www.icpdr.org/danube-basin/receiving-sea-black-sea",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Danube drains into the Black Sea."
+    },
+    "danube_history": {
+      "url": "https://www.icpdr.org/publications/historical-patterns-along-danubes-course",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Danube begins in the Black Forest, passes four national capitals, and reaches the Black Sea."
+    },
+    "mekong": {
+      "url": "https://www.mrcmekong.org/mekong-river-basin/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Mekong rises on the Tibetan Plateau and passes through six countries."
+    },
+    "borneo": {
+      "url": "https://whc.unesco.org/en/list/1012/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Kinabalu Park is in Sabah, Malaysia, on Borneo."
+    },
+    "einstein": {
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/",
+      "retrieval_mode": "retrieved_search_extract_direct_open_403",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Einstein born in Ulm; 1921 Physics Nobel for photoelectric effect, received in 1922."
+    },
+    "gutenberg": {
+      "url": "https://www.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+      "retrieval_mode": "retrieved_search_extract_direct_open_403",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Gutenberg printed Latin Vulgate in Mainz using movable metal type; forty-two-line Bible."
+    },
+    "confucius": {
+      "url": "https://plato.stanford.edu/entries/confucius/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Confucius lived in ancient China, traditionally 551–479 BCE; teachings associated with Analects."
+    },
+    "shakespeare": {
+      "url": "https://www.folger.edu/explore/shakespeares-life/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Shakespeare born in Stratford-upon-Avon in 1564; playwright."
+    },
+    "beethoven": {
+      "url": "https://www.beethoven.de/en/beethoven",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Beethoven born in Bonn; died in Vienna."
+    },
+    "beethoven_works": {
+      "url": "https://www.beethoven.de/en/g/zeittafel-beethoven-in-wien",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Beethoven chronology attributes Fidelio and Ninth Symphony and records Vienna death."
+    },
+    "mozart": {
+      "url": "https://mozarteum.at/en/wolfgang-amade-mozart",
+      "retrieval_mode": "direct_open_and_read_plus_retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Mozart born in 1756; Salzburg family residence; Don Giovanni attribution."
+    },
+    "mozart_flute": {
+      "url": "https://mozarteum.at/en/mozart-museums/mozarts-residence",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Mozart composed The Magic Flute."
+    },
+    "mozart_birth": {
+      "url": "https://www.salzburg.info/en/salzburg/city-of-mozart/wolfgang-amadeus-mozart",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Mozart born in Salzburg in 1756."
+    },
+    "picasso_guernica": {
+      "url": "https://www.museoreinasofia.es/en/collections/artwork/guernica-0/",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Guernica painted by Pablo Picasso in 1937."
+    },
+    "picasso_demoiselles": {
+      "url": "https://museupicassobcn.cat/en/collection/highlights/gallery",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Les Demoiselles d’Avignon is a 1907 Picasso work."
+    },
+    "monet": {
+      "url": "https://www.marmottan.fr/en/collections/claude-monet/",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Monet: Impression, Sunrise and Impressionism; Water Lilies and garden at Giverny."
+    },
+    "linux": {
+      "url": "https://www.kernel.org/linux.html",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Linux is a Unix-like kernel written by Linus Torvalds."
+    },
+    "linux_license": {
+      "url": "https://www.kernel.org/faq.html",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Linux kernel uses GNU GPL version 2; FAQ discusses Tux logo."
+    },
+    "python": {
+      "url": "https://docs.python.org/3/faq/general.html",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Guido van Rossum created Python and publicly posted it in February 1991; PEP means Python Enhancement Proposal; name comes from BBC comedy series Monty Python’s Flying Circus."
+    },
+    "voyager": {
+      "url": "https://science.nasa.gov/mission/voyager/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Voyager pair launched in 1977; Voyager 1 reached interstellar boundary in 2012; both spacecraft carry Golden Records."
+    },
+    "hubble": {
+      "url": "https://science.nasa.gov/mission/hubble/overview/about-hubble/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Hubble deployed by Discovery in 1990; low Earth orbit; 2.4-metre primary mirror."
+    },
+    "hubble_service": {
+      "url": "https://www.nasa.gov/mission/sts-61/",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "STS-61 serviced Hubble in 1993."
+    },
+    "unicode": {
+      "url": "https://www.unicode.org/faq/utf_bom.html",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Unicode first version dates to 1991; code points use U+ notation; UTF-8 uses at most four bytes."
+    },
+    "ethernet_origin": {
+      "url": "https://www.computerhistory.org/tdih/may/22/",
+      "retrieval_mode": "retrieved_search_extract",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Bob Metcalfe proposed Ethernet on May 22, 1973 at Xerox."
+    },
+    "ethernet": {
+      "url": "https://xeroxparcarchive.computerhistory.org/erinyes/lispmanual/.EtherOverview.im%212.html",
+      "retrieval_mode": "retrieved_search_extract_of_archived_primary_Xerox_document",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Experimental Ethernet developed at PARC; later 10Mb Ethernet uses 48-bit host addresses."
+    },
+    "si": {
+      "url": "https://www.bipm.org/en/publications/si-brochure",
+      "retrieval_mode": "direct_open_and_read_linked_concise_SI_2026_pdf_tables_1_and_2",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "SI tables bind kelvin K/temperature/Boltzmann constant; pascal Pa/N per square metre/pressure; newton N/kg m s^-2/force; watt W/J per second/power; tesla T/Wb per square metre/flux density; volt V/potential difference; mole mol/amount of substance/Avogadro constant; gray Gy/absorbed dose."
+    },
+    "ozone": {
+      "url": "https://csl.noaa.gov/assessments/ozone/1998/faqs.html",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Ozone O3 contains three oxygen atoms; stratospheric ozone absorbs ultraviolet radiation."
+    },
+    "monsoon": {
+      "url": "https://www.nesdis.noaa.gov/about/k-12-education/severe-weather/what-monsoon",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Monsoon is seasonal wind shift, associated with wet summers and dry winters; Arabic mausim means season."
+    },
+    "permafrost": {
+      "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/quick-facts-frozen-ground",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Permafrost remains frozen at least two years; active layer thaws seasonally; thawed organic matter releases carbon dioxide and methane."
+    },
+    "active_layer": {
+      "url": "https://nsidc.org/learn/cryosphere-glossary/active-layer",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Active layer undergoes annual thawing and freezing."
+    },
+    "env_noaa_ozone": {
+      "publisher": "NOAA Chemical Sciences Laboratory",
+      "url": "https://csl.noaa.gov/assessments/ozone/1998/faqs.html",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 25-29",
+      "claim": "Most ozone resides in the stratosphere; stratospheric ozone absorbs biologically damaging UV-B; ozone molecules consist of three oxygen atoms and have formula O3.",
+      "supports": [
+        "confirmation-145",
+        "confirmation-146"
+      ]
+    },
+    "env_unesco_causeway": {
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/369/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 46-51",
+      "claim": "The Giant’s Causeway exposes about 40,000 polygonal basalt columns; its geology records lava flows and columnar basalt lavas.",
+      "supports": [
+        "confirmation-147"
+      ]
+    },
+    "env_nps_igneous": {
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/subjects/geology/igneous.htm",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 30-35, 50-51, 94-100, 110-113, 270-273",
+      "claim": "NPS defines intrusive rocks as solidifying within Earth and extrusive rocks as erupted at the surface; its classification table places basalt among extrusive mafic rocks and granite among intrusive rocks; granite is predominantly quartz and feldspar with biotite/muscovite.",
+      "supports": [
+        "confirmation-147",
+        "confirmation-148",
+        "confirmation-149",
+        "confirmation-150"
+      ]
+    },
+    "env_nps_volcanic": {
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/subjects/geology/volcanic-landforms.htm",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 61-66",
+      "claim": "Magma at spreading centers is mafic, and much oceanic crust is basalt, a mafic rock.",
+      "supports": [
+        "confirmation-148"
+      ]
+    },
+    "env_nps_rushmore": {
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/moru/learn/nature/geologicactivity.htm",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 26, 30-32",
+      "claim": "Mount Rushmore contains granite; molten rock cooled underground to form the granite, and a block of fine-grained granite forms the upper portion of Mount Rushmore.",
+      "supports": [
+        "confirmation-149"
+      ]
+    },
+    "env_govscot_rubislaw": {
+      "publisher": "Scottish Government",
+      "url": "https://www.gov.scot/publications/feasibility-report-deep-geothermal-single-well-aberdeen-exhibition-conference-centre/pages/8/",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 129-130, 158-162, 166-170",
+      "claim": "The Aberdeen granite age is tied to samples from the Rubislaw quarry; the Aberdeen pluton is grey muscovite-biotite granite, with abundant quartz, feldspar, and mica, and the report identifies Rubislaw quarries as a principal location.",
+      "supports": [
+        "confirmation-150"
+      ]
+    },
+    "env_noaa_monsoon": {
+      "publisher": "NOAA National Environmental Satellite, Data, and Information Service",
+      "url": "https://www.nesdis.noaa.gov/about/k-12-education/severe-weather/what-monsoon",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 13-23, 27-30",
+      "claim": "NOAA describes a monsoon as a seasonal wind shift; monsoons causing the heaviest rainfall are summer monsoons near the Indian Ocean, while winter monsoons there are usually dry; the word monsoon comes from Arabic mausim.",
+      "supports": [
+        "confirmation-151",
+        "confirmation-152"
+      ]
+    },
+    "env_usgs_glacier": {
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/faqs/what-a-glacier?page=1",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 3-9",
+      "claim": "USGS defines a glacier as a large perennial accumulation that moves downslope under its own weight and gravity.",
+      "supports": [
+        "confirmation-153"
+      ]
+    },
+    "env_nps_glacial_geology": {
+      "publisher": "U.S. National Park Service, Glacier National Park",
+      "url": "https://www.nps.gov/glac/learn/nature/glacial-geology.htm",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 25-40, 47-50",
+      "claim": "NPS describes glaciers as masses of ice moving under gravity, explains that glaciers scour valleys into U-shapes, and identifies the debris ridge deposited at a glacier terminus as a moraine.",
+      "supports": [
+        "confirmation-153",
+        "confirmation-154"
+      ]
+    },
+    "env_nws_efscale": {
+      "publisher": "NOAA National Weather Service, Norman Weather Forecast Office",
+      "url": "https://www.weather.gov/oun/efscale",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 150-171",
+      "claim": "The Enhanced Fujita (EF) Scale assigns tornado ratings from EF0 to EF5 using surveyed damage and estimated wind speeds; NWS provides the official ratings.",
+      "supports": [
+        "confirmation-155",
+        "confirmation-156"
+      ]
+    },
+    "env_nws_tornado_glossary": {
+      "publisher": "NOAA National Weather Service",
+      "url": "https://forecast.weather.gov/glossary.php?word=tornado",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 0-4",
+      "claim": "The NWS glossary defines a tornado as a violently rotating column of air usually pendant to a cumulonimbus, with circulation reaching the ground.",
+      "supports": [
+        "confirmation-156"
+      ],
+      "independent_recheck": {
+        "reviewer": "/root/main_only_review/receipt_binding_read",
+        "checked_on": "2026-09-09",
+        "locator": "lines2–3"
+      }
+    },
+    "env_usgs_earthquake_facts": {
+      "publisher": "U.S. Geological Survey, Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 54-61",
+      "claim": "USGS states that an earthquake hypocenter is beneath the surface where fault rupture begins and the epicenter is directly above it at the surface.",
+      "supports": [
+        "confirmation-157",
+        "confirmation-158"
+      ]
+    },
+    "env_usgs_richter": {
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/faqs/moment-magnitude-richter-scale-what-are-different-magnitude-scales-and-why-are-there-so-many",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 3-9",
+      "claim": "USGS describes the Richter scale as a logarithmic earthquake magnitude scale developed by Charles Richter; it also explains that moment magnitude was developed as a more broadly applicable replacement.",
+      "supports": [
+        "confirmation-158"
+      ]
+    },
+    "env_nsidc_permafrost": {
+      "publisher": "National Snow and Ice Data Center",
+      "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/quick-facts-frozen-ground",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 66-77, 87-90, 103-115",
+      "claim": "NSIDC defines permafrost as ground at or below 0°C for at least two years, identifies the annually freezing/thawing active layer, and states that thawing permafrost organic matter decays and releases carbon dioxide and/or methane.",
+      "supports": [
+        "confirmation-159",
+        "confirmation-160"
+      ]
+    },
+    "env_nsidc_active_layer": {
+      "publisher": "National Snow and Ice Data Center",
+      "url": "https://nsidc.org/learn/cryosphere-glossary/active-layer",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-10",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "locator": "lines 58-64",
+      "claim": "NSIDC defines the active layer as ground subject to annual thawing and freezing over permafrost.",
+      "supports": [
+        "confirmation-159"
+      ]
+    },
+    "env_noaa_chlorine_depletion": {
+      "url": "https://csl.noaa.gov/assessments/ozone/1998/faq2.html",
+      "supported_facts_paraphrase": "Cl and ClO participate in chain reactions destroying stratospheric ozone.",
+      "locator": "lines24–33",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "/root/main_only_review/receipt_binding_read"
+    }
+  },
+  "items": [
+    {
+      "name": "confirmation-001",
+      "prompt": "Fact: The planet whose sidereal rotation takes longer than its orbital period has an atmosphere dominated by ",
+      "target": "carbon dioxide",
+      "prompt_target_sha256": "5aaa65daac9e38f563dde989f31bee4338b339a9e244615e6be109dc7020da79",
+      "hop1_source_ids": [
+        "venus"
+      ],
+      "hop2_source_ids": [
+        "venus"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-002",
+      "prompt": "Fact: The planet with persistent sulfuric-acid clouds rotates in the direction described as ",
+      "target": "retrograde",
+      "prompt_target_sha256": "859eaf12aa22bd4a1b5c4e4378c676065617598abb55eb04134628af4133dc31",
+      "hop1_source_ids": [
+        "venus"
+      ],
+      "hop2_source_ids": [
+        "venus"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-003",
+      "prompt": "Fact: The planet whose rotation axis is tilted nearly into its orbital plane had its rings discovered in ",
+      "target": "1977",
+      "prompt_target_sha256": "3952e988c3d519ce9a3d4c1688f1ccae34b44a4323d9cb9f4d003827cf113500",
+      "hop1_source_ids": [
+        "uranus"
+      ],
+      "hop2_source_ids": [
+        "uranus"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-004",
+      "prompt": "Fact: The planet whose rings were discovered in a 1977 stellar-occultation observation is classified as an ",
+      "target": "ice giant",
+      "prompt_target_sha256": "963c5ed596a6c48c171e3c4bf57ef424b40a3532b9d36e88670fb22cc81fe6c5",
+      "hop1_source_ids": [
+        "uranus"
+      ],
+      "hop2_source_ids": [
+        "uranus"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-005",
+      "prompt": "Fact: The outer planet with the fastest measured winds was visited by the Voyager 2 spacecraft in ",
+      "target": "1989",
+      "prompt_target_sha256": "4ba41c73087f2f243561eb6d6e6dd0b5e994db523804cca884c0a206134dea2e",
+      "hop1_source_ids": [
+        "neptune"
+      ],
+      "hop2_source_ids": [
+        "neptune"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-006",
+      "prompt": "Fact: The planet where Voyager 2 observed the Great Dark Spot has an atmosphere containing the light-absorbing gas ",
+      "target": "methane",
+      "prompt_target_sha256": "8e4d8357578dc6f80d8015e3e9c87028fe40b996937f8157af68212968e365d7",
+      "hop1_source_ids": [
+        "neptune"
+      ],
+      "hop2_source_ids": [
+        "neptune"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-007",
+      "prompt": "Fact: The dwarf planet whose largest moon is Charon lies mainly in the region called the ",
+      "target": "Kuiper belt",
+      "prompt_target_sha256": "c360cbfedb1887ea1d7aa965fbf04049d37f463adc38bfe3a9b216e260112c7c",
+      "hop1_source_ids": [
+        "pluto"
+      ],
+      "hop2_source_ids": [
+        "pluto"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-008",
+      "prompt": "Fact: The dwarf planet visited by New Horizons in 2015 has a heart-shaped region named after its discoverer, Clyde ",
+      "target": "Tombaugh",
+      "prompt_target_sha256": "dc6fd5c7c1c7f31efe008a39c575b1afd06bda2db77589947b21633cc9f14e81",
+      "hop1_source_ids": [
+        "pluto"
+      ],
+      "hop2_source_ids": [
+        "pluto"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-009",
+      "prompt": "Fact: The largest object in the asteroid belt has bright deposits in Occator crater composed largely of ",
+      "target": "salts",
+      "prompt_target_sha256": "2b01b0e71d4837a220dbb5167f701159834ff528e52a40d4f262dcc3048d8a54",
+      "hop1_source_ids": [
+        "ceres"
+      ],
+      "hop2_source_ids": [
+        "ceres"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-010",
+      "prompt": "Fact: The dwarf planet with the bright deposits in Occator crater was visited by the spacecraft named ",
+      "target": "Dawn",
+      "prompt_target_sha256": "b5f87894957022faa3a7b6ddf28ec9ca810f84049cc62ed02facd2be6044c366",
+      "hop1_source_ids": [
+        "ceres"
+      ],
+      "hop2_source_ids": [
+        "ceres"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-011",
+      "prompt": "Fact: The largest moon of Saturn has surface lakes composed mainly of liquid ",
+      "target": "methane",
+      "prompt_target_sha256": "37cd82a496474adfcee0740986d08c1356e9a0eb00d15eb32cc58aa2656a5be8",
+      "hop1_source_ids": [
+        "titan"
+      ],
+      "hop2_source_ids": [
+        "titan"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-012",
+      "prompt": "Fact: The moon on which the Huygens probe landed in 2005 orbits the planet ",
+      "target": "Saturn",
+      "prompt_target_sha256": "719c87287d401313ca1358797964d1e462980b7803a702e1ce90e06610776d72",
+      "hop1_source_ids": [
+        "titan"
+      ],
+      "hop2_source_ids": [
+        "titan"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-013",
+      "prompt": "Fact: The smallest of Jupiter's four large Galilean moons is thought to have an ocean composed mainly of liquid ",
+      "target": "water",
+      "prompt_target_sha256": "da1abbf7f39670799bd51dab4c0165b7d062d714227d18c198226daf952c2b55",
+      "hop1_source_ids": [
+        "europa"
+      ],
+      "hop2_source_ids": [
+        "europa"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-014",
+      "prompt": "Fact: The Galilean moon whose name comes from a Phoenician princess is covered chiefly by a crust of ",
+      "target": "ice",
+      "prompt_target_sha256": "9aa95da84183fcf87fbab45210aa8af804eced625513864b5e34cc7c70d81acb",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "europa"
+      ],
+      "review_note": "Princess etymology not yet verified by this reviewer.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-015",
+      "prompt": "Fact: The innermost of Jupiter's four large Galilean moons is especially notable for active ",
+      "target": "volcanoes",
+      "prompt_target_sha256": "003ed5abd8f992b923192b71aef24bbffe617167fb1ebd56551186855b612873",
+      "hop1_source_ids": [
+        "io"
+      ],
+      "hop2_source_ids": [
+        "io"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-016",
+      "prompt": "Fact: The moon whose volcanic eruption was detected in Voyager 1 images in 1979 orbits the planet ",
+      "target": "Jupiter",
+      "prompt_target_sha256": "109c750d54ffbfcb11697bccaf9e3795ce23be47d57e075a6d9e09ff6e50445f",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "io"
+      ],
+      "review_note": "Specific Voyager 1 1979 volcanic-detection clue still needs explicit source passage.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-017",
+      "prompt": "Fact: The gas used to fill balloons without supporting combustion has atomic number ",
+      "target": "2",
+      "prompt_target_sha256": "59eefdabcfa7ffa5ce85fc62b6db5cfb9e75e6e1c719b7ae9fbfa2734bb0e8b5",
+      "hop1_source_ids": [
+        "helium"
+      ],
+      "hop2_source_ids": [
+        "helium"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-018",
+      "prompt": "Fact: The element with atomic number two belongs to the chemical family called the ",
+      "target": "noble gases",
+      "prompt_target_sha256": "58d4deb6702350c8ba1887da558a2ed630219e94fb5ea7784380175f045adbe4",
+      "hop1_source_ids": [
+        "helium"
+      ],
+      "hop2_source_ids": [
+        "helium"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-019",
+      "prompt": "Fact: The lightest solid element used in rechargeable batteries has atomic number ",
+      "target": "3",
+      "prompt_target_sha256": "f4a4fdf100c25f0f74dbf0f96844d42f39d76c8f9e5aa410590d6a9bf2d156e6",
+      "hop1_source_ids": [
+        "lithium"
+      ],
+      "hop2_source_ids": [
+        "lithium"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-020",
+      "prompt": "Fact: The element with atomic number three has the chemical symbol ",
+      "target": "Li",
+      "prompt_target_sha256": "be33a6ff9b2b386e6f2d6ca64d2ed29529809c26cdd8b73b889e63e171257a7d",
+      "hop1_source_ids": [
+        "lithium"
+      ],
+      "hop2_source_ids": [
+        "lithium"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-021",
+      "prompt": "Fact: The element with atomic number five is classified as a ",
+      "target": "metalloid",
+      "prompt_target_sha256": "f8fb94289053b2249d93b0497a3bab643ef6e5354ec32415fb34d4c334f84672",
+      "hop1_source_ids": [
+        "boron"
+      ],
+      "hop2_source_ids": [
+        "boron"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-022",
+      "prompt": "Fact: The element used to make borosilicate laboratory glass has atomic number ",
+      "target": "5",
+      "prompt_target_sha256": "99af0ff1cde62be074ec20042be69382fe4e2919b1d6578af491dd2972be4a17",
+      "hop1_source_ids": [
+        "boron"
+      ],
+      "hop2_source_ids": [
+        "boron"
+      ],
+      "review_note": "Borosilicate glass also contains silicon; clue needs specificity beyond element used to make this glass.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-023",
+      "prompt": "Fact: The metal at the center of vitamin B12 has the chemical symbol ",
+      "target": "Co",
+      "prompt_target_sha256": "03c9451489c4243fd83726d3a1f51144dd47701e8106b60130dcd858ed11d22e",
+      "hop1_source_ids": [
+        "cobalt"
+      ],
+      "hop2_source_ids": [
+        "cobalt"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-024",
+      "prompt": "Fact: The blue-pigment metal whose name derives from the German word for goblin has atomic number ",
+      "target": "27",
+      "prompt_target_sha256": "3f7b3219bf9874b252b2efd5e94df3b67b8ca2db8bffa5b8ce5b5814fe3471dc",
+      "hop1_source_ids": [
+        "cobalt"
+      ],
+      "hop2_source_ids": [
+        "cobalt"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-025",
+      "prompt": "Fact: The element with atomic number twenty-eight has the chemical symbol ",
+      "target": "Ni",
+      "prompt_target_sha256": "ff40c46482b7798d363e0da002f47d5c2a92840f7e72bf1c9c4c238dc704a64c",
+      "hop1_source_ids": [
+        "nickel"
+      ],
+      "hop2_source_ids": [
+        "nickel"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-026",
+      "prompt": "Fact: The metal that gives its name to the United States five-cent coin has atomic number ",
+      "target": "28",
+      "prompt_target_sha256": "6f0d4fb765c5a89e4c64340715d2a86678865a308fb5d2b0ff48fa37614d4ede",
+      "hop1_source_ids": [
+        "nickel"
+      ],
+      "hop2_source_ids": [
+        "nickel"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-027",
+      "prompt": "Fact: The metal with the highest melting point has the chemical symbol ",
+      "target": "W",
+      "prompt_target_sha256": "b49f72cc58e391ac23c52ef611451c3562dd75ebb5e669c94494f5091ff5f58a",
+      "hop1_source_ids": [
+        "tungsten"
+      ],
+      "hop2_source_ids": [
+        "tungsten"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-028",
+      "prompt": "Fact: The metal traditionally used for incandescent lamp filaments has atomic number ",
+      "target": "74",
+      "prompt_target_sha256": "7fdf767ebb1435fd586079382958504de8c4c864e9f65f1a014d70707431a76d",
+      "hop1_source_ids": [
+        "tungsten"
+      ],
+      "hop2_source_ids": [
+        "tungsten"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-029",
+      "prompt": "Fact: The radioactive noble gas produced in the uranium decay series has the chemical symbol ",
+      "target": "Rn",
+      "prompt_target_sha256": "e25c157a6464c4ce713fdcf7ef694520eb8b7a642583dab9c8bb0d511a0346a5",
+      "hop1_source_ids": [
+        "radon"
+      ],
+      "hop2_source_ids": [
+        "radon"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-030",
+      "prompt": "Fact: The radioactive gas that can accumulate in basements has atomic number ",
+      "target": "86",
+      "prompt_target_sha256": "e42453c9d0207362e6b250a7e89f0781e43c32e4b03ea925a3d16edc0799023b",
+      "hop1_source_ids": [
+        "radon"
+      ],
+      "hop2_source_ids": [
+        "radon"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-031",
+      "prompt": "Fact: The noble gas used in orange-red discharge tubes has the chemical symbol ",
+      "target": "Ne",
+      "prompt_target_sha256": "9caf8c97cddce228695de8c2381661766d3b3a4c6f9ee10fc9ca6ad061c4d419",
+      "hop1_source_ids": [
+        "neon"
+      ],
+      "hop2_source_ids": [
+        "neon"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-032",
+      "prompt": "Fact: The element with atomic number ten produces a characteristic discharge glow that is ",
+      "target": "orange-red",
+      "prompt_target_sha256": "d9a3ceaf10220206effc0d98354ac1aad4925759d67dbc19329b3e3a2623f7a0",
+      "hop1_source_ids": [
+        "neon"
+      ],
+      "hop2_source_ids": [
+        "neon"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-033",
+      "prompt": "Fact: The island nation whose capital lies on Honshu uses the currency called the ",
+      "target": "yen",
+      "prompt_target_sha256": "573abaab65b1fd02d4c3906afb9f23df5eaf79335b2a3d0d291aea430c25b171",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-034",
+      "prompt": "Fact: The country whose highest mountain is Mount Fuji has its capital in ",
+      "target": "Tokyo",
+      "prompt_target_sha256": "d5a7b046cdeffd69864a8402b024ea9dbd9c488c68262bcbdd13da286fa50f07",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-035",
+      "prompt": "Fact: The East African country containing the Maasai Mara uses a currency called the ",
+      "target": "shilling",
+      "prompt_target_sha256": "29ff4db0663c10d2053f35042ae1283f3c89839b2ac341168681fb49ee1f7ac0",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-036",
+      "prompt": "Fact: The country whose capital is Nairobi straddles the geographical line called the ",
+      "target": "equator",
+      "prompt_target_sha256": "395555dd71f53e03c3b6da95c5878049bc51c36d781229699ab7b169b7527487",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-037",
+      "prompt": "Fact: The country containing the desert town of San Pedro de Atacama uses a currency called the ",
+      "target": "peso",
+      "prompt_target_sha256": "df0e904a83e35201dfaecc967ba13e912b0b77c745cdefe294b011331f323675",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-038",
+      "prompt": "Fact: The South American country containing the city of Valparaiso has its capital in ",
+      "target": "Santiago",
+      "prompt_target_sha256": "85cd00e2dfe87330ce8a33d27d7fff319fe50e3db4541c640c2c02a3a28a13d4",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-039",
+      "prompt": "Fact: The Scandinavian country containing the Svalbard archipelago uses the currency called the ",
+      "target": "krone",
+      "prompt_target_sha256": "bd007a64d3639f3b41a3b03106bf7572ede012c1e32bf63128743c1e38de25cb",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-040",
+      "prompt": "Fact: The Nordic country whose capital is Oslo celebrates its Constitution Day on May ",
+      "target": "17",
+      "prompt_target_sha256": "d959f5d95fdcc34a7e092f84afcc6901dd2a4be7cf2fc002aa334ca812cf8c1b",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-041",
+      "prompt": "Fact: The country containing the Valley of the Kings uses a currency called the ",
+      "target": "pound",
+      "prompt_target_sha256": "94a7937e3490ae452e7517af51ae351022d17c054252dc534d9e545dbf209f22",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-042",
+      "prompt": "Fact: The country containing the Great Pyramid of Giza has its capital in ",
+      "target": "Cairo",
+      "prompt_target_sha256": "e1e143209f7c198070eab9870c7e86ef2d806fa3bcc3055e80fffd39c38d46d4",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-043",
+      "prompt": "Fact: The country containing Machu Picchu uses the currency called the ",
+      "target": "sol",
+      "prompt_target_sha256": "d0a6f7f4b5bf9e81ad724fe29ed96e1a434bb85874d473c4db3842eaa87c272f",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-044",
+      "prompt": "Fact: The South American country containing the city of Cusco has its capital in ",
+      "target": "Lima",
+      "prompt_target_sha256": "fa6eec6705027f7a5ff59319f2c6060c88519bc08a8966d37b757f4b7db698db",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-045",
+      "prompt": "Fact: The country formerly called Siam uses the currency called the ",
+      "target": "baht",
+      "prompt_target_sha256": "cdf068d2f209be5dcd9468e0f3c60c1147429fa43cafe5b602cf9a79447448b7",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-046",
+      "prompt": "Fact: The Southeast Asian country containing the city of Chiang Mai has its capital in ",
+      "target": "Bangkok",
+      "prompt_target_sha256": "5d272145ad1964d48902a544db6607e483b484b3af018b44d2baa93962ec86a3",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-047",
+      "prompt": "Fact: The Nordic country whose flag has a yellow cross on blue uses the currency called the ",
+      "target": "krona",
+      "prompt_target_sha256": "1226216812f1148b230ed3eac3774b21fa7c82753e4b6ca0a45c6c80476ff155",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-048",
+      "prompt": "Fact: The country containing the cities of Gothenburg and Malmo has its capital in ",
+      "target": "Stockholm",
+      "prompt_target_sha256": "801ef1d8a14e8853706de731d5e5d18e3bc099599e425832cca203bc497e4e46",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-049",
+      "prompt": "Fact: The world's highest mountain above sea level belongs to the mountain range called the ",
+      "target": "Himalayas",
+      "prompt_target_sha256": "b23a18a4944def19519bef1a2e01e101c38fe86480b92bb88220cf01fe0d02f3",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-050",
+      "prompt": "Fact: The mountain first summited by Edmund Hillary and Tenzing Norgay in 1953 lies on the border between Nepal and ",
+      "target": "China",
+      "prompt_target_sha256": "e40c477145caadd6ffed5f2e0e03cbade1da12938e26f1fb38b06fa18731100a",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-051",
+      "prompt": "Fact: The world's largest hot desert occupies much of the continent called ",
+      "target": "Africa",
+      "prompt_target_sha256": "aa9f05b03d94aa90a8bffad8f206a72f2390f2867249f139f9c5150ecc83b069",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-052",
+      "prompt": "Fact: The ocean at the western edge of the hot desert spanning Algeria, Libya and Chad is the ",
+      "target": "Atlantic",
+      "prompt_target_sha256": "f733d47f43c569237e3f2ec57bb391a2b7136fb87ae120172ee248b55aabe13a",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-053",
+      "prompt": "Fact: The mountain range containing Aconcagua is located on the continent of ",
+      "target": "South America",
+      "prompt_target_sha256": "3d979c6c803b2d55a21cde55f78d2cdd00388e679950817d5f6dfedf90e7e2f2",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-054",
+      "prompt": "Fact: The mountain range forming much of the border between Chile and Argentina has its highest summit at ",
+      "target": "Aconcagua",
+      "prompt_target_sha256": "d84000f59ee3839cdb1126c7ab6621b505d84fe4e8de0300a6799039e0e2ecad",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-055",
+      "prompt": "Fact: The river whose principal branches are called the White and Blue branches empties into the ",
+      "target": "Mediterranean Sea",
+      "prompt_target_sha256": "5a01684853de73c2c166533c15f8e4a7bdc292056ac3889256cd3bf7cb402c44",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-056",
+      "prompt": "Fact: The principal north-flowing river through Egypt has two major branches that meet at the city of ",
+      "target": "Khartoum",
+      "prompt_target_sha256": "47ff1fb31df17aba707fb0cb8a1034551c249aa292f1fbb827fc03daf7d15e16",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-057",
+      "prompt": "Fact: The large European river passing through Vienna and Bratislava empties into the ",
+      "target": "Black Sea",
+      "prompt_target_sha256": "b0dd0cf673b8fc7b0ade06721f0b27f4d5e380617376a4a960581a56b1ca0ad5",
+      "hop1_source_ids": [
+        "danube_history"
+      ],
+      "hop2_source_ids": [
+        "danube"
+      ],
+      "review_note": "Source supports four capitals generally; exact Vienna/Bratislava passage still needs binding.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-058",
+      "prompt": "Fact: The river dividing Buda from Pest has its headwaters in the country of ",
+      "target": "Germany",
+      "prompt_target_sha256": "6064d86d19f7d80a3d483870f8bbaed210246923d3cd973a701f1bb01b84ab7a",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "danube_history"
+      ],
+      "review_note": "Buda/Pest dividing clue not explicitly checked.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-059",
+      "prompt": "Fact: The mountain range whose highest summit is Mont Blanc is located on the continent of ",
+      "target": "Europe",
+      "prompt_target_sha256": "e035a5782e2f8c8ef35aadecafc5bd2aeaf265f04158f0cdc06498369a54ee2b",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-060",
+      "prompt": "Fact: The European mountain range containing the Matterhorn has its highest summit at ",
+      "target": "Mont Blanc",
+      "prompt_target_sha256": "54bd15546db84e5cca056f5b19099eb6e20c1f72b011390acbacc09608c3fd7e",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-061",
+      "prompt": "Fact: The river flowing through both Vientiane and Phnom Penh has its delta in the country of ",
+      "target": "Vietnam",
+      "prompt_target_sha256": "03ddddf9ab9d3157cac2615f48f22f9514b7fbfc38bf037e2dfb88551b2cbbd7",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "mekong"
+      ],
+      "review_note": "Vientiane/Phnom Penh and Vietnam delta not explicitly verified in inspected passage; hop2 source is candidate only.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-062",
+      "prompt": "Fact: The river whose delta occupies the southern tip of Vietnam has its headwaters on the ",
+      "target": "Tibetan Plateau",
+      "prompt_target_sha256": "f40304de493436cdb1c4439d088fc1ebead14df0ec34e20b3be610dd45a878b7",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "mekong"
+      ],
+      "review_note": "Vietnam-delta clue not yet explicitly verified.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-063",
+      "prompt": "Fact: The island containing Mount Kinabalu is politically divided among how many countries? The answer is ",
+      "target": "3",
+      "prompt_target_sha256": "8dd36c81bd349af501eb57ab4d817fbeffda8c39bb385b8e5cdbc2daad465cec",
+      "hop1_source_ids": [
+        "borneo"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Three-country political division still requires source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-064",
+      "prompt": "Fact: The island shared by Brunei, Indonesia and Malaysia has its highest summit at Mount ",
+      "target": "Kinabalu",
+      "prompt_target_sha256": "f455fc15145b01687b505b5d8ff15ca82b7ff042421b693b2304b60304861e70",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "borneo"
+      ],
+      "review_note": "Three-country clue and highest-summit superlative still require explicit source; Kinabalu presence alone insufficient.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-065",
+      "prompt": "Fact: The hereditary molecule with a double-helical structure contains the sugar ",
+      "target": "deoxyribose",
+      "prompt_target_sha256": "f754153b54e454092681e8acf9991a6aea577bbb17adba07cca55593860ea809",
+      "hop1_source_ids": [
+        "cellchem"
+      ],
+      "hop2_source_ids": [
+        "cellchem"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-066",
+      "prompt": "Fact: In the hereditary molecule that uses thymine as a canonical base, thymine pairs with ",
+      "target": "adenine",
+      "prompt_target_sha256": "f38789e5ac0b010e3148443609755e53fb849ae077be4d5f51febe2a96fd8462",
+      "hop1_source_ids": [
+        "cellchem"
+      ],
+      "hop2_source_ids": [
+        "cellchem"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-067",
+      "prompt": "Fact: The nucleic acid that normally uses uracil instead of thymine contains the sugar ",
+      "target": "ribose",
+      "prompt_target_sha256": "86a0d24d5625fa2d65cab0a7e9447598fcb6702b7f66daf13746899a1e558d36",
+      "hop1_source_ids": [
+        "cellchem"
+      ],
+      "hop2_source_ids": [
+        "cellchem"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-068",
+      "prompt": "Fact: The nucleic acid whose backbone contains ribose normally uses, in place of thymine, the base ",
+      "target": "uracil",
+      "prompt_target_sha256": "b5e102c255b64aab66ccdcbad2d37ed0a98cb6425e7158f419672b0cc6526e77",
+      "hop1_source_ids": [
+        "cellchem"
+      ],
+      "hop2_source_ids": [
+        "cellchem"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-069",
+      "prompt": "Fact: The peptide hormone that lowers blood glucose is secreted by the organ called the ",
+      "target": "pancreas",
+      "prompt_target_sha256": "8a71fe17e146d3dce40c21af7c6243a7b1c0a0293e5a00bcf03c3aabb4912f79",
+      "hop1_source_ids": [
+        "insulin"
+      ],
+      "hop2_source_ids": [
+        "insulin"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-070",
+      "prompt": "Fact: The hormone deficient in type 1 diabetes is normally secreted by pancreatic cells known as ",
+      "target": "beta cells",
+      "prompt_target_sha256": "163dcb6445ff7226692427db70d05c620ebdcef53c20bef05cc432fd87844fea",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "insulin"
+      ],
+      "review_note": "Type 1 diabetes deficiency clue not checked in cited article.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-071",
+      "prompt": "Fact: The oxygen-carrying protein in human red blood cells contains the metal ",
+      "target": "iron",
+      "prompt_target_sha256": "115c85e70a82c47478c9971ee96c0e1f5915226ebc0754fc208791af2e9ff4d4",
+      "hop1_source_ids": [
+        "hemoglobin"
+      ],
+      "hop2_source_ids": [
+        "cellchem"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-072",
+      "prompt": "Fact: The principal oxygen-carrying protein in adult human red blood cells contains how many globin chains? The answer is ",
+      "target": "4",
+      "prompt_target_sha256": "684f22276b97c57c2d6abc7fdff28d085d264b9ff96e75942a92ae55697b273f",
+      "hop1_source_ids": [
+        "hemoglobin"
+      ],
+      "hop2_source_ids": [
+        "cellchem"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-073",
+      "prompt": "Fact: The cell with an axon and dendrites typically communicates with another such cell across a ",
+      "target": "synapse",
+      "prompt_target_sha256": "e181c7f5f553124bdccb6e86a5e4d4ccf7a2b0df1662f26e5f084297e8f103b1",
+      "hop1_source_ids": [
+        "neurons"
+      ],
+      "hop2_source_ids": [
+        "neurons"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-074",
+      "prompt": "Fact: The cells carrying nerve impulses often have axons insulated by a material called ",
+      "target": "myelin",
+      "prompt_target_sha256": "47b9afc865ac0f209ed67d666e5036e9fe6d64d827fe481f349b677649af281d",
+      "hop1_source_ids": [
+        "neurons"
+      ],
+      "hop2_source_ids": [
+        "neurons"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-075",
+      "prompt": "Fact: The membrane-bound compartment housing most eukaryotic chromosomes contains a ribosome-assembly structure called the ",
+      "target": "nucleolus",
+      "prompt_target_sha256": "97f76034f1c1a29aa1cb4f6a0a4fdf8b119ee473a94864cafb8f5b1e524040b8",
+      "hop1_source_ids": [
+        "nucleus"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Nucleolus/ribosome assembly and double nuclear membrane respectively still require explicit source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-076",
+      "prompt": "Fact: The compartment housing most eukaryotic chromosomes is surrounded by how many membranes? The answer is ",
+      "target": "2",
+      "prompt_target_sha256": "5f4e0be95eb51802470a2659e29b98bb87054f333554cabc5575ba7142489cb5",
+      "hop1_source_ids": [
+        "nucleus"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Nucleolus/ribosome assembly and double nuclear membrane respectively still require explicit source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-077",
+      "prompt": "Fact: The green photosynthetic pigment in plants contains a central atom of the metal ",
+      "target": "magnesium",
+      "prompt_target_sha256": "6ea351a7a7a1f94c3b93f53a25a2d2ff9a489fc588f7bf46c844ed7d6579d602",
+      "hop1_source_ids": [
+        "chlorophyll"
+      ],
+      "hop2_source_ids": [
+        "chlorophyll"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-078",
+      "prompt": "Fact: The light-absorbing plant pigment with a magnesium-containing ring is located mainly in organelles called ",
+      "target": "chloroplasts",
+      "prompt_target_sha256": "8400f89998e07524bbbb4bd93c86861dda9a8d4216f4bf529c1ab02a84dbc8da",
+      "hop1_source_ids": [
+        "chlorophyll"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Chloroplast location not yet verified in inspected page.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-079",
+      "prompt": "Fact: The structural protein providing much of the tensile strength of tendons has a characteristic molecular arrangement called a ",
+      "target": "triple helix",
+      "prompt_target_sha256": "3a68795e7bbacedc1cb7dfc060a06b996e260115932976f2d8622a5025065ce7",
+      "hop1_source_ids": [
+        "collagen"
+      ],
+      "hop2_source_ids": [
+        "collagen"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-080",
+      "prompt": "Fact: The structural protein whose molecules form a triple helix has every third amino-acid residue occupied by ",
+      "target": "glycine",
+      "prompt_target_sha256": "d89531d95a30a45d507167cff34dad732f615482980649a1f8227cbf698f0660",
+      "hop1_source_ids": [
+        "collagen"
+      ],
+      "hop2_source_ids": [
+        "collagen"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-081",
+      "prompt": "Fact: The French emperor defeated at Waterloo was finally exiled to the island of ",
+      "target": "Saint Helena",
+      "prompt_target_sha256": "62fbe62dabcd34e826f50aa5fb59370487533258a51ce5fd6ef3e432a580ec67",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-082",
+      "prompt": "Fact: The French commander victorious at Austerlitz in 1805 was born on the island of ",
+      "target": "Corsica",
+      "prompt_target_sha256": "3c83442bb7ef699f411fefe3c56e0edb41ccff55065d38a5d698714756ef2416",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-083",
+      "prompt": "Fact: The naturalist who wrote On the Origin of Species travelled aboard HMS ",
+      "target": "Beagle",
+      "prompt_target_sha256": "4be01123086f76fadb5b94ab65d0aa03245775c04f42aa63f001ae4d912b4f72",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-084",
+      "prompt": "Fact: The naturalist associated with the Beagle voyage and evolution by natural selection was born in the English town of ",
+      "target": "Shrewsbury",
+      "prompt_target_sha256": "656d123206f9f370c0a49f2b79ea71b6990840af27d2e4bd2fb048ce432caec9",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-085",
+      "prompt": "Fact: The physicist awarded the Nobel Prize for the photoelectric effect was born in the town of ",
+      "target": "Ulm",
+      "prompt_target_sha256": "376abbaecb0a40fe85524cc617174e53d7896d6f8f062c773a46647f30851655",
+      "hop1_source_ids": [
+        "einstein"
+      ],
+      "hop2_source_ids": [
+        "einstein"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-086",
+      "prompt": "Fact: The physicist who published special relativity in 1905 received the Physics Nobel Prize designated for the year ",
+      "target": "1921",
+      "prompt_target_sha256": "6c5af172b56bc81cd9234e896c9178e27e4aedea5efeababd5fe13e9ac580188",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "einstein"
+      ],
+      "review_note": "1905 special-relativity attribution still needs source binding.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-087",
+      "prompt": "Fact: The astronomer who first reported four moons of Jupiter in 1610 was born in the city of ",
+      "target": "Pisa",
+      "prompt_target_sha256": "26f81d125b5e7f8fb8beb705a269517cfb15f5bf65904030207fe69fe86d3bde",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-088",
+      "prompt": "Fact: The author of Dialogue Concerning the Two Chief World Systems was tried by the Roman Inquisition in ",
+      "target": "1633",
+      "prompt_target_sha256": "dd4d46dfefb66c2babf7eb5fbec0bb829880e43334d659dbfaabff6b87d59968",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-089",
+      "prompt": "Fact: The queen allied with both Julius Caesar and Mark Antony belonged to the dynasty called the ",
+      "target": "Ptolemaic dynasty",
+      "prompt_target_sha256": "211e2566773eb668261ef14d76fdf6e978e086aa2898a20a5ca763a73a54f9c7",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-090",
+      "prompt": "Fact: The Egyptian queen who supported Mark Antony at the Battle of Actium died in the year ",
+      "target": "30 BCE",
+      "prompt_target_sha256": "58ab4abe3e0ab40f0b8c982aeda2dc79a0f5a72c8adda629908d93ce86556c24",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-091",
+      "prompt": "Fact: The printer associated with the first major European movable-type Bible developed his press in the city of ",
+      "target": "Mainz",
+      "prompt_target_sha256": "a79cab72128730be9326d174a19f1b32065a9144780e68b369e8ecb48d7862b1",
+      "hop1_source_ids": [
+        "gutenberg"
+      ],
+      "hop2_source_ids": [
+        "gutenberg"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-092",
+      "prompt": "Fact: The inventor associated with printing a forty-two-line Bible in the fifteenth century originally worked as a ",
+      "target": "goldsmith",
+      "prompt_target_sha256": "b48bd2f7dbc64a6252eebc89abb7df12487517775754d1470bce293a5a541df9",
+      "hop1_source_ids": [
+        "gutenberg"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Goldsmith occupation still requires explicit source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-093",
+      "prompt": "Fact: The ancient teacher whose sayings are collected in the Analects lived in the country now called ",
+      "target": "China",
+      "prompt_target_sha256": "6e28fea9a301e6d390a401efe3546dc952450e2b6658b7ee46c45338de002f89",
+      "hop1_source_ids": [
+        "confucius"
+      ],
+      "hop2_source_ids": [
+        "confucius"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-094",
+      "prompt": "Fact: The ancient Chinese teacher traditionally dated to 551–479 BCE is associated with the collection known as the ",
+      "target": "Analects",
+      "prompt_target_sha256": "3ab0b1ae693410f72b9597e66aab8a2ad4e750f5652574d10218c7508bd9444c",
+      "hop1_source_ids": [
+        "confucius"
+      ],
+      "hop2_source_ids": [
+        "confucius"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-095",
+      "prompt": "Fact: The author of Hamlet was born in the town of ",
+      "target": "Stratford-upon-Avon",
+      "prompt_target_sha256": "9495ae6712271ea20ba18d6f0d915423fd264ad18dd7713236442f19839aeebb",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "shakespeare"
+      ],
+      "review_note": "Specific Hamlet/Romeo and Juliet authorship requires explicit work source passage.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-096",
+      "prompt": "Fact: The author of Romeo and Juliet was born in the year ",
+      "target": "1564",
+      "prompt_target_sha256": "1ddbe9812a350ee8397ef07d64de8b1488e1c5dfa473ebe5f657c8647a925854",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "shakespeare"
+      ],
+      "review_note": "Specific Hamlet/Romeo and Juliet authorship requires explicit work source passage.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-097",
+      "prompt": "Fact: The composer of the Ninth Symphony containing the Ode to Joy was born in the city of ",
+      "target": "Bonn",
+      "prompt_target_sha256": "54b598737d51b290b4bcc709625841219192b0c48bcea9ee58ad76d152872540",
+      "hop1_source_ids": [
+        "beethoven_works"
+      ],
+      "hop2_source_ids": [
+        "beethoven"
+      ],
+      "review_note": "Ninth Symphony attribution checked; Ode to Joy identification needs explicit passage.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-098",
+      "prompt": "Fact: The composer of the opera Fidelio died in the city of ",
+      "target": "Vienna",
+      "prompt_target_sha256": "1f762bdb8609f868b7eede756c988d3d2054cddc56025c55b9a124f16aca90d2",
+      "hop1_source_ids": [
+        "beethoven_works"
+      ],
+      "hop2_source_ids": [
+        "beethoven"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-099",
+      "prompt": "Fact: The composer of The Magic Flute was born in the city of ",
+      "target": "Salzburg",
+      "prompt_target_sha256": "c20675e939ade4cf6874bdfb422a0c25c9af860b5eb5db26b06c141d17ade0d6",
+      "hop1_source_ids": [
+        "mozart_flute"
+      ],
+      "hop2_source_ids": [
+        "mozart_birth"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-100",
+      "prompt": "Fact: The composer of the opera Don Giovanni was born in the year ",
+      "target": "1756",
+      "prompt_target_sha256": "fc87068f89e6fffb33c20d977c504c659291eea4cc0f3007010a76169b778321",
+      "hop1_source_ids": [
+        "mozart"
+      ],
+      "hop2_source_ids": [
+        "mozart"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-101",
+      "prompt": "Fact: The painter of Guernica was born in the Spanish city of ",
+      "target": "Malaga",
+      "prompt_target_sha256": "1fced08dc80fd29598be3660bdd3c2498df86b5b592657eb463942f893e1fcb6",
+      "hop1_source_ids": [
+        "picasso_guernica"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Birthplace Malaga not checked yet.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-102",
+      "prompt": "Fact: The painter of Les Demoiselles d'Avignon helped develop the movement called ",
+      "target": "Cubism",
+      "prompt_target_sha256": "9d248e3f02e97ffabd6c88e383a1b8541ae7405d40abff50719fd115f3026ebb",
+      "hop1_source_ids": [
+        "picasso_demoiselles"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Cubism co-development not explicitly checked.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-103",
+      "prompt": "Fact: The painter famous for the Water Lilies series cultivated his garden at ",
+      "target": "Giverny",
+      "prompt_target_sha256": "51bf6ad1342ed5001ce6300b044ecb2e73413a8e5f1211102acc309dc98935d1",
+      "hop1_source_ids": [
+        "monet"
+      ],
+      "hop2_source_ids": [
+        "monet"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-104",
+      "prompt": "Fact: The painter of Impression, Sunrise is associated with the movement called ",
+      "target": "Impressionism",
+      "prompt_target_sha256": "940945834bc5ad2a21ed10d10aba0d18f6b465be3ffd19d6847daaf004ccc887",
+      "hop1_source_ids": [
+        "monet"
+      ],
+      "hop2_source_ids": [
+        "monet"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-105",
+      "prompt": "Fact: The author of The Hobbit held professorships at the University of ",
+      "target": "Oxford",
+      "prompt_target_sha256": "97ccedf405d8827889fed4df91f93816229b5d15dbbb5c693387ff3f72f1e7ce",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-106",
+      "prompt": "Fact: The author of The Lord of the Rings was born in the city of ",
+      "target": "Bloemfontein",
+      "prompt_target_sha256": "de628e2cdc1e6875262bc4992231fecc66940ee45a3740db03e70abb25970546",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-107",
+      "prompt": "Fact: The composer of the Brandenburg Concertos was born in the town of ",
+      "target": "Eisenach",
+      "prompt_target_sha256": "4f9d11c41b1d96b306e40b7799c28f75264db4129c6cc0d15c02fb6c47b50d18",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-108",
+      "prompt": "Fact: The composer of the Goldberg Variations worked in the musical period known as the ",
+      "target": "Baroque",
+      "prompt_target_sha256": "867430a76c2c2452a77068170155c70dbc62c2bdba40b25a012d28c13fa86ee3",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-109",
+      "prompt": "Fact: The composer of the Revolutionary Etude wrote chiefly for the instrument called the ",
+      "target": "piano",
+      "prompt_target_sha256": "a7e0b04f67363954a44e9c30e7f04025da8e73a4f24f76da00152e77861a5bcd",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-110",
+      "prompt": "Fact: The composer of the Minute Waltz spent much of his adult career in the city of ",
+      "target": "Paris",
+      "prompt_target_sha256": "92f9558ebdb743708179f027d1c78b5aab14e204f613d6e754c004b030b5d0e7",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-111",
+      "prompt": "Fact: The painter of The School of Athens was born in the town of ",
+      "target": "Urbino",
+      "prompt_target_sha256": "ca6be58be0d6c60ede20e2239e71c9823f6ba46fa80baf9f940b85c3015c3a17",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-112",
+      "prompt": "Fact: The painter of the Sistine Madonna worked in the artistic period known as the ",
+      "target": "High Renaissance",
+      "prompt_target_sha256": "5e0360bb42ef06e0c816aa1c322f54e6dd5b9027db1047c041e506e4f2b1e943",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-113",
+      "prompt": "Fact: The Unix-like kernel created by Linus Torvalds is distributed under the license abbreviated ",
+      "target": "GPL",
+      "prompt_target_sha256": "1623b5346bf8bc4aaa44ffb721ceefe9121b69f6a9429a5e776e8d355eb8bc64",
+      "hop1_source_ids": [
+        "linux"
+      ],
+      "hop2_source_ids": [
+        "linux_license"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-114",
+      "prompt": "Fact: The operating-system kernel whose mascot is the penguin Tux was first released in ",
+      "target": "1991",
+      "prompt_target_sha256": "220478ecc9c90dc64c95da399786f8c0980bc13ef803158771eb3581d7048767",
+      "hop1_source_ids": [
+        "linux_license"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Exact Tux mascot wording and 1991 first release require source binding.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-115",
+      "prompt": "Fact: The programming language created by Guido van Rossum was first publicly released in ",
+      "target": "1991",
+      "prompt_target_sha256": "961d51e5979b15cb9781403e13ef914606aa3cf0adbca50c8810c4f9cc7ffe3b",
+      "hop1_source_ids": [
+        "python"
+      ],
+      "hop2_source_ids": [
+        "python"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-116",
+      "prompt": "Fact: The programming language whose enhancement proposals are abbreviated PEP was created by ",
+      "target": "Guido van Rossum",
+      "prompt_target_sha256": "47505bfd9d0a2de8778760f5ccbb25b3d8fa67a6c7c4a6234cd3ea6ff9ab4e6e",
+      "hop1_source_ids": [
+        "python"
+      ],
+      "hop2_source_ids": [
+        "python"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-117",
+      "prompt": "Fact: The pair of space probes launched in 1977 carries gold-plated message records whose underlying metal is ",
+      "target": "copper",
+      "prompt_target_sha256": "b4d6ff138c28bd25e3c271da9c900e39f0ba071c64154ddb80d9c7c2b762955c",
+      "hop1_source_ids": [
+        "voyager"
+      ],
+      "hop2_source_ids": [],
+      "review_note": "Underlying copper of Golden Records needs detailed source; program/pair scope now consistent.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-118",
+      "prompt": "Fact: The space-probe program whose first spacecraft crossed the heliopause in 2012 began with two launches in the year ",
+      "target": "1977",
+      "prompt_target_sha256": "4b0266bfb52ce450b8bc4c5723ebd05c029b1e0d80471e89605879d87788e6aa",
+      "hop1_source_ids": [
+        "voyager"
+      ],
+      "hop2_source_ids": [
+        "voyager"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-119",
+      "prompt": "Fact: The space telescope deployed by the shuttle Discovery in 1990 operates in low orbit around ",
+      "target": "Earth",
+      "prompt_target_sha256": "d1ab9412f059d54e9428e11979bf83564d451e7fe30b2bac7397791e6469a049",
+      "hop1_source_ids": [
+        "hubble"
+      ],
+      "hop2_source_ids": [
+        "hubble"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-120",
+      "prompt": "Fact: The space telescope repaired during the STS-61 mission has a primary mirror with a diameter of ",
+      "target": "2.4 metres",
+      "prompt_target_sha256": "8462b290ab028cfedcee65f82293dfc55454ab41c28618d8df0c5f87a2f42f2a",
+      "hop1_source_ids": [
+        "hubble_service"
+      ],
+      "hop2_source_ids": [
+        "hubble"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-121",
+      "prompt": "Fact: The online encyclopedia launched by Jimmy Wales and Larry Sanger began in the year ",
+      "target": "2001",
+      "prompt_target_sha256": "f3dbb4425d6888ee9b552eae159f06a0e54ebfd18b8179d74da263b822231bde",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-122",
+      "prompt": "Fact: The online encyclopedia whose logo is an unfinished globe made of puzzle pieces is supported by the ",
+      "target": "Wikimedia Foundation",
+      "prompt_target_sha256": "fb8680b9865fde38a564432ff72699f1281f5a1e602d74ea0dfcb8b86ba5b8a0",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-123",
+      "prompt": "Fact: The character standard whose code points are conventionally written with a U+ prefix first published Version 1.0 in ",
+      "target": "1991",
+      "prompt_target_sha256": "2963ad657d6e525f63b3453f83e2d28fa88a44c136ca34a90ee5525e06908ac8",
+      "hop1_source_ids": [
+        "unicode"
+      ],
+      "hop2_source_ids": [
+        "unicode"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-124",
+      "prompt": "Fact: The UTF-8 encoding of the character standard managed by the consortium responsible for emoji uses at most how many bytes per code point? The answer is ",
+      "target": "4",
+      "prompt_target_sha256": "ec2aedf0a30aa608bd15242674587b8ed58551789a1cf531c522422c2668118a",
+      "hop1_source_ids": [
+        "unicode"
+      ],
+      "hop2_source_ids": [
+        "unicode"
+      ],
+      "review_note": "UTF-8/code-point limit checked; consortium responsibility for emoji needs explicit organizational source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-125",
+      "prompt": "Fact: The local-area networking technology standardized as IEEE 802.3 was first developed at ",
+      "target": "Xerox PARC",
+      "prompt_target_sha256": "69c7f5aea8b3f253b6372a9731a36bbc2218d4f0bfaf52e12118aaf0a6ec544a",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "ethernet"
+      ],
+      "review_note": "IEEE 802.3 standard identification needs exact primary source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-126",
+      "prompt": "Fact: The networking technology proposed by Robert Metcalfe in 1973 conventionally uses MAC addresses containing how many bits? The answer is ",
+      "target": "48",
+      "prompt_target_sha256": "bdb728cdde83013f140be116201440c581c68ff34c39c446df5f8417472cb001",
+      "hop1_source_ids": [
+        "ethernet_origin"
+      ],
+      "hop2_source_ids": [
+        "ethernet"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-127",
+      "prompt": "Fact: The open-source electronics platform founded around the Interaction Design Institute Ivrea originated in the country of ",
+      "target": "Italy",
+      "prompt_target_sha256": "0d6839956567ee28c320a95037408ab0f10c48755074b1e3f8614e25945f81f0",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-128",
+      "prompt": "Fact: The open-source electronics platform named after a bar in Ivrea was founded in the year ",
+      "target": "2005",
+      "prompt_target_sha256": "ea6ee6de248a26350082e59423f27a65ec2d531adcad372b14dce8213a5ecdcd",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-129",
+      "prompt": "Fact: The SI base unit defined by fixing the Boltzmann constant has the symbol ",
+      "target": "K",
+      "prompt_target_sha256": "95ab07e161ec7fc39ca3c761178a7c1d1e22f923fd24ad30555377112662b756",
+      "hop1_source_ids": [
+        "si"
+      ],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-130",
+      "prompt": "Fact: The SI unit associated with the physicist William Thomson measures the physical quantity ",
+      "target": "temperature",
+      "prompt_target_sha256": "f99fe5aeda97ad4cb96ad98bddca051718d6ea34127df05b2ea302491b6c3cae",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Named scientist biography and eponym relationship need explicit sources beyond concise SI table.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-131",
+      "prompt": "Fact: The SI unit named after a seventeenth-century French mathematician measures the physical quantity ",
+      "target": "pressure",
+      "prompt_target_sha256": "8a080fda0d3de6e1f84e9443cc7607b80969bec2a79bd9ced58d2c213bcafe55",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Named scientist biography and eponym relationship need explicit sources beyond concise SI table.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-132",
+      "prompt": "Fact: The derived SI unit equal to one newton per square metre has the symbol ",
+      "target": "Pa",
+      "prompt_target_sha256": "46951449ac4bd3995981328e34cc243c732504fcc8bc97868067f5264688c7be",
+      "hop1_source_ids": [
+        "si"
+      ],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-133",
+      "prompt": "Fact: The SI unit named after the discoverer of universal gravitation has the symbol ",
+      "target": "N",
+      "prompt_target_sha256": "d8db19f73c42f4be4db3a66775b13b65fb39167f9aaabafbc9cea643ebf46d3b",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Named scientist biography and eponym relationship need explicit sources beyond concise SI table.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-134",
+      "prompt": "Fact: The SI unit equal to one kilogram metre per second squared measures the physical quantity ",
+      "target": "force",
+      "prompt_target_sha256": "c4398a71805d4c8d9ec7df91e562f8b8d33979f1dedac0e7c17be352c33bd616",
+      "hop1_source_ids": [
+        "si"
+      ],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-135",
+      "prompt": "Fact: The SI unit named after the Scottish engineer who improved the steam engine measures the physical quantity ",
+      "target": "power",
+      "prompt_target_sha256": "39efef50cace0bf51314d33d13497e8b5e487bd14f836863ad750415917bca7e",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Named scientist biography and eponym relationship need explicit sources beyond concise SI table.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-136",
+      "prompt": "Fact: The SI unit equal to one joule per second has the symbol ",
+      "target": "W",
+      "prompt_target_sha256": "416b37ba0b61f0c75130ab8ebebc3bcba1e767698574dbe46d25eb96db2b0f47",
+      "hop1_source_ids": [
+        "si"
+      ],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-137",
+      "prompt": "Fact: The SI unit named after the Serbian-American inventor associated with alternating-current systems has the symbol ",
+      "target": "T",
+      "prompt_target_sha256": "e390983ccf8d9082f919f27795cba57c2d64dc0b6d114fd85709d8c5c0d45d46",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Named scientist biography and eponym relationship need explicit sources beyond concise SI table.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-138",
+      "prompt": "Fact: The SI unit equal to one weber per square metre measures the physical quantity ",
+      "target": "magnetic flux density",
+      "prompt_target_sha256": "a1f7bc580a1fabf2d98f492001bd6d608878fb3917050de6fa836446e0d45dbb",
+      "hop1_source_ids": [
+        "si"
+      ],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-139",
+      "prompt": "Fact: The SI unit named after the inventor of the first electric battery has the symbol ",
+      "target": "V",
+      "prompt_target_sha256": "5edd7dd59f93ec8eb574420fe338a4cc932ff704b728fce20b8851d0498869c1",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Named scientist biography and eponym relationship need explicit sources beyond concise SI table.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-140",
+      "prompt": "Fact: The SI unit equal to one joule per coulomb measures the physical quantity ",
+      "target": "electric potential difference",
+      "prompt_target_sha256": "b7c131c08c619efa85e3a86b5a0f431e1272a6c43300ff3f4b081263f9729637",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Joule per coulomb equivalence not explicitly checked in concise table excerpt.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-141",
+      "prompt": "Fact: The SI base unit containing exactly Avogadro's number of entities has the symbol ",
+      "target": "mol",
+      "prompt_target_sha256": "87ab02db18c503447eb956de97de2ef098cf29bc34c068b6ed9e6dd21777f258",
+      "hop1_source_ids": [
+        "si"
+      ],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-142",
+      "prompt": "Fact: The SI base unit added to the system in 1971 measures the physical quantity ",
+      "target": "amount of substance",
+      "prompt_target_sha256": "c6f9d0cc1b086cd8967e8032017c02571757fd52f203d817d03c43ca73980c8b",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "Mole 1971 addition date needs explicit historical source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-143",
+      "prompt": "Fact: The SI unit named after a British radiation physicist has the symbol ",
+      "target": "Gy",
+      "prompt_target_sha256": "72fe279bdb0ee0e3a4db2929fb0c458955051d62c2913bc9bdb5731d344d426e",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [
+        "si"
+      ],
+      "review_note": "British radiation physicist namesake needs explicit source.",
+      "status": "partial_or_requires_specific_check"
+    },
+    {
+      "name": "confirmation-144",
+      "prompt": "Fact: The SI unit adopted in 1975 for absorbed radiation dose is equivalent to how many rads? The answer is ",
+      "target": "100",
+      "prompt_target_sha256": "ed983af0b75b3ed028c0caf5cfbcfa6aecc5847d9f338860db3e6ddc26330392",
+      "hop1_source_ids": [],
+      "hop2_source_ids": [],
+      "status": "not_yet_covered_by_this_reviewer",
+      "review_note": "No independent source evidence captured here yet."
+    },
+    {
+      "name": "confirmation-145",
+      "prompt": "Fact: The molecule principally responsible for the stratospheric shield against ultraviolet light has the formula ",
+      "target": "O3",
+      "prompt_target_sha256": "43b11059135d86932ef3e2d42a9791c7241b80c46479095b47a4a667012de321",
+      "hop1_source_ids": [
+        "env_noaa_ozone"
+      ],
+      "hop2_source_ids": [
+        "env_noaa_ozone"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported",
+      "source_fact_id": "ozone",
+      "source_cluster": "environment",
+      "concept": "ozone",
+      "intermediate": "ozone",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_ozone"
+        ],
+        "claim": "The shield clue points to ozone because most ozone is in the stratosphere and stratospheric ozone is the ozone layer.",
+        "relation": "prompt clue → intermediate ozone",
+        "locator": "NOAA lines 25-29",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_ozone"
+        ],
+        "claim": "The ozone molecule has three oxygen atoms and formula O3.",
+        "relation": "intermediate ozone → target O3",
+        "locator": "NOAA lines 28-29",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-146",
+      "prompt": "Fact: The oxygen allotrope depleted by stratospheric chlorine radicals contains how many atoms per molecule? The answer is ",
+      "target": "3",
+      "prompt_target_sha256": "7c81734a56fb43a6f56a86f56815b9fb4c365f1eb1d205624593ee25580d3509",
+      "hop1_source_ids": [
+        "env_noaa_chlorine_depletion"
+      ],
+      "hop2_source_ids": [
+        "env_noaa_ozone"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported",
+      "source_fact_id": "ozone",
+      "source_cluster": "environment",
+      "concept": "ozone",
+      "intermediate": "ozone",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_chlorine_depletion"
+        ],
+        "claim": "Stratospheric ozone is destroyed by chlorine-radical chain reactions.",
+        "relation": "prompt clue → intermediate ozone",
+        "locator": "NOAA FAQ2 lines24–33",
+        "notes": "Exact new clue reviewed independently by /root/main_only_review/receipt_binding_read; root applied metadata correction."
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_ozone"
+        ],
+        "claim": "Ozone molecules consist of three oxygen atoms.",
+        "relation": "intermediate ozone → target 3",
+        "locator": "NOAA line 28",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-147",
+      "prompt": "Fact: The rock forming the columns of the Giant's Causeway is classified as an ",
+      "target": "extrusive igneous rock",
+      "prompt_target_sha256": "7fa622aad4003d383748180bc23d74767ae5f5cd35ba44cd7ec5d17e9e56259a",
+      "hop1_source_ids": [
+        "env_unesco_causeway"
+      ],
+      "hop2_source_ids": [
+        "env_unesco_causeway",
+        "env_nps_igneous"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "basalt",
+      "source_cluster": "environment",
+      "concept": "basalt",
+      "intermediate": "basalt",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_unesco_causeway"
+        ],
+        "claim": "UNESCO identifies the Giant’s Causeway columns as basalt and describes the exposed succession as lava flows.",
+        "relation": "Giant’s Causeway columns → intermediate basalt",
+        "locator": "UNESCO lines 46-51",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_unesco_causeway",
+          "env_nps_igneous"
+        ],
+        "claim": "The Causeway’s basalt lavas are volcanic lava; NPS defines extrusive igneous rocks as volcanic rocks erupted onto the surface.",
+        "relation": "intermediate basalt → target extrusive igneous rock",
+        "locator": "UNESCO lines 48-51; NPS lines 50-51, 94-100",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-148",
+      "prompt": "Fact: The most abundant volcanic rock of the oceanic crust is compositionally classified as ",
+      "target": "mafic",
+      "prompt_target_sha256": "0f3d5dba5ee98e8b08189384af4ea0e735b7400eb3261138ce24fe7d1f6237c3",
+      "hop1_source_ids": [
+        "env_nps_volcanic"
+      ],
+      "hop2_source_ids": [
+        "env_nps_volcanic",
+        "env_nps_igneous"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "basalt",
+      "source_cluster": "environment",
+      "concept": "basalt",
+      "intermediate": "basalt",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nps_volcanic"
+        ],
+        "claim": "NPS directly links much oceanic crust to basalt at spreading centers.",
+        "relation": "oceanic crust clue → intermediate basalt",
+        "locator": "NPS volcanic landforms lines 61-66",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nps_volcanic",
+          "env_nps_igneous"
+        ],
+        "claim": "NPS calls basalt a mafic rock and its igneous classification lists basalt in the mafic row.",
+        "relation": "intermediate basalt → target mafic",
+        "locator": "NPS volcanic landforms lines 63-66; NPS igneous lines 94-100, 127-136",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-149",
+      "prompt": "Fact: The rock into which Mount Rushmore was carved is classified as an ",
+      "target": "intrusive igneous rock",
+      "prompt_target_sha256": "a3fe625315f4c422031fb0dd9c7f6d1dd7b4991377616f4935091caebf48e828",
+      "hop1_source_ids": [
+        "env_nps_rushmore"
+      ],
+      "hop2_source_ids": [
+        "env_nps_igneous"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "granite",
+      "source_cluster": "environment",
+      "concept": "granite",
+      "intermediate": "granite",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nps_rushmore"
+        ],
+        "claim": "NPS identifies Mount Rushmore’s upper portion as fine-grained granite formed when molten rock cooled underground.",
+        "relation": "Mount Rushmore clue → intermediate granite",
+        "locator": "NPS Mount Rushmore lines 26, 30-32",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nps_igneous"
+        ],
+        "claim": "NPS defines intrusive rocks as solidifying within Earth and classifies granite as intrusive; its granite section calls granite the common intrusive rock.",
+        "relation": "intermediate granite → target intrusive igneous rock",
+        "locator": "NPS igneous lines 30-35, 98-99, 270-273",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-150",
+      "prompt": "Fact: The rock historically quarried at Rubislaw in Aberdeen commonly contains quartz, mica and ",
+      "target": "feldspar",
+      "prompt_target_sha256": "d2200895807042ace057c4e85249b3350bbc2b3d006f7353d97e429ac6602cbf",
+      "hop1_source_ids": [
+        "env_govscot_rubislaw"
+      ],
+      "hop2_source_ids": [
+        "env_govscot_rubislaw",
+        "env_nps_igneous"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "granite",
+      "source_cluster": "environment",
+      "concept": "granite",
+      "intermediate": "granite",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_govscot_rubislaw"
+        ],
+        "claim": "The Scottish Government report ties the Aberdeen granite to samples from Rubislaw quarry and describes the Aberdeen pluton as granite.",
+        "relation": "Rubislaw Aberdeen clue → intermediate granite",
+        "locator": "Scottish Government lines 129-130, 158-160",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_govscot_rubislaw",
+          "env_nps_igneous"
+        ],
+        "claim": "The report states that these granites contain abundant quartz, feldspar, and mica; the missing mineral after quartz and mica is feldspar.",
+        "relation": "intermediate granite → target feldspar",
+        "locator": "Scottish Government lines 161-162; NPS igneous lines 270-273",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-151",
+      "prompt": "Fact: The wind system responsible for much of South Asia's annual rain typically brings its wet phase during ",
+      "target": "summer",
+      "prompt_target_sha256": "1659539ec2f90b55314a36eda5b2ad0da6b2113e0711996b39c1a402a0815aa4",
+      "hop1_source_ids": [
+        "env_noaa_monsoon"
+      ],
+      "hop2_source_ids": [
+        "env_noaa_monsoon"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported",
+      "source_fact_id": "monsoon",
+      "source_cluster": "environment",
+      "concept": "monsoon",
+      "intermediate": "monsoon",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_monsoon"
+        ],
+        "claim": "NOAA identifies monsoon as a seasonal wind shift and states that the heaviest-rainfall monsoons near the Indian Ocean are summer monsoons.",
+        "relation": "prompt clue → intermediate monsoon",
+        "locator": "NOAA lines 13-23, 27-30",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_monsoon"
+        ],
+        "claim": "The wet phase described in the prompt is summer: NOAA says summer monsoons cause the heaviest rainfall and winter monsoons there are usually dry.",
+        "relation": "intermediate monsoon → target summer",
+        "locator": "NOAA lines 27-30",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-152",
+      "prompt": "Fact: The wind system responsible for South Asia's annual rains takes its name from an Arabic word meaning ",
+      "target": "season",
+      "prompt_target_sha256": "92035d351fb6721ee295d2237820e9145eafd7addd3d511af8a433889fc354ec",
+      "hop1_source_ids": [
+        "env_noaa_monsoon"
+      ],
+      "hop2_source_ids": [
+        "env_noaa_monsoon"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported",
+      "source_fact_id": "monsoon",
+      "source_cluster": "environment",
+      "concept": "monsoon",
+      "intermediate": "monsoon",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_monsoon"
+        ],
+        "claim": "NOAA describes the wind system as a monsoon and says the word comes from the Arabic word mausim.",
+        "relation": "prompt clue → intermediate monsoon",
+        "locator": "NOAA lines 13-20",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_noaa_monsoon"
+        ],
+        "claim": "NOAA explicitly translates Arabic mausim as “season.”",
+        "relation": "intermediate monsoon → target season",
+        "locator": "NOAA line 20",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-153",
+      "prompt": "Fact: The slowly moving perennial ice body that carves U-shaped valleys flows mainly under the force of ",
+      "target": "gravity",
+      "prompt_target_sha256": "4c5f1000b210eaf08c305562a117435b3463453680d81ab6b03d4bccc6ca91b1",
+      "hop1_source_ids": [
+        "env_usgs_glacier"
+      ],
+      "hop2_source_ids": [
+        "env_usgs_glacier",
+        "env_nps_glacial_geology"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "glacier",
+      "source_cluster": "environment",
+      "concept": "glacier",
+      "intermediate": "glacier",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_usgs_glacier"
+        ],
+        "claim": "USGS defines the described perennial moving ice body as a glacier.",
+        "relation": "slowly moving perennial ice body → intermediate glacier",
+        "locator": "USGS lines 3-9",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_usgs_glacier",
+          "env_nps_glacial_geology"
+        ],
+        "claim": "USGS says glaciers move downslope under their weight and gravity; NPS likewise says glaciers move under gravity.",
+        "relation": "intermediate glacier → target gravity",
+        "locator": "USGS lines 3-9; NPS lines 25-29",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-154",
+      "prompt": "Fact: The moving ice body that carves U-shaped valleys leaves ridges of debris called ",
+      "target": "moraines",
+      "prompt_target_sha256": "a0e3be22c7de0b894a313c88c838a724db5fe239aecb76e18d9d59b2978d36f7",
+      "hop1_source_ids": [
+        "env_nps_glacial_geology"
+      ],
+      "hop2_source_ids": [
+        "env_nps_glacial_geology"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "glacier",
+      "source_cluster": "environment",
+      "concept": "glacier",
+      "intermediate": "glacier",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nps_glacial_geology"
+        ],
+        "claim": "NPS says glaciers scour valleys into a U-shape and carry debris downhill.",
+        "relation": "U-shaped-valley clue → intermediate glacier",
+        "locator": "NPS lines 27-40, 47-49",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nps_glacial_geology"
+        ],
+        "claim": "NPS says debris deposited at a glacier’s terminus accumulates as a sharp-edged ridge called a moraine.",
+        "relation": "intermediate glacier → target moraines",
+        "locator": "NPS lines 47-50",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-155",
+      "prompt": "Fact: The violently rotating column of air connecting a thunderstorm to the ground is rated in the United States on the ",
+      "target": "Enhanced Fujita scale",
+      "prompt_target_sha256": "4d181fd69f044ccd92cabf73714b9bea467c2e40e7a44da917dc830bd8b0c047",
+      "hop1_source_ids": [
+        "env_nws_tornado_glossary"
+      ],
+      "hop2_source_ids": [
+        "env_nws_efscale"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "tornado",
+      "source_cluster": "environment",
+      "concept": "tornado",
+      "intermediate": "tornado",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nws_tornado_glossary"
+        ],
+        "claim": "A tornado is a violently rotating air column beneath a cumulonimbus cloud, with circulation reaching the ground.",
+        "relation": "tornado clue → intermediate tornado",
+        "locator": "NWS glossary tornado lines2–3",
+        "notes": "Exact definition reviewed independently by /root/main_only_review/receipt_binding_read; root applied metadata correction."
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nws_efscale"
+        ],
+        "claim": "The requested U.S. rating scale is explicitly the Enhanced Fujita (EF) Scale, with ratings EF0 through EF5.",
+        "relation": "intermediate tornado → target Enhanced Fujita scale",
+        "locator": "NWS lines 150-165",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-156",
+      "prompt": "Fact: The weather phenomenon ranked by the Enhanced Fujita scale develops beneath thunderstorm clouds known as ",
+      "target": "cumulonimbus",
+      "prompt_target_sha256": "ee5e654d33738d3380d1a131d2b22ec06aeeea6ae0af550c4ea334c1cba65bef",
+      "hop1_source_ids": [
+        "env_nws_efscale"
+      ],
+      "hop2_source_ids": [
+        "env_nws_tornado_glossary"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "tornado",
+      "source_cluster": "environment",
+      "concept": "tornado",
+      "intermediate": "tornado",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nws_efscale"
+        ],
+        "claim": "The phenomenon rated by the EF Scale is a tornado.",
+        "relation": "EF-rated weather phenomenon → intermediate tornado",
+        "locator": "NWS lines 150-171",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nws_tornado_glossary"
+        ],
+        "claim": "NWS defines a tornado as usually pendant to a cumulonimbus, with circulation reaching the ground.",
+        "relation": "intermediate tornado → target cumulonimbus",
+        "locator": "NWS tornado glossary lines 0-4",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-157",
+      "prompt": "Fact: The surface point directly above the origin of a sudden fault-rupture event is called the ",
+      "target": "epicenter",
+      "prompt_target_sha256": "e29a0763ca1939550457be6901ac75adae08b6ca0904c474603d609c37076b82",
+      "hop1_source_ids": [
+        "env_usgs_earthquake_facts"
+      ],
+      "hop2_source_ids": [
+        "env_usgs_earthquake_facts"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "",
+      "source_fact_id": "earthquake",
+      "source_cluster": "environment",
+      "concept": "earthquake",
+      "intermediate": "earthquake",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_usgs_earthquake_facts"
+        ],
+        "claim": "USGS identifies the sudden fault-rupture event as an earthquake and defines its hypocenter as where rupture begins below the surface.",
+        "relation": "fault-rupture event → intermediate earthquake",
+        "locator": "USGS lines 54-61",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_usgs_earthquake_facts"
+        ],
+        "claim": "USGS says the epicenter is directly above the hypocenter on the Earth’s surface.",
+        "relation": "intermediate earthquake → target epicenter",
+        "locator": "USGS lines 60-61",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-158",
+      "prompt": "Fact: The natural event historically measured using the Richter scale has an underground point of origin called the ",
+      "target": "hypocenter",
+      "prompt_target_sha256": "0bfd5e400e41e02bdcf81dd784e305d11089413f4ec6a4c420cf97e26a7ec410",
+      "hop1_source_ids": [
+        "env_usgs_richter",
+        "env_usgs_earthquake_facts"
+      ],
+      "hop2_source_ids": [
+        "env_usgs_earthquake_facts"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "USGS notes that moment magnitude has replaced Richter for many large modern events; the prompt says historically measured, so this is not a target conflict.",
+      "source_fact_id": "earthquake",
+      "source_cluster": "environment",
+      "concept": "earthquake",
+      "intermediate": "earthquake",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_usgs_richter",
+          "env_usgs_earthquake_facts"
+        ],
+        "claim": "USGS describes the Richter scale as a historical earthquake magnitude scale and separately identifies the event as an earthquake.",
+        "relation": "Richter-scale event → intermediate earthquake",
+        "locator": "USGS Richter FAQ lines 3-6; USGS earthquake facts lines 54-61",
+        "notes": "USGS notes that moment magnitude has replaced Richter for many large modern events; the prompt says historically measured, so this is not a target conflict."
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_usgs_earthquake_facts"
+        ],
+        "claim": "USGS defines the underground point where fault rupture begins as the hypocenter.",
+        "relation": "intermediate earthquake → target hypocenter",
+        "locator": "USGS earthquake facts lines 60-61",
+        "notes": "USGS notes that moment magnitude has replaced Richter for many large modern events; the prompt says historically measured, so this is not a target conflict."
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-159",
+      "prompt": "Fact: Ground that remains frozen for at least two consecutive years has a seasonally thawed surface zone called the ",
+      "target": "active layer",
+      "prompt_target_sha256": "330885662a7468d16118e7ed0fcd64dd8b36432fb339424ff49a1c070071e342",
+      "hop1_source_ids": [
+        "env_nsidc_permafrost"
+      ],
+      "hop2_source_ids": [
+        "env_nsidc_active_layer",
+        "env_nsidc_permafrost"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported",
+      "source_fact_id": "permafrost",
+      "source_cluster": "environment",
+      "concept": "permafrost",
+      "intermediate": "permafrost",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nsidc_permafrost"
+        ],
+        "claim": "NSIDC defines permafrost as ground remaining at or below 0°C for at least two years and identifies the active layer above it.",
+        "relation": "frozen-ground clue → intermediate permafrost",
+        "locator": "NSIDC lines 66-77, 87-90",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nsidc_active_layer",
+          "env_nsidc_permafrost"
+        ],
+        "claim": "NSIDC defines the active layer as ground subject to annual thawing and freezing over permafrost.",
+        "relation": "intermediate permafrost → target active layer",
+        "locator": "NSIDC active-layer glossary lines 58-60; permafrost page lines 87-90",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    },
+    {
+      "name": "confirmation-160",
+      "prompt": "Fact: When long-frozen soil thaws, decomposition of its organic matter can release carbon dioxide and the greenhouse gas ",
+      "target": "methane",
+      "prompt_target_sha256": "8c5a69fc02f6305cc1e28932581c1b1083e5b2efce0c9afe73fc6165c1b4e938",
+      "hop1_source_ids": [
+        "env_nsidc_permafrost"
+      ],
+      "hop2_source_ids": [
+        "env_nsidc_permafrost"
+      ],
+      "review_note": "",
+      "status": "both_hops_supported",
+      "source_fact_id": "permafrost",
+      "source_cluster": "environment",
+      "concept": "permafrost",
+      "intermediate": "permafrost",
+      "hop1": {
+        "status": "verified",
+        "source_ids": [
+          "env_nsidc_permafrost"
+        ],
+        "claim": "NSIDC identifies thawing permafrost organic matter as the source context for the greenhouse-gas target.",
+        "relation": "thawing frozen-ground clue → intermediate permafrost",
+        "locator": "NSIDC lines 103-115",
+        "notes": ""
+      },
+      "hop2": {
+        "status": "verified",
+        "source_ids": [
+          "env_nsidc_permafrost"
+        ],
+        "claim": "NSIDC states that when permafrost thaws, organic matter decays and releases carbon dioxide and/or methane.",
+        "relation": "intermediate permafrost → target methane",
+        "locator": "NSIDC lines 107-115",
+        "notes": ""
+      },
+      "missing_evidence": [],
+      "contradictions": []
+    }
+  ],
+  "uncovered_item_ids": [
+    "confirmation-033",
+    "confirmation-034",
+    "confirmation-035",
+    "confirmation-036",
+    "confirmation-037",
+    "confirmation-038",
+    "confirmation-039",
+    "confirmation-040",
+    "confirmation-041",
+    "confirmation-042",
+    "confirmation-043",
+    "confirmation-044",
+    "confirmation-045",
+    "confirmation-046",
+    "confirmation-047",
+    "confirmation-048",
+    "confirmation-049",
+    "confirmation-050",
+    "confirmation-051",
+    "confirmation-052",
+    "confirmation-053",
+    "confirmation-054",
+    "confirmation-055",
+    "confirmation-056",
+    "confirmation-059",
+    "confirmation-060",
+    "confirmation-081",
+    "confirmation-082",
+    "confirmation-083",
+    "confirmation-084",
+    "confirmation-087",
+    "confirmation-088",
+    "confirmation-089",
+    "confirmation-090",
+    "confirmation-105",
+    "confirmation-106",
+    "confirmation-107",
+    "confirmation-108",
+    "confirmation-109",
+    "confirmation-110",
+    "confirmation-111",
+    "confirmation-112",
+    "confirmation-121",
+    "confirmation-122",
+    "confirmation-127",
+    "confirmation-128",
+    "confirmation-144"
+  ],
+  "both_hops_supported_count": 80,
+  "partial_count": 33,
+  "audit_scope": {
+    "initial_published_item_count": 160,
+    "extension_item_ids": [
+      "confirmation-049",
+      "confirmation-050",
+      "confirmation-051",
+      "confirmation-052",
+      "confirmation-053",
+      "confirmation-054",
+      "confirmation-055",
+      "confirmation-056",
+      "confirmation-057",
+      "confirmation-058",
+      "confirmation-059",
+      "confirmation-060",
+      "confirmation-061",
+      "confirmation-062",
+      "confirmation-063",
+      "confirmation-064",
+      "confirmation-145",
+      "confirmation-146",
+      "confirmation-147",
+      "confirmation-148",
+      "confirmation-149",
+      "confirmation-150",
+      "confirmation-151",
+      "confirmation-152",
+      "confirmation-153",
+      "confirmation-154",
+      "confirmation-155",
+      "confirmation-156",
+      "confirmation-157",
+      "confirmation-158",
+      "confirmation-159",
+      "confirmation-160"
+    ],
+    "no_prompt_edits": true
+  },
+  "summary": {
+    "source_record_count": 68,
+    "item_record_count": 160,
+    "both_hops_supported_count": 80,
+    "partial_count": 33,
+    "gap_count": 47,
+    "extension_status": "landform/environment extension in progress"
+  }
+}

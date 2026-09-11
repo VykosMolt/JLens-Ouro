@@ -1,0 +1,436 @@
+{
+  "schema": "primary_runtime_feasibility.v1",
+  "status": "proxy_estimate_complete_native_smoke_unmeasured",
+  "reviewed_on": "2026-09-10",
+  "new_confirmation_results_exposed": false,
+  "scope": {
+    "run_id": "ouro_confirmation_20260909_fixed160",
+    "planned_items": 160,
+    "planned_concepts": 80,
+    "arms": [
+      "raw",
+      "fit01",
+      "fit02",
+      "penultimate",
+      "sampled_sum",
+      "diagonal"
+    ],
+    "development_items": [
+      "carnival-ocean",
+      "amazon-language",
+      "mars-color"
+    ],
+    "workload_interpretation": "frozen bank-consuming evaluator plus native development smoke; no estimator fitting",
+    "model": {
+      "repo_id": "ByteDance/Ouro-2.6B",
+      "revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+      "manifest_path": "research/confirmation_2026-09-09/bundle/legacy/model_manifest.json",
+      "manifest_files": 13,
+      "manifest_total_bytes": 5341718984
+    }
+  },
+  "relevant_surface": [
+    {
+      "path": "research/confirmation_2026-09-09/bundle/frozen/run_spec.json",
+      "sha256": "8a4a3e6725d811d0b2584561a277d5071f097c551f40c46be9f6773a7d61181e",
+      "bytes": 18643,
+      "facts": "160 planned items, 80 concepts, three development names, five bank-backed arms, fit01 primary"
+    },
+    {
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results",
+      "facts": "retained complete old main and controls evaluation trees"
+    },
+    {
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/metadata.json",
+      "sha256": "fd420918419427467cd899564d7c7cc7c2e4e55f192f8d9698eb4d1fec125540",
+      "bytes": 12020,
+      "runtime_facts": {
+        "gpu_name": "NVIDIA GeForce RTX 5090",
+        "gpu_capability": [
+          12,
+          0
+        ],
+        "multiprocessor_count": 170,
+        "total_memory_bytes": 33668857856,
+        "cuda_build": "12.8",
+        "cuda_runtime": "12.8",
+        "cudnn_runtime_integer": 92000,
+        "cpu_threads": 8,
+        "interop_threads": 1,
+        "attention_implementation": "sdpa",
+        "torch": "2.12.0.dev20260407+cu128"
+      }
+    },
+    {
+      "path": "research/confirmation_2026-09-09/resources/primary_retry_admission_plan.json",
+      "facts": {
+        "setup_budget_seconds": 12300.0,
+        "compute_budget_seconds": 3600.0,
+        "preservation_reserve_seconds": 1800.0,
+        "transfer_timeout_seconds": 900.0,
+        "status": "planned"
+      }
+    }
+  ],
+  "established_behavior": [
+    {
+      "source": "bundle/legacy/evaluate_refits.py:602-637",
+      "symbol": "_evaluation_runtime",
+      "behavior": "loads one frozen BF16 model on CUDA, checks geometry (4,48,192,2048), frozen evaluation-mode parameters, remote implementation hashes, and SDPA"
+    },
+    {
+      "source": "bundle/legacy/evaluate_refits.py:640-745",
+      "symbol": "_evaluate",
+      "behavior": "one timed process loads 148 items, caches all states once, validates [148,192,2048] FP32 states, computes four native exits [47,95,143,191], retains target 190/191 logits, performs raw readout, then loops fit IDs 1 through 5"
+    },
+    {
+      "source": "bundle/legacy/evaluate_controls.py:469-575",
+      "symbol": "_evaluate",
+      "behavior": "separate timed process creates its own runtime, mmap-loads and validates the main cache, checks target-190/191 parity, revalidates common/raw/fit01 arrays, and computes penultimate dense, sampled_sum, and diagonal controls"
+    },
+    {
+      "source": "bundle/evaluation/measurement.py:5-9",
+      "symbol": "ARMS/SUPPORT",
+      "behavior": "raw and fit01/fit02 support virtual 0-191; penultimate support is 0-189; sampled_sum and diagonal support is 0-190"
+    },
+    {
+      "source": "bundle/evaluation/worker.py:38-75,90-108",
+      "symbol": "main",
+      "behavior": "verifies frozen sources, loads one model, saves native development evidence for the three old items, checks virtual=physical=wrapper states and native=unembedded logits, publishes development, and waits for an externally bound acceptance"
+    },
+    {
+      "source": "bundle/evaluation/worker.py:109-153",
+      "symbol": "main",
+      "behavior": "rechecks frozen population tokenization, caches 160 items one at a time, concatenates states, computes exit logits, loops raw plus five bank-backed arms, saves each readout and publishes each arm"
+    },
+    {
+      "source": "bundle/evaluation/readouts.py:27-48",
+      "symbol": "readout",
+      "behavior": "calls the original readout_arrays per item with one-item state slices, captures top-10 IDs, and retains numerical samples for item indices 0, 1, and 2"
+    },
+    {
+      "source": "bundle/evaluation/readouts.py:50-84",
+      "symbol": "native_development",
+      "behavior": "registers physical hooks, captures virtual activations and wrapper activations, and retains native and unembedded logits for each development item"
+    }
+  ],
+  "execution_or_data_paths": {
+    "historical_stage_logs": {
+      "main": "cache_states items=148; raw_logit_lens virtual_columns=192; fit_readout fit_id=1..5",
+      "controls": "control_readout ouro_penultimate dense; ouro_positions sampled_sum; ouro_positions diagonal"
+    },
+    "historical_complete_receipts": {
+      "main": {
+        "path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/COMPLETE.json",
+        "status": "complete",
+        "items": 148,
+        "files": 24,
+        "elapsed_seconds": 158.2429125609342,
+        "record": {
+          "bytes": 887,
+          "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+        }
+      },
+      "controls": {
+        "path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/COMPLETE.json",
+        "status": "complete",
+        "items": 148,
+        "files": 19,
+        "elapsed_seconds": 23.064808867988177,
+        "record": {
+          "bytes": 666,
+          "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+        }
+      }
+    },
+    "scaled_process_proxies": {
+      "item_scale": "160/148 = 1.0810810810810811",
+      "old_main_six_arm_analog_seconds": 171.07341898479373,
+      "old_controls_operational_envelope_seconds": 24.934928505933165,
+      "naive_sum_seconds": 196.0083474907269,
+      "interpretation": "The old main's six-output count is the closest analog. The sum adds a separate controls process and therefore double-counts model/cache work for a one-process new worker, while omitting new development, wrapper, save, and publication timing."
+    },
+    "cache_geometry": {
+      "old_path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt",
+      "old_bytes": 407374621,
+      "old_sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4",
+      "old_tensor_payload_bytes": 407371776,
+      "old_fields": {
+        "H": {
+          "shape": [
+            148,
+            192,
+            2048
+          ],
+          "dtype": "float32",
+          "bytes": 232783872
+        },
+        "exit_logits": {
+          "shape": [
+            148,
+            4,
+            49152
+          ],
+          "dtype": "float32",
+          "bytes": 116391936
+        },
+        "target_state_logits_190": {
+          "shape": [
+            148,
+            49152
+          ],
+          "dtype": "float32",
+          "bytes": 29097984
+        },
+        "target_state_logits_191": {
+          "shape": [
+            148,
+            49152
+          ],
+          "dtype": "float32",
+          "bytes": 29097984
+        }
+      },
+      "same_four_field_160_item_estimate": {
+        "tensor_payload_bytes": 440401920,
+        "serialized_bytes_using_old_2845_byte_overhead": 440404765,
+        "binary_mib_payload": 420.0,
+        "is_measured": false
+      },
+      "actual_new_worker_tensor_fields": "worker.py:122-129 saves H, exit_logits, and continuations only; target-state tensors are omitted, and continuation/serialization overhead is unmeasured"
+    },
+    "readout_array_geometry": {
+      "common": {
+        "rank": [
+          148,
+          3,
+          192
+        ],
+        "allrank": [
+          148,
+          128,
+          192
+        ],
+        "bytes": 3982267,
+        "sha256": "0169d2d18a55f18eab14ee2e14891936b1da1263e5e8e4d9da5166180ce0ca15"
+      },
+      "fit01": {
+        "rank": [
+          148,
+          3,
+          192
+        ],
+        "allrank": [
+          148,
+          128,
+          192
+        ],
+        "bytes": 3794670,
+        "sha256": "904ff358c453fc527cde6833f3fec321db174c5c8f03df57dd9168142aa759"
+      },
+      "fit02": {
+        "rank": [
+          148,
+          3,
+          192
+        ],
+        "allrank": [
+          148,
+          128,
+          192
+        ],
+        "bytes": 3752472,
+        "sha256": "ee766346bbced5a6ae380cd974443c45f14e632bfbab52dd5c65f61a5b5a5065"
+      },
+      "penultimate": {
+        "rank": [
+          148,
+          3,
+          190
+        ],
+        "allrank": [
+          148,
+          128,
+          190
+        ],
+        "bytes": 3813311,
+        "sha256": "1cef42112bb2859fa4de26dcf60559b5cae90a11892ac9e4633f859d45546c7d"
+      },
+      "sampled_sum": {
+        "rank": [
+          148,
+          3,
+          191
+        ],
+        "allrank": [
+          148,
+          128,
+          191
+        ],
+        "bytes": 3812126,
+        "sha256": "ec0a67b30847985eb475e04753c8069d7031e087c699df80c221397247859cd5"
+      },
+      "diagonal": {
+        "rank": [
+          148,
+          3,
+          191
+        ],
+        "allrank": [
+          148,
+          128,
+          191
+        ],
+        "bytes": 3723655,
+        "sha256": "fbb4efa8eb0e7534dec8096480ae96eded7911339ef3c37e3b7be63b48f60d48"
+      }
+    },
+    "candidate_compute_budgets": [
+      {
+        "compute_budget_seconds": 600,
+        "scaled_envelope_margin_seconds": 403.9916525092731,
+        "scaled_envelope_multiple": 3.061094120128664
+      },
+      {
+        "compute_budget_seconds": 1200,
+        "scaled_envelope_margin_seconds": 1003.9916525092731,
+        "scaled_envelope_multiple": 6.122188240257327
+      },
+      {
+        "compute_budget_seconds": 1800,
+        "scaled_envelope_margin_seconds": 1603.9916525092731,
+        "scaled_envelope_multiple": 9.183282360385991
+      }
+    ],
+    "historical_fit_context_not_in_new_worker": {
+      "main_fit_prompt_elapsed_sum_seconds": 32416.77566821559,
+      "controls_fit_prompt_elapsed_sum_seconds": 13831.362243451294,
+      "all_fit_prompt_elapsed_sum_seconds": 46248.13791166688,
+      "meaning": "old per-prompt fitting log rows; included only to distinguish a fit-inclusive workload from the frozen bank-consuming evaluator"
+    }
+  },
+  "tests_and_validation_surface": [
+    {
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/logs/ouro_evaluation.log",
+      "checks": "retained stage markers and complete main receipt"
+    },
+    {
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/logs/controls_evaluation.log",
+      "checks": "retained three control stage markers and complete controls receipt"
+    },
+    {
+      "path": "bundle/legacy/evaluate_refits.py:602-745",
+      "checks": "runtime, geometry, finite-state, native-exit, target-state, readout-array and section-seal validation"
+    },
+    {
+      "path": "bundle/legacy/evaluate_controls.py:446-575",
+      "checks": "cache schema/geometry/finite FP32, target-191/native-exit bitwise parity, target-state parity, and control array validation"
+    },
+    {
+      "path": "bundle/evaluation/readouts.py:27-84",
+      "checks": "per-item original scorer, top-10 alias membership, numerical samples, and native development evidence"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/RUN_LOG.md:70-72",
+      "checks": "attempt01 was stopped during setup with no BANKS_READY and no artifact index; no new computation"
+    },
+    {
+      "method": "read_only_local_checks",
+      "checks": "SHA256/size checks, NPZ key/shape/dtype inspection, Torch archive member-size inspection, and independent scaling arithmetic; no model load or GPU initialization"
+    }
+  ],
+  "contradictions": [
+    {
+      "fact": "old main is 148 items with raw plus five fit IDs; frozen new run is 160 items with raw plus fit01, fit02, penultimate, sampled_sum, and diagonal",
+      "effect": "six-arm count matches, but arm composition and cache/reuse paths differ"
+    },
+    {
+      "fact": "old controls starts a separate model/cache process",
+      "effect": "adding its scaled elapsed time double-counts work for the one-process new worker and still omits new development, wrapper, saves, and publication"
+    },
+    {
+      "fact": "old common cache includes target-state logits 190 and 191; new worker line 129 saves only H, exit_logits, and continuations",
+      "effect": "old controls validator cannot consume the new cache shape without compatibility or a separate target-state producer"
+    },
+    {
+      "fact": "top-level retained results/environment.json says Linux-7.2.3-1-cachyos-x86_64-with-glibc2.44, while common metadata nested runtime says Linux-6.8.0-111-generic-x86_64-with-glibc2.36",
+      "effect": "the capture difference is not explained by retained metadata; both report the same CUDA 12.8/torch development family"
+    },
+    {
+      "fact": "historical fit prompt sums total 46248.13791166688 seconds, while frozen worker has no fitting call",
+      "effect": "including those rows in a 600/1200/1800-second evaluator budget would describe a different workload"
+    }
+  ],
+  "missing_evidence": [
+    "old stage-level timings for model load, item/tokenizer load, state cache, raw readout, each fit readout, validation, and sealing",
+    "new native three-item development timing and external development transfer/acceptance timing",
+    "new per-item wrapper, six-arm save, and publication/manifest timing",
+    "any new RTX 5090 execution, development receipt, new-item cache, readout arrays, or confirmation result",
+    "measured 160-item serialized cache/readout sizes; the same-four-field 440401920-byte number is a geometry estimate and actual new cache omits target tensors",
+    "evidence that provider scheduling, model download, disk staging, and transport fit the retry setup clock",
+    "GPU variance, CUDA warm-up timing, and explanation of the retained platform-string discrepancy"
+  ],
+  "exact_paths_and_symbols": [
+    {
+      "path": "research/confirmation_2026-09-09/bundle/evaluation/worker.py",
+      "lines": "38-75,90-108,109-153",
+      "symbols": [
+        "main",
+        "verify_sources",
+        "stage_status"
+      ],
+      "sha256": "2db64e6d598623bb87dde39d55e7de67dcab762c0a148face40d6dea98e045d0"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/bundle/evaluation/readouts.py",
+      "lines": "27-48,50-84",
+      "symbols": [
+        "readout",
+        "native_development",
+        "ReadoutCapture"
+      ],
+      "sha256": "2d1762f126e9f1da9a9b7aabc2039de3697bbc5fc5b385ab6a034aa2dc931226"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/bundle/evaluation/measurement.py",
+      "lines": "5-9",
+      "symbols": [
+        "ARMS",
+        "SUPPORT",
+        "PRIMARY_VIRTUAL"
+      ],
+      "sha256": "06c615b29285e0e4e10196ae8f15b015d5c8a362f5e7704adb38ce6e275799fe"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/bundle/legacy/evaluate_refits.py",
+      "lines": "602-745",
+      "symbols": [
+        "_evaluation_runtime",
+        "_evaluate"
+      ],
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ef1da55f2f5943754d7b0b17"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/bundle/legacy/evaluate_controls.py",
+      "lines": "446-575",
+      "symbols": [
+        "_cache",
+        "_evaluate"
+      ],
+      "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/bundle/legacy/model_manifest.json",
+      "facts": "13 files, 5341718984 bytes, ByteDance/Ouro-2.6B revision 1ed04250da1a9936042725d302e81c8fa2ab5abd"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/resources/primary_retry_admission_plan.json",
+      "facts": "current retry clocks and planned status"
+    },
+    {
+      "path": "research/confirmation_2026-09-09/RUN_LOG.md",
+      "lines": "70-72",
+      "facts": "setup-only termination and no new computation"
+    }
+  ]
+}

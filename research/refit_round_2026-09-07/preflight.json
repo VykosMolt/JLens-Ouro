@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-09-07T18:44:45.021629+00:00",
+  "torch": "2.12.0.dev20260407+cu128",
+  "cuda": true,
+  "purpose": "cost/gradient feasibility only; no task-recovery evaluation",
+  "source_sha256": "f8a91dcc50b46702185ce998c2e85be8c507e4ee2ebe61b48a2f369eb18bd013",
+  "configurations": [
+    {
+      "dim_batch": 4,
+      "pass": false,
+      "error": "CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 75.50 MiB is free. Including non-PyTorch memory, this process has 11.45 GiB memory in use. Of the allocated memory 11.15 GiB is allocated by PyTorch, and 114.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "dim_batch": 2,
+      "seq_len": 128,
+      "forward_seconds": 0.14520057299887412,
+      "backward_seconds": 0.1783602956663041,
+      "warmup_backward_seconds": 0.21122093200028758,
+      "estimated_prompt_minutes": 3.0440157127049234,
+      "peak_gb": 9.960696832,
+      "weights_gb": 5.369505792,
+      "pass": true
+    }
+  ],
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "load_seconds": 6.789482946001954,
+  "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "model_training": false,
+  "parameter_gradients_enabled": false,
+  "elapsed_seconds": 8.565738266999688
+}

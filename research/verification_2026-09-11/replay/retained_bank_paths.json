@@ -1,0 +1,6 @@
+{
+  "banks/fit01.pt": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+  "banks/fit02.pt": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/reconstructed/ouro/fit_02/lens.pt",
+  "banks/penultimate.pt": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt",
+  "banks/positions.pt": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt"
+}

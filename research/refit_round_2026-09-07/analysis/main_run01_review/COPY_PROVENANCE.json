@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-09-09T07:33:42.142217+00:00",
+  "analysis_identity_sha256": "7b127cfa493775305db15bcd5ab2c566bdf05c7154467444b5ca02b4f22db406",
+  "scope": "Independent actual P1 numerical and distinct-fit audit outputs, preserved byte for byte outside the sealed analysis output. Root reconciled with primary outputs; P2 and Huginn remain pending.",
+  "files": {
+    "actual_main_result_review.json": {
+      "bytes": 43205,
+      "sha256": "1a57ee5776b188af7deeb43c480cb5bcd31568b0b3d2dacaa24d3bb681e0c69a"
+    },
+    "actual_main_distinct_fit_review.json": {
+      "bytes": 5536,
+      "sha256": "725bc1bdc0d4aba28bd5c18a7ac04a5bad32d8dc8310a3b8c3000ebc5ad27f55"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "admission": {
+    "optional_huginn_admissible": false,
+    "optional_huginn_admission_usd": 6.0,
+    "optional_huginn_shortfall_usd": 2.6455679637664424,
+    "primary_attempt_admissible": false,
+    "primary_attempt_cap_usd": 3.77,
+    "primary_attempt_shortfall_usd": 0.41556796376644245
+  },
+  "attempt05": {
+    "absence_confirmations": 3,
+    "all_in_rate_usd_per_hour": 0.7064383561643836,
+    "billing_start_utc": "2026-09-10T14:55:01Z",
+    "deployment_response_utc": "2026-09-10T14:55:06Z",
+    "failed_manifest_sha256": "144c9a935a46a335493e9c8c4fbd695a1b817c957fa81032d911f244cb807ad3",
+    "gpu_type_id": "NVIDIA GeForce RTX 5090",
+    "job_incremental_cap_usd": 3.77,
+    "lease_name": "jlens-confirm-e5b5cdde88044a96ab1410aa165a76e5",
+    "lease_spend_upper_usd": 2.558588798274406,
+    "pod_id": "i7zq14rj0f0ief",
+    "stage_acceptances": {},
+    "terminated_verified_utc": "2026-09-10T18:32:19Z",
+    "termination_authorization": {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/TERMINATION_INTENT_193552f636a140e3b0ea340aee437b27.json",
+      "record": {
+        "bytes": 4325,
+        "sha256": "e0b5edda4fcda9908ca53e7abf52f262799cbc6b994e80246e0ffcbf58e33a93"
+      }
+    },
+    "termination_class": "explicit_teardown",
+    "termination_reason": "provider no longer lists the owned pod",
+    "worker_error": "Saved native development evidence fails state/logit equality"
+  },
+  "combined_cap_usd": 25.0,
+  "combined_spend_upper_usd": 21.645567963766442,
+  "evidence": {
+    "failed_final_manifest": {
+      "bytes": 1715,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/handoff/staging/ouro_confirmation_20260910_fixed160_precision1/144c9a935a46a335493e9c8c4fbd695a1b817c957fa81032d911f244cb807ad3/MANIFEST.json",
+      "sha256": "b84a5d848658940947899ea712a1e3f6a609752ed08b2d73e56b19ad9a6586f7"
+    },
+    "final_observation_client": {
+      "bytes": 3020,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/observe_attempt05_final_account.py",
+      "sha256": "ad0931b7a50766b47eba8fa35478892181fb9469c2b81c4b45f23dc369b05200"
+    },
+    "native_failure_forensics": {
+      "bytes": 22467,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/attempt05_native_failure_forensics.json",
+      "sha256": "173be34e9377372353ccaa6f782a9c386338ea63941b7cb0916bdd074c70897d"
+    },
+    "native_failure_preserved": {
+      "bytes": 22440180,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ATTEMPT05_NATIVE_FAILURE_PRESERVED.json",
+      "sha256": "4e386e5ad3475f5d1a70b2a844316c9927cce88f5606c4a567409b3099cc72f9"
+    },
+    "root_teardown_execution": {
+      "bytes": 1717,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/ROOT_TEARDOWN_EXECUTION.json",
+      "sha256": "6f1d4657a4bfeb6ea7755f48a2588f0ecc96facbf66e3232b0e580660d70537d"
+    },
+    "setup_deadline_amendment": {
+      "bytes": 959,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/SETUP_DEADLINE_AMENDMENT.json",
+      "sha256": "2877e977fa6277c838729fd1661182f418681889e90233a93421b0c52e1f4c45"
+    },
+    "setup_deadline_amendment_review": {
+      "bytes": 8597,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/attempt05_deadline_amendment_review.json",
+      "sha256": "55512644159f1fa49f9b0482ab1074765ebd2e47ef7f8fe0934cbe2ac9e9386e"
+    }
+  },
+  "final_observation": {
+    "account": {
+      "clientBalance": 5.9138717458,
+      "currentSpendPerHr": 0,
+      "id": "user_3I33u3QLWgO7POHKINt6GfLeTUw"
+    },
+    "account_balance_decrease_since_precreate_usd": 2.5522609725,
+    "account_observed_utc": "2026-09-10T18:43:00.302504+00:00",
+    "attempt05_pod": {
+      "lookup": "not_found_http_404"
+    },
+    "attempt05_provider_billing_totals": {
+      "cpuAmount": 0,
+      "diskAmount": 0.04722222336567938,
+      "gpuAmount": 1.9409322440624237,
+      "totalAmount": 1.988154467428103
+    },
+    "note": "Provider billing and account balance are observations, not settled invoices; whole-account balance changes are not assigned to this round.",
+    "pods": [],
+    "precreate_balance_usd": 8.4661327183,
+    "precreate_record": {
+      "bytes": 199,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/attempt05_precreate_account_observation.json",
+      "sha256": "46eedbbd001557891653fa332eb1acc6078ec7febf1a31dfe67fb5c659ac281f"
+    },
+    "record": {
+      "bytes": 2606,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/attempt05_final_account_observation.json",
+      "sha256": "8deac26fa25348e7ce6016d5650c7f2d1c826b390ff07ebde15f26cfd425498c"
+    }
+  },
+  "historical_spend_upper_usd": 13.851844033145376,
+  "new_round_attempts": [
+    {
+      "attempt": 1,
+      "lease_spend_upper_usd": 0.22588409273346807,
+      "pod_id": "xugytsithv80ib",
+      "record": {
+        "bytes": 6187,
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_01/LEASE.json",
+        "sha256": "2a1a9a21645f724a3800798d81c6eb5e838f32bc3b696b974d364d19f9f6b623"
+      },
+      "status": "terminated"
+    },
+    {
+      "attempt": 2,
+      "lease_spend_upper_usd": 0.8404813042020144,
+      "pod_id": "jbuyae4289kcje",
+      "record": {
+        "bytes": 6712,
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_02/LEASE.json",
+        "sha256": "09a6c6027b9ec4fcb3ab3cf87a60f07bc651244618b662987a03d7f3b92a8d3b"
+      },
+      "status": "terminated"
+    },
+    {
+      "attempt": 3,
+      "lease_spend_upper_usd": 1.4670928849910219,
+      "pod_id": "8d5naxkec5lnaf",
+      "record": {
+        "bytes": 14527,
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_03/LEASE.json",
+        "sha256": "800cb93d6ef0c774e4b6cd10691ba434c64629281a1d547439233b9f7803dd92"
+      },
+      "status": "terminated"
+    },
+    {
+      "attempt": 4,
+      "lease_spend_upper_usd": 2.7016768504201547,
+      "pod_id": "bg2gfkxq5fjvzc",
+      "record": {
+        "bytes": 7436,
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_04/LEASE.json",
+        "sha256": "a497e33da038cdb45e8b2b85e1ecfe66455e5b295e13b8b0f08d12bca6775cb2"
+      },
+      "status": "terminated"
+    },
+    {
+      "attempt": 5,
+      "lease_spend_upper_usd": 2.558588798274406,
+      "pod_id": "i7zq14rj0f0ief",
+      "record": {
+        "bytes": 16454,
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_05/LEASE.json",
+        "sha256": "449270bcb28dfbeb21ee406ab0debf39602a3546779e49048cd195cb2e5ab760"
+      },
+      "status": "terminated"
+    }
+  ],
+  "prior_reconciliation": {
+    "bytes": 3217,
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ATTEMPT04_SPENDING_AND_SHUTDOWN.json",
+    "sha256": "db0f63f5ef33f81c1530502cc7d7fb796ef2f91f3bef64f1e0490c74225974d3"
+  },
+  "recorded_utc": "2026-09-10T18:54:22.415532+00:00",
+  "remaining_authorized_usd": 3.3544320362335576,
+  "schema": "confirmation_attempt05_spending_shutdown.v1",
+  "scientific_status": "prospective_confirmation_inconclusive_not_evaluated",
+  "scientific_status_reason": "The frozen exact native-logit equality gate failed on historical development items before development acceptance; no new-item state was cached or scored.",
+  "settled_invoice": false
+}

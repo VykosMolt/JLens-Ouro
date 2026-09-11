@@ -1,0 +1,23 @@
+{
+  "schema": "H_freeze_source_binding_independent.v1",
+  "status": "passed",
+  "freeze_record": {
+    "bytes": 10821,
+    "sha256": "3b2f8b0a4c0bf6c2d3498b3a03f184679e26c999f74106af43a4826c98d15d8a"
+  },
+  "no_cloud_or_ssh": true,
+  "no_model_or_confirmation_results": true,
+  "cases": [
+    {
+      "case": "changed_source_after_review_rejected_against_reviewed_record",
+      "status": "passed",
+      "error": "Packaged copy differs from its exact reviewed record"
+    },
+    {
+      "case": "changed_source_after_review_rejected_against_historical_sha",
+      "status": "passed",
+      "error": "Packaged copy differs from the historical source pin"
+    }
+  ],
+  "temporary_root": "/tmp/h-freeze-binding-independent-zq_7ksy_"
+}

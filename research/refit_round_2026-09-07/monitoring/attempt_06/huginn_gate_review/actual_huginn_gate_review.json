@@ -1,0 +1,235 @@
+{
+  "checks": [
+    "regular COPY_VERIFIED.json",
+    "copy receipt identity",
+    "exact14 copy members",
+    "safe receipt path",
+    "regular COMPLETE.json",
+    "copy member hash preflight_ouro/COMPLETE.json",
+    "safe receipt path",
+    "regular START.json",
+    "copy member hash preflight_ouro/START.json",
+    "safe receipt path",
+    "regular ouro_main.json",
+    "copy member hash preflight_ouro/ouro_main.json",
+    "safe receipt path",
+    "regular ouro_main_START.json",
+    "copy member hash preflight_ouro/ouro_main_START.json",
+    "safe receipt path",
+    "regular ouro_penultimate.json",
+    "copy member hash preflight_ouro/ouro_penultimate.json",
+    "safe receipt path",
+    "regular ouro_penultimate_START.json",
+    "copy member hash preflight_ouro/ouro_penultimate_START.json",
+    "safe receipt path",
+    "regular ouro_positions.json",
+    "copy member hash preflight_ouro/ouro_positions.json",
+    "safe receipt path",
+    "regular ouro_positions_START.json",
+    "copy member hash preflight_ouro/ouro_positions_START.json",
+    "safe receipt path",
+    "regular COMPLETE.json",
+    "copy member hash preflight_huginn/COMPLETE.json",
+    "safe receipt path",
+    "regular START.json",
+    "copy member hash preflight_huginn/START.json",
+    "safe receipt path",
+    "regular huginn_r8.json",
+    "copy member hash preflight_huginn/huginn_r8.json",
+    "safe receipt path",
+    "regular huginn_r8_START.json",
+    "copy member hash preflight_huginn/huginn_r8_START.json",
+    "safe receipt path",
+    "regular initial_budget_projection.json",
+    "copy member hash initial_budget_projection.json",
+    "safe receipt path",
+    "regular huginn_budget_projection.json",
+    "copy member hash huginn_budget_projection.json",
+    "exact copied tree inventory",
+    "H passed gate membership",
+    "H start is pre-gate",
+    "H start/complete consistency",
+    "H profile/complete equality",
+    "H profile start binding",
+    "all34 native primal/logits coupled B8",
+    "frozen benchmark geometry",
+    "full dense derivative support",
+    "full892108800 derivative bitwise values",
+    "660 complete B8 passes and111 positions",
+    "optimized derivative source edges",
+    "complete measured compute plus IO exact",
+    "engineering-only IO scratch removed",
+    "finite timing native_seconds",
+    "finite timing optimized_seconds",
+    "finite timing prompt_with_checkpoint_seconds",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "cgroup headroom arithmetic",
+    "effective memory minima",
+    "48GB effective-host floor",
+    "24GiB cap with8GiB allowance and4GiB reserve",
+    "48GB effective-host floor",
+    "24GiB cap with8GiB allowance and4GiB reserve",
+    "native exact offload frozen budget",
+    "433 offload payloads released andzero live",
+    "observed CUDA peaks within actual device",
+    "regular LEASE.json",
+    "current lease identity",
+    "Ouro profile membership",
+    "Ouro complete timing ouro_main",
+    "Ouro complete timing ouro_penultimate",
+    "Ouro complete timing ouro_positions",
+    "projection timing arithmetic initial_budget_projection.json",
+    "projection fixed allowances initial_budget_projection.json",
+    "measurement to receipt timestamp lag initial_budget_projection.json",
+    "projection gate decisions initial_budget_projection.json",
+    "projection timing arithmetic huginn_budget_projection.json",
+    "projection fixed allowances huginn_budget_projection.json",
+    "measurement to receipt timestamp lag huginn_budget_projection.json",
+    "projection gate decisions huginn_budget_projection.json"
+  ],
+  "inputs": {
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/LEASE.json": {
+      "bytes": 2754,
+      "sha256": "b5322cd72a003a1779e9f5bf001ab67ab4a5fe85581c10a631c5cdca0df95db4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/COPY_VERIFIED.json": {
+      "bytes": 2085,
+      "sha256": "252e67cf3a373e7ee1db379238805360a6f6f351fac1e3ef5d51cbf4e1a6cdee"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/huginn_budget_projection.json": {
+      "bytes": 544,
+      "sha256": "d5984a3a78d4d82f03cea3a0b1eb22b82e10acf3c9ec4a417d347139d255bcad"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/initial_budget_projection.json": {
+      "bytes": 556,
+      "sha256": "241f38be2816b12c1235e0f846617f22bc6d13c1e1769f3222483fb2ccf9d2b9"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/COMPLETE.json": {
+      "bytes": 27530,
+      "sha256": "ead7e832a07aebb8e6a4740ec8a82de666540684dd67d5ff536f4020c548b75e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/START.json": {
+      "bytes": 19877,
+      "sha256": "e71d1d636a90941a52d3f8b79d4d7e206a7b6b13198d099aa7853555c284493d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/huginn_r8.json": {
+      "bytes": 6900,
+      "sha256": "d33fd9f8a8d1c6911438aeee78f17c4e2f5babbbb037326e614b72f1174a4581"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/huginn_r8_START.json": {
+      "bytes": 1764,
+      "sha256": "798f1bff5c7b2e95e7a24a28a90789e6ff7b30fc33889c3ca15129461f70862d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/COMPLETE.json": {
+      "bytes": 42520,
+      "sha256": "6c3aedf033852f94cfd4c8f789710347c950b1d9f395c7794983612907e18fda"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/START.json": {
+      "bytes": 18542,
+      "sha256": "c0ee7953ed43b8263a6909033e60ad886cba13e0654d55ca77058b1278d55a0b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/ouro_main.json": {
+      "bytes": 7564,
+      "sha256": "9313f93f0ac17c3db6fbb5eb50db00c8fabb6497470408d887c448323a2115a4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/ouro_main_START.json": {
+      "bytes": 2335,
+      "sha256": "efdadbb3fa00a930aa98ca8eac4056ba3d4ab57d194984f8304684f688ef9298"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/ouro_penultimate.json": {
+      "bytes": 7566,
+      "sha256": "380275b474a7a2cbc1e937b5a0e6f0cb8f0cdecc5bb469dbef71104c6c017140"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/ouro_penultimate_START.json": {
+      "bytes": 2337,
+      "sha256": "14c0f8d6d17b3d5fd07b200fed9dd02eb53f11961f697c6e8b8022b105fda429"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/ouro_positions.json": {
+      "bytes": 8850,
+      "sha256": "633fcb2937bc096d43e6d3f27dcb8d26e8554f0b4765cbffca5ae59e061a334d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_ouro/ouro_positions_START.json": {
+      "bytes": 2338,
+      "sha256": "faa65248a20b856877c4a36306613d153002559c0623f15ab3e716ed7152d58d"
+    }
+  },
+  "io_seconds": 8.608424726990052,
+  "lease_fields": {
+    "all_in_rate": 0.7064383561643836,
+    "billing_start_utc": "2026-09-08T20:36:33Z",
+    "name": "jlens-refit-14ca9417eb6145c8979fb87ea9fde68c",
+    "pod_id": "vzwx0cj43g2uw5",
+    "prior_spend_upper_usd": 0.3316979710977009,
+    "watch_deadline_utc": "2026-09-10T07:08:57Z",
+    "work_deadline_utc": "2026-09-10T06:18:57Z"
+  },
+  "memory": {
+    "host_cap_bytes": 25769803776,
+    "live_host_payload_bytes": 0,
+    "minimum_recorded_effective_available_bytes": 52208390144,
+    "native_cuda_peak_bytes": 12367640576,
+    "optimized_cuda_peak_bytes": 12656413184,
+    "peak_host_payload_bytes": 4473934616
+  },
+  "native_primal": {
+    "all_34_cells_bitwise_equal": true,
+    "batch": 8,
+    "coupled_initial_states": true,
+    "logits_bitwise_equal": true,
+    "sequence_length": 128
+  },
+  "parity": {
+    "arm": "dense",
+    "bitwise_equal": true,
+    "matrix_bits_sha256": "69d5257b3b8cfcdaf520623011081fb584fe976ffd50957d9a704b367dd70236",
+    "output_directions": 5280,
+    "source_count": 32,
+    "values_compared": 892108800
+  },
+  "projections": {
+    "huginn_budget_projection.json": {
+      "fit_seconds": 12778.421935602091,
+      "measurement_to_receipt_seconds": 0.00015306472778320312,
+      "per_prompt_seconds": 127.78421935602091,
+      "projected_charge_usd": 15.327753380633588,
+      "projected_retrieval_finished_utc": "2026-09-09T17:50:12.688998+00:00",
+      "projected_work_finished_utc": "2026-09-09T16:50:12.688998+00:00",
+      "watch_deadline_margin_after_retrieval_seconds": 47924.31100201607,
+      "work_deadline_margin_seconds": 48524.31100201607
+    },
+    "initial_budget_projection.json": {
+      "fit_seconds": 68923.80352441223,
+      "measurement_to_receipt_seconds": 9.1552734375e-05,
+      "per_prompt_seconds": 228.86465175549978,
+      "projected_charge_usd": 19.066960429019844,
+      "projected_retrieval_finished_utc": "2026-09-09T23:07:47.635911+00:00",
+      "projected_work_finished_utc": "2026-09-09T22:07:47.635911+00:00",
+      "watch_deadline_margin_after_retrieval_seconds": 28869.364088773727,
+      "work_deadline_margin_seconds": 29469.364088773727
+    }
+  },
+  "scope": "Actual copied engineering gates only; no scientific fit outcome, model loading, GPU work or network. Frozen provenance and prerequisite reconciliation supplied separately by independent receipt reviewer.",
+  "status": "passed",
+  "timing": {
+    "native_seconds": 1023.6601706120418,
+    "optimized_seconds": 119.17579462903086,
+    "prompt_with_checkpoint_seconds": 127.78421935602091
+  }
+}

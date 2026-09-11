@@ -1,0 +1,17 @@
+{
+  "schema": "confirmation_blind_candidate_review.v1",
+  "status": "revisions_required",
+  "new_confirmation_results_exposed": false,
+  "reviewed_sha256": "453196f58758f20131f99533b2660e719db980b0dd6ef0857ca37ac347943e62",
+  "scope": "root read all160candidate prompts, targets and intermediate labels",
+  "findings": [
+    "Multiple targets equal the intermediate or its alias, reducing task to one-hop identification.",
+    "Several final answers are supplied in prompt or are generic completions without a second factual hop.",
+    "Country alternate prompts do not specify the requested relation (has the ...).",
+    "Half the items are arbitrarily marked candidate_new; primary requires a defensible familiar relation mixture and explicit shift characterization.",
+    "Dependency groups and prompt family IDs are assertions awaiting actual template/fact audit.",
+    "Draft primary virtual indices shift the reported one-based band by one; must use169\u2013180.",
+    "Source claims and checked dates need actual inspected support for both factual hops, not plausible URLs."
+  ],
+  "required_action": "Build two distinct factual two-hop items per concept; resolve before freeze; preserve this draft and decisions."
+}

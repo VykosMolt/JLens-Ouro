@@ -1,0 +1,77 @@
+{
+  "accepted_gate_values": {
+    "complete_prompt_seconds": 127.78421935602091,
+    "coupled_derivative_batch": 8,
+    "derivative_values_bitwise_equal": 892108800,
+    "host_payload_bytes_after_release": 0,
+    "io_seconds": 8.608424726990052,
+    "n100_measured_fit_seconds": 12778.421935602091,
+    "native_cuda_peak_bytes": 12367640576,
+    "native_host_payload_peak_bytes": 4473934616,
+    "native_logits_bitwise_equal": true,
+    "native_primal_cells_bitwise_equal": 34,
+    "native_seconds": 1023.6601706120418,
+    "optimized_cuda_peak_bytes": 12656413184,
+    "optimized_seconds": 119.17579462903086,
+    "output_directions": 5280,
+    "projected_combined_cost_usd": 15.327753380633588,
+    "projected_retrieval_finished_utc": "2026-09-09T17:50:12.688998+00:00",
+    "projected_work_finished_utc": "2026-09-09T16:50:12.688998+00:00",
+    "source_count": 32
+  },
+  "created_utc": "2026-09-09T12:03:42.687835+00:00",
+  "gate_copy": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z",
+  "lease_name": "jlens-refit-14ca9417eb6145c8979fb87ea9fde68c",
+  "limitations": [
+    "Engineering parity and timing are measured on the fixed benchmark paragraph.",
+    "The frozen timing projection includes its stated margins and allowances and is not a runtime guarantee.",
+    "This receipt does not establish any Huginn scientific recovery result."
+  ],
+  "numerical_audit_source": {
+    "bytes": 9531,
+    "path": "/tmp/audit_actual_huginn_gate_review.py",
+    "sha256": "37329dbada45e902813700c903cb37b3c8d5e4c6805f07d761a495b2e41bc298"
+  },
+  "numerical_proof": {
+    "bytes": 10810,
+    "checks": 103,
+    "path": "/tmp/actual_huginn_gate_review.json",
+    "sha256": "db9bc41f51d5c933a8cf81ea013cc73d5ae87fd0a4899962ef9f4f1844157e19"
+  },
+  "pod_id": "vzwx0cj43g2uw5",
+  "provenance_review": {
+    "accepted_ouro_handoff": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z",
+    "benchmark_initialization": {
+      "base_seed": 2026090899,
+      "namespace": "benchmark",
+      "state_seed": 8544906854076094770
+    },
+    "calibration_initialization": {
+      "base_seed_first": 2026090802,
+      "base_seed_last": 2026090901,
+      "count": 100,
+      "namespace": "calibration",
+      "no_retained_state_seed_equals_benchmark": true
+    },
+    "controls_bind_exact_five_fit_main_owner": true,
+    "copied_file_count": 14,
+    "evidence": "Independent inspection of the actual 14 copied JSON records, frozen local source/contracts, calibration records and accepted Ouro handoff; this receipt preserves that completed review without rerunning checks.",
+    "exact_copy_inventory_and_hashes": true,
+    "frozen_model_manifest_and_snapshot_records_match": true,
+    "frozen_source_hashes_matched": 42,
+    "imported_and_native_implementation_source_identities_match": true,
+    "mandatory_environment_packages_and_torch_commit_match": true,
+    "material_mismatches": [],
+    "model": {
+      "manifest_sha256": "4e9bed3327f63bb31d9cd300b40c329601ace4fd2b1c135b9811c178230ed0db",
+      "repo_id": "tomg-group-umd/huginn-0125",
+      "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c"
+    },
+    "namespace_interpretation": "The numeric calibration base range includes the benchmark base 2026090899. Separation is provided by the explicit benchmark versus calibration namespaces and prompt-conditioned state-seed recipe, not by disjoint numeric base ranges. No retained calibration state seed equals the actual benchmark state seed.",
+    "ouro_main_and_control_owner_complete_bindings_match_accepted_handoff": true,
+    "reviewer": "/root/main_only_review/receipt_binding_read",
+    "runtime_canonical_sha256": "86a4437870720a8d4971eda551e7974f35a0afeecfdb5ad281440c3ca8d42a55"
+  },
+  "scope": "Independent local read-only acceptance of copied actual Huginn engineering gates. No scientific fit/evaluation outcome, GPU work, opaque model/cache loading, network action or source modification.",
+  "status": "passed"
+}

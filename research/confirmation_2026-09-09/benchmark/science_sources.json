@@ -1,0 +1,173 @@
+{
+  "schema": "confirmation_science_source_supplement.v1",
+  "status": "six_specific_gaps_supported",
+  "new_confirmation_results_exposed": false,
+  "created_utc": "2026-09-09T22:14:25.494174+00:00",
+  "sources": {
+    "europa_name_faq": {
+      "url": "https://europa.nasa.gov/mission/faq/",
+      "publisher": "NASA Europa Clipper",
+      "supported_facts_paraphrase": "The moon was named for Europa, the Phoenician mother of Minos.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "europa_princess": {
+      "url": "https://www.nasa.gov/podcasts/invisible-network/14-ansible-nasas-the-invisible-network-podcast/",
+      "publisher": "NASA",
+      "supported_facts_paraphrase": "The transcript explicitly calls mythological Europa a Phoenician princess, then identifies the Jovian moon and its icy surface.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "io_voyager": {
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/exploration/",
+      "publisher": "NASA Science",
+      "supported_facts_paraphrase": "The exploration history records Voyager1 observing an Io volcanic eruption during its Jupiter flyby in March1979.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "insulin_type1": {
+      "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/insulin-medicines-treatments/pancreatic-islet-transplantation",
+      "publisher": "NIH NIDDK",
+      "supported_facts_paraphrase": "Pancreatic beta cells make insulin. In type1 diabetes these cells are destroyed and the body lacks this hormone.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "nucleolus_ribosomes": {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26887/",
+      "publisher": "Molecular Biology of the Cell, NCBI Bookshelf",
+      "supported_facts_paraphrase": "The nucleolus is a prominent structure inside the eukaryotic nucleus and the site of rRNA processing and ribosome assembly.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "nuclear_double": {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9927/",
+      "publisher": "The Cell: A Molecular Approach, NCBI Bookshelf",
+      "supported_facts_paraphrase": "The nuclear envelope consists of inner and outer nuclear membranes, enclosing the nucleus.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "chloroplast_location": {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26819/",
+      "publisher": "Molecular Biology of the Cell, NCBI Bookshelf",
+      "supported_facts_paraphrase": "In chloroplasts, light-harvesting complexes bind hundreds of chlorophyll molecules in the thylakoid membrane.",
+      "retrieval_mode": "browser_returned_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_source_gap_review"
+    },
+    "europa": {
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/europa/europa-facts/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Smallest Galilean moon; inferred liquid-water ocean; water-ice crust."
+    },
+    "io": {
+      "url": "https://science.nasa.gov/jupiter/jupiter-moons/io/",
+      "retrieval_mode": "direct_open_and_read_in_prior_review_windows",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Innermost Galilean moon; strong volcanic activity."
+    },
+    "nucleus": {
+      "url": "https://www.genome.gov/genetics-glossary/Nucleus",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Nucleus encloses chromosomes in a membrane."
+    },
+    "chlorophyll": {
+      "url": "https://plantscience.psu.edu/research/labs/roots/methods/methods-info/nutritional-disorders-displayed/magnesium-deficiency",
+      "retrieval_mode": "direct_open_and_read",
+      "checked_on": "2026-09-09",
+      "checked_by": "independent_blinded_benchmark_reviewer",
+      "supported_facts_paraphrase": "Magnesium occupies the central position in chlorophyll, the green plant pigment."
+    }
+  },
+  "items": [
+    {
+      "name": "confirmation-014",
+      "prompt": "Fact: The Galilean moon whose name comes from a Phoenician princess is covered chiefly by a crust of ",
+      "target": "ice",
+      "hop1_source_ids": [
+        "europa_name_faq",
+        "europa_princess"
+      ],
+      "hop2_source_ids": [
+        "europa"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "Added missing factual-hop support; prior complete hop support is separately attributed to independent reviewer."
+    },
+    {
+      "name": "confirmation-016",
+      "prompt": "Fact: The moon whose volcanic eruption was detected in Voyager 1 images in 1979 orbits the planet ",
+      "target": "Jupiter",
+      "hop1_source_ids": [
+        "io_voyager"
+      ],
+      "hop2_source_ids": [
+        "io"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "Added missing factual-hop support; prior complete hop support is separately attributed to independent reviewer."
+    },
+    {
+      "name": "confirmation-070",
+      "prompt": "Fact: The hormone deficient in type 1 diabetes is normally secreted by pancreatic cells known as ",
+      "target": "beta cells",
+      "hop1_source_ids": [
+        "insulin_type1"
+      ],
+      "hop2_source_ids": [
+        "insulin_type1"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "Added missing factual-hop support; prior complete hop support is separately attributed to independent reviewer."
+    },
+    {
+      "name": "confirmation-075",
+      "prompt": "Fact: The membrane-bound compartment housing most eukaryotic chromosomes contains a ribosome-assembly structure called the ",
+      "target": "nucleolus",
+      "hop1_source_ids": [
+        "nucleus"
+      ],
+      "hop2_source_ids": [
+        "nucleolus_ribosomes"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "Added missing factual-hop support; prior complete hop support is separately attributed to independent reviewer."
+    },
+    {
+      "name": "confirmation-076",
+      "prompt": "Fact: The compartment housing most eukaryotic chromosomes is surrounded by how many membranes? The answer is ",
+      "target": "2",
+      "hop1_source_ids": [
+        "nucleus"
+      ],
+      "hop2_source_ids": [
+        "nuclear_double"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "Added missing factual-hop support; prior complete hop support is separately attributed to independent reviewer."
+    },
+    {
+      "name": "confirmation-078",
+      "prompt": "Fact: The light-absorbing plant pigment with a magnesium-containing ring is located mainly in organelles called ",
+      "target": "chloroplasts",
+      "hop1_source_ids": [
+        "chlorophyll"
+      ],
+      "hop2_source_ids": [
+        "chloroplast_location"
+      ],
+      "status": "both_hops_supported",
+      "review_note": "Added missing factual-hop support; prior complete hop support is separately attributed to independent reviewer."
+    }
+  ]
+}

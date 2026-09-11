@@ -1,0 +1,18 @@
+{
+  "compute_budget_seconds": 1200,
+  "output_contract_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/diagnostics/native_logit_v1/bundle/frozen/output_contract.json",
+  "preservation_reserve_seconds": 900,
+  "run_id": "ouro_native_logit_diagnostic_v1",
+  "run_spec_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/diagnostics/native_logit_v1/bundle/frozen/run_spec.json",
+  "schema": "confirmation_run_config.v1",
+  "semantic_verifier": {
+    "callable": "validate_outputs",
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/diagnostics/native_logit_v1/bundle/evaluation/validate_outputs.py",
+    "record": {
+      "bytes": 10648,
+      "sha256": "0afb9d9031b1ace14435abbd318a19defc1ff7688724606c522b28311b0b64f8"
+    }
+  },
+  "setup_budget_seconds": 2400,
+  "transfer_timeout_seconds": 600
+}

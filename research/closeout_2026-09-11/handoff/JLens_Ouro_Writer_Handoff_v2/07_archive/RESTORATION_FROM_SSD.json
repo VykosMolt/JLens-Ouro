@@ -1,0 +1,247 @@
+{
+ "schema": "ssd_restoration_check.v1",
+ "started_utc": "2026-09-11T20:35:26.643127+00:00",
+ "archive": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911",
+ "bundle": "/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle",
+ "isolation": {
+  "live_research_visible": false,
+  "live_ouro_artifacts_visible": false,
+  "live_hf_cache_visible": false,
+  "HF_HUB_OFFLINE": "1",
+  "network": "unreachable (OSError)"
+ },
+ "rehash_mismatched": "skipped (destination hash verification of all 16,200 files already passed in build_archive.py)",
+ "frozen_code": {
+  "archive_matches_freeze": true,
+  "members_match_freeze": true,
+  "members": 59
+ },
+ "banks": {
+  "diagonal": {
+   "file": "banks/positions.pt",
+   "record_matches_run_spec": true,
+   "keys_are_sources_0_to_target": true,
+   "all_2048x2048_fp16": true,
+   "first_middle_last_finite": true
+  },
+  "fit01": {
+   "file": "banks/fit01.pt",
+   "record_matches_run_spec": true,
+   "keys_are_sources_0_to_target": true,
+   "all_2048x2048_fp16": true,
+   "first_middle_last_finite": true
+  },
+  "fit02": {
+   "file": "banks/fit02.pt",
+   "record_matches_run_spec": true,
+   "keys_are_sources_0_to_target": true,
+   "all_2048x2048_fp16": true,
+   "first_middle_last_finite": true
+  },
+  "penultimate": {
+   "file": "banks/penultimate.pt",
+   "record_matches_run_spec": true,
+   "keys_are_sources_0_to_target": true,
+   "all_2048x2048_fp16": true,
+   "first_middle_last_finite": true
+  },
+  "sampled_sum": {
+   "file": "banks/positions.pt",
+   "record_matches_run_spec": true,
+   "keys_are_sources_0_to_target": true,
+   "all_2048x2048_fp16": true,
+   "first_middle_last_finite": true
+  }
+ },
+ "analysis_rerun_equals_saved_json": true,
+ "primary_from_archive": 0.23188291139240502,
+ "primary_interval_from_archive": [
+  0.1628899320083425,
+  0.3289769593495046
+ ],
+ "secondary_from_archive": [
+  [
+   "early_loop1_fixed_mean",
+   -0.08827465717299579,
+   [
+    -0.13641974092762596,
+    -0.040129573418365615
+   ]
+  ],
+  [
+   "early_loop1_any_layer",
+   -0.4440664556962024,
+   [
+    -0.5902854897612019,
+    -0.2978474216312029
+   ]
+  ],
+  [
+   "early_loop2_fixed_mean",
+   -0.14858089398734178,
+   [
+    -0.19540695469825603,
+    -0.10175483327642752
+   ]
+  ],
+  [
+   "early_loop2_any_layer",
+   -0.5736550632911395,
+   [
+    -0.7200754085098435,
+    -0.4272347180724354
+   ]
+  ],
+  [
+   "early_loop3_fixed_mean",
+   -0.15586926424050637,
+   [
+    -0.2240409794100318,
+    -0.08769754907098096
+   ]
+  ],
+  [
+   "early_loop3_any_layer",
+   -0.6108386075949369,
+   [
+    -0.7959090115574546,
+    -0.4257682036324192
+   ]
+  ],
+  [
+   "fit01_final_third",
+   0.11542721518987345,
+   [
+    0.04672864781503934,
+    0.18412578256470757
+   ]
+  ],
+  [
+   "fit01_layer32",
+   0.2468354430379748,
+   [
+    0.10717055882185947,
+    0.3865003272540901
+   ]
+  ],
+  [
+   "fit02_local",
+   0.22558016877637127,
+   [
+    0.09523375118988045,
+    0.3559265863628621
+   ]
+  ],
+  [
+   "fit01_minus_fit02_local",
+   0.006302742616033756,
+   [
+    -0.007270138454696015,
+    0.019875623686763527
+   ]
+  ],
+  [
+   "penultimate_local",
+   0.08804061181434597,
+   [
+    0.007594657812076772,
+    0.16848656581661517
+   ]
+  ],
+  [
+   "penultimate_final_third",
+   -0.04871722423146473,
+   [
+    -0.08741914570950507,
+    -0.010015302753424389
+   ]
+  ],
+  [
+   "sampled_sum_local",
+   0.2172402426160338,
+   [
+    0.09155303182978272,
+    0.3429274534022849
+   ]
+  ],
+  [
+   "sampled_sum_final_third",
+   0.11439345991561176,
+   [
+    0.03955537360940145,
+    0.18923154622182206
+   ]
+  ],
+  [
+   "diagonal_local",
+   0.05952004219409286,
+   [
+    -0.003395438727201716,
+    0.12243552311538744
+   ]
+  ],
+  [
+   "diagonal_final_third",
+   0.0017088607594936685,
+   [
+    -0.046635610873610206,
+    0.050053332392597544
+   ]
+  ],
+  [
+   "fit01_minus_penultimate_local",
+   0.1438422995780591,
+   [
+    0.07699378313022422,
+    0.210690816025894
+   ]
+  ],
+  [
+   "fit01_minus_penultimate_final_third",
+   0.1691681735985534,
+   [
+    0.09715874999930492,
+    0.2411775971978019
+   ]
+  ],
+  [
+   "sampled_sum_minus_diagonal_local",
+   0.15772020042194096,
+   [
+    0.05796365904793578,
+    0.25747674179594615
+   ]
+  ],
+  [
+   "sampled_sum_minus_diagonal_final_third",
+   0.11268459915611814,
+   [
+    0.04515142185812439,
+    0.1802177764541119
+   ]
+  ]
+ ],
+ "rescoring": {
+  "raw": {
+   "allrank": true,
+   "top10_ids": true,
+   "rank": true,
+   "top1": true
+  },
+  "fit01": {
+   "allrank": true,
+   "top10_ids": true,
+   "rank": true,
+   "top1": true
+  }
+ },
+ "replay_levels": {
+  "level1_tables_from_saved_scores": "executed (analysis rerun)",
+  "level2_rescoring_from_archived_banks_and_states": "executed for raw and fit01 (all 160 items, executed layout)",
+  "level2_other_arms": "NOT rerun here (fit02, penultimate, sampled_sum, diagonal loaded and shape/finite-checked only)",
+  "level3_regeneration_from_prompts": "NOT run",
+  "numerical_sensitivity_suite": "NOT repeated (see verification_2026-09-11)"
+ },
+ "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+ "finished_utc": "2026-09-11T20:38:26.757742+00:00"
+}

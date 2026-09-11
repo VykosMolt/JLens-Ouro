@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "plans": {
+    "main": "plan",
+    "controls": "plan",
+    "huginn": "plan"
+  },
+  "no_model_weights_loaded": true,
+  "source_files": 42,
+  "run_spec_sha256": "485e3696b3f50ac91961eaabc002980282f3c5c5ce16d8e5f3828955467bb3a3",
+  "cpu_tokenizer_population_matches_frozen": true,
+  "cuda_initialized": false,
+  "eligibility_counts": {
+    "items": 148,
+    "tasks": {
+      "multihop": 93,
+      "order-ops": 55
+    },
+    "eligible_items": {
+      "multihop": 88,
+      "order-ops": 51
+    },
+    "eligible_slots": {
+      "multihop": 98,
+      "order-ops": 51
+    },
+    "control_names": {
+      "multihop": 68,
+      "order-ops": 20
+    }
+  }
+}

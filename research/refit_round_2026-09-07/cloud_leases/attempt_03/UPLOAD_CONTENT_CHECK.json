@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "bundle_sha256": "aa9fbb15b27614ddf49bf3844cb59dfec2de6544b9765e649bb1f12478721d12",
+  "members": 106,
+  "credential_pattern_counts": {
+    "runpod_api_token": 0,
+    "hf_api_token": 0,
+    "private_key_block": 0,
+    "aws_access_key": 0
+  },
+  "private_key_or_model_binary_files": 0,
+  "audit_json_members": [
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json",
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_02.json",
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_03.json",
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_04.json",
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_05.json",
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_plan.json",
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_verification.json"
+  ],
+  "scope": "JLens/Ouro/Huginn executable research sources, fixed public-model metadata, public calibration extracts, generated geography/arithmetic evaluation stimuli, and CPU verification records; no account credential file, personal correspondence, or pretrained/model-fit binary",
+  "transfer_destination": {
+    "provider": "RunPod",
+    "account_owned_pod_id": "1zdsbzba4m637l",
+    "host": "140.82.47.249",
+    "root": "/workspace/jlens"
+  },
+  "external_actions": 0
+}

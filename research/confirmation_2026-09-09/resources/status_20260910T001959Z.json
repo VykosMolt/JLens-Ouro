@@ -1,0 +1,24 @@
+{
+  "schema": "confirmation_spending_shutdown_observation.v1",
+  "observed_utc": "2026-09-10T00:19:59.887370+00:00",
+  "not_settled_invoice": true,
+  "historical_bound_usd": 13.851844033145376,
+  "attempt01_incremental_bound_usd": 0.22588409273346807,
+  "attempt01_status": "terminated",
+  "attempt02_status": "running",
+  "attempt02_pod": "jbuyae4289kcje",
+  "attempt02_prior_spend_upper_usd": 14.077728125878844,
+  "attempt02_incremental_cap_usd": 3.77,
+  "combined_cap_usd": 25.0,
+  "observed_combined_upper_usd": 14.783933539107935,
+  "watch_heartbeat_utc": "2026-09-10T00:19:55Z",
+  "setup_deadline_utc": "2026-09-10T02:45:01Z",
+  "work_deadline_utc": "2026-09-10T03:45:01Z",
+  "provider_deadline_utc": "2026-09-10T04:25:01Z",
+  "source_lease_record": {
+    "bytes": 6108,
+    "sha256": "352b0da2d63447aa7f17b182bae11a283e25443df949c70c42e20fe4816e300c"
+  },
+  "primary_scientific_status": "not_started; upload paused awaiting explicit post-denial approval",
+  "huginn_scientific_status": "not_launched"
+}

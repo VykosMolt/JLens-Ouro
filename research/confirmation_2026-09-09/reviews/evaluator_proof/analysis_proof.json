@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "new_confirmation_results_exposed": false,
+  "synthetic_primary": -0.3333333333333333,
+  "primary_item_values": [
+    -1.0,
+    0.0,
+    0.0
+  ],
+  "groups": 2,
+  "secondary_contrasts": 20,
+  "static_figures": 6,
+  "root": "/tmp/confirmation-analysis-proof-4h87z1y0"
+}

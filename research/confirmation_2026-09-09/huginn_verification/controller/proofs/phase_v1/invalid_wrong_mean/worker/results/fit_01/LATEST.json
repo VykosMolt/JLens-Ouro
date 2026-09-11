@@ -1,0 +1,1 @@
+{"fit_identity_sha256":"85cc2b19c94f86d0e7d2101605a5228036842cae102a9b4368ad03ffaa25c926","generation":"checkpoints/cursor_000100_6aaf8efe18624c328f456bebc3e3f38b","kind":"checkpoint","n_done":100,"next_idx":100,"observed_prompt_bound_seconds":0.0,"schema_version":1,"seal":{"bytes":363,"sha256":"d761b8a12c86d640d7a5d88e5c49bd03e389f9fdcd02c35d60be6e256134c6a9"}}

@@ -1,0 +1,195 @@
+{
+  "schema": "huginn_controller_independent_review.v3",
+  "status": "passed",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "new_confirmation_results_exposed": false,
+  "scope": "Separate H phase controller, resource admission and bounded eight-stream receiving implementation. Scientific wrappers, validator and frozen bundle require their separate implementation review. This record does not certify a paid H run or actual artifact acceptance.",
+  "source_records_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/SOURCE_RECORDS.json",
+  "source_records_record": {
+    "bytes": 5245,
+    "sha256": "d709b16066b40f7242c4440940315a4a2da35ee180d238fac3ace8b2a88f9a11"
+  },
+  "reviewed_sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/lease.py": {
+      "bytes": 79243,
+      "sha256": "098fb0d985ceca8c2226a4cffa10d6866999b4d156da2d6b8d0614253a3037aa"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/artifact_handoff.py": {
+      "bytes": 41346,
+      "sha256": "f526d44e1958fedc40ca507232bd1cc6f5043cfb27748816efb0d5a0aac0fb23"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/transport.py": {
+      "bytes": 2638,
+      "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/runpod_api.py": {
+      "bytes": 9601,
+      "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/pod_entry.sh": {
+      "bytes": 1223,
+      "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/test_lifecycle.py": {
+      "bytes": 67551,
+      "sha256": "b763a9c096de039ddc47e04e0846d3cc6191e471fd5485295163fc7249fb46a8"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/PRIMARY_SOURCE_BASELINE.json": {
+      "bytes": 1346,
+      "sha256": "29559e40136bfd05958cff6c1b23ca9323bd254b851667fc9c13b471b2a595b5"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/controller/IMPLEMENTATION.md": {
+      "bytes": 11303,
+      "sha256": "36d5a73f94e3e8d3c3ecce04d9b957dc20048c947e62818326cb215534985d35"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/prepare_phase_debit.py": {
+      "bytes": 2149,
+      "sha256": "66198084e838972de1d32569f1dfc96c4289a3c7744295625a892ddcdd8e696e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/resources/PHASE_RESOURCES.json": {
+      "bytes": 1186,
+      "sha256": "c7812ed0413fc5e7a91be9508c7be4018e2e99497378c813f8cef165fb06e9ac"
+    }
+  },
+  "independent_proof_path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_proof.json",
+  "independent_proof_record": {
+    "bytes": 18433,
+    "sha256": "28925fd761c222c35d1f667ce591d1b828e185db91326ce7fd755159bfe2b319"
+  },
+  "supplied_cases_passed_including_smoke": 59,
+  "additional_independent_regressions_passed": 6,
+  "primary_controller_and_original_debit_unchanged": true,
+  "unchanged_runtime_files": 4,
+  "unchanged_existing_lease_functions": 45,
+  "resolved_findings": [
+    {
+      "id": "H-RETRY-01",
+      "status": "resolved_in_reviewed_revision",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:prior_debit",
+      "trigger": "A previously terminated H retry ledger row declares zero lease_spend_upper_usd despite two elapsed billable hours at the unchanged hard rate.",
+      "observed": "prior_debit accepted the row and returned only the original 13.851844033145376 USD bound, omitting the required 1.412876712328767 USD minimum charge.",
+      "expected": "Reject a retry whose finite nonnegative charge understates reconciled elapsed time at the carried all-in rate, or whose prior/combined debit chain is inconsistent.",
+      "regression_evidence": {
+        "accepted": true,
+        "total_debit_usd": 13.851844033145376,
+        "declared_prior_usd": 13.851844033145376,
+        "minimum_elapsed_charge_usd": 1.412876712328767,
+        "absence_can_finish": true
+      }
+    },
+    {
+      "id": "H-RETRY-02",
+      "status": "resolved_in_reviewed_revision",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:prior_debit",
+      "trigger": "A prior H row has status terminated, halt_requested=true and three recorded absences, but mutation_phase uncertain, no pod ID, and a provider deadline one hour in the future.",
+      "observed": "prior_debit accepted the row even though the existing absence_can_finish predicate returned false.",
+      "expected": "Apply the existing original absence-reconciliation predicate before accepting each H retry debit. An uncertain create cannot be closed by early absence.",
+      "regression_evidence": {
+        "accepted": true,
+        "total_debit_usd": 13.851844033145376,
+        "absence_can_finish": false
+      }
+    },
+    {
+      "id": "H-RETRY-03",
+      "status": "resolved_in_reviewed_revision",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:make_plan",
+      "contract_clarification": "Root explicitly requires the 6 USD H ceiling across aggregate H attempts.",
+      "trigger": "One valid terminated prior H attempt carries a 1 USD charge; a subsequent full H plan requests job_cap=6 with adequate combined funds.",
+      "observed": "make_plan accepts the next 5.989890410958905 USD envelope, yielding aggregate declared H spending of 6.989890410958905 USD.",
+      "expected": "Subtract every prior H charge from the remaining H phase room as well as the combined25 room; the effective per-attempt ceiling used by the watcher must not exceed remaining H phase room.",
+      "regression_evidence": {
+        "accepted": true,
+        "prior_H_charge_usd": 1.0,
+        "new_job_cap_usd": 6.0,
+        "new_declared_cost_usd": 5.989890410958905,
+        "aggregate_H_declared_cost_usd": 6.989890410958905,
+        "H_phase_ceiling_usd": 6.0,
+        "fixture_directory": "/tmp/h-aggregate-independent-1uvjz0u5"
+      }
+    },
+    {
+      "id": "H-RETRY-04",
+      "status": "resolved_in_reviewed_revision",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:prior_debit",
+      "trigger": "Atomically replace an H lease row with a higher valid charge after io._json returns its old parsed contents and before checked_record hashes the row.",
+      "observed": "The function returns the old 1 USD charge, with the returned hash record matching the new 2 USD file. Its final verify_record passes, so the ledger charge and returned evidence are inconsistent.",
+      "expected": "Parse and hash exactly the same read bytes for each H lease, then verify that record before return. Recheck the complete sorted H ledger inventory before return.",
+      "regression_evidence": {
+        "actual_H_charge": 2.0,
+        "case": "H_ledger_changes_after_parse_before_record",
+        "returned_H_charge": 1.0,
+        "returned_record_matches_changed_file": true,
+        "returned_total_debit": 14.851844033145376,
+        "status": "unexpectedly_accepted"
+      }
+    }
+  ],
+  "unresolved_findings": [],
+  "prior_rejected_records": [
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v1.json",
+      "record": {
+        "bytes": 7933,
+        "sha256": "b60c3fbedd10c8fb09004de6b858a60a5855de746fe98bb00c511f78f4eb0e9e"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v1.md",
+      "record": {
+        "bytes": 2505,
+        "sha256": "54cc687246760177b186ab5712765cd2f05a5234a0577acfa5e2c215bb5854e4"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_proof_rejected_v1.json",
+      "record": {
+        "bytes": 14046,
+        "sha256": "5a4ab63c22303447417960c9d0e1782629e1dd8555f299ed80659ff19ddc3099"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v2.json",
+      "record": {
+        "bytes": 6849,
+        "sha256": "125a0bcc5a810363814ecc2e1eb1e31bd1654624861bf3f34c00516eb667b5ab"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v2.md",
+      "record": {
+        "bytes": 1285,
+        "sha256": "94fd75a1439a79c2b5ef8359e3cbfd2ba8c52afdbea2b4258b111a3f275fd224"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_proof_rejected_v2.json",
+      "record": {
+        "bytes": 2779,
+        "sha256": "b8a85b73ea84a07286e306691cf6c55057b522446f38cc1ff5bc76e1ed4402f6"
+      }
+    }
+  ],
+  "admission_invariants": [
+    "Original debit and account floor remain bound; every historical and terminated primary charge carries exactly once under the combined 25 USD ceiling. A complete accepted primary final receipt and original absence reconciliation are mandatory before H.",
+    "The full original primary receiver runs from verified source bytes in an isolated process before watcher arming. Exact prerequisite hashes and a file/directory identity inventory bracket the full rehash and are rechecked immediately before creation; both creation locks and the unchanged watcher freshness guard remain.",
+    "Every prior H lease must satisfy absence reconciliation, finite elapsed-time/rate charge lower bounds, exact combined/prior arithmetic and a complete nonoverlapping predecessor chain. Parsed state and pin derive from the same bytes; final record and full ledger membership checks detect concurrent mutation. Each prior H charge reduces the same aggregate 6 USD allowance.",
+    "The maximum new H envelope is 29760 seconds at the unchanged hard rate, plus 0.15 USD margin: 5.989890410958905 USD. Account, remaining phase and combined funds independently restrict admission.",
+    "The receiver uses up to eight 64 MiB range readers, fixed retrieval/watch deadlines, exact owned worker/SSH identity, descriptor/path guards, immutable resumable chunk records, full SHA validation and atomic durable publication. The original source snapshots, external semantic validation, accepted-stage reuse, receipt binding and independent emergency shutdown remain. Worker STOP permits preservation; range cancellation quiesces owned processes and descendants."
+  ],
+  "integration_conditions": [
+    "Actual complete primary final acceptance and verified reconciled shutdown remain required before any H debit/admission.",
+    "A separately accepted scientific implementation and frozen bundle must preserve original N100 estimator, native evidence, seal chain and historical readout definitions.",
+    "Actual measured native-gate timing must admit all 100 calibration prompts and readouts before the fixed work deadline; the preservation and termination reserves stay separate.",
+    "The prior reverse eight-stream probe measured 3545351.5540594817 bytes/s. Local fixtures verify transport mechanics, not future provider throughput or successful transfer of the eventual full-size H artifacts."
+  ],
+  "recorded_at_utc": "2026-09-09T23:29:55.702066+00:00"
+}

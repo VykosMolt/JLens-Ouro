@@ -1,0 +1,17 @@
+col160 exit 0
+executed exit 0
+fp32 exit 0
+fp64 exit 0
+fp64_head exit 0
+perturb_delta_0.03125_max exit 0
+perturb_delta_0.03125_min exit 0
+perturb_delta_0.125_max exit 0
+perturb_delta_0.125_min exit 0
+row1 exit 0
+rows190 exit 0
+rows191 exit 0
+rows192 exit 0
+ties_against_every_name exit 0
+ties_favor_every_name exit 0
+ties_maximize_primary exit 0
+ties_minimize_primary exit 0

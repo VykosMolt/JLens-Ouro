@@ -1,0 +1,197 @@
+{
+  "started_utc": "2026-09-07T20:51:37.992248+00:00",
+  "purpose": "Bounded native-batch memory/capture probe; no full fit or scientific result.",
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "records": [
+    {
+      "batch": 2,
+      "compress": false,
+      "source_edges": true,
+      "source_count": 191,
+      "target": 191,
+      "seq_len": 128,
+      "forward_seconds": 0.5055271880009968,
+      "after_forward_gb": 9.522373632,
+      "eager_times": [
+        0.17695621299935738,
+        0.1764322480012197,
+        0.17755428100281279,
+        0.18119492900223122,
+        0.17914400500012562,
+        0.17732023400094477
+      ],
+      "eager_mean": 0.17832913940146683,
+      "eager_estimated_full_backward_seconds": 182.60903874710203,
+      "eager_peak_cuda_gb": 9.767760384,
+      "warmup_seconds": 0.5206077140028356,
+      "capture_seconds": 0.19427411399738048,
+      "capture_same_graph_bitwise": true,
+      "capture_times": [
+        0.16889735799850314,
+        0.16891573700195295,
+        0.16891749999922467,
+        0.17303261900087819,
+        0.18178119200092624,
+        0.1700159049978538
+      ],
+      "capture_mean": 0.17253259060016718,
+      "capture_estimated_full_prompt_seconds": 177.8937817905724,
+      "peak_cuda_gb": 9.768809984,
+      "storage": null,
+      "executed": true,
+      "sample_all_finite": true,
+      "stock_b2_first_rows_bitwise": true
+    },
+    {
+      "batch": 2,
+      "compress": true,
+      "source_edges": true,
+      "source_count": 191,
+      "target": 191,
+      "seq_len": 128,
+      "forward_seconds": 0.38087373199959984,
+      "after_forward_gb": 7.449740288,
+      "eager_times": [
+        0.18933582500176271,
+        0.1920631479988515,
+        0.19341723800243926,
+        0.19521059199905721,
+        0.19123739799761097,
+        0.18970415299918386
+      ],
+      "eager_mean": 0.19232650579942856,
+      "eager_estimated_full_backward_seconds": 196.94234193861485,
+      "eager_peak_cuda_gb": 7.699337728,
+      "warmup_seconds": 0.5628567109997675,
+      "capture_seconds": 0.20807789799800958,
+      "capture_same_graph_bitwise": true,
+      "capture_times": [
+        0.18062899000142352,
+        0.18062408400146523,
+        0.1805687919986667,
+        0.1943921819984098,
+        0.1924841730033222,
+        0.1819702770008007
+      ],
+      "capture_mean": 0.18600790160053293,
+      "capture_estimated_full_prompt_seconds": 191.6238995799431,
+      "peak_cuda_gb": 7.700387328,
+      "storage": {
+        "batch_size": 2,
+        "seq_len": 128,
+        "min_savings_bytes": 4096,
+        "active": false,
+        "counts": {
+          "pack_calls": 8046,
+          "lane_comparisons": 2296,
+          "equality_reductions": 2296,
+          "compressed_payloads": 2296,
+          "compressed_logical_bytes": 4067147776,
+          "packed_lane_bytes": 2033573888,
+          "nominal_logical_bytes_saved": 2033573888,
+          "max_reconstruction_bytes": 2883584,
+          "skip:small_savings": 1536,
+          "reused_payloads": 768,
+          "skip:persistent_storage": 2109,
+          "skip:ambiguous_or_unrecognized_shape": 1146,
+          "skip:non_dense_or_unsupported_dtype": 191,
+          "unpack_calls": 88407,
+          "materializations": 33682,
+          "materialized_bytes_total": 62409228288
+        },
+        "compressed_layout_counts": {
+          "((2, 128, 2048), (262144, 2048, 1), 0, 0, False)": 768,
+          "((2, 16, 128, 128), (262144, 16384, 128, 1), 0, 0, False)": 573,
+          "((2, 16, 128), (2048, 128, 1), 0, 0, False)": 191,
+          "((2, 16, 128, 128), (262144, 128, 2048, 1), 0, 0, False)": 191,
+          "((2, 128, 5632), (720896, 5632, 1), 0, 0, False)": 573
+        },
+        "byte_count_scope": "logical payload accounting, not measured live allocator savings"
+      },
+      "executed": true,
+      "sample_all_finite": true,
+      "stock_b2_first_rows_bitwise": true
+    },
+    {
+      "batch": 8,
+      "compress": true,
+      "source_edges": true,
+      "source_count": 191,
+      "target": 191,
+      "seq_len": 128,
+      "forward_seconds": 0.6964498859997548,
+      "after_forward_gb": 7.487944704,
+      "eager_times": [
+        0.622234094000305,
+        0.6243229710016749,
+        0.6177906699995219,
+        0.6231867380010954,
+        0.6220686060005391,
+        0.6212408110004617
+      ],
+      "eager_mean": 0.6217219592006586,
+      "eager_estimated_full_backward_seconds": 159.1608215553686,
+      "eager_peak_cuda_gb": 8.38447872,
+      "warmup_seconds": 1.8544437589989684,
+      "capture_seconds": 0.19198440100080916,
+      "capture_same_graph_bitwise": true,
+      "capture_times": [
+        0.6369890200003283,
+        0.6019640790000267,
+        0.620002392999595,
+        0.6195278550003422,
+        0.6046509959996911,
+        0.620834018001915
+      ],
+      "capture_mean": 0.613395868200314,
+      "capture_estimated_full_prompt_seconds": 159.77222030527992,
+      "peak_cuda_gb": 8.388673024,
+      "storage": {
+        "batch_size": 8,
+        "seq_len": 128,
+        "min_savings_bytes": 4096,
+        "active": false,
+        "counts": {
+          "pack_calls": 8046,
+          "lane_comparisons": 16072,
+          "equality_reductions": 2296,
+          "compressed_payloads": 2296,
+          "compressed_logical_bytes": 16268591104,
+          "packed_lane_bytes": 2033573888,
+          "nominal_logical_bytes_saved": 14235017216,
+          "max_reconstruction_bytes": 11534336,
+          "skip:small_savings": 1536,
+          "reused_payloads": 768,
+          "skip:persistent_storage": 2109,
+          "skip:ambiguous_or_unrecognized_shape": 1146,
+          "skip:non_dense_or_unsupported_dtype": 191,
+          "unpack_calls": 88407,
+          "materializations": 33682,
+          "materialized_bytes_total": 249636913152
+        },
+        "compressed_layout_counts": {
+          "((8, 128, 2048), (262144, 2048, 1), 0, 0, False)": 768,
+          "((8, 16, 128, 128), (262144, 16384, 128, 1), 0, 0, False)": 573,
+          "((8, 16, 128), (2048, 128, 1), 0, 0, False)": 191,
+          "((8, 16, 128, 128), (262144, 128, 2048, 1), 0, 0, False)": 191,
+          "((8, 128, 5632), (720896, 5632, 1), 0, 0, False)": 573
+        },
+        "byte_count_scope": "logical payload accounting, not measured live allocator savings"
+      },
+      "executed": true,
+      "sample_all_finite": true
+    },
+    {
+      "batch": 16,
+      "compress": true,
+      "executed": false,
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 22.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 69.50 MiB is free. Including non-PyTorch memory, this process has 11.46 GiB memory in use. Of the allocated memory 9.92 GiB is allocated by PyTorch, and 1.26 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "batch": 32,
+      "compress": true,
+      "executed": false,
+      "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 44.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 99.50 MiB is free. Including non-PyTorch memory, this process has 11.43 GiB memory in use. Of the allocated memory 10.19 GiB is allocated by PyTorch, and 979.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+component,estimate,group_percentile_2.5,group_percentile_97.5
+primary_excess_difference,0.231883,0.162890,0.328977
+fit01_intended,0.379167,0.304444,0.465625
+fit01_control,0.003441,0.001817,0.005065
+raw_intended,0.144271,0.104545,0.178704
+raw_control,0.000429,0.000185,0.000755
+intended_difference,0.234896,0.166152,0.331600
+control_difference,0.003013,0.001463,0.004422

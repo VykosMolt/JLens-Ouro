@@ -1,0 +1,16 @@
+{
+  "schema": "native_logit_user_approval.v1",
+  "recorded_utc": "2026-09-10T21:47:00.050929+00:00",
+  "user_words": "Approved",
+  "freeze_sha256": "178f2f924d1421102184199842a4b06f20466ee1bff96ddd2be2e60e932970ea",
+  "scope": "Create one community RTX 5090 lease for ouro_native_logit_diagnostic_v1, job cap $1.50 within the $25 cap, and export bundle.tar.gz to its provider-assigned address.",
+  "approved_message": "One community RTX 5090 at $0.69/h ($0.706/h all-in); $1.50 controller-enforced cap inside the unchanged $25 total; automatic deletion by +75 min (about $0.88), provider timer at +85 min (about $1.00); expected about 25 min and $0.30; upload of the frozen diagnostic bundle (code and the three historical development items, no banks or confirmation questions) to the pod's assigned address; model downloaded on the pod from Hugging Face at the pinned revision; no retry after a paid failure without asking.",
+  "a7_reports": {
+    "diagnostic_native_logit_v1_verification.json": "fc071eb167e5d54893864fdcaf8b4ae91dd198a041b1a500b553fc6ebaaf7ddb",
+    "diagnostic_native_logit_v1_verification.md": "2ae03d6ac0a54b45db9ba5f7094f942c01e297b10fcd52b6ed2e37cef3956fd5",
+    "diagnostic_native_logit_v1_review.json": "1233367f88c03b65915e7cc1b29af3a3ed8c452999c95bcaae2e54233e16d42e",
+    "diagnostic_native_logit_v1_review.md": "80d01b8e590ebe271c86bc4391a6d4cb7070e8ef5286cf37b5e8a1d1ebae82c0"
+  },
+  "pre_run_rules_sha256": "1d0af16640b7afd90095226b8121988aee1a3223ca4f978ead1f981bcb69ac85",
+  "precreate_observation_sha256": "33e7f5646c866ba9e23e438ec4a8817d63dd8dfeff7e3f62da1d4cae77ab1bcd"
+}

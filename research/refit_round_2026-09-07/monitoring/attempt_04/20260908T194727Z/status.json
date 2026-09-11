@@ -1,0 +1,1 @@
+{"error_type":"RuntimeError","lease_name":"jlens-refit-f983ec9fb7364ba6b482b3a2065ddfad","phase":"failed","reason":"preflight_ouro exited with status 1; see its result log","schema_version":1,"setup_complete":true,"updated_utc":"2026-09-08T19:46:13.278261+00:00"}

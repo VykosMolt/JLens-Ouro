@@ -1,0 +1,8 @@
+
+START suffix_inductor: wall limit 120s
+W0907 22:45:50.137000 686677 torch/_inductor/utils.py:1709] [!0/0/0] Not enough SMs to use max_autotune_gemm mode
+{"stage": "suffix_inductor", "prompt": 0, "status": "numerical_mismatch", "first_compiled_seconds": 4.389650522000011, "eager_seconds_per_pass": 0.002964824166459342, "compiled_seconds_per_pass": 0.0025164903333158386, "graphs": 1}
+
+START full_fx_eager: wall limit 120s
+{"stage": "full_fx_eager", "prompt": 0, "status": "passed", "first_compiled_seconds": 21.779357024999626, "eager_seconds_per_pass": 0.18076271366650568, "compiled_seconds_per_pass": 0.20411547016616774, "graphs": 1}
+{"stage": "full_fx_eager", "prompt": 1, "status": "passed", "first_compiled_seconds": 0.20219269099834491, "eager_seconds_per_pass": 0.18037060366623336, "compiled_seconds_per_pass": 0.20346236833332418, "graphs": 1}

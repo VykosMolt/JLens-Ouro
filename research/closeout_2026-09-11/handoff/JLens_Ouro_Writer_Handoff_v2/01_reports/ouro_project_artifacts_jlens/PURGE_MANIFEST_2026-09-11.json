@@ -1,0 +1,282 @@
+{
+ "schema": "jlens_storage_purge.v1",
+ "planned_utc": "2026-09-10T22:03:38.937188+00:00",
+ "root": "/home/moloch/ouro_project/artifacts/jlens",
+ "rule": "Delete regular files of at least 50 MiB, except one verified copy of each confirmation lens bank; keep every smaller file.",
+ "reason": "User request to purge jlens storage while keeping what a paper would need.",
+ "kept_large_files": [],
+ "deleted_files": [
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/b300_jlens-b300-20260905-0359/exit3.pt",
+   "bytes": 1602279480,
+   "mtime_ns": 1788585089571383001,
+   "sha256": "d7c262978b9801985ad7420bc7dcc98803dd00bf75841e8b5b7596d624b9a85d"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit0/exit0_p0-24.pt",
+   "bytes": 394278314,
+   "mtime_ns": 1788398979111189006,
+   "sha256": "36b3d5ee1001845768d3aaea3c45b967faf37549898f17a1ba043c1abe020c3b"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit1/exit1_p0-24.pt",
+   "bytes": 796944858,
+   "mtime_ns": 1788401408666656061,
+   "sha256": "c9484f225364a3390a069ff8c7a86c02a6a3cc324265b5ff261375ec36dcf79b"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit2/exit2_p0-24.pt",
+   "bytes": 1199611445,
+   "mtime_ns": 1788405093425155736,
+   "sha256": "772878a1fd90a6bae238ea27e97ea6dc32f57287c556db73732e2594f96d4f79"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_merged.pt",
+   "bytes": 1602278298,
+   "mtime_ns": 1788405108156269423,
+   "sha256": "44cc08ce3faba08725d7e47e614c02b4db291b75ab48496bf6aeffa8c4d5a899"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_n56.pt",
+   "bytes": 1602277707,
+   "mtime_ns": 1788416760789220273,
+   "sha256": "beb0592c86bcd1fb74c96eab380d955989b877ad63e1c9ff246c06771584e5ab"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_n80.pt",
+   "bytes": 1602277707,
+   "mtime_ns": 1788416766595259964,
+   "sha256": "cd49c026edd81ac0369214f52c1b1a79e750a2eedc8756dbbcab0933e08793b7"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p0-8.pt",
+   "bytes": 1602277904,
+   "mtime_ns": 1788391985439366891,
+   "sha256": "e5fd1d3c51379abcd33724ac85a5d6e8337bfdebadfa236b7023c18adab01349"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p32-56.pt",
+   "bytes": 1602278298,
+   "mtime_ns": 1788410596288713842,
+   "sha256": "caa6fc6b9dc3203aa0b283e45337cee2e6ec55d4413be17c52e9d708933360bc"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p56-80.pt",
+   "bytes": 1602278298,
+   "mtime_ns": 1788415512396801771,
+   "sha256": "669faf131c859937da267d1eced4420eaf07605b690939df64b0c29fd92a581a"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/exit3/exit3_p8-32.pt",
+   "bytes": 1602278101,
+   "mtime_ns": 1788397758059967307,
+   "sha256": "fdc10b6a2054f96f1d11fbf8fc43fe9e1bb35f308bcb08dc1d0d1de5fe255d83"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit0.pt",
+   "bytes": 394278685,
+   "mtime_ns": 1788584833758358019,
+   "sha256": "3693469edc1b060cc2da46751792d0c85b75635c25ac976133fa2f64ecfe3665"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit1.pt",
+   "bytes": 796945565,
+   "mtime_ns": 1788585106006513111,
+   "sha256": "12c1a43451bcf9e36515f29f3e779c025d47c75f9b0a39eca67bb71736d62f58"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2.pt",
+   "bytes": 1199612552,
+   "mtime_ns": 1788585360332526639,
+   "sha256": "a5e6e1e7cab5d377dc94c92878b07b3499d57cd8196f335546fb54229b93b2e2"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0000_0025.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788583904875012313,
+   "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0025_0050.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788584178167171547,
+   "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0050_0075.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788584442810264382,
+   "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit2_shard_0075_0100.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788584705344341676,
+   "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3.pt",
+   "bytes": 1602279480,
+   "mtime_ns": 1788584870952652422,
+   "sha256": "d3bc7c4291d130417464919f9c6b420fe965bce135a23d63e93f0ac43df76da5"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3_shard_0000_0008.pt",
+   "bytes": 1602282696,
+   "mtime_ns": 1788581987392326926,
+   "sha256": "04e902ac7eb504cedc20d03dff81158112a46a8dcb9c996bd8f25affb3683c17"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3_shard_0008_0032.pt",
+   "bytes": 1602282696,
+   "mtime_ns": 1788582311147651016,
+   "sha256": "8779292ed389316baded51e02614770d0eca4b33f6afec14cf33b2c944965d49"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3_shard_0032_0056.pt",
+   "bytes": 1602282696,
+   "mtime_ns": 1788582608557886460,
+   "sha256": "2c6a15f0b09e3d07d0c34cea2a778803a74fae911d4d4e7e74871b48cd9fced6"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3_shard_0056_0080.pt",
+   "bytes": 1602282696,
+   "mtime_ns": 1788583604003639336,
+   "sha256": "f96a714205738a8ffbcda7519cb43016b2e8c3cb9d3de2c6c818570fc0f10276"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/n100/exit3_shard_0080_0100.pt",
+   "bytes": 1602282696,
+   "mtime_ns": 1788583487947725776,
+   "sha256": "a803d687e674b481c599ddf27aca9adb19ca62998b2389c522ad0fa17cb3a759"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/lens/pilot/exit3_p0-8.pt",
+   "bytes": 1602277904,
+   "mtime_ns": 1788390710628592108,
+   "sha256": "e5fd1d3c51379abcd33724ac85a5d6e8337bfdebadfa236b7023c18adab01349"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/history/recovered-2026-09-04/gpu_cache.npz",
+   "bytes": 510421966,
+   "mtime_ns": 1788512937812940977,
+   "sha256": "bfbb9308d00c511b80050325855d37d44a44b9f5ed3ab59aa71a6098dffb3c02"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/n80/gpu_cache.npz",
+   "bytes": 510101594,
+   "mtime_ns": 1788417605169140714,
+   "sha256": "912a0a098a34e3491cd06a450a071820be28d079961e357d03b2a20b0f272657"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/n80_v2/gpu_cache.npz",
+   "bytes": 392103153,
+   "mtime_ns": 1788529158428528905,
+   "sha256": "4cb03e201dd27b21fd296a9a2b4d98f3254612d1c08c34deecfdd590b081aad6"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/pilot/gpu_cache.npz",
+   "bytes": 510101594,
+   "mtime_ns": 1788391951186147603,
+   "sha256": "f07bbade6226edcfe0928ace00c2222e705a5d43f6c12905fa1a2fca6d2d8607"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/probe/round1_exit3x32/gpu_cache.npz",
+   "bytes": 510101594,
+   "mtime_ns": 1788405671752792258,
+   "sha256": "ceacedaa85d2bd9c4fe85f95c658c24ee29b72e7aaa7c57e81cb4713dea7d7d7"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0000_0025.pt",
+   "bytes": 394279661,
+   "mtime_ns": 1788585368242589268,
+   "sha256": "480418049589449c2754d0d899d5457673dffd55563ce4ffda67a4aa7c2d4d42"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0025_0050.pt",
+   "bytes": 394279661,
+   "mtime_ns": 1788585451296246866,
+   "sha256": "e4872d1cb58089fdc580ec1927ec0a622506080b948093c50c36d062fe537259"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0050_0075.pt",
+   "bytes": 394279661,
+   "mtime_ns": 1788585528815860661,
+   "sha256": "a9c8a74d50fb9ab588207e1cfec82f075dabab9609ad8c8691785c7e91d8296d"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit0_shard_0075_0100.pt",
+   "bytes": 394279661,
+   "mtime_ns": 1788585605450467458,
+   "sha256": "fa4823d769a9ef0cd10de87504867b6a8f9a0fe22b9c084b923baa9e3a45b254"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0000_0025.pt",
+   "bytes": 796947245,
+   "mtime_ns": 1788585768149755740,
+   "sha256": "4da502ff6be8963440f30c3514a289bedeaf3b3df96c30bb4ecd13fa80ba02c6"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0025_0050.pt",
+   "bytes": 796947245,
+   "mtime_ns": 1788585910856885755,
+   "sha256": "5a8126e1040e7e8ab7e724f4a3fb7864b0852e744da79798f98fcccefbd2c843"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0050_0075.pt",
+   "bytes": 796947245,
+   "mtime_ns": 1788586063143091646,
+   "sha256": "654928cbc4f1df0324a6d91d1f6cd5c4685eab903700b6f6a23082c119bb903d"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit1_shard_0075_0100.pt",
+   "bytes": 796947245,
+   "mtime_ns": 1788586209224248380,
+   "sha256": "3f5c7ef5d69f5e837fffaaa0e4ffd4e52bef77951373122f6283e63ceaf9a504"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0000_0025.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788586446618128241,
+   "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0025_0050.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788586672034913246,
+   "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0050_0075.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788586890644644361,
+   "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit2_shard_0075_0100.pt",
+   "bytes": 1199615000,
+   "mtime_ns": 1788587118010444810,
+   "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit3.pt",
+   "bytes": 1602279480,
+   "mtime_ns": 1788587418208822011,
+   "sha256": "d7c262978b9801985ad7420bc7dcc98803dd00bf75841e8b5b7596d624b9a85d"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit3_n32.pt",
+   "bytes": 1602280332,
+   "mtime_ns": 1788587717140189161,
+   "sha256": "eea0d69232ff4d14598028b1c9010773c9f4ff49779a118dea0b040486bbec1a"
+  },
+  {
+   "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit3_n56.pt",
+   "bytes": 1602280332,
+   "mtime_ns": 1788588016930563165,
+   "sha256": "9ec2189df2622fb1eaff05e94700edc45fe27cc1b63d2377a7cd0d1e90005964"
+  }
+ ],
+ "deleted_bytes": 50417365745,
+ "executed_utc": "2026-09-10T22:06:42.921849+00:00"
+}

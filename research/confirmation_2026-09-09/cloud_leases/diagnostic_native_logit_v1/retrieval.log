@@ -1,0 +1,27 @@
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[
+  {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/diagnostic_native_logit_v1/handoff/accepted/ouro_native_logit_diagnostic_v1/f9751036b1fa746fc8a37287c755093cde92238ead58347f78869eeb949063e6/RECEIPT.json",
+    "record": {
+      "bytes": 2321,
+      "sha256": "7014998c80f66725819c5bc7c88bfb3cd628dea0c523614975b02fb93a4da26d"
+    },
+    "manifest_sha256": "f9751036b1fa746fc8a37287c755093cde92238ead58347f78869eeb949063e6"
+  }
+]

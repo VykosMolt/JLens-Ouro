@@ -1,0 +1,446 @@
+{
+ "schema": "local_exit_bank_inventory.v1",
+ "application_era_family": [
+  {
+   "bank": "n100/exit0",
+   "role": "local exit of pass 1",
+   "target_ut_zero_based": 0,
+   "target_virtual": 47,
+   "source_virtual_layers": [
+    0,
+    46
+   ],
+   "n_sources": 47,
+   "recipe": {
+    "n_prompts": 100,
+    "prompt_slice": {
+     "count": 100,
+     "end": 100,
+     "sha256": "064995b8eafba5e7b0d0cfd93a4b62618f1616f3969839a9edbcdb785cdaf617",
+     "start": 0
+    },
+    "prompt_file_sha256": "972bd0234a9530a46c77dfcc68f429dba81c708e6205e787accf0ed01f9bce7d",
+    "prompt_source": {
+     "config": "wikitext-103-raw-v1",
+     "dataset": "Salesforce/wikitext",
+     "minimum_characters": 600,
+     "requested_prompts": 1200,
+     "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+     "split": "train"
+    },
+    "max_seq_len": 128,
+    "skip_first": 16,
+    "dim_batch": 32,
+    "bos_prepended": true,
+    "generator_sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "jlens_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "model_snapshot_sha256": "66bb4817478a4eef70f78354f9ce3d3a5ece85bfef2526a707464800aca65c80",
+    "saved_dtype": "float16 (jlens.lens.JacobianLens.save default)",
+    "reduction": "stock: cotangent at every valid target position (sum), mean over valid source positions 16..len-2, mean over prompts (count-weighted shard merge)",
+    "created_at": "2026-09-05T02:43:19Z",
+    "fit_seconds": 496.999
+   },
+   "merged_file": {
+    "path": "artifacts/jlens/lens/n100/exit0.pt",
+    "bytes": 394278685,
+    "sha256": "3693469edc1b060cc2da46751792d0c85b75635c25ac976133fa2f64ecfe3665",
+    "status": "LOST_no_copy"
+   },
+   "alternative_merge": null,
+   "shards": [
+    {
+     "path": "artifacts/jlens/lens/n100/exit0_shard_0000_0025.pt",
+     "bytes": 394279661,
+     "sha256": "480418049589449c2754d0d899d5457673dffd55563ce4ffda67a4aa7c2d4d42",
+     "prompt_range": [
+      0,
+      25
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0000_0025.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit0_shard_0025_0050.pt",
+     "bytes": 394279661,
+     "sha256": "e4872d1cb58089fdc580ec1927ec0a622506080b948093c50c36d062fe537259",
+     "prompt_range": [
+      25,
+      50
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0025_0050.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit0_shard_0050_0075.pt",
+     "bytes": 394279661,
+     "sha256": "a9c8a74d50fb9ab588207e1cfec82f075dabab9609ad8c8691785c7e91d8296d",
+     "prompt_range": [
+      50,
+      75
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0050_0075.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit0_shard_0075_0100.pt",
+     "bytes": 394279661,
+     "sha256": "fa4823d769a9ef0cd10de87504867b6a8f9a0fe22b9c084b923baa9e3a45b254",
+     "prompt_range": [
+      75,
+      100
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit0_shard_0075_0100.pt"
+    }
+   ]
+  },
+  {
+   "bank": "n100/exit1",
+   "role": "local exit of pass 2",
+   "target_ut_zero_based": 1,
+   "target_virtual": 95,
+   "source_virtual_layers": [
+    0,
+    94
+   ],
+   "n_sources": 95,
+   "recipe": {
+    "n_prompts": 100,
+    "prompt_slice": {
+     "count": 100,
+     "end": 100,
+     "sha256": "064995b8eafba5e7b0d0cfd93a4b62618f1616f3969839a9edbcdb785cdaf617",
+     "start": 0
+    },
+    "prompt_file_sha256": "972bd0234a9530a46c77dfcc68f429dba81c708e6205e787accf0ed01f9bce7d",
+    "prompt_source": {
+     "config": "wikitext-103-raw-v1",
+     "dataset": "Salesforce/wikitext",
+     "minimum_characters": 600,
+     "requested_prompts": 1200,
+     "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+     "split": "train"
+    },
+    "max_seq_len": 128,
+    "skip_first": 16,
+    "dim_batch": 32,
+    "bos_prepended": true,
+    "generator_sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "jlens_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "model_snapshot_sha256": "66bb4817478a4eef70f78354f9ce3d3a5ece85bfef2526a707464800aca65c80",
+    "saved_dtype": "float16 (jlens.lens.JacobianLens.save default)",
+    "reduction": "stock: cotangent at every valid target position (sum), mean over valid source positions 16..len-2, mean over prompts (count-weighted shard merge)",
+    "created_at": "2026-09-05T03:44:42Z",
+    "fit_seconds": 903.046
+   },
+   "merged_file": {
+    "path": "artifacts/jlens/lens/n100/exit1.pt",
+    "bytes": 796945565,
+    "sha256": "12c1a43451bcf9e36515f29f3e779c025d47c75f9b0a39eca67bb71736d62f58",
+    "status": "LOST_no_copy"
+   },
+   "alternative_merge": null,
+   "shards": [
+    {
+     "path": "artifacts/jlens/lens/n100/exit1_shard_0000_0025.pt",
+     "bytes": 796947245,
+     "sha256": "4da502ff6be8963440f30c3514a289bedeaf3b3df96c30bb4ecd13fa80ba02c6",
+     "prompt_range": [
+      0,
+      25
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0000_0025.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit1_shard_0025_0050.pt",
+     "bytes": 796947245,
+     "sha256": "5a8126e1040e7e8ab7e724f4a3fb7864b0852e744da79798f98fcccefbd2c843",
+     "prompt_range": [
+      25,
+      50
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0025_0050.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit1_shard_0050_0075.pt",
+     "bytes": 796947245,
+     "sha256": "654928cbc4f1df0324a6d91d1f6cd5c4685eab903700b6f6a23082c119bb903d",
+     "prompt_range": [
+      50,
+      75
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0050_0075.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit1_shard_0075_0100.pt",
+     "bytes": 796947245,
+     "sha256": "3f5c7ef5d69f5e837fffaaa0e4ffd4e52bef77951373122f6283e63ceaf9a504",
+     "prompt_range": [
+      75,
+      100
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit1_shard_0075_0100.pt"
+    }
+   ]
+  },
+  {
+   "bank": "n100/exit2",
+   "role": "local exit of pass 3",
+   "target_ut_zero_based": 2,
+   "target_virtual": 143,
+   "source_virtual_layers": [
+    0,
+    142
+   ],
+   "n_sources": 143,
+   "recipe": {
+    "n_prompts": 100,
+    "prompt_slice": {
+     "count": 100,
+     "end": 100,
+     "sha256": "064995b8eafba5e7b0d0cfd93a4b62618f1616f3969839a9edbcdb785cdaf617",
+     "start": 0
+    },
+    "prompt_file_sha256": "972bd0234a9530a46c77dfcc68f429dba81c708e6205e787accf0ed01f9bce7d",
+    "prompt_source": {
+     "config": "wikitext-103-raw-v1",
+     "dataset": "Salesforce/wikitext",
+     "minimum_characters": 600,
+     "requested_prompts": 1200,
+     "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+     "split": "train"
+    },
+    "max_seq_len": 128,
+    "skip_first": 16,
+    "dim_batch": 32,
+    "bos_prepended": true,
+    "generator_sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "jlens_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "model_snapshot_sha256": "66bb4817478a4eef70f78354f9ce3d3a5ece85bfef2526a707464800aca65c80",
+    "saved_dtype": "float16 (jlens.lens.JacobianLens.save default)",
+    "reduction": "stock: cotangent at every valid target position (sum), mean over valid source positions 16..len-2, mean over prompts (count-weighted shard merge)",
+    "created_at": "2026-09-05T03:20:12Z",
+    "fit_seconds": 1344.622
+   },
+   "merged_file": {
+    "path": "artifacts/jlens/lens/n100/exit2.pt",
+    "bytes": 1199612552,
+    "sha256": "a5e6e1e7cab5d377dc94c92878b07b3499d57cd8196f335546fb54229b93b2e2",
+    "status": "LOST_no_copy"
+   },
+   "alternative_merge": null,
+   "shards": [
+    {
+     "path": "artifacts/jlens/lens/n100/exit2_shard_0000_0025.pt",
+     "bytes": 1199615000,
+     "sha256": "6ed26f9985837a7bf2f238f4bdf14af1152966c332479f33f17287e513d8626a",
+     "prompt_range": [
+      0,
+      25
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0000_0025.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit2_shard_0025_0050.pt",
+     "bytes": 1199615000,
+     "sha256": "922d036dfdaab2d6be869394aea86ea085f367168c015499b6f09962574f8368",
+     "prompt_range": [
+      25,
+      50
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0025_0050.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit2_shard_0050_0075.pt",
+     "bytes": 1199615000,
+     "sha256": "e25cafe5821146239875e65511392bef2e6019505806298061424695e93a990c",
+     "prompt_range": [
+      50,
+      75
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0050_0075.pt"
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit2_shard_0075_0100.pt",
+     "bytes": 1199615000,
+     "sha256": "d9788ead4f83d1c28eb8c7128ac8bd36e2cdf9a95e9c45bac8a0e67a761dd76c",
+     "prompt_range": [
+      75,
+      100
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": "jlens-b300-20260905-0359/artifacts/lens/n100/exit2_shard_0075_0100.pt"
+    }
+   ]
+  },
+  {
+   "bank": "n100/exit3",
+   "role": "final exit (pass 4) = final-target bank of the application era",
+   "target_ut_zero_based": 3,
+   "target_virtual": 191,
+   "source_virtual_layers": [
+    0,
+    190
+   ],
+   "n_sources": 191,
+   "recipe": {
+    "n_prompts": 100,
+    "prompt_slice": {
+     "count": 100,
+     "end": 100,
+     "sha256": "064995b8eafba5e7b0d0cfd93a4b62618f1616f3969839a9edbcdb785cdaf617",
+     "start": 0
+    },
+    "prompt_file_sha256": "972bd0234a9530a46c77dfcc68f429dba81c708e6205e787accf0ed01f9bce7d",
+    "prompt_source": {
+     "config": "wikitext-103-raw-v1",
+     "dataset": "Salesforce/wikitext",
+     "minimum_characters": 600,
+     "requested_prompts": 1200,
+     "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+     "split": "train"
+    },
+    "max_seq_len": 128,
+    "skip_first": 16,
+    "dim_batch": 32,
+    "bos_prepended": true,
+    "generator_sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "jlens_commit": "581d398613e5602a5af361e1c34d3a92ea82ba8e",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "model_snapshot_sha256": "66bb4817478a4eef70f78354f9ce3d3a5ece85bfef2526a707464800aca65c80",
+    "saved_dtype": "float16 (jlens.lens.JacobianLens.save default)",
+    "reduction": "stock: cotangent at every valid target position (sum), mean over valid source positions 16..len-2, mean over prompts (count-weighted shard merge)",
+    "created_at": "2026-09-05T02:45:30Z",
+    "fit_seconds": 520.961
+   },
+   "merged_file": {
+    "path": "artifacts/jlens/lens/n100/exit3.pt",
+    "bytes": 1602279480,
+    "sha256": "d3bc7c4291d130417464919f9c6b420fe965bce135a23d63e93f0ac43df76da5",
+    "status": "LOST_no_copy"
+   },
+   "alternative_merge": {
+    "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/lens/n100/exit3.pt",
+    "bytes": 1602279480,
+    "sha256": "d7c262978b9801985ad7420bc7dcc98803dd00bf75841e8b5b7596d624b9a85d",
+    "status": "LOCAL_HF_CACHE_BLOB",
+    "note": "pod-side merge of the same five shards; different bytes from the local merge (fp16 merge order), tensor equivalence untested"
+   },
+   "shards": [
+    {
+     "path": "artifacts/jlens/lens/n100/exit3_shard_0000_0008.pt",
+     "bytes": 1602282696,
+     "sha256": "04e902ac7eb504cedc20d03dff81158112a46a8dcb9c996bd8f25affb3683c17",
+     "prompt_range": [
+      0,
+      8
+     ],
+     "status": "LOCAL_HF_CACHE_BLOB",
+     "remote_path": null
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit3_shard_0008_0032.pt",
+     "bytes": 1602282696,
+     "sha256": "8779292ed389316baded51e02614770d0eca4b33f6afec14cf33b2c944965d49",
+     "prompt_range": [
+      8,
+      32
+     ],
+     "status": "LOCAL_HF_CACHE_BLOB",
+     "remote_path": null
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit3_shard_0032_0056.pt",
+     "bytes": 1602282696,
+     "sha256": "2c6a15f0b09e3d07d0c34cea2a778803a74fae911d4d4e7e74871b48cd9fced6",
+     "prompt_range": [
+      32,
+      56
+     ],
+     "status": "LOCAL_HF_CACHE_BLOB",
+     "remote_path": null
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit3_shard_0056_0080.pt",
+     "bytes": 1602282696,
+     "sha256": "f96a714205738a8ffbcda7519cb43016b2e8c3cb9d3de2c6c818570fc0f10276",
+     "prompt_range": [
+      56,
+      80
+     ],
+     "status": "LOCAL_HF_CACHE_BLOB",
+     "remote_path": null
+    },
+    {
+     "path": "artifacts/jlens/lens/n100/exit3_shard_0080_0100.pt",
+     "bytes": 1602282696,
+     "sha256": "a803d687e674b481c599ddf27aca9adb19ca62998b2389c522ad0fa17cb3a759",
+     "prompt_range": [
+      80,
+      100
+     ],
+     "status": "REMOTE_ONLY_unverified(private Hub, receipt recorded)",
+     "remote_path": null
+    }
+   ]
+  }
+ ],
+ "all_four_banks_share_one_recipe_except_target": true,
+ "recipe_keys_compared": [
+  "n_prompts",
+  "prompt_slice",
+  "prompt_file_sha256",
+  "max_seq_len",
+  "skip_first",
+  "dim_batch",
+  "bos_prepended",
+  "generator_sha256",
+  "jlens_commit",
+  "model_revision",
+  "model_snapshot_sha256"
+ ],
+ "differences_from_confirmation_fit01_family": [
+  "calibration texts: first 100 wikitext paragraphs (12 articles) vs fit01 100 random paragraphs (100 articles, seed 2026090701)",
+  "dim_batch 32 (B300 pod) vs 8 with CUDA-graph replay + saved-tensor compression (fit01)",
+  "GPU/runtime: B300 pod 2026-09-05 vs RTX 4090-class community pod 2026-09-09 runtime (torch 2.12 nightly)",
+  "target: exit3 = virtual 191 (same as fit01); local banks target 47/95/143",
+  "stored dtype fp16 both; FP32 accumulation both"
+ ],
+ "retained_readouts_of_all_four_banks": {
+  "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict/arrays.npz",
+  "sha256": "76b489f13223f87e5ffc3bd36c7fc4777d78a90a4dc41d463b94e6b3218951d7",
+  "population": "discovery set, 148 items (93 multihop, 55 order-ops), evaluated locally on the RTX 5070 Ti with the pod-fitted N100 banks on 2026-09-05",
+  "provenance": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict/provenance.json"
+ },
+ "hf_cache_blobs_present": {
+  "9c284993caa5265f2529de1bb133a8eb9db58fe5": 11590,
+  "d7c262978b9801985ad7420bc7dcc98803dd00bf75841e8b5b7596d624b9a85d": 1602279480,
+  "04e902ac7eb504cedc20d03dff81158112a46a8dcb9c996bd8f25affb3683c17": 1602282696,
+  "19c856a81fc32faec0220cc86b8466bba96bf325": 11588,
+  "8779292ed389316baded51e02614770d0eca4b33f6afec14cf33b2c944965d49": 1602282696,
+  "2c6a15f0b09e3d07d0c34cea2a778803a74fae911d4d4e7e74871b48cd9fced6": 1602282696,
+  "5f361d393e9e2aab1643a284c5844b3782a9230e": 11581,
+  "f96a714205738a8ffbcda7519cb43016b2e8c3cb9d3de2c6c818570fc0f10276": 1602282696
+ },
+ "snapshot_links": {
+  "6beeeeccec9e58d3596c280a723649aa6529cca3/jlens-b300-20260905-0359/artifacts/lens/n100/exit3.pt": "d7c262978b9801985ad7420bc7dcc98803dd00bf75841e8b5b7596d624b9a85d",
+  "84b36ba7fc9d9f188c897a14277d20af93ad0bd2/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0000_0008.pt": "04e902ac7eb504cedc20d03dff81158112a46a8dcb9c996bd8f25affb3683c17",
+  "15696653fa55db7c5f6960f5af61fbacfdac54b7/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0000_0008.json": "5f361d393e9e2aab1643a284c5844b3782a9230e",
+  "15696653fa55db7c5f6960f5af61fbacfdac54b7/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0008_0032.pt": "8779292ed389316baded51e02614770d0eca4b33f6afec14cf33b2c944965d49",
+  "92e3a4e3f9a23e27d13796b07402a3dd2de6a181/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0008_0032.json": "19c856a81fc32faec0220cc86b8466bba96bf325",
+  "92e3a4e3f9a23e27d13796b07402a3dd2de6a181/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0032_0056.pt": "2c6a15f0b09e3d07d0c34cea2a778803a74fae911d4d4e7e74871b48cd9fced6",
+  "d498febde9bf7e13acda83fac3ec5a9277b2fa33/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0032_0056.json": "9c284993caa5265f2529de1bb133a8eb9db58fe5",
+  "d498febde9bf7e13acda83fac3ec5a9277b2fa33/jlens-b300-20260905-0359/artifacts/lens/n100/exit3_shard_0056_0080.pt": "f96a714205738a8ffbcda7519cb43016b2e8c3cb9d3de2c6c818570fc0f10276"
+ },
+ "credential_status": "no Hugging Face token on this machine; the private repo Vykos/ouro-jlens-results cannot be listed or downloaded here"
+}

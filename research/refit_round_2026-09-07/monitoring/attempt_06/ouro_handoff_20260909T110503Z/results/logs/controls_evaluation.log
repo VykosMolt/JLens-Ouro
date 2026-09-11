@@ -1,0 +1,22 @@
+{"stage": "control_readout", "profile": "ouro_penultimate", "arm": "dense"}
+{"stage": "control_readout", "profile": "ouro_positions", "arm": "sampled_sum"}
+{"stage": "control_readout", "profile": "ouro_positions", "arm": "diagonal"}
+{
+  "status": "complete",
+  "schema": "ouro_controls_evaluation.v1",
+  "out": "/workspace/jlens/results/controls_evaluation",
+  "files": 19,
+  "control_profiles": [
+    "ouro_penultimate",
+    "ouro_positions"
+  ],
+  "items": 148,
+  "fit_ids": [
+    1
+  ],
+  "elapsed_seconds": 23.064808867988177,
+  "complete": {
+    "bytes": 666,
+    "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "corrected_readouts": {
+    "bytes": 4865,
+    "sha256": "0749ee608b171ecb9fd97c063fa77c3fa68ca5be033b3f8f2ce23ecd8029cdb0"
+  },
+  "diagnostic_comparisons": {
+    "bytes": 51723,
+    "sha256": "784b5e6cc9702ee5c58b41fdc5f32d94a38cd5b687e0b5272a19c027cdcace22"
+  },
+  "diagnostic_reanalysis": {
+    "bytes": 7870,
+    "sha256": "a20afb35db5651d50854d5f35c238710e31f2436af80019ec4e5259d77508569"
+  },
+  "diagnostic_receipt": {
+    "bytes": 2321,
+    "sha256": "7014998c80f66725819c5bc7c88bfb3cd628dea0c523614975b02fb93a4da26d"
+  },
+  "new_confirmation_results_exposed": false,
+  "original_readouts": {
+    "bytes": 4685,
+    "sha256": "2d1762f126e9f1da9a9b7aabc2039de3697bbc5fc5b385ab6a034aa2dc931226"
+  },
+  "parent_freeze": {
+    "bytes": 9299,
+    "sha256": "8f05445eae5505d9b97fef01b172d67de4b68f83cdcabf03222c75bbbffd2696"
+  },
+  "parent_run_id": "ouro_confirmation_20260910_fixed160_precision1",
+  "schema": "confirmation_native_check_correction.v1",
+  "scope": "The native development check unembeds the whole final-step sequence [1,S,2048], the shape the native head uses; on the deployed GPU a single row gives different BF16 logits. Exact equality and every other gate, input, estimator, scoring and analysis rule are unchanged."
+}

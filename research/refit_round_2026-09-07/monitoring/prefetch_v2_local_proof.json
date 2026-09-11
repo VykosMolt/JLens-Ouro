@@ -1,0 +1,39 @@
+{
+  "status": "passed_local_fixtures_only",
+  "checks_count": 15,
+  "checks": [
+    "Accepted V1 bytes, whitelist, remote gates, hashing, lock, publication and whole-group cleanup are unchanged",
+    "Retry classification accepts only explicit SSH255/rsync10,12,30,35,255; semantic and local I/O exits remain fatal",
+    "Actual managed status timeout stops and reaps its process group and records quiescence",
+    "Actual semantic status exit1 is never reclassified as transport",
+    "Observed child semantic exit1 outranks a simultaneous guard transport failure",
+    "Positive semantic exit1 observed during cleanup remains terminal; no hidden retry",
+    "Actual local rsync delta reuses an earlier partial; retry gets fresh gates/snapshot and complete hash+mtime before publication",
+    "Guard transport timeout cleans and reaps transfer before the next fresh gate/transfer starts",
+    "Five transport attempts maximum, separate receipts/logs, no partial publication",
+    "No retry for semantic exit1, local whole-file corruption, fresh-gate STOP/phase or cross-attempt remote mtime drift",
+    "Final collector lock failure is terminal before transfer, never retried",
+    "All attempts share one original deadline; bounded timeout does not reset across retries",
+    "Explicit resume copies a pinned prior partial into a distinct inode, preserves all old bytes/metadata, then verifies complete result",
+    "Resume cannot overwrite an existing new staging path",
+    "Resume rejects wrong lease, oversized or unlisted files, symlinks and completed operations"
+  ],
+  "helper": {
+    "path": "/tmp/prefetch_completed_ouro06_v2.py",
+    "bytes": 39855,
+    "sha256": "5284ff464fdeed0029497d95feeb9cd4365cc2d5139e5de2615a32d5e068d06e"
+  },
+  "proof_source": {
+    "bytes": 16622,
+    "sha256": "5d523fb5b709a188ed9d008ab14516de06cca08a578005c0381dd2f357e73fcc"
+  },
+  "prior_helper": {
+    "bytes": 25901,
+    "sha256": "3f6bdbdabff8523da8ae23c67439daa336766e1bf38a2982adbdd73f9090ad25"
+  },
+  "fixture_directory": "/tmp/prefetch06-v2-proof-ityq98wa",
+  "remote_connections": 0,
+  "actual_partial_read": false,
+  "actual_prefetch_executed": false,
+  "model_or_gpu_calls": 0
+}

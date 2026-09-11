@@ -1,0 +1,143 @@
+{
+  "started_utc": "2026-09-07T20:13:46.167387+00:00",
+  "purpose": "Compare repeated primal batches with one-primal batched VJPs, without fitting.",
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "torch": "2.12.0.dev20260407+cu128",
+  "torch_git": "6a13e444ee88996ff01cd2bab41d7f2857291646",
+  "attention": "sdpa",
+  "script_sha256": "82a013dcef5ecaab27a35f9c6aa18ece5b3f7ccc2a2c3532bc1eba80d6fd0c0f",
+  "records": [
+    {
+      "mode": "replicated",
+      "batch": 2,
+      "source_count": 191,
+      "target": 191,
+      "forward_seconds": 0.5199386019994563,
+      "sweeps": [
+        {
+          "backward": 0.1900899180000124,
+          "reduce_copy": 0.005898146999243181,
+          "total": 0.19598806499925558
+        },
+        {
+          "backward": 0.17402458399737952,
+          "reduce_copy": 0.005279878001601901,
+          "total": 0.17930446199898142
+        },
+        {
+          "backward": 0.1724399920021824,
+          "reduce_copy": 0.005412767997768242,
+          "total": 0.17785275999995065
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 0.17323228799978097,
+        "reduce_copy": 0.005346322999685071,
+        "total": 0.17857861099946604
+      },
+      "estimated_prompt_seconds": 182.86449766345322,
+      "peak_cuda_gb": 9.960698368,
+      "sample_finite": true,
+      "pass": true
+    },
+    {
+      "mode": "batched",
+      "batch": 2,
+      "source_count": 191,
+      "target": 191,
+      "forward_seconds": 0.15174594599739066,
+      "sweeps": [
+        {
+          "backward": 0.1920718119981757,
+          "reduce_copy": 0.00564169399876846,
+          "total": 0.19771350599694415
+        },
+        {
+          "backward": 0.1801312669995241,
+          "reduce_copy": 0.005539074998523574,
+          "total": 0.18567034199804766
+        },
+        {
+          "backward": 0.17985836700245272,
+          "reduce_copy": 0.005476417998579564,
+          "total": 0.1853347850010323
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 0.1799948170009884,
+        "reduce_copy": 0.005507746498551569,
+        "total": 0.18550256349953997
+      },
+      "estimated_prompt_seconds": 189.95462502352893,
+      "peak_cuda_gb": 7.774178304,
+      "sample_finite": true,
+      "pass": true
+    },
+    {
+      "mode": "batched",
+      "batch": 8,
+      "source_count": 191,
+      "target": 191,
+      "forward_seconds": 0.1416063309989113,
+      "sweeps": [
+        {
+          "backward": 0.5572967269981746,
+          "reduce_copy": 0.013302040002599824,
+          "total": 0.5705987670007744
+        },
+        {
+          "backward": 0.5785603619988251,
+          "reduce_copy": 0.011674801000481239,
+          "total": 0.5902351629993063
+        },
+        {
+          "backward": 0.5628538919991115,
+          "reduce_copy": 0.011954642002820037,
+          "total": 0.5748085340019315
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 0.5707071269989683,
+        "reduce_copy": 0.011814721501650638,
+        "total": 0.5825218485006189
+      },
+      "estimated_prompt_seconds": 149.12559321615845,
+      "peak_cuda_gb": 8.406207488,
+      "sample_finite": true,
+      "pass": true
+    },
+    {
+      "mode": "batched",
+      "batch": 32,
+      "source_count": 191,
+      "target": 191,
+      "forward_seconds": 0.13823516800039215,
+      "sweeps": [
+        {
+          "backward": 2.6766127060000144,
+          "reduce_copy": 0.05336009300299338,
+          "total": 2.729972799003008
+        },
+        {
+          "backward": 2.6734039549992303,
+          "reduce_copy": 0.04064673099856009,
+          "total": 2.7140506859977904
+        },
+        {
+          "backward": 2.6757161780005845,
+          "reduce_copy": 0.039768729999195784,
+          "total": 2.7154849079997803
+        }
+      ],
+      "mean_after_warmup": {
+        "backward": 2.6745600664999074,
+        "reduce_copy": 0.040207730498877936,
+        "total": 2.7147677969987853
+      },
+      "estimated_prompt_seconds": 173.74513900792226,
+      "peak_cuda_gb": 10.928032768,
+      "sample_finite": true,
+      "pass": true
+    }
+  ]
+}

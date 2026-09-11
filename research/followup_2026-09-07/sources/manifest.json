@@ -1,0 +1,69 @@
+{
+  "retrieved_utc_date": "2026-09-07",
+  "sources": {
+    "jlens": {
+      "url": "https://transformer-circuits.pub/2026/workspace/index.html",
+      "files": {
+        "jlens.html": {
+          "bytes": 417920,
+          "sha256": "339843f5e8d29cb5276c6d57cce64cc005523261d98b9d0b01393876e77d8599"
+        },
+        "jlens.txt": {
+          "bytes": 323754,
+          "sha256": "0e8177eed132c3aea7228b8ade09332b9320649d6b7ed62cb8af2ffad58a3e73"
+        },
+        "jlens_compact.txt": {
+          "bytes": 323724,
+          "sha256": "9efe28663bcfa79bdad5065b9c7559ea457035ca4d6ee39f239784a32a45e1c7"
+        }
+      }
+    },
+    "ouro": {
+      "url": "https://arxiv.org/html/2510.25741v2",
+      "files": {
+        "ouro.html": {
+          "bytes": 757633,
+          "sha256": "f94eb677dcb2fc521a426fc7c7e8025b6127122fea45e2b47003aa24751b055e"
+        },
+        "ouro.txt": {
+          "bytes": 180558,
+          "sha256": "92129f932e85ed2dbdf0ef03571a1b9c192b6d8f5458bc48bd71be208a5746ad"
+        },
+        "ouro_compact.txt": {
+          "bytes": 172161,
+          "sha256": "8e74070c57c56675f975b35db66c233da54166c422d8b9a8e8c3e55c1d10364a"
+        }
+      }
+    },
+    "huginn_probing": {
+      "url": "https://arxiv.org/html/2507.02199v1",
+      "files": {
+        "huginn_probing.html": {
+          "bytes": 148509,
+          "sha256": "406cb9939b0ec9288e747b24f1430ae22aef6421af57c4e73bc304bf8b6f439c"
+        },
+        "huginn_probing.txt": {
+          "bytes": 32732,
+          "sha256": "4ff934713444edf1cd1c75a1a781bade0839615a5ab55f70d2df10d38cebda12"
+        },
+        "huginn_probing_compact.txt": {
+          "bytes": 30022,
+          "sha256": "d01be6755a53ff66db863695754ba9ee73f5316b80bc8d25716880f7a970eb93"
+        }
+      }
+    },
+    "huginn_architecture": {
+      "url": "https://arxiv.org/html/2502.05171v2",
+      "files": {
+        "huginn_architecture.html": {
+          "bytes": 438912,
+          "sha256": "7a6c1df49c30aa16046bfa7edbc6c1507b68e1697f0eb787fd3d0df4c8553db5"
+        },
+        "huginn_architecture_compact.txt": {
+          "bytes": 129172,
+          "sha256": "715862c5ffd5a2bebc7996a3a402f6f1eab447e8e2f31983381018db2c54d74d"
+        }
+      }
+    }
+  }
+}

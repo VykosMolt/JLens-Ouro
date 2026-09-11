@@ -1,0 +1,331 @@
+{
+  "schema": "confirmation_landform_source_supplement.v1",
+  "status": "sixteen_items_supported",
+  "new_confirmation_results_exposed": false,
+  "created_utc": "2026-09-09T22:27:41.917045+00:00",
+  "sources": {
+    "everest": {
+      "url": "https://science.nasa.gov/earth/earth-observatory/mt-everest/",
+      "publisher": "NASA Earth Observatory",
+      "supported_facts_paraphrase": "Everest is the tallest mountain in the world, in the Himalayas; Hillary and Tenzing Norgay first reached the summit in 1953.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "everest_border": {
+      "url": "https://media.nationalgeographic.org/assets/file/HistoryOfMountaineeringTimelineAnswerKey_Final_NGS.pdf",
+      "publisher": "National Geographic Education",
+      "supported_facts_paraphrase": "The 1953 first summit of Everest by Tenzing Norgay and Edmund Hillary is placed in Nepal and China in the location column.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "sahara": {
+      "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2015-03-22",
+      "publisher": "NASA MODIS",
+      "supported_facts_paraphrase": "Sahara is the largest hot desert, covers part of Africa, and stretches to the Atlantic Ocean on its west.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "sahara_countries": {
+      "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-08-13",
+      "publisher": "NASA MODIS",
+      "supported_facts_paraphrase": "Sahara covers large parts of Algeria, Libya and Chad among other north African countries.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "andes": {
+      "url": "https://science.nasa.gov/earth/earth-observatory/cerro-aconcagua-3542/",
+      "publisher": "NASA Earth Observatory",
+      "supported_facts_paraphrase": "Aconcagua is the highest mountain in South America and lies within the Andes. The Andean ridgeline west of it forms the Chile-Argentina border.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "nile": {
+      "url": "https://nilebasin.org/sites/default/files/2023-09/OSI_Environment_SDN.pdf",
+      "publisher": "Nile Basin Initiative",
+      "supported_facts_paraphrase": "The White and Blue Niles meet in Khartoum, then flow north to the Mediterranean Sea.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "nile_egypt": {
+      "url": "https://www.geol.lsu.edu/WDD/AFRICAN/Nile/nile.htm",
+      "publisher": "Louisiana State University World Delta Database",
+      "supported_facts_paraphrase": "After the White and Blue Nile confluence, the Nile flows north through Egypt to the Mediterranean.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "danube": {
+      "url": "https://www.icpdr.org/danube-basin/danube-river-basin/danube-river-basin-overview-map",
+      "publisher": "International Commission for the Protection of the Danube River",
+      "supported_facts_paraphrase": "Vienna and Bratislava are both on the Danube, which connects the Black Forest to the Black Sea.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "danube_source": {
+      "url": "https://www.icpdr.org/danube-basin/countries/germany",
+      "publisher": "ICPDR",
+      "supported_facts_paraphrase": "The source of the Danube is in Germany, in the Black Forest at the confluence of Brigach and Breg.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "buda_pest": {
+      "url": "https://whc.unesco.org/en/list/400",
+      "publisher": "UNESCO World Heritage Centre",
+      "supported_facts_paraphrase": "Buda is on the right bank of the Danube and Pest on the left bank.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "alps": {
+      "url": "https://www.esa.int/Applications/Observing_the_Earth/Envisat/Earth_from_Space_Mountains_of_snow",
+      "publisher": "European Space Agency",
+      "supported_facts_paraphrase": "The Alps stretch across European countries including France, Italy, Switzerland, Germany and Austria. Mont Blanc is their highest peak.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "matterhorn": {
+      "url": "https://www.sac-cas.ch/en/huts-and-tours/sac-route-portal/matterhorn-1138/alpinism/",
+      "publisher": "Swiss Alpine Club",
+      "supported_facts_paraphrase": "The Matterhorn is a mountain in the Alps.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "mekong": {
+      "url": "https://www.mrcmekong.org/geography/",
+      "publisher": "Mekong River Commission",
+      "supported_facts_paraphrase": "The Mekong begins on the Tibetan Plateau. Near Phnom Penh the Bassac branches off, and the Mekong Delta enters a large fertile plain in southern Vietnam.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "mekong_vientiane": {
+      "url": "https://www.mrcmekong.org/hydrometeorological-monitoring/",
+      "publisher": "Mekong River Commission",
+      "supported_facts_paraphrase": "Vientiane is a key mainstream monitoring station on the Mekong; the river reaches Vietnam and the South China Sea.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "borneo_countries": {
+      "url": "https://wwfeu.awsassets.panda.org/downloads/borneo_forest_cc_final_12nov07_lr.pdf",
+      "publisher": "WWF",
+      "supported_facts_paraphrase": "Borneo is divided among Brunei, Indonesia and Malaysia.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    },
+    "kinabalu": {
+      "url": "https://sabc.sabah.gov.my/sites/default/files/uploads/download/2019-11/Camacho-Sanchezetal2019peerj-7858.pdf",
+      "publisher": "PeerJ research paper, hosted by Sabah Biodiversity Centre",
+      "supported_facts_paraphrase": "Mount Kinabalu is the tallest peak in Borneo.",
+      "retrieval_mode": "browser_returned_official_page_or_indexed_source_text",
+      "checked_on": "2026-09-09",
+      "checked_by": "root_blinded_landform_source_review"
+    }
+  },
+  "items": [
+    {
+      "name": "confirmation-049",
+      "prompt": "Fact: The world's highest mountain above sea level belongs to the mountain range called the ",
+      "target": "Himalayas",
+      "hop1_source_ids": [
+        "everest"
+      ],
+      "hop2_source_ids": [
+        "everest"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-050",
+      "prompt": "Fact: The mountain first summited by Edmund Hillary and Tenzing Norgay in 1953 lies on the border between Nepal and ",
+      "target": "China",
+      "hop1_source_ids": [
+        "everest"
+      ],
+      "hop2_source_ids": [
+        "everest_border"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-051",
+      "prompt": "Fact: The world's largest hot desert occupies much of the continent called ",
+      "target": "Africa",
+      "hop1_source_ids": [
+        "sahara"
+      ],
+      "hop2_source_ids": [
+        "sahara"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-052",
+      "prompt": "Fact: The ocean at the western edge of the hot desert spanning Algeria, Libya and Chad is the ",
+      "target": "Atlantic",
+      "hop1_source_ids": [
+        "sahara_countries"
+      ],
+      "hop2_source_ids": [
+        "sahara"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-053",
+      "prompt": "Fact: The mountain range containing Aconcagua is located on the continent of ",
+      "target": "South America",
+      "hop1_source_ids": [
+        "andes"
+      ],
+      "hop2_source_ids": [
+        "andes"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-054",
+      "prompt": "Fact: The mountain range forming much of the border between Chile and Argentina has its highest summit at ",
+      "target": "Aconcagua",
+      "hop1_source_ids": [
+        "andes"
+      ],
+      "hop2_source_ids": [
+        "andes"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-055",
+      "prompt": "Fact: The river whose principal branches are called the White and Blue branches empties into the ",
+      "target": "Mediterranean Sea",
+      "hop1_source_ids": [
+        "nile"
+      ],
+      "hop2_source_ids": [
+        "nile"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-056",
+      "prompt": "Fact: The principal north-flowing river through Egypt has two major branches that meet at the city of ",
+      "target": "Khartoum",
+      "hop1_source_ids": [
+        "nile_egypt"
+      ],
+      "hop2_source_ids": [
+        "nile"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-057",
+      "prompt": "Fact: The large European river passing through Vienna and Bratislava empties into the ",
+      "target": "Black Sea",
+      "hop1_source_ids": [
+        "danube"
+      ],
+      "hop2_source_ids": [
+        "danube"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-058",
+      "prompt": "Fact: The river dividing Buda from Pest has its headwaters in the country of ",
+      "target": "Germany",
+      "hop1_source_ids": [
+        "buda_pest"
+      ],
+      "hop2_source_ids": [
+        "danube_source"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-059",
+      "prompt": "Fact: The mountain range whose highest summit is Mont Blanc is located on the continent of ",
+      "target": "Europe",
+      "hop1_source_ids": [
+        "alps"
+      ],
+      "hop2_source_ids": [
+        "alps"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-060",
+      "prompt": "Fact: The European mountain range containing the Matterhorn has its highest summit at ",
+      "target": "Mont Blanc",
+      "hop1_source_ids": [
+        "matterhorn"
+      ],
+      "hop2_source_ids": [
+        "alps"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-061",
+      "prompt": "Fact: The river flowing through both Vientiane and Phnom Penh has its delta in the country of ",
+      "target": "Vietnam",
+      "hop1_source_ids": [
+        "mekong",
+        "mekong_vientiane"
+      ],
+      "hop2_source_ids": [
+        "mekong"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-062",
+      "prompt": "Fact: The river whose delta occupies much of southern Vietnam has its headwaters on the ",
+      "target": "Tibetan Plateau",
+      "hop1_source_ids": [
+        "mekong"
+      ],
+      "hop2_source_ids": [
+        "mekong"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-063",
+      "prompt": "Fact: The island containing Mount Kinabalu is politically divided among how many countries? The answer is ",
+      "target": "3",
+      "hop1_source_ids": [
+        "kinabalu"
+      ],
+      "hop2_source_ids": [
+        "borneo_countries"
+      ],
+      "status": "both_hops_supported"
+    },
+    {
+      "name": "confirmation-064",
+      "prompt": "Fact: The island shared by Brunei, Indonesia and Malaysia has its highest summit at Mount ",
+      "target": "Kinabalu",
+      "hop1_source_ids": [
+        "borneo_countries"
+      ],
+      "hop2_source_ids": [
+        "kinabalu"
+      ],
+      "status": "both_hops_supported"
+    }
+  ]
+}

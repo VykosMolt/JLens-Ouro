@@ -1,0 +1,182 @@
+{
+  "checks": [
+    {
+      "n_prompts": 100,
+      "name": "relocated_exact_bundle_original_contract_from_unrelated_cwd",
+      "run_spec_sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149",
+      "source_paths": {
+        "evaluate_huginn": "repo/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "evaluate_refits": "repo/research/refit_round_2026-09-07/deployment/evaluate_refits.py",
+        "run_huginn": "repo/research/refit_round_2026-09-07/deployment/run_huginn.py",
+        "run_refits": "repo/research/refit_round_2026-09-07/deployment/run_refits.py"
+      },
+      "status": "passed"
+    },
+    {
+      "name": "authentic_original_owner_validates_portably",
+      "owner_record": {
+        "bytes": 48186,
+        "sha256": "b383c0ac87f98eb6368860d3a28b3ec46ac1ab4c6a6bf2e446fda0176c1ac414"
+      },
+      "status": "passed"
+    },
+    {
+      "error": "Huginn fitting runtime initialization differs from the frozen inputs",
+      "name": "resealed_owner_wrong_calibration_seed_rejected",
+      "status": "passed"
+    },
+    {
+      "initializations_sha256": "cc6d3bbb3bee49ea83c35416e1ce8ca7eb529e69b6d8b1134ff8187d4db80ad2",
+      "name": "all_100_frozen_initialization_records_validated",
+      "rows": 100,
+      "status": "passed"
+    },
+    {
+      "error": "a completed Huginn paragraph used a different initialization",
+      "name": "resealed_paragraph_73_wrong_prompt_state_seed_rejected",
+      "status": "passed"
+    },
+    {
+      "error": "a completed Huginn paragraph used a different initialization",
+      "name": "resealed_paragraph_73_wrong_input_ids_sha256_rejected",
+      "status": "passed"
+    },
+    {
+      "error": "a completed Huginn paragraph used a different initialization",
+      "name": "resealed_paragraph_73_wrong_dtype_rejected",
+      "status": "passed"
+    },
+    {
+      "files": 17,
+      "fit_identity_sha256": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b",
+      "name": "new_wrapper_original_validator_accepts_all_17_authentic_historical_readout_files",
+      "schema": "huginn_r8_evaluation.v1",
+      "seeds": [
+        2026090803,
+        2026090804
+      ],
+      "status": "passed"
+    },
+    {
+      "error": "Huginn readout is bound to a different fit generation",
+      "name": "readout_different_fit_generation_rejected",
+      "status": "passed"
+    },
+    {
+      "entries": 16,
+      "name": "numpy_conversion_signed_zeros_subnormals_ties_and_large_finite",
+      "samples": [
+        {
+          "arm": "dense",
+          "column": 0,
+          "fp32_sum_bits": 0,
+          "numpy_fp16_bits": 0,
+          "row": 0,
+          "saved_fp16_bits": 0,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 2,
+          "fp32_sum_bits": 1,
+          "numpy_fp16_bits": 0,
+          "row": 0,
+          "saved_fp16_bits": 0,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 3,
+          "fp32_sum_bits": 2147483649,
+          "numpy_fp16_bits": 32768,
+          "row": 0,
+          "saved_fp16_bits": 32768,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 0,
+          "fp32_sum_bits": 1120409856,
+          "numpy_fp16_bits": 15360,
+          "row": 2,
+          "saved_fp16_bits": 15360,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 2,
+          "fp32_sum_bits": 919076864,
+          "numpy_fp16_bits": 1,
+          "row": 2,
+          "saved_fp16_bits": 1,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 3,
+          "fp32_sum_bits": 3066560512,
+          "numpy_fp16_bits": 32769,
+          "row": 2,
+          "saved_fp16_bits": 32769,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 0,
+          "fp32_sum_bits": 1254614784,
+          "numpy_fp16_bits": 31743,
+          "row": 3,
+          "saved_fp16_bits": 31743,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 2,
+          "fp32_sum_bits": 1078530011,
+          "numpy_fp16_bits": 10245,
+          "row": 3,
+          "saved_fp16_bits": 10245,
+          "source": 0
+        },
+        {
+          "arm": "dense",
+          "column": 3,
+          "fp32_sum_bits": 3226013659,
+          "numpy_fp16_bits": 43013,
+          "row": 3,
+          "saved_fp16_bits": 43013,
+          "source": 0
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "error": "FP16 N100 conversion differs at arm dense source 0, rows 0:4",
+      "name": "conversion_changed_signed_zero_rejected",
+      "status": "passed"
+    },
+    {
+      "error": "legacy source changed before compiling: run_refits",
+      "name": "source_replacement_between_selection_and_compile_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "no_source_change_and_no_cuda_initialization",
+      "status": "passed"
+    }
+  ],
+  "cuda_initialized": false,
+  "schema": "huginn_validator_independent_probe.v1",
+  "scope": "CPU fixtures and authenticated historical producer schemas; no model weights or new outcomes",
+  "script_record": {
+    "bytes": 10801,
+    "sha256": "22b82a838006cd01aa0c3a1104491b71faa03baec6bbfc44ead258a132ca9708"
+  },
+  "source": {
+    "bytes": 77508,
+    "sha256": "93ccdeff8ed373942fa8e2aa8db258221345a1e48a550f1311525068b2c32e38"
+  },
+  "status": "passed",
+  "temporary_root": "/tmp/huginn-validator-independent-3umrp8wp",
+  "utc": "2026-09-09T23:59:56.204409+00:00"
+}

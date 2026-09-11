@@ -1,0 +1,127 @@
+{
+ "schema": "jlens_storage_purge.v1",
+ "planned_utc": "2026-09-10T22:04:01.531442+00:00",
+ "root": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07",
+ "rule": "Delete regular files of at least 50 MiB, except one verified copy of each confirmation lens bank; keep every smaller file.",
+ "reason": "User request to purge jlens storage while keeping what a paper would need.",
+ "kept_large_files": [
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt",
+   "bytes": 1593887875,
+   "mtime_ns": 1788944157682892728,
+   "sha256": "dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt",
+   "bytes": 3204553347,
+   "mtime_ns": 1788951573768361155,
+   "sha256": "b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+   "bytes": 1602276737,
+   "mtime_ns": 1788911507817989480,
+   "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+  }
+ ],
+ "deleted_files": [
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_20260909T120245Z/staging/controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt",
+   "bytes": 1779204096,
+   "mtime_ns": 729955724,
+   "sha256": "97a3059dca3c21a6c466f34ead93b6bdecb8d6c0ffac90c468c1b69a80af9aad"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v2_20260909T123125Z_58b81f3b/staging/controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt",
+   "bytes": 3975348504,
+   "mtime_ns": 389492089,
+   "sha256": "c4912ff4e1f21aae3e60094d26f66f9399f96bb0efcfe47ba3b095b88cae61c1"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T144501Z_646f716f/staging/ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt",
+   "bytes": 179527232,
+   "mtime_ns": 646078719,
+   "sha256": "43bf646d0932378ca9b79e4b1cc3443fbde9f3d9eb815a7dc5df1d5102abaa86"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/checkpoints/cursor_000100_cfc6042dacb74a2cac30bafa481d591c/state.pt",
+   "bytes": 3187723651,
+   "mtime_ns": 1788944151729955724,
+   "sha256": "cc61b21e9f591c92284fe576b4119e80e73f45af6cf11e394e3fe48293ebc168"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/checkpoints/cursor_000100_14e68ba488274088b822c75eaf7fe441/state.pt",
+   "bytes": 6409003339,
+   "mtime_ns": 1788951561389492089,
+   "sha256": "e5f4358227a8be21bfbdbdeceab8d19c276ae0e3a56238b44b82ea028b4c9eb6"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt",
+   "bytes": 1745780736,
+   "mtime_ns": 520439385,
+   "sha256": "099a99fd3b1aba3ac06112411ec06d5aac5ce423f245c3cd64835150bc890473"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_01/checkpoints/cursor_000100_04725c9ff69e4fa2a481b644e0790574/state.pt",
+   "bytes": 3204501185,
+   "mtime_ns": 1788911501846052917,
+   "sha256": "aecd994c9fdb23e3010f8012368d5bd41caabae58f6a1e71413a06c83976d111"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+   "bytes": 1602276737,
+   "mtime_ns": 1788911507817989480,
+   "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/ouro/fit_02/checkpoints/cursor_000100_c77feb54f72c4155ac109208b031cc81/state.pt",
+   "bytes": 3204501185,
+   "mtime_ns": 1788917985583143716,
+   "sha256": "474c6ca7ae552889ec8a936eccd5355b796300558a5a9af443cbdb8e33a5e95b"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/cache.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967951873758213,
+   "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/cache.pt",
+   "bytes": 141949409,
+   "mtime_ns": 1788967970717558754,
+   "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/cache.pt",
+   "bytes": 407374621,
+   "mtime_ns": 1788937673121289021,
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt",
+   "bytes": 407374621,
+   "mtime_ns": 1788937673121289021,
+   "sha256": "fb51d115b231f482c86233bbda74055660b79d7fdf952e6d7006f8ed9bd3e3f4"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/baseline_full.pt",
+   "bytes": 3204502175,
+   "mtime_ns": 1788812906127114814,
+   "sha256": "167fc1edb1b2387f7358f04d5f8829bdf1aca547d3952aef5fbd13e548e36890"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/offload_reference_b8_v2.npz",
+   "bytes": 68847472,
+   "mtime_ns": 1788815897854047777,
+   "sha256": "d54751a189d12e9b7e03136ee09964fda1c09b79fd58f97ba93f4af6dbcdbaf6"
+  },
+  {
+   "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_full_b8.pt",
+   "bytes": 3204463663,
+   "mtime_ns": 1788815672248150180,
+   "sha256": "a9c16a7dd8c5067345cbfcb73e15e82c7cf98d25b47ac50d12a220f8621cc4b1"
+  }
+ ],
+ "deleted_bytes": 32864328035,
+ "executed_utc": "2026-09-10T22:06:42.966918+00:00"
+}

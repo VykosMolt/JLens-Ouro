@@ -1,0 +1,90 @@
+{
+  "schema": "confirmation_input_transfer_observation.v1",
+  "observed_utc": "2026-09-10T14:58:51.229603+00:00",
+  "binding": {
+    "account_id": "user_3I33u3QLWgO7POHKINt6GfLeTUw",
+    "lease_name": "jlens-confirm-e5b5cdde88044a96ab1410aa165a76e5",
+    "pod_id": "i7zq14rj0f0ief",
+    "run_id": "ouro_confirmation_20260910_fixed160_precision1",
+    "run_spec_sha256": "fa23a27f0801a397579d36fbe81afa8f0d8b99a4af3b6affc2bf565be16ddf4e",
+    "output_contract_sha256": "a7a4dea81db50b5b978623cc76c1cc3dc5352a4de5f884f846769d8fefd14423",
+    "controller_sources": {
+      "artifact_handoff.py": {
+        "bytes": 29606,
+        "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+      },
+      "lease.py": {
+        "bytes": 56750,
+        "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+      },
+      "pod_entry.sh": {
+        "bytes": 1223,
+        "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+      },
+      "run_refits.py": {
+        "bytes": 51999,
+        "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+      },
+      "runpod_api.py": {
+        "bytes": 9601,
+        "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+      },
+      "transport.py": {
+        "bytes": 2638,
+        "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+      }
+    }
+  },
+  "remote": {
+    "worker_time": 1789052331.850619,
+    "files": [
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/MANIFEST.json",
+        "bytes": 7833,
+        "mtime_ns": 1789052172673594449
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000134217728.part.CNjgEn",
+        "bytes": 14942208,
+        "mtime_ns": 1789052331770715195
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000000000000.part.OJDXpJ",
+        "bytes": 26476544,
+        "mtime_ns": 1789052330129724264
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000402653184.part.UPxyZU",
+        "bytes": 29097984,
+        "mtime_ns": 1789052331116718809
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000201326592.part.GH6M9J",
+        "bytes": 27262976,
+        "mtime_ns": 1789052331598716145
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000469762048.part.O00y8v",
+        "bytes": 20447232,
+        "mtime_ns": 1789052329911725468
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000268435456.part.LkaElz",
+        "bytes": 17825792,
+        "mtime_ns": 1789052331834714841
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000335544320.part.7TagEi",
+        "bytes": 21495808,
+        "mtime_ns": 1789052330849720285
+      },
+      {
+        "path": "input_chunks/b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775/.000067108864.part.yoRxAh",
+        "bytes": 14680064,
+        "mtime_ns": 1789052331200718345
+      }
+    ]
+  },
+  "duplicate_input_bytes_observed": 172228608,
+  "note": "Sizes of in-progress duplicate input files only; no hash or completed-upload assertion."
+}

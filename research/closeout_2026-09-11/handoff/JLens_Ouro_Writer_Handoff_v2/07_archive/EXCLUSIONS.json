@@ -1,0 +1,26 @@
+{
+ "excluded": [
+  {
+   "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519",
+   "reason": "secret",
+   "bytes": 419,
+   "kind": "file"
+  }
+ ],
+ "rules": {
+  "secret_files": [
+   "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519"
+  ],
+  "dir_names": [
+   ".pytest_cache",
+   ".ruff_cache",
+   "__pycache__"
+  ],
+  "prefixes": [
+   "/home/moloch/jacobian-lens/research/closeout_2026-09-11"
+  ],
+  "suffixes": [
+   ".pyc"
+  ]
+ }
+}

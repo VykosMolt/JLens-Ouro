@@ -1,0 +1,10 @@
+{
+  "schema": "confirmation_measurement_self_test.v1",
+  "status": "passed",
+  "historical_multihop_items": 93,
+  "historical_eligible_items": 90,
+  "fit01_discovery_primary": 0.1890694150494096,
+  "legacy_fixed_layer_scores": "bitwise equal for own, control, excess, eligibility on every historical multihop layer",
+  "synthetic_tied_logits": "captured argsort top-10 agrees with original ranks; original arrays equal including argmax; two aliases per name",
+  "new_confirmation_results_exposed": false
+}

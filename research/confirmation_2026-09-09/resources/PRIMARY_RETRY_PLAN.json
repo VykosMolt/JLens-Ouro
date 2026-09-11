@@ -1,0 +1,28 @@
+{
+  "schema": "confirmation_input_transfer_retry_plan.v1",
+  "created_utc": "2026-09-09T23:02:29.376247+00:00",
+  "scientific_inputs_unchanged": true,
+  "original_freeze_record": {
+    "bytes": 7279,
+    "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7"
+  },
+  "new_run_config_record": {
+    "bytes": 778,
+    "sha256": "fe81ddeea1f9e939d221a14d97ebbcb7a5f19abad1c2df8edc11929e7e0c28c6"
+  },
+  "first_attempt_terminal_record": {
+    "bytes": 6187,
+    "sha256": "2a1a9a21645f724a3800798d81c6eb5e838f32bc3b696b974d364d19f9f6b623"
+  },
+  "first_attempt_spend_upper_usd": 0.22588409273346807,
+  "retry_job_cap_usd": 3.77,
+  "retry_full_deadline_envelope_usd": 3.741061643835616,
+  "aggregate_primary_envelope_usd": 3.9669457365690843,
+  "setup_seconds": 12300,
+  "compute_seconds": 3600,
+  "preservation_seconds": 1800,
+  "termination_seconds": 600,
+  "upload_parallel_probe_bytes_per_second": 886644.3080873439,
+  "receiving_parallel_probe_bytes_per_second": 3545351.5540594817,
+  "scope": "Administrative retry before native development or new-item computation; unchanged dataset, estimator hashes, scoring, analysis and frozen executable worker. Parallel transfer helper only reassembles exact original bank bytes; original launch/bootstrap/native/receiver gates remain mandatory."
+}

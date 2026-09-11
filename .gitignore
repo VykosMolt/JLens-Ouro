@@ -12,3 +12,37 @@ dist/
 *.pt
 slice*.html
 slices/
+
+# ---- research records: kept out of GitHub (all of it is in the SSD archive; see research/GITHUB_EXCLUSIONS.md) ----
+research/verification_2026-09-11/preservation/bundle/
+research/verification_2026-09-11/preservation/restore_check/
+research/verification_2026-09-11/replay/local_*/**/*.npz
+research/verification_2026-09-11/replay/local_*/*.npz
+research/verification_2026-09-11/replay/propagation_*/**/*.npz
+research/verification_2026-09-11/replay/propagation_*/**/*.pt
+research/verification_2026-09-11/gpu_shape_v1/**/*.pt
+research/confirmation_2026-09-09/resources/input_chunks/
+research/confirmation_2026-09-09/resources/transfer_probe/
+research/confirmation_2026-09-09/resources/transfer_probe_download/
+research/refit_round_2026-09-07/optimization/*.npz
+research/refit_round_2026-09-07/optimization/*.pt
+# secrets, keys, hosts, account observations
+research/confirmation_2026-09-09/resources/ssh/
+research/**/known_hosts
+research/**/id_ed25519*
+research/confirmation_2026-09-09/resources/account_*.json
+research/confirmation_2026-09-09/resources/*account_observation*
+research/confirmation_2026-09-09/resources/prior_debit.json
+research/verification_2026-09-11/spending/observation_*.json
+research/refit_round_2026-09-07/deployment/account_*.json
+# scratch and packaging
+*.zip
+research/closeout_2026-09-11/manuscript/pages/
+research/closeout_2026-09-11/manuscript/*.aux
+research/closeout_2026-09-11/manuscript/*.log
+research/closeout_2026-09-11/manuscript/*.out
+research/closeout_2026-09-11/manuscript/*_build.md
+research/closeout_2026-09-11/archive/ARCHIVE_MANIFEST.json.tmp
+# absolute symlinks into laptop paths (review fixtures); targets are archived
+research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/linked_parent
+research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/linked_parent

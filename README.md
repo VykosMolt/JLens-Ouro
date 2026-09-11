@@ -1,5 +1,7 @@
 # jlens — Jacobian lens
 
+> **This repository (VykosMolt/JLens-Ouro)** is the unmodified Anthropic reference implementation below plus a `research/` directory holding the J-Lens-versus-logit-lens study in the looped Ouro-2.6B model (discovery, independent refits, frozen 160-item confirmation, verification, closeout, manuscript). Start at [`research/README.md`](research/README.md). The `jlens/` package and `data/` are Anthropic's, unchanged.
+
 > **Reference implementation.** Not maintained and not accepting contributions.
 
 Companion code for [**Verbalizable Representations Form a Global Workspace in

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "new_confirmation_results_exposed": false,
+  "root": "/tmp/confirmation-launch-proof-cloudn33",
+  "valid_exact_bound_ack": true,
+  "tampered_acceptance_rejected": "Development receipt is not durably accepted",
+  "network_or_provider_calls": false,
+  "launch_source": {
+    "bytes": 6518,
+    "sha256": "383fd097f4483132d5c7d845c998093ce170e7263068ff82626a9810e1c78a81"
+  }
+}

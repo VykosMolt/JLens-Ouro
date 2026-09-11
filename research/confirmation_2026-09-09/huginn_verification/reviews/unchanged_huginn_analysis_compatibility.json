@@ -1,0 +1,390 @@
+{
+  "all_checked_source_and_metadata_records": {
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json": {
+      "bytes": 21869,
+      "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416"
+    },
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json": {
+      "bytes": 9589,
+      "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560"
+    },
+    "/home/moloch/jacobian-lens/jlens/__init__.py": {
+      "bytes": 637,
+      "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a"
+    },
+    "/home/moloch/jacobian-lens/jlens/_logging.py": {
+      "bytes": 1804,
+      "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae"
+    },
+    "/home/moloch/jacobian-lens/jlens/data/slice_vis.html": {
+      "bytes": 43663,
+      "sha256": "d19d843aa5d1fa5073c925a7723c4e9503b9b83c5622d9775033887c64bf62d9"
+    },
+    "/home/moloch/jacobian-lens/jlens/examples.py": {
+      "bytes": 6300,
+      "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d"
+    },
+    "/home/moloch/jacobian-lens/jlens/fitting.py": {
+      "bytes": 15078,
+      "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080"
+    },
+    "/home/moloch/jacobian-lens/jlens/hf.py": {
+      "bytes": 8182,
+      "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222"
+    },
+    "/home/moloch/jacobian-lens/jlens/hooks.py": {
+      "bytes": 2735,
+      "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081"
+    },
+    "/home/moloch/jacobian-lens/jlens/lens.py": {
+      "bytes": 8646,
+      "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808"
+    },
+    "/home/moloch/jacobian-lens/jlens/protocol.py": {
+      "bytes": 1774,
+      "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344"
+    },
+    "/home/moloch/jacobian-lens/jlens/vis.py": {
+      "bytes": 19984,
+      "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/CONTRACT.md": {
+      "bytes": 5477,
+      "sha256": "277e73a6bf10d92b828e3da82106584f3e47d281e96401bd00f1a5bf9c2e5879"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/HUGINN_COMPARISON_CONTRACT.md": {
+      "bytes": 16353,
+      "sha256": "de409521cd0f14be05e3c384e683e4b645655670035f50654183bbb8734f0cb8"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/analyze_huginn.py": {
+      "bytes": 67882,
+      "sha256": "f7e65c275c83fc6aa3d6e40e54205ad50f0f07441699768d43351e69cd7793bd"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/analyze_refits.py": {
+      "bytes": 65490,
+      "sha256": "297ec665f6f64889bdbe319dde34858a02e9cd3162437d9e8f1fc5cba506df6b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json": {
+      "bytes": 94410,
+      "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_02.json": {
+      "bytes": 98110,
+      "sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_03.json": {
+      "bytes": 96617,
+      "sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_04.json": {
+      "bytes": 95461,
+      "sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_05.json": {
+      "bytes": 92492,
+      "sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/cloud_worker.py": {
+      "bytes": 19100,
+      "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json": {
+      "bytes": 19977,
+      "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/control_estimators.py": {
+      "bytes": 21777,
+      "sha256": "e1943378728de002feca622115229e085e7c42cc71e4135256cce97c60b9c10b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/environment.json": {
+      "bytes": 4685,
+      "sha256": "940842c822fc3a76a89e94bd7fa052c63de9d71758b9a513d17260b39c8124a7"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_controls.py": {
+      "bytes": 52577,
+      "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py": {
+      "bytes": 58251,
+      "sha256": "b98b39d70a64db23c1544c4ce5d3cb57760363b1fd3d682db106288669f85b5e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_refits.py": {
+      "bytes": 55009,
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py": {
+      "bytes": 33463,
+      "sha256": "2d30747defd1fe98f72976a1959e9d554fafb9bbbc001374e1d2404127f72e88"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json": {
+      "bytes": 25792,
+      "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json": {
+      "bytes": 165311,
+      "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json": {
+      "bytes": 2842,
+      "sha256": "4e9bed3327f63bb31d9cd300b40c329601ace4fd2b1c135b9811c178230ed0db"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/model_manifest.json": {
+      "bytes": 2323,
+      "sha256": "377d9e75a2f6a38d1a94ac78bbe940e0c34f369ef8f0d6f692a65b4a3f071370"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/pod_entry.sh": {
+      "bytes": 1221,
+      "sha256": "d72cf7229b12af1fe0d218bc6edd5354740a9dd94fad06e57efa3fa59335ad32"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py": {
+      "bytes": 18407,
+      "sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/prepare_bundle.py": {
+      "bytes": 8791,
+      "sha256": "33dc2582c6f815615fa97d4547c8d4bc76e4097696e8e001592d7b9522ac376e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/requirements.lock": {
+      "bytes": 12089,
+      "sha256": "87311c22b6d2eaa50e4c819dab431ff221fc787f8bbf495cbbc455db0a0245f1"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_controls.py": {
+      "bytes": 9851,
+      "sha256": "4da1528ed692409919003a1a02ec421fcd6b7d7453d9fbe88f28771b84239543"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py": {
+      "bytes": 37695,
+      "sha256": "78cf3c76b58a7d5d6bc184a8828200d29d618775a142d253f6188e30a4df8ff2"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json": {
+      "bytes": 24834,
+      "sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py": {
+      "bytes": 10107,
+      "sha256": "1438816d87b730e45e4ae2df79113baa645f19b3c84eb690194c13ac622e8a8d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json": {
+      "bytes": 56959,
+      "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/COMPLETE.json": {
+      "bytes": 666,
+      "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/OWNER.json": {
+      "bytes": 77181,
+      "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/COMPLETE.json": {
+      "bytes": 887,
+      "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/OWNER.json": {
+      "bytes": 151299,
+      "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py": {
+      "bytes": 28285,
+      "sha256": "cf783d68830a78efddc358d6ff06233dd7bc6fae671045de31ff91164a17164f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py": {
+      "bytes": 14000,
+      "sha256": "4f63957237e2cd9309c788c9af67ed5471928f6fbc0b18095e6f903adc0ff944"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py": {
+      "bytes": 23288,
+      "sha256": "b2286fd25eb07553c8e27df3883cdce28c71907343c163d0c5db5da25a863e78"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_fitting.py": {
+      "bytes": 9498,
+      "sha256": "6ba31269b98cca39f9a27a0ede572abf466abfbb166bc563e85eb796aa4f616f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py": {
+      "bytes": 21300,
+      "sha256": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/bench.py": {
+      "bytes": 6251,
+      "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/evaldata.py": {
+      "bytes": 7527,
+      "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/evaluate.py": {
+      "bytes": 63535,
+      "sha256": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/evidence.py": {
+      "bytes": 12530,
+      "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/fit_lens.py": {
+      "bytes": 72898,
+      "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/recurrent.py": {
+      "bytes": 5777,
+      "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+    }
+  },
+  "analyzer_and_contract_records": {
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/CONTRACT.md": {
+      "bytes": 5477,
+      "sha256": "277e73a6bf10d92b828e3da82106584f3e47d281e96401bd00f1a5bf9c2e5879"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/HUGINN_COMPARISON_CONTRACT.md": {
+      "bytes": 16353,
+      "sha256": "de409521cd0f14be05e3c384e683e4b645655670035f50654183bbb8734f0cb8"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/analyze_huginn.py": {
+      "bytes": 67882,
+      "sha256": "f7e65c275c83fc6aa3d6e40e54205ad50f0f07441699768d43351e69cd7793bd"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/analyze_refits.py": {
+      "bytes": 65490,
+      "sha256": "297ec665f6f64889bdbe319dde34858a02e9cd3162437d9e8f1fc5cba506df6b"
+    }
+  },
+  "command_argv_template": [
+    "/home/moloch/ouro_project/venv/bin/python",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis/analyze_huginn.py",
+    "analyze",
+    "--main",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation",
+    "--controls",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation",
+    "--huginn",
+    "ACCEPTED_GENERATION/results/readouts",
+    "--output",
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/accepted_rerun_six_contrast_RUN_ID",
+    "--ouro-src",
+    "/home/moloch/ouro_project/src",
+    "--run-spec",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json",
+    "--combined-contract",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json",
+    "--huginn-manifest",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+    "--huginn-calibration",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+    "--eligibility",
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json"
+  ],
+  "conclusion": "The unchanged six-contrast analyzer accepts a new internally consistent H N100 owner/lens record under the original frozen scientific contract; it does not require the lost historical H identity or bank SHA. Actual compatibility remains conditional on accepted new readouts satisfying those existing gates.",
+  "environment": {
+    "MKL_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "existing_statistical_plan": {
+    "H_seeds": [
+      2026090803,
+      2026090804
+    ],
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 2026090808,
+    "cross_model_contrasts": 6,
+    "eligible_items": [
+      88,
+      51
+    ],
+    "metrics": [
+      "all_learned_mean",
+      "seven_mean",
+      "any_of_seven"
+    ],
+    "modes": [
+      "conditional_item",
+      "conditional_component"
+    ],
+    "simultaneous_rule": "Original unstudentized maximum absolute centered bootstrap error over six task-by-metric seed-average contrasts; preserve unchanged.",
+    "tasks": [
+      "multihop",
+      "order-ops"
+    ]
+  },
+  "fallback_if_actual_gates_reject": "Do not relax or bypass an identity, environment, population or prerequisite gate. Record its exact failure and retain the already reviewed direct historical state/rank/initialization/summary comparison; no substitute endpoint or new statistical plan is needed now.",
+  "h_readouts_layout": [
+    "OWNER.json",
+    "COMPLETE.json",
+    "population/eligibility.json",
+    "population/metadata.json",
+    "population/SEAL.json",
+    "seeds/2026090803/cache.pt",
+    "seeds/2026090803/arrays.npz",
+    "seeds/2026090803/initializations.json",
+    "seeds/2026090803/metadata.json",
+    "seeds/2026090803/summaries.json",
+    "seeds/2026090803/SEAL.json",
+    "seeds/2026090804/cache.pt",
+    "seeds/2026090804/arrays.npz",
+    "seeds/2026090804/initializations.json",
+    "seeds/2026090804/metadata.json",
+    "seeds/2026090804/summaries.json",
+    "seeds/2026090804/SEAL.json"
+  ],
+  "new_historical_identity_allowed": {
+    "basis": [
+      "analyze_huginn.bind_huginn reconstructs embedded owner via evaluate_controls._record_owner and calls evaluate_huginn.validate_huginn_owner.",
+      "validate_huginn_owner recomputes fit identity from fixed prompts/lengths/settings and the actual declared runtime, not an old identity constant.",
+      "Lens is required to be a valid bytes/SHA record; analyzer has no old-bank SHA comparison and does not open the missing historical H checkpoint/bank.",
+      "Exact prerequisite records must equal the passed original main/control artifact owners and completions."
+    ],
+    "old_bank_sha_not_required": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596",
+    "old_fit_identity_not_required": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b"
+  },
+  "no_model_execution": true,
+  "no_old_or_frozen_file_edits": true,
+  "no_outcome_analysis_run": true,
+  "original_42_source_closure_matches": true,
+  "original_five_calibration_files_match": true,
+  "output_constraint": "Substitute the actual externally accepted generation and a fresh output directory outside all sealed/accepted input trees. Keep output classification newly_rerun_estimator in adjacent provenance linking the actual new receipt; do not edit the old analyzer export.",
+  "prerequisites": {
+    "controls": {
+      "required_record": {
+        "complete_file": {
+          "bytes": 666,
+          "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+        },
+        "identity_sha256": "8898e66afec466308b22b6df25861ffa2275a6cb7a601eeddee3ab1042e50232",
+        "owner_file": {
+          "bytes": 77181,
+          "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2"
+        },
+        "owner_sha256": "95e2c9862fad5142e0a3266ff97f8257473b16ee68499f7ac8f584935c3d9e1a",
+        "schema": "ouro_controls_evaluation.v1"
+      },
+      "root": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation"
+    },
+    "ouro": {
+      "required_record": {
+        "complete_file": {
+          "bytes": 887,
+          "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+        },
+        "identity_sha256": "238070a6284bf7a5da54632c2559d41d907ee2d7ebd133654772cbf2d3ddb037",
+        "owner_file": {
+          "bytes": 151299,
+          "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b"
+        },
+        "owner_sha256": "bab3235bb696deb4a9cc4d2975e9ba4f3f526d91fd6ccc6a40aa5bb414d7cf6f",
+        "schema": "ouro_refit_evaluation.v1"
+      },
+      "root": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation"
+    }
+  },
+  "prerequisites_equal_historical_H_owner": true,
+  "schema": "huginn_unchanged_analysis_compatibility.v1",
+  "status": "compatible_by_source_and_prerequisite_inspection_not_executed"
+}

@@ -1,0 +1,4637 @@
+[
+ {
+  "continuation": " Atlantic Ocean.\n",
+  "correct": true,
+  "exit_top1": [
+   " same",
+   " Atlantic",
+   " Atlantic",
+   " Atlantic"
+  ],
+  "intermediates": [
+   "Brazil"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 20,
+  "name": "carnival-ocean",
+  "own_index": [
+   0,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The ocean on the coast of the country where Carnival is most famously celebrated is the ",
+  "readout_token": " the",
+  "scorable": [
+   true
+  ],
+  "target": "Atlantic",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Portuguese.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " a",
+   " a",
+   " Portuguese",
+   " Portuguese"
+  ],
+  "intermediates": [
+   "Brazil"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "amazon-language",
+  "own_index": [
+   0,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The language spoken in the country where the Amazon River ends is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Portuguese",
+  "task": "multihop"
+ },
+ {
+  "continuation": " not red. It",
+  "correct": false,
+  "exit_top1": [
+   " a",
+   " blue",
+   " not",
+   " not"
+  ],
+  "intermediates": [
+   "Mars"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 13,
+  "name": "mars-color",
+  "own_index": [
+   1,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The color of the planet fourth from the Sun is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "red",
+  "task": "multihop"
+ },
+ {
+  "continuation": "8.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "8",
+   "8",
+   "8",
+   "8"
+  ],
+  "intermediates": [
+   "spider"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "spider-legs",
+  "own_index": [
+   2,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The number of legs on the animal that spins webs is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "8",
+  "task": "multihop"
+ },
+ {
+  "continuation": "11.\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "9",
+   "1"
+  ],
+  "intermediates": [
+   "basketball"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 19,
+  "name": "basketball-players",
+  "own_index": [
+   3,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The number of players per side in the sport invented in Springfield, Massachusetts is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "5",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Asia.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " the",
+   " the",
+   " Asia",
+   " Asia"
+  ],
+  "intermediates": [
+   "China"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 14,
+  "name": "paper-continent",
+  "own_index": [
+   4,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The continent where the country that invented paper is located is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Asia",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the same season when",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "Christmas"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 14,
+  "name": "christmas-season",
+  "own_index": [
+   5,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The season when the holiday with a decorated tree occurs is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "winter",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Buckeye.",
+  "correct": false,
+  "exit_top1": [
+   " bear",
+   " bulld",
+   " Buc",
+   " Buc"
+  ],
+  "intermediates": [
+   "Michigan"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "osu-rival-mascot",
+  "own_index": [
+   6,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The mascot of the college football rival of Ohio State is a ",
+  "readout_token": " a",
+  "scorable": [
+   true
+  ],
+  "target": "wolverine",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Kansas.\n\n",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " Kansas",
+   " Kansas"
+  ],
+  "intermediates": [
+   "Kansas"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "topeka-west",
+  "own_index": [
+   7,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The state west of the state with Topeka as its capital is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Colorado",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Au.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " \"",
+   " Au",
+   " Au",
+   " Au"
+  ],
+  "intermediates": [
+   "gold"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "atomic-79-symbol",
+  "own_index": [
+   8,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The chemical symbol for the element with atomic number 79 is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Au",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Fe.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " \"",
+   " Fe",
+   " Fe",
+   " Fe"
+  ],
+  "intermediates": [
+   "iron"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "atomic-26-symbol",
+  "own_index": [
+   9,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The chemical symbol for the element with atomic number 26 is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Fe",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Cu.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " \"",
+   " Cu",
+   " Cu",
+   " Cu"
+  ],
+  "intermediates": [
+   "copper"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "atomic-29-symbol",
+  "own_index": [
+   10,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The chemical symbol for the element with atomic number 29 is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Cu",
+  "task": "multihop"
+ },
+ {
+  "continuation": " solid.\n\n",
+  "correct": false,
+  "exit_top1": [
+   " a",
+   " a",
+   " solid",
+   " solid"
+  ],
+  "intermediates": [
+   "mercury"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 20,
+  "name": "atomic-80-state",
+  "own_index": [
+   11,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The state of matter at room temperature of the element with atomic number 80 is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "liquid",
+  "task": "multihop"
+ },
+ {
+  "continuation": " green.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " a",
+   " the",
+   " yellow",
+   " green"
+  ],
+  "intermediates": [
+   "copper"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "atomic-29-flame",
+  "own_index": [
+   10,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The flame color produced by burning the element with atomic number 29 is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "green",
+  "task": "multihop"
+ },
+ {
+  "continuation": "1.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "Earth"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "planet-3-moons",
+  "own_index": [
+   12,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The number of natural moons orbiting the planet third from the Sun is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "1",
+  "task": "multihop"
+ },
+ {
+  "continuation": " war, Mars.",
+  "correct": true,
+  "exit_top1": [
+   " fire",
+   " fire",
+   " war",
+   " war"
+  ],
+  "intermediates": [
+   "March"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "month-3-godof",
+  "own_index": [
+   13,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The third month of the year is named after the Roman god of ",
+  "readout_token": " of",
+  "scorable": [
+   true
+  ],
+  "target": "war",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Canada.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " the",
+   " Canada",
+   " Canada",
+   " Canada"
+  ],
+  "intermediates": [
+   "Seattle"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "spaceneedle-border",
+  "own_index": [
+   14,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The US state where the Space Needle is located shares its northern border with ",
+  "readout_token": " with",
+  "scorable": [
+   true
+  ],
+  "target": "Canada",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the Atlantic Ocean.",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "Spain"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "rhyme-rain-neighbor",
+  "own_index": [
+   15,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The European country whose name rhymes with 'rain' shares its western border with ",
+  "readout_token": " with",
+  "scorable": [
+   true
+  ],
+  "target": "Portugal",
+  "task": "multihop"
+ },
+ {
+  "continuation": "12. What",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "four"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 21,
+  "name": "rhyme-door-doubled",
+  "own_index": [
+   16,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Take the number whose name rhymes with the word door. Doubling it gives the number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "8",
+  "task": "multihop"
+ },
+ {
+  "continuation": " which state?\n",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " South",
+   " South",
+   " which"
+  ],
+  "intermediates": [
+   "bear"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 19,
+  "name": "rhyme-chair-flag",
+  "own_index": [
+   17,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The large mammal whose name rhymes with 'chair' appears on the state flag of ",
+  "readout_token": " of",
+  "scorable": [
+   true
+  ],
+  "target": "California",
+  "task": "multihop"
+ },
+ {
+  "continuation": " 'Spoon'.",
+  "correct": false,
+  "exit_top1": [
+   " '",
+   " '",
+   " '",
+   " '"
+  ],
+  "intermediates": [
+   "moon"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "rhyme-spoon-orbit",
+  "own_index": [
+   18,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The celestial body whose name rhymes with 'spoon' orbits the planet called ",
+  "readout_token": " called",
+  "scorable": [
+   true
+  ],
+  "target": "Earth",
+  "task": "multihop"
+ },
+ {
+  "continuation": "7.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "7",
+   "7",
+   "7",
+   "7"
+  ],
+  "intermediates": [
+   "March"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "etym-wargod-month",
+  "own_index": [
+   13,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The month named after the Roman god of war is month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "3",
+  "task": "multihop"
+ },
+ {
+  "continuation": "4.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "2",
+   "1",
+   "2",
+   "4"
+  ],
+  "intermediates": [
+   "Friday"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 26,
+  "name": "etym-frigg-position",
+  "own_index": [
+   19,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Counting Monday as day 1, the day of the week named after the Norse goddess Frigg is day number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "5",
+  "task": "multihop"
+ },
+ {
+  "continuation": "5.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "8",
+   "5",
+   "5",
+   "5"
+  ],
+  "intermediates": [
+   "Saturn"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "etym-saturn-position",
+  "own_index": [
+   20,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The planet named after the Roman god of agriculture and time is planet number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "6",
+  "task": "multihop"
+ },
+ {
+  "continuation": "1.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "oxygen"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "chem-photosynthesis-Z",
+  "own_index": [
+   21,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The atomic number of the gas that plants release during photosynthesis is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "8",
+  "task": "multihop"
+ },
+ {
+  "continuation": "8.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "8",
+   "8",
+   "8"
+  ],
+  "intermediates": [
+   "nitrogen"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 22,
+  "name": "chem-atmosphere-Z",
+  "own_index": [
+   22,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The atomic number of the gas that makes up about 78 percent of the atmosphere is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "7",
+  "task": "multihop"
+ },
+ {
+  "continuation": "6.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "6",
+   "6",
+   "6",
+   "6"
+  ],
+  "intermediates": [
+   "carbon"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "chem-organic-Z",
+  "own_index": [
+   23,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The atomic number of the element present in all organic compounds by definition is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "6",
+  "task": "multihop"
+ },
+ {
+  "continuation": "24.\n",
+  "correct": false,
+  "exit_top1": [
+   "2",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "calcium"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "chem-bones-Z",
+  "own_index": [
+   24,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The atomic number of the metal most abundant in human bones is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "20",
+  "task": "multihop"
+ },
+ {
+  "continuation": "4\n\nFact",
+  "correct": true,
+  "exit_top1": [
+   "4",
+   "4",
+   "4",
+   "4"
+  ],
+  "intermediates": [
+   "heart"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 20,
+  "name": "func-pumps-chambers",
+  "own_index": [
+   25,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: In humans, the organ that pumps blood through the body has this many chambers: ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "4",
+  "task": "multihop"
+ },
+ {
+  "continuation": "2.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "2",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "kidney"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "func-filters-count",
+  "own_index": [
+   26,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: In humans, the number of organs that filter blood to make urine is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "2",
+  "task": "multihop"
+ },
+ {
+  "continuation": "5.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "5",
+   "5",
+   "5"
+  ],
+  "intermediates": [
+   "May"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 13,
+  "name": "birthstone-emerald-month",
+  "own_index": [
+   27,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Emerald is the birthstone for month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "5",
+  "task": "multihop"
+ },
+ {
+  "continuation": "4.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "4",
+   "4",
+   "4",
+   "4"
+  ],
+  "intermediates": [
+   "violin"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "violin-strings",
+  "own_index": [
+   28,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The number of strings on the instrument that fiddlers play is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "4",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Uranus. Count the",
+  "correct": false,
+  "exit_top1": [
+   " Jupiter",
+   " Uranus",
+   " Uranus",
+   " Uranus"
+  ],
+  "intermediates": [
+   "3",
+   "three",
+   "third"
+  ],
+  "leaked": [
+   false,
+   false,
+   false
+  ],
+  "n_tokens": 35,
+  "name": "nhop-primary-planet",
+  "own_index": [
+   29,
+   30,
+   31
+  ],
+  "prompt": "Count the legs on a spider. The planet at that position from the Sun is Neptune. Count the primary colors of light. The planet at that position from the Sun is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true,
+   true
+  ],
+  "target": "Earth",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Uranus. Count the",
+  "correct": false,
+  "exit_top1": [
+   " Jupiter",
+   " Uranus",
+   " Uranus",
+   " Uranus"
+  ],
+  "intermediates": [
+   "5",
+   "five"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 33,
+  "name": "nhop-rings-planet",
+  "own_index": [
+   32,
+   33,
+   -1
+  ],
+  "prompt": "Count the legs on a spider. The planet at that position from the Sun is Neptune. Count the Olympic rings. The planet at that position from the Sun is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "Jupiter",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Uranus. Count the",
+  "correct": false,
+  "exit_top1": [
+   " Jupiter",
+   " Uranus",
+   " Uranus",
+   " Uranus"
+  ],
+  "intermediates": [
+   "6",
+   "six"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 36,
+  "name": "nhop-guitar-planet",
+  "own_index": [
+   34,
+   35,
+   -1
+  ],
+  "prompt": "Count the legs on a spider. The planet at that position from the Sun is Neptune. Count the strings on a standard guitar. The planet at that position from the Sun is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "Saturn",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Uranus. Count the",
+  "correct": false,
+  "exit_top1": [
+   " Jupiter",
+   " Uranus",
+   " Uranus",
+   " Uranus"
+  ],
+  "intermediates": [
+   "4",
+   "four"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 36,
+  "name": "nhop-compass-planet",
+  "own_index": [
+   36,
+   16,
+   -1
+  ],
+  "prompt": "Count the legs on a spider. The planet at that position from the Sun is Neptune. Count the cardinal directions on a compass. The planet at that position from the Sun is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "Mars",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Uranus. Count the",
+  "correct": false,
+  "exit_top1": [
+   " Jupiter",
+   " Uranus",
+   " Uranus",
+   " Uranus"
+  ],
+  "intermediates": [
+   "6",
+   "six"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 38,
+  "name": "nhop-volleyball-planet",
+  "own_index": [
+   34,
+   35,
+   -1
+  ],
+  "prompt": "Count the legs on a spider. The planet at that position from the Sun is Neptune. Count the players on a volleyball court per team. The planet at that position from the Sun is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "Saturn",
+  "task": "multihop"
+ },
+ {
+  "continuation": " potassium. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " magnesium",
+   " oxygen",
+   " potassium"
+  ],
+  "intermediates": [
+   "26"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 38,
+  "name": "nhop-alphabet-element",
+  "own_index": [
+   -1,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the letters in the English alphabet. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   false
+  ],
+  "target": "iron",
+  "task": "multihop"
+ },
+ {
+  "continuation": " calcium. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " magnesium",
+   " calcium",
+   " calcium"
+  ],
+  "intermediates": [
+   "14"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 38,
+  "name": "nhop-fortnight-element",
+  "own_index": [
+   37,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the days in a fortnight. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "silicon",
+  "task": "multihop"
+ },
+ {
+  "continuation": " silicon. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " magnesium",
+   " silicon",
+   " silicon"
+  ],
+  "intermediates": [
+   "6",
+   "six"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 37,
+  "name": "nhop-cube-element",
+  "own_index": [
+   34,
+   35,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the faces on a cube. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "carbon",
+  "task": "multihop"
+ },
+ {
+  "continuation": " sulfur. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " nitrogen",
+   " aluminum",
+   " sulfur"
+  ],
+  "intermediates": [
+   "7"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 37,
+  "name": "nhop-rainbow-element",
+  "own_index": [
+   38,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the colors in a rainbow. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "nitrogen",
+  "task": "multihop"
+ },
+ {
+  "continuation": " tin. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " nitrogen",
+   " silicon",
+   " tin"
+  ],
+  "intermediates": [
+   "8"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 37,
+  "name": "nhop-spider-element",
+  "own_index": [
+   39,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the legs on a spider. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "oxygen",
+  "task": "multihop"
+ },
+ {
+  "continuation": " silicon. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " nitrogen",
+   " magnesium",
+   " silicon"
+  ],
+  "intermediates": [
+   "6",
+   "six"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 37,
+  "name": "nhop-insect-element",
+  "own_index": [
+   34,
+   35,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the legs on an insect. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "carbon",
+  "task": "multihop"
+ },
+ {
+  "continuation": " sodium. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " sulfur",
+   " fluor",
+   " sodium"
+  ],
+  "intermediates": [
+   "7"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 37,
+  "name": "nhop-week-element",
+  "own_index": [
+   38,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the days in a week. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "nitrogen",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Moscow, Russia.",
+  "correct": true,
+  "exit_top1": [
+   " the",
+   " Moscow",
+   " Moscow",
+   " Moscow"
+  ],
+  "intermediates": [
+   "Russia"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 13,
+  "name": "super-largest-country-capital",
+  "own_index": [
+   40,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The capital city of the largest country by area is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Moscow",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Europe.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " Africa",
+   " Europe",
+   " Europe",
+   " Europe"
+  ],
+  "intermediates": [
+   "Vatican"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "super-smallest-continent",
+  "own_index": [
+   41,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The smallest country in the world is located on the continent of ",
+  "readout_token": " of",
+  "scorable": [
+   true
+  ],
+  "target": "Europe",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Beijing.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " the",
+   " Beijing",
+   " Beijing",
+   " Beijing"
+  ],
+  "intermediates": [
+   "China"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "super-populous-capital",
+  "own_index": [
+   4,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The capital city of the most populous country in the world is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Beijing",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the same latitude as",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "Indonesia"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "super-largest-island-nation",
+  "own_index": [
+   42,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The country that is the largest island nation by area has its capital at ",
+  "readout_token": " at",
+  "scorable": [
+   true
+  ],
+  "target": "Jakarta",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Euro.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " Euro",
+   " Euro",
+   " Euro",
+   " Euro"
+  ],
+  "intermediates": [
+   "Italy"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "colosseum-currency",
+  "own_index": [
+   43,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The currency used in the country where the Colosseum stands is the ",
+  "readout_token": " the",
+  "scorable": [
+   true
+  ],
+  "target": "Euro",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Pacific Ocean.\n",
+  "correct": true,
+  "exit_top1": [
+   " world",
+   " Pacific",
+   " Pacific",
+   " Pacific"
+  ],
+  "intermediates": [
+   "China"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "greatwall-ocean",
+  "own_index": [
+   4,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The ocean east of the country that built the Great Wall is the ",
+  "readout_token": " the",
+  "scorable": [
+   true
+  ],
+  "target": "Pacific",
+  "task": "multihop"
+ },
+ {
+  "continuation": "7.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "7",
+   "7",
+   "7",
+   "7"
+  ],
+  "intermediates": [
+   "July"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 14,
+  "name": "holiday-independence-monthnum",
+  "own_index": [
+   44,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The US Independence Day holiday is celebrated in month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "7",
+  "task": "multihop"
+ },
+ {
+  "continuation": "12.\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "December"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 11,
+  "name": "holiday-christmas-monthnum",
+  "own_index": [
+   45,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Christmas Day is celebrated in month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "12",
+  "task": "multihop"
+ },
+ {
+  "continuation": "10.\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "October"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 10,
+  "name": "holiday-halloween-monthnum",
+  "own_index": [
+   46,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Halloween is celebrated in month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "10",
+  "task": "multihop"
+ },
+ {
+  "continuation": "2.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "2",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "February"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 12,
+  "name": "holiday-valentines-monthnum",
+  "own_index": [
+   47,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Valentine's Day is celebrated in month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "2",
+  "task": "multihop"
+ },
+ {
+  "continuation": " war, Mars.",
+  "correct": false,
+  "exit_top1": [
+   " war",
+   " beginnings",
+   " war",
+   " war"
+  ],
+  "intermediates": [
+   "January"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "month-1-godof",
+  "own_index": [
+   48,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The first month of the year is named after the Roman god of ",
+  "readout_token": " of",
+  "scorable": [
+   true
+  ],
+  "target": "beginnings",
+  "task": "multihop"
+ },
+ {
+  "continuation": "11.\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "7",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "January"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 20,
+  "name": "etym-janus-monthnum",
+  "own_index": [
+   48,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The month named after the two-faced Roman god of doorways is month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "1",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Caesar.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " Caesar",
+   " Caesar",
+   " Caesar",
+   " Caesar"
+  ],
+  "intermediates": [
+   "July"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "month-7-namedafter",
+  "own_index": [
+   44,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The seventh month of the year is named after the Roman leader Julius ",
+  "readout_token": " Julius",
+  "scorable": [
+   true
+  ],
+  "target": "Caesar",
+  "task": "multihop"
+ },
+ {
+  "continuation": "7.\n\n",
+  "correct": true,
+  "exit_top1": [
+   "5",
+   "7",
+   "7",
+   "7"
+  ],
+  "intermediates": [
+   "July"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 13,
+  "name": "etym-caesar-monthnum",
+  "own_index": [
+   44,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The month named after Julius Caesar is month number ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "7",
+  "task": "multihop"
+ },
+ {
+  "continuation": " sodium. Count the",
+  "correct": true,
+  "exit_top1": [
+   " magnesium",
+   " magnesium",
+   " oxygen",
+   " sodium"
+  ],
+  "intermediates": [
+   "11"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 41,
+  "name": "nhop-soccer-element",
+  "own_index": [
+   49,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the players on a soccer team on the field. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "sodium",
+  "task": "multihop"
+ },
+ {
+  "continuation": " phosphorus. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " magnesium",
+   " phosphorus",
+   " phosphorus"
+  ],
+  "intermediates": [
+   "16"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 40,
+  "name": "nhop-chess-element",
+  "own_index": [
+   50,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the pieces each player starts with in chess. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "sulfur",
+  "task": "multihop"
+ },
+ {
+  "continuation": " silicon. Count the",
+  "correct": false,
+  "exit_top1": [
+   " magnesium",
+   " magnesium",
+   " sodium",
+   " silicon"
+  ],
+  "intermediates": [
+   "13"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 41,
+  "name": "nhop-suit-element",
+  "own_index": [
+   51,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the cards in one suit of a standard deck. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "aluminum",
+  "task": "multihop"
+ },
+ {
+  "continuation": " calcium. Count the",
+  "correct": false,
+  "exit_top1": [
+   " also",
+   " magnesium",
+   " aluminum",
+   " calcium"
+  ],
+  "intermediates": [
+   "12"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 40,
+  "name": "nhop-clock-element",
+  "own_index": [
+   52,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the hours marked on a standard clock face. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "magnesium",
+  "task": "multihop"
+ },
+ {
+  "continuation": " silicon. Count the",
+  "correct": false,
+  "exit_top1": [
+   " sulfur",
+   " magnesium",
+   " aluminum",
+   " silicon"
+  ],
+  "intermediates": [
+   "52"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 41,
+  "name": "nhop-deck-element",
+  "own_index": [
+   -1,
+   -1,
+   -1
+  ],
+  "prompt": "Count the items in a dozen. The element at that position on the periodic table is magnesium. Count the cards in a standard deck without jokers. The element at that position on the periodic table is ",
+  "readout_token": " is",
+  "scorable": [
+   false
+  ],
+  "target": "tellurium",
+  "task": "multihop"
+ },
+ {
+  "continuation": " west.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " the",
+   " west",
+   " west",
+   " west"
+  ],
+  "intermediates": [
+   "east"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "inv-sunrise-opposite",
+  "own_index": [
+   53,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The cardinal direction opposite to the one where the sun rises is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "west",
+  "task": "multihop"
+ },
+ {
+  "continuation": "down.\"\n\n",
+  "correct": true,
+  "exit_top1": [
+   "down",
+   "down",
+   "down",
+   "down"
+  ],
+  "intermediates": [
+   "up"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "inv-balloon-opposite",
+  "own_index": [
+   54,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The direction opposite to the one a helium balloon floats toward is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "down",
+  "task": "multihop"
+ },
+ {
+  "continuation": "downward.\"\n",
+  "correct": false,
+  "exit_top1": [
+   "down",
+   "down",
+   "down",
+   "down"
+  ],
+  "intermediates": [
+   "down"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 14,
+  "name": "inv-roots-opposite",
+  "own_index": [
+   55,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The direction opposite to the one tree roots grow is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "up",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the North Pole.",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "south"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "inv-antarctica-opposite",
+  "own_index": [
+   56,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The cardinal direction opposite to where Antarctica lies from the equator is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "north",
+  "task": "multihop"
+ },
+ {
+  "continuation": "121.",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "three"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "rhyme-tree-squared",
+  "own_index": [
+   30,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The square of the number whose name rhymes with tree is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "9",
+  "task": "multihop"
+ },
+ {
+  "continuation": "100.",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "five"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "rhyme-hive-plusone",
+  "own_index": [
+   33,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: One more than the number whose name rhymes with hive is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "6",
+  "task": "multihop"
+ },
+ {
+  "continuation": "10. ",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "six"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 14,
+  "name": "rhyme-fix-halved",
+  "own_index": [
+   35,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Half of the number whose name rhymes with fix is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "3",
+  "task": "multihop"
+ },
+ {
+  "continuation": "14. ",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "two"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 13,
+  "name": "rhyme-shoe-doubled",
+  "own_index": [
+   57,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Double the number whose name rhymes with shoe is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "4",
+  "task": "multihop"
+ },
+ {
+  "continuation": " Asia.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " called",
+   " called",
+   " Asia",
+   " Asia"
+  ],
+  "intermediates": [
+   "India"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "tajmahal-continent",
+  "own_index": [
+   58,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The continent where the country that built the Taj Mahal is located is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "Asia",
+  "task": "multihop"
+ },
+ {
+  "continuation": " French.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " French",
+   " French",
+   " French",
+   " French"
+  ],
+  "intermediates": [
+   "France"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "louvre-language",
+  "own_index": [
+   59,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The primary language spoken in the country where the Louvre museum is located is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "French",
+  "task": "multihop"
+ },
+ {
+  "continuation": "O\".\n\n",
+  "correct": true,
+  "exit_top1": [
+   "T",
+   "H",
+   "O",
+   "O"
+  ],
+  "intermediates": [
+   "October"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 13,
+  "name": "firstletter-halloween-month",
+  "own_index": [
+   46,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The first letter of the month containing Halloween is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "O",
+  "task": "multihop"
+ },
+ {
+  "continuation": "V\".\n\n",
+  "correct": false,
+  "exit_top1": [
+   "S",
+   "V",
+   "F",
+   "V"
+  ],
+  "intermediates": [
+   "February"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "firstletter-valentines-month",
+  "own_index": [
+   47,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The first letter of the month containing Valentine's Day is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "F",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the same as the",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "China"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "firstletter-populous-country",
+  "own_index": [
+   4,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The first letter of the name of the world's most populous country is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "C",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the same as the",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "France"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 17,
+  "name": "firstletter-paris-country",
+  "own_index": [
+   59,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The first letter of the name of the country whose capital is Paris is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "F",
+  "task": "multihop"
+ },
+ {
+  "continuation": " the same as the",
+  "correct": false,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " the"
+  ],
+  "intermediates": [
+   "China"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 18,
+  "name": "firstletter-greatwall-country",
+  "own_index": [
+   4,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The first letter of the name of the country that built the Great Wall is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "C",
+  "task": "multihop"
+ },
+ {
+  "continuation": " November.\n\n",
+  "correct": true,
+  "exit_top1": [
+   " the",
+   " the",
+   " the",
+   " November"
+  ],
+  "intermediates": [
+   "October"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 12,
+  "name": "succ-halloween-nextmonth",
+  "own_index": [
+   46,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The month immediately after the one containing Halloween is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "November",
+  "task": "multihop"
+ },
+ {
+  "continuation": "February\".\n\n",
+  "correct": false,
+  "exit_top1": [
+   "the",
+   "February",
+   "February",
+   "February"
+  ],
+  "intermediates": [
+   "February"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "pred-valentines-prevmonth",
+  "own_index": [
+   47,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The month immediately before the one containing Valentine's Day is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "January",
+  "task": "multihop"
+ },
+ {
+  "continuation": "daytime.\"\n",
+  "correct": false,
+  "exit_top1": [
+   "the",
+   "day",
+   "day",
+   "day"
+  ],
+  "intermediates": [
+   "night"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "dual-stars-visible-opposite",
+  "own_index": [
+   60,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The opposite of the time of day when stars are visible is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "day",
+  "task": "multihop"
+ },
+ {
+  "continuation": "night.\"\n\n",
+  "correct": true,
+  "exit_top1": [
+   "the",
+   "night",
+   "night",
+   "night"
+  ],
+  "intermediates": [
+   "day"
+  ],
+  "leaked": [
+   true
+  ],
+  "n_tokens": 18,
+  "name": "dual-photosynthesis-opposite",
+  "own_index": [
+   61,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The opposite of the time of day when plants photosynthesize is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "night",
+  "task": "multihop"
+ },
+ {
+  "continuation": " written as \"V",
+  "correct": false,
+  "exit_top1": [
+   " a",
+   " a",
+   " ",
+   " written"
+  ],
+  "intermediates": [
+   "5",
+   "five"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 16,
+  "name": "roman-rings-olympic",
+  "own_index": [
+   32,
+   33,
+   -1
+  ],
+  "prompt": "Fact: Written as a Roman numeral, the number of Olympic rings is ",
+  "readout_token": " is",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "V",
+  "task": "multihop"
+ },
+ {
+  "continuation": " XXII.\n",
+  "correct": false,
+  "exit_top1": [
+   " ",
+   " ",
+   " ",
+   " XX"
+  ],
+  "intermediates": [
+   "50"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "roman-states-us",
+  "own_index": [
+   62,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Written as a Roman numeral, the number of US states is ",
+  "readout_token": " is",
+  "scorable": [
+   true
+  ],
+  "target": "L",
+  "task": "multihop"
+ },
+ {
+  "continuation": "12 hours.",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "12"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "half-clock-hours",
+  "own_index": [
+   52,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: Half the number of hours shown on a standard clock face is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "6",
+  "task": "multihop"
+ },
+ {
+  "continuation": "12.\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "6",
+   "six"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 14,
+  "name": "double-dice-faces",
+  "own_index": [
+   34,
+   35,
+   -1
+  ],
+  "prompt": "Fact: Double the number of faces on a standard die is ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "12",
+  "task": "multihop"
+ },
+ {
+  "continuation": "1.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "2",
+   "2",
+   "1"
+  ],
+  "intermediates": [
+   "H"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "letterpos-water-symbol",
+  "own_index": [
+   63,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The position in the alphabet of the chemical symbol for hydrogen is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "8",
+  "task": "multihop"
+ },
+ {
+  "continuation": "8.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "2",
+   "8",
+   "8",
+   "8"
+  ],
+  "intermediates": [
+   "O"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "letterpos-oxygen-symbol",
+  "own_index": [
+   64,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The position in the alphabet of the chemical symbol for oxygen is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "15",
+  "task": "multihop"
+ },
+ {
+  "continuation": "4.\n\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "8",
+   "2",
+   "4"
+  ],
+  "intermediates": [
+   "C"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "letterpos-carbon-symbol",
+  "own_index": [
+   65,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The position in the alphabet of the chemical symbol for carbon is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "3",
+  "task": "multihop"
+ },
+ {
+  "continuation": "14.\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "N"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "letterpos-nitrogen-symbol",
+  "own_index": [
+   66,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The position in the alphabet of the chemical symbol for nitrogen is ",
+  "readout_token": " ",
+  "scorable": [
+   true
+  ],
+  "target": "14",
+  "task": "multihop"
+ },
+ {
+  "continuation": "war.\"\n\n",
+  "correct": false,
+  "exit_top1": [
+   "a",
+   "war",
+   "war",
+   "war"
+  ],
+  "intermediates": [
+   "war"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 15,
+  "name": "dbl-armistice-antonym",
+  "own_index": [
+   67,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The antonym of what an armistice ends is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "peace",
+  "task": "multihop"
+ },
+ {
+  "continuation": "I'm still alive",
+  "correct": false,
+  "exit_top1": [
+   "the",
+   "life",
+   "I",
+   "I"
+  ],
+  "intermediates": [
+   "death"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 16,
+  "name": "dbl-obituary-antonym",
+  "own_index": [
+   68,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The antonym of what an obituary announces is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "birth",
+  "task": "multihop"
+ },
+ {
+  "continuation": "ground level.\"\n",
+  "correct": false,
+  "exit_top1": [
+   "up",
+   "ground",
+   "low",
+   "ground"
+  ],
+  "intermediates": [
+   "high"
+  ],
+  "leaked": [
+   false
+  ],
+  "n_tokens": 19,
+  "name": "dbl-altitude-antonym",
+  "own_index": [
+   69,
+   -1,
+   -1
+  ],
+  "prompt": "Fact: The antonym of how you would describe an airplane's cruising altitude is \"",
+  "readout_token": " \"",
+  "scorable": [
+   true
+  ],
+  "target": "low",
+  "task": "multihop"
+ },
+ {
+  "continuation": "20\n\n",
+  "correct": true,
+  "exit_top1": [
+   "5",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "5",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "parens-add-mult",
+  "own_index": [
+   0,
+   1,
+   -1
+  ],
+  "prompt": "(2 + 3) * 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "20",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "15. (",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "5",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 25,
+  "name": "parens-sub-mult",
+  "own_index": [
+   0,
+   1,
+   -1
+  ],
+  "prompt": "(7 - 3) * 2 = 8. (9 - 4) * 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "15",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "2 * 7",
+  "correct": false,
+  "exit_top1": [
+   "2",
+   "1",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "7",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "mult-parens-add",
+  "own_index": [
+   2,
+   1,
+   -1
+  ],
+  "prompt": "2 * (3 + 4) = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "14",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "6\n\n(",
+  "correct": true,
+  "exit_top1": [
+   "3",
+   "6",
+   "6",
+   "6"
+  ],
+  "intermediates": [
+   "3",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "mult-parens-sub",
+  "own_index": [
+   3,
+   1,
+   -1
+  ],
+  "prompt": "(9 - 6) * 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "6",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "14. ",
+  "correct": true,
+  "exit_top1": [
+   "2",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "12",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 10,
+  "name": "add-mult-right",
+  "own_index": [
+   4,
+   5,
+   -1
+  ],
+  "prompt": "2 + 3 * 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "14",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "14\n5",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "12",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 10,
+  "name": "mult-add-left",
+  "own_index": [
+   4,
+   5,
+   -1
+  ],
+  "prompt": "3 * 4 + 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "14",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "17 - ",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "12",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "sub-mult-right",
+  "own_index": [
+   4,
+   6,
+   -1
+  ],
+  "prompt": "17 - 3 * 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "5",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "12\n\n",
+  "correct": true,
+  "exit_top1": [
+   "2",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "20",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 10,
+  "name": "mult-sub-left",
+  "own_index": [
+   7,
+   6,
+   -1
+  ],
+  "prompt": "4 * 5 - 8 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "12",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "12\n\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "15",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "add-sub-left-right",
+  "own_index": [
+   8,
+   6,
+   -1
+  ],
+  "prompt": "10 + 5 - 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "12",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "13\n1",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "10",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "sub-add-left-right",
+  "own_index": [
+   9,
+   5,
+   -1
+  ],
+  "prompt": "15 - 5 + 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "13",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "4\n\nThe",
+  "correct": true,
+  "exit_top1": [
+   "2",
+   "4",
+   "4",
+   "4"
+  ],
+  "intermediates": [
+   "5",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "div-parens-add",
+  "own_index": [
+   0,
+   10,
+   -1
+  ],
+  "prompt": "20 / (2 + 3) = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "4",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "5\n(1",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "5",
+   "5",
+   "5"
+  ],
+  "intermediates": [
+   "15",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "parens-add-div",
+  "own_index": [
+   8,
+   10,
+   -1
+  ],
+  "prompt": "(10 + 5) / 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "5",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3\n\n(",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "12",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "parens-sub-div",
+  "own_index": [
+   4,
+   10,
+   -1
+  ],
+  "prompt": "(14 - 2) / 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3.8\n",
+  "correct": true,
+  "exit_top1": [
+   "3",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "4",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "div-sub-left",
+  "own_index": [
+   11,
+   6,
+   -1
+  ],
+  "prompt": "20 / 5 - 1 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "15. The",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "6",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "chain-add-mult-add",
+  "own_index": [
+   12,
+   5,
+   -1
+  ],
+  "prompt": "1 + 2 * 3 + 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "11",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "\nOptions: ",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "\n",
+   "\n",
+   "\n"
+  ],
+  "intermediates": [
+   "6",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "chain-mult-sub-add",
+  "own_index": [
+   12,
+   6,
+   -1
+  ],
+  "prompt": "2 * 3 - 4 + 5 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "7",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "15 - ",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "\n",
+   "\n",
+   "1"
+  ],
+  "intermediates": [
+   "6",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 14,
+  "name": "chain-sub-mult-sub",
+  "own_index": [
+   12,
+   6,
+   -1
+  ],
+  "prompt": "15 - 2 * 3 - 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "5",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "9\n\n((",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "9",
+   "9",
+   "9"
+  ],
+  "intermediates": [
+   "9",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 16,
+  "name": "nested-add-mult-sub",
+  "own_index": [
+   13,
+   6,
+   -1
+  ],
+  "prompt": "((1 + 2) * 3) - 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "5",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3\n\n((",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "12",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 16,
+  "name": "nested-mult-add-div",
+  "own_index": [
+   4,
+   10,
+   -1
+  ],
+  "prompt": "((2 * 3) + 6) / 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "15\n\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "5",
+   "multiplication"
+  ],
+  "leaked": [
+   true,
+   true
+  ],
+  "n_tokens": 16,
+  "name": "nested-sub-add-mult",
+  "own_index": [
+   0,
+   1,
+   -1
+  ],
+  "prompt": "((8 - 5) + 2) * 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "15",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "\n\ntwo plus",
+  "correct": false,
+  "exit_top1": [
+   "?",
+   "\n",
+   "\n",
+   "\n"
+  ],
+  "intermediates": [
+   "12",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 7,
+  "name": "word-add-mult",
+  "own_index": [
+   4,
+   5,
+   -1
+  ],
+  "prompt": "two plus three times four equals ",
+  "readout_token": " equals",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "fourteen",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "\n\nthree times",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "\n",
+   "\n",
+   "\n"
+  ],
+  "intermediates": [
+   "15",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 7,
+  "name": "word-mult-sub",
+  "own_index": [
+   8,
+   6,
+   -1
+  ],
+  "prompt": "three times five minus eight equals ",
+  "readout_token": " equals",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "seven",
+  "task": "order-ops"
+ },
+ {
+  "continuation": " 20.",
+  "correct": false,
+  "exit_top1": [
+   " what",
+   "?",
+   " ",
+   " "
+  ],
+  "intermediates": [
+   "5",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "word-parens",
+  "own_index": [
+   0,
+   1,
+   -1
+  ],
+  "prompt": "Calculate: open paren two plus three close paren times four equals ",
+  "readout_token": " equals",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "twenty",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "11 % ",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "11",
+   "mod"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "mod-add",
+  "own_index": [
+   14,
+   15,
+   -1
+  ],
+  "prompt": "(7 + 4) % 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "2",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "16 % ",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "16",
+   "mod"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "mod-mult",
+  "own_index": [
+   16,
+   15,
+   -1
+  ],
+  "prompt": "(2 * 8) % 5 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "1",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "9\n\n(",
+  "correct": true,
+  "exit_top1": [
+   "3",
+   "3",
+   "9",
+   "9"
+  ],
+  "intermediates": [
+   "3",
+   "squared"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 10,
+  "name": "square-sub",
+  "own_index": [
+   3,
+   17,
+   -1
+  ],
+  "prompt": "(7 - 4)^2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "9",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "24\n2",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "6",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 10,
+  "name": "mult-mult-left",
+  "own_index": [
+   12,
+   1,
+   -1
+  ],
+  "prompt": "2 * 3 * 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "24",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3. \n",
+  "correct": true,
+  "exit_top1": [
+   "3",
+   "1",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "6",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "div-div-left",
+  "own_index": [
+   12,
+   10,
+   -1
+  ],
+  "prompt": "24 / 4 / 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "8\n\nThe",
+  "correct": true,
+  "exit_top1": [
+   "8",
+   "8",
+   "8",
+   "8"
+  ],
+  "intermediates": [
+   "24",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 10,
+  "name": "mult-div-left",
+  "own_index": [
+   -1,
+   10,
+   -1
+  ],
+  "prompt": "6 * 4 / 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   false,
+   true
+  ],
+  "target": "8",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "8\n\nThe",
+  "correct": true,
+  "exit_top1": [
+   "8",
+   "8",
+   "8",
+   "8"
+  ],
+  "intermediates": [
+   "4",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 11,
+  "name": "div-mult-left",
+  "own_index": [
+   11,
+   1,
+   -1
+  ],
+  "prompt": "12 / 3 * 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "8",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3\n\nThe",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "9",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "12",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "mult-div-mult",
+  "own_index": [
+   4,
+   1,
+   -1
+  ],
+  "prompt": "2 * 6 / 4 * 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "9",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "10, ",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "3",
+   "addition"
+  ],
+  "leaked": [
+   true,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "add-add-add",
+  "own_index": [
+   3,
+   5,
+   -1
+  ],
+  "prompt": "1 + 2 + 3 + 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "10",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "10. ",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "15",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 14,
+  "name": "sub-sub-sub",
+  "own_index": [
+   8,
+   6,
+   -1
+  ],
+  "prompt": "20 - 5 - 3 - 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "10",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "10\n\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "13",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 14,
+  "name": "add-sub-add-sub",
+  "own_index": [
+   18,
+   6,
+   -1
+  ],
+  "prompt": "10 + 3 - 5 + 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "10",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "26. The",
+  "correct": true,
+  "exit_top1": [
+   "6",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "6",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "chain-mult-mult-add",
+  "own_index": [
+   12,
+   5,
+   -1
+  ],
+  "prompt": "2 * 3 + 4 * 5 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "26",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "18\n\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "2",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "9",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 16,
+  "name": "nested-add-add-mult",
+  "own_index": [
+   13,
+   1,
+   -1
+  ],
+  "prompt": "((2 + 3) + 4) * 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "18",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "11\n((",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "7",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 16,
+  "name": "nested-mult-sub-add",
+  "own_index": [
+   2,
+   5,
+   -1
+  ],
+  "prompt": "((3 * 4) - 5) + 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "9",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "10\n((",
+  "correct": false,
+  "exit_top1": [
+   "3",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "8",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 17,
+  "name": "nested-div-add-sub",
+  "own_index": [
+   19,
+   6,
+   -1
+  ],
+  "prompt": "((12 / 4) + 5) - 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "5",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "15\n\n",
+  "correct": true,
+  "exit_top1": [
+   "3",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "3",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 17,
+  "name": "nested-sub-div-mult",
+  "own_index": [
+   3,
+   1,
+   -1
+  ],
+  "prompt": "((10 - 4) / 2) * 5 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "15",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3.75",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "12",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 20,
+  "name": "nested4-add-mult-add-div",
+  "own_index": [
+   4,
+   10,
+   -1
+  ],
+  "prompt": "(((1 + 2) * 3) + 3) / 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "11\n\n",
+  "correct": false,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "12",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 20,
+  "name": "nested4-sub-add-mult-sub",
+  "own_index": [
+   4,
+   6,
+   -1
+  ],
+  "prompt": "(((8 - 5) + 1) * 3) - 2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "10",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "11\n\n",
+  "correct": true,
+  "exit_top1": [
+   "6",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "6",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "redundant-parens-mult",
+  "own_index": [
+   12,
+   5,
+   -1
+  ],
+  "prompt": "(2 * 3) + 5 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "11",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "2\n\n(",
+  "correct": true,
+  "exit_top1": [
+   "3",
+   "2",
+   "2",
+   "2"
+  ],
+  "intermediates": [
+   "3",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "redundant-parens-div",
+  "own_index": [
+   3,
+   6,
+   -1
+  ],
+  "prompt": "(12 / 4) - 1 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "2",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "\n\nAnswer:",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "\n",
+   "\n",
+   "\n"
+  ],
+  "intermediates": [
+   "6",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 7,
+  "name": "word-sub-mult",
+  "own_index": [
+   12,
+   6,
+   -1
+  ],
+  "prompt": "ten minus two times three equals ",
+  "readout_token": " equals",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "four",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "\n\n<think>\nOkay",
+  "correct": false,
+  "exit_top1": [
+   "?",
+   "\n\n",
+   "\n\n",
+   "\n\n"
+  ],
+  "intermediates": [
+   "7",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 7,
+  "name": "word-add-add",
+  "own_index": [
+   2,
+   5,
+   -1
+  ],
+  "prompt": "three plus four plus five equals ",
+  "readout_token": " equals",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "twelve",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "\n\nfifteen",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "\n",
+   "\n",
+   "\n"
+  ],
+  "intermediates": [
+   "5",
+   "subtraction"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 9,
+  "name": "word-div-sub",
+  "own_index": [
+   0,
+   6,
+   -1
+  ],
+  "prompt": "fifteen divided by three minus two equals ",
+  "readout_token": " equals",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "three",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "14. \n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "12",
+   "addition"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "mixed-mult-add",
+  "own_index": [
+   4,
+   5,
+   -1
+  ],
+  "prompt": "Calculate: 3 times 4 plus 2 equals ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "14",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "15.\n",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "5",
+   "multiplication"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 14,
+  "name": "mixed-parens-mult",
+  "own_index": [
+   0,
+   1,
+   -1
+  ],
+  "prompt": "Calculate: (1 plus 4) times 3 equals ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "15",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3\n(1",
+  "correct": false,
+  "exit_top1": [
+   "\n",
+   "9",
+   "9",
+   "3"
+  ],
+  "intermediates": [
+   "9",
+   "mod"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 13,
+  "name": "mod-sub",
+  "own_index": [
+   13,
+   15,
+   -1
+  ],
+  "prompt": "(12 - 3) % 4 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "1",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3^2 =",
+  "correct": false,
+  "exit_top1": [
+   "3",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "3",
+   "squared"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 11,
+  "name": "square-div",
+  "own_index": [
+   3,
+   17,
+   -1
+  ],
+  "prompt": "(12 / 4)^2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "9",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "16\n(",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "4",
+   "squared"
+  ],
+  "leaked": [
+   true,
+   false
+  ],
+  "n_tokens": 10,
+  "name": "square-mult",
+  "own_index": [
+   11,
+   17,
+   -1
+  ],
+  "prompt": "(1 * 4)^2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "16",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "9\n\n(",
+  "correct": true,
+  "exit_top1": [
+   "9",
+   "9",
+   "9",
+   "9"
+  ],
+  "intermediates": [
+   "3",
+   "squared"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 10,
+  "name": "pystar-add",
+  "own_index": [
+   3,
+   17,
+   -1
+  ],
+  "prompt": "(2 + 1)**2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "9",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "16\n\n",
+  "correct": true,
+  "exit_top1": [
+   "4",
+   "1",
+   "1",
+   "1"
+  ],
+  "intermediates": [
+   "4",
+   "squared"
+  ],
+  "leaked": [
+   false,
+   false
+  ],
+  "n_tokens": 10,
+  "name": "pystar-sub",
+  "own_index": [
+   11,
+   17,
+   -1
+  ],
+  "prompt": "(6 - 2)**2 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "16",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3\n(7",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "11",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "floordiv-add",
+  "own_index": [
+   14,
+   10,
+   -1
+  ],
+  "prompt": "(7 + 4) // 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ },
+ {
+  "continuation": "3\n(2",
+  "correct": true,
+  "exit_top1": [
+   "1",
+   "3",
+   "3",
+   "3"
+  ],
+  "intermediates": [
+   "10",
+   "division"
+  ],
+  "leaked": [
+   false,
+   true
+  ],
+  "n_tokens": 12,
+  "name": "floordiv-mult",
+  "own_index": [
+   9,
+   10,
+   -1
+  ],
+  "prompt": "(2 * 5) // 3 = ",
+  "readout_token": " ",
+  "scorable": [
+   true,
+   true
+  ],
+  "target": "3",
+  "task": "order-ops"
+ }
+]

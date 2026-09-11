@@ -1,0 +1,537 @@
+{
+  "component_proofs": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_freeze_binding_independent_proof_v1.json": {
+      "bytes": 733,
+      "sha256": "75576b322165122d5a569e51cdedfd1ead70ddf8438e002f2efc9005268b9b82"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_validator_independent_proof_v1.json": {
+      "bytes": 5542,
+      "sha256": "4d6a48f8b76e8bf6317ecfc8411651064221e629e202ab4f80eb0fbe005960ef"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_validator_self_test_independent_v1.json": {
+      "bytes": 1229,
+      "sha256": "76d1b06cf9766cebd4dd5c8ee3a1b7823be9aef7f6d746becc7bf6c875685d19"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_worker_failure_independent_proof_v1.json": {
+      "bytes": 3026,
+      "sha256": "ada7e577ec6ca0c2ae0d773abaacc22e2cba3d07272a2a8e2cd8587a80b7e251"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_worker_failure_status_independent_proof_v1.json": {
+      "bytes": 1541,
+      "sha256": "bccdbc3ebf4be4af50706b268d97ffbc2f88cdc154ec11acd6c56e8f121ffc75"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_wrapper_independent_proof_v1.json": {
+      "bytes": 2378,
+      "sha256": "722ea84a9a46e6b7cab65d3549ead4862369e8b794d224e0d4c414d99fc3ee02"
+    }
+  },
+  "controller_review": {
+    "all_11_reviewed_sources_unchanged": true,
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review.json",
+    "record": {
+      "bytes": 12117,
+      "sha256": "835ff4b2a3367d284d5e229245621a046114844b731ca42e9370668580384f41"
+    }
+  },
+  "current_worker_timing_admission": {
+    "cases": [
+      {
+        "measured": "1",
+        "outcome": "pass",
+        "remaining": "17210.479551757453"
+      },
+      {
+        "measured": "1",
+        "outcome": "reject",
+        "remaining": "17210.479550757453"
+      },
+      {
+        "measured": "200",
+        "outcome": "pass",
+        "remaining": "25900"
+      },
+      {
+        "measured": "200",
+        "outcome": "reject",
+        "remaining": "20880"
+      },
+      {
+        "measured": "1",
+        "outcome": "reject",
+        "remaining": "nan"
+      },
+      {
+        "measured": "1",
+        "outcome": "reject",
+        "remaining": "inf"
+      },
+      {
+        "measured": "nan",
+        "outcome": "reject",
+        "remaining": "17210.479551757453"
+      },
+      {
+        "measured": "inf",
+        "outcome": "reject",
+        "remaining": "17210.479551757453"
+      },
+      {
+        "measured": "1",
+        "outcome": "reject",
+        "remaining": "0"
+      },
+      {
+        "measured": "0",
+        "outcome": "reject",
+        "remaining": "17210.479551757453"
+      },
+      {
+        "measured": "1",
+        "outcome": "reject",
+        "remaining": "-1"
+      },
+      {
+        "measured": "-1",
+        "outcome": "reject",
+        "remaining": "17210.479551757453"
+      }
+    ],
+    "historical_required_seconds": 17210.479551757453,
+    "worker_record": {
+      "bytes": 10923,
+      "sha256": "3ed339263cf128a29a71a23124b4ab69d368037f53596d76f405136579dcbadb"
+    }
+  },
+  "historical_closure": {
+    "all_declared_sha256_unchanged": true,
+    "calibration_count": 5,
+    "calibrations": [
+      {
+        "fit_id": 1,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json",
+        "record": {
+          "bytes": 94410,
+          "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712"
+        }
+      },
+      {
+        "fit_id": 2,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_02.json",
+        "record": {
+          "bytes": 98110,
+          "sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95"
+        }
+      },
+      {
+        "fit_id": 3,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_03.json",
+        "record": {
+          "bytes": 96617,
+          "sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9"
+        }
+      },
+      {
+        "fit_id": 4,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_04.json",
+        "record": {
+          "bytes": 95461,
+          "sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba"
+        }
+      },
+      {
+        "fit_id": 5,
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_05.json",
+        "record": {
+          "bytes": 92492,
+          "sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5"
+        }
+      }
+    ],
+    "run_spec": {
+      "bytes": 24834,
+      "sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149"
+    },
+    "source_count": 42,
+    "source_records": [
+      {
+        "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json",
+        "record": {
+          "bytes": 21869,
+          "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json",
+        "record": {
+          "bytes": 9589,
+          "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/__init__.py",
+        "record": {
+          "bytes": 637,
+          "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/_logging.py",
+        "record": {
+          "bytes": 1804,
+          "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/data/slice_vis.html",
+        "record": {
+          "bytes": 43663,
+          "sha256": "d19d843aa5d1fa5073c925a7723c4e9503b9b83c5622d9775033887c64bf62d9"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/examples.py",
+        "record": {
+          "bytes": 6300,
+          "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/fitting.py",
+        "record": {
+          "bytes": 15078,
+          "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/hf.py",
+        "record": {
+          "bytes": 8182,
+          "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/hooks.py",
+        "record": {
+          "bytes": 2735,
+          "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/lens.py",
+        "record": {
+          "bytes": 8646,
+          "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/protocol.py",
+        "record": {
+          "bytes": 1774,
+          "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/jlens/vis.py",
+        "record": {
+          "bytes": 19984,
+          "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/cloud_worker.py",
+        "record": {
+          "bytes": 19100,
+          "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json",
+        "record": {
+          "bytes": 19977,
+          "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/control_estimators.py",
+        "record": {
+          "bytes": 21777,
+          "sha256": "e1943378728de002feca622115229e085e7c42cc71e4135256cce97c60b9c10b"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_controls.py",
+        "record": {
+          "bytes": 52577,
+          "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+        "record": {
+          "bytes": 58251,
+          "sha256": "b98b39d70a64db23c1544c4ce5d3cb57760363b1fd3d682db106288669f85b5e"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_refits.py",
+        "record": {
+          "bytes": 55009,
+          "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+        "record": {
+          "bytes": 33463,
+          "sha256": "2d30747defd1fe98f72976a1959e9d554fafb9bbbc001374e1d2404127f72e88"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+        "record": {
+          "bytes": 25792,
+          "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+        "record": {
+          "bytes": 165311,
+          "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+        "record": {
+          "bytes": 2842,
+          "sha256": "4e9bed3327f63bb31d9cd300b40c329601ace4fd2b1c135b9811c178230ed0db"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/pod_entry.sh",
+        "record": {
+          "bytes": 1221,
+          "sha256": "d72cf7229b12af1fe0d218bc6edd5354740a9dd94fad06e57efa3fa59335ad32"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+        "record": {
+          "bytes": 18407,
+          "sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/prepare_bundle.py",
+        "record": {
+          "bytes": 8791,
+          "sha256": "33dc2582c6f815615fa97d4547c8d4bc76e4097696e8e001592d7b9522ac376e"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/requirements.lock",
+        "record": {
+          "bytes": 12089,
+          "sha256": "87311c22b6d2eaa50e4c819dab431ff221fc787f8bbf495cbbc455db0a0245f1"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_controls.py",
+        "record": {
+          "bytes": 9851,
+          "sha256": "4da1528ed692409919003a1a02ec421fcd6b7d7453d9fbe88f28771b84239543"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py",
+        "record": {
+          "bytes": 37695,
+          "sha256": "78cf3c76b58a7d5d6bc184a8828200d29d618775a142d253f6188e30a4df8ff2"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py",
+        "record": {
+          "bytes": 51999,
+          "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py",
+        "record": {
+          "bytes": 10107,
+          "sha256": "1438816d87b730e45e4ae2df79113baa645f19b3c84eb690194c13ac622e8a8d"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py",
+        "record": {
+          "bytes": 28285,
+          "sha256": "cf783d68830a78efddc358d6ff06233dd7bc6fae671045de31ff91164a17164f"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py",
+        "record": {
+          "bytes": 14000,
+          "sha256": "4f63957237e2cd9309c788c9af67ed5471928f6fbc0b18095e6f903adc0ff944"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py",
+        "record": {
+          "bytes": 23288,
+          "sha256": "b2286fd25eb07553c8e27df3883cdce28c71907343c163d0c5db5da25a863e78"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_fitting.py",
+        "record": {
+          "bytes": 9498,
+          "sha256": "6ba31269b98cca39f9a27a0ede572abf466abfbb166bc563e85eb796aa4f616f"
+        }
+      },
+      {
+        "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py",
+        "record": {
+          "bytes": 21300,
+          "sha256": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/__init__.py",
+        "record": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/bench.py",
+        "record": {
+          "bytes": 6251,
+          "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/evaldata.py",
+        "record": {
+          "bytes": 7527,
+          "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/evaluate.py",
+        "record": {
+          "bytes": 63535,
+          "sha256": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/evidence.py",
+        "record": {
+          "bytes": 12530,
+          "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/fit_lens.py",
+        "record": {
+          "bytes": 72898,
+          "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0"
+        }
+      },
+      {
+        "path": "/home/moloch/ouro_project/src/ouro_jlens/recurrent.py",
+        "record": {
+          "bytes": 5777,
+          "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+        }
+      }
+    ]
+  },
+  "historical_comparison_review": {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_independent_review.json",
+    "record": {
+      "bytes": 3697,
+      "sha256": "8b22fa283ad0355966114817c402182e38a64cf04858329d2b20bcfd61541863"
+    },
+    "status": "passed_for_pinned_accepted_H_outputs"
+  },
+  "limitations": [
+    "CPU tensor fixtures and existing authenticated historical files do not establish new GPU numerical parity or completion.",
+    "No complete new Huginn payload exists locally; real-width gate, N100 conversion and returned readouts remain runtime semantic gates.",
+    "No provider, SSH, model weights, new confirmation outputs or new Huginn model outcomes were accessed by these independent checks."
+  ],
+  "review_assembly_note": "An initial assembly assertion expected literal passed in the separately scoped comparison review. Its actual status is passed_for_pinned_accepted_H_outputs; that exact scope is now checked. No review files had been written before the assertion.",
+  "reviewed_sources": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/artifacts.py": {
+      "bytes": 3054,
+      "sha256": "1ca7827386131ee48f304b1caf78110075c2c6dad7201056728d4a9c9559b226"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/bootstrap.py": {
+      "bytes": 4234,
+      "sha256": "82c600432218e3c5c5fac99afdcf468d04362644e67d215a923ee6007b91a25e"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/download_model.py": {
+      "bytes": 500,
+      "sha256": "aa650bbafc7d51501c0bded67396fbf9b7253d24c31bde7eaecb61c30cc2d1d6"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/export_fit.py": {
+      "bytes": 6195,
+      "sha256": "7c10cdc444b04abe7cccb9907bbb011a427de6d6616a5cba64580c2b93cf7e91"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/freeze.py": {
+      "bytes": 10821,
+      "sha256": "3b2f8b0a4c0bf6c2d3498b3a03f184679e26c999f74106af43a4826c98d15d8a"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/launch.py": {
+      "bytes": 5412,
+      "sha256": "88420249fd734d7890372b881c294228e97e6017a5cd8b965ff38d61fff05b04"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/preserve_gate.py": {
+      "bytes": 3871,
+      "sha256": "7a1d1648c2b1fb5b3341caa85e38d81ef504e6cabc773a8989bbf02451e5a652"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/validate_outputs.py": {
+      "bytes": 77508,
+      "sha256": "93ccdeff8ed373942fa8e2aa8db258221345a1e48a550f1311525068b2c32e38"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/worker.py": {
+      "bytes": 10923,
+      "sha256": "3ed339263cf128a29a71a23124b4ab69d368037f53596d76f405136579dcbadb"
+    }
+  },
+  "schema": "huginn_implementation_independent_proof.v1",
+  "status": "passed",
+  "syntax_compile": {
+    "files": 9,
+    "method": "compile exact source bytes without writing pyc",
+    "status": "passed"
+  },
+  "utc": "2026-09-10T00:10:39.688038+00:00",
+  "validator_fixture_corrections": [
+    "The first independent fixture used os.link across filesystems; EXDEV copy fallback was added to the fixture.",
+    "The second independent fixture omitted run_spec.readout_paths; the exact frozen seventeen-file path list was added. Both corrections affected the fixture only; production source was unchanged across the successful checks."
+  ],
+  "validator_independent_checks": 13,
+  "validator_self_test_checks": 19,
+  "verification_plan_record": {
+    "bytes": 5830,
+    "sha256": "362f4f6204cec334e36f1098d0c44d3fba0af079ace9b87a87706b29a7c6db97"
+  },
+  "worker_failure_proof_extension": {
+    "ast_identical_after_removing_only_two_status_kwargs": [
+      "children_quiescent",
+      "preservation_errors"
+    ],
+    "current_worker": {
+      "bytes": 10923,
+      "sha256": "3ed339263cf128a29a71a23124b4ab69d368037f53596d76f405136579dcbadb"
+    },
+    "final_status_kwargs_separately_executed": true,
+    "previous_tested_worker": {
+      "bytes": 10818,
+      "sha256": "ece213a5f8a6843eecc2869e14495d0f3dc312184f409f42cfaebb26048a69c8"
+    }
+  }
+}

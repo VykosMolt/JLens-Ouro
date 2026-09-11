@@ -1,0 +1,386 @@
+{
+  "recorded_utc": "2026-09-08T17:32:37Z",
+  "read_only": true,
+  "requested_host_ram_gb": 48,
+  "requested_disk_gb": 120,
+  "rows": [
+    {
+      "id": "NVIDIA A100 80GB PCIe",
+      "memoryInGb": 80,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA A100-SXM4-40GB",
+      "memoryInGb": 40,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 1,
+        "stockStatus": "Low",
+        "minMemory": 125,
+        "minVcpu": 32,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA A100-SXM4-80GB",
+      "memoryInGb": 80,
+      "exact": {
+        "uninterruptablePrice": 1.39,
+        "stockStatus": "Low",
+        "minMemory": 125,
+        "minVcpu": 32,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 1.39,
+        "stockStatus": "Low",
+        "minMemory": 125,
+        "minVcpu": 32,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA GeForce RTX 3090",
+      "memoryInGb": 24,
+      "exact": {
+        "uninterruptablePrice": 0.22,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 12,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 0.22,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 12,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA GeForce RTX 3090 Ti",
+      "memoryInGb": 24,
+      "exact": {
+        "uninterruptablePrice": 0.27,
+        "stockStatus": "Low",
+        "minMemory": 62,
+        "minVcpu": 28,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 0.27,
+        "stockStatus": "Low",
+        "minMemory": 62,
+        "minVcpu": 28,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA GeForce RTX 4090",
+      "memoryInGb": 24,
+      "exact": {
+        "uninterruptablePrice": 0.34,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 32,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 0.34,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 20,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA GeForce RTX 5090",
+      "memoryInGb": 32,
+      "exact": {
+        "uninterruptablePrice": 0.69,
+        "stockStatus": "Low",
+        "minMemory": 53,
+        "minVcpu": 8,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 0.69,
+        "stockStatus": "Low",
+        "minMemory": 53,
+        "minVcpu": 8,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA H100 80GB HBM3",
+      "memoryInGb": 80,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA H100 NVL",
+      "memoryInGb": 94,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA H100 PCIe",
+      "memoryInGb": 80,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA L40",
+      "memoryInGb": 48,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA L40S",
+      "memoryInGb": 48,
+      "exact": {
+        "uninterruptablePrice": 0.79,
+        "stockStatus": "Low",
+        "minMemory": 251,
+        "minVcpu": 24,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 0.79,
+        "stockStatus": "Low",
+        "minMemory": 251,
+        "minVcpu": 24,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA RTX 6000 Ada Generation",
+      "memoryInGb": 48,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+      "memoryInGb": 96,
+      "exact": {
+        "uninterruptablePrice": 1.64,
+        "stockStatus": "Low",
+        "minMemory": 249,
+        "minVcpu": 32,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 1.64,
+        "stockStatus": "Low",
+        "minMemory": 249,
+        "minVcpu": 32,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "memoryInGb": 96,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb",
+      "memoryInGb": 24,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+      "memoryInGb": 48,
+      "exact": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": null,
+        "stockStatus": null,
+        "minMemory": null,
+        "minVcpu": null,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    },
+    {
+      "id": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+      "memoryInGb": 96,
+      "exact": {
+        "uninterruptablePrice": 1.69,
+        "stockStatus": "Low",
+        "minMemory": 251,
+        "minVcpu": 16,
+        "minDisk": null,
+        "supportPublicIp": null,
+        "availableGpuCounts": null
+      },
+      "noPublic": {
+        "uninterruptablePrice": 1.69,
+        "stockStatus": "Low",
+        "minMemory": 251,
+        "minVcpu": 16,
+        "minDisk": null,
+        "supportPublicIp": null
+      }
+    }
+  ]
+}

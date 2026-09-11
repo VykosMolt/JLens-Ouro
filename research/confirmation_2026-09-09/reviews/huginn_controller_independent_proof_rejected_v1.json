@@ -1,0 +1,380 @@
+{
+  "schema": "huginn_controller_independent_proof.v1",
+  "status": "rejected_after_additional_adversarial_checks",
+  "source_record": {
+    "bytes": 5259,
+    "sha256": "3397f65902f985bc9312352cbe69e52f4256caf07cc9286953c7cf296f193997"
+  },
+  "candidate_lease_record": {
+    "bytes": 76058,
+    "sha256": "5f600870bbf91d1d117b8e62fbc4f82df513394210486feda97862cc33f2c15e"
+  },
+  "supplied_suite_run": {
+    "cases": [
+      {
+        "case": "setup_restart_missing_false_three_transport_errors",
+        "status": "passed"
+      },
+      {
+        "case": "setup_timeout_stops_preserves_until_hard_deadline",
+        "status": "passed"
+      },
+      {
+        "case": "locked_updates_and_stale_observer",
+        "status": "passed"
+      },
+      {
+        "case": "early_preservation_survives_status_timeout",
+        "status": "passed"
+      },
+      {
+        "case": "budget_emergency_precedes_mutation_and_bypasses_collection_lock",
+        "status": "passed"
+      },
+      {
+        "case": "provider_absence_without_new_deletion",
+        "status": "passed"
+      },
+      {
+        "case": "stage_preservation_reuse_and_nonblocking_normal_delete",
+        "status": "passed"
+      },
+      {
+        "case": "stale_receipt_exact_binding_and_required_pathset",
+        "status": "passed"
+      },
+      {
+        "case": "quarantine_and_repair_payload",
+        "status": "passed"
+      },
+      {
+        "case": "quarantine_and_repair_manifest",
+        "status": "passed"
+      },
+      {
+        "case": "quarantine_and_repair_receiptless_payload",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_transfer",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_validation",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_pending_unlink",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_publication",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_before_receipt_link",
+        "status": "passed"
+      },
+      {
+        "case": "atomic_publication_resume_after_receipt_link",
+        "status": "passed"
+      },
+      {
+        "case": "double_collector_single_publication",
+        "status": "passed"
+      },
+      {
+        "case": "source_mutation_rejects_transfer",
+        "status": "passed"
+      },
+      {
+        "case": "after_transfer_source_change_manifest",
+        "status": "passed"
+      },
+      {
+        "case": "after_transfer_source_change_pending_source_unlink",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_unloadable",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_wrong_shape",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_wrong_dtype",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_nonfinite",
+        "status": "passed"
+      },
+      {
+        "case": "hash_consistent_semantic_failure_wrong_mean",
+        "status": "passed"
+      },
+      {
+        "case": "truncated_wrong_prefix_resume",
+        "status": "passed"
+      },
+      {
+        "case": "prior_debit_carried_once_and_admission_caps",
+        "status": "passed"
+      },
+      {
+        "case": "create_race_uncertainty_halt_and_absence_barriers",
+        "status": "passed"
+      },
+      {
+        "case": "verifier_pin_rechecked_before_create",
+        "status": "passed"
+      },
+      {
+        "case": "worker_complete_and_forged_ack_are_not_receiver_acceptance",
+        "status": "passed"
+      },
+      {
+        "case": "root_explicit_teardown_exact_binding_and_scope",
+        "status": "passed"
+      },
+      {
+        "case": "account_renamed_and_foreign_pod_mutation_guards",
+        "status": "passed"
+      },
+      {
+        "case": "actual_bootstrap_name_and_ssh_setup_snippet_without_system_mutation",
+        "status": "passed"
+      },
+      {
+        "case": "failed_terminal_preserved_without_full_acceptance",
+        "status": "passed"
+      },
+      {
+        "case": "bounded_process_group_cleanup",
+        "processes": [
+          {
+            "error_type": "TimeoutExpired",
+            "operation": "fixture_timeout",
+            "pid": 89,
+            "process_group_quiescent": true,
+            "returncode": -15,
+            "timeout_seconds": 0.05
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "case": "metadata_read_stat_guard_ignores_atime_only_change",
+        "status": "passed"
+      },
+      {
+        "case": "every_historical_and_primary_lease_included_exactly_once",
+        "status": "passed"
+      },
+      {
+        "case": "canonical_primary_ledger_inventory_catches_added_and_duplicate_states",
+        "status": "passed"
+      },
+      {
+        "case": "primary_complete_receipt_does_not_replace_confirmed_shutdown",
+        "status": "passed"
+      },
+      {
+        "case": "primary_termination_without_exact_complete_acceptance_blocks_phase",
+        "status": "passed"
+      },
+      {
+        "case": "stale_receipt_rejected_even_if_h_handoff_is_spoofed",
+        "status": "passed"
+      },
+      {
+        "case": "same_size_payload_corruption_fails_both_fresh_rehash_and_precreate_inventory",
+        "status": "passed"
+      },
+      {
+        "case": "payload_stat_inventory_brackets_full_rehash_and_catches_inflight_mutation",
+        "status": "passed"
+      },
+      {
+        "case": "same_byte_inode_replacement_rejects_precreate_admission",
+        "status": "passed"
+      },
+      {
+        "case": "primary_module_source_verified_before_isolated_compilation",
+        "status": "passed"
+      },
+      {
+        "case": "phase_snapshot_identity_no_pods_no_spend_and_original_balance_floor",
+        "status": "passed"
+      },
+      {
+        "case": "planned_H_reserves_fit_5_989890_but_6_cap_balance_and_combined25_remain_hard",
+        "planned_cost_usd": 5.989890410958905,
+        "status": "passed"
+      },
+      {
+        "case": "controller_itself_rechecks_primary_before_paid_mutation",
+        "status": "passed"
+      },
+      {
+        "case": "H_retries_reuse_exact_debit_add_each_bound_once_and_reject_unreconciled_attempts",
+        "status": "passed"
+      }
+    ],
+    "elapsed_seconds": 19.543652057647705,
+    "no_cloud_or_ssh": true,
+    "no_paid_science": true,
+    "python": "/home/moloch/ouro_project/venv/bin/python",
+    "schema": "huginn_verification_controller_proof.v1",
+    "scope": "Real temporary files, locks, tiny CPU serialization, hashes, semantic readers and receiver; fake provider/SSH mutation boundaries.",
+    "smoke": {
+      "absence_confirmations": 3,
+      "acceptance": {
+        "manifest_sha256": "42a1025a828b31b5aae3d0e58e7ccc2fd8373450ff91436a791e5d14e36d8154",
+        "path": "/tmp/huginn-controller-independent-review/smoke/ledger/attempt_01/handoff/accepted/smoke/42a1025a828b31b5aae3d0e58e7ccc2fd8373450ff91436a791e5d14e36d8154/RECEIPT.json",
+        "record": {
+          "bytes": 3020,
+          "sha256": "7b9c69b7f1609904285452060eccea270a220c645073edad08be464e440b5c1c"
+        }
+      },
+      "case": "tiny_cpu_save_interrupt_resume_load_convert_accept_delete",
+      "files": {
+        "fit_01/COMPLETE.json": {
+          "bytes": 354,
+          "sha256": "d9d9c2d8c513b8a8bc4cfe07015443192d39d70f2eda202b42f14d10b8cfb4ec"
+        },
+        "fit_01/LATEST.json": {
+          "bytes": 365,
+          "sha256": "72d60d904792d6e7dd6d3256c52b8b5efce41c7ba9af6db93576507bd17d1a34"
+        },
+        "fit_01/OWNER.json": {
+          "bytes": 7625,
+          "sha256": "b7380071dce0598396ad4a1233678a0d1fce0c59f3e66b38afa9181bbd24989e"
+        },
+        "fit_01/checkpoints/cursor_000100_30092a1da53e4d4e973f183e4835e440/SEAL.json": {
+          "bytes": 363,
+          "sha256": "ee4944edb1c2c1777dcfa0fe93b7c161f69493cc39000cecbfeba43d0ebf07e4"
+        },
+        "fit_01/checkpoints/cursor_000100_30092a1da53e4d4e973f183e4835e440/metadata.json": {
+          "bytes": 27050,
+          "sha256": "42f2229a8d028562a50a8369946432b230f15ec0d1c29d98c8e7e6a4aff42467"
+        },
+        "fit_01/checkpoints/cursor_000100_30092a1da53e4d4e973f183e4835e440/state.pt": {
+          "bytes": 2149,
+          "sha256": "c414d27939dfb948b2b786820b8721fff48dd46565548b39d3d48798e0a703f9"
+        },
+        "fit_01/final/cursor_000100_54340de9f8824961acdf2e3504771e27/SEAL.json": {
+          "bytes": 357,
+          "sha256": "bba8b955b8cf6c4edfaa8eebeed8be2cead9eca2b7a2fd78d7bb15680e92de16"
+        },
+        "fit_01/final/cursor_000100_54340de9f8824961acdf2e3504771e27/lens.pt": {
+          "bytes": 1893,
+          "sha256": "588c0b06b9d01c4677c77e57d7f0918019ff7cb51e8d589963abade9afffc830"
+        },
+        "fit_01/final/cursor_000100_54340de9f8824961acdf2e3504771e27/metadata.json": {
+          "bytes": 27452,
+          "sha256": "a02624ada7c39b9753b1116c96e585ba91a817e37c47717bd784ca4c11f06ae2"
+        }
+      },
+      "manifest_sha256": "42a1025a828b31b5aae3d0e58e7ccc2fd8373450ff91436a791e5d14e36d8154",
+      "resumed_files": [
+        "fit_01/COMPLETE.json"
+      ],
+      "root": "/tmp/huginn-controller-independent-review/smoke/ledger/attempt_01",
+      "status": "passed",
+      "termination_class": "accepted_artifacts"
+    },
+    "source_records": {
+      "PRIMARY_SOURCE_BASELINE.json": {
+        "bytes": 1346,
+        "sha256": "29559e40136bfd05958cff6c1b23ca9323bd254b851667fc9c13b471b2a595b5"
+      },
+      "artifact_handoff.py": {
+        "bytes": 29606,
+        "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154"
+      },
+      "lease.py": {
+        "bytes": 76058,
+        "sha256": "5f600870bbf91d1d117b8e62fbc4f82df513394210486feda97862cc33f2c15e"
+      },
+      "pod_entry.sh": {
+        "bytes": 1223,
+        "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad"
+      },
+      "run_refits.py": {
+        "bytes": 51999,
+        "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+      },
+      "runpod_api.py": {
+        "bytes": 9601,
+        "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+      },
+      "test_lifecycle.py": {
+        "bytes": 50887,
+        "sha256": "fb43beab39ba0fa57f4cdec26a66b7c9496f491c82a1f59f033a3924a8e54186"
+      },
+      "transport.py": {
+        "bytes": 2638,
+        "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a"
+      }
+    },
+    "status": "passed"
+  },
+  "additional_adversarial_checks": [
+    {
+      "id": "H-RETRY-01",
+      "status": "open",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:prior_debit",
+      "trigger": "A previously terminated H retry ledger row declares zero lease_spend_upper_usd despite two elapsed billable hours at the unchanged hard rate.",
+      "observed": "prior_debit accepted the row and returned only the original 13.851844033145376 USD bound, omitting the required 1.412876712328767 USD minimum charge.",
+      "expected": "Reject a retry whose finite nonnegative charge understates reconciled elapsed time at the carried all-in rate, or whose prior/combined debit chain is inconsistent.",
+      "regression_evidence": {
+        "accepted": true,
+        "total_debit_usd": 13.851844033145376,
+        "declared_prior_usd": 13.851844033145376,
+        "minimum_elapsed_charge_usd": 1.412876712328767,
+        "absence_can_finish": true
+      }
+    },
+    {
+      "id": "H-RETRY-02",
+      "status": "open",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:prior_debit",
+      "trigger": "A prior H row has status terminated, halt_requested=true and three recorded absences, but mutation_phase uncertain, no pod ID, and a provider deadline one hour in the future.",
+      "observed": "prior_debit accepted the row even though the existing absence_can_finish predicate returned false.",
+      "expected": "Apply the existing original absence-reconciliation predicate before accepting each H retry debit. An uncertain create cannot be closed by early absence.",
+      "regression_evidence": {
+        "accepted": true,
+        "total_debit_usd": 13.851844033145376,
+        "absence_can_finish": false
+      }
+    },
+    {
+      "id": "H-RETRY-03",
+      "status": "open",
+      "severity": "blocks_H_admission",
+      "source": "huginn_verification/controller/lease.py:make_plan",
+      "contract_clarification": "Root explicitly requires the 6 USD H ceiling across aggregate H attempts.",
+      "trigger": "One valid terminated prior H attempt carries a 1 USD charge; a subsequent full H plan requests job_cap=6 with adequate combined funds.",
+      "observed": "make_plan accepts the next 5.989890410958905 USD envelope, yielding aggregate declared H spending of 6.989890410958905 USD.",
+      "expected": "Subtract every prior H charge from the remaining H phase room as well as the combined25 room; the effective per-attempt ceiling used by the watcher must not exceed remaining H phase room.",
+      "regression_evidence": {
+        "accepted": true,
+        "prior_H_charge_usd": 1.0,
+        "new_job_cap_usd": 6.0,
+        "new_declared_cost_usd": 5.989890410958905,
+        "aggregate_H_declared_cost_usd": 6.989890410958905,
+        "H_phase_ceiling_usd": 6.0,
+        "fixture_directory": "/tmp/h-aggregate-independent-1uvjz0u5"
+      }
+    }
+  ],
+  "additional_fixture_directory": "/tmp/h-retry-independent-1_xb30dg",
+  "execution_scope": "Only temporary synthetic CPU fixtures; existing test_lifecycle.fixture supplied the actual source-bound tiny primary accepted chain. H ledger fields were mutated in /tmp; no real lease, debit, scientific file, provider call or primary method outcome was touched.",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "recorded_at_utc": "2026-09-09T23:04:04.222154+00:00"
+}

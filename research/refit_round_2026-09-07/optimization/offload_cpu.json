@@ -1,0 +1,36 @@
+{
+  "device": "cpu",
+  "engine": "exact_cpu_offload",
+  "layout_roundtrips": 6,
+  "full_jacobian_cases": [
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "all_rows_all_sources_bitwise_equal": true,
+      "peak_host_payload_bytes": 2100
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 4,
+      "all_rows_all_sources_bitwise_equal": true,
+      "peak_host_payload_bytes": 4116
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "all_rows_all_sources_bitwise_equal": true,
+      "peak_host_payload_bytes": 1050
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 4,
+      "all_rows_all_sources_bitwise_equal": true,
+      "peak_host_payload_bytes": 2058
+    }
+  ],
+  "host_budget_guard": "pass",
+  "original_tensor_released": true,
+  "exception_cleanup": "pass",
+  "cuda_initialized": false,
+  "script_sha256": "bb0420f516c753807974f989faccf9603822e54e4b7da065c86326736b2c16e3"
+}

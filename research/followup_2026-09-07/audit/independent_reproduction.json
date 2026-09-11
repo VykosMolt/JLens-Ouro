@@ -1,0 +1,553 @@
+{
+  "source": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/eval/n100_exit3",
+  "schema": {
+    "exit_top1": {
+      "shape": [
+        148,
+        4
+      ],
+      "dtype": "int64"
+    },
+    "jlens_exit3_rank": {
+      "shape": [
+        148,
+        3,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "jlens_exit3_allrank": {
+      "shape": [
+        148,
+        128,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "jlens_exit3_top1": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "int64"
+    },
+    "jlens_exit3_kl_to_final": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "float32"
+    },
+    "jlens_exit3_kl_to_local": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "float32"
+    },
+    "jlens_exit3_rank_of_final_top1": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "jlens_exit3_rank_of_local_top1": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "xloop_allrank": {
+      "shape": [
+        148,
+        128,
+        4,
+        4,
+        48
+      ],
+      "dtype": "int32"
+    },
+    "logitlens_rank": {
+      "shape": [
+        148,
+        3,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "logitlens_allrank": {
+      "shape": [
+        148,
+        128,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "logitlens_top1": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "int64"
+    },
+    "logitlens_kl_to_final": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "float32"
+    },
+    "logitlens_kl_to_local": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "float32"
+    },
+    "logitlens_rank_of_final_top1": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "logitlens_rank_of_local_top1": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "int32"
+    },
+    "logitlens_kl_to_eventual_readout": {
+      "shape": [
+        148,
+        192
+      ],
+      "dtype": "float32"
+    }
+  },
+  "population": {
+    "all_items": 148,
+    "raw_task_counts": {
+      "multihop": 93,
+      "order-ops": 55
+    },
+    "historical_pass": 72,
+    "strict_numeric_pass": 70,
+    "numeric_equivalence_pass": 71,
+    "eligible_items": 141,
+    "eligible_historical_pass": 67
+  },
+  "headline": {
+    "multihop": {
+      "n_items": 90,
+      "n_slots": 100,
+      "n_passing_items_historical": 36,
+      "n_passing_items_strict_numeric": 36,
+      "n_passing_items_numeric_equivalence": 36,
+      "methods": {
+        "jlens_exit3": {
+          "hit": [
+            0.03333333333333333,
+            0.03333333333333333,
+            0.14444444444444443,
+            0.5666666666666667
+          ],
+          "control": [
+            0.030946362249564933,
+            0.04236762337785356,
+            0.05080055816399674,
+            0.09480704604287461
+          ],
+          "excess": [
+            0.0023869710837684335,
+            -0.00903429004452022,
+            0.09364388628044773,
+            0.4718596206237923
+          ]
+        },
+        "logitlens": {
+          "hit": [
+            0.45555555555555555,
+            0.5666666666666667,
+            0.6,
+            0.5925925925925926
+          ],
+          "control": [
+            0.0974073579247836,
+            0.09675606056107644,
+            0.09966645177070042,
+            0.09917388759527179
+          ],
+          "excess": [
+            0.35814819763077205,
+            0.4699106061055905,
+            0.5003335482293,
+            0.4934187049973211
+          ]
+        }
+      },
+      "j_minus_logit": [
+        -0.3557612265470033,
+        -0.47894489615011077,
+        -0.40668966194885187,
+        -0.02155908437352877
+      ],
+      "j_minus_logit_ci95": [
+        [
+          -0.46267173916577964,
+          -0.24895380920772686
+        ],
+        [
+          -0.5793197747409587,
+          -0.37699074250797776
+        ],
+        [
+          -0.5104363218717438,
+          -0.303570853462158
+        ],
+        [
+          -0.09613057898911241,
+          0.05558440834333587
+        ]
+      ]
+    },
+    "order-ops": {
+      "n_items": 51,
+      "n_slots": 51,
+      "n_passing_items_historical": 31,
+      "n_passing_items_strict_numeric": 29,
+      "n_passing_items_numeric_equivalence": 30,
+      "methods": {
+        "jlens_exit3": {
+          "hit": [
+            0.058823529411764705,
+            0.5294117647058824,
+            0.39215686274509803,
+            0.8235294117647058
+          ],
+          "control": [
+            0.007541478129713424,
+            0.21417797888386128,
+            0.19155354449472087,
+            0.6304675716440423
+          ],
+          "excess": [
+            0.05128205128205127,
+            0.31523378582202105,
+            0.20060331825037717,
+            0.19306184012066363
+          ]
+        },
+        "logitlens": {
+          "hit": [
+            0.9019607843137255,
+            0.8235294117647058,
+            0.7254901960784313,
+            0.8431372549019608
+          ],
+          "control": [
+            0.5957767722473607,
+            0.6485671191553545,
+            0.6138763197586727,
+            0.6289592760180996
+          ],
+          "excess": [
+            0.306184012066365,
+            0.1749622926093514,
+            0.11161387631975868,
+            0.21417797888386125
+          ]
+        }
+      },
+      "j_minus_logit": [
+        -0.2549019607843137,
+        0.1402714932126697,
+        0.0889894419306184,
+        -0.02111613876319759
+      ],
+      "j_minus_logit_ci95": [
+        [
+          -0.36199095022624406,
+          -0.13876319758672698
+        ],
+        [
+          0.019607843137254888,
+          0.26395173453996984
+        ],
+        [
+          -0.04524886877828056,
+          0.2262443438914027
+        ],
+        [
+          -0.07239819004524888,
+          0.024132730015082957
+        ]
+      ]
+    }
+  },
+  "ground_truth_checks": {
+    "pod_n100": {
+      "logit_endpoint_equals_actual_exit": true,
+      "final_j_endpoint_equals_final_exit": true,
+      "final_j_to_local_equals_to_final": true,
+      "logit_to_local_equals_to_final": true,
+      "endpoint_argmax_ranks_final_j": {
+        "0": 148
+      },
+      "endpoint_argmax_ranks_logit": {
+        "0": 148
+      }
+    },
+    "local_all_exits": {
+      "logit_endpoint_equals_actual_exit": true,
+      "final_j_endpoint_equals_final_exit": true,
+      "final_j_to_local_equals_to_final": true,
+      "logit_to_local_equals_to_final": true,
+      "endpoint_argmax_ranks_final_j": {
+        "0": 148
+      },
+      "endpoint_argmax_ranks_logit": {
+        "0": 148
+      },
+      "local0_endpoint_equals_exit": true,
+      "local0_identity_tail_equals_logit": true,
+      "local1_endpoint_equals_exit": true,
+      "local1_identity_tail_equals_logit": true,
+      "local2_endpoint_equals_exit": true,
+      "local2_identity_tail_equals_logit": true
+    }
+  },
+  "artifact_checks": {
+    "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/eval/n100_exit3": {
+      "output_records_match": {
+        "arrays": true,
+        "items": true,
+        "task_names": true
+      },
+      "current_source_records_match": {
+        "src/ouro_jlens/evaluate.py": false,
+        "src/ouro_jlens/evaldata.py": true,
+        "src/ouro_jlens/evidence.py": true,
+        "src/ouro_jlens/fit_lens.py": true,
+        "src/ouro_jlens/recurrent.py": true
+      },
+      "lens_fit_counts": [
+        100
+      ],
+      "created_at": "2026-09-05T04:54:16Z"
+    },
+    "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict": {
+      "output_records_match": {
+        "arrays": true,
+        "items": true,
+        "task_names": true
+      },
+      "current_source_records_match": {
+        "src/ouro_jlens/evaluate.py": true,
+        "src/ouro_jlens/evaldata.py": true,
+        "src/ouro_jlens/evidence.py": true,
+        "src/ouro_jlens/fit_lens.py": true,
+        "src/ouro_jlens/recurrent.py": true
+      },
+      "lens_fit_counts": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "created_at": "2026-09-05T05:23:43Z"
+    }
+  },
+  "pod_vs_local_differences": {
+    "array_entries": {
+      "exit_top1": {
+        "different": 8,
+        "total": 592
+      },
+      "jlens_exit3_top1": {
+        "different": 580,
+        "total": 28416
+      },
+      "logitlens_top1": {
+        "different": 635,
+        "total": 28416
+      },
+      "jlens_exit3_allrank": {
+        "different": 1039348,
+        "total": 3637248
+      },
+      "logitlens_allrank": {
+        "different": 1051168,
+        "total": 3637248
+      }
+    },
+    "item_fields": {
+      "continuation": 8,
+      "correct": 0,
+      "exit_top1": 8,
+      "intermediates": 0,
+      "leaked": 0,
+      "n_tokens": 0,
+      "name": 0,
+      "own_index": 0,
+      "prompt": 0,
+      "readout_token": 0,
+      "scorable": 0,
+      "target": 0,
+      "task": 0
+    }
+  },
+  "shared_label_item_groups": {
+    "('multihop', \"('Brazil',)\")": [
+      "carnival-ocean",
+      "amazon-language"
+    ],
+    "('multihop', \"('China',)\")": [
+      "paper-continent",
+      "super-populous-capital",
+      "greatwall-ocean",
+      "firstletter-populous-country",
+      "firstletter-greatwall-country"
+    ],
+    "('multihop', \"('copper',)\")": [
+      "atomic-29-symbol",
+      "atomic-29-flame"
+    ],
+    "('multihop', \"('March',)\")": [
+      "month-3-godof",
+      "etym-wargod-month"
+    ],
+    "('multihop', '(4,)')": [
+      "rhyme-door-doubled",
+      "nhop-compass-planet"
+    ],
+    "('multihop', '(5,)')": [
+      "nhop-rings-planet",
+      "rhyme-hive-plusone",
+      "roman-rings-olympic"
+    ],
+    "('multihop', '(6,)')": [
+      "nhop-guitar-planet",
+      "nhop-volleyball-planet",
+      "nhop-cube-element",
+      "nhop-insect-element",
+      "rhyme-fix-halved",
+      "double-dice-faces"
+    ],
+    "('multihop', '(7,)')": [
+      "nhop-rainbow-element",
+      "nhop-week-element"
+    ],
+    "('multihop', \"('July',)\")": [
+      "holiday-independence-monthnum",
+      "month-7-namedafter",
+      "etym-caesar-monthnum"
+    ],
+    "('multihop', \"('October',)\")": [
+      "holiday-halloween-monthnum",
+      "firstletter-halloween-month",
+      "succ-halloween-nextmonth"
+    ],
+    "('multihop', \"('February',)\")": [
+      "holiday-valentines-monthnum",
+      "firstletter-valentines-month",
+      "pred-valentines-prevmonth"
+    ],
+    "('multihop', \"('January',)\")": [
+      "month-1-godof",
+      "etym-janus-monthnum"
+    ],
+    "('multihop', '(12,)')": [
+      "nhop-clock-element",
+      "half-clock-hours"
+    ],
+    "('multihop', \"('France',)\")": [
+      "louvre-language",
+      "firstletter-paris-country"
+    ],
+    "('order-ops', '(5,)')": [
+      "parens-add-mult",
+      "parens-sub-mult",
+      "div-parens-add",
+      "word-parens",
+      "word-div-sub",
+      "mixed-parens-mult"
+    ],
+    "('order-ops', '(7,)')": [
+      "mult-parens-add",
+      "nested-mult-sub-add",
+      "word-add-add"
+    ],
+    "('order-ops', '(3,)')": [
+      "mult-parens-sub",
+      "square-sub",
+      "nested-sub-div-mult",
+      "redundant-parens-div",
+      "square-div",
+      "pystar-add"
+    ],
+    "('order-ops', '(12,)')": [
+      "add-mult-right",
+      "mult-add-left",
+      "sub-mult-right",
+      "parens-sub-div",
+      "nested-mult-add-div",
+      "word-add-mult",
+      "mult-div-mult",
+      "nested4-add-mult-add-div",
+      "nested4-sub-add-mult-sub",
+      "mixed-mult-add"
+    ],
+    "('order-ops', '(15,)')": [
+      "add-sub-left-right",
+      "parens-add-div",
+      "word-mult-sub",
+      "sub-sub-sub"
+    ],
+    "('order-ops', '(10,)')": [
+      "sub-add-left-right",
+      "floordiv-mult"
+    ],
+    "('order-ops', '(4,)')": [
+      "div-sub-left",
+      "div-mult-left",
+      "pystar-sub"
+    ],
+    "('order-ops', '(6,)')": [
+      "chain-add-mult-add",
+      "chain-mult-sub-add",
+      "chain-sub-mult-sub",
+      "mult-mult-left",
+      "div-div-left",
+      "chain-mult-mult-add",
+      "redundant-parens-mult",
+      "word-sub-mult"
+    ],
+    "('order-ops', '(9,)')": [
+      "nested-add-mult-sub",
+      "nested-add-add-mult",
+      "mod-sub"
+    ],
+    "('order-ops', '(11,)')": [
+      "mod-add",
+      "floordiv-add"
+    ]
+  },
+  "random_sample_seed_20260907": [
+    "mult-sub-left",
+    "tajmahal-continent",
+    "letterpos-oxygen-symbol",
+    "dbl-altitude-antonym",
+    "func-pumps-chambers",
+    "firstletter-valentines-month",
+    "rhyme-chair-flag",
+    "rhyme-fix-halved"
+  ],
+  "iron_n100_loop1_best_rank_1_based": {
+    "jlens_exit3": 132,
+    "logitlens": 1
+  }
+}

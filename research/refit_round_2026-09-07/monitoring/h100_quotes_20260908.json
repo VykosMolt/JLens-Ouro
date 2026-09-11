@@ -1,0 +1,49 @@
+{
+  "recorded_utc": "2026-09-08T20:05:14.765140+00:00",
+  "constraints": {
+    "gpuCount": 1,
+    "cloud": "COMMUNITY",
+    "totalDisk": 120,
+    "minMemoryInGb": 64,
+    "minVcpuCount": 8,
+    "supportPublicIp": true
+  },
+  "quotes": {
+    "pcie": [
+      {
+        "id": "NVIDIA H100 PCIe",
+        "memoryInGb": 80,
+        "lowestPrice": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "minMemory": null,
+          "minVcpu": null
+        }
+      }
+    ],
+    "sxm": [
+      {
+        "id": "NVIDIA H100 80GB HBM3",
+        "memoryInGb": 80,
+        "lowestPrice": {
+          "stockStatus": null,
+          "uninterruptablePrice": null,
+          "minMemory": null,
+          "minVcpu": null
+        }
+      }
+    ],
+    "nvl": [
+      {
+        "id": "NVIDIA H100 NVL",
+        "memoryInGb": 94,
+        "lowestPrice": {
+          "stockStatus": "Low",
+          "uninterruptablePrice": 2.59,
+          "minMemory": 150,
+          "minVcpu": 19
+        }
+      }
+    ]
+  }
+}

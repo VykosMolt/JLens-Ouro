@@ -1,0 +1,127 @@
+{
+  "schema": "confirmation_final_spending_shutdown.v1",
+  "recorded_utc": "2026-09-10T00:32:28.177216+00:00",
+  "scientific_status": "blocked_before_model_execution_by_export_approval",
+  "settled_invoice": false,
+  "historical_spend_upper_usd": 13.851844033145376,
+  "new_round_attempts": [
+    {
+      "attempt": 1,
+      "name": "jlens-confirm-5e9d166258534ab194780388d2feffd0",
+      "pod_id": "xugytsithv80ib",
+      "status": "terminated",
+      "lease_spend_upper_usd": 0.22588409273346807,
+      "combined_spend_upper_usd": 14.077728125878844,
+      "termination_reason": "provider no longer lists the owned pod",
+      "record": {
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_01/LEASE.json",
+        "bytes": 6187,
+        "sha256": "2a1a9a21645f724a3800798d81c6eb5e838f32bc3b696b974d364d19f9f6b623"
+      }
+    },
+    {
+      "attempt": 2,
+      "name": "jlens-confirm-574ac8337bb243edb507570e695640ed",
+      "pod_id": "jbuyae4289kcje",
+      "status": "terminated",
+      "lease_spend_upper_usd": 0.8404813042020144,
+      "combined_spend_upper_usd": 14.918209430080859,
+      "termination_reason": "provider no longer lists the owned pod",
+      "record": {
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_02/LEASE.json",
+        "bytes": 6712,
+        "sha256": "09a6c6027b9ec4fcb3ab3cf87a60f07bc651244618b662987a03d7f3b92a8d3b"
+      }
+    }
+  ],
+  "new_round_spend_upper_usd": 1.0663653969354825,
+  "combined_spend_upper_usd": 14.918209430080859,
+  "combined_cap_usd": 25.0,
+  "observations": {
+    "account": {
+      "status": "observed",
+      "value": {
+        "id": "user_3I33u3QLWgO7POHKINt6GfLeTUw",
+        "clientBalance": 12.6445514889,
+        "currentSpendPerHr": 0
+      },
+      "observed_utc": "2026-09-10T00:32:26.016376+00:00"
+    },
+    "pods": {
+      "status": "observed",
+      "value": [],
+      "observed_utc": "2026-09-10T00:32:26.028588+00:00"
+    },
+    "attempt01_billing": {
+      "status": "observed",
+      "value": {
+        "metadata": {
+          "query": {
+            "bucketSize": "day",
+            "endTime": "2026-09-11T00:00:00Z",
+            "podId": "xugytsithv80ib",
+            "startTime": "2026-09-04T00:00:00Z"
+          },
+          "recordCount": 1,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0.0055555556900799274,
+            "gpuAmount": 0.2158212661743164,
+            "totalAmount": 0.22137682186439633
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.0055555556900799274,
+            "endTime": "2026-09-10T00:00:00Z",
+            "gpuAmount": 0.2158212661743164,
+            "podId": "xugytsithv80ib",
+            "startTime": "2026-09-09T00:00:00Z",
+            "totalAmount": 0.22137682186439633
+          }
+        ]
+      },
+      "observed_utc": "2026-09-10T00:32:26.691471+00:00"
+    },
+    "attempt02_billing": {
+      "status": "observed",
+      "value": {
+        "metadata": {
+          "query": {
+            "bucketSize": "day",
+            "endTime": "2026-09-11T00:00:00Z",
+            "podId": "jbuyae4289kcje",
+            "startTime": "2026-09-04T00:00:00Z"
+          },
+          "recordCount": 1,
+          "totals": {
+            "cpuAmount": 0,
+            "diskAmount": 0.004166666767559946,
+            "gpuAmount": 0.15836362168192863,
+            "totalAmount": 0.16253028844948858
+          },
+          "uniquePodCount": 1
+        },
+        "records": [
+          {
+            "cpuAmount": 0,
+            "diskAmount": 0.004166666767559946,
+            "endTime": "2026-09-10T00:00:00Z",
+            "gpuAmount": 0.15836362168192863,
+            "podId": "jbuyae4289kcje",
+            "startTime": "2026-09-09T00:00:00Z",
+            "totalAmount": 0.16253028844948858
+          }
+        ]
+      },
+      "observed_utc": "2026-09-10T00:32:28.175819+00:00"
+    }
+  },
+  "debit_policy": "Keep historical controller bound and both new attempt bounds; do not credit failed setup or compare account balance with authorization. Provider billing observations may lag and are not settled invoices.",
+  "api_source_record": {
+    "bytes": 9601,
+    "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+  }
+}

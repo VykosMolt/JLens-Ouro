@@ -1,0 +1,108 @@
+{
+  "status": "passed",
+  "scope": "CPU 2x2 synthetic estimator and real N100 checkpoint runner only; no weights, native derivative or GPU validation",
+  "plan_works_without_site_packages": true,
+  "plan_creates_no_output": true,
+  "plan_reports_absent_evaluation_prerequisites": true,
+  "guard_cases": [
+    {
+      "case": "reject_absent_evaluation_directories",
+      "passed": true
+    },
+    {
+      "case": "reject_absent_semantic_main_validator",
+      "passed": true
+    },
+    {
+      "case": "require_all_five_main_evaluations",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_index",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_token_length",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_n_valid",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_base_seed",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_prompt_state_seed",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_input_ids_sha256",
+      "passed": true
+    },
+    {
+      "case": "reject_N99_calibration",
+      "passed": true
+    },
+    {
+      "case": "reject_recurrence_change",
+      "passed": true
+    },
+    {
+      "case": "reject_calibration_evaluation_namespace",
+      "passed": true
+    },
+    {
+      "case": "reject_actual_token_change",
+      "passed": true
+    },
+    {
+      "case": "reject_frozen_seed_change",
+      "passed": true
+    },
+    {
+      "case": "reject_model_namespace_change",
+      "passed": true
+    },
+    {
+      "case": "reject_actual_seed_metadata_change",
+      "passed": true
+    },
+    {
+      "case": "reject_forward_initialization_mismatch",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_estimator_arm",
+      "passed": true
+    }
+  ],
+  "guard_case_count": 18,
+  "N100_stop37_resume_noop": true,
+  "all_100_prompt_seeds_preserved": true,
+  "all_32_final_means_exact": true,
+  "production_geometry_passed_to_runner": [
+    {
+      "d_model": 5280,
+      "fit_id": 1,
+      "production_profile": "huginn_r8"
+    },
+    {
+      "d_model": 5280,
+      "fit_id": 1,
+      "production_profile": "huginn_r8"
+    },
+    {
+      "d_model": 5280,
+      "fit_id": 1,
+      "production_profile": "huginn_r8"
+    }
+  ],
+  "test_artifacts_labeled_cpu_test": true,
+  "past_deadline_never_loads_model": true,
+  "source_sha256": {
+    "research/refit_round_2026-09-07/deployment/run_huginn.py": "78cf3c76b58a7d5d6bc184a8828200d29d618775a142d253f6188e30a4df8ff2",
+    "research/refit_round_2026-09-07/deployment/run_refits.py": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+  }
+}

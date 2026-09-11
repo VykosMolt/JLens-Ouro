@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-09-07T20:24:48.625211+00:00",
+  "purpose": "Complete upstream baseline on the fixed cost fixture; no task scoring.",
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "torch": "2.12.0.dev20260407+cu128",
+  "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "prompt_sha256": "e3283ab440bddc5d9947d69fb0ea46f721c171e90a84c3604f25222b1b9f2a02",
+  "fitting_source_sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+  "dim_batch": 2,
+  "target": 191,
+  "source_count": 191,
+  "calibration_count_in_research": 0,
+  "complete_prompt_seconds": 215.03402510800152,
+  "peak_cuda_gb": 9.961763328,
+  "sequence_length": 128,
+  "n_valid": 111,
+  "all_finite": true,
+  "save_seconds": 1.9577056319976691,
+  "artifact_bytes": 3204502175
+}

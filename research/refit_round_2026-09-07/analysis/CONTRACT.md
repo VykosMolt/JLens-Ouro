@@ -1,0 +1,27 @@
+# Ouro refit analysis contract
+
+Frozen before reading new outcomes, 8 September 2026. This CPU-only analysis reads completed, sealed evaluation outputs; it performs no inference, fitting, GPU work, or cloud action. P1 requires the five distinct N100 main fits in their original order. P2 is conditional on preselected fit01 and its two control fits.
+
+The reader verifies the run specification, executable source hashes, complete evaluation owners and section seals, actual population/name/token-form hashes, and every consumed input record. Eligibility and matched control indices are reconstructed from the frozen historical labels, scorable flags and leakage flags. Stored control comparisons must equal a fresh calculation from the sealed rank arrays. An output becomes complete only after its own files are recorded and the consumed input bytes are rechecked.
+
+## Scores and fixed locations
+
+Use `evaluate_controls.score_rank_arrays`: zero-based vocabulary rank below ten; own eligible slots averaged within each item; matched control names averaged separately within each eligible slot; item excess is own minus control. For any-layer scores, each true name and each control takes its own any-layer event before averaging. Preserve the original aliases and item weights. Compute each fitted lens's scores before averaging fits. The primary contrast is paired J-Lens excess minus raw-lens excess.
+
+P1 retains all 192 cells, four loops of 48 physical layers. One-based bands are early 1–16, middle 17–32 and final third 33–48. The previously selected local region 26–37 is frozen for these new fits and explicitly labelled historical-selected. Also retain full-loop means, the original per-loop any-layer metric and the centered linear depth slope per full stack. Every band is reported in every loop, including each fit's value and sign, fit mean, sample SD, minimum and maximum. Final virtual index 191 is a known identity reference. It stays in historical curves and bands but is excluded from learned-map peak selection. Per-fit loop 4 peaks, all tied locations and contiguous positive runs are descriptive; no pointwise interval is attached to a selected peak.
+
+The historical loop 4 final third is virtual 176–191. P2 intersects it with each contrast's learned support: target 0–189 gives late 176–189 (one-based 33–46), and position 0–190 gives late 176–190 (one-based 33–47). The former 177 start was an indexing mistake corrected before data collection. All fixed bands use the same explicit intersection rule. Unsupported sentinels and target identities cannot enter P2 scores.
+
+## Uncertainty
+
+Use 10,000 nonparametric bootstrap replicates, root seed 2026090805. For each replicate, independently sample five fit indices with replacement and resample eligible items with replacement within each task. A single item draw is shared by all fits, methods, bands and cells; fit draws are shared by both tasks. Task item streams are independent. Resample already paired differences, preserving the common raw baseline. Report percentile pointwise 95% intervals and approximate, unstudentized simultaneous intervals with radius equal to the 95th percentile of the maximum absolute centered bootstrap error. The P1 cell family contains both tasks × 192 cells = 384 contrasts; its separate metric family contains both tasks × 28 fixed metrics = 56 contrasts.
+
+Report conditional item-only and fit-only resampling separately. A dependence sensitivity replaces item draws with shared-concept connected-component draws within each task and retains the crossed fit draw. Components join items sharing any eligible concept after the historical case/digit/number-word alias normalization. Each sampled component retains all its items, and ratio means preserve item weighting. Report component membership, counts and sizes. P2 uses paired item-only and component-only draws, with one simultaneous family over its eight contrasts × 22 band/region metrics × two tasks; it never invents fit variance.
+
+Five calibration fits provide limited information about fit variation; these approximate intervals are not precise population guarantees. Curated prompts have no unique IID sampling design. Components capture shared labelled concepts, not every template or semantic dependence. Any-layer scores remain opportunity-dependent oracle coverage. Selected locations, examples, correctness groups and cluster sensitivities do not establish causal use or a mechanism.
+
+## Artifacts and examples
+
+Write a JSON report, compact cell/metric/per-fit CSVs, an NPZ retaining paired item scores and bootstrap memberships, the verified original control-comparison summary, and a separate examples JSON. Select ten eligible examples uniformly without replacement with seed 2026090806 before examining their effects. Their frozen zero-based item indices are 11, 66, 25, 139, 72, 3, 1, 108, 15 and 119. Separately sample up to five incorrect eligible items per task with seed 2026090807 and a task-specific stream. Keep every selected example and label the latter as descriptive failure examples. Report prompts, original continuations/correctness and each fit's fixed-band effects; examples never affect an aggregate or location choice.
+
+`self-test` checks historical retained scores, literal paired bootstrap averages, constant cancellation, component weighting, location boundaries, and artifact validation using CPU fixtures only. It produces no new scientific outcome.

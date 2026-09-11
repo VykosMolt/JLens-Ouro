@@ -1,0 +1,15 @@
+{
+  "schema": "huginn_frozen_archive_root_check.v1",
+  "status": "passed",
+  "run_id": "huginn_verification_20260910_n100",
+  "archive": {
+    "bytes": 223965405,
+    "sha256": "2d3b4cae0f6e22600f1d8c12e419f2f285118d2e52a52bc3bacf81162e041d30"
+  },
+  "members": 115,
+  "freeze_record": {
+    "bytes": 16770,
+    "sha256": "2e4677d312dcff1b0b53e69536ff352d5accfdbe857dbd1e7a8f6bbf59999603"
+  },
+  "scope": "Every archive member is one expected regular file with the exact frozen bytes; no extra, duplicate, linked or missing members."
+}

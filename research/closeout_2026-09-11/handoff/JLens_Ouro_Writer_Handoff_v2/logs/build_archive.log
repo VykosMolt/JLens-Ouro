@@ -1,0 +1,78 @@
++ findmnt -J -o TARGET,SOURCE,FSTYPE,OPTIONS,UUID,LABEL /run/media/moloch/ARCH_BACKUP
++ lsblk -J -o NAME,SIZE,TYPE,FSTYPE,UUID,MOUNTPOINT,MODEL,SERIAL,TRAN,VENDOR /dev/sda
++ lsblk -J -o NAME,SIZE,TYPE,FSTYPE,UUID,MOUNTPOINT,MODEL,SERIAL,TRAN /dev/nvme0n1
++ df -B1 --output=source,fstype,size,used,avail,target /run/media/moloch/ARCH_BACKUP
++ df -B1 --output=source,fstype,size,used,avail,target /home/moloch
+inventory + source hashing ...
+inventory: 16223 entries, 52.15 GB, excluded 1
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/jacobian-lens/research/verification_2026-09-11/preservation /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 15,068,353,802 bytes  received 155,404 bytes  48,529,820.31 bytes/sec
+total size is 15,064,002,186  speedup is 1.00
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/jacobian-lens /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 20,622,799,760 bytes  received 199,057 bytes  41,536,754.92 bytes/sec
+total size is 38,180,017,838  speedup is 1.85
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/ouro_project/artifacts/jlens /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 457,471,001 bytes  received 7,335 bytes  43,569,365.33 bytes/sec
+total size is 457,328,281  speedup is 1.00
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 5,343,026,109 bytes  received 334 bytes  41,906,089.75 bytes/sec
+total size is 5,341,719,738  speedup is 1.00
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/ouro_project/artifacts/hf_cache/hub/datasets--Salesforce--wikitext /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 157,037,986 bytes  received 178 bytes  28,552,393.45 bytes/sec
+total size is 156,998,443  speedup is 1.00
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/ouro_project/src/ouro_jlens /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 1,141,007 bytes  received 654 bytes  2,283,322.00 bytes/sec
+total size is 1,138,198  speedup is 1.00
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/ouro_project/docs/jlens /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 3,476,784 bytes  received 1,117 bytes  6,955,802.00 bytes/sec
+total size is 3,471,272  speedup is 1.00
+
++ rsync -aHR --info=stats1 --exclude=__pycache__ --exclude=*.pyc --exclude=.pytest_cache --exclude=.ruff_cache --exclude=/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519 --exclude=/home/moloch/jacobian-lens/research/closeout_2026-09-11 /home/moloch/.cache/huggingface/hub/models--Vykos--ouro-jlens-results /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/tree/
+
+sent 8,013,405,291 bytes  received 559 bytes  52,893,767.99 bytes/sec
+total size is 8,011,445,695  speedup is 1.00
+
++ git -C /home/moloch/jacobian-lens rev-parse HEAD
++ git -C /home/moloch/jacobian-lens bundle create /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/jacobian-lens.bundle --all
++ git -C /home/moloch/jacobian-lens status --porcelain=v1 --untracked-files=all
++ git -C /home/moloch/jacobian-lens diff HEAD
++ git -C /home/moloch/jacobian-lens log --format=%H %ci %s -n 50
++ git bundle verify /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/jacobian-lens.bundle
++ git -C /home/moloch/ouro_project rev-parse HEAD
++ git -C /home/moloch/ouro_project bundle create /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/ouro_project.bundle --all
++ git -C /home/moloch/ouro_project status --porcelain=v1 --untracked-files=all
++ git -C /home/moloch/ouro_project diff HEAD
++ git -C /home/moloch/ouro_project log --format=%H %ci %s -n 50
++ git bundle verify /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911/git/ouro_project.bundle
++ /home/moloch/ouro_project/venv/bin/python -c import sys;print(sys.version)
++ /home/moloch/ouro_project/venv/bin/python -m pip freeze
++ sync -f /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911
+destination hashing ...
++ sync -f /run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911
++ findmnt -J -o TARGET,SOURCE,FSTYPE,OPTIONS,UUID,LABEL /run/media/moloch/ARCH_BACKUP
++ lsblk -J -o NAME,SIZE,TYPE,FSTYPE,UUID,MOUNTPOINT,MODEL,SERIAL,TRAN,VENDOR /dev/sda
++ lsblk -J -o NAME,SIZE,TYPE,FSTYPE,UUID,MOUNTPOINT,MODEL,SERIAL,TRAN /dev/nvme0n1
++ df -B1 --output=source,fstype,size,used,avail,target /run/media/moloch/ARCH_BACKUP
++ df -B1 --output=source,fstype,size,used,avail,target /home/moloch
+{
+ "files": 16200,
+ "symlinks": 23,
+ "bytes": 52152117674,
+ "problems": 0,
+ "manifest_sha256": "77a13e9f6873b804578a52af386f50dd41fef06cad12d6d1fa06305f4a6d11ec",
+ "status": "copied_and_hash_verified",
+ "elapsed_seconds": 2335.350323677063
+}

@@ -1,0 +1,73 @@
+{"batch": 2, "compress": false, "source_edges": true, "source_count": 191, "target": 191, "seq_len": 128, "forward_seconds": 0.5055271880009968, "after_forward_gb": 9.522373632, "eager_times": [0.17695621299935738, 0.1764322480012197, 0.17755428100281279, 0.18119492900223122, 0.17914400500012562, 0.17732023400094477], "eager_mean": 0.17832913940146683, "eager_estimated_full_backward_seconds": 182.60903874710203, "eager_peak_cuda_gb": 9.767760384, "warmup_seconds": 0.5206077140028356, "capture_seconds": 0.19427411399738048, "capture_same_graph_bitwise": true, "capture_times": [0.16889735799850314, 0.16891573700195295, 0.16891749999922467, 0.17303261900087819, 0.18178119200092624, 0.1700159049978538], "capture_mean": 0.17253259060016718, "capture_estimated_full_prompt_seconds": 177.8937817905724, "peak_cuda_gb": 9.768809984, "executed": true, "sample_all_finite": true, "stock_b2_first_rows_bitwise": true}
+{"batch": 2, "compress": true, "source_edges": true, "source_count": 191, "target": 191, "seq_len": 128, "forward_seconds": 0.38087373199959984, "after_forward_gb": 7.449740288, "eager_times": [0.18933582500176271, 0.1920631479988515, 0.19341723800243926, 0.19521059199905721, 0.19123739799761097, 0.18970415299918386], "eager_mean": 0.19232650579942856, "eager_estimated_full_backward_seconds": 196.94234193861485, "eager_peak_cuda_gb": 7.699337728, "warmup_seconds": 0.5628567109997675, "capture_seconds": 0.20807789799800958, "capture_same_graph_bitwise": true, "capture_times": [0.18062899000142352, 0.18062408400146523, 0.1805687919986667, 0.1943921819984098, 0.1924841730033222, 0.1819702770008007], "capture_mean": 0.18600790160053293, "capture_estimated_full_prompt_seconds": 191.6238995799431, "peak_cuda_gb": 7.700387328, "executed": true, "sample_all_finite": true, "stock_b2_first_rows_bitwise": true}
+{"batch": 8, "compress": true, "source_edges": true, "source_count": 191, "target": 191, "seq_len": 128, "forward_seconds": 0.6964498859997548, "after_forward_gb": 7.487944704, "eager_times": [0.622234094000305, 0.6243229710016749, 0.6177906699995219, 0.6231867380010954, 0.6220686060005391, 0.6212408110004617], "eager_mean": 0.6217219592006586, "eager_estimated_full_backward_seconds": 159.1608215553686, "eager_peak_cuda_gb": 8.38447872, "warmup_seconds": 1.8544437589989684, "capture_seconds": 0.19198440100080916, "capture_same_graph_bitwise": true, "capture_times": [0.6369890200003283, 0.6019640790000267, 0.620002392999595, 0.6195278550003422, 0.6046509959996911, 0.620834018001915], "capture_mean": 0.613395868200314, "capture_estimated_full_prompt_seconds": 159.77222030527992, "peak_cuda_gb": 8.388673024, "executed": true, "sample_all_finite": true}
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_memory.py", line 114, in main
+    record, sample = measure(model, batch, compress)
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_memory.py", line 42, in measure
+    model.forward(ids.expand(batch, -1))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/jlens/hf.py", line 164, in forward
+    return self._text_module(input_ids=input_ids, use_cache=False)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/transformers/utils/generic.py", line 1069, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/tmp/jlens-refit-hf-modules/transformers_modules/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py", line 594, in forward
+    hidden_states = decoder_layer(
+        hidden_states,
+    ...<7 lines>...
+        **kwargs,
+    )
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1884, in _call_impl
+    return inner()
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1832, in inner
+    result = forward_call(*args, **kwargs)
+  File "/tmp/jlens-refit-hf-modules/transformers_modules/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py", line 420, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/jlens-refit-hf-modules/transformers_modules/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py", line 77, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 22.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 69.50 MiB is free. Including non-PyTorch memory, this process has 11.46 GiB memory in use. Of the allocated memory 9.92 GiB is allocated by PyTorch, and 1.26 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+{"batch": 16, "compress": true, "executed": false, "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 22.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 69.50 MiB is free. Including non-PyTorch memory, this process has 11.46 GiB memory in use. Of the allocated memory 9.92 GiB is allocated by PyTorch, and 1.26 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"}
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_memory.py", line 114, in main
+    record, sample = measure(model, batch, compress)
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_memory.py", line 58, in measure
+    expected = eager().cpu()
+               ~~~~~^^
+  File "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_memory.py", line 56, in eager
+    return reducer(torch.autograd.grad(target, sources, cot, retain_graph=True))[0]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/autograd/__init__.py", line 530, in grad
+    result = _engine_run_backward(
+        outputs,
+    ...<5 lines>...
+        accumulate_grad=False,
+    )
+  File "/home/moloch/ouro_project/venv/lib/python3.14/site-packages/torch/autograd/graph.py", line 882, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        t_outputs, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # Calls into the C++ engine to run the backward pass
+    ^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 44.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 99.50 MiB is free. Including non-PyTorch memory, this process has 11.43 GiB memory in use. Of the allocated memory 10.19 GiB is allocated by PyTorch, and 979.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+{"batch": 32, "compress": true, "executed": false, "error": "OutOfMemoryError: CUDA out of memory. Tried to allocate 44.00 MiB. GPU 0 has a total capacity of 11.54 GiB of which 99.50 MiB is free. Including non-PyTorch memory, this process has 11.43 GiB memory in use. Of the allocated memory 10.19 GiB is allocated by PyTorch, and 979.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"}

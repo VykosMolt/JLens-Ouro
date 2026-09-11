@@ -1,0 +1,1 @@
+{"observations":{"account":{"observed_utc":"2026-09-09T22:53:44Z","status":"observed","value":{"clientBalance":20.0,"currentSpendPerHr":0.0,"id":"fixture-account"}},"pods":{"observed_utc":"2026-09-09T22:53:44Z","status":"observed","value":[]}},"schema":"confirmation_resource_observation.v1"}

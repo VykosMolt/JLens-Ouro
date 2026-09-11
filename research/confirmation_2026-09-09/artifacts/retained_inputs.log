@@ -1,0 +1,24 @@
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_01/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_02/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_03/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_04/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/fits/fit_05/arrays.npz
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/arrays.npz
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/common/cache.pt
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_01/arrays.npz
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_02/arrays.npz
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_03/arrays.npz
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_04/arrays.npz
+VERIFIED monitoring/attempt_06/main_only_20260909T071754Z/results/ouro_evaluation/fits/fit_05/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/comparisons/paired_ranks.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/comparisons/scores.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/penultimate/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/positions/diagonal/arrays.npz
+VERIFIED monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/positions/sampled_sum/arrays.npz
+VERIFIED monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/arrays.npz
+VERIFIED monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/cache.pt
+VERIFIED monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/arrays.npz
+VERIFIED monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/cache.pt
+SUPPLEMENT {'evaluation_roots': 4, 'evaluation_binaries': 23, 'calibration_identities': 8, 'known_binaries_original_exact': 7, 'reconstructed_exact': 1, 'unresolved': 8}

@@ -1,0 +1,1399 @@
+{
+ "bytes": 89602991,
+ "created_utc": "2026-09-11T13:44:55.510806+00:00",
+ "destination": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle",
+ "entries": [
+  {
+   "bundle_path": "verification_2026-09-11/FINAL_VERIFICATION.md",
+   "bytes": 7572,
+   "expected_record_matched": false,
+   "sha256": "d66ba222d7666dcc938ae88a4657676cd35dfd0c823c47d4a65703496ecc11d4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/FINAL_VERIFICATION.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/PROGRESS.md",
+   "bytes": 2311,
+   "expected_record_matched": false,
+   "sha256": "58e2ae54a9dc4340ecd87249fe5f6d32487ee8dd631bf6f5f6b58e11d9d3b27e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/PROGRESS.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/REPRODUCE.md",
+   "bytes": 3489,
+   "expected_record_matched": false,
+   "sha256": "02b032a13ebc073e6e62a95d080717126bc72b121ac506ecb5e8601f86fcadba",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/REPRODUCE.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/RUN_SPECIFICATION.json",
+   "bytes": 15929,
+   "expected_record_matched": false,
+   "sha256": "c4fb0bff534d00f063ac178dffea59c79756328d43a3e0f1c06807e652c266b5",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/RUN_SPECIFICATION.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/README.md",
+   "bytes": 2847,
+   "expected_record_matched": false,
+   "sha256": "d97b7b61a95a84db3e582ef05a01e69d425a3c5985d797e427ef8273716f0247",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/README.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/endpoint_checker.py",
+   "bytes": 45951,
+   "expected_record_matched": false,
+   "sha256": "a4e330dd927ad09f0f814ab1fd9120edb434373a7bfe80c13b26a47f521c4d8c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/endpoint_checker.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/MANIFEST.json",
+   "bytes": 4430,
+   "expected_record_matched": false,
+   "sha256": "90ab4c080b5784cfdd58e7d4756733434390ce670c3da2f4847116bba363616e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/MANIFEST.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/expected_analysis.json",
+   "bytes": 103617,
+   "expected_record_matched": false,
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/expected_analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/population.json",
+   "bytes": 373077,
+   "expected_record_matched": false,
+   "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/population.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/readouts/diagonal.npz",
+   "bytes": 6085051,
+   "expected_record_matched": false,
+   "sha256": "85d1078f61615b909da0afcb208b9d6f00d07317b7b82976b5ae330513e33587",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/readouts/diagonal.npz"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/readouts/fit01.npz",
+   "bytes": 6186794,
+   "expected_record_matched": false,
+   "sha256": "d9200f39f0aaa96d63a7f7f46f80ccc7866f232ac1ab8dde1591822ce62a2bb4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/readouts/fit01.npz"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/readouts/fit02.npz",
+   "bytes": 6158761,
+   "expected_record_matched": false,
+   "sha256": "0cb68a3b055f67592fb22622dfb7cd8e8cebeddfe679a507d477ed79743472a7",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/readouts/fit02.npz"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/readouts/penultimate.npz",
+   "bytes": 6220668,
+   "expected_record_matched": false,
+   "sha256": "f1509d3353edde3236ff8b45330b04750ebad7b1ffad79f7129abfcea27eea41",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/readouts/penultimate.npz"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/readouts/raw.npz",
+   "bytes": 6471006,
+   "expected_record_matched": false,
+   "sha256": "604a6e7649965775d18b979955f736e3c745786a7088a7109dd5dc1611cf0211",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/readouts/raw.npz"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/fixtures/base/readouts/sampled_sum.npz",
+   "bytes": 6188138,
+   "expected_record_matched": false,
+   "sha256": "cdcc03ca838575facf74a49550483d235630ec2da51a658e48e027a2305a76f0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/fixtures/base/readouts/sampled_sum.npz"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cpu_fp64__fp64.json",
+   "bytes": 175140,
+   "expected_record_matched": false,
+   "sha256": "57d12ee7582cee370c2ba407e689dea7dd964e8b09e883fdef039ad1db010b38",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cpu_fp64__fp64.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__col160.json",
+   "bytes": 174735,
+   "expected_record_matched": false,
+   "sha256": "426b18a963705d52022bd3a60dcf28008aec535772bcd758a2eb3b3b0ae3bcb4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__col160.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__executed.json",
+   "bytes": 174751,
+   "expected_record_matched": false,
+   "sha256": "ed444ebe210d173443d245f489a5911e2b09a56bd2c9cf045f3c2c7fa1a24a53",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__executed.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__fp32.json",
+   "bytes": 174796,
+   "expected_record_matched": false,
+   "sha256": "0d341d4b57104e7834bbe5d94590cd228ac32b8200067dff131a4a3ecd31270d",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__fp32.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__fp64.json",
+   "bytes": 174796,
+   "expected_record_matched": false,
+   "sha256": "81680bff1d0c48b18a348419ac48d730ec78ef6ceb159c078dddd58cf5bc49be",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__fp64.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__fp64_head.json",
+   "bytes": 174836,
+   "expected_record_matched": false,
+   "sha256": "9bd1868eb1a4b288f12bc6a0c245582674862db07870c5600d83702da5703382",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__fp64_head.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.03125_max.json",
+   "bytes": 174656,
+   "expected_record_matched": false,
+   "sha256": "d54c4abd4abca893c9c3f515e142cf77bebfd84c46891512066db5d2d97bac5b",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.03125_max.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.03125_min.json",
+   "bytes": 175627,
+   "expected_record_matched": false,
+   "sha256": "08687989d7d233eb76db6ba1728e76adbb49aa23bf469762e390c2b34dd582f5",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.03125_min.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.125_max.json",
+   "bytes": 174881,
+   "expected_record_matched": false,
+   "sha256": "c20b45a12c582f6ff7a7948c63d28c44051ca6c0de84a1bff2727cc18083c061",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.125_max.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.125_min.json",
+   "bytes": 176938,
+   "expected_record_matched": false,
+   "sha256": "984fdd93d5e7e25ea209342c13e8459e96ef098f2b36475a1a18f449a9e766c3",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__perturb_delta_0.125_min.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__row1.json",
+   "bytes": 174721,
+   "expected_record_matched": false,
+   "sha256": "428eb2bb3c02b4a750d061d4694886312659d31443e35c297ba59e850bc1c6b4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__row1.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__rows190.json",
+   "bytes": 174743,
+   "expected_record_matched": false,
+   "sha256": "bf2c5658f3648f88f03e473e42639e47d144dfc869e87a50de8fb4846f21f47f",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__rows190.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__rows191.json",
+   "bytes": 174743,
+   "expected_record_matched": false,
+   "sha256": "6c45779935741a6516dcb2e06cc3d24c7dc4e21efcfe5962ba11547df4dfe615",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__rows191.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__rows192.json",
+   "bytes": 174743,
+   "expected_record_matched": false,
+   "sha256": "dff79cedc864d47c6f9160cc8337053a4c25c51ae7916919148670401ef0fca4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__rows192.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__ties_against_every_name.json",
+   "bytes": 174510,
+   "expected_record_matched": false,
+   "sha256": "68380f919994831e51c02dd80259150b21161bee5df380af52be5893c31ecccb",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__ties_against_every_name.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__ties_favor_every_name.json",
+   "bytes": 175385,
+   "expected_record_matched": false,
+   "sha256": "46ffad6f067a9725aaa3b8f5fe7a0beac0d0d61283d43d4adfee20015f37c687",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__ties_favor_every_name.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__ties_maximize_primary.json",
+   "bytes": 174826,
+   "expected_record_matched": false,
+   "sha256": "b226282b30d34c9e427fe56af9382a1f767a7efc607c9eb1fc549ec7d7304d48",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__ties_maximize_primary.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda__ties_minimize_primary.json",
+   "bytes": 175186,
+   "expected_record_matched": false,
+   "sha256": "d4a126353f22d2b532c54898bbf3c43aa701f748d9696d4bfff26f9347f1983c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda__ties_minimize_primary.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__executed.json",
+   "bytes": 175135,
+   "expected_record_matched": false,
+   "sha256": "fdc1cb05cd9ec13dc9d1b47ac201cf0a2c0b9dcc9b898c0cafeb7362bcab5a8f",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__executed.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.03125_max.json",
+   "bytes": 175235,
+   "expected_record_matched": false,
+   "sha256": "69e7deefeb1224488871b32b36cbb026fca8137b3bfbd666e8057182690fd0cb",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.03125_max.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.03125_min.json",
+   "bytes": 176022,
+   "expected_record_matched": false,
+   "sha256": "053d0dd8c489f4744b7a739bcf7e916bc70517483b70264b883eae2358f04ccf",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.03125_min.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.125_max.json",
+   "bytes": 175303,
+   "expected_record_matched": false,
+   "sha256": "1fffb7f8dbfec2c1768614a0b416af92bf3f194b84240709d456f118287383bb",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.125_max.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.125_min.json",
+   "bytes": 177551,
+   "expected_record_matched": false,
+   "sha256": "bb0034605abbb7afb94313dab047fc9a850a0897c59fc5f01a0c5fed5fb47638",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__perturb_delta_0.125_min.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_against_every_name.json",
+   "bytes": 175227,
+   "expected_record_matched": false,
+   "sha256": "d527536430636b8509542458de91352a88ea5f61b030f932acbb69c27684cbb9",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_against_every_name.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_favor_every_name.json",
+   "bytes": 175936,
+   "expected_record_matched": false,
+   "sha256": "a1d1932322c1dad602fe226b649a41bc956636922ae3e3058ae49c821e60ca4a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_favor_every_name.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_maximize_primary.json",
+   "bytes": 175319,
+   "expected_record_matched": false,
+   "sha256": "ec64b95c550b250d53a3b5d98c372390f7db8d0726ee28b59861c2f428ff290c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_maximize_primary.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_minimize_primary.json",
+   "bytes": 175583,
+   "expected_record_matched": false,
+   "sha256": "79bfab3c17b8d34b9e7b619dad421318c965cd0e5e3e58ed9fb3b83f67261ef8",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/replay_checks/local_cuda_regenerated_states__ties_minimize_primary.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/saved_outputs.json",
+   "bytes": 175798,
+   "expected_record_matched": false,
+   "sha256": "c8dddefc1cd1215b8544d07869224873fd789a4734dea5a44f9e66672c1ae2ac",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/saved_outputs.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/checker/self_test.json",
+   "bytes": 54359,
+   "expected_record_matched": false,
+   "sha256": "a58a36899d9706678279ca3f3ed2d0afde142d07fc047afaddf0ad0c54594157",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/self_test.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/bundle/evaluation/shape_check.py",
+   "bytes": 12663,
+   "expected_record_matched": false,
+   "sha256": "adf9aee7707c5f753b9ecff135e773338c6c41e5dc4ffdd970de2b71c3f673b5",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/bundle/evaluation/shape_check.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/bundle/evaluation/worker.py",
+   "bytes": 8029,
+   "expected_record_matched": false,
+   "sha256": "3604b659ee70d2f0075a85ce10eb9872f27def9b6926d1f41ef2d6e1f6e42b65",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/bundle/evaluation/worker.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/local_rtx5070ti/development_rows.pt",
+   "bytes": 18103921,
+   "expected_record_matched": false,
+   "sha256": "2ae9bc23744e07c82394616ba144f2cd8c5fd86430279f7f72f990d387f99ba4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/local_rtx5070ti/development_rows.pt"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/local_rtx5070ti/native_logits.pt",
+   "bytes": 15730217,
+   "expected_record_matched": false,
+   "sha256": "4ddd506a4deaee3b87c97272c0e2e1c82ec76b278b03c6e24d1b7f5fea5e8987",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/local_rtx5070ti/native_logits.pt"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/local_rtx5070ti/run.json",
+   "bytes": 413949,
+   "expected_record_matched": false,
+   "sha256": "d9dadc00b5c8045c4afc0b0d1827d1966bec09cb03b7c354ce391697158368f6",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/local_rtx5070ti/run.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/prepare_inputs.py",
+   "bytes": 5405,
+   "expected_record_matched": false,
+   "sha256": "4e71703abc780d6dc3023656b25ce050187ad700ebc0a89e90481922f652ca51",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/prepare_inputs.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/gpu_shape_v1/run_local.py",
+   "bytes": 5707,
+   "expected_record_matched": false,
+   "sha256": "da5f812b492a28ed91240bccfecba9a8ae57711954766160aba6b86d57fba1c2",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/gpu_shape_v1/run_local.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/inventory/compare_protected.py",
+   "bytes": 2678,
+   "expected_record_matched": false,
+   "sha256": "677dac0c588cc7541573477d752e7b03628303a0e83bebcfd4d4da2db9638479",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/inventory/compare_protected.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/inventory/protected_after_comparison.json",
+   "bytes": 82155,
+   "expected_record_matched": false,
+   "sha256": "cc82aca91cfdfb704211dcc2db31454230cd2401aa9dad54f66db1dfd70d00a5",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/inventory/protected_after_comparison.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/inventory/protected_before.json",
+   "bytes": 2008025,
+   "expected_record_matched": false,
+   "sha256": "857085d8945ada0e6a9e6b035b63c161fda2cb244471d27be80ba462d07de69a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/inventory/protected_before.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/inventory/run_specification.py",
+   "bytes": 7892,
+   "expected_record_matched": false,
+   "sha256": "4ad52662ba477f8d393c39d096250ae5940f219bf9b966623bb039a567643875",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/inventory/run_specification.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/bundle_core.log",
+   "bytes": 76,
+   "expected_record_matched": false,
+   "sha256": "6b88b40ee77d272c4eff6b8f8eec89309035a84d898324a40fa4a5a5509e6cc0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/bundle_core.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/checker_local_cuda.log",
+   "bytes": 374,
+   "expected_record_matched": false,
+   "sha256": "c672273b51901b14eeb82644a8c9fddb2ecd5187961c48de06a5a53f22044396",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/checker_local_cuda.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/compare_local_cpu_fp64.log",
+   "bytes": 7,
+   "expected_record_matched": false,
+   "sha256": "28d3b9e880a77975493dc7e359144c0295a4f694cfe0af4f928c22307bc5c320",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/compare_local_cpu_fp64.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/compare_local_cuda.log",
+   "bytes": 7,
+   "expected_record_matched": false,
+   "sha256": "28d3b9e880a77975493dc7e359144c0295a4f694cfe0af4f928c22307bc5c320",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/compare_local_cuda.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/compare_protected.log",
+   "bytes": 521,
+   "expected_record_matched": false,
+   "sha256": "3f8657d09ad861148cbaa2fa7787c2782f5b36ff1169144c7f9f6e55951a6290",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/compare_protected.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/replay_local_cpu_fp64.log",
+   "bytes": 228,
+   "expected_record_matched": false,
+   "sha256": "eff24fd11a0f36897541b3fb3d52d8f16269c9f012645a39d124488cf613f994",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/replay_local_cpu_fp64.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/replay_local_cuda.log",
+   "bytes": 235,
+   "expected_record_matched": false,
+   "sha256": "a270077d74663747eef8aad7daf3000a549d737e1442c343713b721afe031b85",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/replay_local_cuda.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/replay_regenerated.log",
+   "bytes": 799,
+   "expected_record_matched": false,
+   "sha256": "fcfae0dfb2e926a07821b5e90c7b8c5c67e51f262d32a5b2f8c442f66966bdc0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/replay_regenerated.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/restore_check.log",
+   "bytes": 492,
+   "expected_record_matched": false,
+   "sha256": "84fd56ee108f1d538950b9ada7f942eb17dcd3dce7ecc1b3e50543de4238edcd",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/restore_check.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/logs/shape_check_local.log",
+   "bytes": 129,
+   "expected_record_matched": false,
+   "sha256": "c0f62b018768f2eedc8793ee41f5defbb4e52bd48f0e3490fb0666f0fbe69c75",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/logs/shape_check_local.log"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/metrics/VERIFICATION_METRICS.json",
+   "bytes": 283886,
+   "expected_record_matched": false,
+   "sha256": "f320284ea56e994e5ada0b771f01790d02b2dcc7fd73bb4c622006ee5aea2dc5",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/metrics/VERIFICATION_METRICS.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/metrics/build_metrics.py",
+   "bytes": 8941,
+   "expected_record_matched": false,
+   "sha256": "1004f7ae243420f3a2ca258429919c9a7a17115c04ef0fe5dcb934f0f4af2b8f",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/metrics/build_metrics.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/metrics/superseded/VERIFICATION_METRICS_checker_keys_unread.json",
+   "bytes": 283881,
+   "expected_record_matched": false,
+   "sha256": "83263540417fd8db40e550a32add2705518e0bba8cc5757e0893b195346ab804",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/metrics/superseded/VERIFICATION_METRICS_checker_keys_unread.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/BUNDLE_MANIFEST_core.json",
+   "bytes": 3521900,
+   "expected_record_matched": false,
+   "sha256": "89c66aa6d038b10a3fef391aa0e5b5b631d9c259312eab652accd6f5646566e0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/BUNDLE_MANIFEST_core.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/PRESERVATION_LEDGER.json",
+   "bytes": 65981,
+   "expected_record_matched": false,
+   "sha256": "d5ccc404715c9d3d022f76eef7d9f3a382bd0bbbc1d791fc771d1ee136c759be",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/PRESERVATION_LEDGER.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/RESTORATION_CHECK.json",
+   "bytes": 2020,
+   "expected_record_matched": false,
+   "sha256": "0bd62bcfa918c9883128950e76bf5261f9a8409ceaa164b37cbc53a0edb77ef3",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/RESTORATION_CHECK.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/build_bundle.py",
+   "bytes": 5829,
+   "expected_record_matched": false,
+   "sha256": "c79939928d655e04f524573420470ef727afb0716575290e8b26dec875da31c9",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/build_bundle.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/build_ledger.py",
+   "bytes": 3761,
+   "expected_record_matched": false,
+   "sha256": "0680bc99b2c3bff914d35c07d090adf7e5584c722df4ee2c19407384480ea525",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/build_ledger.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/analysis/analyze.py",
+   "bytes": 5870,
+   "expected_record_matched": false,
+   "sha256": "e4c3812d91d16d588d2beddab34e683e7732fc1d4ea4b1ee1ecb8b5b6b79e47f",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/analysis/analyze.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/analysis/plot.py",
+   "bytes": 3535,
+   "expected_record_matched": false,
+   "sha256": "8aa0c775c30651adaec1e4ac277e666fd43f3fd774f2aad235d576ac3893047e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/analysis/plot.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/artifact_handoff.py",
+   "bytes": 29606,
+   "expected_record_matched": false,
+   "sha256": "879a9b6bd9c282dc5bd46f2fb86e20a7d63511940e86f0c7e5c3911d97d58154",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/artifact_handoff.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/lease.py",
+   "bytes": 56750,
+   "expected_record_matched": false,
+   "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/lease.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/pod_entry.sh",
+   "bytes": 1223,
+   "expected_record_matched": false,
+   "sha256": "49770f538686d3798547742b57838fca2ba9246ccda054b8691da6ff28bf5cad",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/pod_entry.sh"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/run_refits.py",
+   "bytes": 51999,
+   "expected_record_matched": false,
+   "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/run_refits.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/runpod_api.py",
+   "bytes": 9601,
+   "expected_record_matched": false,
+   "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/runpod_api.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/test_lifecycle.py",
+   "bytes": 35975,
+   "expected_record_matched": false,
+   "sha256": "7dc4d0d328ccb4a5661d4362179fbfef2d7d2f81ab6f14197d0f47ef444fa7de",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/test_lifecycle.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/controller/transport.py",
+   "bytes": 2638,
+   "expected_record_matched": false,
+   "sha256": "acec7a803383119706ee852d8c0b21c4380df0b91b16aa4c198462c6d7bd199a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/controller/transport.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/artifacts.py",
+   "bytes": 3054,
+   "expected_record_matched": false,
+   "sha256": "1ca7827386131ee48f304b1caf78110075c2c6dad7201056728d4a9c9559b226",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/artifacts.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/audit_novelty.py",
+   "bytes": 4333,
+   "expected_record_matched": false,
+   "sha256": "ba84fec890961ed1400088947fc7fbf9c37ef8913a31d5e669f06f76664a0d5a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/audit_novelty.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/bootstrap.py",
+   "bytes": 4446,
+   "expected_record_matched": false,
+   "sha256": "712526b8d3bc6d49b3e98a5213906882fca9883399a3342a8a7e9794b0dd6964",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/bootstrap.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/download_model.py",
+   "bytes": 459,
+   "expected_record_matched": false,
+   "sha256": "3ee24f0fd0e92acc74a17fb6dfa2216d814f599f69716fc6eb332b4b9b470602",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/download_model.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/freeze.py",
+   "bytes": 8710,
+   "expected_record_matched": false,
+   "sha256": "3f3adc20b43b9a309608635857a63f25c2ac5df04abcef0461e342f5b1008802",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/freeze.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/launch.py",
+   "bytes": 6518,
+   "expected_record_matched": false,
+   "sha256": "383fd097f4483132d5c7d845c998093ce170e7263068ff82626a9810e1c78a81",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/launch.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/measurement.py",
+   "bytes": 4277,
+   "expected_record_matched": false,
+   "sha256": "06c615b29285e0e4e10196ae8f15b015d5c8a362f5e7704adb38ce6e275799fe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/measurement.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/prepare_population.py",
+   "bytes": 4321,
+   "expected_record_matched": false,
+   "sha256": "b15724e8b25dc77a7ef6d7f9aa78542c3076d1f58f91f77bef31050497bd4b45",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/prepare_population.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/readouts.py",
+   "bytes": 4865,
+   "expected_record_matched": false,
+   "sha256": "0749ee608b171ecb9fd97c063fa77c3fa68ca5be033b3f8f2ce23ecd8029cdb0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/readouts.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/self_test.py",
+   "bytes": 4751,
+   "expected_record_matched": false,
+   "sha256": "a2bcabcf62f42a962aa85ce8ed14040deae4c7819834eb71b5ff23fdde33789e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/self_test.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/validate_outputs.py",
+   "bytes": 10057,
+   "expected_record_matched": false,
+   "sha256": "588dbf72a8f520e1fe4d7eb590704b928a4accb3ceabb85d36b56bf7296af7ed",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/validate_outputs.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/evaluation/worker.py",
+   "bytes": 10143,
+   "expected_record_matched": false,
+   "sha256": "386c2649e6628a45d7bcc7745d9cf4686cbb03fd6c9cf9196b65e6938b9ab0b5",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/evaluation/worker.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/PROSPECTIVE_PLAN.md",
+   "bytes": 13061,
+   "expected_record_matched": false,
+   "sha256": "4ea3f201cd248cf1e1792410f61e60ccbe4f0a4c380daedb8fdf45a4129b7317",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/PROSPECTIVE_PLAN.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/annotation_review.json",
+   "bytes": 11145,
+   "expected_record_matched": false,
+   "sha256": "df1906ffcf69d6c03dc0a25c63022f4012b5d0c4758929abd01ff92cd80ede08",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/annotation_review.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/benchmark.json",
+   "bytes": 967118,
+   "expected_record_matched": false,
+   "sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/benchmark.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/implementation_review.json",
+   "bytes": 12905,
+   "expected_record_matched": false,
+   "sha256": "995917c81acba600da5079765489d2782cc67c05a4d48a8f976c03cc6a6a244c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/implementation_review.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/native_check_correction.json",
+   "bytes": 1244,
+   "expected_record_matched": false,
+   "sha256": "ac5faf5fb359e2f97d2eeb11bafe0f611373722a8c1733df327a32453da209bc",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/native_check_correction.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/output_contract.json",
+   "bytes": 3818,
+   "expected_record_matched": false,
+   "sha256": "10cfeaccd760ba7efa47ed828a0a75eae5acd41f771046f573e97777891660e9",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/output_contract.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/population.json",
+   "bytes": 373077,
+   "expected_record_matched": false,
+   "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/population.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/precision_correction.json",
+   "bytes": 10079,
+   "expected_record_matched": false,
+   "sha256": "25221a0c1084be1580281734c96605d44c70cc650a98aea184312805d3b2a50d",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/precision_correction.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/frozen/run_spec.json",
+   "bytes": 34693,
+   "expected_record_matched": false,
+   "sha256": "002b91cb755a0517fc5839ef2277f14307ef9eaba41176b9298f4362e040d446",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/frozen/run_spec.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/cloud_worker.py",
+   "bytes": 19100,
+   "expected_record_matched": false,
+   "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/cloud_worker.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/environment.json",
+   "bytes": 4685,
+   "expected_record_matched": false,
+   "sha256": "940842c822fc3a76a89e94bd7fa052c63de9d71758b9a513d17260b39c8124a7",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/environment.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/evaluate_controls.py",
+   "bytes": 52577,
+   "expected_record_matched": false,
+   "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/evaluate_controls.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/evaluate_refits.py",
+   "bytes": 55009,
+   "expected_record_matched": false,
+   "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/evaluate_refits.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/model_manifest.json",
+   "bytes": 2323,
+   "expected_record_matched": false,
+   "sha256": "377d9e75a2f6a38d1a94ac78bbe940e0c34f369ef8f0d6f692a65b4a3f071370",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/model_manifest.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/requirements.lock",
+   "bytes": 12089,
+   "expected_record_matched": false,
+   "sha256": "87311c22b6d2eaa50e4c819dab431ff221fc787f8bbf495cbbc455db0a0245f1",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/requirements.lock"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/run_controls.py",
+   "bytes": 9851,
+   "expected_record_matched": false,
+   "sha256": "4da1528ed692409919003a1a02ec421fcd6b7d7453d9fbe88f28771b84239543",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/run_controls.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/legacy/run_refits.py",
+   "bytes": 51999,
+   "expected_record_matched": false,
+   "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/legacy/run_refits.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/__init__.py",
+   "bytes": 0,
+   "expected_record_matched": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/__init__.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/bench.py",
+   "bytes": 6251,
+   "expected_record_matched": false,
+   "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/bench.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/evaldata.py",
+   "bytes": 7527,
+   "expected_record_matched": false,
+   "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/evaldata.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/evaluate.py",
+   "bytes": 63535,
+   "expected_record_matched": false,
+   "sha256": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/evaluate.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/evidence.py",
+   "bytes": 12530,
+   "expected_record_matched": false,
+   "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/evidence.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/fit_lens.py",
+   "bytes": 72898,
+   "expected_record_matched": false,
+   "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/fit_lens.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/recurrent.py",
+   "bytes": 5777,
+   "expected_record_matched": false,
+   "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/ouro_project/src/ouro_jlens/recurrent.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/data/evaluations/lens-eval-multihop.json",
+   "bytes": 21869,
+   "expected_record_matched": false,
+   "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/data/evaluations/lens-eval-multihop.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/data/evaluations/lens-eval-order-ops.json",
+   "bytes": 9589,
+   "expected_record_matched": false,
+   "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/data/evaluations/lens-eval-order-ops.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/__init__.py",
+   "bytes": 637,
+   "expected_record_matched": false,
+   "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/__init__.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/_logging.py",
+   "bytes": 1804,
+   "expected_record_matched": false,
+   "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/_logging.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/data/README.md",
+   "bytes": 298,
+   "expected_record_matched": false,
+   "sha256": "10d36304f8bde26e2b09aa10c31ad1fd7a3c6ef2616ade1159d6d126c87da788",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/data/README.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/data/blackmail.json",
+   "bytes": 9128,
+   "expected_record_matched": false,
+   "sha256": "5669487c78043535450506cd3ec9aa7b0a07b8309783437c093dc165ce79b30a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/data/blackmail.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/data/slice_vis.html",
+   "bytes": 43663,
+   "expected_record_matched": false,
+   "sha256": "d19d843aa5d1fa5073c925a7723c4e9503b9b83c5622d9775033887c64bf62d9",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/data/slice_vis.html"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/examples.py",
+   "bytes": 6300,
+   "expected_record_matched": false,
+   "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/examples.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/fitting.py",
+   "bytes": 15078,
+   "expected_record_matched": false,
+   "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/fitting.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/hf.py",
+   "bytes": 8182,
+   "expected_record_matched": false,
+   "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/hf.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/hooks.py",
+   "bytes": 2735,
+   "expected_record_matched": false,
+   "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/hooks.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/lens.py",
+   "bytes": 8646,
+   "expected_record_matched": false,
+   "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/lens.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/protocol.py",
+   "bytes": 1774,
+   "expected_record_matched": false,
+   "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/protocol.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/vis.py",
+   "bytes": 19984,
+   "expected_record_matched": false,
+   "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check/bundle/repo/jlens/vis.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/preservation/restore_check.py",
+   "bytes": 6628,
+   "expected_record_matched": false,
+   "sha256": "b6c034dbbdff71d5647f9357b6e860e08c1e9e49b9b4e7866c9438f33b0e7de2",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/restore_check.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/compare_paths.py",
+   "bytes": 15310,
+   "expected_record_matched": false,
+   "sha256": "12053d231b6d80cfb3f08897dffd06c5e3fbf667c222f6e4b4d92f1a2901a46a",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/compare_paths.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/replay_scorer.py",
+   "bytes": 21136,
+   "expected_record_matched": false,
+   "sha256": "ac7ef641bdf4ad62d080fb3da1c853be357966cb09c12cde60620d5fdf8c590c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/replay_scorer.py"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/retained_bank_paths.json",
+   "bytes": 783,
+   "expected_record_matched": false,
+   "sha256": "4ea04dc1b9d97b0da0b68dbe93dd9623e17826c066766a1f8fb5bd4ef7b21e68",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/retained_bank_paths.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/sensitivity_local_cpu_fp64.json",
+   "bytes": 51333,
+   "expected_record_matched": false,
+   "sha256": "d1754b1932670b4b02ef1c6a391da2db665a5b9a88359804d79e34b2fb31c577",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/sensitivity_local_cpu_fp64.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/sensitivity_local_cuda.json",
+   "bytes": 385807,
+   "expected_record_matched": false,
+   "sha256": "4e74b2ee7bcb1677e33e35c964c46bb1024b68380817710efd1f41e6579c9aa0",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/sensitivity_local_cuda.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/sensitivity_local_regenerated.json",
+   "bytes": 107851,
+   "expected_record_matched": false,
+   "sha256": "ba3d52f1db9847198eaca7865692d3ca5082fce3fdd3b3c7b397ed452c90548c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/sensitivity_local_regenerated.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/report/CLAIM_CHANGES.md",
+   "bytes": 6090,
+   "expected_record_matched": false,
+   "sha256": "b0f31bacc8b513e34665a62081ff3c38b873df70af9dd158c5b6f1a1d8208d44",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/report/CLAIM_CHANGES.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/report/REPORT_confirmation_verified.md",
+   "bytes": 29342,
+   "expected_record_matched": false,
+   "sha256": "73b91d61050318650b94428840787c447dcbac290c666c56041d78e26407cf19",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/report/REPORT_confirmation_verified.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/reviews/artifact_audit/ARTIFACT_AUDIT.json",
+   "bytes": 303657,
+   "expected_record_matched": false,
+   "sha256": "b4179573ee0e2e3ed34e4131be65104ca087529e7c9c60028d1facec00af13f3",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/artifact_audit/ARTIFACT_AUDIT.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/reviews/artifact_audit/ARTIFACT_AUDIT.md",
+   "bytes": 33094,
+   "expected_record_matched": false,
+   "sha256": "11d9f71a45ac3ad1f2de0ef39014ae8ffbfc4cd8f7f06dd0b311b4da9ad50b14",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/artifact_audit/ARTIFACT_AUDIT.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/reviews/native_check_and_pin/REVIEW.json",
+   "bytes": 12947,
+   "expected_record_matched": false,
+   "sha256": "ee31b75d8fea59950910f1e076e625403a9ed999787d1a5e40db0d5621cc149c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/native_check_and_pin/REVIEW.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/reviews/native_check_and_pin/REVIEW.md",
+   "bytes": 16102,
+   "expected_record_matched": false,
+   "sha256": "a015c09315932d15be23c1d10cc4f8e887cc92195afb0dc3fea1bd6a837e2b98",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/native_check_and_pin/REVIEW.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/reviews/scoring_path/SCORING_PATH_REVIEW.json",
+   "bytes": 18477,
+   "expected_record_matched": false,
+   "sha256": "1850e05e36127db81d608a87fb41634ecdd3adbcdf72d06820e4ce924749302f",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/scoring_path/SCORING_PATH_REVIEW.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/reviews/scoring_path/SCORING_PATH_REVIEW.md",
+   "bytes": 25841,
+   "expected_record_matched": false,
+   "sha256": "a97f4d9cc6819e5bee1076fddb271af9d8cfc5ac5e8487bd8c1c645b18ce8d0f",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/reviews/scoring_path/SCORING_PATH_REVIEW.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/spending/SPENDING_AND_SHUTDOWN.md",
+   "bytes": 1713,
+   "expected_record_matched": false,
+   "sha256": "bbde3e2f893478098fcd502c251a0ddaf32c460f52c1c73fcb62f906aaa9cc33",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/spending/SPENDING_AND_SHUTDOWN.md"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/spending/observation_end.json",
+   "bytes": 678,
+   "expected_record_matched": false,
+   "sha256": "4eedb92c86c414600a76baa96f962525ea18ff0bd154592b01f262b1c3798c3e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/spending/observation_end.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/spending/observation_start.json",
+   "bytes": 678,
+   "expected_record_matched": false,
+   "sha256": "79509d286f4fded3dbd3f0f8f65657cd7d49f8b77a6bb0227d864aa23f5d7902",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/spending/observation_start.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_diagonal.json",
+   "bytes": 6150,
+   "expected_record_matched": false,
+   "sha256": "997aec9bef0ca2ce3e2c2b9175a3d780a38a1a5f667ddd8646d784ddd842e7b7",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_diagonal.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_fit01.json",
+   "bytes": 6152,
+   "expected_record_matched": false,
+   "sha256": "6173a1e95811c5d62f76eb7d7e9a7c213aea51700436eee53e4cc4308d2c4d65",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_fit01.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_fit02.json",
+   "bytes": 6149,
+   "expected_record_matched": false,
+   "sha256": "753b97d6cced7915052c646b9974d26fc744b15ef809d1c0f92ba7f8d994dd32",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_fit02.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_penultimate.json",
+   "bytes": 6148,
+   "expected_record_matched": false,
+   "sha256": "18d7f45ecf62125d933fa92de2bad74b243c609e3ba3cad62c8d14d71c03124e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_penultimate.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_raw.json",
+   "bytes": 6522,
+   "expected_record_matched": false,
+   "sha256": "1407e95601589eb5cb23190fb410da3be6d782754935ef07aa8d3fdde3357a57",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_raw.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_sampled_sum.json",
+   "bytes": 6149,
+   "expected_record_matched": false,
+   "sha256": "673cfee9ed7cb5ae30b9db2b656e768ad29a116375dfeef09b16ebdefd726ffd",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/arm_sampled_sum.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_rtx5070ti/run.json",
+   "bytes": 55971,
+   "expected_record_matched": false,
+   "sha256": "bef6feb53233fbcfaeffdc72bddc5f22124916ac350c987a62994151b42cb0a7",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_rtx5070ti/run.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/arm_diagonal.json",
+   "bytes": 385,
+   "expected_record_matched": false,
+   "sha256": "b2e5c821a61c862837ae671b3d5b3d7081ebeff79f8ea88a464385ab881b4572",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/arm_diagonal.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/arm_fit01.json",
+   "bytes": 385,
+   "expected_record_matched": false,
+   "sha256": "95000bb6af7f2aed231b18f7e3f050408e8b99f3fb10b8859832f007271a7457",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/arm_fit01.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/arm_fit02.json",
+   "bytes": 385,
+   "expected_record_matched": false,
+   "sha256": "a8830a912e6e9982d6a2a22adb3688d22d47d871f603c8b8035cf717f9130325",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/arm_fit02.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/arm_penultimate.json",
+   "bytes": 385,
+   "expected_record_matched": false,
+   "sha256": "7a77818f9e8af26d186626476345f5267b65f8795432ca6949d490269ff15b38",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/arm_penultimate.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/arm_raw.json",
+   "bytes": 385,
+   "expected_record_matched": false,
+   "sha256": "e6b59094a6c70d78002d7a4e774f063099f284649dbcff296900e6b2af04f255",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/arm_raw.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/arm_sampled_sum.json",
+   "bytes": 385,
+   "expected_record_matched": false,
+   "sha256": "fd7e368b2e4ded2e7e6cefa91cf2e93918a5803fe2ff986fab4a070126029c3d",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/arm_sampled_sum.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cpu_fp64/run.json",
+   "bytes": 14017,
+   "expected_record_matched": false,
+   "sha256": "d46a8a86c05f964c38e1087290a8173094677eecc73a3f129fdbfb3998c41f81",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cpu_fp64/run.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/arm_diagonal.json",
+   "bytes": 2972,
+   "expected_record_matched": false,
+   "sha256": "f233f731dd4246b3aaeace4713742a14f2c840ac46bc359ef40f050a714c3f33",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/arm_diagonal.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/arm_fit01.json",
+   "bytes": 2944,
+   "expected_record_matched": false,
+   "sha256": "253c0abd83285f761e75cb6b40c011dccec0ece6cd7e934145ad5c72ef7c1e94",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/arm_fit01.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/arm_fit02.json",
+   "bytes": 2942,
+   "expected_record_matched": false,
+   "sha256": "6e2b91a1d0d42873a2e06790965d8c00e3309e717fe5e68528a2032a54491726",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/arm_fit02.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/arm_penultimate.json",
+   "bytes": 2970,
+   "expected_record_matched": false,
+   "sha256": "63cd0bdb880ae39f4eec742634eecb3fbcbdbfd2478c50c60b5f0e9451f32cb1",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/arm_penultimate.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/arm_raw.json",
+   "bytes": 2894,
+   "expected_record_matched": false,
+   "sha256": "3b5a2793885c22a99d4837941aec398ac6dd0c87d427950af1efbae68bf586bf",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/arm_raw.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/arm_sampled_sum.json",
+   "bytes": 2973,
+   "expected_record_matched": false,
+   "sha256": "6e38b90533209b1470b4f448450ed97563a7096b2e6b614f813cc2e2db2b5da4",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/arm_sampled_sum.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/local_cuda_regenerated_states/run.json",
+   "bytes": 32979,
+   "expected_record_matched": false,
+   "sha256": "8274953d29f87c956a3009bcf739910776f33828d42af0df38579e51ea6df382",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/local_cuda_regenerated_states/run.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cpu_fp64/local_cpu_fp64/fp64/analysis.json",
+   "bytes": 103646,
+   "expected_record_matched": false,
+   "sha256": "1e2f94f934ffd4b7b5e8f1e3b374bfb7f0a29b445662b58eb29fc1c1c84f7b86",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cpu_fp64/local_cpu_fp64/fp64/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/col160/analysis.json",
+   "bytes": 103617,
+   "expected_record_matched": false,
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/col160/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/executed/analysis.json",
+   "bytes": 103617,
+   "expected_record_matched": false,
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/executed/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/fp32/analysis.json",
+   "bytes": 103646,
+   "expected_record_matched": false,
+   "sha256": "1e2f94f934ffd4b7b5e8f1e3b374bfb7f0a29b445662b58eb29fc1c1c84f7b86",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/fp32/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/fp64/analysis.json",
+   "bytes": 103646,
+   "expected_record_matched": false,
+   "sha256": "1e2f94f934ffd4b7b5e8f1e3b374bfb7f0a29b445662b58eb29fc1c1c84f7b86",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/fp64/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/fp64_head/analysis.json",
+   "bytes": 103646,
+   "expected_record_matched": false,
+   "sha256": "1e2f94f934ffd4b7b5e8f1e3b374bfb7f0a29b445662b58eb29fc1c1c84f7b86",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/fp64_head/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.03125_max/analysis.json",
+   "bytes": 103618,
+   "expected_record_matched": false,
+   "sha256": "626d54171f2196334498d725fc50c3b6fd182bba3965c6c61b16c49f63485f0c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.03125_max/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.03125_min/analysis.json",
+   "bytes": 103736,
+   "expected_record_matched": false,
+   "sha256": "348db434827630ca16d7b19bef895b65cc2cbf2943dbb7b0c29e4996047ba4d2",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.03125_min/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.125_max/analysis.json",
+   "bytes": 103622,
+   "expected_record_matched": false,
+   "sha256": "afec7f2878fbe93c1efecaad94c0b5cf3b2643e38c51be73e28a2c521829408b",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.125_max/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.125_min/analysis.json",
+   "bytes": 103881,
+   "expected_record_matched": false,
+   "sha256": "7fb0587e34ab04f8d2fd361cda5722f244fada55f5cf0328a24e9151a52e1bc9",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/perturb_delta_0.125_min/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/row1/analysis.json",
+   "bytes": 103619,
+   "expected_record_matched": false,
+   "sha256": "15cedeee8b416ecbac69b59cf072a164e828517477e57f28badeefd00c542490",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/row1/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/rows190/analysis.json",
+   "bytes": 103617,
+   "expected_record_matched": false,
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/rows190/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/rows191/analysis.json",
+   "bytes": 103617,
+   "expected_record_matched": false,
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/rows191/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/rows192/analysis.json",
+   "bytes": 103617,
+   "expected_record_matched": false,
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/rows192/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_against_every_name/analysis.json",
+   "bytes": 103624,
+   "expected_record_matched": false,
+   "sha256": "5e30ecb6ca4a5487dcff17051d968e2bedef3dad94eaca2624bda3055dd43e4e",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_against_every_name/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_favor_every_name/analysis.json",
+   "bytes": 103644,
+   "expected_record_matched": false,
+   "sha256": "7f9d7e0fed7c7eb1782c89c547b9fe49afaa31edc58b3703e65942cae25c1273",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_favor_every_name/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_maximize_primary/analysis.json",
+   "bytes": 103616,
+   "expected_record_matched": false,
+   "sha256": "4dab5299a62f1d6f86aeb5814dd960bed6410954842e52b24898b9ea5936a1f7",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_maximize_primary/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_minimize_primary/analysis.json",
+   "bytes": 103700,
+   "expected_record_matched": false,
+   "sha256": "742953ec70223f466a20149c364d22b00c9275bf8acc701a22fd3603c0833650",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_cuda/local_cuda_rtx5070ti/ties_minimize_primary/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/executed/analysis.json",
+   "bytes": 103584,
+   "expected_record_matched": false,
+   "sha256": "075533b9f42e76cc2004b82ea32de786b4ae9989ff277d03ca9fe9439927a950",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/executed/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.03125_max/analysis.json",
+   "bytes": 103594,
+   "expected_record_matched": false,
+   "sha256": "3f36c8ea3d41daa457b2beed97faa91ab7438597713400da5d19bfa8043c9a6c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.03125_max/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.03125_min/analysis.json",
+   "bytes": 103700,
+   "expected_record_matched": false,
+   "sha256": "189723f93a086b12fb85f5e700a9a421f27ab52477f811d91903391a57bc6d21",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.03125_min/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.125_max/analysis.json",
+   "bytes": 103510,
+   "expected_record_matched": false,
+   "sha256": "3a3a0094a6d0d7abb1a93341c1785bf20b8b6c6ffbdba7b99871fb2fc5ef955c",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.125_max/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.125_min/analysis.json",
+   "bytes": 103788,
+   "expected_record_matched": false,
+   "sha256": "987ec006bcfd510517843aae7430c81754f21af643f1afc2e401ee3f8e99fb67",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/perturb_delta_0.125_min/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_against_every_name/analysis.json",
+   "bytes": 103625,
+   "expected_record_matched": false,
+   "sha256": "727776ea4722d92394d6efb8f7407b3c2eebcb69e1ea4d85b40b4469fe79414b",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_against_every_name/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_favor_every_name/analysis.json",
+   "bytes": 103585,
+   "expected_record_matched": false,
+   "sha256": "939b1d8e1e0d74ba5dfe7da769e81feec17868831048b8b73e908c12f5921002",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_favor_every_name/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_maximize_primary/analysis.json",
+   "bytes": 103588,
+   "expected_record_matched": false,
+   "sha256": "501012cce624d6f78a39170d8fd12fd820965523b357f702771cd919696b0542",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_maximize_primary/analysis.json"
+  },
+  {
+   "bundle_path": "verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_minimize_primary/analysis.json",
+   "bytes": 103640,
+   "expected_record_matched": false,
+   "sha256": "32703b7aa6149ba8ed8fa23274b381d96142ac55d7fd640a38696ba7096177db",
+   "source_path": "/home/moloch/jacobian-lens/research/verification_2026-09-11/replay/propagation_local_regenerated/local_cuda_regenerated_states/ties_minimize_primary/analysis.json"
+  }
+ ],
+ "files": 198,
+ "part": "verification",
+ "problems": [],
+ "same_physical_disk_as_sources": true,
+ "schema": "preservation_bundle_manifest.v1",
+ "script_sha256": "c79939928d655e04f524573420470ef727afb0716575290e8b26dec875da31c9"
+}

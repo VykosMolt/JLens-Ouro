@@ -1,0 +1,140 @@
+{
+  "diagnosis": "The redundant legacy matmul allow_tf32 assignment mutates the newer fp32_precision state. The worker then correctly rejects the changed full precision record. Frozen historical metadata itself is consistent.",
+  "historical_precision_equals_frozen": true,
+  "lease_name": "jlens-confirm-58682ddbc5194900912577d31cd000fe",
+  "local_probe": {
+    "after_differences": [
+      {
+        "after": "ieee",
+        "before": "none",
+        "field": "matmul.fp32_precision",
+        "original": "none"
+      }
+    ],
+    "assignments": [
+      "torch.backends.cuda.matmul.allow_tf32=False",
+      "torch.backends.cudnn.allow_tf32=True"
+    ],
+    "before_matches_all_original_precision_fields": true,
+    "cuda_initialized": false,
+    "execution_output": "torch 2.12.0.dev20260407+cu128 cuda_initialized False\nOriginal to fresh process:\nFresh process to exact worker assignments:\nmatmul.fp32_precision 'none' -> 'ieee'\nOriginal to worker-assigned process:\nmatmul.fp32_precision 'none' -> 'ieee'\n",
+    "interpreter": "/home/moloch/ouro_project/venv/bin/python",
+    "procedure": "In a fresh process, establish the frozen original_precision.environment before importing torch. Compile only the actual _precision AST function from the pinned legacy/run_refits.py. Observe _precision(torch); execute the two exact worker assignments below; observe _precision(torch) again. No model construction or CUDA initialization.",
+    "torch_version": "2.12.0.dev20260407+cu128"
+  },
+  "original_precision": {
+    "cudnn_allow_tf32": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": false,
+    "cudnn_fp32_precision": "none",
+    "deterministic_algorithms": false,
+    "deterministic_warn_only": false,
+    "environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "MKL_NUM_THREADS": "8",
+      "NVIDIA_TF32_OVERRIDE": null,
+      "OMP_NUM_THREADS": "8",
+      "PYTORCH_ALLOC_CONF": "expandable_segments:True",
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    },
+    "float32_matmul_precision": "highest",
+    "matmul": {
+      "allow_bf16_reduced_precision_reduction": true,
+      "allow_bf16_reduced_precision_reduction_split_k": true,
+      "allow_fp16_accumulation": false,
+      "allow_fp16_reduced_precision_reduction": true,
+      "allow_fp16_reduced_precision_reduction_split_k": true,
+      "allow_tf32": false,
+      "fp32_precision": "none"
+    },
+    "sdpa": {
+      "cudnn_sdp_enabled": true,
+      "flash_sdp_enabled": true,
+      "fp16_bf16_reduction_math_sdp_allowed": false,
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "sdpa_scope": "enabled implementations; not a trace of the selected runtime kernel"
+  },
+  "prospective_correction": {
+    "new_explicitly_versioned_bundle_required": true,
+    "proposed_change": "Remove both redundant allow_tf32 assignments from the future worker. Fresh pinned defaults already match the entire historical precision record; the independently reproduced differing field is caused by the matmul assignment.",
+    "retain": [
+      "Original frozen bundle and failed terminal evidence",
+      "Original historical precision record and exact complete-dictionary equality check",
+      "Benchmark, population, all bank hashes, estimands and analysis implementation",
+      "Native state/logit equality and external development acceptance gates"
+    ],
+    "validation_before_new_execution": "Verify the new worker source binding and exact runtime precision metadata before any development or confirmation states; do not reset or reuse attempt 03 publication state."
+  },
+  "recorded_utc": "2026-09-10T10:39:34.548088+00:00",
+  "remote_evidence_limit": "The independent local probe establishes the setter mechanism. Actual remote failure logs/runtime observations are being preserved separately by the root agent.",
+  "retry_under_current_binding": {
+    "reasons": [
+      "Publisher.__init__ rejects an existing artifact_index.json.",
+      "remember_manifest forbids changed final manifests and replacement of a latched terminal manifest SHA.",
+      "Current failed final cannot satisfy accepted_for_current_run, which requires complete outcome."
+    ],
+    "valid": false
+  },
+  "run_id": "ouro_confirmation_20260909_fixed160",
+  "schema": "confirmation_precision_preflight_diagnosis.v1",
+  "scope": "Independent read-only diagnosis of attempt 03; no model execution, confirmation outcomes, or frozen-file changes.",
+  "source_records": [
+    {
+      "bytes": 18643,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/run_spec.json",
+      "sha256": "8a4a3e6725d811d0b2584561a277d5071f097c551f40c46be9f6773a7d61181e"
+    },
+    {
+      "bytes": 2976,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/frozen/output_contract.json",
+      "sha256": "b10eff01984ab34eca3210dff272b6afc49444232e969068c6b2c0f78bc90954"
+    },
+    {
+      "bytes": 10163,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/evaluation/worker.py",
+      "sha256": "2db64e6d598623bb87dde39d55e7de67dcab762c0a148face40d6dea98e045d0"
+    },
+    {
+      "bytes": 10057,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/evaluation/validate_outputs.py",
+      "sha256": "588dbf72a8f520e1fe4d7eb590704b928a4accb3ceabb85d36b56bf7296af7ed"
+    },
+    {
+      "bytes": 4446,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/evaluation/bootstrap.py",
+      "sha256": "712526b8d3bc6d49b3e98a5213906882fca9883399a3342a8a7e9794b0dd6964"
+    },
+    {
+      "bytes": 3054,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/evaluation/artifacts.py",
+      "sha256": "1ca7827386131ee48f304b1caf78110075c2c6dad7201056728d4a9c9559b226"
+    },
+    {
+      "bytes": 51999,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/legacy/run_refits.py",
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    {
+      "bytes": 55009,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/bundle/legacy/evaluate_refits.py",
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17"
+    },
+    {
+      "bytes": 56750,
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_03/monitor/lease.py",
+      "sha256": "c59d303693253017e56f44daebd261fbf3fe38b765602c9411902eaaa9248366"
+    },
+    {
+      "bytes": 12020,
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/metadata.json",
+      "sha256": "fd420918419427467cd899564d7c7cc7c2e4e55f192f8d9698eb4d1fec125540"
+    }
+  ],
+  "status": "cause_reproduced_locally_before_cuda_initialization",
+  "terminal_files": {},
+  "terminal_manifest_sha256": "fd042fa7cf1938d08d1e65ff4700890e210d572bd33534622fe511b4d9b6ffb0",
+  "terminal_outcome": "failed"
+}

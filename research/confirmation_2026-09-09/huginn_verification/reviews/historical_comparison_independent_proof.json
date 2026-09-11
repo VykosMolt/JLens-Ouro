@@ -1,0 +1,197 @@
+{
+  "cases": [
+    {
+      "case": "signed_zeros_and_ordinary_inequality",
+      "result": {
+        "bitwise_different_entries": 3,
+        "dtype": "float32",
+        "entries": 3,
+        "first_differences": [
+          {
+            "historical": 0.0,
+            "index": [
+              0
+            ],
+            "rerun": -0.0
+          },
+          {
+            "historical": -0.0,
+            "index": [
+              1
+            ],
+            "rerun": 0.0
+          },
+          {
+            "historical": 1.0,
+            "index": [
+              2
+            ],
+            "rerun": 2.0
+          }
+        ],
+        "max_absolute_difference": 1.0,
+        "numeric_different_entries": 1,
+        "rms_difference": 0.5773502691896257,
+        "shape": [
+          3
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "saved_rank_integer_difference",
+      "result": {
+        "bitwise_different_entries": 1,
+        "dtype": "int32",
+        "entries": 3,
+        "first_differences": [
+          {
+            "historical": 2,
+            "index": [
+              1
+            ],
+            "rerun": 4
+          }
+        ],
+        "max_absolute_difference": 2.0,
+        "numeric_different_entries": 1,
+        "rms_difference": 1.1547005383792515,
+        "shape": [
+          3
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "case": "dtype_shape_and_nonfinite_rejected",
+      "status": "passed"
+    },
+    {
+      "case": "json_initialization_summary_difference_path",
+      "status": "passed"
+    },
+    {
+      "case": "adjacent_large_integer_numeric_difference",
+      "result": {
+        "bitwise_different_entries": 1,
+        "dtype": "uint64",
+        "entries": 1,
+        "first_differences": [
+          {
+            "historical": 9223372036854775808,
+            "index": [
+              0
+            ],
+            "rerun": 9223372036854775809
+          }
+        ],
+        "max_absolute_difference": 0.0,
+        "numeric_different_entries": 1,
+        "rms_difference": 0.0,
+        "shape": [
+          1
+        ]
+      },
+      "scope": "Not present in bounded saved token/rank values; generic numeric-helper limitation.",
+      "status": "scope_limitation"
+    },
+    {
+      "actual_canonical_record": {
+        "bytes": 4,
+        "sha256": "53bc5cce8c5764019bb4ce6e597ec3885b71608668c9b6ef4940d364d7a914fa"
+      },
+      "case": "parent_swap_during_hash_open_descriptor_binding",
+      "reported": {
+        "error": "Opened input differs from checked path"
+      },
+      "status": "passed"
+    },
+    {
+      "case": "linked_parent_rejected",
+      "status": "passed"
+    },
+    {
+      "array_count": 26,
+      "case": "actual_historical_self_pair_arrays_caches_initializations_summaries",
+      "entries": 74724904,
+      "report": {
+        "bytes": 18485,
+        "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/self_pair.json",
+        "sha256": "543d2c7856f8114d9e15e0bacf0db9cf8eff1998f5249cb51e247e339cb87fb8"
+      },
+      "scope": "Synthetic self-pair only; no newly rerun estimator or actual acceptance.",
+      "status": "passed"
+    },
+    {
+      "case": "wrong_receipt_pin_rejected",
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 226, in <module>\n    main()\n    ~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 135, in main\n    raise ValueError('External receipt differs from the independently inspected pin')\nValueError: External receipt differs from the independently inspected pin\n"
+    },
+    {
+      "case": "failed_validation_rejected",
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 226, in <module>\n    main()\n    ~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 157, in main\n    raise ValueError('Expected one complete externally accepted final chain')\nValueError: Expected one complete externally accepted final chain\n"
+    },
+    {
+      "case": "wrong_manifest_id_rejected",
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 226, in <module>\n    main()\n    ~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 157, in main\n    raise ValueError('Expected one complete externally accepted final chain')\nValueError: Expected one complete externally accepted final chain\n"
+    },
+    {
+      "case": "missing_checked_file_rejected",
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 226, in <module>\n    main()\n    ~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 157, in main\n    raise ValueError('Expected one complete externally accepted final chain')\nValueError: Expected one complete externally accepted final chain\n"
+    },
+    {
+      "case": "failed_numerical_check_rejected",
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 226, in <module>\n    main()\n    ~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 157, in main\n    raise ValueError('Expected one complete externally accepted final chain')\nValueError: Expected one complete externally accepted final chain\n"
+    },
+    {
+      "case": "parent_swap_during_json_consumer_is_rejected",
+      "injection_executed": true,
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py\", line 160, in <module>\n    if len(sys.argv)==3 and sys.argv[1]=='--consumer-probe':child_consumer_probe(sys.argv[2])\n                                                            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py\", line 38, in child_consumer_probe\n    with patch.object(Path,'open',switched_open):module.main()\n                                                 ~~~~~~~~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 208, in main\n    differences = compare_json(data(a), data(b))\n                                        ~~~~^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 131, in data\n    return json.loads(raw(path))\n                      ~~~^^^^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 121, in raw\n    raise ValueError('Deserialization opened a different file')\nValueError: Deserialization opened a different file\n",
+      "stdout": ""
+    },
+    {
+      "case": "parent_swap_during_npz_consumer_is_rejected",
+      "injection_executed": true,
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py\", line 160, in <module>\n    if len(sys.argv)==3 and sys.argv[1]=='--consumer-probe':child_consumer_probe(sys.argv[2])\n                                                            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py\", line 38, in child_consumer_probe\n    with patch.object(Path,'open',switched_open):module.main()\n                                                 ~~~~~~~~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 195, in main\n    with np.load(io.BytesIO(raw(a)), allow_pickle=False) as old, np.load(io.BytesIO(raw(b)), allow_pickle=False) as new:\n                                                                                    ~~~^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 121, in raw\n    raise ValueError('Deserialization opened a different file')\nValueError: Deserialization opened a different file\n",
+      "stdout": ""
+    },
+    {
+      "case": "parent_swap_during_torch_consumer_is_rejected",
+      "injection_executed": true,
+      "returncode": 1,
+      "status": "passed",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py\", line 160, in <module>\n    if len(sys.argv)==3 and sys.argv[1]=='--consumer-probe':child_consumer_probe(sys.argv[2])\n                                                            ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/historical_comparison_probe.py\", line 38, in child_consumer_probe\n    with patch.object(Path,'open',switched_open):module.main()\n                                                 ~~~~~~~~~~~^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 201, in main\n    new = torch.load(io.BytesIO(raw(b)), map_location='cpu', weights_only=True)\n                                ~~~^^^\n  File \"/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/analysis/compare_historical.py\", line 121, in raw\n    raise ValueError('Deserialization opened a different file')\nValueError: Deserialization opened a different file\n",
+      "stdout": ""
+    }
+  ],
+  "historical_files_hardlinked_only": true,
+  "no_model_or_provider_execution": true,
+  "schema": "historical_comparison_independent_probe.v1",
+  "script_record_after": {
+    "bytes": 12305,
+    "sha256": "7f69b568cf4a8b5dfcaa9f675d9413652117da8747930147575c42e7c02527b0"
+  },
+  "script_record_before": {
+    "bytes": 12305,
+    "sha256": "7f69b568cf4a8b5dfcaa9f675d9413652117da8747930147575c42e7c02527b0"
+  },
+  "source_record": {
+    "bytes": 11724,
+    "sha256": "29340d155585fd3c1018c87f2b71c1438a081e8b02af1b407d51e422c33de2e9"
+  },
+  "source_stable": true,
+  "temporary_root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12"
+}

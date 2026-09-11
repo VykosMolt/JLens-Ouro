@@ -1,0 +1,1564 @@
+{
+  "prospective_design": {
+    "target": "17 nominal sum classes a+b; same outer unordered-pair folds",
+    "locations": "five original inner-selected loop-1 physical layers, fixed",
+    "learning_curve": "18 versus 36 pairs; 3 deterministic class-covering subsets per fold",
+    "subset_seeds": [
+      20260907,
+      20260908,
+      20260909
+    ],
+    "regularization": "same mean-loss L2 strength: C_half=C_full*n_full/n_half",
+    "C_check": "one added C=10 chosen only if existing inner-validation accuracy improves",
+    "optimization_check": "same C/full data with tol=1e-6 versus 1e-4; max_iter=4000 versus2000",
+    "uncertainty": "20,000 paired eligible-pair cluster resamples; fixed selections and subsets"
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "physical_layer_one_based": 39,
+      "original": {
+        "C": 0.1,
+        "training_rows": 520,
+        "n_iter": 27,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.5497578750140262
+      },
+      "tight": {
+        "C": 0.1,
+        "training_rows": 520,
+        "n_iter": 268,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.5414577302824526
+      },
+      "C10_inner": {
+        "C": 10.0,
+        "training_rows": 408,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 2.572174925268868
+      },
+      "C10_inner_accuracy": 0.7142857142857143,
+      "original_inner_accuracy": 0.7232142857142857,
+      "extended_C_selected": 0.1,
+      "extended": {
+        "C": 0.1,
+        "training_rows": 520,
+        "n_iter": 27,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.5497578750140262
+      },
+      "subsets": [
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 0.19696969696969696,
+            "training_rows": 264,
+            "n_iter": 21,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.3048949244802015
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 0.20967741935483872,
+            "training_rows": 248,
+            "n_iter": 20,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.2169374302043148
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 0.203125,
+            "training_rows": 256,
+            "n_iter": 22,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.2779757264165568
+          }
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "physical_layer_one_based": 31,
+      "original": {
+        "C": 1.0,
+        "training_rows": 512,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.962263075873048
+      },
+      "tight": {
+        "C": 1.0,
+        "training_rows": 512,
+        "n_iter": 132,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.8084546657254137
+      },
+      "C10_inner": {
+        "C": 10.0,
+        "training_rows": 400,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 2.0675214378294227
+      },
+      "C10_inner_accuracy": 0.375,
+      "original_inner_accuracy": 0.375,
+      "extended_C_selected": 1.0,
+      "extended": {
+        "C": 1.0,
+        "training_rows": 512,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.962263075873048
+      },
+      "subsets": [
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.206896551724138,
+            "training_rows": 232,
+            "n_iter": 9,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.4256329308321074
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.064516129032258,
+            "training_rows": 248,
+            "n_iter": 10,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.4459745124385126
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.1333333333333333,
+            "training_rows": 240,
+            "n_iter": 10,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.4908256208300847
+          }
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "physical_layer_one_based": 29,
+      "original": {
+        "C": 1.0,
+        "training_rows": 528,
+        "n_iter": 12,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.8553804648766532
+      },
+      "tight": {
+        "C": 1.0,
+        "training_rows": 528,
+        "n_iter": 153,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.6954978202740427
+      },
+      "C10_inner": {
+        "C": 10.0,
+        "training_rows": 408,
+        "n_iter": 14,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.8510445108870528
+      },
+      "C10_inner_accuracy": 0.625,
+      "original_inner_accuracy": 0.6333333333333333,
+      "extended_C_selected": 1.0,
+      "extended": {
+        "C": 1.0,
+        "training_rows": 528,
+        "n_iter": 12,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.8553804648766532
+      },
+      "subsets": [
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 1.8857142857142857,
+            "training_rows": 280,
+            "n_iter": 14,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.5558137511015258
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 1.8857142857142857,
+            "training_rows": 280,
+            "n_iter": 11,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.527898107254363
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.0,
+            "training_rows": 264,
+            "n_iter": 12,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.5255103909840897
+          }
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "physical_layer_one_based": 42,
+      "original": {
+        "C": 1.0,
+        "training_rows": 512,
+        "n_iter": 14,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 2.7039875183782014
+      },
+      "tight": {
+        "C": 1.0,
+        "training_rows": 512,
+        "n_iter": 208,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 2.3259857325644084
+      },
+      "C10_inner": {
+        "C": 10.0,
+        "training_rows": 392,
+        "n_iter": 14,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 2.7318962706509673
+      },
+      "C10_inner_accuracy": 0.48333333333333334,
+      "original_inner_accuracy": 0.475,
+      "extended_C_selected": 10.0,
+      "extended": {
+        "C": 10.0,
+        "training_rows": 512,
+        "n_iter": 14,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 3.245972983130884
+      },
+      "subsets": [
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 1.9393939393939394,
+            "training_rows": 264,
+            "n_iter": 18,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.934034765272647
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.0,
+            "training_rows": 256,
+            "n_iter": 12,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.835423586056967
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.064516129032258,
+            "training_rows": 248,
+            "n_iter": 13,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.9481203824513862
+          }
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "physical_layer_one_based": 26,
+      "original": {
+        "C": 1.0,
+        "training_rows": 520,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.9613602455767245
+      },
+      "tight": {
+        "C": 1.0,
+        "training_rows": 520,
+        "n_iter": 157,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.824994044391745
+      },
+      "C10_inner": {
+        "C": 10.0,
+        "training_rows": 408,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 2.0087206848330643
+      },
+      "C10_inner_accuracy": 0.5357142857142857,
+      "original_inner_accuracy": 0.5357142857142857,
+      "extended_C_selected": 1.0,
+      "extended": {
+        "C": 1.0,
+        "training_rows": 520,
+        "n_iter": 13,
+        "train_accuracy": 1.0,
+        "warnings": [],
+        "coefficient_l2": 1.9613602455767245
+      },
+      "subsets": [
+        {
+          "pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 1.911764705882353,
+            "training_rows": 272,
+            "n_iter": 12,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.5906514173563524
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.1666666666666665,
+            "training_rows": 240,
+            "n_iter": 10,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.4043873257620003
+          }
+        },
+        {
+          "pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              6,
+              8
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "training_diagnostic": {
+            "C": 2.2413793103448274,
+            "training_rows": 232,
+            "n_iter": 11,
+            "train_accuracy": 1.0,
+            "warnings": [],
+            "coefficient_l2": 1.4757199747167555
+          }
+        }
+      ]
+    }
+  ],
+  "performance": {
+    "original": {
+      "point": 0.59375,
+      "ci95": [
+        0.4524647887323944,
+        0.7253521126760564
+      ],
+      "per_fold": [
+        0.5865384615384616,
+        0.5588235294117647,
+        0.2125,
+        0.8455882352941176,
+        0.6083333333333333
+      ]
+    },
+    "tight": {
+      "point": 0.6111111111111112,
+      "ci95": [
+        0.46875,
+        0.7432432432432432
+      ],
+      "per_fold": [
+        0.5769230769230769,
+        0.5735294117647058,
+        0.25,
+        0.8676470588235294,
+        0.6333333333333333
+      ]
+    },
+    "C_extended": {
+      "point": 0.5954861111111112,
+      "ci95": [
+        0.45714285714285713,
+        0.7256944444444444
+      ],
+      "per_fold": [
+        0.5865384615384616,
+        0.5588235294117647,
+        0.2125,
+        0.8529411764705882,
+        0.6083333333333333
+      ]
+    },
+    "half": {
+      "point": 0.5543981481481481,
+      "ci95": [
+        0.4289207516339869,
+        0.6752312832952813
+      ],
+      "per_fold": [
+        0.5224358974358974,
+        0.5245098039215687,
+        0.3208333333333333,
+        0.767156862745098,
+        0.5305555555555556
+      ]
+    }
+  },
+  "contrasts": {
+    "original_minus_half": {
+      "point": 0.03935185185185187,
+      "ci95": [
+        -0.028755868544600882,
+        0.10944642857142851
+      ]
+    },
+    "tight_minus_original": {
+      "point": 0.017361111111111112,
+      "ci95": [
+        0.0017123287671232932,
+        0.03298611111111116
+      ]
+    },
+    "C_extended_minus_original": {
+      "point": 0.001736111111111111,
+      "ci95": [
+        -0.010563380281690127,
+        0.015845070422535246
+      ]
+    }
+  }
+}

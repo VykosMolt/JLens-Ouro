@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "purpose": "Local source/calibration staging; no rental or fit has run. Read deployment/README.md for remaining runtime/orchestration requirements.",
+  "budget_usd": {
+    "combined": 20,
+    "ouro": 10,
+    "huginn_conditional": 10
+  },
+  "funding_status": "user_intends_to_fund; availability_not_verified",
+  "files": {
+    "jacobian-lens/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "jacobian-lens/README.md": {
+      "bytes": 3806,
+      "sha256": "350f7dc3d7a6921a211083506dc065593b938b7bf223e8d79530373821c3f4b7"
+    },
+    "jacobian-lens/jlens/__init__.py": {
+      "bytes": 637,
+      "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a"
+    },
+    "jacobian-lens/jlens/_logging.py": {
+      "bytes": 1804,
+      "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae"
+    },
+    "jacobian-lens/jlens/examples.py": {
+      "bytes": 6300,
+      "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d"
+    },
+    "jacobian-lens/jlens/fitting.py": {
+      "bytes": 15078,
+      "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080"
+    },
+    "jacobian-lens/jlens/hf.py": {
+      "bytes": 8182,
+      "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222"
+    },
+    "jacobian-lens/jlens/hooks.py": {
+      "bytes": 2735,
+      "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081"
+    },
+    "jacobian-lens/jlens/lens.py": {
+      "bytes": 8646,
+      "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808"
+    },
+    "jacobian-lens/jlens/protocol.py": {
+      "bytes": 1774,
+      "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344"
+    },
+    "jacobian-lens/jlens/vis.py": {
+      "bytes": 19984,
+      "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6"
+    },
+    "jacobian-lens/pyproject.toml": {
+      "bytes": 847,
+      "sha256": "b498f1977a64df5ebd0d990088e4956874f62ead1adba8d62f2acf36780a52b0"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/GPU_AND_BUDGET_AFTER_OPTIMIZATION.md": {
+      "bytes": 3787,
+      "sha256": "b1d648394c8de534bf181cd8f3c21d9ff7eb0daf8e40ff02d0c7bc71a2961eda"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/HUGINN_BUDGET.md": {
+      "bytes": 4499,
+      "sha256": "57e248f2b40c00aea12c67fcb6bfa80503b4707e696cece842f13a2de9c9bf42"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/EVIDENCE.md": {
+      "bytes": 10505,
+      "sha256": "ae8e9a5932d762e331bb17d82110606658a3cac5364a292d67de90527c6283e1"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_01.json": {
+      "bytes": 94410,
+      "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_02.json": {
+      "bytes": 98110,
+      "sha256": "32d712b0e39b3ddd1961898e3f5ef489b16d0374b15d540c2f92c80eef6fec95"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_03.json": {
+      "bytes": 96617,
+      "sha256": "3d320cb905a81c3483cf7e608374ed1086859ec668d84a8f0c3ee456343c3ca9"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_04.json": {
+      "bytes": 95461,
+      "sha256": "798ec56c7c66bb0b5db51083931fb98009bf7ca4d6f5ef72fb487ecce0a6a2ba"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_fit_05.json": {
+      "bytes": 92492,
+      "sha256": "c7fa708f90a0cba1fae0bf10b631d35f794736bcdbdcb796c37f6bb5ee7e20c5"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_plan.json": {
+      "bytes": 240132,
+      "sha256": "0c40584c8a0d1f7ca12eb3e78837627bb21f484984ee082095f4e4ba29f9059e"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/audit/calibration_verification.json": {
+      "bytes": 1648,
+      "sha256": "41b15adc2516ad85c25093afd631ca1694d874b364637831df2a4c443b9c05ff"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/README.md": {
+      "bytes": 4674,
+      "sha256": "e87225500cd65f1639ee79df3f7a452abcac45878b15376f5c64399c7dcb53cc"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/deployment/environment.json": {
+      "bytes": 649,
+      "sha256": "a50785f71f611672d9236d78e46501a2bbfa60899bec5502ce9cb41fc88e7315"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/design_audit/CONTRACT.md": {
+      "bytes": 12959,
+      "sha256": "37894db82f4cb4b3c821415bce9402a0d215c675962cb866fe6bb7fc80b7cecb"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/design_audit/verify_estimators.py": {
+      "bytes": 20725,
+      "sha256": "270c5e5f5e18df4ff9d741cc25930e8ab1fb3759f986808459afb23b7e7f6ea4"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py": {
+      "bytes": 10107,
+      "sha256": "1438816d87b730e45e4ae2df79113baa645f19b3c84eb690194c13ac622e8a8d"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/CONTRACT.md": {
+      "bytes": 29724,
+      "sha256": "a87de47688c7d51f0f9a02c93b80efab9297829eb35f341b293b76c4a27b626f"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/FINAL_VERIFICATION.json": {
+      "bytes": 27083,
+      "sha256": "79399d667eb85f03e924ec4f49d3d6a9aa42f5a14791d0bb2aca4c81a059f3d7"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/RESULTS.md": {
+      "bytes": 7373,
+      "sha256": "ec3a3e31f6facae404020b46dd72530fc0e0089099d6a4c22d295d481482cf1a"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py": {
+      "bytes": 14000,
+      "sha256": "4f63957237e2cd9309c788c9af67ed5471928f6fbc0b18095e6f903adc0ff944"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py": {
+      "bytes": 23288,
+      "sha256": "b2286fd25eb07553c8e27df3883cdce28c71907343c163d0c5db5da25a863e78"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/integrated_final_cpu.json": {
+      "bytes": 55122,
+      "sha256": "649aa218ce4c5fc43b9f0e628b2a7e882499af0f5f5fabefc6126df6d72ae67f"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_fitting.py": {
+      "bytes": 9498,
+      "sha256": "6ba31269b98cca39f9a27a0ede572abf466abfbb166bc563e85eb796aa4f616f"
+    },
+    "jacobian-lens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py": {
+      "bytes": 21300,
+      "sha256": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a"
+    },
+    "ouro_project/src/ouro_jlens/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ouro_project/src/ouro_jlens/bench.py": {
+      "bytes": 6251,
+      "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d"
+    },
+    "ouro_project/src/ouro_jlens/evidence.py": {
+      "bytes": 12530,
+      "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879"
+    },
+    "ouro_project/src/ouro_jlens/fit_lens.py": {
+      "bytes": 72898,
+      "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0"
+    },
+    "ouro_project/src/ouro_jlens/recurrent.py": {
+      "bytes": 5777,
+      "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+    }
+  },
+  "calibration": {
+    "fits": 5,
+    "prompts_each": 100,
+    "total_distinct_texts": 500
+  }
+}

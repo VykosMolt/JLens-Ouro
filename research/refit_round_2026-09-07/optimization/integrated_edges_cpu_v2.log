@@ -1,0 +1,2315 @@
+{
+  "status": "passed",
+  "scope": "CPU tiny causal model only; no real Ouro fit or derivative check",
+  "torch_version": "2.12.0.dev20260407+cu128",
+  "source_sha256": {
+    "research/refit_round_2026-09-07/fit_estimators.py": "98eadc5c42e53ac7e89a33892733a980e7b4cc0a9aec05542b4c803c5c4213a7",
+    "research/refit_round_2026-09-07/design_audit/verify_estimators.py": "3d772938dcc7b787cd867036aa6c17b87af58fe0663d09bbd612250411782002",
+    "jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+    "jlens/hooks.py": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+    "tests/tiny.py": "af208b3d6a448f63c27de5667de22065cf9d2b3a184699bb9e66acd3c11b41ad"
+  },
+  "tolerances": {
+    "float64_algebra_abs_and_relative": 1e-10,
+    "api_fp32_absolute": 2e-07,
+    "api_fp32_relative": 1e-06,
+    "fp32_finite_difference_absolute": 1e-05,
+    "fp32_finite_difference_relative": 0.02,
+    "finite_difference_adjacent_passing_steps_required": 2
+  },
+  "numerical_checks": {
+    "target_source_position_cases": [
+      {
+        "target": 1,
+        "sources": [
+          0
+        ],
+        "q_enumerated": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "target": 2,
+        "sources": [
+          0,
+          1
+        ],
+        "q_enumerated": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "target": 3,
+        "sources": [
+          0,
+          1,
+          2
+        ],
+        "q_enumerated": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "dense_upstream_parity": "bitwise equal",
+    "max_float64_algebra_abs_error": 2.220446049250313e-16,
+    "max_api_fp32_abs_error": 1.0493493141083832e-07,
+    "wrong_source_mean_foil_relative_error_min": 0.666666659825673,
+    "dimension_batches_checked": [
+      1,
+      2
+    ],
+    "width": 3,
+    "vjp_calls_per_sampled_prompt": 2,
+    "causal_forbidden_blocks": "exact zero"
+  },
+  "boundary_checks": {
+    "invalid_cases_rejected": 27,
+    "negative_layer_resolution": "passed"
+  },
+  "failure_cleanup_checks": {
+    "nonfinite_dense_and_sampled_rejected": true,
+    "hooks_clean_after_exceptions": true
+  },
+  "fp32_finite_differences": [
+    {
+      "source": 0,
+      "target": 2,
+      "p": 2,
+      "q": 2,
+      "relation": "same position",
+      "automatic_derivative": -0.3700913190841675,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": -0.3700888454914093,
+          "abs_error": 2.473592758178711e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": -0.37008795142173767,
+          "abs_error": 3.3676624298095703e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": -0.3700163662433624,
+          "abs_error": 7.495284080505371e-05,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": -0.3701617121696472,
+          "abs_error": 7.039308547973633e-05,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "p": 1,
+      "q": 3,
+      "relation": "past source",
+      "automatic_derivative": -0.035860247910022736,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": -0.03586238995194435,
+          "abs_error": 2.1420419216156006e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": -0.035860199481248856,
+          "abs_error": 4.842877388000488e-08,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": -0.03587043285369873,
+          "abs_error": 1.0184943675994873e-05,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": -0.03591764718294144,
+          "abs_error": 5.739927291870117e-05,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "p": 3,
+      "q": 1,
+      "relation": "forbidden future source",
+      "automatic_derivative": 0.0,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "p": 2,
+      "q": 2,
+      "relation": "same position",
+      "automatic_derivative": -0.332819402217865,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": -0.33281654119491577,
+          "abs_error": 2.86102294921875e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": -0.3328078091144562,
+          "abs_error": 1.1593103408813477e-05,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": -0.33277520537376404,
+          "abs_error": 4.419684410095215e-05,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": -0.3327789604663849,
+          "abs_error": 4.044175148010254e-05,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "p": 1,
+      "q": 3,
+      "relation": "past source",
+      "automatic_derivative": -0.01944887824356556,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": -0.01945132203400135,
+          "abs_error": 2.4437904357910156e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": -0.019439425319433212,
+          "abs_error": 9.452924132347107e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": -0.019465964287519455,
+          "abs_error": 1.708604395389557e-05,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": -0.019455725327134132,
+          "abs_error": 6.847083568572998e-06,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "p": 3,
+      "q": 1,
+      "relation": "forbidden future source",
+      "automatic_derivative": 0.0,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "p": 2,
+      "q": 2,
+      "relation": "same position",
+      "automatic_derivative": -0.28948381543159485,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": -0.2894837260246277,
+          "abs_error": 8.940696716308594e-08,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": -0.28948280215263367,
+          "abs_error": 1.0132789611816406e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": -0.2895165681838989,
+          "abs_error": 3.275275230407715e-05,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": -0.289398729801178,
+          "abs_error": 8.508563041687012e-05,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "p": 1,
+      "q": 3,
+      "relation": "past source",
+      "automatic_derivative": 0.006739847362041473,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": 0.006742670200765133,
+          "abs_error": 2.8228387236595154e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": 0.006743107456713915,
+          "abs_error": 3.2600946724414825e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": 0.006738734431564808,
+          "abs_error": 1.1129304766654968e-06,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": 0.006743006873875856,
+          "abs_error": 3.159511834383011e-06,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "p": 3,
+      "q": 1,
+      "relation": "forbidden future source",
+      "automatic_derivative": 0.0,
+      "steps": [
+        {
+          "epsilon": 0.01,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.003,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.001,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "epsilon": 0.0003,
+          "estimate": 0.0,
+          "abs_error": 0.0,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "optimized_eager": {
+    "cases": [
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float32",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.float64",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 5,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 2,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 1,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 2,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 4,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": false,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": false,
+        "compressed_payloads": 0,
+        "bitwise_equal": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "length": 7,
+        "target": 3,
+        "batch": 8,
+        "source_edges": true,
+        "compress": true,
+        "compressed_payloads": 3,
+        "bitwise_equal": true
+      }
+    ],
+    "partial_chunks_and_oversized_batch": true,
+    "missing_hooks_cleanup": true,
+    "invalid_batches_rejected": true,
+    "scope": "eager CPU path only; CUDA replay requires separate real-device checks"
+  }
+}

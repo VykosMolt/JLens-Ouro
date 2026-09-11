@@ -1,0 +1,20 @@
+{
+  "columns": 192,
+  "layouts": {
+    "fp64": {
+      "allrank_vs_saved": {
+        "differing": 2385630,
+        "equal": false,
+        "max_abs": 324.0
+      },
+      "logits_vs_executed": null,
+      "top10_vs_saved": {
+        "differing": 47504,
+        "equal": false,
+        "max_abs": 49147.0
+      }
+    }
+  },
+  "seconds": 69.0,
+  "staged_rank_rule_mismatched_items": 0
+}

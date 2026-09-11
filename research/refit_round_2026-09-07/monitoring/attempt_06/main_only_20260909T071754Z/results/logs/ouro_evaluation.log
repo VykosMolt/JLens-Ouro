@@ -1,0 +1,26 @@
+{"stage": "cache_states", "items": 148}
+{"stage": "raw_logit_lens", "virtual_columns": 192}
+{"stage": "fit_readout", "fit_id": 1}
+{"stage": "fit_readout", "fit_id": 2}
+{"stage": "fit_readout", "fit_id": 3}
+{"stage": "fit_readout", "fit_id": 4}
+{"stage": "fit_readout", "fit_id": 5}
+{
+  "status": "complete",
+  "schema": "ouro_refit_evaluation.v1",
+  "out": "/workspace/jlens/results/ouro_evaluation",
+  "fit_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "items": 148,
+  "files": 24,
+  "elapsed_seconds": 158.2429125609342,
+  "complete": {
+    "bytes": 887,
+    "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+  }
+}

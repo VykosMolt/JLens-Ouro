@@ -1,0 +1,1 @@
+{"deadline_utc":"2026-09-09T16:08:12.923896+00:00","maximum_attempts":5,"overall_budget_seconds":3600.0,"path":"ouro/fit_02/checkpoints/cursor_000100_c77feb54f72c4155ac109208b031cc81/state.pt","record":{"bytes":3204501185,"sha256":"474c6ca7ae552889ec8a936eccd5355b796300558a5a9af443cbdb8e33a5e95b"},"started_utc":"2026-09-09T15:08:12.923912+00:00"}

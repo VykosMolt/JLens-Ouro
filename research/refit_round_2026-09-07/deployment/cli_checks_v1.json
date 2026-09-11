@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "scope": "read-only production plan, invalid contracts, and shared identity with stdlib only; no model/GPU/cloud",
+  "runner_sha256": "f8c49c48f442d8d9df9a5f05c5b8ac229e7a76080c5791aedd2cfb949282d1cb",
+  "run_spec_sha256": "53641c11d3a14caa87e94f650689644ad84c87d18b6dc66e50e02d5187072083",
+  "cases": [
+    {
+      "case": "five_fit_plan_uses_stdlib_only_and_writes_no_output",
+      "passed": true
+    },
+    {
+      "case": "changed_target_layer",
+      "passed": true,
+      "reason": "run specification does not describe the frozen production settings"
+    },
+    {
+      "case": "changed_dim_batch",
+      "passed": true,
+      "reason": "run specification does not describe the frozen production settings"
+    },
+    {
+      "case": "changed_skip_first",
+      "passed": true,
+      "reason": "run specification does not describe the frozen production settings"
+    },
+    {
+      "case": "changed_calibration_bytes",
+      "passed": true,
+      "reason": "calibration file SHA256 mismatch: fit 1"
+    },
+    {
+      "case": "overlapping_calibration_sets",
+      "passed": true,
+      "reason": "the five independent calibration sets must contain 500 distinct paragraphs"
+    },
+    {
+      "case": "missing_runner_source_binding",
+      "passed": true,
+      "reason": "source manifest omits executable files: [('jlens', 'research/refit_round_2026-09-07/deployment/run_refits.py')]"
+    },
+    {
+      "case": "changed_model_manifest",
+      "passed": true,
+      "reason": "model manifest SHA256 mismatch"
+    },
+    {
+      "case": "changed_environment_manifest",
+      "passed": true,
+      "reason": "environment manifest SHA256 mismatch"
+    },
+    {
+      "case": "missing_execution_deadline_rejected_before_import_or_output",
+      "passed": true
+    },
+    {
+      "case": "shared_identity_accepts_same_runtime_rejects_changed_precision",
+      "passed": true
+    }
+  ]
+}

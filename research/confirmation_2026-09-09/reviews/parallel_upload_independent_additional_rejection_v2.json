@@ -1,0 +1,24 @@
+{
+  "schema": "confirmation_parallel_upload_additional_rejection.v1",
+  "status": "rejected_at_observation",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "finding": {
+    "id": "UPLOAD-03",
+    "status": "resolved_in_current_revision",
+    "severity_when_observed": "blocks_helper_use",
+    "rejected_helper_record": {
+      "bytes": 34551,
+      "sha256": "ae921721ba11b1df81259eab2a38493fea3f3a4dea70fd3999d36463be9ba951"
+    },
+    "trigger": "Cancel a child after it signals readiness and installs a SIGTERM-ignoring handler.",
+    "observed": "With SIGTERM-only cancellation the child remained active and the future incomplete after 0.3 seconds; manual SIGKILL was needed for the review fixture.",
+    "evidence": {
+      "temporary_fixture": "/tmp/parallel-term-review-eg5iowrx",
+      "future_active_after_cancel_seconds": 0.3,
+      "nonquiescent_record_count": 1,
+      "manual_SIGKILL_cleanup_passed": true
+    },
+    "resolution": "The revised cancellation path immediately sends SIGKILL to its owned process groups, including late registrations, and original transport cleanup proves quiescence."
+  },
+  "recorded_from_actual_prior_review_observation": true
+}

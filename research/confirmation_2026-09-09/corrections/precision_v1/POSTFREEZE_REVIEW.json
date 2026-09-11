@@ -1,0 +1,68 @@
+{
+  "actual_controller_load_run_config_passed": true,
+  "actual_controller_offline_make_plan_passed": true,
+  "added_files": [
+    "frozen/precision_correction.json"
+  ],
+  "all_other_spec_values_unchanged": true,
+  "archive_directory_receipt_exact_closure": true,
+  "archive_regular_members_verified": 58,
+  "attempt03_terminated_empty_failed_manifest_verified": true,
+  "bundle_record": {
+    "bytes": 327308,
+    "sha256": "5220dc9cad0c8b6966d3659aebecdffa5a89bfa37ee95a6f863b56080d9c67d3"
+  },
+  "candidate_diagnosis_parent_failure_provenance_verified": true,
+  "changed_existing_files": [
+    "evaluation/worker.py",
+    "frozen/implementation_review.json",
+    "frozen/output_contract.json",
+    "frozen/run_spec.json"
+  ],
+  "changed_spec_fields": [
+    "frozen_utc",
+    "implementation_review_record",
+    "precision_correction_record",
+    "run_id",
+    "source_records"
+  ],
+  "config_changes_only_run_id_and_new_absolute_paths": true,
+  "contract_changes_only_run_id_and_spec_sha": true,
+  "embedded_review_copy_exact": true,
+  "freeze_record": {
+    "bytes": 9299,
+    "sha256": "8f05445eae5505d9b97fef01b172d67de4b68f83cdcabf03222c75bbbffd2696"
+  },
+  "implementation_review_record": {
+    "bytes": 12905,
+    "sha256": "995917c81acba600da5079765489d2782cc67c05a4d48a8f976c03cc6a6a244c"
+  },
+  "new_confirmation_results_exposed": false,
+  "offline_admission": {
+    "balance_assumption_usd": 10.79,
+    "combined_ceiling_usd": 20.15530231507188,
+    "job_cap_usd": 3.77,
+    "live_balance_verified_by_this_review": false,
+    "prior_debit_record": {
+      "bytes": 4186,
+      "sha256": "b55f5f6e99a598a4c7227298b0bd9cfaf6e8d39c6ac97f39df77162bd86f652a"
+    },
+    "prior_spend_upper_usd": 16.38530231507188
+  },
+  "original_bundle_and_archive_unchanged": true,
+  "parent_freeze_record": {
+    "bytes": 7279,
+    "sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7"
+  },
+  "remaining_launch_requirements": [
+    "Fresh live provider admission by controller.",
+    "Fresh lease/publication namespace.",
+    "Unchanged original parallel upload helper and launcher.",
+    "Actual remote full precision/native/receiver/development gates must pass."
+  ],
+  "reviewed_utc": "2026-09-10T10:46:25.207452+00:00",
+  "schema": "confirmation_precision_postfreeze_review.v1",
+  "scope": "No cloud operations or model execution. Full local corrected closure and offline controller admission reviewed.",
+  "source_record_difference_only_worker": true,
+  "status": "passed"
+}

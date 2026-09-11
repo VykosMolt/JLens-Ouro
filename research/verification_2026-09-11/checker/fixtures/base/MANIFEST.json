@@ -1,0 +1,59 @@
+{
+ "created_by": "/home/moloch/jacobian-lens/research/verification_2026-09-11/checker/endpoint_checker.py",
+ "files": {
+  "population.json": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/population.json",
+   "source_sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087",
+   "sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087",
+   "note": "byte copy"
+  },
+  "expected_analysis.json": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/results/ouro_confirmation_20260911_fixed160_native1/analysis/analysis.json",
+   "source_sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe",
+   "note": "byte copy"
+  },
+  "readouts/raw.npz": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/readouts/raw.npz",
+   "source_sha256": "6bc1952eb7f1ee983f22b83f5057b4ef0329b1c8d292bfba9f9f8313f5f22da8",
+   "sha256": "604a6e7649965775d18b979955f736e3c745786a7088a7109dd5dc1611cf0211",
+   "allrank_sha256": "df414e18022f1f15ec019a17c793a265a7561f627d113d82a949788595675307",
+   "note": "allrank key only"
+  },
+  "readouts/fit01.npz": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/readouts/fit01.npz",
+   "source_sha256": "ba9987e584ee6bab86ab9503a33cb290e802e5accbaffdd84b4e75b472a8bb5e",
+   "sha256": "d9200f39f0aaa96d63a7f7f46f80ccc7866f232ac1ab8dde1591822ce62a2bb4",
+   "allrank_sha256": "c42c3f35da2e9227dd6f320fc9e657c374be3b00e3d51abe601f1d9c6270b12c",
+   "note": "allrank key only"
+  },
+  "readouts/fit02.npz": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/readouts/fit02.npz",
+   "source_sha256": "0d0d2bc21225add38e5b710d5851b81970d6f50189b2f769cb727c6c8bd395b1",
+   "sha256": "0cb68a3b055f67592fb22622dfb7cd8e8cebeddfe679a507d477ed79743472a7",
+   "allrank_sha256": "d29c51e497b2bf20c70b5949466971d023499331bac582a49782d5a5efb1271b",
+   "note": "allrank key only"
+  },
+  "readouts/penultimate.npz": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/readouts/penultimate.npz",
+   "source_sha256": "4d3eca0bd4a156833cf4a60f643167093ff7334a863e3b844f67fabe7efe1f17",
+   "sha256": "f1509d3353edde3236ff8b45330b04750ebad7b1ffad79f7129abfcea27eea41",
+   "allrank_sha256": "3c48738ff3b7c34a27082d5c53c73532efe720d67ef7a22cecebc84532472ece",
+   "note": "allrank key only"
+  },
+  "readouts/sampled_sum.npz": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/readouts/sampled_sum.npz",
+   "source_sha256": "d5bfeac0663113ec671831066823d1fcda747151345a534c40adfa04e618ed4c",
+   "sha256": "cdcc03ca838575facf74a49550483d235630ec2da51a658e48e027a2305a76f0",
+   "allrank_sha256": "b391b9c3c532eea0d82c310b73664e5ae5d01edcebdb7f3343cd95538c5bdd04",
+   "note": "allrank key only"
+  },
+  "readouts/diagonal.npz": {
+   "source": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results/readouts/diagonal.npz",
+   "source_sha256": "13262df2eaf68234551d42939c8ef7a1c7a7273e1f27727653e06d2003a6189d",
+   "sha256": "85d1078f61615b909da0afcb208b9d6f00d07317b7b82976b5ae330513e33587",
+   "allrank_sha256": "0df26563542bef05d714773b0894fe7845a67485dfd0bd3dc84a0313a0e51986",
+   "note": "allrank key only"
+  }
+ }
+}

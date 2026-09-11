@@ -1,0 +1,23 @@
+{
+  "files": {
+    "development.pt": {
+      "bytes": 19118320,
+      "sha256": "56024cf80246d0a1426c4741ad564414468021c6851c51d9422a1e86ae853fe5"
+    },
+    "fit01_rows.pt": {
+      "bytes": 125830761,
+      "sha256": "d83e10d51d0e6b7029054c05a3e0bb005bb0c59253af1edcf7f8ef72d9c77fdb"
+    },
+    "samples.pt": {
+      "bytes": 17902007,
+      "sha256": "aff63aaeef11f71e597fc30fff4d697d8fefea759f221e0aca8bc53535a08f12"
+    },
+    "states.pt": {
+      "bytes": 125833705,
+      "sha256": "9a54ac3f250b1ae2eb8c62e8f852b791509a0dd0a45bd09bf0e1bd177e827ae9"
+    }
+  },
+  "fit01_saved_sample_rows_matched": 30,
+  "schema": "shape_check_inputs.v1",
+  "script_sha256": "4e71703abc780d6dc3023656b25ce050187ad700ebc0a89e90481922f652ca51"
+}

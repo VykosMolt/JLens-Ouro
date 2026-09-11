@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "scope": "actual N100 orchestration with CPU 2x2 matrices only",
+  "equal_prompt_weight_with_varying_valid_positions": true,
+  "source_sha256": {
+    "research/refit_round_2026-09-07/design_audit/verify_estimators.py": "6c258608869d2d3b19257582b4df5b669dd40c22dc25ca03d0074c888609174b",
+    "research/refit_round_2026-09-07/deployment/run_refits.py": "25c334058cee200ab7fe998ac8baa22cef0a270ccee77648cbc5fadba05a3313",
+    "jlens/lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808"
+  },
+  "cases": [
+    {
+      "case": "resume_rejects_identity",
+      "passed": true
+    },
+    {
+      "case": "resume_rejects_prompt",
+      "passed": true
+    },
+    {
+      "case": "resume_rejects_token_rule",
+      "passed": true
+    },
+    {
+      "case": "stop37_resume_N100_and_verified_noop",
+      "passed": true
+    },
+    {
+      "case": "corrupt_checkpoint_rejected",
+      "passed": true
+    },
+    {
+      "case": "corrupt_final_artifact_rejected",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_checkpoint_state",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_checkpoint_metadata",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_checkpoint_seal",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_checkpoint_pointer",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_final_state",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_final_metadata",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_final_seal",
+      "passed": true
+    },
+    {
+      "case": "crash_resume_after_final_pointer",
+      "passed": true
+    },
+    {
+      "case": "reject_count_99",
+      "passed": true
+    },
+    {
+      "case": "reject_count_101",
+      "passed": true
+    },
+    {
+      "case": "reject_nonfinite",
+      "passed": true
+    },
+    {
+      "case": "reject_shape",
+      "passed": true
+    },
+    {
+      "case": "reject_keys",
+      "passed": true
+    },
+    {
+      "case": "reject_token_length",
+      "passed": true
+    },
+    {
+      "case": "reject_overflow",
+      "passed": true
+    },
+    {
+      "case": "deadline_stops_before_first_prompt",
+      "passed": true
+    }
+  ]
+}

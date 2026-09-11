@@ -1,0 +1,57 @@
+{
+  "generator": "/home/moloch/jacobian-lens/research/followup_2026-09-07/analyze_followup.py",
+  "generator_sha256": "cee07196dfb4a3de061444fd9541724f35431ed2b908e26372f74fab6363f15d",
+  "input_files": [
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/eval/n100_exit3/arrays.npz",
+      "sha256": "5f71ef3751031af3fe7330b0ad2714fe342692c8d520a6ea8d549e7f32163218"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/eval/n100_exit3/items.json",
+      "sha256": "9c9be773bd03b3a63d42c70a69b070c73f210984f5737fd655c66d6c3e43ae4c"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/eval/n100_exit3/task_names.json",
+      "sha256": "39143e67ab26516d3cd68d29d58e52521a727d39401119ad36f25fa167332db8"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved/jlens-b300-20260905-0359/eval/n100_exit3/provenance.json",
+      "sha256": "0144eff5068117d33bf6abd5a700d6717266822d8f10d68c8370632d14be531c"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict/arrays.npz",
+      "sha256": "76b489f13223f87e5ffc3bd36c7fc4777d78a90a4dc41d463b94e6b3218951d7"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict/items.json",
+      "sha256": "eace72eb2ef50757754d3c149d427207d78d8e2dfed5fe14cc181493a0ee58ac"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict/task_names.json",
+      "sha256": "39143e67ab26516d3cd68d29d58e52521a727d39401119ad36f25fa167332db8"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_strict/provenance.json",
+      "sha256": "f26f9572d2934a4e1dcc5870ef94fffaeb55c36c504655cb278bd6fe9bd1ef6a"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_pos-2_strict/arrays.npz",
+      "sha256": "f220b08af2123ab05c278787ffeee16f56ca49ca420a11622315e55257d42054"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_pos-2_strict/items.json",
+      "sha256": "bd4773c16f3b358663c1f308bc5fac64e3b8e87f63f3a0b99ade97560e758819"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_pos-2_strict/task_names.json",
+      "sha256": "39143e67ab26516d3cd68d29d58e52521a727d39401119ad36f25fa167332db8"
+    },
+    {
+      "path": "/home/moloch/ouro_project/artifacts/jlens/eval/b300_local_allexits_pos-2_strict/provenance.json",
+      "sha256": "fa3eebeea36f42724e02282b7ba1e3beaff14bafb2a420ac8bb68cfe9737920d"
+    }
+  ],
+  "numpy": "2.4.4",
+  "matplotlib": "3.10.9",
+  "bootstrap_draws": 20000
+}

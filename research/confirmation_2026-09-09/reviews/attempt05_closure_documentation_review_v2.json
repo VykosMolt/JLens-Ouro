@@ -1,0 +1,179 @@
+{
+  "schema": "confirmation_attempt05_closure_documentation_review.v2",
+  "recorded_utc": "2026-09-10T19:30:12.189707+00:00",
+  "reviewer": "independent adversarial documentation verifier (read-only)",
+  "supersedes": {
+    "path": "reviews/attempt05_closure_documentation_review.json",
+    "sha256": "354dd33afde4b34707462012846efdf91a88d283b990b4f737d6a6a0c58daa0e"
+  },
+  "scope": "Re-verification of repairs to v1 findings in README.md, REPORT.md, CLAIMS.md, resources/SPENDING_AND_SHUTDOWN.md and the RUN_LOG.md correction entry, plus a line-by-line necessity and writing review.",
+  "verdict": "PASS_WITH_FINDINGS",
+  "verdict_basis": "All v1 critical, major and minor findings are resolved or acceptably handled, and all re-checked facts, arithmetic, links and integrity bindings hold. Remaining findings are two minor wording inaccuracies (N01 review timing, N02 inferred billing hours) and editorial nits. No statement implies gate passage, a proven cause or existing scores.",
+  "v1_finding_status": {
+    "F01": "Resolved. REPORT.md:47 says no local record of the authorization was found (consistent with a broader search of all files modified 14:39Z–19:30Z); RUN_LOG correction (1). Residual nit N03.",
+    "F02": "Resolved via RUN_LOG correction (4).",
+    "F03": "Resolved via RUN_LOG correction (2).",
+    "F04": "Resolved: README.md:18 (options link), REPORT.md:39 and 57, CLAIMS.md:19 use hypothesis wording; RUN_LOG correction (5).",
+    "F05": "Resolved: SPENDING_AND_SHUTDOWN.md:21 and REPORT.md:55–60 scope the shortfall to the $3.77 and $6 admissions and say a smaller diagnostic is undesigned and unauthorized.",
+    "F06": "Resolved as framed: the user-requested 'inconclusive' is now qualified 'because it was not evaluated', 'suspended, not closed' and 'the frozen plan's single evaluation has not occurred' (REPORT.md:3 and 55); RUN_LOG correction (6).",
+    "F07": "Resolved: REPORT.md:47 attributes the field and duration to root after the quoted instruction. New timing issue N01.",
+    "F08": "Resolved: README.md:5.",
+    "F09": "Resolved: REPORT.md:37 and CLAIMS.md:20 report top-100 identity, earliest rank 270 and 1,322–1,391 rank changes, matching review v1. Residual nit N06.",
+    "F10": "Resolved: REPORT gives no count, and the RUN_LOG wording matches output_contract.json stages.development (the same five files).",
+    "F11": "Resolved: REPORT.md:3 and 29 describe all three equality checks.",
+    "F12": "Resolved via RUN_LOG correction (3).",
+    "F13": "Not changed; the stated rationale is incorrect but the discrepancy is immaterial. Retained as nit.",
+    "F14": "Resolved via RUN_LOG correction (4).",
+    "F15": "Resolved: REPORT no longer describes the SIGKILL; the RUN_LOG retains neutral wording.",
+    "F16": "Resolved: SPENDING_AND_SHUTDOWN.md:17 and RUN_LOG correction (7). Residual wording issue N02.",
+    "F17": "Acknowledged for future records; existing exclusive-create outputs correctly left unchanged.",
+    "F18": "Acknowledged; review v1 verified no actual impact.",
+    "F19": "Resolved: CLAIMS.md:17 renamed.",
+    "F20": "Resolved: REPORT.md:58.",
+    "F21": "Resolved: REPORT.md:29 and CLAIMS.md:22."
+  },
+  "findings": [
+    {
+      "id": "N01",
+      "severity": "minor",
+      "file": "REPORT.md",
+      "line": 47,
+      "statement": "\"root extended only the setup deadline by 15 minutes under independent review\"",
+      "evidence": "SETUP_DEADLINE_AMENDMENT.json records the change at 18:13:54Z; attempt05_deadline_amendment_review.json reviewed it at 18:16:56Z. The review followed the change, whereas 'under independent review' reads as prior or concurrent oversight.",
+      "correction": "Write: 'root extended only the setup deadline by 15 minutes; independent review then passed.'"
+    },
+    {
+      "id": "N02",
+      "severity": "minor",
+      "file": "resources/SPENDING_AND_SHUTDOWN.md",
+      "line": 17,
+      "statement": "\"The attempt05 pod billing record ($1.988154) probably lags, since it covers about 2.81 of 3.62 hours.\"",
+      "evidence": "The billing record reports amounts only; it does not state the hours covered. 2.81 is derived as gpuAmount 1.9409322 / $0.69 per hour. The premise is an inference presented as record content.",
+      "correction": "Write: 'The attempt05 pod billing record ($1.988154) probably lags: its GPU charge equals about 2.81 hours at $0.69/h, against 3.62 lease hours.'"
+    },
+    {
+      "id": "F13",
+      "severity": "nit",
+      "file": "RUN_LOG.md",
+      "line": 162,
+      "statement": "\"Remaining authorization under the $25 cap is $3.354432036233558.\" Left unchanged on the grounds that it is the same value in a different format.",
+      "evidence": "That rationale is incorrect: float('3.354432036233558') != 3.3544320362335576, the value recorded in ATTEMPT05_SPENDING_AND_SHUTDOWN.json. They differ by one double (about 4e-16), which is immaterial to any conclusion.",
+      "correction": "No change is required. If the log is corrected again, quote 3.3544320362335576 or the rounded $3.354432."
+    },
+    {
+      "id": "N03",
+      "severity": "nit",
+      "file": "RUN_LOG.md",
+      "line": 167,
+      "statement": "Correction (1): \"the controller required only a user-notification timestamp (14:54:31Z)\".",
+      "evidence": "In lease.py create(), validate_notice is the only user-related check: a timestamp within 300 s. LEASE.json user_notice_utc (2026-09-10T14:54:31.769841+00:00) is identical to the pre-creation observation's recorded_utc, so it is not independent evidence of any user message. The accompanying statement that no authorization record was found is accurate.",
+      "correction": "If a further correction is appended, say the notice timestamp equals the pre-creation observation time and is not evidence of user contact or approval. Otherwise no change."
+    },
+    {
+      "id": "N04",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 39,
+      "statement": "\"The criterion is exact equality, so attempt05 is not accepted after the fact. It was the first attempt in this round to reach this gate.\"",
+      "evidence": "The first sentence repeats REPORT.md:3 ('The gate remains failed') and REPORT.md:60 ('Either way, attempt05 stays failed'). The second is implied by REPORT.md:45 and README.md:5 ('Four primary attempts stopped before the native gate').",
+      "correction": "Delete both sentences."
+    },
+    {
+      "id": "N05",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 49,
+      "statement": "\"leaving $3.354432, which is below the frozen $3.77 attempt cap\" and \"See [spending and shutdown](...) and the [run log](...).\"",
+      "evidence": "The cap comparison is repeated at REPORT.md:55. REPORT.md:51 links SPENDING_AND_SHUTDOWN.md again two lines later, and README links the run log.",
+      "correction": "Drop the 'which is below…' clause and the 'See…' sentence."
+    },
+    {
+      "id": "N06",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 37,
+      "statement": "\"Deeper orderings differ, the earliest at zero-based rank 270\" (CLAIMS.md:20 likewise).",
+      "evidence": "270 is the minimum across items (mars-color). The per-item earliest changed ranks are 707, 2,567 and 270 (review v1 recomputation), so the sentence can be read as a per-item property.",
+      "correction": "Write 'the earliest at zero-based rank 270 (mars-color)'."
+    },
+    {
+      "id": "N07",
+      "severity": "nit",
+      "file": "README.md",
+      "line": 5,
+      "statement": "\"Status: recovery concluded with 8 of 16 historical binaries available; the prospective confirmation is inconclusive because it was not evaluated, and is suspended.\"",
+      "evidence": "One sentence carries two statuses, and the trailing ', and is suspended' is awkward. The content is accurate: FINDINGS.md:11 gives 8 of 16.",
+      "correction": "Write: '**Status:** recovery concluded (8 of 16 historical binaries available). The prospective confirmation is inconclusive: it was not evaluated and is suspended.'"
+    },
+    {
+      "id": "N08",
+      "severity": "nit",
+      "file": "CLAIMS.md",
+      "line": 3,
+      "statement": "\"Status: **the prospective confirmation is inconclusive: it was not evaluated and is suspended.**\"",
+      "evidence": "Stacking two colons ('Status:' then 'inconclusive:') makes the sentence hard to read.",
+      "correction": "Write: 'Status: **inconclusive — the prospective confirmation was not evaluated and is suspended.**'"
+    },
+    {
+      "id": "N09",
+      "severity": "nit",
+      "file": "README.md",
+      "line": 15,
+      "statement": "\"... and no pods remain.\"",
+      "evidence": "This states a present condition from a past observation (18:43:00Z).",
+      "correction": "Write 'and the final observation lists no pods'."
+    },
+    {
+      "id": "N10",
+      "severity": "nit",
+      "file": "REPORT.md",
+      "line": 6,
+      "statement": "\"The frozen endpoint, the item-weighted mean excess hit@10 difference over loop 4, physical layers 26–37, was never computed.\"",
+      "evidence": "The nested appositive with internal commas is hard to parse, and it omits that the difference is fit01 minus raw.",
+      "correction": "Write: 'Unresolved: the frozen endpoint (item-weighted mean excess hit@10, fit01 minus raw, loop 4 physical layers 26–37) was never computed.'"
+    },
+    {
+      "id": "N11",
+      "severity": "nit",
+      "file": "resources/SPENDING_AND_SHUTDOWN.md",
+      "line": 19,
+      "statement": "\"Attempt05 failed the frozen exact native-logit gate before any new-item scoring. Its evidence is preserved, and root explicitly authorized its teardown.\"",
+      "evidence": "The scientific-status sentence repeats README/REPORT/CLAIMS in a document meant to stay separate from scientific completion; only the teardown authorization is relevant here. Line 3 also says the 'lease verified termination', where the lease records it.",
+      "correction": "Write: 'Root explicitly authorized attempt05's teardown after its failure evidence was [preserved](...).' On line 3, write 'lease records verified termination'."
+    },
+    {
+      "id": "N12",
+      "severity": "nit",
+      "file": "CLAIMS.md",
+      "line": 22,
+      "statement": "\"Deployed hashes, verified shutdown and preservation of failure evidence are demonstrated.\"",
+      "evidence": "The row cites preserved failure and shutdown records, but the previous citation for deployed hashes (controller/DEPLOYED_PRIMARY_RETRY_02.json) was dropped.",
+      "correction": "Restore the [retry deployment](controller/DEPLOYED_PRIMARY_RETRY_02.json) link."
+    }
+  ],
+  "run_log": {
+    "bytes": 31613,
+    "sha256": "3916ce608b415229821193071229ac837e5a13621af551222d4a386de4bbe778",
+    "prefix_30578_sha256": "b74658ef10e95406c69f6a898c56c5f7f576fe4357071774a600205ae6e2cea2",
+    "prefix_24554_sha256": "f75f750a1d0ac2f049c74d28e3a48f413cc903558af6cca42a3907c18c4fdc40",
+    "correction_entry_heading_line": 165,
+    "correction_entry_body_line": 167
+  },
+  "checks_performed": [
+    "RUN_LOG.md: 31,613 bytes, sha256 3916ce608b415229821193071229ac837e5a13621af551222d4a386de4bbe778. The first 30,578 bytes have sha256 b74658ef10e95406c69f6a898c56c5f7f576fe4357071774a600205ae6e2cea2 (prior state); the first 24,554 bytes still match f75f750a…. The correction entry is headed 2026-09-10T19:24:57.336339Z, consistent with the file mtime (19:24:57.335Z), and leaves the earlier entries unchanged.",
+    "Checked each item of the RUN_LOG correction against evidence: (1) no authorization record in a grep for authoriz/approv across all files modified 14:39Z–19:30Z, and lease.py validate_notice/create() examined; (2) ROOT_TEARDOWN_EXECUTION.json has no timestamp field; (3) the amendment review's compared fields; (4) no preserved process check; (5)–(7) consistent with forensics and spending records and the $0.006328 arithmetic.",
+    "Read the full rewritten README, REPORT, CLAIMS and SPENDING_AND_SHUTDOWN.md and ran sentence-level diffs of REPORT/CLAIMS against scratchpad/pre_edit. The REPORT 'Frozen new-item test' paragraph (line 25) and the CLAIMS closing sentence (line 24) are byte-identical to the pre-edit originals, as are untouched recovery, benchmark and Huginn text and claim rows 7–11, 13–15 and 21.",
+    "Traced every numeric and factual statement in the rewritten docs to primary records and review v1 recomputation. Covered: 8 of 16 binaries; three equality checks; 112/147,456; 0.03125; 6.05e-6; 106 one-step BF16 differences; top-100 identical; earliest rank 270; 1,322–1,391 rank changes; 14:55:06Z; three upload interruptions; 15-minute extension; launcher after the original deadline; 19 preserved files; 18:32:19Z; $2.558589, $21.645568, $3.354432; $0.415568 and $2.645568 shortfalls; $1.988154; $2.552261; $0.006328; 2.81 and 3.62 hours; 18:43:00Z; HTTP 404.",
+    "Confirmed 'development-stage files' against output_contract.json stages.development.",
+    "Arithmetic: float('3.354432036233558') != 25 - 21.645567963766442 == 3.3544320362335576.",
+    "Links: all 65 relative markdown links in the four docs resolve, including README.md#continuing-the-confirmation → REPORT.md heading anchor.",
+    "Integrity: after the v1 review, only README.md, REPORT.md, CLAIMS.md, SPENDING_AND_SHUTDOWN.md, RUN_LOG.md and the v1 review files changed in the round; no new records and no leftover checks script. Re-hashed unchanged: FREEZE.json 8148c2ab…, bundle.tar.gz a122f6ca…, precision_v1 bundle 5220dc9c…, attempt05 LEASE.json 449270bc…, final observation 8deac26f…, ATTEMPT05_SPENDING_AND_SHUTDOWN.json 6dc2885c…, preserved failure 4e386e5a…, forensics 173be34e…, native.pt aa6a79bc…, MANIFEST.json b84a5d84…, attempt01–04 leases, and prior-round REPORT/CLAIMS/RUN_LOG baselines.",
+    "Line-by-line necessity and writing review of the four docs and the correction entry under the user's standard. Cross-document repetition of the status and continuation requirement was accepted because each document must stand alone; within-document redundancy was flagged."
+  ],
+  "checks_not_performed": [
+    "Provider-side, network, SSH and GPU checks: not permitted.",
+    "Content of user authorizations outside local records: not available.",
+    "The coordinator's independent match of the stable-sort statistics: no record to inspect; the values match review v1's recomputation, which was not repeated here.",
+    "Deleted local checks script: nothing to inspect; confirmed absent from the round directory."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "huginn_partial_export_local_probe.v1",
+  "status": "passed",
+  "checks": [
+    "all evaluation sources compile",
+    "sealed N20 checkpoint exported byte-exact with explicit incomplete classification",
+    "no final lens",
+    "corrupt sealed checkpoint rejected"
+  ],
+  "limitation": "Synthetic opaque binary tests sealed evidence retention only, not tensor loadability or complete science acceptance. Test assertions completed in prior command; initial proof publication failed because reviews directory did not exist.",
+  "source_records": {
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/worker.py": {
+      "bytes": 10818,
+      "sha256": "ece213a5f8a6843eecc2869e14495d0f3dc312184f409f42cfaebb26048a69c8"
+    },
+    "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/evaluation/export_fit.py": {
+      "bytes": 6195,
+      "sha256": "7c10cdc444b04abe7cccb9907bbb011a427de6d6616a5cba64580c2b93cf7e91"
+    }
+  }
+}

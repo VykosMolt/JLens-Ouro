@@ -1,0 +1,17 @@
+{"arm": "raw", "seconds": 12.2}
+{"arm": "fit01", "seconds": 14.9}
+{"arm": "fit02", "seconds": 14.8}
+{"arm": "penultimate", "seconds": 14.9}
+{"arm": "sampled_sum", "seconds": 15.0}
+{"arm": "diagonal", "seconds": 14.9}
+local_cuda_regenerated_states__executed exit 0
+local_cuda_regenerated_states__perturb_delta_0.03125_max exit 0
+local_cuda_regenerated_states__perturb_delta_0.03125_min exit 0
+local_cuda_regenerated_states__perturb_delta_0.125_max exit 0
+local_cuda_regenerated_states__perturb_delta_0.125_min exit 0
+local_cuda_regenerated_states__ties_against_every_name exit 0
+local_cuda_regenerated_states__ties_favor_every_name exit 0
+local_cuda_regenerated_states__ties_maximize_primary exit 0
+local_cuda_regenerated_states__ties_minimize_primary exit 0
+local_cpu_fp64__fp64 exit 0
+chain exit 0

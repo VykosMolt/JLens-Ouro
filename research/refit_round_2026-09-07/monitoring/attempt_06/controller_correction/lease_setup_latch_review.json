@@ -1,0 +1,67 @@
+{
+  "deployment_status": "not deployed; no historical controller modified or restarted",
+  "outstanding_findings": [],
+  "proof_assessment": {
+    "case_count": 7,
+    "case_names": [
+      "success_restart_missing_then_verified",
+      "never_setup",
+      "mismatched_lease_latch",
+      "mismatched_pod_latch",
+      "unvalidated_status_cannot_latch",
+      "truthy_non_boolean_cannot_latch",
+      "stale_observer_identity_cannot_persist"
+    ],
+    "limits": "Synthetic evidence supports this bounded future correction. It does not establish the exact unrecorded incident SSH response, test real provider behavior, recover lost artifact bytes, or grant deployment acceptance for another source revision.",
+    "negative_cases": "Never-completed setup and wrong lease/pod markers still reach the setup deadline; wrong remote lease raises the existing supervision ValueError without a latch; integer1 cannot latch; stale observed lease/pod identity is rejected with state bytes unchanged.",
+    "patch_application": "The supplied proof applied the actual patch to an isolated exact base and obtained byte-identical candidate source.",
+    "primary_case": "A valid setup observation after the nominal setup deadline persists a lease/pod marker; a fresh watcher survives SSH exit255/missing status without inventing a retrieval receipt; later false setup status preserves the marker; an explicitly supplied matching retrieval receipt then triggers the original artifacts-retrieved termination and three absence confirmations.",
+    "real_execution": "Candidate watch, remote_status, local state transactions and locks, ensure_sync dispatch, terminate_owned and confirm_absence execute. Account/provider responses, SSH subprocess replies, process spawn and time are synthetic.",
+    "source_review": "The complete 277-line focused proof source was read. Its assertions and synthetic boundaries support the reported cases; it does not merely test replacement implementations of the watcher.",
+    "status": "passed"
+  },
+  "review_scope": "Independent read-only source, exact diff and focused proof-source/result review, completed before this summary was written. Preserved repository copies were rehashed against the reviewed originals. No reviewer test execution, cloud calls, SSH, scientific tensor or bank reads, deployment, source changes or controller restart. The sole new artifact from this summary step is this /tmp JSON.",
+  "reviewed_records": {
+    "base": {
+      "bytes": 78452,
+      "path": "research/refit_round_2026-09-07/deployment/lease.py",
+      "sha256": "a7f5d92cf62f4e1d40773c6edb16c07811bb4568f2dc23018d91d9852b340992"
+    },
+    "candidate": {
+      "bytes": 79741,
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/controller_correction/lease_setup_latch_candidate.py",
+      "sha256": "5493d28c8a74b6740d4a3edbbccc5229d00446357d3c192d51cb46bbbfaa1de3"
+    },
+    "future_use_readme": {
+      "bytes": 1834,
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/controller_correction/lease_setup_latch_README.md",
+      "sha256": "44e1d9007f997e9ab84e2092e5ce7fd4bb3f94658dc7e2ec6afdedfd5c6783ec"
+    },
+    "patch": {
+      "bytes": 3169,
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/controller_correction/lease_setup_latch.patch",
+      "sha256": "513a29428698161dd02ef4c66ccc29591a74a1143df24a4015272ab02ca073d3"
+    },
+    "proof_result": {
+      "bytes": 8209,
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/controller_correction/lease-setup-latch-proof-hyqixdgu/PROOF.json",
+      "sha256": "2a92be3bcd7fc04e339113debdf8add1c4f43ca352259427f6f5ade0ab0249a9"
+    },
+    "proof_source": {
+      "bytes": 14067,
+      "path": "research/refit_round_2026-09-07/monitoring/attempt_06/controller_correction/prove_lease_setup_latch.py",
+      "sha256": "7c1233312c7d3687a7c53aa82450e6711ec3d5d5718e76d11d6b33c55148de0d"
+    }
+  },
+  "schema": "independent_lease_setup_latch_review.v1",
+  "source_findings": [
+    "The exact base-to-candidate patch adds a future-use note, setup_completed_for_lease and remember_worker_status, and changes only two watcher call sites. The 42 other existing callables remain AST-identical.",
+    "setup_completed_for_lease requires a nonempty string current pod ID and an exact setup_completion marker containing only the current lease name and pod ID.",
+    "remember_worker_status uses the existing change transaction, including .state.lock, a fresh state read, atomic replacement and fsync. It rejects observed lease/pod mismatch and remote lease mismatch before persisting status.",
+    "Only setup_complete is True for the bound current pod records successful setup. Missing, false and truthy non-boolean values cannot create or clear the durable completion marker. A new valid current completion can replace an obsolete marker.",
+    "A fresh watcher reads the durable marker after restart. A later missing SSH status cannot reopen the setup deadline for that same lease and pod.",
+    "Budget, balance, work deadline, provider identity/absence, three-consecutive-supervision-failure handling and verified-retrieval gates retain their prior implementation and order.",
+    "The preserved historical controller remains at the exact reviewed base hash. The candidate and patch are prospective artifacts only."
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,353 @@
+{
+  "causal_reconstruction": {
+    "current_status_none": "Strong inference from the pinned normal control flow and preserved final state: a truthy new status would overwrite last_worker_status before the deadline branch; the retained value is still complete/setup_complete=true. With the recorded SSH endpoint present, the normal None path is a completed SSH command with nonzero exit. The failing returncode/stdout/stderr were not persisted.",
+    "not_selected_reasons": [
+      "artifacts retrieved and verified",
+      "three consecutive supervision failures",
+      "combined spending deadline",
+      "account balance reaches the experiment allocation"
+    ],
+    "retrieval_order": "Termination was selected while final retrieval acceptance was absent. The collector failed in rsync and never reached final verification in the preserved attempt. The final absence-confirmation time is later than the retrieval log final mtime; it is not the timestamp of the API deletion request. The SSH reset may have been a consequence of deletion or an independent transport event; the available records do not resolve that ordering.",
+    "timeout_exception_distinction": "watch_last_error_type=TimeoutExpired and watch_consecutive_failures=1 are retained exception observations, not proof that the terminating status call raised. Those fields are not cleared on successful iterations; a raised supervision exception follows the separate three-consecutive-failures policy, whose recorded termination reason would differ."
+  },
+  "conclusion": "The watcher selected its expired setup-deadline branch after a current status observation failed to establish setup completion, despite a preserved prior complete/setup_complete=true observation. Setup completion was not latched; this branch can terminate before retrieval acceptance.",
+  "cost_and_deadlines": {
+    "all_in_hourly_upper_rate": 0.7064383561643836,
+    "combined_cap": 25.0,
+    "combined_spend_upper": 13.851844033145376,
+    "currency": "USD",
+    "last_poll_combined_spend_upper": 13.819494766186814,
+    "last_poll_observed_balance": 13.729827531,
+    "lease_spend_upper": 13.520146062047676,
+    "preserve_balance": 2.5152672682976984,
+    "prior_spend_upper": 0.3316979710977009,
+    "provider_deadline_utc": "2026-09-10T07:18:57Z",
+    "root_provider_observed_balance": 13.676831506,
+    "scope": "Conservative controller accounting bounds and separately observed account balances, not settled invoices or verified spend attributable to individual files.",
+    "watch_deadline_utc": "2026-09-10T07:08:57Z",
+    "work_deadline_utc": "2026-09-10T06:18:57Z"
+  },
+  "created_utc": "2026-09-09T15:51:57.757818+00:00",
+  "demonstrated_facts": [
+    {
+      "claim": "The final lease records the setup-timeout termination reason, terminated status and three account-bound absence confirmations.",
+      "evidence": [
+        "LEASE.json:termination_reason",
+        "LEASE.json:status",
+        "LEASE.json:absence_confirmations",
+        "LEASE.json:absence_account_id"
+      ]
+    },
+    {
+      "claim": "Setup and experiment completion had already been observed and preserved.",
+      "evidence": [
+        "LEASE.json:last_worker_status",
+        "Huginn handoff REMOTE_BEFORE.json",
+        "Huginn handoff REMOTE_AFTER.json",
+        "Huginn handoff COPY_VERIFIED.json",
+        "EXPERIMENT_COMPLETE.json"
+      ]
+    },
+    {
+      "claim": "The pinned watcher tests only the current status in its setup-deadline predicate; it neither consults last_worker_status nor persists a monotonic setup-completed latch.",
+      "source_lines": [
+        702,
+        703,
+        704,
+        716,
+        717
+      ]
+    },
+    {
+      "claim": "A normal nonzero SSH exit becomes None in remote_status. A raised TimeoutExpired instead enters the exception handler and skips the setup-reason selection on that iteration.",
+      "source_lines": [
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        730,
+        731,
+        732,
+        733,
+        734
+      ]
+    },
+    {
+      "claim": "The setup-deadline reason precedes the final retrieval-receipt branch. ensure_sync launches a separate collector, and termination does not wait on its sync lock.",
+      "source_lines": [
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        705,
+        706,
+        716,
+        717,
+        720,
+        721,
+        722,
+        723,
+        726,
+        727
+      ]
+    },
+    {
+      "claim": "The preserved collector log records a connection reset and rsync failure at the transfer call, before the after-inventory, local whole-tree verification and RETRIEVAL_VERIFIED publication.",
+      "log_summary": {
+        "byte_count_scope": "Rsync transport diagnostic, not a verified payload total.",
+        "generator_and_raised_returncode": 255,
+        "receiver_bytes_reported_so_far": 1775748038,
+        "receiver_error": 12
+      },
+      "source_lines": [
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323
+      ]
+    }
+  ],
+  "evidence": {
+    "actual_controller_function_ranges": {
+      "_sync_results": {
+        "end_line": 323,
+        "start_line": 281
+      },
+      "arm_watcher": {
+        "end_line": 588,
+        "start_line": 567
+      },
+      "confirm_absence": {
+        "end_line": 535,
+        "start_line": 519
+      },
+      "ensure_sync": {
+        "end_line": 345,
+        "start_line": 335
+      },
+      "halt": {
+        "end_line": 503,
+        "start_line": 498
+      },
+      "remote_status": {
+        "end_line": 251,
+        "start_line": 240
+      },
+      "terminate_owned": {
+        "end_line": 564,
+        "start_line": 538
+      },
+      "watch": {
+        "end_line": 736,
+        "start_line": 669
+      }
+    },
+    "files": {
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/LEASE.json": {
+        "bytes": 2971,
+        "mtime_ns": 1788968691475623360,
+        "mtime_utc": "2026-09-09T15:44:51.475623+00:00",
+        "sha256": "d33ee0db83264551961624723d2d4cb2f28fa16fb1f2496afd34e14cd960ac92"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/lease.py": {
+        "bytes": 78452,
+        "mtime_ns": 1788899793627837206,
+        "mtime_utc": "2026-09-08T20:36:33.627837+00:00",
+        "sha256": "a7f5d92cf62f4e1d40773c6edb16c07811bb4568f2dc23018d91d9852b340992"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/pod_entry.sh": {
+        "bytes": 1221,
+        "mtime_ns": 1788899793628670028,
+        "mtime_utc": "2026-09-08T20:36:33.628670+00:00",
+        "sha256": "d72cf7229b12af1fe0d218bc6edd5354740a9dd94fad06e57efa3fa59335ad32"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/run_refits.py": {
+        "bytes": 51999,
+        "mtime_ns": 1788899793628230174,
+        "mtime_utc": "2026-09-08T20:36:33.628230+00:00",
+        "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/monitor/runpod_api.py": {
+        "bytes": 9601,
+        "mtime_ns": 1788899793628483869,
+        "mtime_utc": "2026-09-08T20:36:33.628484+00:00",
+        "sha256": "6124d239c0e1ec6b7c8e86e3f845716b17bd67943423f88416a9cae771051849"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieval.log": {
+        "bytes": 2522,
+        "mtime_ns": 1788968609380819004,
+        "mtime_utc": "2026-09-09T15:43:29.380819+00:00",
+        "sha256": "462b81a95445a7f01d6dd0238c0edda305c2cc8a518054dce81c6243407d4d03"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py": {
+        "bytes": 78452,
+        "mtime_ns": 1788899579315759181,
+        "mtime_utc": "2026-09-08T20:32:59.315759+00:00",
+        "sha256": "a7f5d92cf62f4e1d40773c6edb16c07811bb4568f2dc23018d91d9852b340992"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/COPY_VERIFIED.json": {
+        "bytes": 6174,
+        "mtime_ns": 1788968161953907321,
+        "mtime_utc": "2026-09-09T15:36:01.953907+00:00",
+        "sha256": "376edc2ab9d41d04aa5c41d7871500b55605b946e47c259b69851fae486e6a43"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_AFTER.json": {
+        "bytes": 5211,
+        "mtime_ns": 1788968161790453956,
+        "mtime_utc": "2026-09-09T15:36:01.790454+00:00",
+        "sha256": "70185e5d78f5514149d674e6e5973579a38fef3c64bf3c387721e36c594d2537"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_BEFORE.json": {
+        "bytes": 5211,
+        "mtime_ns": 1788968031867445754,
+        "mtime_utc": "2026-09-09T15:33:51.867446+00:00",
+        "sha256": "70185e5d78f5514149d674e6e5973579a38fef3c64bf3c387721e36c594d2537"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/EXPERIMENT_COMPLETE.json": {
+        "bytes": 479,
+        "mtime_ns": 1788967982356435558,
+        "mtime_utc": "2026-09-09T15:33:02.356436+00:00",
+        "sha256": "61b2b5e620f4eb1bba012c60833af05eaf096dfc6d937bf106cc87e16a90043e"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/termination_incident/LEASE.json": {
+        "bytes": 2971,
+        "mtime_ns": 1788968893078294404,
+        "mtime_utc": "2026-09-09T15:48:13.078295+00:00",
+        "sha256": "d33ee0db83264551961624723d2d4cb2f28fa16fb1f2496afd34e14cd960ac92"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/termination_incident/ROOT_PROVIDER_OBSERVATION.json": {
+        "bytes": 639,
+        "mtime_ns": 1788968893078496789,
+        "mtime_utc": "2026-09-09T15:48:13.078497+00:00",
+        "sha256": "7c54cdf866cfa6f53bcc7314dfd22337c8b16546fcbbab43018d212babc3b7b7"
+      },
+      "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/termination_incident/retrieval.log": {
+        "bytes": 2522,
+        "mtime_ns": 1788968893078365215,
+        "mtime_utc": "2026-09-09T15:48:13.078365+00:00",
+        "sha256": "462b81a95445a7f01d6dd0238c0edda305c2cc8a518054dce81c6243407d4d03"
+      }
+    },
+    "frozen_controller_pins_match": {
+      "lease.py": true,
+      "pod_entry.sh": true,
+      "run_refits.py": true,
+      "runpod_api.py": true
+    },
+    "preserved_copies_byte_identical": {
+      "LEASE.json": true,
+      "retrieval.log": true
+    }
+  },
+  "incident_status": "terminated without a complete final retrieval receipt",
+  "lease_name": "jlens-refit-14ca9417eb6145c8979fb87ea9fde68c",
+  "limitations": [
+    "The triggering watcher SSH returncode, stdout and stderr were not retained; their exact contents and the precise remote failure cause are unknown.",
+    "The None-path reconstruction is an inference from preserved state and the pinned control flow, not a captured raw failing status response.",
+    "No timestamped deletion-mutation receipt is available in these inputs; termination verification time must not be treated as deletion-request time.",
+    "The normalized root provider observation is reproduced selected tool output, not a raw API response and not a fresh provider call made by this audit.",
+    "This review does not inventory surviving binaries, assess missing artifact recovery, revalidate scientific outcomes, or establish exact billed charges."
+  ],
+  "one_bounded_future_correction": {
+    "mechanism": "Persist a monotonic setup-completed latch for the validated lease/pod when setup_complete is True is first observed. Apply setup_deadline only while that latch is absent. Missing later status must not clear the latch or reopen setup.",
+    "necessary_regression_scenario": [
+      "Owned lease with healthy budget observes complete/setup_complete=true and persists the latch, with RETRIEVAL_VERIFIED absent and retrieval still pending.",
+      "Restart the watcher from persisted state after setup_deadline, then make SSH return nonzero so remote_status returns None.",
+      "Verify no setup-timeout termination occurs, the latch survives, and no retrieval receipt is created by the watcher.",
+      "Then supply a valid completed retrieval receipt and require the normal artifacts-retrieved-and-verified termination reason.",
+      "Control branch: without any validated setup-complete observation, an expired setup deadline and absent status must still trigger the bounded setup termination."
+    ],
+    "preserved_invariants": "Keep existing explicit-stop, work/spend/account deadlines, supervision-exception and valid retrieval-receipt gates. Do not fabricate retrieval acceptance or replace it with last_worker_status.",
+    "scope": "Recommendation only for a separately reviewed future controller revision; no historical or pinned controller was edited.",
+    "tests_executed": false
+  },
+  "pod_id": "vzwx0cj43g2uw5",
+  "schema": "attempt06_termination_incident_review.v1",
+  "scope": "Read-only incident reconstruction from local source, text/JSON receipts and file metadata. No SSH, cloud calls, binary artifact reads, tensor deserialization, source edits, controller patch or tests. The sole new artifact is this /tmp incident review.",
+  "status": "review_complete",
+  "terminal_state": {
+    "absence_account_matches_lease_account": true,
+    "absence_confirmations": 3,
+    "final_retrieval_marker_absent": true,
+    "last_worker_status": {
+      "lease_name": "jlens-refit-14ca9417eb6145c8979fb87ea9fde68c",
+      "phase": "complete",
+      "schema_version": 1,
+      "setup_complete": true,
+      "updated_utc": "2026-09-09T15:33:02.358421+00:00"
+    },
+    "provider_observation_owned_candidates": [],
+    "provider_observation_scope": "Called checked_account(state), pods(state.account_id), owned_candidates(state, listing) using the unchanged deployment lease module; no mutation. The following selected fields reproduce the tool output, not a saved raw API response.",
+    "small_huginn_handoff_files": 22,
+    "small_huginn_handoff_status": "passed",
+    "watch_consecutive_failures_retained": 1,
+    "watch_last_error_type": "TimeoutExpired"
+  },
+  "timeline": [
+    {
+      "basis": "LEASE field",
+      "event": "Recorded billing start",
+      "utc": "2026-09-08T20:36:33Z"
+    },
+    {
+      "basis": "LEASE field",
+      "event": "Recorded setup deadline",
+      "utc": "2026-09-08T22:36:33Z"
+    },
+    {
+      "basis": "Preserved raw experiment JSON",
+      "event": "Worker experiment-complete marker",
+      "utc": "2026-09-09T15:33:02.356903+00:00"
+    },
+    {
+      "basis": "Worker status timestamp, not exact local poll time",
+      "event": "Last preserved successful worker status: complete, setup_complete=true",
+      "utc": "2026-09-09T15:33:02.358421+00:00"
+    },
+    {
+      "basis": "LEASE field",
+      "event": "Last recorded watcher heartbeat",
+      "utc": "2026-09-09T15:42:06Z"
+    },
+    {
+      "basis": "LEASE field and watch source order",
+      "event": "Last recorded successful poll accounting update before termination dispatch",
+      "utc": "2026-09-09T15:43:24Z"
+    },
+    {
+      "basis": "Filesystem mtime; log lines themselves are untimestamped",
+      "event": "Final retrieval log modification",
+      "utc": "2026-09-09T15:43:29.380819+00:00"
+    },
+    {
+      "basis": "LEASE field; not exact deletion-request time",
+      "event": "Three absence confirmations finalized termination",
+      "utc": "2026-09-09T15:44:51Z"
+    },
+    {
+      "basis": "Normalized root record; no raw API response and no exact query-completion timestamp",
+      "event": "Root preserved selected fields of a fresh read-only provider observation",
+      "utc": "2026-09-09T15:48:13.078379+00:00"
+    }
+  ]
+}

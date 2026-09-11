@@ -1,0 +1,80 @@
+{
+  "started_utc": "2026-09-07T20:06:32.122320+00:00",
+  "purpose": "Short local timing decomposition; no fit or task-recovery evaluation.",
+  "script_sha256": "2558eb6d08c89bbeb194e96a07bd7573700ab11c4e04c1b32f0217523c900a3f",
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "torch": "2.12.0.dev20260407+cu128",
+  "dim_batch": 2,
+  "warmup_sweeps": 2,
+  "measured_sweeps": 6,
+  "cpu_threads": 8,
+  "load_seconds": 2.292638095001166,
+  "source_count": 191,
+  "width": 2048,
+  "sequence_length": 128,
+  "full_prompt_backward_calls": 1024,
+  "cpu_zero_matrices_seconds": 0.22226864600088447,
+  "forward_seconds": 0.6588592049993167,
+  "peak_cuda_gb": 9.960698368,
+  "sweeps": [
+    {
+      "sweep": 0,
+      "backward_seconds": 0.19961293800224666,
+      "reduce_copy_assign_seconds": 0.013463711999065708,
+      "total_seconds": 0.21307665000131237
+    },
+    {
+      "sweep": 1,
+      "backward_seconds": 0.17500871800075402,
+      "reduce_copy_assign_seconds": 0.00595534500098438,
+      "total_seconds": 0.1809640630017384
+    },
+    {
+      "sweep": 2,
+      "backward_seconds": 0.17428375400049845,
+      "reduce_copy_assign_seconds": 0.005877108000277076,
+      "total_seconds": 0.18016086200077552
+    },
+    {
+      "sweep": 3,
+      "backward_seconds": 0.17400691399961943,
+      "reduce_copy_assign_seconds": 0.007075459998304723,
+      "total_seconds": 0.18108237399792415
+    },
+    {
+      "sweep": 4,
+      "backward_seconds": 0.179296278001857,
+      "reduce_copy_assign_seconds": 0.006861752997792792,
+      "total_seconds": 0.18615803099964978
+    },
+    {
+      "sweep": 5,
+      "backward_seconds": 0.17800701099986327,
+      "reduce_copy_assign_seconds": 0.006714619001286337,
+      "total_seconds": 0.1847216300011496
+    },
+    {
+      "sweep": 6,
+      "backward_seconds": 0.17661129100088147,
+      "reduce_copy_assign_seconds": 0.006141797999589471,
+      "total_seconds": 0.18275308900047094
+    },
+    {
+      "sweep": 7,
+      "backward_seconds": 0.17609730399999535,
+      "reduce_copy_assign_seconds": 0.005934636999882059,
+      "total_seconds": 0.1820319409998774
+    }
+  ],
+  "mean_after_warmup": {
+    "backward_seconds": 0.17638375866711917,
+    "reduce_copy_assign_seconds": 0.006434229166188743,
+    "total_seconds": 0.1828179878333079
+  },
+  "extrapolated_full_prompt_sweeps_seconds": 187.2056195413073,
+  "cpu_clone_running_sum_seconds": 0.24155799800064415,
+  "cpu_prompt_norm_seconds": 0.1254821999973501,
+  "cpu_running_change_seconds": 0.41108541500216234,
+  "cpu_accumulate_seconds": 0.14087141300115036,
+  "cpu_timing_qualification": "Full matrix shapes, only 16 rows filled; no lens result. Checkpoint I/O not timed."
+}

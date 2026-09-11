@@ -1,0 +1,799 @@
+{
+  "seed": 20260907,
+  "population": 141,
+  "sampling": "10 items uniformly without replacement; no outcome filtering",
+  "items": [
+    {
+      "name": "letterpos-nitrogen-symbol",
+      "task": "multihop",
+      "prompt": "Fact: The position in the alphabet of the chemical symbol for nitrogen is ",
+      "intermediates": [
+        "N"
+      ],
+      "target": "14",
+      "continuation": "14.\n",
+      "correct": true,
+      "exit_top1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "index": 89,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "any_control": [
+            0.014492753623188406,
+            0.11594202898550725,
+            0.10144927536231885,
+            0.2463768115942029
+          ],
+          "any_excess": [
+            -0.014492753623188406,
+            -0.11594202898550725,
+            -0.10144927536231885,
+            -0.2463768115942029
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              1106,
+              146,
+              11,
+              14
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "any_control": [
+            0.18840579710144928,
+            0.2028985507246377,
+            0.17391304347826086,
+            0.2608695652173913
+          ],
+          "any_excess": [
+            0.8115942028985508,
+            -0.2028985507246377,
+            -0.17391304347826086,
+            0.7391304347826086
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              6,
+              19,
+              13,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "chem-bones-Z",
+      "task": "multihop",
+      "prompt": "Fact: The atomic number of the metal most abundant in human bones is ",
+      "intermediates": [
+        "calcium"
+      ],
+      "target": "20",
+      "continuation": "24.\n",
+      "correct": false,
+      "exit_top1": [
+        "2",
+        "2",
+        "2",
+        "2"
+      ],
+      "index": 27,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "any_control": [
+            0.043478260869565216,
+            0.15942028985507245,
+            0.08695652173913043,
+            0.17391304347826086
+          ],
+          "any_excess": [
+            0.9565217391304348,
+            -0.15942028985507245,
+            -0.08695652173913043,
+            0.8260869565217391
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              3,
+              24,
+              151,
+              1
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.21739130434782608,
+            0.18840579710144928,
+            0.21739130434782608,
+            0.21739130434782608
+          ],
+          "any_excess": [
+            -0.21739130434782608,
+            -0.18840579710144928,
+            0.782608695652174,
+            0.782608695652174
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              24,
+              92,
+              1,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "rhyme-door-doubled",
+      "task": "multihop",
+      "prompt": "Fact: Take the number whose name rhymes with the word door. Doubling it gives the number ",
+      "intermediates": [
+        "four"
+      ],
+      "target": "8",
+      "continuation": "12. What",
+      "correct": false,
+      "exit_top1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "index": 18,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "any_control": [
+            0.0,
+            0.08695652173913043,
+            0.14492753623188406,
+            0.21739130434782608
+          ],
+          "any_excess": [
+            0.0,
+            -0.08695652173913043,
+            -0.14492753623188406,
+            0.782608695652174
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              51,
+              18,
+              12,
+              1
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.15942028985507245,
+            0.18840579710144928,
+            0.2318840579710145,
+            0.2028985507246377
+          ],
+          "any_excess": [
+            0.8405797101449275,
+            0.8115942028985508,
+            0.7681159420289855,
+            0.7971014492753623
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              3,
+              2,
+              4,
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "mult-parens-sub",
+      "task": "order-ops",
+      "prompt": "(9 - 6) * 2 = ",
+      "intermediates": [
+        "3",
+        "multiplication"
+      ],
+      "target": "6",
+      "continuation": "6\n\n(",
+      "correct": true,
+      "exit_top1": [
+        "3",
+        "6",
+        "6",
+        "6"
+      ],
+      "index": 96,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.0,
+            0.23076923076923078,
+            0.3076923076923077,
+            0.46153846153846156
+          ],
+          "any_excess": [
+            0.0,
+            0.7692307692307692,
+            0.6923076923076923,
+            0.5384615384615384
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              16,
+              4,
+              5,
+              2
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.6153846153846154,
+            0.46153846153846156,
+            0.46153846153846156,
+            0.46153846153846156
+          ],
+          "any_excess": [
+            0.3846153846153846,
+            0.5384615384615384,
+            0.5384615384615384,
+            0.5384615384615384
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              1,
+              1,
+              2,
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "louvre-language",
+      "task": "multihop",
+      "prompt": "Fact: The primary language spoken in the country where the Louvre museum is located is ",
+      "intermediates": [
+        "France"
+      ],
+      "target": "French",
+      "continuation": " French.\n\n",
+      "correct": true,
+      "exit_top1": [
+        " French",
+        " French",
+        " French",
+        " French"
+      ],
+      "index": 72,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.028985507246376812,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "any_excess": [
+            -0.028985507246376812,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              85,
+              40,
+              5,
+              2
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "any_excess": [
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              15,
+              7,
+              6,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "rhyme-tree-squared",
+      "task": "multihop",
+      "prompt": "Fact: The square of the number whose name rhymes with tree is ",
+      "intermediates": [
+        "three"
+      ],
+      "target": "9",
+      "continuation": "121.",
+      "correct": false,
+      "exit_top1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "index": 67,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.014492753623188406,
+            0.10144927536231885,
+            0.15942028985507245,
+            0.18840579710144928
+          ],
+          "any_excess": [
+            -0.014492753623188406,
+            0.8985507246376812,
+            0.8405797101449275,
+            0.8115942028985508
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              281,
+              10,
+              5,
+              3
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.17391304347826086,
+            0.15942028985507245,
+            0.15942028985507245,
+            0.15942028985507245
+          ],
+          "any_excess": [
+            0.8260869565217391,
+            0.8405797101449275,
+            0.8405797101449275,
+            0.8405797101449275
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              3,
+              2,
+              3,
+              3
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "half-clock-hours",
+      "task": "multihop",
+      "prompt": "Fact: Half the number of hours shown on a standard clock face is ",
+      "intermediates": [
+        "12"
+      ],
+      "target": "6",
+      "continuation": "12 hours.",
+      "correct": false,
+      "exit_top1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "index": 84,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "any_control": [
+            0.028985507246376812,
+            0.028985507246376812,
+            0.10144927536231885,
+            0.2318840579710145
+          ],
+          "any_excess": [
+            -0.028985507246376812,
+            -0.028985507246376812,
+            -0.10144927536231885,
+            0.7681159420289855
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              2594,
+              255,
+              41,
+              1
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.18840579710144928,
+            0.18840579710144928,
+            0.2318840579710145,
+            0.2318840579710145
+          ],
+          "any_excess": [
+            -0.18840579710144928,
+            0.8115942028985508,
+            0.7681159420289855,
+            0.7681159420289855
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              52,
+              6,
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "word-div-sub",
+      "task": "order-ops",
+      "prompt": "fifteen divided by three minus two equals ",
+      "intermediates": [
+        "5",
+        "subtraction"
+      ],
+      "target": "three",
+      "continuation": "\n\nfifteen",
+      "correct": false,
+      "exit_top1": [
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "index": 138,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "any_control": [
+            0.0,
+            0.0,
+            0.07692307692307693,
+            0.6923076923076923
+          ],
+          "any_excess": [
+            0.0,
+            0.0,
+            -0.07692307692307693,
+            0.3076923076923077
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              5167,
+              621,
+              30,
+              1
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.7692307692307693,
+            1.0,
+            0.46153846153846156,
+            0.6153846153846154
+          ],
+          "any_excess": [
+            0.23076923076923073,
+            0.0,
+            0.5384615384615384,
+            0.3846153846153846
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              5,
+              7,
+              1,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "etym-janus-monthnum",
+      "task": "multihop",
+      "prompt": "Fact: The month named after the two-faced Roman god of doorways is month number ",
+      "intermediates": [
+        "January"
+      ],
+      "target": "1",
+      "continuation": "11.\n",
+      "correct": false,
+      "exit_top1": [
+        "1",
+        "7",
+        "1",
+        "1"
+      ],
+      "index": 55,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "any_control": [
+            0.014492753623188406,
+            0.15942028985507245,
+            0.08695652173913043,
+            0.2463768115942029
+          ],
+          "any_excess": [
+            -0.014492753623188406,
+            -0.15942028985507245,
+            -0.08695652173913043,
+            0.7536231884057971
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              1425,
+              276,
+              16,
+              3
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.2318840579710145,
+            0.2463768115942029,
+            0.2463768115942029,
+            0.2028985507246377
+          ],
+          "any_excess": [
+            0.7681159420289855,
+            0.7536231884057971,
+            0.7536231884057971,
+            0.7971014492753623
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              2,
+              3,
+              2,
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "rhyme-hive-plusone",
+      "task": "multihop",
+      "prompt": "Fact: One more than the number whose name rhymes with hive is ",
+      "intermediates": [
+        "five"
+      ],
+      "target": "6",
+      "continuation": "100.",
+      "correct": false,
+      "exit_top1": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "index": 68,
+      "eligible_slots": [
+        0
+      ],
+      "methods": {
+        "jlens_exit3": {
+          "any_hit": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.014492753623188406,
+            0.0,
+            0.13043478260869565,
+            0.18840579710144928
+          ],
+          "any_excess": [
+            -0.014492753623188406,
+            0.0,
+            0.8695652173913043,
+            0.8115942028985508
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              306,
+              25,
+              7,
+              4
+            ]
+          ]
+        },
+        "logitlens": {
+          "any_hit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "any_control": [
+            0.17391304347826086,
+            0.17391304347826086,
+            0.2028985507246377,
+            0.2028985507246377
+          ],
+          "any_excess": [
+            0.8260869565217391,
+            0.8260869565217391,
+            0.7971014492753623,
+            0.7971014492753623
+          ],
+          "ordinary_best_ranks_by_slot_and_loop": [
+            [
+              5,
+              5,
+              4,
+              7
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

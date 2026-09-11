@@ -1,0 +1,7 @@
+{"arm": "raw", "seconds": 111.2}
+{"arm": "fit01", "seconds": 116.5}
+{"arm": "fit02", "seconds": 116.6}
+{"arm": "penultimate", "seconds": 116.7}
+{"arm": "sampled_sum", "seconds": 116.3}
+{"arm": "diagonal", "seconds": 115.1}
+cuda exit 0

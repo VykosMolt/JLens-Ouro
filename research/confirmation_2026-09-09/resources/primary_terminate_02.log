@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/lease.py", line 1049, in <module>
+    main()
+    ~~~~^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/lease.py", line 1040, in main
+    if not terminate_owned(args.root, {'class': 'explicit_teardown', 'authorization_path': args.authorization}):
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/lease.py", line 743, in terminate_owned
+    evidence['explicit_authorization'] = explicit_teardown(state, authorization['authorization_path'])
+                                         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller/lease.py", line 701, in explicit_teardown
+    raise ValueError('explicit teardown requires exact local root authorization')
+ValueError: explicit teardown requires exact local root authorization

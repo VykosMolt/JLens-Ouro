@@ -1,0 +1,150 @@
+{
+  "banks": {
+    "controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt": {
+      "category": "complete_hash_verified",
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt",
+      "record": {
+        "bytes": 1593887875,
+        "sha256": "dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560"
+      }
+    },
+    "controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt": {
+      "category": "complete_hash_verified",
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt",
+      "record": {
+        "bytes": 3204553347,
+        "sha256": "b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775"
+      }
+    },
+    "ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt": {
+      "category": "complete_hash_verified",
+      "path": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt",
+      "record": {
+        "bytes": 1602276737,
+        "sha256": "90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f"
+      }
+    },
+    "ouro/fit_02/final/cursor_000100_f707cb4efc844266aacff02c81ced5d0/lens.pt": {
+      "category": "reconstructed_historical_bytes_verified",
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/reconstructed/ouro/fit_02/lens.pt",
+      "record": {
+        "bytes": 1602276737,
+        "sha256": "101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8"
+      }
+    }
+  },
+  "model": {
+    "files": [
+      {
+        "actual": {
+          "bytes": 1628,
+          "sha256": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/.gitattributes",
+        "path": ".gitattributes"
+      },
+      {
+        "actual": {
+          "bytes": 4360,
+          "sha256": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/README.md",
+        "path": "README.md"
+      },
+      {
+        "actual": {
+          "bytes": 203205,
+          "sha256": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/assets/benchmark.png",
+        "path": "assets/benchmark.png"
+      },
+      {
+        "actual": {
+          "bytes": 656922,
+          "sha256": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/assets/logo.png",
+        "path": "assets/logo.png"
+      },
+      {
+        "actual": {
+          "bytes": 2000,
+          "sha256": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/config.json",
+        "path": "config.json"
+      },
+      {
+        "actual": {
+          "bytes": 11550,
+          "sha256": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/configuration_ouro.py",
+        "path": "configuration_ouro.py"
+      },
+      {
+        "actual": {
+          "bytes": 466391,
+          "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/merges.txt",
+        "path": "merges.txt"
+      },
+      {
+        "actual": {
+          "bytes": 5336011242,
+          "sha256": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/model.safetensors",
+        "path": "model.safetensors"
+      },
+      {
+        "actual": {
+          "bytes": 33350,
+          "sha256": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py",
+        "path": "modeling_ouro.py"
+      },
+      {
+        "actual": {
+          "bytes": 825,
+          "sha256": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/special_tokens_map.json",
+        "path": "special_tokens_map.json"
+      },
+      {
+        "actual": {
+          "bytes": 3522644,
+          "sha256": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/tokenizer.json",
+        "path": "tokenizer.json"
+      },
+      {
+        "actual": {
+          "bytes": 4211,
+          "sha256": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/tokenizer_config.json",
+        "path": "tokenizer_config.json"
+      },
+      {
+        "actual": {
+          "bytes": 800656,
+          "sha256": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c"
+        },
+        "original": "/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/vocab.json",
+        "path": "vocab.json"
+      }
+    ],
+    "manifest": {
+      "bytes": 2323,
+      "sha256": "377d9e75a2f6a38d1a94ac78bbe940e0c34f369ef8f0d6f692a65b4a3f071370"
+    },
+    "snapshot": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/model_snapshot/1ed04250da1a9936042725d302e81c8fa2ab5abd"
+  },
+  "schema": "confirmation_materialized_inputs.v1"
+}

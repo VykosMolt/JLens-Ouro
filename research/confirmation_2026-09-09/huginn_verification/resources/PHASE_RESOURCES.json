@@ -1,0 +1,23 @@
+{
+  "schema": "huginn_verification_resource_preparation.v1",
+  "status": "preparation_only_not_admitted",
+  "original_combined_cap_usd": 25.0,
+  "original_carried_bound_usd": 13.851844033145376,
+  "setup_budget_seconds": 3600,
+  "compute_budget_seconds": 20880,
+  "compute_components_seconds": {
+    "native_gate": 3600,
+    "N100_fit": 16380,
+    "historical_readouts": 900
+  },
+  "preservation_reserve_seconds": 4680,
+  "transfer_timeout_seconds_maximum": 4680,
+  "termination_reserve_seconds": 600,
+  "latency_reserve_usd": 0.15,
+  "maximum_gpu_rate_usd_per_hour": 0.69,
+  "storage_rate_usd_per_hour": 0.01643835616438356,
+  "planned_upper_cost_usd": 5.989890410958905,
+  "admission": "Only after all exact primary lease records are terminal/reconciled, one complete exact primary receipt and payload freshly revalidate using pinned primary sources, and account identity/no-pods/no-active-spend/funds checks pass. Every primary and historical debit is carried once. No admitted debit has been written.",
+  "maximum_huginn_phase_aggregate_cap_usd": 6.0,
+  "retry_policy": "Every prior H lease charge reduces the same aggregate 6 USD phase allowance; no retry resets the allowance."
+}

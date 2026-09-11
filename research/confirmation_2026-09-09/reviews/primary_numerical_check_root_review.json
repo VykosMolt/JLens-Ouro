@@ -1,0 +1,12 @@
+{
+  "schema": "confirmation_root_numerical_checker_review.v1",
+  "status": "passed_for_actual_result_use",
+  "utc": "2026-09-09T23:47:31.537062+00:00",
+  "reviewed_source": {
+    "bytes": 35055,
+    "sha256": "89a7309ad04d57f61a07a1ab10779c3c8e0464041390aaaefccbd78fcb98ca1b"
+  },
+  "scope": "Root read the complete independent implementation and synthetic proof. Its independent name-weight matrices, alias/top10 checks, virtual band169\u2013180, whole-group multiplicity ratio bootstrap, equal-item denominator, seven-vector decomposition,20 secondary definitions/max-t, group influence and all saved resamples agree with frozen plan. Use only after actual external result acceptance.",
+  "tests": "Author11 hand/oracle checks plus separate-process full synthetic analysis230 comparisons (max absolute difference2.220446049250313e-15) and tampered-bootstrap rejection reviewed. Root did not redundantly rerun these unchanged tests.",
+  "actual_confirmation_outcomes_exposed": false
+}

@@ -1,0 +1,270 @@
+{
+  "blocking_findings": 0,
+  "confirmed_checks": {
+    "bundle_files_differing_original_to_precision_v1": [
+      "evaluation/worker.py",
+      "frozen/implementation_review.json",
+      "frozen/run_spec.json",
+      "frozen/output_contract.json",
+      "frozen/precision_correction.json (added)"
+    ],
+    "bundle_files_differing_precision_v1_to_native_check_v1": [
+      "evaluation/readouts.py",
+      "frozen/run_spec.json",
+      "frozen/output_contract.json",
+      "frozen/native_check_correction.json (added)"
+    ],
+    "changed_fields_read_only_by_identity_or_provenance_gates": [
+      "validate_outputs.py:40",
+      "validate_outputs.py:60",
+      "worker.py:39",
+      "worker.py:70",
+      "bootstrap.py:21"
+    ],
+    "checker_diff_lines": [
+      33,
+      365
+    ],
+    "checker_reruns": {
+      "frozen_checker_exact_payload": "failed results.run_spec.frozen_record",
+      "frozen_checker_original_spec": "passed 230; non-pin rows equal native1; reconstruction differs only in run_id",
+      "native1_exact_payload": "passed 231, max 8.88e-16",
+      "native1_original_spec": "failed results.run_spec.frozen_record",
+      "native1_seed_mutated_spec": "failed results.run_spec.frozen_record",
+      "native1_self_test": "passed 11 cases"
+    },
+    "checker_run_spec_fields_read": {
+      "arm_support": "identical",
+      "dependency_groups": "identical",
+      "primary.virtual_indices": "identical",
+      "run_id": "DIFFERS (echo only, line 388)",
+      "secondary_specs": "identical",
+      "uncertainty": "identical"
+    },
+    "exact_equality_unchanged": [
+      "worker.py:94-97",
+      "validate_outputs.py:72-73"
+    ],
+    "freeze_records_match_disk_and_tarballs": true,
+    "lease_binds_native_check_v1": true,
+    "native_head_path": "config.json:81 early_exit_threshold=1.0 -> modeling_ouro.py:780-800 gather then lm_head on [1,S,2048]",
+    "native_pt_attempt05_vs_attempt06": {
+      "attempt05_native_equals_unembedded": false,
+      "attempt06_all_equalities": true,
+      "attempt06_unembedded_equals_attempt05_native": true,
+      "per_item": [
+        39,
+        28,
+        45
+      ],
+      "unembedded_logits_differing_elements": 112,
+      "virtual_physical_wrapper_native_logits_differing_elements": 0
+    },
+    "payload_provenance_matches_spec": [
+      "source_records",
+      "model_record",
+      "bank_records",
+      "runtime.precision",
+      "runtime.model",
+      "imported_sources",
+      "binding.controller_sources",
+      "binding.run_spec_sha256",
+      "binding.output_contract_sha256"
+    ],
+    "payload_run_spec_population_benchmark_byte_identical_to_freeze": true,
+    "readouts_diff_confined_to_native_development": true,
+    "run_spec_changes_precision_v1_to_native": [
+      "run_id",
+      "frozen_utc",
+      "source_records['evaluation/readouts.py']",
+      "native_check_correction_record (added)"
+    ],
+    "scientific_run_spec_fields_identical_original_to_native": [
+      "model_identity",
+      "model_record",
+      "original_precision",
+      "bank_records",
+      "benchmark_record",
+      "population_record",
+      "plan_record",
+      "annotation_review_record",
+      "planned_items",
+      "planned_concepts",
+      "development_item_names",
+      "primary",
+      "secondary_specs",
+      "uncertainty",
+      "arm_support",
+      "dependency_groups",
+      "schema"
+    ],
+    "virtual191_is_step3_final_norm_input": "recurrent.py:66-78,88-90; modeling_ouro.py:592-607; norm out-of-place modeling_ouro.py:357-362"
+  },
+  "findings": [
+    {
+      "claim": 1,
+      "confidence": "confirmed",
+      "correction": "List the non-scientific budget change in the claim, builder docstring and correction record scope.",
+      "evidence": "run_config diff vs precision_v1; bound by FREEZE controller_run_config and LEASE.json; consumed only at controller/lease.py:268-282 (deadlines/cost). Disclosed in REPORT.md:60 and RUN_LOG.md:207.",
+      "id": "F1-1",
+      "issue": "Controller run budgets changed (setup 12300->12800, compute 3600->1200, preservation 1800->900 s), outside the stated scope; builder docstring says nothing else changes and correction-record scope omits it.",
+      "location": [
+        "corrections/native_check_v1/build_correction.py:1",
+        "corrections/native_check_v1/build_correction.py:17",
+        "corrections/native_check_v1/build_correction.py:53",
+        "corrections/native_check_v1/build_correction.py:75",
+        "corrections/native_check_v1/run_config.json:2,4,16"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 1,
+      "confidence": "confirmed",
+      "correction": "Qualify the \"unchanged relative to original freeze\" statement with the precision_v1 worker.py exception.",
+      "evidence": "sha 2db64e6d... -> 386c2649...; removes TF32 setters; effect bounded by worker.py:74-75; payload runtime.precision equals original_precision.",
+      "id": "F1-2",
+      "issue": "Relative to the original freeze, the scoring orchestrator worker.py (and implementation_review.json, precision_correction_record) differ via precision_v1.",
+      "location": [
+        "corrections/precision_v1/bundle/evaluation/worker.py:59-60"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 1,
+      "confidence": "suspected",
+      "correction": "Reword to \"unembeds the step-3 final-norm input at the native head input shape [1,S,2048]\".",
+      "evidence": "Exit step 3 established only for the last token (reanalysis Rule 3).",
+      "id": "F1-3",
+      "issue": "\"as the native head does\" holds for shape; with early_exit_threshold=1.0 the native head unembeds a per-position gathered exit tensor, which may differ in value from the step-3 sequence at non-last positions. The compared [0,-1] row is unaffected.",
+      "location": [
+        "corrections/native_check_v1/bundle/evaluation/readouts.py:70-71",
+        "corrections/native_check_v1/bundle/frozen/native_check_correction.json scope",
+        "resources/model_snapshot/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py:780-800",
+        "resources/model_snapshot/1ed04250da1a9936042725d302e81c8fa2ab5abd/config.json:81"
+      ],
+      "settle_by": "GPU run recording exit_steps for all development-item positions.",
+      "severity": "minor"
+    },
+    {
+      "claim": 1,
+      "confidence": "confirmed",
+      "correction": "Document the reduced auditability; future versions could save the final-step sequence.",
+      "evidence": "native.pt keys and shapes: virtual_states (3,192,2048), unembedded_logits (3,49152).",
+      "id": "F1-4",
+      "issue": "The recomputation input (full [1,S,2048] step-3 sequence) is not saved; native.pt holds only the last row, so the corrected recomputation cannot be replayed from saved evidence.",
+      "location": [
+        "corrections/native_check_v1/bundle/evaluation/readouts.py:69",
+        "corrections/native_check_v1/bundle/evaluation/readouts.py:72",
+        "corrections/native_check_v1/bundle/evaluation/readouts.py:84-86"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 1,
+      "confidence": "confirmed",
+      "correction": "State in the correction record that the gate validates state extraction and native exit, not scorer-shape unembedding equality.",
+      "evidence": "Scorer unembeds at [columns,2048] and [160,2048]; [190-192,2048] unmeasured. PROSPECTIVE_PLAN.md:55 does not require scorer-native bit equality, so this is not a scope violation.",
+      "id": "F1-5",
+      "issue": "The retained gate certifies a narrower equivalence: shape-matched lm_head(norm) equality only, not single-row or scorer-shape unembedding equality with native.",
+      "location": [
+        "corrections/native_check_v1/bundle/evaluation/readouts.py:72",
+        "corrections/native_check_v1/bundle/evaluation/readouts.py:17",
+        "corrections/native_check_v1/bundle/evaluation/worker.py:127",
+        "reviews/diagnostic_native_logit_v1_reanalysis.md:63-66"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 1,
+      "confidence": "confirmed",
+      "correction": "Bind this review to FREEZE fc74b0c2... as a post-run review.",
+      "evidence": "Report text; no review record binding readouts sha 0749ee60... outside FREEZE/payload.",
+      "id": "F1-6",
+      "issue": "The correction executed without independent review; only a self-reported CPU functional test preceded it.",
+      "location": [
+        "REPORT.md:60",
+        "RUN_LOG.md:207"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 2,
+      "confidence": "confirmed",
+      "correction": "Publish a self-test proof and review record bound to f24372fa...; state in REPORT.md that the pin was added after outcomes were computed.",
+      "evidence": "Proof and root review bind only 89a7309a...; f24372fa... appears only in its own output; mtime 01:09:37.419Z, after the failed run (01:07:07Z) and 0.1 s before the passing record (01:09:37.536Z). Reviewer rerun of --self-test passed 11 cases.",
+      "id": "F2-1",
+      "issue": "The modified checker (f24372fa...) has no bound self-test proof or review and was created after outcomes were visible.",
+      "location": [
+        "reviews/primary_numerical_check_native1.py",
+        "reviews/primary_numerical_check_proof.json",
+        "reviews/primary_numerical_check_root_review.json"
+      ],
+      "severity": "should-fix"
+    },
+    {
+      "claim": 2,
+      "confidence": "confirmed",
+      "correction": "Reword to \"every scientific run-spec field it reads; run_id is an output label only\".",
+      "evidence": "spec['run_id'] is read and differs; it is only echoed into reconstruction.run_id (frozen checker on original spec differs from native1 only in that key).",
+      "id": "F2-2",
+      "issue": "\"Every run-spec field it reads is identical\" is false for run_id.",
+      "location": [
+        "reviews/primary_numerical_check_native1.py:388",
+        "REPORT.md:54",
+        "RUN_LOG.md:212"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 2,
+      "confidence": "confirmed",
+      "correction": "Assert results spec equals the original spec on all keys except the allowed provenance set, or pin native_check_v1/FREEZE.json and verify its parent chain.",
+      "evidence": "Correct for this run (fields verified independently); the mechanism would equally accept a hand-pinned spec that changed science.",
+      "id": "F2-3",
+      "issue": "The checker does not encode why the new pin is safe: no field-level equality with the original spec or FREEZE parent chain. The original-spec pin (line 32) is hashed but vestigial.",
+      "location": [
+        "reviews/primary_numerical_check_native1.py:31-39",
+        "reviews/primary_numerical_check_native1.py:358-365"
+      ],
+      "severity": "minor"
+    },
+    {
+      "claim": 2,
+      "confidence": "confirmed",
+      "correction": "Compare within tolerance, not by these hashes.",
+      "evidence": "Rerun family_bootstrap sha 3b156c37... vs recorded 9c260f5f...; primary_item_resampling_95_interval[0] 0.17971271756329119 vs 0.17971271756329113; all 231 checks still pass within 1e-12.",
+      "id": "F2-4",
+      "issue": "Pre-existing: reconstruction array hashes are not bit-reproducible (BLAS matmul), so recorded reconstructed_array_records are not bit-exact fingerprints.",
+      "location": [
+        "reviews/primary_numerical_check_native1.py:275-277",
+        "reviews/primary_numerical_check_native1.py:402-404"
+      ],
+      "severity": "minor"
+    }
+  ],
+  "mode": "read_only_cpu_no_network_no_gpu",
+  "not_checked": [
+    "GPU re-execution or recomputation from weights (weights purged)",
+    "non-last-position exit steps (F1-3)",
+    "analysis producer run",
+    "spending and termination records"
+  ],
+  "records": {
+    "corrected_readouts_sha256": "0749ee608b171ecb9fd97c063fa77c3fa68ca5be033b3f8f2ce23ecd8029cdb0",
+    "frozen_checker_sha256": "89a7309ad04d57f61a07a1ab10779c3c8e0464041390aaaefccbd78fcb98ca1b",
+    "native1_checker_sha256": "f24372faa940373a2d8c4b022cf11cfb5d7b465e48e5b2c92077eec01719d287",
+    "native_check_v1_bundle_sha256": "92db22f8693dffc6fb29ad6af4451574c7b26e235ee6ad58ae65d579eec896f9",
+    "native_check_v1_freeze_sha256": "fc74b0c244e64a76d045495fa50b5a416ecc454fe77d56ababbc7682518c76c9",
+    "native_run_spec_sha256": "002b91cb755a0517fc5839ef2277f14307ef9eaba41176b9298f4362e040d446",
+    "original_freeze_sha256": "8148c2ab0bb62e962ab33c74940b5c84cf711f4a1d41e18f79d55d208b5a6ab7",
+    "payload_manifest": "ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef",
+    "precision_v1_freeze_sha256": "8f05445eae5505d9b97fef01b172d67de4b68f83cdcabf03222c75bbbffd2696"
+  },
+  "reviewed_utc": "2026-09-11",
+  "round_root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/",
+  "schema": "native_check_and_pin_review.v1",
+  "verdicts": {
+    "claim_1_native_check_v1_scope": "PASS_WITH_FINDINGS",
+    "claim_2_native1_checker_pin": "PASS_WITH_FINDINGS"
+  }
+}

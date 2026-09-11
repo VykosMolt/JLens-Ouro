@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "scope": "CPU control/main owner and source gate; no model or GPU; positive full-geometry owner path uses stubbed binary readers",
+  "case_count": 15,
+  "cases": [
+    {
+      "case": "exact_production_owner_identity_visits_all_five",
+      "passed": true,
+      "scope": "binary readers stubbed; owner/contract gate executes"
+    },
+    {
+      "case": "reject_cpu_test_artifact_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_width_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_sources_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_fit_id_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_prompt_prefix_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_calibration_seed_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_calibration_hash_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_wrong_token_length_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_control_in_main_directory_before_tensor_read",
+      "passed": true
+    },
+    {
+      "case": "reject_incomplete_fifth_main_fit",
+      "passed": true
+    },
+    {
+      "case": "reject_controls_shared_identity_as_main",
+      "passed": true
+    },
+    {
+      "case": "reject_source_changed_after_contract_validation",
+      "passed": true
+    },
+    {
+      "case": "reject_unmanifested_control_source",
+      "passed": true
+    },
+    {
+      "case": "reject_self_consistent_sealed_wrong_geometry_and_calibration",
+      "passed": true,
+      "scope": "real FP32 checkpoint and FP16 final on CPU 2x2 fixtures"
+    }
+  ],
+  "source_sha256": {
+    "run_refits.py": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4",
+    "run_controls.py": "4da1528ed692409919003a1a02ec421fcd6b7d7453d9fbe88f28771b84239543"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "confirmation_additive_receiver_deployment.v1",
+  "recorded_utc": "2026-09-10T10:21:44.084361+00:00",
+  "lease_name": "jlens-confirm-58682ddbc5194900912577d31cd000fe",
+  "pod_id": "8d5naxkec5lnaf",
+  "receiver_source": {
+    "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/receiver_watch.py",
+    "bytes": 6299,
+    "sha256": "8742ecea753144ffb3d94d352161be4797dc473ab60b81e1df764bd62a6127db"
+  },
+  "python": "/home/moloch/ouro_project/venv/bin/python",
+  "binding_sha256": "c0fd230546c57ffb28f02a26664eab91e0ff0ba87427ff3eb25ff862dac2d895",
+  "original_watchdog": {
+    "unit": "jlens-confirm-58682ddbc5194900912577d31cd000fe.service",
+    "observed_active": true,
+    "pid": 1964867
+  },
+  "receiver": {
+    "unit": "jlens-confirm-58682ddbc5194900912577d31cd000fe-receiver.service",
+    "observed_active": true,
+    "pid": 2032380,
+    "first_sync_exit": 0,
+    "process_group_quiescent": true
+  },
+  "scope": "Runtime correction only: pinned monitor sync under existing PyTorch environment. Original watchdog, frozen worker/sources, lease caps and deadlines unchanged. No scientific output accepted yet."
+}

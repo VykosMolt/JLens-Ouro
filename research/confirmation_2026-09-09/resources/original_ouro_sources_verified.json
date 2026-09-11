@@ -1,0 +1,44 @@
+{
+  "/home/moloch/ouro_project/src/ouro_jlens/__init__.py": {
+    "bytes": 0,
+    "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "match": true,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens/bench.py": {
+    "bytes": 6251,
+    "expected": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d",
+    "match": true,
+    "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d"
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens/evaldata.py": {
+    "bytes": 7527,
+    "expected": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "match": true,
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74"
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens/evaluate.py": {
+    "bytes": 63535,
+    "expected": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22",
+    "match": true,
+    "sha256": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22"
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens/evidence.py": {
+    "bytes": 12530,
+    "expected": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+    "match": true,
+    "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879"
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens/fit_lens.py": {
+    "bytes": 72898,
+    "expected": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "match": true,
+    "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0"
+  },
+  "/home/moloch/ouro_project/src/ouro_jlens/recurrent.py": {
+    "bytes": 5777,
+    "expected": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+    "match": true,
+    "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+  }
+}

@@ -1,0 +1,5 @@
+pass,fit01_intended,fit01_control,raw_intended,raw_control,paired_excess_diff,interval_low,interval_high,interval_kind
+1,0.000000,0.000791,0.064583,0.000422,-0.064953,-0.119144,-0.010761,N1 simultaneous max-t (post-confirmation)
+2,0.042188,0.001998,0.127083,0.000468,-0.086425,-0.124312,-0.048539,N1 simultaneous max-t (post-confirmation)
+3,0.027604,0.000435,0.139063,0.000475,-0.111419,-0.167633,-0.055205,N1 simultaneous max-t (post-confirmation)
+4,0.379167,0.003441,0.144271,0.000429,0.231883,0.162890,0.328977,original primary group percentile

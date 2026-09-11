@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-09-08T17:35:52Z",
+  "read_only": true,
+  "rows": [
+    {
+      "id": "NVIDIA GeForce RTX 4090",
+      "capacity120": {
+        "uninterruptablePrice": 0.34,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 32
+      },
+      "capacity100": {
+        "uninterruptablePrice": 0.34,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 32
+      },
+      "capacity120newCuda": {
+        "uninterruptablePrice": 0.34,
+        "stockStatus": "Low",
+        "minMemory": 50,
+        "minVcpu": 32
+      }
+    }
+  ]
+}

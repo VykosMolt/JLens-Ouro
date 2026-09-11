@@ -1,0 +1,1113 @@
+"""Offline lifecycle fixtures and a real tiny CPU save/copy/load/verify smoke.
+
+Run with the pinned local environment, PYTHONDONTWRITEBYTECODE=1. All scientific
+payloads here are synthetic 2x2 CPU matrices. Provider/SSH boundaries are fake.
+"""
+from __future__ import annotations
+
+import argparse
+import builtins
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import ExitStack
+import copy
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+from types import SimpleNamespace
+from unittest.mock import patch
+
+sys.dont_write_bytecode = True
+import artifact_handoff as handoff
+import lease
+import run_refits as io
+from transport import run_bounded
+
+HERE = Path(__file__).resolve().parent
+
+
+def validate_outputs(*, root, manifest, contract):
+    """Pinned fixture verifier: real ownership, tensor, and conversion readers."""
+    import torch
+    root = Path(root)
+    owner = io._json(root / 'fit_01/OWNER.json')
+    identity = owner['identity']
+    if owner != {'schema_version': 1, 'fit_identity_sha256': io._digest(identity), 'identity': identity}:
+        raise ValueError('fixture owner identity differs')
+    if identity['cpu_test'] is not True or identity['d_model'] != 2 or identity['source_layers'] != [0, 1]:
+        raise ValueError('fixture geometry changed')
+    checkpoint = io._read_checkpoint(torch, root / 'fit_01', identity)
+    final = io._read_final(torch, root / 'fit_01', identity, checkpoint)
+    if final is None or checkpoint['cursor'] != 100:
+        raise ValueError('fixture fit is incomplete')
+    return {'schema': 'confirmation_validation.v1', 'status': 'passed', 'run_id': contract['run_id'],
+            'manifest_sha256': handoff.digest(manifest),
+            'contract_sha256': manifest['binding']['output_contract_sha256'],
+            'checked_files': sorted(manifest['files']),
+            'checks': {'loadability': True, 'numerical': True, 'owner_geometry': True},
+            'details': {'scope': 'synthetic 2x2 CPU tensors; actual sealed checkpoint/final readers'}}
+
+
+def require(ok, message):
+    if not ok:
+        raise AssertionError(message)
+
+
+def rejects(operation, message, *, contains=None):
+    try:
+        operation()
+    except Exception as error:
+        if isinstance(error, AssertionError):
+            raise
+        if contains is not None and contains not in str(error):
+            raise AssertionError('wrong rejection for ' + message + ': ' + str(error)) from error
+        return type(error).__name__
+    raise AssertionError('unexpected acceptance: ' + message)
+
+
+_PRIMARY_FIXTURES = {}
+
+
+def primary_fixture(parent):
+    """Real accepted primary tiny-CPU fixture, built in an isolated interpreter."""
+    key = str(parent.resolve())
+    if key not in _PRIMARY_FIXTURES:
+        code = r'''
+import hashlib,json,pathlib,sys,types
+sys.dont_write_bytecode=True
+request=json.loads(sys.argv[1]); directory=pathlib.Path(request['controller'])
+for name in ('run_refits','runpod_api','transport','artifact_handoff','lease','test_lifecycle'):
+    path=directory/(name+'.py'); raw=path.read_bytes(); pin=request['sources'][name+'.py']
+    if {'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()} != pin: raise ValueError('primary fixture source changed')
+    module=types.ModuleType(name);module.__file__=str(path);sys.modules[name]=module
+    exec(compile(raw,str(path),'exec'),module.__dict__)
+fmod=sys.modules['test_lifecycle']; io=sys.modules['run_refits']; handoff=sys.modules['artifact_handoff']
+f=fmod.fixture(pathlib.Path(request['parent']),'primary_prerequisite')
+historical=f.base/'historical.json'; old=io._json(historical)
+old.update(lease_spend_upper_usd=request['original_spend'],combined_spend_upper_usd=request['original_spend'])
+io._atomic_json(historical,old)
+debit=io._json(f.debit_path)
+debit.update(prior_spend_upper_usd=request['original_spend'],remaining_authorized_upper_usd=25-request['original_spend'],
+             historical_leases=[{**old,'record':{'path':str(historical),**handoff.checked_record(historical)}}])
+io._atomic_json(f.debit_path,debit)
+fmod.prepare_state(f,prior_debit_record=handoff.checked_record(f.debit_path),prior_spend_upper_usd=request['original_spend'])
+fmod.publish(f);fmod.accept(f)
+state=io._json(f.root/'LEASE.json')
+fmod.prepare_state(f,status='terminated',halt_requested=True,absence_confirmations=3,absence_account_id=state['account_id'],
+                   terminated_verified_utc=state['billing_start_utc'],lease_spend_upper_usd=0.0,
+                   combined_spend_upper_usd=request['original_spend'])
+if not handoff.accepted_for_current_run(f.root,io._json(f.root/'LEASE.json'),rehash=True): raise ValueError('primary fixture acceptance failed')
+print(json.dumps({'root':str(f.root),'debit_path':str(f.debit_path),'ledger':str(f.ledger)}))
+'''
+        baseline = json.loads((HERE / 'PRIMARY_SOURCE_BASELINE.json').read_text())
+        request = {'controller': baseline['primary_controller'], 'sources': baseline['sources'],
+                   'parent': str(parent), 'original_spend': lease.ORIGINAL_SPEND}
+        result = run_bounded([sys.executable, '-I', '-B', '-c', code, json.dumps(request)],
+                             timeout=120, operation='isolated_primary_fixture')
+        _PRIMARY_FIXTURES[key] = json.loads(result.stdout)
+    info = _PRIMARY_FIXTURES[key]
+    lease.ORIGINAL_DEBIT_PATH = Path(info['debit_path'])
+    lease.ORIGINAL_DEBIT_RECORD = handoff.checked_record(lease.ORIGINAL_DEBIT_PATH)
+    lease.PRIMARY_LEDGER = Path(info['ledger'])
+    return info
+
+
+def snapshot_fixture(path, *, account_id='fixture-account', balance=20.0, pods=None, spend=0.0):
+    value = {'schema': 'confirmation_resource_observation.v1', 'observations': {
+        'account': {'status': 'observed', 'observed_utc': lease.stamp(),
+                    'value': {'id': account_id, 'clientBalance': balance, 'currentSpendPerHr': spend}},
+        'pods': {'status': 'observed', 'observed_utc': lease.stamp(), 'value': [] if pods is None else pods}}}
+    io._new_json(path, value)
+    return value
+
+
+def fixture(parent, name):
+    import torch
+    base = parent / name
+    base.mkdir()
+    workspace = io._mkdir(base / 'worker')
+    results = io._mkdir(workspace / 'results')
+    prompts = ['synthetic paragraph ' + str(i) for i in range(100)]
+    identity = io._fit_identity(prompts, [3] * 100, [2] * 100, 1,
+                                {'kind': 'local_fixture'}, 2, [0, 1], True)
+    diagnostics = [{'index': i, 'prompt_sha256': identity['prompt_sha256'][i],
+                    'token_length': 3, 'n_valid': 2} for i in range(100)]
+    with io._owned_fit(results, 1, identity) as fit:
+        sums = {0: torch.tensor([[100., 25.], [-50., 200.]]),
+                1: torch.tensor([[2., 4.], [6., 8.]])}
+        pointer, _ = io._commit(torch, fit, identity, sums, 100, diagnostics, 'checkpoint')
+        io._commit(torch, fit, identity, sums, 100, diagnostics, 'final', checkpoint_pointer=pointer)
+    (fit / '.lock').unlink()
+    files = handoff.payload_inventory(results)
+    spec_path = base / 'run_spec.json'
+    io._new_json(spec_path, {'schema': 'fixture_run.v1', 'run_id': name, 'blind': True})
+    contract_path = base / 'output_contract.json'
+    contract = {'schema': 'confirmation_output_contract.v1', 'run_id': name,
+                'run_spec_sha256': handoff.checked_record(spec_path)['sha256'],
+                'files': {p: {'role': 'tiny_sealed_fit'} for p in files},
+                'stages': {'smoke': sorted(files)}, 'required_checks': ['loadability', 'numerical', 'owner_geometry']}
+    io._new_json(contract_path, contract)
+    config_path = base / 'run_config.json'
+    config = {'schema': 'confirmation_run_config.v1', 'run_id': name, 'run_spec_path': str(spec_path),
+              'output_contract_path': str(contract_path), 'semantic_verifier': {
+                  'path': str(Path(__file__).resolve()), 'record': handoff.checked_record(__file__), 'callable': 'validate_outputs'},
+              'setup_budget_seconds': 90, 'compute_budget_seconds': 90,
+              'preservation_reserve_seconds': 600, 'transfer_timeout_seconds': 30}
+    io._new_json(config_path, config)
+    primary = primary_fixture(parent)
+    snapshot_path = base / 'account_snapshot.json'
+    snapshot_fixture(snapshot_path)
+    debit_path = base / 'prior_debit.json'
+    bundle = base / 'bundle.bin'
+    bundle.write_bytes(b'fixture bundle, no executable or model')
+    ledger = io._mkdir(base / 'ledger')
+    with patch.object(lease, 'LEDGER', ledger):
+        debit, _ = lease.prepare_phase_debit(Path(primary['root']), snapshot_path)
+        io._new_json(debit_path, debit)
+        state = lease.make_plan(bundle, None, balance=20.0, rate=lease.MAX_GPU_RATE,
+                                run_config=config_path, debit_path=debit_path, job_cap=4.0)
+    state.update(status='running', mutation_phase='observed', pod_id='h-fixture-pod', machine_id='h-fixture-machine',
+                 controller_sources={name: handoff.checked_record(HERE / name) for name in lease.CONTROLLER_FILES},
+                 ssh={'host': '127.0.0.1', 'port': 2222}, ssh_identity=str(base / 'unused_ssh'),
+                 api_key_file=str(io._no_links(lease.api.KEY_FILE)))
+    root = io._mkdir(ledger / 'attempt_01')
+    io._new_json(root / 'LEASE.json', state)
+    return SimpleNamespace(base=base, root=root, workspace=workspace, results=results, state=state,
+                           contract=contract, config=config, config_path=config_path, debit=debit,
+                           debit_path=debit_path, bundle=bundle, ledger=ledger)
+
+
+def publish(f, *, kind='final', outcome='complete'):
+    state = io._json(f.root / 'LEASE.json')
+    manifest = {'schema': 'confirmation_artifact_manifest.v1', 'binding': handoff.binding(state),
+                'kind': kind, 'stage_id': 'smoke' if kind == 'stage' else None, 'outcome': outcome,
+                'files': handoff.payload_inventory(f.results)}
+    name = 'manifests/' + kind + '.json'
+    path = io._no_links(f.workspace / name)
+    io._mkdir(path.parent)
+    io._new_json(path, manifest)
+    index_path = f.workspace / 'artifact_index.json'
+    index = io._json(index_path) if index_path.exists() else {
+        'schema': 'confirmation_artifact_index.v1', 'binding': handoff.binding(state), 'manifests': []}
+    index['manifests'].append({'path': name, 'record': handoff.checked_record(path)})
+    io._atomic_json(index_path, index)
+    return manifest
+
+
+def discover(f, transport=None):
+    transport = transport or handoff.LocalTransport(f.workspace)
+    state = io._json(f.root / 'LEASE.json')
+    manifests = handoff.read_index(state, transport)
+    for manifest in manifests:
+        state = lease.remember_manifest(f.root, state, manifest, transport.manifest_refs[handoff.digest(manifest)])
+    return state, manifests, transport
+
+
+def accept(f):
+    return lease.sync_results(f.root, transport=handoff.LocalTransport(f.workspace))
+
+
+def prepare_state(f, **fields):
+    """Construct a different initial fixture state; not a production transition."""
+    state = io._json(f.root / 'LEASE.json')
+    state.update(fields)
+    io._atomic_json(f.root / 'LEASE.json', state)
+    return state
+
+
+def pod_for(state):
+    return {'id': state['pod_id'], 'name': state['name'], 'machineId': state['machine_id'],
+            'imageName': state['image'], 'gpuCount': 1, 'containerDiskInGb': lease.DISK_GB, 'volumeInGb': 0,
+            'machine': {'gpuDisplayName': lease.GPU}, 'costPerHr': lease.MAX_GPU_RATE,
+            'runtime': {'ports': [{'privatePort': 22, 'isIpPublic': True, 'ip': '127.0.0.1', 'publicPort': 2222}]}}
+
+
+class StopWatch(BaseException):
+    pass
+
+
+def watch_fixture(f, *, status=None, polls=3, advance=15, absent=False, termination=None):
+    state = io._json(f.root / 'LEASE.json')
+    clock = [time.time()]
+    alive, sleeps = [not absent], [0]
+    deletions, stops, collections = [], [], []
+    live = {'id': state['account_id'], 'clientBalance': 20.0, 'currentSpendPerHr': lease.HARD_RATE}
+    def status_read(*args):
+        if isinstance(status, BaseException):
+            raise status
+        return status
+    def listing(*args):
+        return [pod_for(io._json(f.root / 'LEASE.json'))] if alive[0] else []
+    def delete(pod):
+        current = io._json(f.root / 'LEASE.json')
+        authorization = current['termination_authorization']
+        handoff.verify_record(authorization['path'], authorization['record'])
+        intent = io._json(authorization['path'])
+        require(intent['pod_id'] == pod, 'deletion targets another pod')
+        deletions.append(intent)
+        alive[0] = False
+    def sleep(seconds):
+        clock[0] += seconds if seconds != 15 else advance
+        if seconds == 15:
+            sleeps[0] += 1
+            if sleeps[0] >= polls:
+                raise StopWatch()
+    with ExitStack() as stack:
+        stack.enter_context(patch.object(lease, 'LEDGER', f.ledger))
+        stack.enter_context(patch.object(lease, 'checked_account', return_value=live))
+        stack.enter_context(patch.object(lease, 'pods', side_effect=listing))
+        stack.enter_context(patch.object(lease.api, 'terminate', side_effect=delete))
+        stack.enter_context(patch.object(lease.api, 'gql', side_effect=AssertionError('fixture reached provider')))
+        stack.enter_context(patch.object(lease, 'remote_status', side_effect=status_read))
+        stack.enter_context(patch.object(lease, 'ensure_sync', side_effect=lambda *a: collections.append(True)))
+        stack.enter_context(patch.object(lease, 'request_worker_stop', side_effect=lambda *a: stops.append(True)))
+        stack.enter_context(patch.object(lease.time, 'time', side_effect=lambda: clock[0]))
+        stack.enter_context(patch.object(lease.time, 'sleep', side_effect=sleep))
+        try:
+            if termination is None:
+                lease.watch(SimpleNamespace(root=f.root))
+            else:
+                lease.terminate_owned(f.root, termination)
+        except StopWatch:
+            pass
+    return {'deletions': deletions, 'stops': len(stops), 'collections': len(collections),
+            'state': io._json(f.root / 'LEASE.json')}
+
+
+def run_smoke(parent):
+    f = fixture(parent, 'smoke')
+    manifest = publish(f)
+    interrupted = handoff.LocalTransport(f.workspace, interrupt_after_bytes=256)
+    require(rejects(lambda: lease.sync_results(f.root, transport=interrupted), 'interrupted copy') == 'TimeoutError',
+            'copy did not interrupt at real partial bytes')
+    state = io._json(f.root / 'LEASE.json')
+    require(not handoff.accepted_for_current_run(f.root, state), 'partial copy was accepted')
+    staging = handoff.generation_path(f.root, state, manifest, accepted=False)
+    require(any((staging / 'partials').rglob('*')), 'interruption left no resumable bytes')
+    resumed = handoff.LocalTransport(f.workspace)
+    pointers = lease.sync_results(f.root, transport=resumed)
+    require(resumed.resumed_files and len(pointers) == 1, 'resume did not consume the same partial staging')
+    state = io._json(f.root / 'LEASE.json')
+    require(handoff.accepted_for_current_run(f.root, state), 'real load/conversion acceptance missing')
+    watched = watch_fixture(f, status=subprocess.TimeoutExpired('synthetic ssh', 30))
+    require(len(watched['deletions']) == 1 and watched['deletions'][0]['class'] == 'accepted_artifacts',
+            'accepted artifacts plus status timeout did not permit normal deletion')
+    require(watched['state']['absence_confirmations'] == 3, 'deletion lacks three bound absence confirmations')
+    return {'case': 'tiny_cpu_save_interrupt_resume_load_convert_accept_delete', 'status': 'passed',
+            'root': str(f.root), 'manifest_sha256': handoff.digest(manifest), 'files': manifest['files'],
+            'resumed_files': resumed.resumed_files, 'acceptance': pointers[0],
+            'termination_class': watched['deletions'][0]['class'], 'absence_confirmations': 3}
+
+
+def run_cases(parent):
+    cases = []
+    def passed(name, **details):
+        cases.append({'case': name, 'status': 'passed', **details})
+
+    f = fixture(parent, 'setup_restart')
+    state = io._json(f.root / 'LEASE.json')
+    status = {'lease_name': state['name'], 'binding': handoff.binding(state), 'setup_complete': True, 'phase': 'evaluating'}
+    state = lease.remember_worker_status(f.root, state, status)
+    lease.update(f.root, setup_deadline_utc=lease.stamp(time.time() - 10))
+    for observed in (None, {**status, 'setup_complete': False}, subprocess.TimeoutExpired('ssh', 30)):
+        result = watch_fixture(f, status=observed, polls=3)
+        require(not result['deletions'] and not result['stops'] and lease.setup_completed_for_lease(result['state']),
+                'setup regressed after restart/missing/false/three timeouts')
+    passed('setup_restart_missing_false_three_transport_errors')
+
+    f = fixture(parent, 'never_setup')
+    lease.update(f.root, setup_deadline_utc=lease.stamp(time.time() - 10))
+    result = watch_fixture(f, status=None)
+    require(result['stops'] and not result['deletions'] and not result['state'].get('retrieval_accepted'),
+            'setup timeout deleted or fabricated acceptance')
+    passed('setup_timeout_stops_preserves_until_hard_deadline')
+
+    f = fixture(parent, 'concurrency')
+    observed = io._json(f.root / 'LEASE.json')
+    status = {'lease_name': observed['name'], 'binding': handoff.binding(observed), 'setup_complete': True, 'phase': 'compute'}
+    with ThreadPoolExecutor(2) as pool:
+        results = [pool.submit(lease.update, f.root, halt_requested=True, all_in_rate=1.5),
+                   pool.submit(lease.remember_worker_status, f.root, observed, status)]
+        [r.result() for r in results]
+    state = io._json(f.root / 'LEASE.json')
+    require(state['halt_requested'] and state['all_in_rate'] == 1.5 and lease.setup_completed_for_lease(state),
+            'state lock lost concurrent halt/rate/setup fields')
+    rejects(lambda: lease.update(f.root, pod_id='another-pod'), 'bound pod changed')
+    wrong_observer = {**observed, 'pod_id': 'another-pod'}
+    rejects(lambda: lease.remember_worker_status(f.root, wrong_observer, status), 'stale pod status')
+    require(not lease.setup_completed_for_lease({**state, 'pod_id': 'another-pod'}), 'old latch crossed pod identity')
+    rejects(lambda: lease.update(f.root, run_id='another-run'), 'run ID changed')
+    rejects(lambda: lease.update(f.root, provider_deadline_utc=lease.stamp(lease.epoch(state['provider_deadline_utc']) + 1)),
+            'provider TTL extended')
+    passed('locked_updates_and_stale_observer')
+
+    f = fixture(parent, 'early_stop')
+    state = io._json(f.root / 'LEASE.json')
+    lease.remember_worker_status(f.root, state, {'lease_name': state['name'], 'binding': handoff.binding(state),
+                                              'setup_complete': True, 'phase': 'compute'})
+    lease.update(f.root, work_deadline_utc=lease.stamp(time.time() - 1))
+    result = watch_fixture(f, status=subprocess.TimeoutExpired('ssh', 30))
+    require(result['stops'] and result['collections'] and not result['deletions'], 'status timeout skipped early preservation')
+    passed('early_preservation_survives_status_timeout')
+
+    f = fixture(parent, 'emergency')
+    manifest = publish(f)
+    discover(f)
+    lease.update(f.root, watch_deadline_utc=lease.stamp(time.time() - 1), retrieval_in_progress={'phase': 'transferring'})
+    with handoff.handoff_lock(f.root):
+        result = watch_fixture(f)
+    require(len(result['deletions']) == 1 and result['deletions'][0]['class'] == 'budget_emergency'
+            and set(result['deletions'][0]['not_previously_accepted_files']) == set(manifest['files'])
+            and not result['state'].get('retrieval_accepted'), 'emergency waited on collector or claimed acceptance')
+    passed('budget_emergency_precedes_mutation_and_bypasses_collection_lock')
+
+    f = fixture(parent, 'provider_absent')
+    result = watch_fixture(f, absent=True)
+    require(not result['deletions'] and result['state']['status'] == 'terminated'
+            and result['state']['absence_confirmations'] == 3, 'absence issued a deletion or lacked confirmation')
+    passed('provider_absence_without_new_deletion')
+
+    f = fixture(parent, 'stage_reuse')
+    stage = publish(f, kind='stage')
+    accept(f)
+    state = io._json(f.root / 'LEASE.json')
+    require(state['stage_acceptances'] and not handoff.accepted_for_current_run(f.root, state), 'stage authorized final deletion')
+    final = publish(f)
+    receiver = handoff.LocalTransport(f.workspace)
+    lease.sync_results(f.root, transport=receiver)
+    require(receiver.transferred_bytes == 0 and handoff.accepted_for_current_run(f.root, io._json(f.root / 'LEASE.json')),
+            'final did not reuse exact accepted stage bytes')
+    with handoff.handoff_lock(f.root):
+        result = watch_fixture(f, polls=1)
+    require(not result['deletions'], 'normal deletion waited for or bypassed handoff lock')
+    passed('stage_preservation_reuse_and_nonblocking_normal_delete')
+
+    f = fixture(parent, 'stale_ack')
+    manifest = publish(f)
+    accept(f)
+    state = io._json(f.root / 'LEASE.json')
+    for key, value in [('run_id', 'wrong-run'), ('pod_id', 'wrong-pod'), ('output_contract_sha256', '0' * 64),
+                       ('controller_sources', {**state['controller_sources'], 'extra.py': {'bytes': 0, 'sha256': '0' * 64}})]:
+        bad = {**state, key: value}
+        require(not handoff.accepted_for_current_run(f.root, bad), 'stale acknowledgement accepted: ' + key)
+    bad = copy.deepcopy(state)
+    bad['retrieval_accepted']['manifest_sha256'] = '0' * 64
+    require(not handoff.accepted_for_current_run(f.root, bad), 'wrong manifest acknowledgement accepted')
+    bad = copy.deepcopy(manifest)
+    bad['files'].pop(next(iter(bad['files'])))
+    rejects(lambda: handoff.validate_manifest(state, bad), 'required artifact omitted')
+    bad = copy.deepcopy(manifest)
+    bad['files']['../escape'] = next(iter(bad['files'].values()))
+    rejects(lambda: handoff.validate_manifest(state, bad), 'traversal manifest')
+    passed('stale_receipt_exact_binding_and_required_pathset')
+
+    for variant in ('payload', 'manifest', 'receiptless_payload'):
+        f = fixture(parent, 'repair_' + variant)
+        manifest = publish(f)
+        accept(f)
+        state = io._json(f.root / 'LEASE.json')
+        old_pointer = copy.deepcopy(state['retrieval_accepted'])
+        generation = handoff.generation_path(f.root, state, manifest, accepted=True)
+        if variant == 'manifest':
+            (generation / 'MANIFEST.json').unlink()
+        else:
+            name = next(iter(manifest['files']))
+            target = generation / 'results' / name
+            data = bytearray(target.read_bytes())
+            data[0] ^= 1
+            target.write_bytes(data)
+            if variant == 'receiptless_payload':
+                (generation / 'RECEIPT.json').unlink()
+        require(not handoff.accepted_for_current_run(f.root, state), 'damaged published artifact remained accepted')
+        accept(f)
+        after = io._json(f.root / 'LEASE.json')
+        require(handoff.accepted_for_current_run(f.root, after) and after['retrieval_accepted'] != old_pointer,
+                'published corruption did not get new verified acceptance')
+        require(any((f.root / 'handoff/quarantine' / state['run_id']).iterdir()), 'repair destroyed original evidence')
+        passed('quarantine_and_repair_' + variant)
+
+    for stage in ('after_transfer', 'after_validation', 'after_pending_unlink', 'after_publication', 'before_receipt_link', 'after_receipt_link'):
+        f = fixture(parent, 'crash_' + stage)
+        manifest = publish(f)
+        state, _, transport = discover(f)
+        def crash(point):
+            if point == stage:
+                raise RuntimeError('synthetic crash at ' + point)
+        rejects(lambda: handoff.collect_manifest(f.root, state, manifest, transport, fault_hook=crash), stage)
+        pointer = handoff.collect_manifest(f.root, state, manifest, transport)
+        require(pointer['manifest_sha256'] == handoff.digest(manifest), 'crash recovery accepted another manifest')
+        passed('atomic_publication_resume_' + stage)
+
+    f = fixture(parent, 'double_collector')
+    manifest = publish(f)
+    state, _, transport = discover(f)
+    with ThreadPoolExecutor(2) as pool:
+        futures = [pool.submit(handoff.collect_manifest, f.root, state, manifest, transport) for _ in range(2)]
+        pointers = [future.result() for future in futures]
+    require(pointers[0] == pointers[1], 'two collectors published conflicting receipts')
+    passed('double_collector_single_publication')
+
+    f = fixture(parent, 'changed_source')
+    manifest = publish(f)
+    state, _, transport = discover(f)
+    source = f.results / next(iter(manifest['files']))
+    source.write_bytes(source.read_bytes() + b'changed')
+    rejects(lambda: handoff.collect_manifest(f.root, state, manifest, transport), 'source mutation')
+    require(not (handoff.generation_path(f.root, state, manifest, accepted=True) / 'RECEIPT.json').exists(),
+            'source mutation published acceptance')
+    passed('source_mutation_rejects_transfer')
+
+    for variant in ('manifest', 'pending_source_unlink'):
+        f = fixture(parent, 'after_transfer_' + variant)
+        manifest = publish(f)
+        state, _, transport = discover(f)
+        def mutate(stage):
+            if stage != 'after_transfer':
+                return
+            if variant == 'manifest':
+                changed = {**manifest, 'outcome': 'failed'}
+                io._atomic_json(f.workspace / 'manifests/final.json', changed)
+            else:
+                (f.results / next(iter(manifest['files']))).unlink()
+        rejects(lambda: handoff.collect_manifest(f.root, state, manifest, transport, fault_hook=mutate),
+                'source changed after transfer')
+        require(not handoff.generation_path(f.root, state, manifest, accepted=True).exists(),
+                'post-transfer source mutation reached publication')
+        passed('after_transfer_source_change_' + variant)
+
+    import torch
+    for variant in ('unloadable', 'wrong_shape', 'wrong_dtype', 'nonfinite', 'wrong_mean'):
+        f = fixture(parent, 'invalid_' + variant)
+        pointer_path = f.results / 'fit_01/COMPLETE.json'
+        pointer = io._json(pointer_path)
+        generation = f.results / 'fit_01' / pointer['generation']
+        binary = generation / 'lens.pt'
+        if variant == 'unloadable':
+            binary.write_bytes(b'hash-consistent bytes that are not a tensor archive')
+        else:
+            payload = torch.load(binary, weights_only=True, map_location='cpu')
+            if variant == 'wrong_shape':
+                payload['J'][0] = torch.zeros((3, 3), dtype=torch.float16)
+            elif variant == 'wrong_dtype':
+                payload['J'][0] = payload['J'][0].float()
+            elif variant == 'nonfinite':
+                payload['J'][0][0, 0] = float('nan')
+            else:
+                payload['J'][0][0, 0] += 1
+            torch.save(payload, binary)
+        seal = io._json(generation / 'SEAL.json')
+        seal['files']['lens.pt'] = handoff.checked_record(binary)
+        io._atomic_json(generation / 'SEAL.json', seal)
+        pointer['seal'] = handoff.checked_record(generation / 'SEAL.json')
+        io._atomic_json(pointer_path, pointer)
+        publish(f)
+        expected_error = {'wrong_shape': 'invalid shape, dtype', 'wrong_dtype': 'invalid shape, dtype',
+                          'nonfinite': 'nonfinite', 'wrong_mean': 'FP16 N=100 mean'}.get(variant)
+        rejects(lambda: accept(f), variant, contains=expected_error)
+        require(not io._json(f.root / 'LEASE.json').get('retrieval_accepted'), 'semantic failure was accepted')
+        passed('hash_consistent_semantic_failure_' + variant)
+
+    f = fixture(parent, 'truncated')
+    manifest = publish(f)
+    state, _, transport = discover(f)
+    staging = handoff.generation_path(f.root, state, manifest, accepted=False)
+    partial = io._mkdir(staging / 'partials')
+    name = next(iter(manifest['files']))
+    target = io._no_links(partial / name)
+    io._mkdir(target.parent)
+    target.write_bytes(b'wrong prefix')
+    pointer = handoff.collect_manifest(f.root, state, manifest, transport)
+    require(pointer and transport.resumed_files, 'corrupt partial did not resume safely')
+    passed('truncated_wrong_prefix_resume')
+
+    f = fixture(parent, 'debit')
+    state = io._json(f.root / 'LEASE.json')
+    lease.update(f.root, status='terminated', halt_requested=True, absence_confirmations=3,
+                 absence_account_id=f.state['account_id'], terminated_verified_utc=lease.stamp(),
+                 lease_spend_upper_usd=0.2, combined_spend_upper_usd=f.debit['prior_spend_upper_usd'] + 0.2)
+    with patch.object(lease, 'LEDGER', f.ledger):
+        _, _, debit, previous = lease.prior_debit(f.debit_path)
+        require(debit == f.debit['prior_spend_upper_usd'] + 0.2 and len(previous) == 1, 'new ledger reset or double counted prior debit')
+        require(lease.prior_debit(f.debit_path)[2] == f.debit['prior_spend_upper_usd'] + 0.2, 'restart changed debit')
+        rejects(lambda: lease.make_plan(f.bundle, None, balance=20, rate=lease.MAX_GPU_RATE,
+            run_config=f.config_path, debit_path=f.debit_path, job_cap=0.2), 'insufficient admission reserve')
+        rejects(lambda: lease.make_plan(f.bundle, None, balance=20, rate=lease.MAX_GPU_RATE,
+            run_config=f.config_path, debit_path=f.debit_path, job_cap=6.1), 'job ceiling increased')
+    reduced = {**f.debit, 'prior_spend_upper_usd': 0.1, 'remaining_authorized_upper_usd': 24.9}
+    reduced_path = f.base / 'reduced_debit.json'
+    io._new_json(reduced_path, reduced)
+    with patch.object(lease, 'LEDGER', f.base / 'empty'):
+        rejects(lambda: lease.prior_debit(reduced_path), 'historical debit reduced')
+    passed('prior_debit_carried_once_and_admission_caps')
+
+    f = fixture(parent, 'create_race')
+    prepare_state(f, status='pending', mutation_phase='not_started', pod_id=None, machine_id=None,
+                  watch_ready_utc=lease.stamp(), watch_account_id=f.state['account_id'])
+    def begin():
+        try:
+            lease.begin_create(f.root)
+            return True
+        except ValueError:
+            return False
+    with patch.object(lease, 'LEDGER', f.ledger), ThreadPoolExecutor(2) as pool:
+        outcomes = [v.result() for v in [pool.submit(begin), pool.submit(begin)]]
+    require(outcomes.count(True) == 1, 'create intent committed more than once')
+    lease.fail_create(f.root)
+    require(not begin(), 'uncertain create could be retried')
+    require(not lease.confirm_absence(f.root, 3, f.state['account_id']), 'uncertain create finalized absence before TTL')
+    current = io._json(f.root / 'LEASE.json')
+    with patch.object(lease.time, 'time', return_value=lease.epoch(current['provider_deadline_utc']) + 1):
+        require(lease.confirm_absence(f.root, 3, f.state['account_id']), 'uncertain create did not reconcile after fixed TTL')
+    passed('create_race_uncertainty_halt_and_absence_barriers')
+
+    f = fixture(parent, 'verifier_changed')
+    verifier_copy = f.base / 'validator.py'
+    shutil.copyfile(__file__, verifier_copy)
+    state = io._json(f.root / 'LEASE.json')
+    verifier = {**state['semantic_verifier'], 'path': str(verifier_copy)}
+    prepare_state(f, semantic_verifier=verifier, status='pending', mutation_phase='not_started',
+                  watch_ready_utc=lease.stamp(), watch_account_id=state['account_id'])
+    verifier_copy.write_text(verifier_copy.read_text() + '\n# changed\n')
+    rejects(lambda: lease.begin_create(f.root), 'verifier changed before paid creation')
+    require(io._json(f.root / 'LEASE.json')['mutation_phase'] == 'not_started', 'bad verifier allowed create intent')
+    passed('verifier_pin_rechecked_before_create')
+
+    f = fixture(parent, 'forged_worker_ack')
+    state = io._json(f.root / 'LEASE.json')
+    status = {'lease_name': state['name'], 'binding': handoff.binding(state), 'phase': 'complete',
+              'setup_complete': True, 'retrieval_accepted': {'status': 'passed'}}
+    result = watch_fixture(f, status=status)
+    require(not result['deletions'] and not result['state'].get('retrieval_accepted')
+            and not result['state'].get('computation_finished'), 'worker status supplied local acceptance')
+    passed('worker_complete_and_forged_ack_are_not_receiver_acceptance')
+
+    f = fixture(parent, 'explicit_teardown')
+    state = io._json(f.root / 'LEASE.json')
+    authorization = f.base / 'root_teardown.json'
+    document = {'schema': 'confirmation_explicit_teardown.v1', 'binding': handoff.binding(state),
+                'scope': 'fixture explicit stop after reviewing partial preservation', 'authorized_by': 'root'}
+    io._new_json(authorization, {**document, 'binding': {**document['binding'], 'run_id': 'another-run'}})
+    rejects(lambda: watch_fixture(f, termination={'class': 'explicit_teardown', 'authorization_path': authorization}),
+            'stale explicit teardown')
+    io._atomic_json(authorization, document)
+    result = watch_fixture(f, termination={'class': 'explicit_teardown', 'authorization_path': authorization})
+    require(len(result['deletions']) == 1 and result['deletions'][0]['class'] == 'explicit_teardown'
+            and result['deletions'][0]['reason'] == document['scope'], 'explicit teardown lost its local scope')
+    passed('root_explicit_teardown_exact_binding_and_scope')
+
+    f = fixture(parent, 'mutation_guards')
+    state = io._json(f.root / 'LEASE.json')
+    live = {'id': state['account_id'], 'clientBalance': 20.0, 'currentSpendPerHr': lease.HARD_RATE}
+    lease.update(f.root, watch_deadline_utc=lease.stamp(time.time() - 1))
+    with patch.object(lease, 'account', return_value={**live, 'id': 'another-account'}), \
+            patch.object(lease.api, 'terminate') as deletion:
+        rejects(lambda: lease.terminate_owned(f.root, {'class': 'budget_emergency'}), 'account identity changed',
+                contains='expected account')
+        deletion.assert_not_called()
+    for changed in ({**pod_for(state), 'name': 'renamed-pod'}, {**pod_for(state), 'id': 'foreign-pod'}):
+        with patch.object(lease, 'checked_account', return_value=live), \
+                patch.object(lease, 'pods', return_value=[changed]), \
+                patch.object(lease.api, 'terminate') as deletion, patch.object(lease.time, 'sleep'):
+            require(lease.terminate_owned(f.root, {'class': 'budget_emergency'}) is False,
+                    'changed pod identity was treated as deleted')
+            deletion.assert_not_called()
+    passed('account_renamed_and_foreign_pod_mutation_guards')
+
+    f = fixture(parent, 'bootstrap')
+    script = (HERE / 'pod_entry.sh').read_text().split("python - <<'PY'\n", 1)[1].split('\nPY\n', 1)[0]
+    bootstrap = io._mkdir(f.base / 'bootstrap')
+    for name in ('workspace/jlens', 'root/.ssh', 'etc/ssh/sshd_config.d'):
+        io._mkdir(bootstrap / name)
+    environment = {'PUBLIC_KEY': 'ssh-ed25519 AAAA fixture', 'JLENS_LEASE_NAME': f.state['name']}
+    normal_import = builtins.__import__
+    def controlled_import(name, *args, **kwargs):
+        if name == 'os':
+            return SimpleNamespace(environ=environment)
+        if name == 'pathlib':
+            return SimpleNamespace(Path=lambda path: bootstrap / path.lstrip('/'))
+        return normal_import(name, *args, **kwargs)
+    namespace = {'__builtins__': {**vars(builtins), '__import__': controlled_import}}
+    exec(compile(script, 'actual_pod_entry_python', 'exec'), namespace)
+    require((bootstrap / 'workspace/jlens/provider_lease_name').read_text().strip() == f.state['name'],
+            'actual bootstrap rejected or changed the planned confirmation name')
+    environment['JLENS_LEASE_NAME'] = f.state['name'].replace('jlens-confirm-', 'jlens-refit-')
+    try:
+        exec(compile(script, 'actual_pod_entry_python', 'exec'), namespace)
+    except SystemExit:
+        pass
+    else:
+        raise AssertionError('new bootstrap accepted the historical name prefix')
+    subprocess.run(['bash', '-n', str(HERE / 'pod_entry.sh')], check=True)
+    passed('actual_bootstrap_name_and_ssh_setup_snippet_without_system_mutation')
+
+    f = fixture(parent, 'failed_final')
+    manifest = publish(f, outcome='failed')
+    accept(f)
+    state = io._json(f.root / 'LEASE.json')
+    require(state['computation_finished']['outcome'] == 'failed' and not state.get('retrieval_accepted'),
+            'failed scientific run counted as full acceptance')
+    passed('failed_terminal_preserved_without_full_acceptance')
+
+    processes = []
+    rejects(lambda: run_bounded([sys.executable, '-c', 'import time; time.sleep(30)'],
+                               timeout=0.05, operation='fixture_timeout', processes=processes), 'bounded subprocess timeout')
+    require(processes[0]['process_group_quiescent'], 'timed out process group remained alive')
+    passed('bounded_process_group_cleanup', processes=processes)
+
+    # Execute the actual generated SSH metadata snippet against a local fixture.
+    f = fixture(parent, 'metadata_atime')
+    metadata = f.workspace / 'artifact_index.json'
+    metadata.write_text('{"unchanged":true}')
+    os.utime(metadata, (1, time.time()))
+    receiver = handoff.SSHTransport(f.root, f.state, ['unused-ssh'])
+    def local_python(script, **kwargs):
+        script = script.replace("pathlib.Path('/workspace/jlens')", 'pathlib.Path(' + repr(str(f.workspace)) + ')')
+        return subprocess.run([sys.executable, '-c', script], check=True, capture_output=True).stdout
+    with patch.object(receiver, '_python', side_effect=local_python):
+        require(receiver.read_bytes('artifact_index.json') == b'{"unchanged":true}', 'atime rejected stable metadata')
+    passed('metadata_read_stat_guard_ignores_atime_only_change')
+    return cases
+
+
+def run_phase_cases(parent):
+    """Adversarial phase gates use the real pinned primary receiver and payload."""
+    cases = []
+    def passed(name, **evidence):
+        cases.append({'case': name, 'status': 'passed', **evidence})
+    def write_restore(path, data, operation):
+        saved = path.read_bytes()
+        try:
+            path.write_bytes(data)
+            operation()
+        finally:
+            path.write_bytes(saved)
+    def check(value, proof):
+        return lease.phase_prerequisites(value, rehash=False, stability=proof)
+
+    f = fixture(parent, 'phase_omitted_primary')
+    for field, mutation in [('primary_leases', []), ('historical_leases', []),
+                             ('primary_leases', f.debit['primary_leases'] * 2)]:
+        changed = {**f.debit, field: mutation}
+        rejects(lambda: check(changed, f.state['primary_admission_proof']), 'omitted/duplicate prior lease')
+    passed('every_historical_and_primary_lease_included_exactly_once')
+
+    f = fixture(parent, 'phase_new_primary_record')
+    selected_path = Path(f.debit['primary_acceptance']['lease_path'])
+    extra_root = io._mkdir(lease.PRIMARY_LEDGER / 'unrecorded_extra')
+    extra = io._json(selected_path)
+    extra.update(name='unrecorded-primary', pod_id='unrecorded-primary-pod')
+    extra_path = extra_root / 'LEASE.json'
+    io._new_json(extra_path, extra)
+    try:
+        rejects(lambda: check(f.debit, f.state['primary_admission_proof']), 'unrecorded actual primary lease')
+        extra['name'] = io._json(selected_path)['name']
+        io._atomic_json(extra_path, extra)
+        rejects(lambda: check(f.debit, f.state['primary_admission_proof']), 'duplicate actual primary lease')
+    finally:
+        extra_path.unlink()
+        extra_root.rmdir()
+    passed('canonical_primary_ledger_inventory_catches_added_and_duplicate_states')
+
+    f = fixture(parent, 'phase_nonterminal_primary')
+    path = Path(f.debit['primary_acceptance']['lease_path'])
+    state = io._json(path)
+    for fields in ({'status': 'running'}, {'absence_confirmations': 0}, {'absence_account_id': 'other-account'}):
+        changed = {**state, **fields}
+        write_restore(path, io._canonical(changed),
+                      lambda: rejects(lambda: check(f.debit, f.state['primary_admission_proof']),
+                                      'nonterminal or unreconciled primary'))
+    passed('primary_complete_receipt_does_not_replace_confirmed_shutdown')
+
+    f = fixture(parent, 'phase_unaccepted_primary')
+    path = Path(f.debit['primary_acceptance']['lease_path'])
+    state = io._json(path)
+    state.pop('retrieval_accepted')
+    def reject_unaccepted():
+        with patch.object(lease, 'LEDGER', f.base / 'unused_h_ledger'):
+            rejects(lambda: lease.prepare_phase_debit(path.parent, f.base / 'account_snapshot.json'),
+                    'terminated but unaccepted primary')
+    write_restore(path, io._canonical(state), reject_unaccepted)
+    passed('primary_termination_without_exact_complete_acceptance_blocks_phase')
+
+    f = fixture(parent, 'phase_receipt_modified')
+    receipt_path = Path(f.debit['primary_acceptance']['receipt']['path'])
+    receipt = io._json(receipt_path)
+    changed = {**receipt, 'accepted_utc': receipt['accepted_utc'] + 1}
+    # Even spoofing the H handoff cannot substitute it for the source-bound primary verifier.
+    with patch.object(handoff, 'accepted_for_current_run', return_value=True):
+        write_restore(receipt_path, io._canonical(changed),
+                      lambda: rejects(lambda: lease.phase_prerequisites(f.debit, rehash=True), 'stale primary receipt'))
+    passed('stale_receipt_rejected_even_if_h_handoff_is_spoofed')
+
+    f = fixture(parent, 'phase_payload_modified')
+    proof = f.state['primary_admission_proof']
+    payload = Path(proof['payload_stability']['root'])
+    name = next(name for name in proof['payload_hash_records'] if name.endswith('metadata.json'))
+    path = payload / name
+    changed = bytearray(path.read_bytes()); changed[-1] ^= 1
+    def reject_payload():
+        rejects(lambda: check(f.debit, proof), 'same-size payload changed after fresh rehash')
+        rejects(lambda: lease.phase_prerequisites(f.debit, rehash=True), 'changed payload fresh primary rehash')
+    write_restore(path, changed, reject_payload)
+    passed('same_size_payload_corruption_fails_both_fresh_rehash_and_precreate_inventory')
+
+    f = fixture(parent, 'phase_mutation_during_rehash')
+    proof = f.state['primary_admission_proof']
+    path = Path(proof['payload_stability']['root']) / next(iter(proof['payload_hash_records']))
+    saved = path.read_bytes()
+    genuine_revalidation = lease.revalidate_primary_acceptance
+    def mutate_after_hash(*args):
+        genuine_revalidation(*args)
+        changed = bytearray(saved); changed[-1] ^= 1
+        path.write_bytes(changed)
+    try:
+        with patch.object(lease, 'revalidate_primary_acceptance', side_effect=mutate_after_hash):
+            rejects(lambda: lease.phase_prerequisites(f.debit, rehash=True),
+                    'payload mutation between full hashing and final stat capture',
+                    contains='changed during fresh full rehash')
+    finally:
+        path.write_bytes(saved)
+    passed('payload_stat_inventory_brackets_full_rehash_and_catches_inflight_mutation')
+
+    f = fixture(parent, 'phase_payload_replaced')
+    proof = f.state['primary_admission_proof']
+    path = Path(proof['payload_stability']['root']) / next(iter(proof['payload_hash_records']))
+    saved = path.read_bytes()
+    replacement = path.with_name(path.name + '.replacement')
+    replacement.write_bytes(saved)
+    os.replace(replacement, path)
+    rejects(lambda: check(f.debit, proof), 'same-byte inode replacement after fresh rehash')
+    passed('same_byte_inode_replacement_rejects_precreate_admission')
+
+    f = fixture(parent, 'phase_source_changed')
+    copied = io._mkdir(f.base / 'primary_sources')
+    for name in lease.PRIMARY_SOURCE_RECORDS:
+        shutil.copyfile(lease.PRIMARY_CONTROLLER / name, copied / name)
+    with patch.object(lease, 'PRIMARY_CONTROLLER', copied):
+        (copied / 'artifact_handoff.py').write_bytes(b'raise RuntimeError("must not execute altered primary source")')
+        rejects(lambda: lease.phase_prerequisites(f.debit, rehash=True), 'primary source changed before import')
+    passed('primary_module_source_verified_before_isolated_compilation')
+
+    f = fixture(parent, 'phase_snapshot_gate')
+    for name, fields in [('wrong_identity', {'account_id': 'different-account'}),
+                         ('active_pod', {'pods': [{'id': 'another-pod'}]}),
+                         ('active_spend', {'spend': 0.01})]:
+        path = f.base / (name + '.json')
+        snapshot_fixture(path, **fields)
+        with patch.object(lease, 'LEDGER', f.base / 'empty_h_ledger'):
+            rejects(lambda: lease.prepare_phase_debit(Path(f.debit['primary_acceptance']['lease_path']).parent, path),
+                    'snapshot ' + name)
+    changed = {**f.debit, 'minimum_balance_to_preserve_usd': 0.0}
+    rejects(lambda: check(changed, f.state['primary_admission_proof']), 'original balance floor reduced')
+    passed('phase_snapshot_identity_no_pods_no_spend_and_original_balance_floor')
+
+    f = fixture(parent, 'phase_budget')
+    config = {**f.config, 'setup_budget_seconds': 3600, 'compute_budget_seconds': 20880,
+              'preservation_reserve_seconds': 4680, 'transfer_timeout_seconds': 4680}
+    config_path = f.base / 'planned_h_config.json'
+    io._new_json(config_path, config)
+    with patch.object(lease, 'LEDGER', f.base / 'empty_h_ledger'):
+        plan = lease.make_plan(f.bundle, None, balance=20.0, rate=lease.MAX_GPU_RATE,
+                               run_config=config_path, debit_path=f.debit_path, job_cap=6.0)
+        required = (3600 + 20880 + 4680 + 600) / 3600 * lease.HARD_RATE + 0.15
+        require(abs(required - 5.989890410958905) < 1e-9, 'H resource arithmetic changed')
+        require(lease.epoch(plan['provider_deadline_utc']) - lease.epoch(plan['billing_start_utc']) == 29760,
+                'H provider deadline omitted work or preservation reserve')
+        rejects(lambda: lease.make_plan(f.bundle, None, balance=20.0, rate=lease.MAX_GPU_RATE,
+                run_config=config_path, debit_path=f.debit_path, job_cap=6.01), 'H cap increased')
+        rejects(lambda: lease.make_plan(f.bundle, None, balance=6.5, rate=lease.MAX_GPU_RATE,
+                run_config=config_path, debit_path=f.debit_path, job_cap=6.0), 'preserved funds consumed')
+    primary_path = Path(f.debit['primary_acceptance']['lease_path'])
+    primary = io._json(primary_path)
+    primary.update(lease_spend_upper_usd=6.0, combined_spend_upper_usd=lease.ORIGINAL_SPEND + 6.0)
+    def reject_total():
+        with patch.object(lease, 'LEDGER', f.base / 'empty_h_ledger'):
+            value, _ = lease.prepare_phase_debit(primary_path.parent, f.base / 'account_snapshot.json')
+            path = f.base / 'fully_debited.json'
+            io._new_json(path, value)
+            rejects(lambda: lease.make_plan(f.bundle, None, balance=20, rate=lease.MAX_GPU_RATE,
+                    run_config=config_path, debit_path=path, job_cap=6.0), 'combined 25 cap exceeded')
+    write_restore(primary_path, io._canonical(primary), reject_total)
+    passed('planned_H_reserves_fit_5_989890_but_6_cap_balance_and_combined25_remain_hard', planned_cost_usd=required)
+
+    f = fixture(parent, 'phase_precreate_guard')
+    prepare_state(f, status='pending', mutation_phase='not_started', pod_id=None, machine_id=None,
+                  watch_ready_utc=lease.stamp(), watch_account_id=f.state['account_id'])
+    proof = f.state['primary_admission_proof']
+    path = Path(proof['payload_stability']['root']) / next(iter(proof['payload_hash_records']))
+    changed = bytearray(path.read_bytes()); changed[-1] ^= 1
+    def reject_create():
+        with patch.object(lease, 'LEDGER', f.ledger):
+            rejects(lambda: lease.begin_create(f.root), 'changed primary before paid create')
+        require(io._json(f.root / 'LEASE.json')['mutation_phase'] == 'not_started',
+                'primary change allowed deployment intent')
+    write_restore(path, changed, reject_create)
+    passed('controller_itself_rechecks_primary_before_paid_mutation')
+
+    f = fixture(parent, 'phase_retry_gates')
+    with patch.object(lease, 'LEDGER', f.ledger):
+        rejects(lambda: lease.prior_debit(f.debit_path), 'unreconciled H attempt')
+        rejects(lambda: lease.prepare_phase_debit(Path(f.debit['primary_acceptance']['lease_path']).parent,
+                f.base / 'account_snapshot.json'), 'new phase debit after H attempt exists')
+    lease.update(f.root, status='terminated', halt_requested=True, absence_confirmations=3,
+                 absence_account_id=f.state['account_id'], terminated_verified_utc=lease.stamp(),
+                 lease_spend_upper_usd=0.2, combined_spend_upper_usd=f.debit['prior_spend_upper_usd'] + 0.2)
+    with patch.object(lease, 'LEDGER', f.ledger):
+        require(lease.prior_debit(f.debit_path)[2] == f.debit['prior_spend_upper_usd'] + 0.2, 'H retry resets debit')
+        alternate = f.base / 'alternate_identical_debit.json'
+        alternate.write_bytes(f.debit_path.read_bytes())
+        rejects(lambda: lease.prior_debit(alternate), 'H retry switches immutable debit path')
+    original_h = io._json(f.root / 'LEASE.json')
+    bad_states = {
+        'elapsed_charge': {**original_h, 'billing_start_utc': lease.stamp(time.time()-7200),
+                          'lease_spend_upper_usd': 0.0, 'combined_spend_upper_usd': f.debit['prior_spend_upper_usd']},
+        'combined_charge': {**original_h, 'combined_spend_upper_usd': 0.0},
+        'prior_chain': {**original_h, 'prior_spend_upper_usd': 0.0,
+                        'combined_spend_upper_usd': original_h['lease_spend_upper_usd']},
+        'uncertain_future_TTL': {**original_h, 'mutation_phase': 'uncertain', 'pod_id': None,
+                                'provider_deadline_utc': lease.stamp(time.time()+3600)},
+        'uncertain_closed_before_TTL': {**original_h, 'mutation_phase': 'uncertain', 'pod_id': None,
+                                       'billing_start_utc': lease.stamp(time.time()-30),
+                                       'terminated_verified_utc': lease.stamp(time.time()-20),
+                                       'provider_deadline_utc': lease.stamp(time.time()-10)},
+    }
+    with patch.object(lease, 'LEDGER', f.ledger):
+        for label, invalid in bad_states.items():
+            write_restore(f.root/'LEASE.json',io._canonical(invalid),
+                          lambda:rejects(lambda:lease.prior_debit(f.debit_path),label))
+        passed('H_retry_elapsed_combined_prior_and_absence_predicates_fail_closed')
+        rejects(lambda:lease.make_plan(f.bundle,None,balance=20,rate=lease.MAX_GPU_RATE,
+                                      run_config=f.config_path,debit_path=f.debit_path,job_cap=6),
+                'aggregate H phase cap resets after prior charge')
+        retry = lease.make_plan(f.bundle,None,balance=20,rate=lease.MAX_GPU_RATE,
+                                run_config=f.config_path,debit_path=f.debit_path,job_cap=5.8)
+        require(retry['prior_spend_upper_usd']==f.debit['prior_spend_upper_usd']+.2,
+                'aggregate H phase prior carry differs')
+        retry.update(status='terminated',halt_requested=True,absence_confirmations=3,
+                     absence_account_id=retry['account_id'],terminated_verified_utc=lease.stamp(),
+                     lease_spend_upper_usd=0.0,combined_spend_upper_usd=retry['prior_spend_upper_usd'])
+        retry_root=io._mkdir(f.ledger/'attempt_02');io._new_json(retry_root/'LEASE.json',retry)
+        require(lease.prior_debit(f.debit_path)[2]==f.debit['prior_spend_upper_usd']+.2,
+                'valid second H terminal retry rejected or double counted')
+        omitted={**retry,'new_lease_debits':[],'prior_spend_upper_usd':f.debit['prior_spend_upper_usd'],
+                 'combined_spend_upper_usd':f.debit['prior_spend_upper_usd']}
+        write_restore(retry_root/'LEASE.json',io._canonical(omitted),
+                      lambda:rejects(lambda:lease.prior_debit(f.debit_path),'second H retry omits predecessor'))
+        passed('H_aggregate_six_dollar_cap_deducts_prior_bounds_and_retry_chain_is_complete')
+    # Parsing and pinning must refer to one byte string, even when the pathname changes.
+    saved_loads=json.loads
+    for mode in ('replace_after_parse','add_ledger_row_after_parse'):
+        first_path=f.root/'LEASE.json';saved=first_path.read_bytes();changed=[False]
+        added=f.ledger/'injected_attempt'/'LEASE.json'
+        def changed_parse(raw,*args,**kwargs):
+            result=saved_loads(raw,*args,**kwargs)
+            if isinstance(raw,bytes) and raw==saved and not changed[0]:
+                changed[0]=True
+                replacement={**original_h,'lease_spend_upper_usd':.4,
+                             'combined_spend_upper_usd':original_h['prior_spend_upper_usd']+.4}
+                if mode=='replace_after_parse':io._atomic_json(first_path,replacement)
+                else:io._mkdir(added.parent);io._new_json(added,{**replacement,'name':'injected-lease'})
+            return result
+        try:
+            with patch.object(lease,'LEDGER',f.ledger), patch.object(lease.json,'loads',side_effect=changed_parse):
+                rejects(lambda:lease.prior_debit(f.debit_path),'H ledger '+mode)
+            require(changed[0],'H ledger race injection did not execute')
+        finally:
+            first_path.write_bytes(saved)
+            if added.exists():added.unlink();added.parent.rmdir()
+    passed('H_retry_json_and_pin_share_bytes_and_ledger_inventory_is_rechecked')
+    passed('H_retries_reuse_exact_debit_add_each_bound_once_and_reject_unreconciled_attempts')
+    return cases
+
+
+def run_receive_cases(parent):
+    """Actual range reader subprocesses; only SSH endpoint and chunk size are local fixtures."""
+    import ast
+    import hashlib
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+    cases = []
+    def passed(name, **evidence):
+        cases.append({'case': name, 'status': 'passed', **evidence})
+    def fixture_receive(name, content=bytes(range(251))*3):
+        base=io._mkdir(parent/name);root=io._mkdir(base/'lease');work=io._mkdir(base/'worker')
+        results=io._mkdir(work/'results');source=results/'bank.pt';source.write_bytes(content)
+        local=io._mkdir(base/'staging'/'results');dummy=base/'source.json';dummy.write_text('{}')
+        record=handoff.checked_record(dummy)
+        state={'name':'receive-fixture','pod_id':'receive-pod','run_id':'receive-run','account_id':'receive-account',
+               'run_spec_sha256':record['sha256'],'output_contract_sha256':record['sha256'],
+               'run_spec_path':str(dummy),'run_spec_record':record,
+               'semantic_verifier':{'path':str(dummy),'record':record,'callable':'validate_outputs'},
+               'controller_sources':{name:handoff.checked_record(HERE/name) for name in lease.CONTROLLER_FILES},
+               'ssh':{'host':'127.0.0.1','port':22},'ssh_identity':str(base/'unused-key'),
+               'watch_deadline_utc':lease.stamp(time.time()+30),'provider_deadline_utc':lease.stamp(time.time()+630),
+               'transfer_timeout_seconds':30,'status':'running','halt_requested':False}
+        io._new_json(root/'LEASE.json',state);(work/'provider_lease_name').write_text(state['name'])
+        receiver=handoff.SSHTransport(root,state,['unused-ssh'])
+        commands=[]
+        def command(script):
+            request=json.loads(ast.literal_eval(script.split('request=json.loads(',1)[1].splitlines()[0][:-1]))
+            commands.append(request)
+            script=script.replace("WORK=pathlib.Path('/workspace/jlens')",'WORK=pathlib.Path('+repr(str(work))+')')
+            return [sys.executable,'-I','-B','-c',script]
+        receiver._range_command=command
+        return SimpleNamespace(base=base,root=root,work=work,source=source,destination=local,state=state,
+                               receiver=receiver,expected={'bank.pt':handoff.checked_record(source)},commands=commands)
+    def transfer(f):
+        f.receiver.transfer(['bank.pt'],f.destination,f.expected)
+    with patch.object(handoff,'RECEIVE_CHUNK_BYTES',64):
+        f=fixture_receive('receive_correct')
+        # Compute STOP is deliberately present; preservation must remain possible.
+        (f.work/'STOP').write_text('computation stopped')
+        io._atomic_json(f.root/'LEASE.json',{**f.state,'computation_stop_reason':'work deadline',
+                                          'work_deadline_utc':lease.stamp(time.time()-10)})
+        active, peak, mutex = [0], [0], threading.Lock()
+        actual_run=handoff.run_bounded
+        def observed_run(*args,**kwargs):
+            with mutex:active[0]+=1;peak[0]=max(peak[0],active[0])
+            try:return actual_run(*args,**kwargs)
+            finally:
+                with mutex:active[0]-=1
+        with patch.object(handoff,'run_bounded',side_effect=observed_run):transfer(f)
+        require(handoff.checked_record(f.destination/'bank.pt')==f.expected['bank.pt'],'parallel receive bytes differ')
+        require(1<peak[0]<=8 and len(f.commands)==12,'parallel child bound differs')
+        before=len(f.commands);transfer(f)
+        require(len(f.commands)==before,'already verified file fetched again')
+        require(all(row['process_group_quiescent'] for row in f.receiver.processes),'successful child not quiescent')
+        passed('actual_eight_stream_receive_whole_hash_skip_and_preservation_after_worker_STOP',peak_children=peak[0])
+
+        f=fixture_receive('receive_resume')
+        sha=f.expected['bank.pt']['sha256'];cache=io._mkdir(f.destination.parent/'partials'/'chunks'/sha)
+        data=f.source.read_bytes()[:64];pin={'bytes':64,'sha256':hashlib.sha256(data).hexdigest()}
+        (cache/'000000000000.part').write_bytes(data)
+        io._new_json(cache/'000000000000.json',{'schema':'confirmation_received_chunk.v1',
+            'bank_record':f.expected['bank.pt'],'offset':0,'length':64,'record':pin})
+        transfer(f)
+        require(not any(row['offset']==0 for row in f.commands),'verified chunk was not resumed')
+        require(handoff.checked_record(f.destination/'bank.pt')==f.expected['bank.pt'],'resumed bytes differ')
+        passed('immutable_chunk_resume_skips_verified_range_and_rehashes_complete_file')
+
+        f=fixture_receive('receive_interrupted_resume')
+        original_command=f.receiver._range_command
+        def fail_after_chunk(script):
+            command=original_command(script)
+            request=json.loads(ast.literal_eval(script.split('request=json.loads(',1)[1].splitlines()[0][:-1]))
+            if request['offset']==64:
+                cached=f.destination.parent/'partials'/'chunks'/f.expected['bank.pt']['sha256']/'000000000000.part'
+                command[-1]='import pathlib,time\np=pathlib.Path('+repr(str(cached))+')\nuntil=time.time()+5\nwhile not p.exists() and time.time()<until:time.sleep(.01)\nraise RuntimeError("interrupted after durable chunk")\n'
+            return command
+        f.receiver._range_command=fail_after_chunk
+        rejects(lambda:transfer(f),'actual interrupted receive')
+        require(not (f.destination/'bank.pt').exists(),'partial receive published')
+        cache=f.destination.parent/'partials'/'chunks'/f.expected['bank.pt']['sha256']
+        completed=len(list(cache.glob('*.part')))
+        require(completed>0,'interrupted receive retained no completed chunks')
+        f.receiver._range_command=original_command;f.commands.clear()
+        transfer(f)
+        require(len(f.commands)==12-completed,'retry did not reuse exact durable completed chunks')
+        require(handoff.checked_record(f.destination/'bank.pt')==f.expected['bank.pt'],'interrupted resume bytes differ')
+        passed('actual_interruption_preserves_chunks_and_retry_downloads_only_missing_ranges',reused_chunks=completed)
+
+        for mode in ('wrong_owner','bad_full_sha','short_range','changed_cache','parent_swap'):
+            f=fixture_receive('receive_'+mode)
+            if mode=='wrong_owner':(f.work/'provider_lease_name').write_text('another-lease')
+            elif mode=='bad_full_sha':f.source.write_bytes(b'x'*f.expected['bank.pt']['bytes'])
+            elif mode=='short_range':
+                f.receiver._range_command=lambda script:[sys.executable,'-c','print("short",end="")']
+            elif mode=='changed_cache':
+                cache=io._mkdir(f.destination.parent/'partials'/'chunks'/f.expected['bank.pt']['sha256'])
+                (cache/'000000000000.part').write_bytes(b'x'*64)
+                io._new_json(cache/'000000000000.json',{'schema':'confirmation_received_chunk.v1',
+                    'bank_record':f.expected['bank.pt'],'offset':0,'length':64,
+                    'record':{'bytes':64,'sha256':hashlib.sha256(f.source.read_bytes()[:64]).hexdigest()}})
+            elif mode=='parent_swap':
+                # Same expected bytes, different inode: pathname restored before fstat guard.
+                alternate=io._mkdir(f.work/'alternate');(alternate/'bank.pt').write_bytes(f.source.read_bytes())
+                original_command=f.receiver._range_command
+                def swapped_command(script):
+                    command=original_command(script)
+                    prefix='import pathlib\n_original_open=pathlib.Path.open\n'
+                    prefix+='def _open(path,*args,**kwargs):\n'
+                    prefix+='    if str(path)=='+repr(str(f.source))+" and args and args[0]=='rb':\n"
+                    prefix+='        parked=pathlib.Path('+repr(str(f.work/'parked'))+');alternate=pathlib.Path('+repr(str(alternate))+')\n'
+                    prefix+='        path.parent.rename(parked);alternate.rename(path.parent)\n'
+                    prefix+='        try:return _original_open(path,*args,**kwargs)\n'
+                    prefix+='        finally:path.parent.rename(alternate);parked.rename(path.parent)\n'
+                    prefix+='    return _original_open(path,*args,**kwargs)\npathlib.Path.open=_open\n'
+                    command[-1]=prefix+command[-1];return command
+                f.receiver._range_command=swapped_command
+            rejects(lambda:transfer(f),'receive '+mode)
+            require(not (f.destination/'bank.pt').exists(),'invalid receive published a file')
+            require(all(row['process_group_quiescent'] for row in f.receiver.processes),'failed child not quiescent')
+        passed('remote_owner_full_hash_short_range_cache_corruption_and_descriptor_swap_fail_closed')
+
+        for mode in ('halt','halt_descendants','identity','deadline','late_registration'):
+            f=fixture_receive('receive_cancel_'+mode,b'x'*32)
+            ready=f.base/'ready';descendant_ready=f.base/'descendant_ready';original_command=f.receiver._range_command
+            if mode!='late_registration':
+                def waiting_command(script):
+                    command=original_command(script)
+                    prefix='import pathlib,signal,time,subprocess,sys\n'
+                    if mode=='halt_descendants':
+                        child='import pathlib,signal,time,os;signal.signal(signal.SIGTERM,signal.SIG_IGN);pathlib.Path('+repr(str(descendant_ready))+').write_text(str(os.getpid()));time.sleep(30)'
+                        prefix+='subprocess.Popen([sys.executable,"-c",'+repr(child)+'])\n'
+                    command[-1]=prefix+'signal.signal(signal.SIGTERM,signal.SIG_IGN);pathlib.Path('+repr(str(ready))+').touch();time.sleep(30)\n'+command[-1]
+                    return command
+                f.receiver._range_command=waiting_command
+            entered, release=threading.Event(),threading.Event()
+            def late_run(*args,**kwargs):
+                entered.set()
+                require(release.wait(5),'late registration release missing')
+                return actual_run(*args,**kwargs)
+            if mode=='deadline':f.receiver.deadline=time.time()+.75
+            with patch.object(handoff,'run_bounded',side_effect=late_run if mode=='late_registration' else actual_run):
+                with ThreadPoolExecutor(max_workers=1) as executor:
+                    future=executor.submit(transfer,f)
+                    until=time.time()+5
+                    while not (entered.is_set() if mode=='late_registration' else ready.exists()) and time.time()<until:time.sleep(.01)
+                    require(entered.is_set() if mode=='late_registration' else ready.exists(),'cancel fixture did not start')
+                    if mode=='halt_descendants':
+                        while not descendant_ready.exists() and time.time()<until:time.sleep(.01)
+                        require(descendant_ready.exists(),'TERM-ignoring descendant not ready')
+                    if mode=='identity':io._atomic_json(f.root/'LEASE.json',{**f.state,'name':'changed-lease'})
+                    elif mode!='deadline':io._atomic_json(f.root/'LEASE.json',{**f.state,'retrieval_halt_requested':True})
+                    if mode=='late_registration':time.sleep(.25);release.set()
+                    rejects(lambda:future.result(timeout=5),'receive '+mode+' cancellation')
+                    require(future.done(),'cancelled receive child survived')
+            require(f.receiver.processes and all(row['process_group_quiescent'] for row in f.receiver.processes),
+                    'cancelled receive group not quiescent')
+            require(not (f.destination/'bank.pt').exists(),'cancelled receive published a file')
+            if descendant_ready.exists():
+                proc=Path('/proc')/descendant_ready.read_text()/'stat'
+                require(not proc.exists() or proc.read_text().rsplit(')',1)[1].split()[0] in ('Z','X'),
+                        'TERM-ignoring descendant survived receiver cancellation')
+        passed('halt_identity_deadline_and_late_registration_quiesce_actual_SIGTERM_ignoring_children_and_descendants')
+    return cases
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--smoke', action='store_true', help='Only the real tiny CPU end-to-end smoke')
+    parser.add_argument('--output-dir', type=Path)
+    args = parser.parse_args(argv)
+    parent = args.output_dir or Path(tempfile.mkdtemp(prefix='confirmation-controller-proof-'))
+    parent = io._mkdir(parent)
+    started = time.time()
+    smoke = run_smoke(parent)
+    cases = [] if args.smoke else run_cases(parent) + run_phase_cases(parent) + run_receive_cases(parent)
+    proof = {'schema': 'huginn_verification_controller_proof.v1', 'status': 'passed',
+             'scope': 'Real temporary files, locks, tiny CPU serialization, hashes, semantic readers and receiver; fake provider/SSH mutation boundaries.',
+             'source_records': {name: handoff.checked_record(HERE / name) for name in (*lease.CONTROLLER_FILES, 'test_lifecycle.py', 'PRIMARY_SOURCE_BASELINE.json')},
+             'python': sys.executable, 'smoke': smoke, 'cases': cases, 'elapsed_seconds': time.time() - started,
+             'no_paid_science': True, 'no_cloud_or_ssh': True}
+    io._new_json(parent / 'PROOF.json', proof)
+    print(json.dumps({'status': 'passed', 'proof': str(parent / 'PROOF.json'), 'cases': len(cases) + 1,
+                      'elapsed_seconds': proof['elapsed_seconds']}, indent=2))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,102 @@
+{
+  "controller_correction": {
+    "deployed": false,
+    "focused_synthetic_cases_passed": 7,
+    "historical_pins_modified": false,
+    "status": "prospective reviewed artifact only"
+  },
+  "files": {
+    "CLAIMS.md": {
+      "bytes": 8441,
+      "sha256": "ef7a5d096317d9cf70ab427fd92b0fb10bc28d463525eefe59fe512ad14d7c98"
+    },
+    "REPORT.md": {
+      "bytes": 34931,
+      "sha256": "d91836c1c4365910ae690ec31938f137324e36c12505f7d0bf18f267ed9879bf"
+    },
+    "RUN_LOG.md": {
+      "bytes": 180458,
+      "sha256": "93c09d5e7bf7f17be42548eefce6e20decc7a89630cd88e10115cc319c72b562"
+    },
+    "analysis/huginn_run01/COMPLETE.json": {
+      "bytes": 1003,
+      "sha256": "2d45a19a2c663f29a735d2fcb95cf8fe22f0cc4034f627d9b536d190d87fb7b5"
+    },
+    "analysis/huginn_run01_review/actual_huginn_provenance_review.json": {
+      "bytes": 51945,
+      "sha256": "3de5f0fc0339f26568c5a0839129654e3c13712db3926813dc9596795d2a53db"
+    },
+    "analysis/huginn_run01_review/actual_huginn_result_review.json": {
+      "bytes": 33775,
+      "sha256": "7b86803b79140b58b417e976951ed0e463c801d3d76b6c59f20edd4f0a69b475"
+    },
+    "analysis/huginn_run01_review/actual_huginn_surviving_fit_review.json": {
+      "bytes": 37567,
+      "sha256": "0108eed3ce17fbd799c3f80c32f4ef2046cb9292bd9f69473e9aad91dbdc7cbd"
+    },
+    "analysis/ouro_run01/COMPLETE.json": {
+      "bytes": 1142,
+      "sha256": "523a23d6a662357fe58eea20d0cf44327cdfd108563e6f0d1fe91c2d90aa082d"
+    },
+    "monitoring/attempt_06/controller_correction/lease-setup-latch-proof-hyqixdgu/PROOF.json": {
+      "bytes": 8209,
+      "sha256": "2a92be3bcd7fc04e339113debdf8add1c4f43ca352259427f6f5ade0ab0249a9"
+    },
+    "monitoring/attempt_06/controller_correction/lease_setup_latch.patch": {
+      "bytes": 3169,
+      "sha256": "513a29428698161dd02ef4c66ccc29591a74a1143df24a4015272ab02ca073d3"
+    },
+    "monitoring/attempt_06/controller_correction/lease_setup_latch_candidate.py": {
+      "bytes": 79741,
+      "sha256": "5493d28c8a74b6740d4a3edbbccc5229d00446357d3c192d51cb46bbbfaa1de3"
+    },
+    "monitoring/attempt_06/controller_correction/lease_setup_latch_review.json": {
+      "bytes": 5378,
+      "sha256": "7e1b925ff97d8b504844760235dffb725862871dc0c9ae9b96243889aee56636"
+    },
+    "monitoring/attempt_06/controller_correction/prove_lease_setup_latch.py": {
+      "bytes": 14067,
+      "sha256": "7c1233312c7d3687a7c53aa82450e6711ec3d5d5718e76d11d6b33c55148de0d"
+    },
+    "monitoring/attempt_06/termination_incident/ROOT_PROVIDER_OBSERVATION.json": {
+      "bytes": 639,
+      "sha256": "7c54cdf866cfa6f53bcc7314dfd22337c8b16546fcbbab43018d212babc3b7b7"
+    },
+    "monitoring/attempt_06/termination_incident/SURVIVING_ARTIFACTS.json": {
+      "bytes": 55298,
+      "sha256": "abd9ae4abb7f2347c29a7edbd086554e36027ca633275973b57f7088fe6ba4ca"
+    },
+    "monitoring/attempt_06/termination_incident/attempt06_surviving_manifest_review.json": {
+      "bytes": 13255,
+      "sha256": "e7c63e373af9598a809be0df80a6b233bb0f655a77e3c04b7095a365993665bf"
+    },
+    "monitoring/attempt_06/termination_incident/attempt06_termination_incident_review.json": {
+      "bytes": 16303,
+      "sha256": "e6f9f0a3384f1282284a08a31d472eb726d9cecb4790bf7e989a35857ad18c93"
+    }
+  },
+  "outcomes": {
+    "P1": "five independent N100 fits evaluated and audited; localized multihop band stable across these fits, full-family uncertainty remains",
+    "P2": "matched target/position comparisons evaluated and audited; observed late magnitude and sign depend on estimator choice",
+    "P3": "validated N100 R8 Huginn fit and two fixed evaluation trajectories completed; no clear support for preregistered relative improvement",
+    "P4": "not executed; automatic approval review blocked upload/execution/retrieval and no fresh approval arrived before cutoff"
+  },
+  "preservation": {
+    "complete_known_estimator_binaries": 7,
+    "historical_application_and_september7_artifacts": "unchanged",
+    "incomplete_or_absent_known_estimator_binaries": 9,
+    "independent_local_huginn_sum_to_bank_check": "unavailable; checkpoint truncated and final bank absent",
+    "saved_evaluation_inputs_and_analysis_outputs": "accepted and hash-rechecked",
+    "whole_tree_retrieval_accepted": false
+  },
+  "recorded_utc": "2026-09-09T16:07:05.637720+00:00",
+  "root_reconciliation": "Root inspected numerical and provenance evidence and all selected examples, reconciled independent reviews, accepted the corrected report and claim table, and retained the operational loss explicitly. Final wording review found no remaining issues after qualifying native-agreement reversals.",
+  "schema": "refit_round_scientific_stopping_point.v1",
+  "status": "scientific_analysis_accepted_with_incomplete_artifact_preservation",
+  "worker": {
+    "combined_cost_upper_usd": 13.851844033145376,
+    "cost_scope": "controller conservative bound, not settled invoice",
+    "new_worker_started": false,
+    "status": "terminated with three account-bound absence confirmations; subsequent root provider read found no owned worker"
+  }
+}

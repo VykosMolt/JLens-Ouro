@@ -1,0 +1,425 @@
+{
+  "device": "cpu",
+  "torch_version": "2.12.0.dev20260407+cu128",
+  "roundtrips": [
+    {
+      "layout": "B_T_D",
+      "shape": [
+        3,
+        7,
+        5
+      ],
+      "stride": [
+        35,
+        5,
+        1
+      ],
+      "offset": 0,
+      "value_bits_and_layout_exact": true
+    },
+    {
+      "layout": "T_B_D",
+      "shape": [
+        7,
+        3,
+        5
+      ],
+      "stride": [
+        5,
+        35,
+        1
+      ],
+      "offset": 0,
+      "value_bits_and_layout_exact": true
+    },
+    {
+      "layout": "B_D_T",
+      "shape": [
+        3,
+        5,
+        7
+      ],
+      "stride": [
+        35,
+        1,
+        5
+      ],
+      "offset": 0,
+      "value_bits_and_layout_exact": true
+    },
+    {
+      "layout": "BT_D",
+      "shape": [
+        21,
+        5
+      ],
+      "stride": [
+        5,
+        1
+      ],
+      "offset": 0,
+      "value_bits_and_layout_exact": true
+    },
+    {
+      "layout": "D_BT",
+      "shape": [
+        5,
+        21
+      ],
+      "stride": [
+        1,
+        5
+      ],
+      "offset": 0,
+      "value_bits_and_layout_exact": true
+    },
+    {
+      "layout": "offset",
+      "shape": [
+        3,
+        7,
+        5
+      ],
+      "stride": [
+        35,
+        5,
+        1
+      ],
+      "offset": 4,
+      "value_bits_and_layout_exact": true
+    }
+  ],
+  "ambiguous_axis_checks": [
+    {
+      "layout": "B16_H16_T128_D128",
+      "shape": [
+        16,
+        16,
+        128,
+        128
+      ],
+      "axis": 0,
+      "flattened": false,
+      "value_bits_and_layout_exact": true,
+      "nonidentical_lane_skipped": true
+    },
+    {
+      "layout": "BT2048_D2048",
+      "shape": [
+        2048,
+        2048
+      ],
+      "axis": 0,
+      "flattened": true,
+      "value_bits_and_layout_exact": true,
+      "nonidentical_lane_skipped": true
+    }
+  ],
+  "original_tensor_and_storage_released": true,
+  "nan_payload_and_signed_zero_guards": "pass",
+  "full_jacobian_parity": [
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "skip:batch_one": 32,
+        "unpack_calls": 115
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "skip:batch_one": 32,
+        "unpack_calls": 160
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 21,
+        "equality_reductions": 21,
+        "compressed_payloads": 11,
+        "compressed_logical_bytes": 3080,
+        "packed_lane_bytes": 1540,
+        "nominal_logical_bytes_saved": 1540,
+        "max_reconstruction_bytes": 392,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "skip:lanes_differ": 10,
+        "unpack_calls": 69,
+        "materializations": 33,
+        "materialized_bytes_total": 9240
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 21,
+        "equality_reductions": 21,
+        "compressed_payloads": 11,
+        "compressed_logical_bytes": 3080,
+        "packed_lane_bytes": 1540,
+        "nominal_logical_bytes_saved": 1540,
+        "max_reconstruction_bytes": 392,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "skip:lanes_differ": 10,
+        "unpack_calls": 96,
+        "materializations": 33,
+        "materialized_bytes_total": 9240
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 4,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 63,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 12208,
+        "packed_lane_bytes": 3052,
+        "nominal_logical_bytes_saved": 9156,
+        "max_reconstruction_bytes": 784,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 46,
+        "materializations": 30,
+        "materialized_bytes_total": 16800
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 4,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 63,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 12208,
+        "packed_lane_bytes": 3052,
+        "nominal_logical_bytes_saved": 9156,
+        "max_reconstruction_bytes": 784,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 64,
+        "materializations": 42,
+        "materialized_bytes_total": 24416
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 8,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 147,
+        "equality_reductions": 21,
+        "compressed_payloads": 11,
+        "compressed_logical_bytes": 12320,
+        "packed_lane_bytes": 1540,
+        "nominal_logical_bytes_saved": 10780,
+        "max_reconstruction_bytes": 1568,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "skip:lanes_differ": 10,
+        "unpack_calls": 23,
+        "materializations": 11,
+        "materialized_bytes_total": 12320
+      }
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 8,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 147,
+        "equality_reductions": 21,
+        "compressed_payloads": 11,
+        "compressed_logical_bytes": 12320,
+        "packed_lane_bytes": 1540,
+        "nominal_logical_bytes_saved": 10780,
+        "max_reconstruction_bytes": 1568,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "skip:lanes_differ": 10,
+        "unpack_calls": 32,
+        "materializations": 11,
+        "materialized_bytes_total": 12320
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "skip:batch_one": 32,
+        "unpack_calls": 115
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "skip:batch_one": 32,
+        "unpack_calls": 160
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 21,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 5488,
+        "packed_lane_bytes": 2744,
+        "nominal_logical_bytes_saved": 2744,
+        "max_reconstruction_bytes": 392,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 69,
+        "materializations": 45,
+        "materialized_bytes_total": 11172
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 21,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 5488,
+        "packed_lane_bytes": 2744,
+        "nominal_logical_bytes_saved": 2744,
+        "max_reconstruction_bytes": 392,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 96,
+        "materializations": 63,
+        "materialized_bytes_total": 16464
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 4,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 63,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 10976,
+        "packed_lane_bytes": 2744,
+        "nominal_logical_bytes_saved": 8232,
+        "max_reconstruction_bytes": 784,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 46,
+        "materializations": 30,
+        "materialized_bytes_total": 14896
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 4,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 63,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 10976,
+        "packed_lane_bytes": 2744,
+        "nominal_logical_bytes_saved": 8232,
+        "max_reconstruction_bytes": 784,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 64,
+        "materializations": 42,
+        "materialized_bytes_total": 21952
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 8,
+      "target": 2,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 147,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 21952,
+        "packed_lane_bytes": 2744,
+        "nominal_logical_bytes_saved": 19208,
+        "max_reconstruction_bytes": 1568,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 23,
+        "materializations": 15,
+        "materialized_bytes_total": 14896
+      }
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 8,
+      "target": 3,
+      "full_jacobians_bitwise_equal": true,
+      "counts": {
+        "pack_calls": 32,
+        "lane_comparisons": 147,
+        "equality_reductions": 21,
+        "compressed_payloads": 21,
+        "compressed_logical_bytes": 21952,
+        "packed_lane_bytes": 2744,
+        "nominal_logical_bytes_saved": 19208,
+        "max_reconstruction_bytes": 1568,
+        "skip:ambiguous_or_unrecognized_shape": 3,
+        "skip:persistent_storage": 8,
+        "unpack_calls": 32,
+        "materializations": 21,
+        "materialized_bytes_total": 21952
+      }
+    }
+  ],
+  "exception_cleanup": "pass",
+  "cuda_initialized": false,
+  "candidate_sha256": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a"
+}

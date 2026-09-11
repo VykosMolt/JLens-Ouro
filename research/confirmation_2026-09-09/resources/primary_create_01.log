@@ -1,0 +1,2 @@
+Running as unit: jlens-confirm-5e9d166258534ab194780388d2feffd0.service; invocation ID: 3620561877e24a2b8199a2408c874ae7
+{"root": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_01", "pod_id": "xugytsithv80ib", "gpu": "NVIDIA GeForce RTX 5090", "all_in_rate": 0.7064383561643836, "work_deadline_utc": "2026-09-10T00:41:49Z"}

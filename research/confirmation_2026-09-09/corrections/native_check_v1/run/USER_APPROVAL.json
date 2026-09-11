@@ -1,0 +1,10 @@
+{
+  "schema": "confirmation_user_approval.v1",
+  "recorded_utc": "2026-09-10T23:02:09.280621+00:00",
+  "user_words": "Stage then go. Dont request any further permissions unless the credidts are exhausted. I would love to wake to the resuts though..",
+  "scope": "Create one community RTX 5090 lease for ouro_confirmation_20260911_fixed160_native1 with a $3.20 job cap within the $25 cap, export the frozen native_check_v1 bundle and the four frozen banks to its provider-assigned address, and complete the run without further requests unless credits are exhausted.",
+  "staging_note": "No Hugging Face token or cloud-storage credential exists on this machine, so the banks are uploaded directly to the pod.",
+  "freeze_sha256": "fc74b0c244e64a76d045495fa50b5a416ecc454fe77d56ababbc7682518c76c9",
+  "precreate_observation_sha256": "a990ee8cc1d8433433cb1fd5413d1ae4328216312b082df7c13878562978a15d",
+  "balance_usd": 5.8385384319
+}

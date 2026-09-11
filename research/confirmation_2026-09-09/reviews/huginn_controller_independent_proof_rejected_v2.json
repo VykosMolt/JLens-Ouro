@@ -1,0 +1,74 @@
+{
+  "schema": "huginn_controller_independent_proof.v2",
+  "status": "rejected",
+  "reviewer": "/root/main_only_review/receipt_binding_read",
+  "reviewed_lease_record": {
+    "bytes": 78354,
+    "sha256": "a03bc0a2e517860d7cf65ed971a5da999935218766e6625fb10450d159344dfb"
+  },
+  "independent_regressions": {
+    "cases": [
+      {
+        "case": "original_understated_two_hour_charge",
+        "rejection": "H lease understates reconciled spending",
+        "status": "passed"
+      },
+      {
+        "case": "original_uncertain_create_future_TTL",
+        "rejection": "duplicate or unreconciled new lease debit",
+        "status": "passed"
+      },
+      {
+        "case": "original_aggregate_H_phase_cap",
+        "rejection": "job cap exceeds the remaining aggregate H phase ceiling",
+        "status": "passed"
+      },
+      {
+        "actual_H_charge": 2.0,
+        "case": "H_ledger_changes_after_parse_before_record",
+        "returned_H_charge": 1.0,
+        "returned_record_matches_changed_file": true,
+        "returned_total_debit": 14.851844033145376,
+        "status": "unexpectedly_accepted"
+      }
+    ],
+    "no_cloud_or_ssh": true,
+    "schema": "H_accounting_independent_regressions.v1",
+    "source_record": {
+      "bytes": 78354,
+      "sha256": "a03bc0a2e517860d7cf65ed971a5da999935218766e6625fb10450d159344dfb"
+    },
+    "temporary_root": "/tmp/h-accounting-independent-regressions-dx0vvp03"
+  },
+  "prior_rejected_records": [
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v1.json",
+      "record": {
+        "bytes": 7933,
+        "sha256": "b60c3fbedd10c8fb09004de6b858a60a5855de746fe98bb00c511f78f4eb0e9e"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_review_rejected_v1.md",
+      "record": {
+        "bytes": 2505,
+        "sha256": "54cc687246760177b186ab5712765cd2f05a5234a0577acfa5e2c215bb5854e4"
+      }
+    },
+    {
+      "path": "/home/moloch/jacobian-lens/research/confirmation_2026-09-09/reviews/huginn_controller_independent_proof_rejected_v1.json",
+      "record": {
+        "bytes": 14046,
+        "sha256": "5a4ab63c22303447417960c9d0e1782629e1dd8555f299ed80659ff19ddc3099"
+      }
+    }
+  ],
+  "observed_53_case_suite": {
+    "path": "/tmp/huginn-controller-independent-accounting-review/PROOF.json",
+    "valid_for_runtime_closure_acceptance": false,
+    "reason": "artifact_handoff.py changed during execution; the end-of-run record cannot certify the bytes imported at start. A frozen full rerun remains required."
+  },
+  "no_new_confirmation_results_exposed": true,
+  "no_cloud_or_ssh": true,
+  "recorded_at_utc": "2026-09-09T23:22:51.433998+00:00"
+}

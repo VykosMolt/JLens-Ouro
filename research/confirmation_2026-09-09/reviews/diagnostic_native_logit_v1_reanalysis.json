@@ -1,0 +1,107 @@
+{
+  "schema": "native_logit_diagnostic_reanalysis.v1",
+  "date_utc": "2026-09-11",
+  "verdict": "PASS",
+  "verdict_scope": "The post-run criterion 'an independent CPU reanalysis reproduces every recorded comparison', plus tasks 1-5 as assigned. Termination, final account observation and spend were not checked here.",
+  "payload": "cloud_leases/diagnostic_native_logit_v1/handoff/accepted/ouro_native_logit_diagnostic_v1/f9751036b1fa746fc8a37287c755093cde92238ead58347f78869eeb949063e6",
+  "method": {
+    "interpreter": "/home/moloch/ouro_project/venv/bin/python (torch 2.12.0.dev20260407+cu128, transformers 4.54.1, tokenizers 0.21.4), CUDA_VISIBLE_DEVICES empty",
+    "scripts": ["/tmp/claude-1000/-home-moloch-jacobian-lens/18b73cc8-31a8-4b0b-b8c9-be0441298f55/scratchpad/reanalysis/reanalyze.py", "/tmp/claude-1000/-home-moloch-jacobian-lens/18b73cc8-31a8-4b0b-b8c9-be0441298f55/scratchpad/reanalysis/retokenize.py"],
+    "independence": "No bundle code imported. Records resolved from their names by my own parser. Bit counts use int16/int32 views, IEEE equality uses elementwise ==, top-k uses numpy lexsort (descending value, ties by index), and the mean uses math.fsum. The expected record order was built from CONTRACT.md M1-M4.",
+    "negative_control": "One flipped BF16 bit gives differing_elements 1. For -0.0 vs +0.0 the counter gives 1 while elementwise == and torch.equal give True."
+  },
+  "task1_hashes_precision_gpu": {
+    "payload_file_set_equals_manifest": true,
+    "payload_bytes_and_sha256_equal_manifest_and_receipt": true,
+    "manifest_canonical_sha256_equals_directory_name_and_receipt": true,
+    "manifest_and_validation_file_records_equal_receipt": true,
+    "manifest": {"kind": "final", "outcome": "complete", "stage_id": null},
+    "receipt_status": "passed",
+    "receipt_verifier_record_equals_diagnostic_validate_outputs_py": true,
+    "run_spec_byte_identical_to_bundle_frozen_run_spec": true,
+    "output_contract_sha256_equals_binding": true,
+    "provenance_runtime_precision_equals_run_spec_original_precision": true,
+    "gpu": {"name": "NVIDIA GeForce RTX 5090", "uuid": "05552ecd-9667-141c-dc6d-13d70aa94166", "capability": [12, 0]},
+    "admission_plan_gpu_and_cloud": ["NVIDIA GeForce RTX 5090", "COMMUNITY"],
+    "pod_id": "mq25wyg0nf9z36"
+  },
+  "task2_comparison_recomputation": {
+    "records": 255,
+    "names_and_order_equal_expected": true,
+    "exit_steps_block_equal": true,
+    "field_disagreements": [],
+    "fields_checked": ["name", "dtype", "shape", "torch_equal", "differing_elements", "max_abs_diff", "mean_abs_diff", "top1_equal", "top10_set_equal"],
+    "records_with_torch_equal_true_but_bits_differing": []
+  },
+  "task3_rule6": {
+    "tokenizer_and_data_files_match_recorded_hashes": true,
+    "retokenized": {
+      "carnival-ocean": {"S": 20, "equals_saved_token_ids": true},
+      "amazon-language": {"S": 15, "equals_saved_token_ids": true},
+      "mars-color": {"S": 13, "equals_saved_token_ids": true}
+    },
+    "virtual191_vs_norm_input_step3_last_token_differing_bits": "0 for every item in both M2 and M4, compared in FP32 and after a BF16 round trip"
+  },
+  "task4_cross_machine_M1": {
+    "attempt05_pod": "i7zq14rj0f0ief, GPU uuid cd026f4d-7b08-99ca-505d-f2c28376f989",
+    "this_pod": "mq25wyg0nf9z36, GPU uuid 05552ecd-9667-141c-dc6d-13d70aa94166",
+    "native_pt_file_bytes_identical": true,
+    "both_sha256": "aa6a79bc89a1f959e26e8a3299294c27fc0ef64e7cbe2929dfa1432afd813213",
+    "attempt05_manifest_record_matches_its_file": true,
+    "bitwise_differing_elements": {"native_logits": 0, "unembedded_logits": 0, "virtual_states": 0, "physical_states": 0, "wrapper_states": 0},
+    "conclusion": "M1 is bit-identical across the two machines."
+  },
+  "rules": {
+    "rule1": {
+      "conclusion": "Bit-exactness is decided by differing_elements. No record anywhere has torch_equal true while its bits differ.",
+      "evidence": "0 of 255 records"
+    },
+    "rule2": {
+      "conclusion": "Attempt05's failure recurred. M3 localizes the attempt05 mismatch.",
+      "evidence": {
+        "M1_native_vs_unembedded_differing": {"carnival-ocean": 39, "amazon-language": 28, "mars-color": 45},
+        "M1_state_pairs_differing": 0,
+        "M2_logits_last_vs_M1_native_differing": {"carnival-ocean": 0, "amazon-language": 0, "mars-color": 0},
+        "M2_virtual191_vs_M1_virtual_states_191_differing": {"carnival-ocean": 0, "amazon-language": 0, "mars-color": 0},
+        "M3_unembed_fp32_virtual191_vs_M1_unembedded_differing": "0 for every item and repeat"
+      }
+    },
+    "rule3": {
+      "conclusion": "The exit step is identified as step 3 for all three items.",
+      "evidence": "In both M2 and M4, only step 3's last-token norm output bitwise equals the lm_head input row, and step 3 is the step used."
+    },
+    "rule4": {
+      "norm": "Not shown to be shape-sensitive. All nine measured shapes are bit-exact with the native output, for every item and repeat, so the rule-4 condition is not met.",
+      "lm_head": "Shape-sensitive. [1,S,2048] is bit-exact for all items and repeats, while [2048], [1,2048] and [1,1,2048] are not (39, 28 and 45 elements differ). [S,2048], [148,2048] and [160,2048] (first and last) are bit-exact.",
+      "localization_detail": "For every item, the single-row lm_head recomputation, lm_head_norm[1,1,2048] and unembed_fp32_virtual191 are bitwise identical. Their differing positions equal M1's native-versus-unembedded positions."
+    },
+    "rule5": {
+      "M2_M4_bit_exact": "Yes. All six captured tensors differ in 0 elements, for every item.",
+      "exact_equality_achieved": ["lm_head_norm[1,S,2048]", "lm_head_norm[160,2048]/first", "lm_head_norm[160,2048]/last"],
+      "exact_equality_not_achieved": {"lm_head_norm[1,1,2048]": "39/28/45 in both repeats", "unembed_fp32_virtual191": "39/28/45 in both repeats"},
+      "repeat_consistency": "#1~#2 is 0 for every M3 record",
+      "note": "[1,S,2048] is the native forward's own shape. The [160,2048] fill rows are the item's own positions, cycled."
+    },
+    "rule7": {
+      "descriptive_M1": {"max_abs_diff_each_item": 0.03125, "top1_equal": true, "top10_set_equal": true},
+      "scope": "RTX 5090 (community), precision_v1 runtime, the three development items, and the measured shapes only."
+    },
+    "scorer_shapes": {
+      "148x2048": "The norm and lm_head, each tested separately, are bit-exact with target rows first and last. The composite at [148,2048] was not measured, so no rule decides it.",
+      "160x2048": "The norm, lm_head and composite are bit-exact with target rows first and last, for all items and both repeats.",
+      "not_measured": "[190-192,2048] scorer readouts, and fill content other than the item's own cycled positions. No rule decides these."
+    }
+  },
+  "discrepancies": [],
+  "observations": [
+    "This pod's development/native.pt is byte-identical to attempt05's. Pod IDs and GPU UUIDs differ. The bundle and bundle.tar.gz contain no .pt, .pth or .safetensors file, and provenance's worker source record matches the run spec. The saved tensors alone cannot tell a deterministic recomputation from a copy."
+  ],
+  "checks_not_performed": [
+    "Termination, three absence confirmations, final zero-pod and zero-spend observation, and spend within cap.",
+    "Invariant 5 before/after hashes of frozen files, and invariant 1 controller source hashes beyond the binding records.",
+    "Any GPU re-execution. CPU cannot reproduce GPU kernel outputs, so captured and recomputed tensors were compared as saved, not regenerated from weights.",
+    "Independent confirmation that the tensors came from the GPU. Only the provenance record attests this.",
+    "The bundle's own validate_outputs verifier, not used by instruction.",
+    "Recomputation of the numbers in the attempt05 forensics review beyond the per-item counts 39/28/45."
+  ]
+}

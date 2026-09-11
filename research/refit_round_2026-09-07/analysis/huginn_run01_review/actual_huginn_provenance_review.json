@@ -1,0 +1,910 @@
+{
+  "binary_file_records_compared_without_opening": {
+    "huginn_evaluation/seeds/2026090803/arrays.npz": {
+      "bytes": 1763217,
+      "sha256": "e8ea8502664838f915a8219ffed062dad54f4db22f5c42220cd9c2e195c95add"
+    },
+    "huginn_evaluation/seeds/2026090803/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "226437a4e6a0d8ddbda598359676f4b6da2e758a58d3e6084c98ecb2ab5ffbb3"
+    },
+    "huginn_evaluation/seeds/2026090804/arrays.npz": {
+      "bytes": 1763139,
+      "sha256": "ec2f5484d52bf9e967fa0476fcbfa161927f87db56bef5ebe7b6782668288aba"
+    },
+    "huginn_evaluation/seeds/2026090804/cache.pt": {
+      "bytes": 141949409,
+      "sha256": "de18bf96901bf6ffab8b872b03e52a1a4b64de18c441247df1a599b19dad3a4d"
+    }
+  },
+  "check_count": 243,
+  "checks": [
+    "pinned actual handoff receipt",
+    "handoff completed with three quiescent successful transports",
+    "REMOTE_BEFORE.json preserves accepted file/prerequisite/completion bindings",
+    "REMOTE_BEFORE.json before successfully completed owned worker",
+    "REMOTE_BEFORE.json after successfully completed owned worker",
+    "REMOTE_AFTER.json preserves accepted file/prerequisite/completion bindings",
+    "REMOTE_AFTER.json before successfully completed owned worker",
+    "REMOTE_AFTER.json after successfully completed owned worker",
+    "copied JSON bytes: EXPERIMENT_COMPLETE.json",
+    "copied JSON bytes: combined_contract.json",
+    "copied JSON bytes: environment.json",
+    "copied JSON bytes: huginn_eligibility.json",
+    "copied JSON bytes: huginn_evaluation/COMPLETE.json",
+    "copied JSON bytes: huginn_evaluation/OWNER.json",
+    "copied JSON bytes: huginn_evaluation/population/SEAL.json",
+    "copied JSON bytes: huginn_evaluation/population/eligibility.json",
+    "copied JSON bytes: huginn_evaluation/population/metadata.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090803/SEAL.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090803/initializations.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090803/metadata.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090803/summaries.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090804/SEAL.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090804/initializations.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090804/metadata.json",
+    "copied JSON bytes: huginn_evaluation/seeds/2026090804/summaries.json",
+    "copied JSON bytes: run_spec.json",
+    "binary input exclusion",
+    "frozen local contract: run_spec.json",
+    "frozen local contract: combined_contract.json",
+    "frozen local contract: environment.json",
+    "frozen local contract: huginn_eligibility.json",
+    "accepted local prerequisite: controls_evaluation/COMPLETE.json",
+    "accepted local prerequisite: controls_evaluation/OWNER.json",
+    "accepted local prerequisite: ouro_evaluation/COMPLETE.json",
+    "accepted local prerequisite: ouro_evaluation/OWNER.json",
+    "reviewed collector source retained",
+    "reused collector source: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py",
+    "reused collector source: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py",
+    "reused collector source: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/collect_ouro_handoff06.py",
+    "reused collector source: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/prefetch_completed_ouro06_v3.py",
+    "Huginn evaluation OWNER identity digest",
+    "completion same identity and exact section order",
+    "completion-to-seal hash: population",
+    "section identity: population",
+    "section payload record matches copied inventory: population/eligibility.json",
+    "section payload record matches copied inventory: population/metadata.json",
+    "completion-to-seal hash: seeds/2026090803",
+    "section identity: seeds/2026090803",
+    "section payload record matches copied inventory: seeds/2026090803/arrays.npz",
+    "section payload record matches copied inventory: seeds/2026090803/cache.pt",
+    "section payload record matches copied inventory: seeds/2026090803/initializations.json",
+    "section payload record matches copied inventory: seeds/2026090803/metadata.json",
+    "section payload record matches copied inventory: seeds/2026090803/summaries.json",
+    "completion-to-seal hash: seeds/2026090804",
+    "section identity: seeds/2026090804",
+    "section payload record matches copied inventory: seeds/2026090804/arrays.npz",
+    "section payload record matches copied inventory: seeds/2026090804/cache.pt",
+    "section payload record matches copied inventory: seeds/2026090804/initializations.json",
+    "section payload record matches copied inventory: seeds/2026090804/metadata.json",
+    "section payload record matches copied inventory: seeds/2026090804/summaries.json",
+    "exact 17-file Huginn seal chain",
+    "experiment completion binds all three evaluations",
+    "frozen source: jlens/data/evaluations/lens-eval-multihop.json",
+    "frozen source: jlens/data/evaluations/lens-eval-order-ops.json",
+    "frozen source: jlens/jlens/__init__.py",
+    "frozen source: jlens/jlens/_logging.py",
+    "frozen source: jlens/jlens/data/slice_vis.html",
+    "frozen source: jlens/jlens/examples.py",
+    "frozen source: jlens/jlens/fitting.py",
+    "frozen source: jlens/jlens/hf.py",
+    "frozen source: jlens/jlens/hooks.py",
+    "frozen source: jlens/jlens/lens.py",
+    "frozen source: jlens/jlens/protocol.py",
+    "frozen source: jlens/jlens/vis.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/cloud_worker.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/combined_contract.json",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/control_estimators.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/evaluate_controls.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/evaluate_refits.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/pod_entry.sh",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/prepare_bundle.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/requirements.lock",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/run_controls.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/run_huginn.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/deployment/run_refits.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/fit_estimators.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/optimization/optimized_fitting.py",
+    "frozen source: jlens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py",
+    "frozen source: ouro_src/ouro_jlens/__init__.py",
+    "frozen source: ouro_src/ouro_jlens/bench.py",
+    "frozen source: ouro_src/ouro_jlens/evaldata.py",
+    "frozen source: ouro_src/ouro_jlens/evaluate.py",
+    "frozen source: ouro_src/ouro_jlens/evidence.py",
+    "frozen source: ouro_src/ouro_jlens/fit_lens.py",
+    "frozen source: ouro_src/ouro_jlens/recurrent.py",
+    "42 distinct frozen sources retained",
+    "eligibility payload and complete source bindings",
+    "fixed full two-seed readout geometry",
+    "frozen calibration paragraph bytes",
+    "one preselected actual N100 fit and native H token geometry",
+    "all ordered paragraph hashes bind fit01",
+    "complete independently reconstructed fit identity",
+    "embedded fit owner byte binding",
+    "complete N100 checkpoint pointer and raw-file digest",
+    "complete N100 final pointer and raw-file digest",
+    "producer validation assertion retained",
+    "one complete FP16 map bank recorded",
+    "actual fit prerequisites equal accepted earlier evaluation owners and completions",
+    "fit embeds exact frozen calibration and paragraph origin",
+    "model and local manifest binding",
+    "all 16 snapshot file records retained without model reads",
+    "fit run/source/calibration binding",
+    "actual fit runtime equals accepted engineering gate in all shared non-seed fields",
+    "only intentional benchmark-to-calibration initialization policy differs",
+    "accepted native execution gate was complete",
+    "frozen environment package and compiler identity",
+    "13 exact fit import identities",
+    "actual fit imported module hash: fit_estimators",
+    "actual fit imported module hash: optimization.optimized_fitting",
+    "actual fit imported module hash: optimization.cuda_graph_candidate",
+    "actual fit imported module hash: optimization.saved_tensor_candidate",
+    "actual fit imported module hash: ouro_jlens.recurrent",
+    "actual fit imported module hash: ouro_jlens.evidence",
+    "actual fit imported module hash: jlens",
+    "actual fit imported module hash: jlens.fitting",
+    "actual fit imported module hash: jlens.hooks",
+    "actual fit imported module hash: jlens.hf",
+    "actual fit imported module hash: jlens.lens",
+    "actual fit imported module hash: jlens.protocol",
+    "actual fit imported module hash: huginn_adapter",
+    "both native implementation hashes exact",
+    "identical evaluation runtime for both seeds",
+    "evaluation retains actual fitting native/model/runtime binding",
+    "15 exact evaluation import identities",
+    "actual evaluation module path and hash: ouro_jlens",
+    "actual evaluation module path and hash: ouro_jlens.evaluate",
+    "actual evaluation module path and hash: ouro_jlens.evaldata",
+    "actual evaluation module path and hash: ouro_jlens.fit_lens",
+    "actual evaluation module path and hash: ouro_jlens.evidence",
+    "actual evaluation module path and hash: ouro_jlens.recurrent",
+    "actual evaluation module path and hash: jlens",
+    "actual evaluation module path and hash: jlens._logging",
+    "actual evaluation module path and hash: jlens.fitting",
+    "actual evaluation module path and hash: jlens.hooks",
+    "actual evaluation module path and hash: jlens.hf",
+    "actual evaluation module path and hash: jlens.lens",
+    "actual evaluation module path and hash: jlens.protocol",
+    "actual evaluation module path and hash: jlens.vis",
+    "actual evaluation module path and hash: huginn_adapter",
+    "complete actual seed metadata: 2026090803",
+    "complete actual seed metadata: 2026090804",
+    "frozen common population metadata",
+    "expected 100-row calibration initialization digest matches evaluator validation summary",
+    "all 148 ordered 14-field actual initialization rows: 2026090803",
+    "all 148 ordered 14-field actual initialization rows: 2026090804",
+    "calibration namespace and base sequence frozen",
+    "calibration and evaluation recorded state seeds do not intersect",
+    "two evaluation state-seed sets disjoint and unique",
+    "engineering benchmark state seed distinct from calibration and evaluation",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/COPY_VERIFIED.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_BEFORE.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_AFTER.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/EXPERIMENT_COMPLETE.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/combined_contract.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/environment.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_eligibility.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/COMPLETE.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/population/SEAL.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/population/eligibility.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/population/metadata.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/SEAL.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/initializations.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/metadata.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/summaries.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/SEAL.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/initializations.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/metadata.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/summaries.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/run_spec.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/environment.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/COMPLETE.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/OWNER.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/COMPLETE.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/OWNER.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/collect_huginn_handoff06.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/collect_ouro_handoff06.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/prefetch_completed_ouro06_v3.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json",
+    "final stability: /home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json",
+    "final stability: /home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json",
+    "final stability: /home/moloch/jacobian-lens/jlens/__init__.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/_logging.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/data/slice_vis.html",
+    "final stability: /home/moloch/jacobian-lens/jlens/examples.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/fitting.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/hf.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/hooks.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/lens.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/protocol.py",
+    "final stability: /home/moloch/jacobian-lens/jlens/vis.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/cloud_worker.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/control_estimators.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_controls.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_refits.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/pod_entry.sh",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/prepare_bundle.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/requirements.lock",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_controls.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_fitting.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/__init__.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/bench.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/evaldata.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/evaluate.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/evidence.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/fit_lens.py",
+    "final stability: /home/moloch/ouro_project/src/ouro_jlens/recurrent.py",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/../audit/calibration_fit_01.json",
+    "final stability: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/COMPLETE.json"
+  ],
+  "consumed_json_and_source_records": {
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-multihop.json": {
+      "bytes": 21869,
+      "sha256": "50b7e4c9255291c0ca2a8e94615be9f44531fa57bb1a844e4f9616056d987416"
+    },
+    "/home/moloch/jacobian-lens/data/evaluations/lens-eval-order-ops.json": {
+      "bytes": 9589,
+      "sha256": "b203206d16ff628152cc86f3838604e06cb54776f3e14fa1c34f150db8bc7560"
+    },
+    "/home/moloch/jacobian-lens/jlens/__init__.py": {
+      "bytes": 637,
+      "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a"
+    },
+    "/home/moloch/jacobian-lens/jlens/_logging.py": {
+      "bytes": 1804,
+      "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae"
+    },
+    "/home/moloch/jacobian-lens/jlens/data/slice_vis.html": {
+      "bytes": 43663,
+      "sha256": "d19d843aa5d1fa5073c925a7723c4e9503b9b83c5622d9775033887c64bf62d9"
+    },
+    "/home/moloch/jacobian-lens/jlens/examples.py": {
+      "bytes": 6300,
+      "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d"
+    },
+    "/home/moloch/jacobian-lens/jlens/fitting.py": {
+      "bytes": 15078,
+      "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080"
+    },
+    "/home/moloch/jacobian-lens/jlens/hf.py": {
+      "bytes": 8182,
+      "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222"
+    },
+    "/home/moloch/jacobian-lens/jlens/hooks.py": {
+      "bytes": 2735,
+      "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081"
+    },
+    "/home/moloch/jacobian-lens/jlens/lens.py": {
+      "bytes": 8646,
+      "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808"
+    },
+    "/home/moloch/jacobian-lens/jlens/protocol.py": {
+      "bytes": 1774,
+      "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344"
+    },
+    "/home/moloch/jacobian-lens/jlens/vis.py": {
+      "bytes": 19984,
+      "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/../audit/calibration_fit_01.json": {
+      "bytes": 94410,
+      "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/cloud_worker.py": {
+      "bytes": 19100,
+      "sha256": "6309a4e6f2000eb8d2cf211761bb152a18aef827cec0e2e29a5e5d79c8be5b51"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/combined_contract.json": {
+      "bytes": 19977,
+      "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/control_estimators.py": {
+      "bytes": 21777,
+      "sha256": "e1943378728de002feca622115229e085e7c42cc71e4135256cce97c60b9c10b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/environment.json": {
+      "bytes": 4685,
+      "sha256": "940842c822fc3a76a89e94bd7fa052c63de9d71758b9a513d17260b39c8124a7"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_controls.py": {
+      "bytes": 52577,
+      "sha256": "cbe9dc654712cf6b7f88648b5fb53cf1079df3d8b2ef33c3bd90d8ce4625886c"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_huginn.py": {
+      "bytes": 58251,
+      "sha256": "b98b39d70a64db23c1544c4ce5d3cb57760363b1fd3d682db106288669f85b5e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/evaluate_refits.py": {
+      "bytes": 55009,
+      "sha256": "63345907f22b713763857f910e4dc56afa261979ec1da55f2f5943754d7b0b17"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_adapter.py": {
+      "bytes": 33463,
+      "sha256": "2d30747defd1fe98f72976a1959e9d554fafb9bbbc001374e1d2404127f72e88"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_calibration.json": {
+      "bytes": 25792,
+      "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_eligibility.json": {
+      "bytes": 165311,
+      "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/huginn_model_manifest.json": {
+      "bytes": 2842,
+      "sha256": "4e9bed3327f63bb31d9cd300b40c329601ace4fd2b1c135b9811c178230ed0db"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py": {
+      "bytes": 78452,
+      "sha256": "a7f5d92cf62f4e1d40773c6edb16c07811bb4568f2dc23018d91d9852b340992"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/pod_entry.sh": {
+      "bytes": 1221,
+      "sha256": "d72cf7229b12af1fe0d218bc6edd5354740a9dd94fad06e57efa3fa59335ad32"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/preflight_gpu.py": {
+      "bytes": 18407,
+      "sha256": "16154ff353037470dd051b20171c0fe006d6e9de831c932d66e3e4c49eb5a27d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/prepare_bundle.py": {
+      "bytes": 8791,
+      "sha256": "33dc2582c6f815615fa97d4547c8d4bc76e4097696e8e001592d7b9522ac376e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/requirements.lock": {
+      "bytes": 12089,
+      "sha256": "87311c22b6d2eaa50e4c819dab431ff221fc787f8bbf495cbbc455db0a0245f1"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_controls.py": {
+      "bytes": 9851,
+      "sha256": "4da1528ed692409919003a1a02ec421fcd6b7d7453d9fbe88f28771b84239543"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_huginn.py": {
+      "bytes": 37695,
+      "sha256": "78cf3c76b58a7d5d6bc184a8828200d29d618775a142d253f6188e30a4df8ff2"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_refits.py": {
+      "bytes": 51999,
+      "sha256": "a8841cd456434b5582e578f115cbeff62829af89e1809a43a189a5dba0ff0fd4"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/run_spec.json": {
+      "bytes": 24834,
+      "sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/fit_estimators.py": {
+      "bytes": 10107,
+      "sha256": "1438816d87b730e45e4ae2df79113baa645f19b3c84eb690194c13ac622e8a8d"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/20260909T115652Z/results/preflight_huginn/COMPLETE.json": {
+      "bytes": 27530,
+      "sha256": "ead7e832a07aebb8e6a4740ec8a82de666540684dd67d5ff536f4020c548b75e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/COPY_VERIFIED.json": {
+      "bytes": 6174,
+      "sha256": "376edc2ab9d41d04aa5c41d7871500b55605b946e47c259b69851fae486e6a43"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_AFTER.json": {
+      "bytes": 5211,
+      "sha256": "70185e5d78f5514149d674e6e5973579a38fef3c64bf3c387721e36c594d2537"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/REMOTE_BEFORE.json": {
+      "bytes": 5211,
+      "sha256": "70185e5d78f5514149d674e6e5973579a38fef3c64bf3c387721e36c594d2537"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/EXPERIMENT_COMPLETE.json": {
+      "bytes": 479,
+      "sha256": "61b2b5e620f4eb1bba012c60833af05eaf096dfc6d937bf106cc87e16a90043e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/combined_contract.json": {
+      "bytes": 19977,
+      "sha256": "820123c572b1b71e71b3fb40ece666479c4b0e5fbb2430869d7fe6c546e07df0"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/environment.json": {
+      "bytes": 4685,
+      "sha256": "940842c822fc3a76a89e94bd7fa052c63de9d71758b9a513d17260b39c8124a7"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_eligibility.json": {
+      "bytes": 165311,
+      "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/COMPLETE.json": {
+      "bytes": 531,
+      "sha256": "fc736d09ce6fd28d4568a2c8947ede41752f73e1c91f6b875df9da166ae8db5f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/OWNER.json": {
+      "bytes": 56959,
+      "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/population/SEAL.json": {
+      "bytes": 390,
+      "sha256": "a4644347a4f7d0c58c60e377d72d84d2e730054b35341a6e30e8115b1a7f70a3"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/population/eligibility.json": {
+      "bytes": 165311,
+      "sha256": "153c340591c4c1ff298383a24f2ac1135a157fba08dc9ecb5a82dedc298457af"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/population/metadata.json": {
+      "bytes": 242,
+      "sha256": "d90d4897c608ae1917b8860529599e1f93bf4c3ae0c3d0cd8bb4530fb0989cca"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/SEAL.json": {
+      "bytes": 724,
+      "sha256": "b19fcf3375dba24fb99b86280919206b09877843d0ab08501f862d7cadec5486"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/initializations.json": {
+      "bytes": 95133,
+      "sha256": "b72e57ec5352fd7404eaf6abf737fd79dc95d0fe67296b0863465b4ba9238b43"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/metadata.json": {
+      "bytes": 11132,
+      "sha256": "770638b050ee1622b7918b5c9ad1e7427f5c68eab98994ec65e879b7b22dfe9f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090803/summaries.json": {
+      "bytes": 10711,
+      "sha256": "af622b2ef7048a78e52ce2fa258947133fab0af37b391c5ca8c1056fbd777cff"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/SEAL.json": {
+      "bytes": 724,
+      "sha256": "b008716ebac3e9705cb181752a75a8d238292be2e4a15d337c0f01a5e420b67a"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/initializations.json": {
+      "bytes": 95141,
+      "sha256": "4931ef4cfd35d12ab3802f9110ee4a78442bef569a879b44dbdf1b690459be5e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/metadata.json": {
+      "bytes": 11132,
+      "sha256": "19465c6009dceecb20a5459c5eb6134b349999884ae00d61612b00cf842f687e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/huginn_evaluation/seeds/2026090804/summaries.json": {
+      "bytes": 10869,
+      "sha256": "360655a6be29cc75f0dcf4efdc4993d3b6a0161c11bdebafb16a8f69b2fe8b4c"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c/results/run_spec.json": {
+      "bytes": 24834,
+      "sha256": "8115648b51ba6cd0f4c3b04bdfb36ae6935d8e47f1223cb1e54f7dd79215f149"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/COMPLETE.json": {
+      "bytes": 666,
+      "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/controls_evaluation/OWNER.json": {
+      "bytes": 77181,
+      "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/COMPLETE.json": {
+      "bytes": 887,
+      "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/OWNER.json": {
+      "bytes": 151299,
+      "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/collect_huginn_handoff06.py": {
+      "bytes": 17943,
+      "sha256": "14f1236f35b759c90a2aec404b97f2a1ed0ef3bd426dfe2b0409b33e98df4c1a"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/collect_ouro_handoff06.py": {
+      "bytes": 8706,
+      "sha256": "42c42236163fd0d81c3e07c7451d303047f732a7580ea10ef7fab968b1faf7f7"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/prefetch_completed_ouro06_v3.py": {
+      "bytes": 40337,
+      "sha256": "d0880b9c1da9ea8f652880f31d10d3ac315ac3ff699edda9ccf166f9a49865bd"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/bench_offload_reference.py": {
+      "bytes": 28285,
+      "sha256": "cf783d68830a78efddc358d6ff06233dd7bc6fae671045de31ff91164a17164f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/benchmark_optimized.py": {
+      "bytes": 14000,
+      "sha256": "4f63957237e2cd9309c788c9af67ed5471928f6fbc0b18095e6f903adc0ff944"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/cuda_graph_candidate.py": {
+      "bytes": 23288,
+      "sha256": "b2286fd25eb07553c8e27df3883cdce28c71907343c163d0c5db5da25a863e78"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/optimized_fitting.py": {
+      "bytes": 9498,
+      "sha256": "6ba31269b98cca39f9a27a0ede572abf466abfbb166bc563e85eb796aa4f616f"
+    },
+    "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/optimization/saved_tensor_candidate.py": {
+      "bytes": 21300,
+      "sha256": "40a0ccb779544a4c4af8a85dad99c3787a8b7aaba71ee15c1562c44a29b8261a"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/bench.py": {
+      "bytes": 6251,
+      "sha256": "08cf7986c036019382e9e26f107b51f0f53b12f4df46b4bd2188d55b2aee577d"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/evaldata.py": {
+      "bytes": 7527,
+      "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/evaluate.py": {
+      "bytes": 63535,
+      "sha256": "9118bd8f48925930e56c851028958dd62b372c2d9b507d141fc9bf9af90e9c22"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/evidence.py": {
+      "bytes": 12530,
+      "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/fit_lens.py": {
+      "bytes": 72898,
+      "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0"
+    },
+    "/home/moloch/ouro_project/src/ouro_jlens/recurrent.py": {
+      "bytes": 5777,
+      "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+    }
+  },
+  "deferred_full_retrieval": {
+    "checks_remaining": [
+      "Reconcile actual fit OWNER/LATEST/COMPLETE and final/checkpoint SEAL/metadata bytes to the embedded records above.",
+      "Inspect all 100 actual final/checkpoint per-paragraph diagnostics: source/target/width/B8/660-pass geometry, sequence/valid counts, native initialization metadata, timings and any retained failures or nonfinite diagnostics.",
+      "Independently verify actual estimator binary bytes and, if within the final acceptance plan, FP16 final-bank bits against the sealed FP32 checkpoint sum divided by100. This review only confirms the evaluator retained the producer validation assertion.",
+      "Finish mandatory whole-tree remote-before/after and local hash acceptance, including final retrieval receipt and owned-pod termination."
+    ],
+    "fit_files_missing_from_small_handoff": [
+      "huginn/fit_01/OWNER.json",
+      "huginn/fit_01/LATEST.json",
+      "huginn/fit_01/COMPLETE.json",
+      "huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/SEAL.json",
+      "huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/metadata.json",
+      "huginn/fit_01/checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce/state.pt",
+      "huginn/fit_01/final/cursor_000100_7983035296a54ff2978742466ac3631e/SEAL.json",
+      "huginn/fit_01/final/cursor_000100_7983035296a54ff2978742466ac3631e/metadata.json",
+      "huginn/fit_01/final/cursor_000100_7983035296a54ff2978742466ac3631e/lens.pt"
+    ],
+    "not_an_analysis_blocker": "The frozen analyzer accepts the complete sealed evaluation tree and portable embedded fit provenance; these deferred fit-bank/full-retrieval checks must not be described as independently completed here.",
+    "required": true
+  },
+  "evaluation_complete_file": {
+    "bytes": 531,
+    "sha256": "fc736d09ce6fd28d4568a2c8947ede41752f73e1c91f6b875df9da166ae8db5f"
+  },
+  "evaluation_identity_sha256": "5744138981f9dc47382c7ccb6977d13a14fefd20ca69043e87eaad9d2ccc2d95",
+  "evaluation_owner_file": {
+    "bytes": 56959,
+    "sha256": "733a0fe5271d32909a7a165233dafbdc96ef8ecbc78514e9a568992173a7cabb"
+  },
+  "experiment_complete": {
+    "completed_utc": "2026-09-09T15:33:02.356903+00:00",
+    "evaluations": {
+      "controls_evaluation": {
+        "bytes": 666,
+        "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+      },
+      "huginn_evaluation": {
+        "bytes": 531,
+        "sha256": "fc736d09ce6fd28d4568a2c8947ede41752f73e1c91f6b875df9da166ae8db5f"
+      },
+      "ouro_evaluation": {
+        "bytes": 887,
+        "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+      }
+    },
+    "file": {
+      "bytes": 479,
+      "sha256": "61b2b5e620f4eb1bba012c60833af05eaf096dfc6d937bf106cc87e16a90043e"
+    }
+  },
+  "fit": {
+    "application_dtype": "float32",
+    "checkpoint_pointer": {
+      "fit_identity_sha256": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b",
+      "generation": "checkpoints/cursor_000100_a540b8606bbc4f2f987b86b4970b24ce",
+      "kind": "checkpoint",
+      "n_done": 100,
+      "next_idx": 100,
+      "observed_prompt_bound_seconds": 130.48383641405962,
+      "schema_version": 1,
+      "seal": {
+        "bytes": 370,
+        "sha256": "c1eb31cb461bf7d39532717371ef486f59727b1869353ce34326cdd2e7e5a538"
+      }
+    },
+    "complete_pointer": {
+      "fit_identity_sha256": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b",
+      "generation": "final/cursor_000100_7983035296a54ff2978742466ac3631e",
+      "kind": "final",
+      "n_done": 100,
+      "next_idx": 100,
+      "observed_prompt_bound_seconds": 130.48383641405962,
+      "schema_version": 1,
+      "seal": {
+        "bytes": 364,
+        "sha256": "fdb170dfecda0386580cb5c7c482f8edee55d3ff45e1a51ff9db483e43caf332"
+      }
+    },
+    "complete_record_reconstructed": {
+      "bytes": 369,
+      "sha256": "2df1d30d0563b9d1d94ad9902a9bd75eb4d5013da4a8648fb14d4bd1a1ef7e54"
+    },
+    "distinct_ordered_paragraphs": 100,
+    "fit_id": 1,
+    "identity_sha256": "37197774c98304407ef00548a5668ebc17832aa73d370b19e49e5c00b6a8663b",
+    "initialization_summary_matches_expected_frozen_metadata": {
+      "initializations_sha256": "cc6d3bbb3bee49ea83c35416e1ce8ca7eb529e69b6d8b1134ff8187d4db80ad2",
+      "rows": 100
+    },
+    "latest_record_reconstructed": {
+      "bytes": 380,
+      "sha256": "8e885c84a1b26208fe408ad1ca023b9b6c4ecf210c5698de00bbba8bc16e58e4"
+    },
+    "lens_record_not_independently_opened": {
+      "bytes": 1784226499,
+      "sha256": "7eddc849bca857a1406a901d8e4998b6bf90580b09f6ac6b326690ef378dc596"
+    },
+    "n_prompts": 100,
+    "ordered_prompts_sha256": "29b62fa5768fa6e7d92c38d78bf68903019d7a8f4267ccd365b96969d551afda",
+    "owner_record_reconstructed": {
+      "bytes": 48186,
+      "sha256": "b383c0ac87f98eb6368860d3a28b3ec46ac1ab4c6a6bf2e446fda0176c1ac414"
+    },
+    "paragraph_file": {
+      "bytes": 94410,
+      "sha256": "1242e241951d6a0c99b2520af59e9f748974a5dd37da483d77a6bc8e1cc8e712"
+    },
+    "prerequisites": {
+      "controls": {
+        "complete_file": {
+          "bytes": 666,
+          "sha256": "6dceceac5aa6449b89b60878b9c68df3ba735e8fbb5a74dcb418159bcdb2c04f"
+        },
+        "identity_sha256": "8898e66afec466308b22b6df25861ffa2275a6cb7a601eeddee3ab1042e50232",
+        "owner_file": {
+          "bytes": 77181,
+          "sha256": "687b9a8205d1e7a980a661a4c26f3e25c609f805d4e8c53226e3e53ccff892d2"
+        },
+        "owner_sha256": "95e2c9862fad5142e0a3266ff97f8257473b16ee68499f7ac8f584935c3d9e1a",
+        "schema": "ouro_controls_evaluation.v1"
+      },
+      "ouro": {
+        "complete_file": {
+          "bytes": 887,
+          "sha256": "eeaa3d7e6fe74f59b9d52e6061a841d1942042766c7e8d1cc614db9657eb3d7e"
+        },
+        "identity_sha256": "238070a6284bf7a5da54632c2559d41d907ee2d7ebd133654772cbf2d3ddb037",
+        "owner_file": {
+          "bytes": 151299,
+          "sha256": "be87010f89cf19849c4d587265a13a2a3832ee9284a2fdf7f203f6c382d2ea1b"
+        },
+        "owner_sha256": "bab3235bb696deb4a9cc4d2975e9ba4f3f526d91fd6ccc6a40aa5bb414d7cf6f",
+        "schema": "ouro_refit_evaluation.v1"
+      }
+    },
+    "producer_validation_assertion": "producer checkpoint/final checks, literal FP16 bits of FP32 sum/100",
+    "saved_dtype": "float16",
+    "source_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "target_layer": 33,
+    "token_lengths_counts": {
+      "125": 1,
+      "126": 2,
+      "128": 97
+    },
+    "valid_positions_sum": 11093,
+    "weighting": "equal-paragraph FP32 sum, divided by 100 once",
+    "width": 5280
+  },
+  "handoff": "/home/moloch/jacobian-lens/research/refit_round_2026-09-07/monitoring/attempt_06/huginn_handoff_20260909T153351Z_659a482c",
+  "handoff_receipt": {
+    "bytes": 6174,
+    "sha256": "376edc2ab9d41d04aa5c41d7871500b55605b946e47c259b69851fae486e6a43"
+  },
+  "initializations": {
+    "calibration_base_range": [
+      2026090802,
+      2026090901
+    ],
+    "calibration_evaluation_state_seed_overlap": 0,
+    "calibration_file": {
+      "bytes": 25792,
+      "sha256": "402c3b10a298610484a38144a0bb735d6eff2e8f508d5b060413dd01330f3ff4"
+    },
+    "calibration_namespace": "calibration",
+    "calibration_rows": 100,
+    "calibration_state_seeds_unique": 100,
+    "evaluation_seeds": {
+      "2026090803": {
+        "derived_state_seed_list_sha256": "92874457a4ea792b9519c0799c3c5684772628467375e3f6dbe47e272abb9868",
+        "elapsed_seconds": 18.859983380069025,
+        "first_state_seed": 757557645362018952,
+        "initializations_file": {
+          "bytes": 95133,
+          "sha256": "b72e57ec5352fd7404eaf6abf737fd79dc95d0fe67296b0863465b4ba9238b43"
+        },
+        "last_state_seed": 8298396227765805779,
+        "metadata_file": {
+          "bytes": 11132,
+          "sha256": "770638b050ee1622b7918b5c9ad1e7427f5c68eab98994ec65e879b7b22dfe9f"
+        },
+        "namespace": "evaluation",
+        "rows": 148,
+        "unique_state_seeds": 148
+      },
+      "2026090804": {
+        "derived_state_seed_list_sha256": "e35ceb9cdac52aa00ef7311cd515ffef6ea7156a0239fd951b483223f8d0706f",
+        "elapsed_seconds": 18.262566844001412,
+        "first_state_seed": 8329480908055288691,
+        "initializations_file": {
+          "bytes": 95141,
+          "sha256": "4931ef4cfd35d12ab3802f9110ee4a78442bef569a879b44dbdf1b690459be5e"
+        },
+        "last_state_seed": 4941703228267224503,
+        "metadata_file": {
+          "bytes": 11132,
+          "sha256": "19465c6009dceecb20a5459c5eb6134b349999884ae00d61612b00cf842f687e"
+        },
+        "namespace": "evaluation",
+        "rows": 148,
+        "unique_state_seeds": 148
+      }
+    },
+    "evaluation_state_seeds_unique": 296,
+    "evaluation_total_rows": 296,
+    "expected_calibration_initialization_digest": "cc6d3bbb3bee49ea83c35416e1ce8ca7eb529e69b6d8b1134ff8187d4db80ad2",
+    "limitation": "Calibration tokenization/state seeds are bound to the pre-outcome frozen calibration file; no retokenization was performed. The 100-row actual final diagnostic list is not included in the small handoff; its retained summary equals the independently reconstructed expected metadata digest.",
+    "namespace_note": "Numeric base-seed overlap is intentional; namespace and input IDs participate in the state-seed hash. These remain one N100 fit and two fixed evaluation trajectories, not independent fit replications.",
+    "numeric_evaluation_bases_within_calibration_range": true,
+    "parallel_independent_reviewer": "receipt_binding_read"
+  },
+  "json_files_rehashed": 18,
+  "population_metadata": {
+    "control_names": {
+      "multihop": 68,
+      "order-ops": 20
+    },
+    "eligible_items": {
+      "multihop": 88,
+      "order-ops": 51
+    },
+    "eligible_slots": {
+      "multihop": 98,
+      "order-ops": 51
+    },
+    "items": 148,
+    "tasks": {
+      "multihop": 93,
+      "order-ops": 55
+    }
+  },
+  "reviewed_utc": "2026-09-09T15:44:36.368890+00:00",
+  "reviewer": "main_only_review",
+  "runtime": {
+    "attention_implementation": "sdpa",
+    "both_evaluation_runtimes_equal": true,
+    "environment_sha256": "ad40ce95c3d1c44ef4fa19a5b4b814aef59e77dc65716606109d8e1c795207a0",
+    "evaluation_import_count": 15,
+    "evaluation_runtime_sha256": "24e69d0fa9924749d2297897d0206e23cdfdffe2cda8970d7f8187a4e767a99f",
+    "fit_additional_runtime_field": "calibration",
+    "fit_evaluation_shared_fields_identical": [
+      "environment",
+      "gpu",
+      "precision",
+      "attention_implementation",
+      "snapshot_files",
+      "remote_implementations"
+    ],
+    "fit_runtime_sha256": "fd1c36484159b534a6ea8d4b59f5748acb67b639d9e236b412eafa9b89dd759c",
+    "fitting_import_count": 13,
+    "frozen_source_count": 42,
+    "gate_file": {
+      "bytes": 27530,
+      "sha256": "ead7e832a07aebb8e6a4740ec8a82de666540684dd67d5ff536f4020c548b75e"
+    },
+    "gate_full_jacobian_parity": [
+      {
+        "arm": "dense",
+        "bitwise_equal": true,
+        "matrix_bits_sha256": "69d5257b3b8cfcdaf520623011081fb584fe976ffd50957d9a704b367dd70236",
+        "output_directions": 5280,
+        "source_count": 32,
+        "values_compared": 892108800
+      }
+    ],
+    "gate_native_primal": {
+      "all_34_cells_bitwise_equal": true,
+      "batch": 8,
+      "coupled_initial_states": true,
+      "logits_bitwise_equal": true,
+      "sequence_length": 128
+    },
+    "gate_shared_runtime_fields_identical_except_initialization": true,
+    "gpu": {
+      "capability": [
+        12,
+        0
+      ],
+      "index": 0,
+      "multiprocessor_count": 170,
+      "name": "NVIDIA GeForce RTX 5090",
+      "total_memory": 33668857856,
+      "uuid": "26f446c2-6ff6-a249-6f73-68231dd1f2f9"
+    },
+    "model": {
+      "manifest_sha256": "4e9bed3327f63bb31d9cd300b40c329601ace4fd2b1c135b9811c178230ed0db",
+      "repo_id": "tomg-group-umd/huginn-0125",
+      "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c"
+    },
+    "native_binding_scope": "Actual fit and evaluation metadata retain the exact accepted preflight runtime/native-source/model bindings. The engineering parity is the fixed preflight paragraph, not a repeated per-calibration-paragraph native comparison.",
+    "native_implementations": [
+      {
+        "class": "_jlens_huginn_095b6611eea077d8.raven_modeling_minimal.RavenForCausalLM",
+        "path": "/workspace/jlens/models/huginn/raven_modeling_minimal.py",
+        "sha256": "a1d447da93c605a6dc11fbc17cbc7185663f4a41ae12335b34b5847edf0f84aa"
+      },
+      {
+        "class": "_jlens_huginn_095b6611eea077d8.raven_config_minimal.RavenConfig",
+        "path": "/workspace/jlens/models/huginn/raven_config_minimal.py",
+        "sha256": "36a39939e76dc9e8f7563187c6498e012ca7f64a3d86b32ff1daa7f4c41a4278"
+      }
+    ],
+    "precision_sha256": "02e90d2279a8a1a75fb030b1e137b3269caea98eeb4e9bd28629e90df7b1030c",
+    "snapshot_file_record_count": 16,
+    "torch_git": "6a13e444ee88996ff01cd2bab41d7f2857291646"
+  },
+  "schema": "actual_huginn_provenance_review.v1",
+  "scope": "Independent actual JSON/source provenance reconciliation. No NPZ, cache, model, or estimator binary opened; no scoring, inference, SSH, tests, or source edits. Summary JSON files were hashed only, never interpreted.",
+  "status": "passed"
+}

@@ -1,0 +1,73 @@
+{
+  "analysis_rerun_equals_saved_json": true,
+  "banks": {
+    "diagonal": {
+      "all_2048x2048_fp16": true,
+      "file": "banks/positions.pt",
+      "first_middle_last_finite": true,
+      "keys_are_sources_0_to_target": true,
+      "record_matches_run_spec": true
+    },
+    "fit01": {
+      "all_2048x2048_fp16": true,
+      "file": "banks/fit01.pt",
+      "first_middle_last_finite": true,
+      "keys_are_sources_0_to_target": true,
+      "record_matches_run_spec": true
+    },
+    "fit02": {
+      "all_2048x2048_fp16": true,
+      "file": "banks/fit02.pt",
+      "first_middle_last_finite": true,
+      "keys_are_sources_0_to_target": true,
+      "record_matches_run_spec": true
+    },
+    "penultimate": {
+      "all_2048x2048_fp16": true,
+      "file": "banks/penultimate.pt",
+      "first_middle_last_finite": true,
+      "keys_are_sources_0_to_target": true,
+      "record_matches_run_spec": true
+    },
+    "sampled_sum": {
+      "all_2048x2048_fp16": true,
+      "file": "banks/positions.pt",
+      "first_middle_last_finite": true,
+      "keys_are_sources_0_to_target": true,
+      "record_matches_run_spec": true
+    }
+  },
+  "bundle": "/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle",
+  "finished_utc": "2026-09-11T13:32:35.205921+00:00",
+  "frozen_code": {
+    "archive_matches_freeze": true,
+    "extracted_members_match_freeze": true,
+    "members": 59
+  },
+  "rehash": {
+    "core": {
+      "bytes": 14968501364,
+      "files": 7380,
+      "manifest_problems": 0
+    },
+    "mismatched": []
+  },
+  "rescoring": {
+    "fit01": {
+      "allrank": true,
+      "rank": true,
+      "top1": true,
+      "top10_ids": true
+    },
+    "raw": {
+      "allrank": true,
+      "rank": true,
+      "top1": true,
+      "top10_ids": true
+    }
+  },
+  "same_physical_disk_as_sources": true,
+  "schema": "preservation_restoration_check.v1",
+  "script_sha256": "b6c034dbbdff71d5647f9357b6e860e08c1e9e49b9b4e7866c9438f33b0e7de2",
+  "started_utc": "2026-09-11T13:32:03.992067+00:00"
+}

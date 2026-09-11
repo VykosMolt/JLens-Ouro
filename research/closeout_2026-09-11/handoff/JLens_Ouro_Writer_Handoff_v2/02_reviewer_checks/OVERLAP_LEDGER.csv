@@ -1,0 +1,122 @@
+item,role,name,match_kind,token_id,token,form,position,visible_to_scored_state,context
+confirmation-001,control,Io,substring_inside_word,,,Io,char 37-39,True,he planet whose sidereal rotation takes longer than its orbita
+confirmation-001,control,Io,substring_inside_word,,,Io,char 74-76,True,es longer than its orbital period has an atmosphere dominated 
+confirmation-001,control,Io,substring_inside_word,,,io,char 37-39,True,he planet whose sidereal rotation takes longer than its orbita
+confirmation-001,control,Io,substring_inside_word,,,io,char 74-76,True,es longer than its orbital period has an atmosphere dominated 
+confirmation-002,control,Io,substring_inside_word,,,Io,char 75-77,True,d clouds rotates in the direction described as 
+confirmation-002,control,Io,substring_inside_word,,,io,char 75-77,True,d clouds rotates in the direction described as 
+confirmation-003,control,Io,substring_inside_word,,,Io,char 28-30,True,Fact: The planet whose rotation axis is tilted nearly into i
+confirmation-003,control,Io,substring_inside_word,,,io,char 28-30,True,Fact: The planet whose rotation axis is tilted nearly into i
+confirmation-004,control,Io,substring_inside_word,,,Io,char 71-73,True,red in a 1977 stellar-occultation observation is classified as
+confirmation-004,control,Io,substring_inside_word,,,Io,char 83-85,True,7 stellar-occultation observation is classified as an 
+confirmation-004,control,Io,substring_inside_word,,,io,char 71-73,True,red in a 1977 stellar-occultation observation is classified as
+confirmation-004,control,Io,substring_inside_word,,,io,char 83-85,True,7 stellar-occultation observation is classified as an 
+confirmation-005,control,Voyager,exact_token_id,36649, Voyager,,15,True, winds was visited by the Voyager 2 spacecraft in 
+confirmation-005,control,Voyager,substring_word,,,Voyager,char 74-81,True,ured winds was visited by the Voyager 2 spacecraft in 
+confirmation-005,control,Voyager,substring_word,,,voyager,char 74-81,True,ured winds was visited by the Voyager 2 spacecraft in 
+confirmation-006,control,Voyager,exact_token_id,36649, Voyager,,6,True,Fact: The planet where Voyager 2 observed the Great
+confirmation-006,control,Voyager,substring_word,,,Voyager,char 23-30,True,Fact: The planet where Voyager 2 observed the Great Dark Spo
+confirmation-006,control,Voyager,substring_word,,,voyager,char 23-30,True,Fact: The planet where Voyager 2 observed the Great Dark Spo
+confirmation-007,control,Io,substring_inside_word,,,Io,char 74-76,True, Charon lies mainly in the region called the 
+confirmation-007,control,Io,substring_inside_word,,,io,char 74-76,True, Charon lies mainly in the region called the 
+confirmation-008,control,Io,substring_inside_word,,,Io,char 77-79,True,"in 2015 has a heart-shaped region named after its discoverer, "
+confirmation-008,control,Io,substring_inside_word,,,io,char 77-79,True,"in 2015 has a heart-shaped region named after its discoverer, "
+confirmation-016,intended,Io,substring_inside_word,,,Io,char 35-37,True, The moon whose volcanic eruption was detected in Voyager 1 im
+confirmation-016,intended,Io,substring_inside_word,,,io,char 35-37,True, The moon whose volcanic eruption was detected in Voyager 1 im
+confirmation-016,control,Voyager,exact_token_id,36649, Voyager,,11,True, volcanic eruption was detected in Voyager 1 images in 
+confirmation-016,control,Voyager,substring_word,,,Voyager,char 55-62,True,anic eruption was detected in Voyager 1 images in 1979 orbits the p
+confirmation-016,control,Voyager,substring_word,,,voyager,char 55-62,True,anic eruption was detected in Voyager 1 images in 1979 orbits the p
+confirmation-017,control,Io,substring_inside_word,,,Io,char 62-64,True,ons without supporting combustion has atomic number 
+confirmation-017,control,Io,substring_inside_word,,,io,char 62-64,True,ons without supporting combustion has atomic number 
+confirmation-028,control,Io,substring_inside_word,,,Io,char 22-24,True,Fact: The metal traditionally used for incandescent la
+confirmation-028,control,Io,substring_inside_word,,,io,char 22-24,True,Fact: The metal traditionally used for incandescent la
+confirmation-028,control,Andes,substring_inside_word,,,Andes,char 42-47,True,tal traditionally used for incandescent lamp filaments has atomic
+confirmation-028,control,Andes,substring_inside_word,,,andes,char 42-47,True,tal traditionally used for incandescent lamp filaments has atomic
+confirmation-029,control,Io,substring_inside_word,,,Io,char 13-15,True,Fact: The radioactive noble gas produced in t
+confirmation-029,control,Io,substring_inside_word,,,io,char 13-15,True,Fact: The radioactive noble gas produced in t
+confirmation-030,control,Io,substring_inside_word,,,Io,char 13-15,True,Fact: The radioactive gas that can accumulate
+confirmation-030,control,Io,substring_inside_word,,,io,char 13-15,True,Fact: The radioactive gas that can accumulate
+confirmation-033,control,Io,substring_inside_word,,,Io,char 20-22,True,Fact: The island nation whose capital lies on Honshu
+confirmation-033,control,Io,substring_inside_word,,,io,char 20-22,True,Fact: The island nation whose capital lies on Honshu
+confirmation-040,control,Io,substring_inside_word,,,Io,char 71-73,True, Oslo celebrates its Constitution Day on May 
+confirmation-040,control,Io,substring_inside_word,,,io,char 71-73,True, Oslo celebrates its Constitution Day on May 
+confirmation-054,control,Chile,exact_token_id,14178, Chile,,12,True, much of the border between Chile and Argentina has its highest
+confirmation-054,control,Chile,substring_word,,,Chile,char 60-65,True,ng much of the border between Chile and Argentina has its highest
+confirmation-054,control,Chile,substring_word,,,chile,char 60-65,True,ng much of the border between Chile and Argentina has its highest
+confirmation-056,control,Egypt,exact_token_id,4754, Egypt,,11,True,-flowing river through Egypt has two major branches that
+confirmation-056,control,Egypt,substring_word,,,Egypt,char 48-53,True,l north-flowing river through Egypt has two major branches that m
+confirmation-056,control,Egypt,substring_word,,,egypt,char 48-53,True,l north-flowing river through Egypt has two major branches that m
+confirmation-065,control,mole,substring_inside_word,,,mole,char 21-25,True,Fact: The hereditary molecule with a double-helical str
+confirmation-065,control,mole,substring_inside_word,,,Mole,char 21-25,True,Fact: The hereditary molecule with a double-helical str
+confirmation-066,control,mole,substring_inside_word,,,mole,char 24-28,True,Fact: In the hereditary molecule that uses thymine as a ca
+confirmation-066,control,mole,substring_inside_word,,,Mole,char 24-28,True,Fact: In the hereditary molecule that uses thymine as a ca
+confirmation-079,control,mole,substring_inside_word,,,mole,char 100-104,True, tendons has a characteristic molecular arrangement called a 
+confirmation-079,control,mole,substring_inside_word,,,Mole,char 100-104,True, tendons has a characteristic molecular arrangement called a 
+confirmation-080,control,mole,substring_inside_word,,,mole,char 35-39,True, The structural protein whose molecules form a triple helix has 
+confirmation-080,control,mole,substring_inside_word,,,Mole,char 35-39,True, The structural protein whose molecules form a triple helix has 
+confirmation-082,control,Io,substring_inside_word,,,Io,char 33-35,True,t: The French commander victorious at Austerlitz in 1805 was b
+confirmation-082,control,Io,substring_inside_word,,,io,char 33-35,True,t: The French commander victorious at Austerlitz in 1805 was b
+confirmation-084,control,Io,substring_inside_word,,,Io,char 65-67,True,h the Beagle voyage and evolution by natural selection was bor
+confirmation-084,control,Io,substring_inside_word,,,Io,char 86-88,True,nd evolution by natural selection was born in the English town
+confirmation-084,control,Io,substring_inside_word,,,io,char 65-67,True,h the Beagle voyage and evolution by natural selection was bor
+confirmation-084,control,Io,substring_inside_word,,,io,char 86-88,True,nd evolution by natural selection was born in the English town
+confirmation-088,control,Io,substring_inside_word,,,Io,char 99-101,True,as tried by the Roman Inquisition in 
+confirmation-088,control,Io,substring_inside_word,,,io,char 99-101,True,as tried by the Roman Inquisition in 
+confirmation-090,control,Egypt,substring_inside_word,,,Egypt,char 10-15,True,Fact: The Egyptian queen who supported Mark A
+confirmation-090,control,Egypt,substring_inside_word,,,egypt,char 10-15,True,Fact: The Egyptian queen who supported Mark A
+confirmation-094,control,Io,substring_inside_word,,,Io,char 40-42,True,ancient Chinese teacher traditionally dated to 551–479 BCE is 
+confirmation-094,control,Io,substring_inside_word,,,Io,char 99-101,True,is associated with the collection known as the 
+confirmation-094,control,Io,substring_inside_word,,,io,char 40-42,True,ancient Chinese teacher traditionally dated to 551–479 BCE is 
+confirmation-094,control,Io,substring_inside_word,,,io,char 99-101,True,is associated with the collection known as the 
+confirmation-098,control,Io,exact_token_id,1119,io,,10,True, of the opera Fidelio died in the city of
+confirmation-098,control,Io,substring_inside_word,,,Io,char 37-39,True,he composer of the opera Fidelio died in the city of 
+confirmation-098,control,Io,substring_inside_word,,,io,char 37-39,True,he composer of the opera Fidelio died in the city of 
+confirmation-100,control,Io,substring_inside_word,,,Io,char 37-39,True,he composer of the opera Don Giovanni was born in the year 
+confirmation-100,control,Io,substring_inside_word,,,io,char 37-39,True,he composer of the opera Don Giovanni was born in the year 
+confirmation-104,control,Io,substring_inside_word,,,Io,char 28-30,True,"Fact: The painter of Impression, Sunrise is associated with "
+confirmation-104,control,Io,substring_inside_word,,,io,char 28-30,True,"Fact: The painter of Impression, Sunrise is associated with "
+confirmation-108,control,Io,substring_inside_word,,,Io,char 41-43,True,omposer of the Goldberg Variations worked in the musical perio
+confirmation-108,control,Io,substring_inside_word,,,Io,char 71-73,True,ions worked in the musical period known as the 
+confirmation-108,control,Io,substring_inside_word,,,io,char 41-43,True,omposer of the Goldberg Variations worked in the musical perio
+confirmation-108,control,Io,substring_inside_word,,,io,char 71-73,True,ions worked in the musical period known as the 
+confirmation-109,control,Io,substring_inside_word,,,Io,char 33-35,True,t: The composer of the Revolutionary Etude wrote chiefly for t
+confirmation-109,control,Io,substring_inside_word,,,io,char 33-35,True,t: The composer of the Revolutionary Etude wrote chiefly for t
+confirmation-112,control,Io,substring_inside_word,,,Io,char 67-69,True,nna worked in the artistic period known as the 
+confirmation-112,control,Io,substring_inside_word,,,io,char 67-69,True,nna worked in the artistic period known as the 
+confirmation-118,control,Io,substring_inside_word,,,Io,char 68-70,True,rst spacecraft crossed the heliopause in 2012 began with two l
+confirmation-118,control,Io,substring_inside_word,,,io,char 68-70,True,rst spacecraft crossed the heliopause in 2012 began with two l
+confirmation-120,control,Io,substring_inside_word,,,Io,char 57-59,True,epaired during the STS-61 mission has a primary mirror with a 
+confirmation-120,control,Io,substring_inside_word,,,io,char 57-59,True,epaired during the STS-61 mission has a primary mirror with a 
+confirmation-123,control,Io,substring_inside_word,,,Io,char 58-60,True, whose code points are conventionally written with a U+ prefix
+confirmation-123,control,Io,substring_inside_word,,,Io,char 111-113,True,U+ prefix first published Version 1.0 in 
+confirmation-123,control,Io,substring_inside_word,,,io,char 58-60,True, whose code points are conventionally written with a U+ prefix
+confirmation-123,control,Io,substring_inside_word,,,io,char 111-113,True,U+ prefix first published Version 1.0 in 
+confirmation-126,control,Io,substring_inside_word,,,Io,char 75-77,True,obert Metcalfe in 1973 conventionally uses MAC addresses conta
+confirmation-126,control,Io,substring_inside_word,,,io,char 75-77,True,obert Metcalfe in 1973 conventionally uses MAC addresses conta
+confirmation-127,control,Io,substring_inside_word,,,Io,char 70-72,True,rm founded around the Interaction Design Institute Ivrea origi
+confirmation-127,control,Io,substring_inside_word,,,io,char 70-72,True,rm founded around the Interaction Design Institute Ivrea origi
+confirmation-132,control,Newton,substring_word,,,Newton,char 39-45,True, derived SI unit equal to one newton per square metre has the symb
+confirmation-132,control,Newton,substring_word,,,newton,char 39-45,True, derived SI unit equal to one newton per square metre has the symb
+confirmation-133,control,Io,substring_inside_word,,,Io,char 66-68,True,scoverer of universal gravitation has the symbol 
+confirmation-133,control,Io,substring_inside_word,,,io,char 66-68,True,scoverer of universal gravitation has the symbol 
+confirmation-137,control,RNA,substring_inside_word,,,RNA,char 80-83,True, inventor associated with alternating-current systems has the s
+confirmation-137,control,RNA,substring_inside_word,,,Rna,char 80-83,True, inventor associated with alternating-current systems has the s
+confirmation-137,control,RNA,substring_inside_word,,,rna,char 80-83,True, inventor associated with alternating-current systems has the s
+confirmation-143,control,Io,substring_inside_word,,,Io,char 46-48,True,t named after a British radiation physicist has the symbol 
+confirmation-143,control,Io,substring_inside_word,,,io,char 46-48,True,t named after a British radiation physicist has the symbol 
+confirmation-144,control,Io,substring_inside_word,,,Io,char 53-55,True,ed in 1975 for absorbed radiation dose is equivalent to how ma
+confirmation-144,control,Io,substring_inside_word,,,io,char 53-55,True,ed in 1975 for absorbed radiation dose is equivalent to how ma
+confirmation-145,control,Io,substring_inside_word,,,Io,char 86-88,True,ospheric shield against ultraviolet light has the formula 
+confirmation-145,control,Io,substring_inside_word,,,io,char 86-88,True,ospheric shield against ultraviolet light has the formula 
+confirmation-145,control,mole,substring_inside_word,,,mole,char 10-14,True,Fact: The molecule principally responsible f
+confirmation-145,control,mole,substring_inside_word,,,Mole,char 10-14,True,Fact: The molecule principally responsible f
+confirmation-146,control,mole,substring_inside_word,,,mole,char 99-103,True,s contains how many atoms per molecule? The answer is 
+confirmation-146,control,mole,substring_inside_word,,,Mole,char 99-103,True,s contains how many atoms per molecule? The answer is 
+confirmation-148,control,Io,substring_inside_word,,,Io,char 70-72,True, the oceanic crust is compositionally classified as 
+confirmation-148,control,Io,substring_inside_word,,,io,char 70-72,True, the oceanic crust is compositionally classified as 
+confirmation-155,control,Io,substring_inside_word,,,Io,char 11-13,True,Fact: The violently rotating column of air 
+confirmation-155,control,Io,substring_inside_word,,,io,char 11-13,True,Fact: The violently rotating column of air 
+confirmation-160,control,Io,substring_inside_word,,,Io,char 45-47,True,"-frozen soil thaws, decomposition of its organic matter can re"
+confirmation-160,control,Io,substring_inside_word,,,Io,char 91-93,True,ic matter can release carbon dioxide and the greenhouse gas 
+confirmation-160,control,Io,substring_inside_word,,,io,char 45-47,True,"-frozen soil thaws, decomposition of its organic matter can re"
+confirmation-160,control,Io,substring_inside_word,,,io,char 91-93,True,ic matter can release carbon dioxide and the greenhouse gas 

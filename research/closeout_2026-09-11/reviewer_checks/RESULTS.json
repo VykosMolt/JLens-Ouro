@@ -1,0 +1,2199 @@
+{
+ "schema": "closeout_reviewer_checks.v1",
+ "plan_sha256": "4b129b00f528db145fe8068b8b88e82f82f4818d4e9653601c2915fadb95d8a1",
+ "inputs": {
+  "population_sha256": "d7b4efa7e650114d40a521a05e0ca64caa10259f62d50aa94ad1fdc5d210c087",
+  "benchmark_sha256": "735816c5d540f15ed47cf88ba924f04d5e6ad77eb0cd062b20554543011c6e99",
+  "fit01_npz_sha256": "ba9987e584ee6bab86ab9503a33cb290e802e5accbaffdd84b4e75b472a8bb5e",
+  "raw_npz_sha256": "6bc1952eb7f1ee983f22b83f5057b4ef0329b1c8d292bfba9f9f8313f5f22da8",
+  "fit02_npz_sha256": "0d0d2bc21225add38e5b710d5851b81970d6f50189b2f769cb727c6c8bd395b1",
+  "saved_analysis_sha256": "f29fa5e96ec4a8ff76c2710828921c0d06b5257a6901c9b7acd98cfaf2db5ffe"
+ },
+ "anchor_primary_reproduced": 0.23188291139240508,
+ "family_N1": {
+  "policy": "centered bootstrap max-t, 4 contrasts, 20000 whole-group draws",
+  "seed": 2026091101,
+  "max_t_95_quantile": 2.6386394248749863,
+  "contrasts": {
+   "A_within_domain_excess_diff_pass4": {
+    "estimate": 0.20796130952380953,
+    "simultaneous_95_maxt": [
+     0.09129698871641183,
+     0.3246256303312072
+    ],
+    "descriptive_group_percentile_95": [
+     0.1370021234576532,
+     0.31005291005291
+    ],
+    "bootstrap_sd": 0.04421381705570667
+   },
+   "C1_sameband_excess_diff_pass1": {
+    "estimate": -0.06495253164556963,
+    "simultaneous_95_maxt": [
+     -0.11914387978749716,
+     -0.010761183503642115
+    ],
+    "descriptive_group_percentile_95": [
+     -0.11463101493033206,
+     -0.03442965965483966
+    ],
+    "bootstrap_sd": 0.020537610266508848
+   },
+   "C2_sameband_excess_diff_pass2": {
+    "estimate": -0.08642536919831224,
+    "simultaneous_95_maxt": [
+     -0.12431223211303809,
+     -0.0485385062835864
+    ],
+    "descriptive_group_percentile_95": [
+     -0.11634593908766037,
+     -0.05863154887482426
+    ],
+    "bootstrap_sd": 0.014358484360371009
+   },
+   "C3_sameband_excess_diff_pass3": {
+    "estimate": -0.11141877637130806,
+    "simultaneous_95_maxt": [
+     -0.16763256699210505,
+     -0.05520498575051108
+    ],
+    "descriptive_group_percentile_95": [
+     -0.15020188364007328,
+     -0.06552359525986413
+    ],
+    "bootstrap_sd": 0.021304081979090526
+   }
+  }
+ },
+ "A_within_domain": {
+  "definition": "controls = the 7 other concept names in the item's benchmark domain (subset of the frozen 79); pass-4 band 169\u2013180; fit01 vs raw",
+  "per_method": {
+   "fit01": {
+    "intended_recovery": {
+     "estimate": 0.3791666666666667,
+     "descriptive_group_percentile_95": [
+      0.3042631088196578,
+      0.466301490354206
+     ]
+    },
+    "all79_control_recovery": {
+     "estimate": 0.0034414556962025313,
+     "descriptive_group_percentile_95": [
+      0.0018020393811533052,
+      0.005050778571458621
+     ]
+    },
+    "within_domain_control_recovery": {
+     "estimate": 0.03072916666666666,
+     "descriptive_group_percentile_95": [
+      0.01133220818815331,
+      0.04786506501705365
+     ]
+    },
+    "excess_all79": {
+     "estimate": 0.37572521097046413,
+     "descriptive_group_percentile_95": [
+      0.30039969536400213,
+      0.4634964946901814
+     ]
+    },
+    "excess_within_domain": {
+     "estimate": 0.3484375,
+     "descriptive_group_percentile_95": [
+      0.26776499542124543,
+      0.44266627628062716
+     ]
+    }
+   },
+   "raw": {
+    "intended_recovery": {
+     "estimate": 0.14427083333333335,
+     "descriptive_group_percentile_95": [
+      0.10416666666666667,
+      0.17957876890975474
+     ]
+    },
+    "all79_control_recovery": {
+     "estimate": 0.0004285337552742616,
+     "descriptive_group_percentile_95": [
+      0.00018398586988519283,
+      0.0007571233465731209
+     ]
+    },
+    "within_domain_control_recovery": {
+     "estimate": 0.0037946428571428567,
+     "descriptive_group_percentile_95": [
+      0.0010600130463144161,
+      0.007092198581560284
+     ]
+    },
+    "excess_all79": {
+     "estimate": 0.14384229957805908,
+     "descriptive_group_percentile_95": [
+      0.10379489238812543,
+      0.17916267551608064
+     ]
+    },
+    "excess_within_domain": {
+     "estimate": 0.14047619047619048,
+     "descriptive_group_percentile_95": [
+      0.10050344001236858,
+      0.1762367054111563
+     ]
+    }
+   }
+  },
+  "paired": {
+   "excess_all79_diff_ORIGINAL_PRIMARY": {
+    "estimate": 0.23188291139240508,
+    "original_group_percentile_95": [
+     0.1628899320083425,
+     0.3289769593495046
+    ]
+   },
+   "excess_within_domain_diff": {
+    "estimate": 0.20796130952380953,
+    "simultaneous_95_maxt": [
+     0.09129698871641183,
+     0.3246256303312072
+    ],
+    "descriptive_group_percentile_95": [
+     0.1370021234576532,
+     0.31005291005291
+    ],
+    "bootstrap_sd": 0.04421381705570667,
+    "item_resampling_descriptive_95": [
+     0.15535714285714286,
+     0.26272321428571427
+    ]
+   },
+   "intended_diff": {
+    "estimate": 0.23489583333333336,
+    "descriptive_group_percentile_95": [
+     0.16666666666666669,
+     0.33217670795795784
+    ]
+   },
+   "all79_control_diff": {
+    "estimate": 0.00301292194092827,
+    "descriptive_group_percentile_95": [
+     0.0014384349827387805,
+     0.004425828177204068
+    ]
+   },
+   "within_domain_control_diff": {
+    "estimate": 0.026934523809523808,
+    "descriptive_group_percentile_95": [
+     0.009211951289949944,
+     0.04181960978835976
+    ]
+   }
+  },
+  "per_domain": [
+   {
+    "domain": "arts_music",
+    "items": 16,
+    "groups": [
+     "dg016",
+     "dg019"
+    ],
+    "names": [
+     "Bach",
+     "Beethoven",
+     "Chopin",
+     "Monet",
+     "Mozart",
+     "Picasso",
+     "Raphael",
+     "Tolkien"
+    ],
+    "fit01_intended": 0.3229166666666667,
+    "raw_intended": 0.0625,
+    "fit01_c79": 0.004021624472573839,
+    "fit01_c7": 0.04538690476190476,
+    "raw_c79": 0.0006592827004219409,
+    "raw_c7": 0.00744047619047619,
+    "excess79_diff": 0.2570543248945148,
+    "excess7_diff": 0.2224702380952381
+   },
+   {
+    "domain": "astronomy",
+    "items": 16,
+    "groups": [
+     "dg001",
+     "dg002",
+     "dg003",
+     "dg004",
+     "dg005"
+    ],
+    "names": [
+     "Ceres",
+     "Europa",
+     "Io",
+     "Neptune",
+     "Pluto",
+     "Titan",
+     "Uranus",
+     "Venus"
+    ],
+    "fit01_intended": 0.16145833333333331,
+    "raw_intended": 0.10416666666666666,
+    "fit01_c79": 0.00870253164556962,
+    "fit01_c7": 0.0863095238095238,
+    "raw_c79": 0.002043776371308017,
+    "raw_c7": 0.020833333333333332,
+    "excess79_diff": 0.05063291139240506,
+    "excess7_diff": -0.008184523809523794
+   },
+   {
+    "domain": "biology",
+    "items": 16,
+    "groups": [
+     "dg006",
+     "dg011",
+     "dg012",
+     "dg013",
+     "dg014",
+     "dg015"
+    ],
+    "names": [
+     "DNA",
+     "RNA",
+     "chlorophyll",
+     "collagen",
+     "hemoglobin",
+     "insulin",
+     "neuron",
+     "nucleus"
+    ],
+    "fit01_intended": 0.3229166666666667,
+    "raw_intended": 0.078125,
+    "fit01_c79": 0.0012526371308016879,
+    "fit01_c7": 0.003720238095238095,
+    "raw_c79": 0.00046149789029535865,
+    "raw_c7": 0.0,
+    "excess79_diff": 0.24400052742616038,
+    "excess7_diff": 0.24107142857142858
+   },
+   {
+    "domain": "chemistry",
+    "items": 16,
+    "groups": [
+     "dg006"
+    ],
+    "names": [
+     "boron",
+     "cobalt",
+     "helium",
+     "lithium",
+     "neon",
+     "nickel",
+     "radon",
+     "tungsten"
+    ],
+    "fit01_intended": 0.5885416666666666,
+    "raw_intended": 0.25,
+    "fit01_c79": 0.00804324894514768,
+    "fit01_c7": 0.08556547619047619,
+    "raw_c79": 6.592827004219409e-05,
+    "raw_c7": 0.000744047619047619,
+    "excess79_diff": 0.33056434599156115,
+    "excess7_diff": 0.25372023809523814
+   },
+   {
+    "domain": "countries",
+    "items": 16,
+    "groups": [
+     "dg007"
+    ],
+    "names": [
+     "Chile",
+     "Egypt",
+     "Japan",
+     "Kenya",
+     "Norway",
+     "Peru",
+     "Sweden",
+     "Thailand"
+    ],
+    "fit01_intended": 0.6354166666666667,
+    "raw_intended": 0.08854166666666666,
+    "fit01_c79": 0.0038897679324894517,
+    "fit01_c7": 0.036458333333333336,
+    "raw_c79": 0.00013185654008438817,
+    "raw_c7": 0.0,
+    "excess79_diff": 0.5431170886075949,
+    "excess7_diff": 0.5104166666666666
+   },
+   {
+    "domain": "environment_geology",
+    "items": 16,
+    "groups": [
+     "dg003",
+     "dg006",
+     "dg024",
+     "dg025",
+     "dg026",
+     "dg027",
+     "dg028"
+    ],
+    "names": [
+     "basalt",
+     "earthquake",
+     "glacier",
+     "granite",
+     "monsoon",
+     "ozone",
+     "permafrost",
+     "tornado"
+    ],
+    "fit01_intended": 0.6822916666666666,
+    "raw_intended": 0.2552083333333333,
+    "fit01_c79": 0.002439345991561181,
+    "fit01_c7": 0.023809523809523808,
+    "raw_c79": 0.00013185654008438817,
+    "raw_c7": 0.0,
+    "excess79_diff": 0.4247758438818565,
+    "excess7_diff": 0.40327380952380953
+   },
+   {
+    "domain": "historical_people",
+    "items": 16,
+    "groups": [
+     "dg008",
+     "dg016",
+     "dg017",
+     "dg018"
+    ],
+    "names": [
+     "Cleopatra",
+     "Confucius",
+     "Darwin",
+     "Einstein",
+     "Galileo",
+     "Gutenberg",
+     "Napoleon",
+     "Shakespeare"
+    ],
+    "fit01_intended": 0.46354166666666663,
+    "raw_intended": 0.22395833333333334,
+    "fit01_c79": 0.0009229957805907173,
+    "fit01_c7": 0.000744047619047619,
+    "raw_c79": 0.0,
+    "raw_c7": 0.0,
+    "excess79_diff": 0.2386603375527426,
+    "excess7_diff": 0.2388392857142857
+   },
+   {
+    "domain": "landforms",
+    "items": 16,
+    "groups": [
+     "dg006",
+     "dg008",
+     "dg009",
+     "dg010"
+    ],
+    "names": [
+     "Alps",
+     "Andes",
+     "Borneo",
+     "Danube",
+     "Everest",
+     "Mekong",
+     "Nile",
+     "Sahara"
+    ],
+    "fit01_intended": 0.22916666666666669,
+    "raw_intended": 0.06770833333333333,
+    "fit01_c79": 0.004746835443037975,
+    "fit01_c7": 0.025297619047619044,
+    "raw_c79": 0.0007911392405063291,
+    "raw_c7": 0.008928571428571428,
+    "excess79_diff": 0.1575026371308017,
+    "excess7_diff": 0.14508928571428573
+   },
+   {
+    "domain": "si_units",
+    "items": 16,
+    "groups": [
+     "dg006"
+    ],
+    "names": [
+     "Kelvin",
+     "Newton",
+     "Pascal",
+     "Tesla",
+     "Watt",
+     "gray",
+     "mole",
+     "volt"
+    ],
+    "fit01_intended": 0.015625,
+    "raw_intended": 0.020833333333333332,
+    "fit01_c79": 0.00039556962025316455,
+    "fit01_c7": 0.0,
+    "raw_c79": 0.0,
+    "raw_c7": 0.0,
+    "excess79_diff": -0.005603902953586497,
+    "excess7_diff": -0.005208333333333332
+   },
+   {
+    "domain": "technology",
+    "items": 16,
+    "groups": [
+     "dg002",
+     "dg013",
+     "dg020",
+     "dg021",
+     "dg022",
+     "dg023"
+    ],
+    "names": [
+     "Arduino",
+     "Ethernet",
+     "Hubble",
+     "Linux",
+     "Python",
+     "Unicode",
+     "Voyager",
+     "Wikipedia"
+    ],
+    "fit01_intended": 0.3697916666666667,
+    "raw_intended": 0.29166666666666663,
+    "fit01_c79": 0.0,
+    "fit01_c7": 0.0,
+    "raw_c79": 0.0,
+    "raw_c7": 0.0,
+    "excess79_diff": 0.078125,
+    "excess7_diff": 0.078125
+   }
+  ],
+  "bound_check": {
+   "inequality": "excess7_diff >= intended_diff - (79/7)*fit01_all79_control_recovery",
+   "aggregate_lower_bound_exact": 0.19605654761904762,
+   "aggregate_observed_excess7_diff": 0.20796130952380953,
+   "aggregate_holds": true,
+   "per_item_holds_all": true,
+   "per_item_violations": 0,
+   "published_rounded_values_bound": 0.19607714285714284,
+   "note": "lower bound on the observed point estimate; not an interval or a substitute for the estimate"
+  }
+ },
+ "B_overlap": {
+  "items_audited": 160,
+  "visible_input": "exactly token_ids (BOS + prompt tokens up to the common-prefix boundary); one item per forward; no wrapper, demonstrations, chat template, prefilled response or padding; readout at position \u22121 so all tokens are causally visible",
+  "exact_intended_overlaps": 0,
+  "exact_control_overlaps": 6,
+  "items_with_exact_control_overlap": [
+   "confirmation-005",
+   "confirmation-006",
+   "confirmation-016",
+   "confirmation-054",
+   "confirmation-056",
+   "confirmation-098"
+  ],
+  "substring_word_matches": 12,
+  "substring_inside_word_matches": 103,
+  "substring_intended": 2,
+  "targets_equal_own_intermediate": 0,
+  "items_whose_target_coincides_with_some_concept_name": [],
+  "semantic_clue_review": "not automatable; substring/word matches listed in OVERLAP_LEDGER.csv for manual review",
+  "caveat": "zero exact token overlap does not establish absence of semantic information or pretraining contamination",
+  "sensitivities": {
+   "S1_control_filtering": {
+    "rule": "drop exact-token-overlapping controls for the affected items, both methods; denominators recorded",
+    "affected_items": 6,
+    "denominators": [
+     [
+      78,
+      6
+     ],
+     [
+      79,
+      154
+     ]
+    ],
+    "estimate": 0.23188992683652493,
+    "descriptive_group_percentile_95": [
+     0.16250307278867407,
+     0.32724803978679445
+    ]
+   },
+   "S2_clean_subset": {
+    "rule": "drop affected items entirely, both methods",
+    "items_kept": 154,
+    "groups_kept": 28,
+    "estimate": 0.22898514987122587,
+    "descriptive_group_percentile_95": [
+     0.15917700728329565,
+     0.33151089406301704
+    ]
+   }
+  }
+ },
+ "C_same_band": {
+  "mapping": [
+   {
+    "pass": 1,
+    "physical_one_based": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ],
+    "virtual_zero_based": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ]
+   },
+   {
+    "pass": 2,
+    "physical_one_based": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ],
+    "virtual_zero_based": [
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84
+    ]
+   },
+   {
+    "pass": 3,
+    "physical_one_based": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ],
+    "virtual_zero_based": [
+     121,
+     122,
+     123,
+     124,
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131,
+     132
+    ]
+   },
+   {
+    "pass": 4,
+    "physical_one_based": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ],
+    "virtual_zero_based": [
+     169,
+     170,
+     171,
+     172,
+     173,
+     174,
+     175,
+     176,
+     177,
+     178,
+     179,
+     180
+    ]
+   }
+  ],
+  "formula": "virtual = 48*(pass-1) + (physical-1); zero-based virtual, one-based pass/physical",
+  "support": {
+   "fit01": 192,
+   "raw": 192,
+   "unsupported_tail_in_any_band": false
+  },
+  "original_20_contain_same_band_early_contrast": false,
+  "passes": [
+   {
+    "pass": 1,
+    "virtual": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ],
+    "fit01_intended": {
+     "estimate": 0.0,
+     "descriptive_group_percentile_95": [
+      0.0,
+      0.0
+     ]
+    },
+    "fit01_control79": {
+     "estimate": 0.0007911392405063292,
+     "descriptive_group_percentile_95": [
+      0.0002930145335208626,
+      0.0016666760849909576
+     ]
+    },
+    "fit01_excess": {
+     "estimate": -0.0007911392405063292,
+     "descriptive_group_percentile_95": [
+      -0.0016666760849909585,
+      -0.0002930145335208626
+     ]
+    },
+    "raw_intended": {
+     "estimate": 0.06458333333333333,
+     "descriptive_group_percentile_95": [
+      0.034142203282828285,
+      0.11419753086419754
+     ]
+    },
+    "raw_control79": {
+     "estimate": 0.00042194092827004215,
+     "descriptive_group_percentile_95": [
+      7.87203224384407e-05,
+      0.0010548523206751054
+     ]
+    },
+    "raw_excess": {
+     "estimate": 0.06416139240506329,
+     "descriptive_group_percentile_95": [
+      0.03354921369426469,
+      0.1137238794051227
+     ]
+    },
+    "paired_excess_diff": {
+     "estimate": -0.06495253164556963,
+     "simultaneous_95_maxt": [
+      -0.11914387978749716,
+      -0.010761183503642115
+     ],
+     "descriptive_group_percentile_95": [
+      -0.11463101493033206,
+      -0.03442965965483966
+     ],
+     "bootstrap_sd": 0.020537610266508848
+    },
+    "paired_intended_diff": {
+     "estimate": -0.06458333333333333,
+     "descriptive_group_percentile_95": [
+      -0.11419753086419754,
+      -0.034142203282828396
+     ]
+    },
+    "paired_control79_diff": {
+     "estimate": 0.0003691983122362869,
+     "descriptive_group_percentile_95": [
+      -0.0002228632669107799,
+      0.001251114309901225
+     ]
+    },
+    "fit02_minus_raw_excess_descriptive": {
+     "estimate": -0.05673786919831223,
+     "descriptive_group_percentile_95": [
+      -0.0995962147030185,
+      -0.02815429961830591
+     ]
+    },
+    "existing_all_layer_fixed_mean_ORIGINAL": {
+     "estimate": -0.08827465717299579,
+     "simultaneous_95_interval": [
+      -0.13641974092762596,
+      -0.040129573418365615
+     ]
+    },
+    "existing_any_layer_ORIGINAL": {
+     "estimate": -0.4440664556962024,
+     "simultaneous_95_interval": [
+      -0.5902854897612019,
+      -0.2978474216312029
+     ]
+    }
+   },
+   {
+    "pass": 2,
+    "virtual": [
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84
+    ],
+    "fit01_intended": {
+     "estimate": 0.0421875,
+     "descriptive_group_percentile_95": [
+      0.007407191069574247,
+      0.09343479437229434
+     ]
+    },
+    "fit01_control79": {
+     "estimate": 0.001997626582278481,
+     "descriptive_group_percentile_95": [
+      0.0010968042959735996,
+      0.0033738949166164317
+     ]
+    },
+    "fit01_excess": {
+     "estimate": 0.04018987341772152,
+     "descriptive_group_percentile_95": [
+      0.005530994043186895,
+      0.09109550625505673
+     ]
+    },
+    "raw_intended": {
+     "estimate": 0.12708333333333333,
+     "descriptive_group_percentile_95": [
+      0.08985904555722891,
+      0.17695143398268368
+     ]
+    },
+    "raw_control79": {
+     "estimate": 0.0004680907172995781,
+     "descriptive_group_percentile_95": [
+      0.00010208248264597796,
+      0.0009418324291742014
+     ]
+    },
+    "raw_excess": {
+     "estimate": 0.12661524261603377,
+     "descriptive_group_percentile_95": [
+      0.08938587502511554,
+      0.176450086277379
+     ]
+    },
+    "paired_excess_diff": {
+     "estimate": -0.08642536919831224,
+     "simultaneous_95_maxt": [
+      -0.12431223211303809,
+      -0.0485385062835864
+     ],
+     "descriptive_group_percentile_95": [
+      -0.11634593908766037,
+      -0.05863154887482426
+     ],
+     "bootstrap_sd": 0.014358484360371009
+    },
+    "paired_intended_diff": {
+     "estimate": -0.08489583333333334,
+     "descriptive_group_percentile_95": [
+      -0.11441798941798943,
+      -0.057097926731078975
+     ]
+    },
+    "paired_control79_diff": {
+     "estimate": 0.001529535864978903,
+     "descriptive_group_percentile_95": [
+      0.0007014224194179825,
+      0.00270042194092827
+     ]
+    },
+    "fit02_minus_raw_excess_descriptive": {
+     "estimate": -0.08599683544303797,
+     "descriptive_group_percentile_95": [
+      -0.12124461063897782,
+      -0.05633990440307065
+     ]
+    },
+    "existing_all_layer_fixed_mean_ORIGINAL": {
+     "estimate": -0.14858089398734178,
+     "simultaneous_95_interval": [
+      -0.19540695469825603,
+      -0.10175483327642752
+     ]
+    },
+    "existing_any_layer_ORIGINAL": {
+     "estimate": -0.5736550632911395,
+     "simultaneous_95_interval": [
+      -0.7200754085098435,
+      -0.4272347180724354
+     ]
+    }
+   },
+   {
+    "pass": 3,
+    "virtual": [
+     121,
+     122,
+     123,
+     124,
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131,
+     132
+    ],
+    "fit01_intended": {
+     "estimate": 0.02760416666666667,
+     "descriptive_group_percentile_95": [
+      0.0,
+      0.07017543859649122
+     ]
+    },
+    "fit01_control79": {
+     "estimate": 0.000435126582278481,
+     "descriptive_group_percentile_95": [
+      0.0001687709339249206,
+      0.0008838002068747296
+     ]
+    },
+    "fit01_excess": {
+     "estimate": 0.027169040084388186,
+     "descriptive_group_percentile_95": [
+      -0.0003296633263009845,
+      0.06969172297297296
+     ]
+    },
+    "raw_intended": {
+     "estimate": 0.1390625,
+     "descriptive_group_percentile_95": [
+      0.09775641025641027,
+      0.18095282515991468
+     ]
+    },
+    "raw_control79": {
+     "estimate": 0.0004746835443037975,
+     "descriptive_group_percentile_95": [
+      8.531893770166295e-05,
+      0.0009829305715381665
+     ]
+    },
+    "raw_excess": {
+     "estimate": 0.1385878164556962,
+     "descriptive_group_percentile_95": [
+      0.09740510487854523,
+      0.18042459990277562
+     ]
+    },
+    "paired_excess_diff": {
+     "estimate": -0.11141877637130806,
+     "simultaneous_95_maxt": [
+      -0.16763256699210505,
+      -0.05520498575051108
+     ],
+     "descriptive_group_percentile_95": [
+      -0.15020188364007328,
+      -0.06552359525986413
+     ],
+     "bootstrap_sd": 0.021304081979090526
+    },
+    "paired_intended_diff": {
+     "estimate": -0.11145833333333333,
+     "descriptive_group_percentile_95": [
+      -0.15011415525114152,
+      -0.06547619047619048
+     ]
+    },
+    "paired_control79_diff": {
+     "estimate": -3.955696202531649e-05,
+     "descriptive_group_percentile_95": [
+      -0.0004746835443037974,
+      0.0005104124132298898
+     ]
+    },
+    "fit02_minus_raw_excess_descriptive": {
+     "estimate": -0.11136603375527425,
+     "descriptive_group_percentile_95": [
+      -0.14879007081471832,
+      -0.06571389893013797
+     ]
+    },
+    "existing_all_layer_fixed_mean_ORIGINAL": {
+     "estimate": -0.15586926424050637,
+     "simultaneous_95_interval": [
+      -0.2240409794100318,
+      -0.08769754907098096
+     ]
+    },
+    "existing_any_layer_ORIGINAL": {
+     "estimate": -0.6108386075949369,
+     "simultaneous_95_interval": [
+      -0.7959090115574546,
+      -0.4257682036324192
+     ]
+    }
+   },
+   {
+    "pass": 4,
+    "virtual": [
+     169,
+     170,
+     171,
+     172,
+     173,
+     174,
+     175,
+     176,
+     177,
+     178,
+     179,
+     180
+    ],
+    "fit01_intended": {
+     "estimate": 0.3791666666666667,
+     "descriptive_group_percentile_95": [
+      0.3042631088196578,
+      0.466301490354206
+     ]
+    },
+    "fit01_control79": {
+     "estimate": 0.0034414556962025313,
+     "descriptive_group_percentile_95": [
+      0.0018020393811533052,
+      0.005050778571458621
+     ]
+    },
+    "fit01_excess": {
+     "estimate": 0.37572521097046413,
+     "descriptive_group_percentile_95": [
+      0.30039969536400213,
+      0.4634964946901814
+     ]
+    },
+    "raw_intended": {
+     "estimate": 0.14427083333333335,
+     "descriptive_group_percentile_95": [
+      0.10416666666666667,
+      0.17957876890975474
+     ]
+    },
+    "raw_control79": {
+     "estimate": 0.0004285337552742616,
+     "descriptive_group_percentile_95": [
+      0.00018398586988519283,
+      0.0007571233465731209
+     ]
+    },
+    "raw_excess": {
+     "estimate": 0.14384229957805908,
+     "descriptive_group_percentile_95": [
+      0.10379489238812543,
+      0.17916267551608064
+     ]
+    },
+    "paired_excess_diff": {
+     "estimate": 0.23188291139240508,
+     "ORIGINAL_PRIMARY_group_percentile_95": [
+      0.1628899320083425,
+      0.3289769593495046
+     ],
+     "status": "original prospective primary; not re-inferred"
+    },
+    "paired_intended_diff": {
+     "estimate": 0.23489583333333336,
+     "descriptive_group_percentile_95": [
+      0.16666666666666669,
+      0.33217670795795784
+     ]
+    },
+    "paired_control79_diff": {
+     "estimate": 0.00301292194092827,
+     "descriptive_group_percentile_95": [
+      0.0014384349827387805,
+      0.004425828177204068
+     ]
+    },
+    "fit02_minus_raw_excess_descriptive": {
+     "estimate": 0.2255801687763713,
+     "descriptive_group_percentile_95": [
+      0.1609698953421031,
+      0.31749488271046805
+     ]
+    }
+   }
+  ]
+ },
+ "D_groups": {
+  "rule": {
+   "unit": "connected component of all declared dependency edges",
+   "required_edge_classes": [
+    "same intermediate identity/semantic aliases",
+    "shared underlying factual proposition",
+    "concrete near-duplicate/entity-substitution template",
+    "final-answer collision"
+   ],
+   "template_granularity": "A concrete construction keeps the intermediate entity type and requested slot, or a closely corresponding typed clue/request pair. Named-entity substitutions and paraphrases within those constructions stay connected. The Fact prefix, generic clue->entity->property schema, broad domain, source publisher/page, and isolated broad relation taxonomy are not sufficient alone. Examples: SI unit->symbol is one family; element->chemical symbol is another, joined here by the required W answer collision. Part counts across biological subunits and network encodings are a broad familiar relation, not by that fact alone one concrete entity-substitution construction.",
+   "final_answer_normalization": "Casefold and collapse whitespace; manually inspect semantics. W/W merges even though tungsten and watt use the same surface answer for different referents. Water versus ice are different state-specific answers; krone versus krona are different national currency names. All candidate target_aliases are empty.",
+   "shared_fact_audit": "Reviewed both identity clues and requested facts. Explicit shared propositions are listed as edge reasons. No additional cross-concept shared proposition beyond listed identity/template/answer connections was identified; sharing a broad source page or a mentioned spacecraft does not itself equate the facts."
+  },
+  "edge_count": 294,
+  "group_count": 28,
+  "group_sizes": [
+   42,
+   24,
+   16,
+   10,
+   10,
+   6,
+   4,
+   4,
+   4,
+   4,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "effective_group_count": 8.625336927223719,
+  "retained_from_analysis": {
+   "primary_item_resampling_95_interval": [
+    0.17971271756329119,
+    0.2870582805907173
+   ],
+   "leave_one_group_range": [
+    0.19730133614627288,
+    0.24874848029750418
+   ],
+   "group_bootstrap": {
+    "replicates": 20000,
+    "resampling": "whole dependency groups with replacement; sum divided by sampled item count",
+    "secondary_policy": "20 contrasts; centered bootstrap max-t, one shared 95% interval family",
+    "seed": 2026090901
+   }
+  },
+  "groups": [
+   {
+    "group": "dg001",
+    "size": 2,
+    "items": [
+     "confirmation-001",
+     "confirmation-002"
+    ],
+    "intermediates": [
+     "Venus"
+    ],
+    "domains": [
+     "astronomy"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.0,
+    "saved_without_group": 0.2348181381188912
+   },
+   {
+    "group": "dg002",
+    "size": 4,
+    "items": [
+     "confirmation-003",
+     "confirmation-004",
+     "confirmation-117",
+     "confirmation-118"
+    ],
+    "intermediates": [
+     "Uranus",
+     "Voyager"
+    ],
+    "domains": [
+     "astronomy",
+     "technology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 2,
+     "same_intermediate_identity": 2,
+     "final_answer_collision": 1,
+     "assembled_answer_or_alias_collision": 1
+    },
+    "saved_primary_mean": 0.3127637130801688,
+    "saved_without_group": 0.22980904468246244
+   },
+   {
+    "group": "dg003",
+    "size": 10,
+    "items": [
+     "confirmation-005",
+     "confirmation-006",
+     "confirmation-011",
+     "confirmation-012",
+     "confirmation-013",
+     "confirmation-014",
+     "confirmation-015",
+     "confirmation-016",
+     "confirmation-159",
+     "confirmation-160"
+    ],
+    "intermediates": [
+     "Europa",
+     "Io",
+     "Neptune",
+     "Titan",
+     "permafrost"
+    ],
+    "domains": [
+     "astronomy",
+     "environment_geology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 5,
+     "final_answer_collision": 3,
+     "assembled_answer_or_alias_collision": 3,
+     "concrete_entity_substitution_template": 2
+    },
+    "saved_primary_mean": 0.07985232067510549,
+    "saved_without_group": 0.2420182841068917
+   },
+   {
+    "group": "dg004",
+    "size": 2,
+    "items": [
+     "confirmation-007",
+     "confirmation-008"
+    ],
+    "intermediates": [
+     "Pluto"
+    ],
+    "domains": [
+     "astronomy"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.03850210970464135,
+    "saved_without_group": 0.2343307696416173
+   },
+   {
+    "group": "dg005",
+    "size": 2,
+    "items": [
+     "confirmation-009",
+     "confirmation-010"
+    ],
+    "intermediates": [
+     "Ceres"
+    ],
+    "domains": [
+     "astronomy"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": -0.0005274261603375527,
+    "saved_without_group": 0.23482481439940184
+   },
+   {
+    "group": "dg006",
+    "size": 42,
+    "items": [
+     "confirmation-017",
+     "confirmation-018",
+     "confirmation-019",
+     "confirmation-020",
+     "confirmation-021",
+     "confirmation-022",
+     "confirmation-023",
+     "confirmation-024",
+     "confirmation-025",
+     "confirmation-026",
+     "confirmation-027",
+     "confirmation-028",
+     "confirmation-029",
+     "confirmation-030",
+     "confirmation-031",
+     "confirmation-032",
+     "confirmation-053",
+     "confirmation-054",
+     "confirmation-059",
+     "confirmation-060",
+     "confirmation-063",
+     "confirmation-064",
+     "confirmation-075",
+     "confirmation-076",
+     "confirmation-129",
+     "confirmation-130",
+     "confirmation-131",
+     "confirmation-132",
+     "confirmation-133",
+     "confirmation-134",
+     "confirmation-135",
+     "confirmation-136",
+     "confirmation-137",
+     "confirmation-138",
+     "confirmation-139",
+     "confirmation-140",
+     "confirmation-141",
+     "confirmation-142",
+     "confirmation-143",
+     "confirmation-144",
+     "confirmation-145",
+     "confirmation-146"
+    ],
+    "intermediates": [
+     "Alps",
+     "Andes",
+     "Borneo",
+     "Kelvin",
+     "Newton",
+     "Pascal",
+     "Tesla",
+     "Watt",
+     "boron",
+     "cobalt",
+     "gray",
+     "helium",
+     "lithium",
+     "mole",
+     "neon",
+     "nickel",
+     "nucleus",
+     "ozone",
+     "radon",
+     "tungsten",
+     "volt"
+    ],
+    "domains": [
+     "biology",
+     "chemistry",
+     "environment_geology",
+     "landforms",
+     "si_units"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 10,
+     "same_intermediate_identity": 21,
+     "concrete_entity_substitution_template": 89,
+     "final_answer_collision": 5,
+     "assembled_answer_or_alias_collision": 5,
+     "annotated_alias_or_code_collision": 4,
+     "non_self_semantic_alias_collision": 4
+    },
+    "saved_primary_mean": 0.1844986939923649,
+    "saved_without_group": 0.24874848029750418
+   },
+   {
+    "group": "dg007",
+    "size": 16,
+    "items": [
+     "confirmation-033",
+     "confirmation-034",
+     "confirmation-035",
+     "confirmation-036",
+     "confirmation-037",
+     "confirmation-038",
+     "confirmation-039",
+     "confirmation-040",
+     "confirmation-041",
+     "confirmation-042",
+     "confirmation-043",
+     "confirmation-044",
+     "confirmation-045",
+     "confirmation-046",
+     "confirmation-047",
+     "confirmation-048"
+    ],
+    "intermediates": [
+     "Chile",
+     "Egypt",
+     "Japan",
+     "Kenya",
+     "Norway",
+     "Peru",
+     "Sweden",
+     "Thailand"
+    ],
+    "domains": [
+     "countries"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 8,
+     "concrete_entity_substitution_template": 43
+    },
+    "saved_primary_mean": 0.5431170886075949,
+    "saved_without_group": 0.19730133614627288
+   },
+   {
+    "group": "dg008",
+    "size": 4,
+    "items": [
+     "confirmation-049",
+     "confirmation-050",
+     "confirmation-093",
+     "confirmation-094"
+    ],
+    "intermediates": [
+     "Confucius",
+     "Everest"
+    ],
+    "domains": [
+     "historical_people",
+     "landforms"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 2,
+     "final_answer_collision": 1,
+     "assembled_answer_or_alias_collision": 1,
+     "shared_underlying_fact": 1
+    },
+    "saved_primary_mean": 0.1840717299578059,
+    "saved_without_group": 0.23310883912149735
+   },
+   {
+    "group": "dg009",
+    "size": 2,
+    "items": [
+     "confirmation-051",
+     "confirmation-052"
+    ],
+    "intermediates": [
+     "Sahara"
+    ],
+    "domains": [
+     "landforms"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.0,
+    "saved_without_group": 0.2348181381188912
+   },
+   {
+    "group": "dg010",
+    "size": 6,
+    "items": [
+     "confirmation-055",
+     "confirmation-056",
+     "confirmation-057",
+     "confirmation-058",
+     "confirmation-061",
+     "confirmation-062"
+    ],
+    "intermediates": [
+     "Danube",
+     "Mekong",
+     "Nile"
+    ],
+    "domains": [
+     "landforms"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 3,
+     "concrete_entity_substitution_template": 3,
+     "shared_underlying_fact": 1
+    },
+    "saved_primary_mean": 0.05063291139240506,
+    "saved_without_group": 0.23894459970409337
+   },
+   {
+    "group": "dg011",
+    "size": 4,
+    "items": [
+     "confirmation-065",
+     "confirmation-066",
+     "confirmation-067",
+     "confirmation-068"
+    ],
+    "intermediates": [
+     "DNA",
+     "RNA"
+    ],
+    "domains": [
+     "biology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 2,
+     "concrete_entity_substitution_template": 1,
+     "shared_underlying_fact": 1
+    },
+    "saved_primary_mean": 0.04087552742616034,
+    "saved_without_group": 0.2367805366223088
+   },
+   {
+    "group": "dg012",
+    "size": 2,
+    "items": [
+     "confirmation-069",
+     "confirmation-070"
+    ],
+    "intermediates": [
+     "insulin"
+    ],
+    "domains": [
+     "biology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.6666666666666667,
+    "saved_without_group": 0.2263793195534904
+   },
+   {
+    "group": "dg013",
+    "size": 10,
+    "items": [
+     "confirmation-071",
+     "confirmation-072",
+     "confirmation-077",
+     "confirmation-078",
+     "confirmation-113",
+     "confirmation-114",
+     "confirmation-115",
+     "confirmation-116",
+     "confirmation-123",
+     "confirmation-124"
+    ],
+    "intermediates": [
+     "Linux",
+     "Python",
+     "Unicode",
+     "chlorophyll",
+     "hemoglobin"
+    ],
+    "domains": [
+     "biology",
+     "technology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 3,
+     "same_intermediate_identity": 5,
+     "concrete_entity_substitution_template": 2,
+     "final_answer_collision": 4,
+     "assembled_answer_or_alias_collision": 4
+    },
+    "saved_primary_mean": 0.15770042194092823,
+    "saved_without_group": 0.23682841068917024
+   },
+   {
+    "group": "dg014",
+    "size": 2,
+    "items": [
+     "confirmation-073",
+     "confirmation-074"
+    ],
+    "intermediates": [
+     "neuron"
+    ],
+    "domains": [
+     "biology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.2078059071729958,
+    "saved_without_group": 0.23218768359771413
+   },
+   {
+    "group": "dg015",
+    "size": 2,
+    "items": [
+     "confirmation-079",
+     "confirmation-080"
+    ],
+    "intermediates": [
+     "collagen"
+    ],
+    "domains": [
+     "biology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.7072784810126582,
+    "saved_without_group": 0.225865245954174
+   },
+   {
+    "group": "dg016",
+    "size": 24,
+    "items": [
+     "confirmation-081",
+     "confirmation-082",
+     "confirmation-083",
+     "confirmation-084",
+     "confirmation-085",
+     "confirmation-086",
+     "confirmation-087",
+     "confirmation-088",
+     "confirmation-095",
+     "confirmation-096",
+     "confirmation-097",
+     "confirmation-098",
+     "confirmation-099",
+     "confirmation-100",
+     "confirmation-101",
+     "confirmation-102",
+     "confirmation-103",
+     "confirmation-104",
+     "confirmation-105",
+     "confirmation-106",
+     "confirmation-107",
+     "confirmation-108",
+     "confirmation-111",
+     "confirmation-112"
+    ],
+    "intermediates": [
+     "Bach",
+     "Beethoven",
+     "Darwin",
+     "Einstein",
+     "Galileo",
+     "Monet",
+     "Mozart",
+     "Napoleon",
+     "Picasso",
+     "Raphael",
+     "Shakespeare",
+     "Tolkien"
+    ],
+    "domains": [
+     "arts_music",
+     "historical_people"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 12,
+     "concrete_entity_substitution_template": 57,
+     "shared_underlying_fact": 2
+    },
+    "saved_primary_mean": 0.20301511954992968,
+    "saved_without_group": 0.23697722759990072
+   },
+   {
+    "group": "dg017",
+    "size": 2,
+    "items": [
+     "confirmation-089",
+     "confirmation-090"
+    ],
+    "intermediates": [
+     "Cleopatra"
+    ],
+    "domains": [
+     "historical_people"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.7083333333333333,
+    "saved_without_group": 0.22585189339315287
+   },
+   {
+    "group": "dg018",
+    "size": 2,
+    "items": [
+     "confirmation-091",
+     "confirmation-092"
+    ],
+    "intermediates": [
+     "Gutenberg"
+    ],
+    "domains": [
+     "historical_people"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.4583333333333333,
+    "saved_without_group": 0.22901645035517817
+   },
+   {
+    "group": "dg019",
+    "size": 2,
+    "items": [
+     "confirmation-109",
+     "confirmation-110"
+    ],
+    "intermediates": [
+     "Chopin"
+    ],
+    "domains": [
+     "arts_music"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": -0.005274261603375528,
+    "saved_without_group": 0.2348849009239973
+   },
+   {
+    "group": "dg020",
+    "size": 2,
+    "items": [
+     "confirmation-119",
+     "confirmation-120"
+    ],
+    "intermediates": [
+     "Hubble"
+    ],
+    "domains": [
+     "technology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.0,
+    "saved_without_group": 0.23481813811889124
+   },
+   {
+    "group": "dg021",
+    "size": 2,
+    "items": [
+     "confirmation-121",
+     "confirmation-122"
+    ],
+    "intermediates": [
+     "Wikipedia"
+    ],
+    "domains": [
+     "technology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.125,
+    "saved_without_group": 0.2332358596378786
+   },
+   {
+    "group": "dg022",
+    "size": 2,
+    "items": [
+     "confirmation-125",
+     "confirmation-126"
+    ],
+    "intermediates": [
+     "Ethernet"
+    ],
+    "domains": [
+     "technology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.0,
+    "saved_without_group": 0.23481813811889124
+   },
+   {
+    "group": "dg023",
+    "size": 2,
+    "items": [
+     "confirmation-127",
+     "confirmation-128"
+    ],
+    "intermediates": [
+     "Arduino"
+    ],
+    "domains": [
+     "technology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.0,
+    "saved_without_group": 0.23481813811889124
+   },
+   {
+    "group": "dg024",
+    "size": 4,
+    "items": [
+     "confirmation-147",
+     "confirmation-148",
+     "confirmation-149",
+     "confirmation-150"
+    ],
+    "intermediates": [
+     "basalt",
+     "granite"
+    ],
+    "domains": [
+     "environment_geology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 2,
+     "concrete_entity_substitution_template": 1
+    },
+    "saved_primary_mean": 0.5163502109704642,
+    "saved_without_group": 0.2245888780698908
+   },
+   {
+    "group": "dg025",
+    "size": 2,
+    "items": [
+     "confirmation-151",
+     "confirmation-152"
+    ],
+    "intermediates": [
+     "monsoon"
+    ],
+    "domains": [
+     "environment_geology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.9583333333333333,
+    "saved_without_group": 0.22268733643112756
+   },
+   {
+    "group": "dg026",
+    "size": 2,
+    "items": [
+     "confirmation-153",
+     "confirmation-154"
+    ],
+    "intermediates": [
+     "glacier"
+    ],
+    "domains": [
+     "environment_geology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.20833333333333334,
+    "saved_without_group": 0.2321810073172035
+   },
+   {
+    "group": "dg027",
+    "size": 2,
+    "items": [
+     "confirmation-155",
+     "confirmation-156"
+    ],
+    "intermediates": [
+     "tornado"
+    ],
+    "domains": [
+     "environment_geology"
+    ],
+    "edge_kind_counts": {
+     "shared_underlying_fact": 1,
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.08175105485232068,
+    "saved_without_group": 0.23378331463974797
+   },
+   {
+    "group": "dg028",
+    "size": 2,
+    "items": [
+     "confirmation-157",
+     "confirmation-158"
+    ],
+    "intermediates": [
+     "earthquake"
+    ],
+    "domains": [
+     "environment_geology"
+    ],
+    "edge_kind_counts": {
+     "same_intermediate_identity": 1
+    },
+    "saved_primary_mean": 0.2927215189873418,
+    "saved_without_group": 0.23111280243550722
+   }
+  ],
+  "dg006": {
+   "size": 42,
+   "subclusters_by_identity_fact_template_edges": [
+    {
+     "items": [
+      "confirmation-017",
+      "confirmation-018",
+      "confirmation-019",
+      "confirmation-020",
+      "confirmation-021",
+      "confirmation-022",
+      "confirmation-023",
+      "confirmation-024",
+      "confirmation-025",
+      "confirmation-026",
+      "confirmation-027",
+      "confirmation-028",
+      "confirmation-029",
+      "confirmation-030",
+      "confirmation-031",
+      "confirmation-032"
+     ],
+     "intermediates": [
+      "boron",
+      "cobalt",
+      "helium",
+      "lithium",
+      "neon",
+      "nickel",
+      "radon",
+      "tungsten"
+     ]
+    },
+    {
+     "items": [
+      "confirmation-053",
+      "confirmation-054",
+      "confirmation-059",
+      "confirmation-060",
+      "confirmation-063",
+      "confirmation-064"
+     ],
+     "intermediates": [
+      "Alps",
+      "Andes",
+      "Borneo"
+     ]
+    },
+    {
+     "items": [
+      "confirmation-075",
+      "confirmation-076"
+     ],
+     "intermediates": [
+      "nucleus"
+     ]
+    },
+    {
+     "items": [
+      "confirmation-129",
+      "confirmation-130",
+      "confirmation-131",
+      "confirmation-132",
+      "confirmation-133",
+      "confirmation-134",
+      "confirmation-135",
+      "confirmation-136",
+      "confirmation-137",
+      "confirmation-138",
+      "confirmation-139",
+      "confirmation-140",
+      "confirmation-141",
+      "confirmation-142",
+      "confirmation-143",
+      "confirmation-144"
+     ],
+     "intermediates": [
+      "Kelvin",
+      "Newton",
+      "Pascal",
+      "Tesla",
+      "Watt",
+      "gray",
+      "mole",
+      "volt"
+     ]
+    },
+    {
+     "items": [
+      "confirmation-145",
+      "confirmation-146"
+     ],
+     "intermediates": [
+      "ozone"
+     ]
+    }
+   ],
+   "bridging_collision_edges": [
+    {
+     "left": "confirmation-017",
+     "right": "confirmation-076",
+     "left_intermediate": "helium",
+     "right_intermediate": "nucleus",
+     "left_target": "2",
+     "right_target": "2",
+     "reasons": [
+      {
+       "kind": "final_answer_collision",
+       "canonical_answer": "2"
+      },
+      {
+       "kind": "assembled_answer_or_alias_collision",
+       "overlap": [
+        "2"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-019",
+     "right": "confirmation-063",
+     "left_intermediate": "lithium",
+     "right_intermediate": "Borneo",
+     "left_target": "3",
+     "right_target": "3",
+     "reasons": [
+      {
+       "kind": "final_answer_collision",
+       "canonical_answer": "3"
+      },
+      {
+       "kind": "assembled_answer_or_alias_collision",
+       "overlap": [
+        "3"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-019",
+     "right": "confirmation-146",
+     "left_intermediate": "lithium",
+     "right_intermediate": "ozone",
+     "left_target": "3",
+     "right_target": "3",
+     "reasons": [
+      {
+       "kind": "final_answer_collision",
+       "canonical_answer": "3"
+      },
+      {
+       "kind": "assembled_answer_or_alias_collision",
+       "overlap": [
+        "3"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-027",
+     "right": "confirmation-135",
+     "left_intermediate": "tungsten",
+     "right_intermediate": "Watt",
+     "left_target": "W",
+     "right_target": "power",
+     "reasons": [
+      {
+       "kind": "non_self_semantic_alias_collision",
+       "overlap": [
+        "w"
+       ]
+      },
+      {
+       "kind": "annotated_alias_or_code_collision",
+       "overlap": [
+        "w"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-027",
+     "right": "confirmation-136",
+     "left_intermediate": "tungsten",
+     "right_intermediate": "Watt",
+     "left_target": "W",
+     "right_target": "W",
+     "reasons": [
+      {
+       "kind": "final_answer_collision",
+       "canonical_answer": "w"
+      },
+      {
+       "kind": "non_self_semantic_alias_collision",
+       "overlap": [
+        "w"
+       ]
+      },
+      {
+       "kind": "annotated_alias_or_code_collision",
+       "overlap": [
+        "w"
+       ]
+      },
+      {
+       "kind": "assembled_answer_or_alias_collision",
+       "overlap": [
+        "w"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-028",
+     "right": "confirmation-135",
+     "left_intermediate": "tungsten",
+     "right_intermediate": "Watt",
+     "left_target": "74",
+     "right_target": "power",
+     "reasons": [
+      {
+       "kind": "non_self_semantic_alias_collision",
+       "overlap": [
+        "w"
+       ]
+      },
+      {
+       "kind": "annotated_alias_or_code_collision",
+       "overlap": [
+        "w"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-028",
+     "right": "confirmation-136",
+     "left_intermediate": "tungsten",
+     "right_intermediate": "Watt",
+     "left_target": "74",
+     "right_target": "W",
+     "reasons": [
+      {
+       "kind": "non_self_semantic_alias_collision",
+       "overlap": [
+        "w"
+       ]
+      },
+      {
+       "kind": "annotated_alias_or_code_collision",
+       "overlap": [
+        "w"
+       ]
+      }
+     ]
+    },
+    {
+     "left": "confirmation-063",
+     "right": "confirmation-146",
+     "left_intermediate": "Borneo",
+     "right_intermediate": "ozone",
+     "left_target": "3",
+     "right_target": "3",
+     "reasons": [
+      {
+       "kind": "final_answer_collision",
+       "canonical_answer": "3"
+      },
+      {
+       "kind": "assembled_answer_or_alias_collision",
+       "overlap": [
+        "3"
+       ]
+      }
+     ]
+    }
+   ],
+   "template_families_inside": {
+    "{'kind': 'concrete_entity_substitution_template', 'family': 'element_atomic_number', 'reason': 'Descriptive element clue -> element -> atomic number; the chemical element/clue is substituted.'}": [
+     "confirmation-017",
+     "confirmation-019",
+     "confirmation-022",
+     "confirmation-024",
+     "confirmation-026",
+     "confirmation-028",
+     "confirmation-030"
+    ],
+    "{'kind': 'concrete_entity_substitution_template', 'family': 'element_chemical_symbol', 'reason': 'Element clue -> element -> chemical symbol; includes atomic-number and functional clues.'}": [
+     "confirmation-020",
+     "confirmation-023",
+     "confirmation-025",
+     "confirmation-027",
+     "confirmation-029",
+     "confirmation-031"
+    ],
+    "{'kind': 'concrete_entity_substitution_template', 'family': 'mountain_range_continent', 'reason': 'Range identified by its named highest summit -> range -> continent.'}": [
+     "confirmation-053",
+     "confirmation-059"
+    ],
+    "{'kind': 'concrete_entity_substitution_template', 'family': 'geographic_entity_highest_summit', 'reason': 'Geographic region identified by location/landmark -> region -> highest summit.'}": [
+     "confirmation-054",
+     "confirmation-060",
+     "confirmation-064"
+    ],
+    "{'kind': 'concrete_entity_substitution_template', 'family': 'si_unit_symbol', 'reason': 'Definitional/eponym clue -> SI unit -> official unit symbol.'}": [
+     "confirmation-129",
+     "confirmation-132",
+     "confirmation-133",
+     "confirmation-136",
+     "confirmation-137",
+     "confirmation-139",
+     "confirmation-141",
+     "confirmation-143"
+    ],
+    "{'kind': 'concrete_entity_substitution_template', 'family': 'si_unit_quantity', 'reason': 'Definitional/eponym clue -> SI unit -> measured physical quantity.'}": [
+     "confirmation-130",
+     "confirmation-131",
+     "confirmation-134",
+     "confirmation-135",
+     "confirmation-138",
+     "confirmation-140",
+     "confirmation-142"
+    ]
+   }
+  }
+ }
+}
