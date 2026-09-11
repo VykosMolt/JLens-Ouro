@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage[paper1]{../paper_style/kirin-papers}
+% Pandoc citeproc output definitions.
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{\begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter\let\@cite@ofmt\@firstofone\def\@biblabel#1{}\def\@cite#1#2{{#1\if@tempswa , #2\fi}}\makeatother
+\newlength{\cslhangindent}\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2]{\small\begin{list}{}{\setlength{\itemindent}{0pt}\setlength{\leftmargin}{0pt}\setlength{\parsep}{0pt}\ifodd #1\setlength{\leftmargin}{\cslhangindent}\setlength{\itemindent}{-1\cslhangindent}\fi\setlength{\itemsep}{0.18\baselineskip}}}{\end{list}}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\renewcommand{\KirinTitleBlock}[7]{%
+  \thispagestyle{fancy}\begingroup\setlength{\parindent}{0pt}%
+  \noindent\begin{minipage}[t]{0.72\linewidth}{\sffamily\bfseries\fontsize{8.5pt}{10pt}\selectfont\color{KirinAccent}\MakeUppercase{#1}}\end{minipage}%
+  \begin{minipage}[t]{0.28\linewidth}\raggedleft{\sffamily\fontsize{8.5pt}{10pt}\selectfont\color{KirinMuted}#6}\end{minipage}\par
+  \vspace{4pt}\color{KirinAccent}\hrule height 0.85pt\color{KirinInk}\vspace{9pt}
+  {\sffamily\bfseries\fontsize{23pt}{25.2pt}\selectfont\raggedright #2\par}\vspace{4pt}
+  {\sffamily\fontsize{15.2pt}{17.5pt}\selectfont\color{KirinAccentDark}\raggedright #3\par}
+  \vspace{8pt}\color{KirinRule}\hrule height 0.45pt\color{KirinInk}\vspace{7pt}
+  {\sffamily\bfseries\fontsize{11.5pt}{13.2pt}\selectfont #4}\par\vspace{2pt}
+  {\sffamily\fontsize{8.9pt}{10.6pt}\selectfont\color{KirinMuted}\href{https://github.com/VykosMolt}{github.com/VykosMolt}\enspace\textcolor{KirinRule}{|}\enspace\href{https://github.com/VykosMolt/JLens-Ouro}{github.com/VykosMolt/JLens-Ouro}}\par
+  \ifstrempty{#7}{}{\vspace{5pt}{\sffamily\fontsize{8.5pt}{10.2pt}\selectfont\color{KirinMuted}#7\par}}\vspace{6pt}\endgroup}
+\KirinSetShortTitle{J-Lens in Ouro}
+\hypersetup{pdftitle={J-Lens in Ouro: Early-Pass Deficits and a Confirmed Late-Pass Advantage},pdfauthor={Jan Kirin}}
+\begin{document}
+\KirinTitleBlock
+  {Research paper \textperiodcentered{} working draft v3}
+  {J-Lens in Ouro}
+  {Early-pass deficits and a confirmed late-pass advantage in a looped language model}
+  {Jan Kirin}
+  {}
+  {September 2026}
+  {Working draft v3 (12 September 2026). Every number is traced in the numerical source ledger of the repository; figures are vector renders of the retained arrays.}
+\input{body.tex}
+\end{document}

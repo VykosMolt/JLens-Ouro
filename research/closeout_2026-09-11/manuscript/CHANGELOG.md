@@ -22,3 +22,11 @@ Corrections of v1 statements:
 15. v1 Appendix A Huginn paragraph cited only [S2]; v2 cites the primary Huginn papers for the training/coda claims.
 16. Two double-rounding slips in v1 corrected: leave-one-group-out upper end 24.88 → 24.87 (0.248748), and the pass-1 any-layer lower bound −29.79 → −29.78 (−0.297847); both came from re-rounding the 5-decimal report values.
 No historical record was edited; the first draft is preserved unchanged in the handoff.
+
+# Second draft → third draft (12 Sep 2026): visual system only
+
+- Prose and every number unchanged from v2 (the source ledger applies); two v1 rounding slips remain corrected.
+- Restructured for the `kirin-papers` visual system: executive-summary, roadmap, scope, result and audit boxes; `\kirinfigcaption` captions for figures and tables; `\kirinpart` appendices; claim-status table with the house status labels; citeproc references (`references.bib`).
+- Figures rebuilt as vector PDFs with `Documents/Research/paper_style/figure_style.py` (`figures_v3/`), in a gentle-red scheme (J-Lens brick red, raw lens baseline grey, own-exit lens teal, contrasts violet); every PDF rendered and inspected for clipping; legends moved below panels; identity-endpoint markers unclipped; whitespace tightened.
+- Build pipeline: `build_v3.sh` (pandoc + `kirin-boxes.lua` filter → `build_v3/body.tex`, wrapped by `JLens_Ouro_Third_Draft.tex`, XeLaTeX); 12 pages, no floats, no overfull boxes. Figure text falls back to Noto Sans because Source Sans Pro is not installed as a system font.
+- Editorial notes for Jan in `NOTES_v3_for_Jan.md`.

@@ -46,3 +46,6 @@ research/closeout_2026-09-11/archive/ARCHIVE_MANIFEST.json.tmp
 # absolute symlinks into laptop paths (review fixtures); targets are archived
 research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-3swbyq12/linked_parent
 research/confirmation_2026-09-09/huginn_verification/reviews/.historical-comparison-fixture-gut_do_k/linked_parent
+research/closeout_2026-09-11/manuscript/build_v3/
+research/closeout_2026-09-11/manuscript/paper_style
+research/closeout_2026-09-11/manuscript/figures_v3/*_pdfrender.png
