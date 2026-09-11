@@ -95,19 +95,25 @@ ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.22), ncol=3, fontsize=7.3)
 
 # ---- Figure 5: local-exit targets on the discovery population (descriptive) ----
 dj = json.load(open(L / 'DISCOVERY_POPULATION_FIXED_BAND.json')); cur = list(csv.DictReader(open(L / 'discovery_population_curves.csv')))
-fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.45), gridspec_kw={'width_ratios': [1, 1, 1, 1.15], 'wspace': 0.5})
+fig = plt.figure(figsize=(7.2, 5.0)); gs = fig.add_gridspec(2, 3, height_ratios=[1.15, 1], hspace=0.55, wspace=0.28)
+axes = [fig.add_subplot(gs[0, i]) for i in range(3)]
 for p in (1, 2, 3):
     ax = axes[p - 1]; r = [x for x in cur if int(x['pass']) == p]; x = [int(v['physical']) for v in r]; band(ax); zero(ax)
-    ax.plot(x, [float(v['raw']) for v in r], color=RAW, lw=1.5, label='raw lens'); ax.plot(x, [float(v['final']) for v in r], color=FINAL, lw=1.5, label='J-Lens, final-pass target')
-    ax.plot(x, [float(v[f'local{p}']) if v[f'local{p}'] else np.nan for v in r], color=LOCAL, lw=1.7, label="J-Lens, the pass's own exit")
-    passaxes(ax, p); ax.set_ylim(-0.05, 0.42)
+    ax.plot(x, [float(v['raw']) for v in r], color=RAW, lw=1.5, label='raw lens')
+    ax.plot(x, [float(v['final']) for v in r], color=FINAL, lw=1.5, label='J-Lens, final-pass target (exit 3)')
+    ax.plot(x, [float(v[f'local{p}']) if v[f'local{p}'] else np.nan for v in r], color=LOCAL, lw=2.0, label="J-Lens, the pass's own exit")
+    passaxes(ax, p); ax.set_ylim(-0.05, 0.42); ax.set_yticks([0, 0.1, 0.2, 0.3, 0.4])
+    if p > 1: ax.set_yticklabels([])
 axes[0].set_ylabel('excess hit@10 (90 items)')
-ax = axes[3]; zero(ax)
+ax = fig.add_subplot(gs[1, 0:2]); zero(ax)
 for j, (k, col, lab, mk) in enumerate((('local_minus_final', LOCAL, 'own exit − final target', 'o'), ('local_minus_raw', st.VIOLET, 'own exit − raw', 'D'), ('final_minus_raw', FINAL, 'final target − raw', 's'))):
     for p in (1, 2, 3):
         row = dj['passes'][p - 1][k]; e = row['excess_diff']; iv = row['concept_cluster_bootstrap_95_descriptive']
-        ax.errorbar([p + (j - 1) * 0.24], [e], yerr=[[e - iv[0]], [iv[1] - e]], fmt=mk, color=col, capsize=2.2, ms=4.2, lw=1.2, label=lab if p == 1 else None)
-ax.set_xticks([1, 2, 3]); ax.set_xlim(0.5, 3.5); ax.set_xlabel('pass'); ax.set_ylabel('band difference', labelpad=2); ax.set_title('(d) band 26–37', loc='left')
+        ax.errorbar([p + (j - 1) * 0.22], [e], yerr=[[e - iv[0]], [iv[1] - e]], fmt=mk, color=col, capsize=3, ms=6, lw=1.4, label=lab if p == 1 else None)
+        ax.annotate(f'{e:+.2f}', (p + (j - 1) * 0.22, iv[1]), xytext=(0, 4), textcoords='offset points', ha='center', fontsize=7.4, color=st.INK)
+ax.set_xticks([1, 2, 3]); ax.set_xlim(0.5, 3.5); ax.set_ylim(-0.17, 0.37); ax.set_xlabel('pass'); ax.set_ylabel('difference in band 26–37')
+ax.set_title('(d) band means with shared-concept-cluster 95% intervals (descriptive)', loc='left')
+lax = fig.add_subplot(gs[1, 2]); lax.axis('off')
 h, l = axes[0].get_legend_handles_labels(); h2, l2 = ax.get_legend_handles_labels()
-fig.legend(h + h2, l + l2, loc='lower center', ncol=3, bbox_to_anchor=(0.5, 0.0), fontsize=7.3)
-fig.subplots_adjust(left=0.08, right=0.99, top=0.88, bottom=0.36); save(fig, 'fig5_local_exit')
+lax.legend(h + h2, l + l2, loc='center left', fontsize=8.2, frameon=False, handlelength=2.2, labelspacing=0.9)
+fig.subplots_adjust(left=0.09, right=0.99, top=0.93, bottom=0.09); save(fig, 'fig5_local_exit')

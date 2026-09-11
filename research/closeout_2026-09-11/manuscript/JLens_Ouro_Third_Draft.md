@@ -6,7 +6,7 @@ Does a Jacobian-based readout reveal intermediate content that a model's own out
 
 ::: {.roadmapbox title="How to read this paper"}
 
-Section 2 defines the two readouts, the fitting recipe as executed, and the score. Section 3 separates the discovery work, which selected the band, from the frozen new-question test. Section 4 gives the confirmation result, then the post-confirmation reviewer analyses in their own subsection. Section 5 is the numerical verification, Section 6 the partly blocked local-exit comparison, Section 7 the limits. Appendix A keeps the exploratory and Huginn material apart from the confirmation; Appendix B is the provenance and claim-status table.
+Section 2 defines the two readouts, the fitting recipe as executed, and the score. Section 3 separates the discovery work, which selected the band, from the frozen new-question test. Section 4 gives the confirmation result, then the post-confirmation reviewer analyses in their own subsection. Section 5 is the numerical verification, Section 6 the partly blocked local-exit comparison, Section 7 the limits. Appendix A keeps the exploratory and Huginn material apart from the confirmation; Appendix B is the verification provenance and claim-status table; Appendix C the executed method settings; Appendix D the contribution statement.
 
 :::
 
@@ -39,7 +39,7 @@ $$
 
 where $B_{r,\ell}$ is the frozen J-Lens matrix for that virtual layer. Ranking the logits gives the token readout; no task classifier is trained on the confirmation questions. The main banks target the final residual state of pass 4 (virtual layer 191, before the final normalization). The original J-Lens study's default Sonnet configuration targets the penultimate layer, so this is an adaptation, not an exact reproduction of that configuration [@gurnee2026workspace].
 
-**Fitting recipe (from the executed records).** Each bank averages, over 100 calibration paragraphs, the Jacobian estimator of the released implementation: for every source layer $v$ and output dimension, a one-hot cotangent is placed at every valid target position of the target layer at once and back-propagated through the BF16 model with ordinary autograd, giving at source position $p$ the sum over later positions $t' \ge p$ of $\partial h_{191}[t']/\partial h_v[p]$; the mean over valid source positions (positions 16 to len−2 of a 128-token input, BOS included) is the paragraph's matrix. Matrices are accumulated as an equal-paragraph FP32 sum, divided by 100 once and stored in FP16; at readout they are cast back to FP32. Calibration paragraphs for fit01–fit05 are independent random samples of 100 WikiText-103 training paragraphs (at least 600 characters; seeds 2026090701–05); the realized paragraph sets are pairwise disjoint and article overlap is 0–3 pairs per fit pair. **fit01** was preselected for confirmation before any new-item outcome; fit02 was retained as a secondary comparison. Fitting ran on an RTX 5090 with an 8-direction CUDA-graph engine whose output was verified bit for bit against the released fitter. Appendix B and the methods ledger give every setting with its source.
+**Fitting recipe (from the executed records).** Each bank averages, over 100 calibration paragraphs, the Jacobian estimator of the released implementation: for every source layer $v$ and output dimension, a one-hot cotangent is placed at every valid target position of the target layer at once and back-propagated through the BF16 model with ordinary autograd, giving at source position $p$ the sum over later positions $t' \ge p$ of $\partial h_{191}[t']/\partial h_v[p]$; the mean over valid source positions (positions 16 to len−2 of a 128-token input, BOS included) is the paragraph's matrix. Matrices are accumulated as an equal-paragraph FP32 sum, divided by 100 once and stored in FP16; at readout they are cast back to FP32. Calibration paragraphs for fit01–fit05 are independent random samples of 100 WikiText-103 training paragraphs (at least 600 characters; seeds 2026090701–05); the realized paragraph sets are pairwise disjoint and article overlap is 0–3 pairs per fit pair. **fit01** was preselected for confirmation before any new-item outcome; fit02 was retained as a secondary comparison. Fitting ran on an RTX 5090 with an 8-direction CUDA-graph engine whose output was verified bit for bit against the released fitter. Appendix C and the methods ledger give every setting with its source.
 
 Two further comparisons examine estimator specification. The **target control** changes the derivative target from the final block (virtual 191) to the penultimate block (190) while retaining final normalization and unembedding. The **position controls** place the cotangent at one uniformly drawn valid position $q$ per paragraph and keep all 2,048 derivative directions: *sampled-sum* sums the gradient over all valid source positions (its expectation over $q$ equals the dense estimator), whereas *diagonal* keeps only the source position $p=q$. These are distinct estimator constructions, all fitted on fit01's calibration paragraphs.
 
@@ -260,7 +260,7 @@ A separate supervised arithmetic probe scored 59.4% against the raw lens's 76.4%
 
 The pilot used one Huginn estimator calibrated on the same 100 texts as the preselected Ouro fit, eight recurrent passes and two evaluation initializations. Joint tokenizer eligibility retained 88 multihop items (98 labels) and 51 arithmetic items. J-Lens-minus-raw estimates were negative under all six prespecified summaries in both initializations; the cross-model differences of differences had mixed signs and simultaneous intervals containing zero. The prediction of a larger relative J-Lens advantage in Huginn was not supported. This does not isolate supervision: Huginn's coda is trained after sampled recurrence depths [@geiping2025huginn], so it is not an unsupervised-intermediate control, and its raw-readout weakness is block-specific [@lu2025latentcot]. The fitted Huginn bank was never retrieved and its partial checkpoint was later lost; the saved statistics are historical evidence, not a verified cross-model replication.
 
-\kirinpart{Appendix B}{Provenance, method details, and claim status}
+\kirinpart{Appendix B}{Verification provenance and claim status}
 
 ## Verification and analysis provenance
 
@@ -269,16 +269,6 @@ The original confirmation freeze is unchanged. Two separately recorded correctio
 The numerical results use the accepted BF16 endpoint as primary; FP64, alternate packing, tie handling and regenerated states are sensitivity checks. For diagonal minus raw, the accepted estimate is +5.95 points with simultaneous interval −0.34 to +12.24; FP64 gives −0.40 as lower bound and regenerated states +0.04, which is why its support is described as borderline.
 
 **Post-confirmation reviewer family (Sections 4.2 and 4.4).** Exactly four new inferential contrasts were fixed in a dated plan before computation: the within-domain paired excess difference in the pass-4 band and the same-band paired differences in passes 1–3. They share one centered bootstrap max-$t$ 95% family (20,000 whole-group draws, seed 2026091101, quantile 2.639). Every other new quantity is descriptive. The overlap sensitivities and the local-exit discovery-population summary are descriptive.
-
-## Method details in brief
-
-- **Tokenization and input.** BOS + prompt tokens (`truncation=True, max_length=511`, never triggered); readout context = common prefix of encode(prompt) and encode(prompt+answer); position −1; batch size 1; SDPA attention; `use_cache=False`; BF16 weights.
-- **Hooks and normalization.** Forward hook on each shared physical block filtered by the recurrent step; recorded tensor = post-residual block output, before the pass-end RMS normalization; states stored as FP32 copies of BF16 values.
-- **Readout.** $J h$ in FP32 (raw: $h$), cast to BF16, RMS-normalize (FP32 internally, $\epsilon=10^{-6}$), BF16 head, one call per item over all scored columns; descending argsort over 49,152 tokens; rank = min over accepted forms; hit = rank < 10.
-- **Calibration and fitting.** 100 WikiText-103 paragraphs per fit (fit01–05 seeds 2026090701–05; paragraph-disjoint; 100/99/99/100/100 distinct articles), inputs of 128 tokens including BOS (six shorter), valid positions 16 to len−2, cotangent summed over valid target positions and gradient averaged over valid source positions, FP32 sum over paragraphs divided by 100, FP16 storage, 8 output directions per backward pass with CUDA-graph replay (bit-parity verified), RTX 5090.
-- **Controls.** Penultimate: target virtual 190, sources 0–189. Positions: one uniform $q$ per paragraph (seed 2026090801), sampled-sum = $\sum_p \partial h_{191}[q]/\partial h_v[p]$ (no divisor), diagonal = $\partial h_{191}[q]/\partial h_v[q]$, from one backward stream. Matched supports for contrasts: band 26–37 for all arms; final-third intersections 176–189 (target control) and 176–190 (position controls).
-- **Banks.** fit01 `90f01f6a…`, fit02 `101f31db…` (byte-exact reconstruction from its intact checkpoint), penultimate `dc6354df…`, positions `b8e8b7d2…` (both position arms); four files, five bank arms, six evaluated arms.
-- **Application-era family (Section 6).** Same estimator with the first 100 historical paragraphs (12 articles), 32 directions per backward pass, B300 pod; targets 47, 95, 143, 191.
 
 ## Claim status
 
@@ -296,7 +286,19 @@ The numerical results use the accepted BF16 endpoint as primary; FP64, alternate
 
 \kirinfigcaption{Table 6.}{Claim status after the verification and reviewer rounds. Established = supported by the frozen or replayed evidence at the stated scope; Bounded screen = supported with a quantified limit; Diagnostic = descriptive observation, no inference; Unresolved = open; Retracted = an earlier statement withdrawn.}
 
-## Contribution and AI-assistance statement (draft)
+\kirinpart{Appendix C}{Method details in brief}
+
+## Executed settings, with their record sources in the methods ledger
+
+- **Tokenization and input.** BOS + prompt tokens (`truncation=True, max_length=511`, never triggered); readout context = common prefix of encode(prompt) and encode(prompt+answer); position −1; batch size 1; SDPA attention; `use_cache=False`; BF16 weights.
+- **Hooks and normalization.** Forward hook on each shared physical block filtered by the recurrent step; recorded tensor = post-residual block output, before the pass-end RMS normalization; states stored as FP32 copies of BF16 values.
+- **Readout.** $J h$ in FP32 (raw: $h$), cast to BF16, RMS-normalize (FP32 internally, $\epsilon=10^{-6}$), BF16 head, one call per item over all scored columns; descending argsort over 49,152 tokens; rank = min over accepted forms; hit = rank < 10.
+- **Calibration and fitting.** 100 WikiText-103 paragraphs per fit (fit01–05 seeds 2026090701–05; paragraph-disjoint; 100/99/99/100/100 distinct articles), inputs of 128 tokens including BOS (six shorter), valid positions 16 to len−2, cotangent summed over valid target positions and gradient averaged over valid source positions, FP32 sum over paragraphs divided by 100, FP16 storage, 8 output directions per backward pass with CUDA-graph replay (bit-parity verified), RTX 5090.
+- **Controls.** Penultimate: target virtual 190, sources 0–189. Positions: one uniform $q$ per paragraph (seed 2026090801), sampled-sum = $\sum_p \partial h_{191}[q]/\partial h_v[p]$ (no divisor), diagonal = $\partial h_{191}[q]/\partial h_v[q]$, from one backward stream. Matched supports for contrasts: band 26–37 for all arms; final-third intersections 176–189 (target control) and 176–190 (position controls).
+- **Banks.** fit01 `90f01f6a…`, fit02 `101f31db…` (byte-exact reconstruction from its intact checkpoint), penultimate `dc6354df…`, positions `b8e8b7d2…` (both position arms); four files, five bank arms, six evaluated arms.
+- **Application-era family (Section 6).** Same estimator with the first 100 historical paragraphs (12 articles), 32 directions per backward pass, B300 pod; targets 47, 95, 143, 191.
+
+\kirinpart{Appendix D}{Contribution and AI-assistance statement (draft)}
 
 AI coding agents implemented the fitting, evaluation, controller and analysis code, executed the runs under the author's authorization, and performed separately instantiated review and numerical-reconstruction passes; the project materials name Claude Code, Claude Opus and Codex for the application era, and round logs after 7 September do not record agent versions. The author set the research questions, approved the frozen design and budgets, authorized each paid run and the storage purge, and is responsible for all claims. The manuscript drafts were prepared by AI assistants from the frozen reports and records; the extent of the author's verification of each number is to be stated by the author. No venue policy has been assumed.
 

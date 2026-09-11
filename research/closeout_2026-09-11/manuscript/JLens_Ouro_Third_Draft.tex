@@ -1,5 +1,12 @@
 \documentclass[11pt]{article}
 \usepackage[paper1]{../paper_style/kirin-papers}
+% Gentle-red accent, matching figures_v3 (overrides the paper-1 blue palette).
+\definecolor{KirinAccent}{HTML}{B0544F}
+\definecolor{KirinAccentDark}{HTML}{7E3835}
+\definecolor{KirinAccentPale}{HTML}{F7ECEA}
+\definecolor{KirinAccentFaint}{HTML}{FBF5F4}
+\definecolor{KirinLink}{HTML}{7E3835}
+\hypersetup{linkcolor=KirinAccentDark,citecolor=KirinAccentDark,urlcolor=KirinLink}
 % Pandoc citeproc output definitions.
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{\begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
