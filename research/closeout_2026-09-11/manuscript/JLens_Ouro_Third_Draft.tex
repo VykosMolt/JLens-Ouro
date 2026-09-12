@@ -7,6 +7,10 @@
 \definecolor{KirinAccentFaint}{HTML}{FBF5F4}
 \definecolor{KirinLink}{HTML}{7E3835}
 \hypersetup{linkcolor=KirinAccentDark,citecolor=KirinAccentDark,urlcolor=KirinLink}
+% Layout: boxes never split across pages; a part heading needs room for its first lines.
+\tcbset{kirinbase/.append style={unbreakable}}
+\let\kirinpartorig\kirinpart
+\renewcommand{\kirinpart}[2]{\Needspace{10\baselineskip}\kirinpartorig{#1}{#2}}
 % Pandoc citeproc output definitions.
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{\begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
