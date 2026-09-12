@@ -1,8 +1,8 @@
 # arXiv submission package — draft three
 
-Built 2026-09-12T00:26Z by `make_arxiv_package.sh` from commit 99bfcf3.
+Built 2026-09-12T16:28Z by `make_arxiv_package.sh` from commit 692e4f4.
 
-- Archive: `JLens_Ouro_arXiv_v3.tar.gz`, 124571 bytes, sha256 `a5749a023a97ab49705dbb0e0e7ded362eb5013d7bfa6aeed500a6503605a2c6`.
+- Archive: `JLens_Ouro_arXiv_v3.tar.gz`, 124562 bytes, sha256 `798d7aa96f4955bb8c2167b3aef817e16153bfb54e2563e82d9c3f2093352025`.
 - Compiler to select on arXiv: **XeLaTeX** (declared in `00README.json`, TeX Live 2025; built locally with XeTeX 3.141592653-2.6-0.999998 on TeX Live 2026).
 - Contents (flat, `main.tex` at the root): `main.tex`, `body.tex`, `kirin-papers.sty`, `kirin-palette.tex`, `kirin-boxes.tex`, `kirin-tables.tex`, `kirin-titlepage.tex`, `figures_v3/fig1_discovery.pdf` … `fig5_local_exit.pdf`, `00README.json`. No bibliography files are needed: the references are typeset inline by pandoc's citeproc in `body.tex`.
 - Fonts: Libertinus and Source Sans Pro are loaded by file name through the TeX Live packages `libertinus` and `sourcesanspro`, which is the lookup arXiv requires for XeLaTeX. Nothing is bundled.

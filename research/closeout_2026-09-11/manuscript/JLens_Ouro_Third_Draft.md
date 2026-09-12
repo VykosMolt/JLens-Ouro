@@ -304,7 +304,7 @@ The numerical results use the accepted BF16 endpoint as primary; FP64, alternate
 
 \kirinpart{Appendix D}{Contribution and AI-assistance statement}
 
-The original J-Lens study for the MATS application and the original write-up are the author's own work. AI coding agents were used to review the code and the paper drafts, for editing passes of the write-up, for fixing bugs found in the implementation and evaluation, for the verification of all results, and for making a cold research archive of them. Claude Fable 5.1 and GPT 6 Astra were used. Every single number, table, statement and result was verified by the author. AI assistants also contributed to implementation and execution of the post-application experiments, benchmark construction and review, analysis, figure preparation, and manuscript drafting.
+The original J-Lens study and the original write-up are the author's own work. AI coding agents were used to review the code and the paper drafts, for editing passes of the write-up, for fixing bugs found in the implementation and evaluation, for the verification of all results, and for making a cold research archive of them. Claude Fable 5.1 and GPT 6 Astra were used. Every single number, table, statement and result was verified by the author. AI assistants also contributed to implementation and execution of the post-application experiments, benchmark construction and review, analysis, figure preparation, and manuscript drafting.
 
 # References
 
