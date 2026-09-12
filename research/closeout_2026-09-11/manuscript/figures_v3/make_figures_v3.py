@@ -85,7 +85,7 @@ items = [('fit01 − raw, 79 controls (primary)', 0.23188291139240508, rv['A_wit
 for k, lab in (('fit02_local', 'fit02 − raw'), ('fit01_minus_fit02_local', 'fit01 − fit02'), ('penultimate_local', 'penultimate target − raw'), ('sampled_sum_local', 'sampled-sum − raw'), ('diagonal_local', 'diagonal − raw'), ('fit01_minus_penultimate_local', 'fit01 − penultimate target'), ('sampled_sum_minus_diagonal_local', 'sampled-sum − diagonal')):
     s = sec[k]; items.append((lab, float(s['estimate']), [float(s['simultaneous_low']), float(s['simultaneous_high'])], JL, 'o'))
 fig, ax = plt.subplots(figsize=(7.2, 3.3)); y = np.arange(len(items))[::-1]
-ax.axvline(0, color=st.INK, lw=0.6)
+ax.axvline(0, color=st.MUTED, lw=0.8, ls=(0, (4, 3)), zorder=0)   # zero reference, dashed and behind the markers
 for yi, (lab, e, iv, col, mk) in zip(y, items):
     ax.errorbar([e], [yi], xerr=[[e - iv[0]], [iv[1] - e]], fmt=mk, color=col, capsize=2.5, ms=5, lw=1.3)
     ax.annotate(f'{e:+.3f}', (iv[1], yi), xytext=(6, 0), textcoords='offset points', va='center', fontsize=7.6, color=st.INK)

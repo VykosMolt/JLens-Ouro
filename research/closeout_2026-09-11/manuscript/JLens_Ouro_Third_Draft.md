@@ -175,7 +175,7 @@ Changing the derivative target by one block reduces the advantage substantially;
 
 ![Band contrasts](figures_v3/fig4_contrasts.pdf)
 
-\kirinfigcaption{Figure 4.}{Pass-4 band contrasts. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 4.4, family N1).}
+\kirinfigcaption{Figure 4.}{Pass-4 band contrasts; the dashed vertical line marks zero difference. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 4.4, family N1).}
 
 ## 4.4 Post-confirmation reviewer checks
 
