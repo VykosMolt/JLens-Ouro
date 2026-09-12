@@ -1,0 +1,41 @@
+{
+ "schema": "unembed_tensor_fetch.v1",
+ "source": {
+  "repo": "ByteDance/Ouro-2.6B",
+  "revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "file": "model.safetensors",
+  "size": 5336011242,
+  "lfs_sha256": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+  "header_bytes": 61920
+ },
+ "tensors": {
+  "lm_head.weight": {
+   "dtype": "BF16",
+   "shape": [
+    49152,
+    2048
+   ],
+   "byte_range_in_file": [
+    61928,
+    201388520
+   ],
+   "sha256_of_bytes": "38807fd6b13f27484ca9ee015b85ebc42226bdda6a3dfb43364f30f5b026fbbd"
+  },
+  "model.norm.weight": {
+   "dtype": "BF16",
+   "shape": [
+    2048
+   ],
+   "byte_range_in_file": [
+    5336007146,
+    5336011242
+   ],
+   "sha256_of_bytes": "80de2caa3311bda14b31f3447575f27193b5b1b9fa490abe1e34089aafa3be86"
+  }
+ },
+ "output": {
+  "path": "/home/moloch/ouro_project/artifacts/jlens/retrieved_2026-09-12/ouro26b_unembed_1ed04250.safetensors",
+  "bytes": 201331016,
+  "sha256": "110434b134a85deb54c637e017b9720c17724666fa0ccd3a86d07c5ac7fecffd"
+ }
+}
