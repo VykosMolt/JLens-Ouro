@@ -22,7 +22,7 @@ PLAN = [
     ('01_reports/verification_2026-09-11', 'reports/verification_2026-09-11', OPERATIONAL),
     ('01_reports/refit_round_2026-09-07', 'reports/refit_round_2026-09-07', OPERATIONAL),
     ('01_reports/followup_2026-09-07', 'reports/followup_2026-09-07', OPERATIONAL),
-    ('01_reports/application_era', 'reports/application_era', OPERATIONAL),
+    ('01_reports/application_era', 'reports/initial_study', OPERATIONAL),
     ('02_reviewer_checks', 'reviewer_checks', []),
     ('03_local_exit', 'local_exit', []),
     ('04_methods', 'methods', []),
@@ -74,6 +74,8 @@ def stage():
                 except UnicodeDecodeError: shutil.copy2(p, dst); n_bin += 1; continue
                 dst.write_text(redact(t), encoding='utf-8'); n_text += 1
             else: shutil.copy2(p, dst); n_bin += 1
+    ae = STAGE / 'data' / 'application_era'
+    if ae.exists(): ae.rename(STAGE / 'data' / 'initial_study')
     figs = STAGE / 'manuscript' / 'figures'; figs.mkdir(parents=True)
     for f in sorted((M / 'figures_v3').glob('fig*.pdf')): shutil.copy2(f, figs / f.name); n_bin += 1
     return n_text, n_bin
@@ -84,7 +86,7 @@ Anonymous supplementary package for double-blind review. Every file is a copy of
 produced for the submission except this README, `verify_supplement.py` and `MANIFEST.json`. Machine paths were rewritten
 to `/home/user/...`, and account, repository and person identifiers were replaced by bracketed placeholders. Multi-gigabyte
 artifacts (lens banks, activation states, model weights) are not included; their sizes and SHA-256 hashes are recorded in
-the provenance, freeze and inventory files. The model is `ByteDance/Ouro-2.6B` at the revision named in `data/accepted_payload/run_spec.json`.
+the provenance, freeze and inventory files. The paper calls the first round of work the initial study; the record files of that period call it the "application era" (`application_era` in file names and text). The model is `ByteDance/Ouro-2.6B` at the revision named in `data/accepted_payload/run_spec.json`.
 
 ## Verify
 
@@ -103,7 +105,7 @@ paper from the included compact readouts (`data/accepted_payload`) with the incl
 | Section 4.1-4.3, Tables 1-4, Figures 2-4: confirmation results | `reports/confirmation_2026-09-09/REPORT.md`, `CLAIMS.md`, `results/.../analysis/analysis.json`, `data/accepted_payload/readouts/*.npz`, `manuscript/figure_data/` |
 | Section 4.4, Table 3, Figures 3-4: post-confirmation reviewer checks | `reviewer_checks/ANALYSIS_PLAN.md` (frozen before computation), `REVIEWER_CHECKS.md`, `RESULTS.json`, `PER_ITEM.csv`, `OVERLAP_LEDGER.csv`, `GROUP_MEMBERSHIP.csv`, `run_checks.py` |
 | Section 5, Table 5, Appendix B: numerical verification | `reports/verification_2026-09-11/FINAL_VERIFICATION.md`, `report/`, `metrics/VERIFICATION_METRICS.json`, `checker/`, `reviews/`, `RUN_SPECIFICATION.json` |
-| Section 6, Figure 5: local-exit targets on the discovery population | `local_exit/LOCAL_EXIT_STATUS.md`, `LOCAL_EXIT_BANK_INVENTORY.json`, `DISCOVERY_POPULATION_FIXED_BAND.json`, `discovery_population_curves.csv`, `data/application_era/`, `reports/application_era/` |
+| Section 6, Figure 5: local-exit targets on the discovery population | `local_exit/LOCAL_EXIT_STATUS.md`, `LOCAL_EXIT_BANK_INVENTORY.json`, `DISCOVERY_POPULATION_FIXED_BAND.json`, `discovery_population_curves.csv`, `data/initial_study/`, `reports/initial_study/` |
 | Appendix A: exploratory findings and Huginn pilot | `reports/followup_2026-09-07/results/`, `probe/`, `reports/refit_round_2026-09-07/analysis/HUGINN_COMPARISON_CONTRACT.md`, `data/refit/huginn_run01/` |
 | Every number in the paper | `manuscript/ledgers/SOURCE_TO_MANUSCRIPT_LEDGER.md` (value -> record path), `SOURCE_VALUES.json` |
 | Figures | `manuscript/figures/*.pdf` (as in the paper), `manuscript/figure_data/*.csv` |

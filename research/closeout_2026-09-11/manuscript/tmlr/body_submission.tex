@@ -20,7 +20,7 @@ advantage remains positive with within-domain controls (20.8 points,
 scoring and a cross-hardware state replay (changes of at most 0.42
 points), but it depends strongly on the estimator: changing the
 derivative target or the position aggregation substantially reduces it.
-On the discovery set, retained readouts of application-era banks that
+On the discovery set, retained readouts of initial-study banks that
 target each pass's own exit recover more early-pass content than both
 the final-target lens and the raw lens, which points to the target
 rather than the pass as the source of the early deficit; the
@@ -595,7 +595,7 @@ evaluates the same stored early-pass confirmation states with the raw
 lens, a J-Lens targeting the current pass's own exit, and the
 final-target J-Lens, in layers 26--37 of passes 1--3.
 
-\textbf{Inventory.} Local-exit banks exist only from the application era
+\textbf{Inventory.} Local-exit banks exist only from the initial study
 (5 September 2026): banks targeting virtual 47, 95, 143 and 191, fitted
 on the first 100 paragraphs of the historical calibration file (12
 articles) with one shared recipe that differs only in the target. Their
@@ -612,7 +612,7 @@ and would be a new estimator family.
 
 \paragraph{Descriptive observation: own-exit targets read early passes far better, on the discovery population.}
 
-The application-era banks were all applied to the 148 discovery items in
+The initial-study banks were all applied to the 148 discovery items in
 one evaluation whose rank arrays survive. On the 90 eligible multihop
 items, in the fixed band 26--37, the lens targeting each pass's own exit
 recovers the intended concept far more often than both alternatives:
@@ -627,7 +627,7 @@ the final-target lens (Figure 5). Own exit minus final target: +14.6,
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures_v3/fig5_local_exit.pdf}
-\caption{Application-era matched banks (same recipe, target differs) evaluated on the discovery population, fixed layers, passes 1–3: raw lens (grey), final-target J-Lens (red) and the pass's own-exit J-Lens (teal). (d) Band means with descriptive shared-concept-cluster 95\% intervals. Post hoc and descriptive; not the confirmation population.}\label{fig:5}
+\caption{Initial-study matched banks (same recipe, target differs) evaluated on the discovery population, fixed layers, passes 1–3: raw lens (grey), final-target J-Lens (red) and the pass's own-exit J-Lens (teal). (d) Band means with descriptive shared-concept-cluster 95\% intervals. Post hoc and descriptive; not the confirmation population.}\label{fig:5}
 \end{figure}
 
 \textbf{Interpretation.} Within the rules fixed before these numbers
@@ -699,7 +699,7 @@ original estimators is not available: an earlier retrieval failure and a
 later storage purge destroyed unique historical artifacts, including all
 four Ouro FP32 fitting checkpoints, the historical discovery-evaluation
 state cache, the truncated Huginn checkpoint and the merged files of the
-application-era local-exit banks (43 purged local paths, 33 distinct
+initial-study local-exit banks (43 purged local paths, 33 distinct
 contents, with no copy found and no verified derivation). A further 19
 purged paths (15 distinct contents), including the local-exit bank
 shards, are unresolved: local records point to previously uploaded
@@ -929,7 +929,7 @@ ledger}\label{executed-settings-with-their-record-sources-in-the-methods-ledger}
   \texttt{dc6354df…}, positions \texttt{b8e8b7d2…} (both position arms);
   four files, five bank arms, six evaluated arms.
 \item
-  \textbf{Application-era family (Section 6).} Same estimator with the
+  \textbf{Initial-study family (Section 6).} Same estimator with the
   first 100 historical paragraphs (12 articles), 32 directions per
   backward pass, B300 pod; targets 47, 95, 143, 191.
 \end{itemize}

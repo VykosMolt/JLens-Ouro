@@ -11,7 +11,7 @@ $PY -B $T/postprocess_body.py $T/body_raw.tex $T/body_preprint.tex preprint
 $PY -B $T/postprocess_body.py $T/body_raw.tex $T/body_submission.tex submission
 rm -f $T/body_raw.tex
 
-AI_FOOTNOTE='\begingroup\renewcommand{\thefootnote}{}\footnotetext{\textbf{AI assistance.} Claude Fable 5.1 and GPT 6 Astra assisted with code and draft review, editing, bug fixes, result verification and archiving, and with the implementation, analysis, figures and drafting of the later experiments. The original study and write-up are the author'"'"'s own; every number, table and statement was verified by the author.}\endgroup'
+AI_FOOTNOTE='\begingroup\renewcommand{\thefootnote}{}\footnotetext{\textbf{AI assistance.} Claude Fable 5.1 and GPT 6 Astra assisted with code and draft review, editing, bug fixes, result verification and archiving, and with the implementation, analysis, figures and drafting of the follow-up experiments. The original study and write-up are the author'"'"'s own; every number, table and statement was verified by the author.}\endgroup'
 
 preamble() {  # $1 = tmlr option ("" or "preprint")
 cat <<PRE

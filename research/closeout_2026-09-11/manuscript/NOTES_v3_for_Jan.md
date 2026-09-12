@@ -17,7 +17,7 @@
 6. Figures 1–5 are in the kirin system with the gentle-red accent. Source Sans Pro is installed system-wide now (TeX Live OTFs linked into `~/.local/share/fonts`), so figure text and body text share the typeface.
 7. Figure 2 is dense (eight panels). It earns its place because the bottom row shows that the raw lens has its own late peaks in every pass; consider cropping to passes 1 and 4 if space is tight.
 8. Table 6 uses your status vocabulary. The "Bounded screen" label for the within-domain result is my judgement; you may prefer Established with the caveat in the basis column.
-9. Appendix D is your statement of 12 September, with the sentence on post-application contributions added at the end. The interim fact sheet `CONTRIBUTION_AI_ASSISTANCE.md` was removed from the repository and the handoff at your request; draft two (`JLens_Ouro_Second_Draft.md`, repository and handoff) still carries the old draft statement in its Appendix D as the dated record.
+9. Appendix D is your statement of 12 September, with the sentence on follow-up contributions added at the end. The interim fact sheet `CONTRIBUTION_AI_ASSISTANCE.md` was removed from the repository and the handoff at your request; draft two (`JLens_Ouro_Second_Draft.md`, repository and handoff) still carries the old draft statement in its Appendix D as the dated record.
 10. Numbers are unchanged from v2 (ledger applies). Two v1 double-rounding slips were corrected in v2 and remain corrected here.
 
 ## Reconciliation with your edited draft (12 September)
