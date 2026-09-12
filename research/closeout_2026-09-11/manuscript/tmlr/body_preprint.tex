@@ -1,0 +1,952 @@
+\begin{abstract}
+
+Does a Jacobian-based readout reveal intermediate content that a model's
+own output head misses during recurrent computation? I compare J-Lens
+with the raw logit lens in frozen Ouro-2.6B, which applies 48 shared
+blocks over four recurrent passes. Layerwise discovery analysis found a
+positive J-Lens region in pass 4 whose location and size five
+independent calibration fits reproduced. I then froze one estimator
+(fit01) and that band, physical layers 26--37 of pass 4, before
+evaluating 160 new two-hop questions with 80 new intermediate concepts.
+In the band, J-Lens improves excess hit@10 by \textbf{23.19 percentage
+points} (95\% dependency-group bootstrap interval
+\textbf{16.29--32.90}); intended-concept recovery is 37.92\% against
+14.43\% for the raw lens. Under the same final-target estimator, the
+same physical band shows the opposite sign in passes 1--3 (−6.5, −8.6
+and −11.1 points; post-confirmation, simultaneous intervals excluding
+zero), so the pattern is pass-dependent at fixed depth. The late
+advantage remains positive with within-domain controls (20.8 points,
+9.1--32.5) and under an exhaustive tokenized-input audit, FP64 reference
+scoring and a cross-hardware state replay (changes of at most 0.42
+points), but it depends strongly on the estimator: changing the
+derivative target or the position aggregation substantially reduces it.
+On the discovery set, retained readouts of application-era banks that
+target each pass's own exit recover more early-pass content than both
+the final-target lens and the raw lens, which points to the target
+rather than the pass as the source of the early deficit; the
+corresponding confirmation-set test is deferred because those banks are
+not available on the analysis machine. The result supports a localized,
+estimator- and target-specific improvement in concept recovery, not
+general J-Lens superiority, improved answer accuracy, or causal use of
+the recovered content.
+
+\end{abstract}
+
+\section{The question}\label{the-question}
+
+A readout can miss useful content even when that content is present in a
+model's hidden state. The raw logit lens applies the model's output head
+directly to an intermediate activation. J-Lens instead first applies a
+fixed, Jacobian-derived map that averages how activations affect
+downstream states across calibration contexts, rather than fitting a
+predictor to one task's answers. Its intended target is verbalizable
+content, not accurate next-token prediction in every context
+\citep{gurnee2026workspace}.
+
+Ouro gives this comparison two depth axes: physical layer and recurrent
+pass. The same layer stack is reused, so a readout that works at one
+pass need not work at another. The experiment asks where each method
+recovers a task-annotated intermediate concept more reliably. It does
+not assume that a recovered word was part of the model's actual
+reasoning \citep{zhu2025ouro}.
+
+My initial expectation was that J-Lens would provide a broadly better
+view of intermediate computation. That expectation did not survive the
+early-pass results under the final-target estimator. The positive
+finding came later: a specific region of the final pass where J-Lens
+outperformed raw readout. This paper separates the exploration that
+found that region from the new-question test that checked it, and
+reports the post-confirmation reviewer analyses separately from both.
+
+The distinction matters beyond this comparison. Hidden-state readouts
+could complement observation of visible reasoning, but only after
+establishing what their scores measure. No monitoring system, deception
+detector, or chain-of-thought baseline is evaluated here.
+
+\paragraph{Central claim.}
+
+In one frozen recurrent model, one fixed Jacobian-lens estimator
+recovers annotated intermediate concepts from a fixed final-pass band
+far more often than the raw logit lens, and this transferred to 160 new
+questions without refitting or band selection. In the same physical
+layers of the three earlier passes the raw lens is better than this
+final-target estimator. Nothing here is evidence that the model uses the
+recovered content.
+
+\paragraph{Organization.}
+
+Section 2 defines the two readouts, the fitting recipe as executed, and
+the score. Section 3 separates the discovery work, which selected the
+band, from the frozen new-question test. Section 4 gives the
+confirmation result, then the post-confirmation reviewer analyses in
+their own subsection. Section 5 is the numerical verification, Section 6
+the partly blocked local-exit comparison, Section 7 the limits. Appendix
+A keeps the exploratory and Huginn material apart from the confirmation;
+Appendix B is the verification provenance and claim-status table;
+Appendix C the executed method settings; Appendix D the contribution
+statement.
+
+\section{Readouts and measurement}\label{readouts-and-measurement}
+
+\subsection{Model and fixed
+estimators}\label{model-and-fixed-estimators}
+
+The model is \textbf{ByteDance/Ouro-2.6B}, revision
+\texttt{1ed04250da1a9936042725d302e81c8fa2ab5abd} (not the Thinking or
+RLTT checkpoint), evaluated frozen in BF16 with four passes through 48
+blocks, residual width 2,048 and a vocabulary of 49,152 tokens. I use
+one-based physical layers \(\ell\) and pass numbers \(r\); the stored
+zero-based virtual index is \(v = 48(r-1) + (\ell-1)\). Ouro
+re-normalizes the residual stream at the end of every pass before
+carrying it into the next pass and before the shared output head, so a
+recorded state at the last block of a pass is the pre-normalization
+block output.
+
+For a captured residual state \(h_{i,r,\ell}\) at the readout position
+of item \(i\), let \(N\) be the model's final RMS normalization and
+\(W_U\) its unembedding. The two vocabulary readouts are
+
+\[
+z^{\mathrm{raw}}_{i,r,\ell}=W_U N(h_{i,r,\ell}), \qquad
+z^{J}_{i,r,\ell}=W_U N(B_{r,\ell}h_{i,r,\ell}),
+\]
+
+where \(B_{r,\ell}\) is the frozen J-Lens matrix for that virtual layer.
+Ranking the logits gives the token readout; no task classifier is
+trained on the confirmation questions. The main banks target the final
+residual state of pass 4 (virtual layer 191, before the final
+normalization). The original J-Lens study's default Sonnet configuration
+targets the penultimate layer, so this is an adaptation, not an exact
+reproduction of that configuration \citep{gurnee2026workspace}.
+
+\textbf{Fitting recipe (from the executed records).} Each bank averages,
+over 100 calibration paragraphs, the Jacobian estimator of the released
+implementation: for every source layer \(v\) and output dimension, a
+one-hot cotangent is placed at every valid target position of the target
+layer at once and back-propagated through the BF16 model with ordinary
+autograd, giving at source position \(p\) the sum over later positions
+\(t' \ge p\) of \(\partial h_{191}[t']/\partial h_v[p]\); the mean over
+valid source positions (positions 16 to len−2 of a 128-token input, BOS
+included) is the paragraph's matrix. Matrices are accumulated as an
+equal-paragraph FP32 sum, divided by 100 once and stored in FP16; at
+readout they are cast back to FP32. Calibration paragraphs for
+fit01--fit05 are independent random samples of 100 WikiText-103 training
+paragraphs (at least 600 characters; seeds 2026090701--05); the realized
+paragraph sets are pairwise disjoint and article overlap is 0--3 pairs
+per fit pair. \textbf{fit01} was preselected for confirmation before any
+new-item outcome; fit02 was retained as a secondary comparison. Fitting
+ran on an RTX 5090 with an 8-direction CUDA-graph engine whose output
+was verified bit for bit against the released fitter. Appendix C and the
+accompanying methods ledger give every setting with its source.
+
+Two further comparisons examine estimator specification. The
+\textbf{target control} changes the derivative target from the final
+block (virtual 191) to the penultimate block (190) while retaining final
+normalization and unembedding. The \textbf{position controls} place the
+cotangent at one uniformly drawn valid position \(q\) per paragraph and
+keep all 2,048 derivative directions: \emph{sampled-sum} sums the
+gradient over all valid source positions (its expectation over \(q\)
+equals the dense estimator), whereas \emph{diagonal} keeps only the
+source position \(p=q\). These are distinct estimator constructions, all
+fitted on fit01's calibration paragraphs.
+
+\subsection{Prompt, readout position and what counts as
+recovery}\label{prompt-readout-position-and-what-counts-as-recovery}
+
+Each question is one unfinished ``Fact:'' statement ending in a space;
+the intermediate concept is implied by the clue and never named, and the
+answer is the continuation. The model input is BOS plus the prompt
+tokens up to the boundary where the prompt's tokenization stops agreeing
+with the tokenization of prompt-plus-answer (in 131 of 160 items the
+trailing-space token merges into the answer's first token and is
+dropped); the readout position is the last input token, so every input
+token is causally visible to the scored state. There is no instruction,
+chat template, demonstration, prefilled response or padding; inputs are
+13--35 tokens. Example (confirmation-001): ``Fact: The planet whose
+sidereal rotation takes longer than its orbital period has an atmosphere
+dominated by'' → readout at '' by'' (token 20), intermediate
+\textbf{Venus} (scored token 16293, '' Venus''), answer ``carbon
+dioxide'', never shown.
+
+A concept is recovered when at least one accepted single-token form (the
+name with and without a leading space, capitalized or lower-cased, 1--4
+accepted single-token forms per name) ranks among the first ten tokens
+of the \textbf{full vocabulary}. Each item's controls are the other 79
+intermediate names, equally weighted. Let \(H_{i,r,\ell}^{m}(a)\) be the
+hit indicator for name \(a\) under method \(m\), and \(a_i\) the
+intended name. With control set \(C_i\), the fixed-layer excess score is
+
+\[
+e_{i,r,\ell}^{m}=H_{i,r,\ell}^{m}(a_i)
+-\frac{1}{79}\sum_{c\in C_i}H_{i,r,\ell}^{m}(c).
+\]
+
+The primary endpoint is the equal-weight item mean of the paired
+difference, averaged across the twelve fixed layers of the fourth pass:
+
+\[
+\widehat{\Delta}
+=\frac{1}{160}\sum_{i=1}^{160}\frac{1}{12}
+\sum_{\ell=26}^{37}\left(e_{i,4,\ell}^{J}-e_{i,4,\ell}^{\mathrm{raw}}\right).
+\]
+
+This averages fixed-layer measurements; it does \textbf{not} ask whether
+a concept appears anywhere in the band. The historical \emph{any-layer}
+score separately gives each intended name and each control 48
+opportunities per pass, then averages controls, labels within items, and
+items; it is reported separately.
+
+All effects below are in percentage points. Recovery rates are averages
+over item--layer cells, not the fraction of questions the model answers
+correctly. Subtracting control recovery makes the comparison more
+informative, but does not turn it into a causal test or a calibrated
+measure of semantic correctness.
+
+\section{From discovery to a frozen new-question
+test}\label{from-discovery-to-a-frozen-new-question-test}
+
+\subsection{What the discovery work
+established}\label{what-the-discovery-work-established}
+
+The discovery evaluation contained 90 eligible multihop items (100
+labels) and 51 arithmetic items from the released lens-eval sets.
+Fixed-layer analysis showed that the early multihop loss was not merely
+an artifact of allowing the raw lens to recover a concept at a
+favourable late layer: the disadvantage remained in the middle of the
+stack. Arithmetic was mixed.
+
+Pass 4 differed. Across five independent calibration fits, the mean
+excess advantage in layers 26--37 was \textbf{18.72 points} (between-fit
+SD \textbf{0.39}), positive in every fit, and every fit peaked at
+physical layer 32 (Figure 1). The final third (layers 33--48) averaged
+6.13 points (SD 0.21). The gain predominantly reflected increased
+intended-concept recovery (18.91 own-name minus 0.19 control points).
+
+That was evidence about calibration variability on the \textbf{same
+questions}, not an independent replication across evaluation
+populations. The band's crossed fit/item pointwise interval was
+10.96--26.99 points, but its simultaneous interval over the 56
+prespecified metrics (−0.86 to 38.29) and its shared-concept interval
+(−7.49 to 44.92) contained zero, and no positive individual layer
+cleared the simultaneous shared-concept band. The band was therefore
+treated as a discovery to test, not a settled advantage.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures_v3/fig1_discovery.pdf}
+\caption{Discovery population: fit01–fit05 minus raw, fixed-layer excess hit@10 for the 90 eligible multihop items, all four passes. Thin lines are the five fits, the bold line their mean, shading the crossed fit/item pointwise 95\% interval (not simultaneous). Pale red: layers 26–37, selected here and later frozen; grey: final third. The open point at layer 48 is the identity endpoint.}\label{fig:1}
+\end{figure}
+
+\subsection{Confirmation population and
+inference}\label{confirmation-population-and-inference}
+
+The confirmation set contains \textbf{160 two-hop questions, 80
+intermediate concepts, two questions per concept}, in ten domains of
+eight concepts (arts and music, astronomy, biology, chemistry,
+countries, environment and geology, historical people, landforms, SI
+units, technology). All 160 were eligible; none of the 80 intermediate
+concepts appears in the discovery set. The alias audit found one exact
+metadata collision --- ``N'', recorded as an alias of Newton, against
+the historical label ``N'' --- which is not among the scored forms; no
+other alias collides. Construction and annotation were blind to method
+outcomes; factual hops, novelty and control hygiene were reviewed
+independently before the local freeze.
+
+The relation mixture differs from discovery: 96 questions request
+relation types absent from the discovery inventory, 45 use familiar
+requested relations, 19 recombine familiar relations. This is a transfer
+test, not a difficulty-matched replication. Three component facts
+overlap known calibration text (items 076, 130, 151). No claim is made
+that the facts were absent from pretraining.
+
+Fit01, the pass-4 band, scoring rules, population and analysis were
+fixed before any new-item outcome; the stopping rule was one evaluation
+of that population. ``Prospective'' refers to that recorded local freeze
+(9 September 2026, 22:40:58 UTC); a public preregistration does not
+exist. Two runtime corrections frozen before scoring and the later
+numerical checks are described in Appendix B.
+
+The primary interval uses \textbf{20,000 bootstrap resamples of whole
+dependency groups} (seed 2026090901), with the 2.5th and 97.5th
+percentiles as limits; resampled groups contribute all their items and
+the ratio of sums preserves equal item weights. Twenty prespecified
+secondary contrasts form a separate simultaneous 95\% family (bootstrap
+max-\(t\)). Component intervals are descriptive.
+
+\textbf{Dependency groups.} Items are joined into a group when they
+share an intermediate (or its aliases), an underlying fact, a concrete
+entity-substitution template (the same typed clue → entity →
+requested-slot construction, such as element clue → element → atomic
+number), or a normalized final answer or alias code. The 28 connected
+components have sizes 42, 24, 16, 10, 10, 6, four of 4 and eighteen of
+2; the weight-based effective group count is
+\(160^2/\sum_g n_g^2 = 8.63\). The largest group joins the 16 chemistry
+items (element→atomic-number and element→symbol templates) and the 16
+SI-unit items (unit→symbol and unit→quantity templates) through
+tungsten's and Watt's shared answer ``W'', with three small clusters
+(Alps/Andes/Borneo; nucleus; ozone) attached by the small-integer
+answers ``2'' and ``3''. Leaving out any single group keeps the estimate
+between 19.73 and 24.87 points (low end without the 16 country items,
+high end without the 42-item group). The effective count is a weight
+summary, not a literal number of independent observations, and the
+grouping does not certify the absence of other dependence.
+
+\section{Results on new questions}\label{results-on-new-questions}
+
+\subsection{The fixed final-pass advantage
+transfers}\label{the-fixed-final-pass-advantage-transfers}
+
+\paragraph{Result 1: the frozen pass-4 band transfers to new questions.}
+
+In pass 4, layers 26--37, fit01 exceeds the raw lens by \textbf{23.19
+points} in excess hit@10, 95\% dependency-group interval
+\textbf{16.29--32.90} (Table 1, Figure 2). The gain comes from
+intended-concept recovery (37.92\% against 14.43\%); control recovery
+rises slightly (+0.30 points), reducing rather than creating the
+advantage. Item resampling gives 17.97--28.71; the secondary fit02 gives
+22.56 (9.52--35.59) and fit01 − fit02 is 0.63 (−0.73 to +1.99).
+
+\begin{table}[htbp]
+\caption{Confirmation results for the frozen pass-4 band. Component intervals are descriptive; the final row is the primary inference. Rounded entries need not subtract exactly.}\label{tab:1}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Quantity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Estimate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+95\% group-bootstrap interval
+\end{minipage} \\
+\midrule\noalign{}
+J-Lens intended recovery & 37.92\% & 30.44--46.56\% \\
+Raw intended recovery & 14.43\% & 10.45--17.87\% \\
+J-Lens control recovery & 0.34\% & 0.18--0.51\% \\
+Raw control recovery & 0.04\% & 0.02--0.08\% \\
+\textbf{Paired excess difference} & \textbf{+23.19 points} &
+\textbf{+16.29 to +32.90 points} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The intended-recovery difference is \textbf{23.49 points} (16.62--33.16,
+descriptive). The two fixed estimators perform similarly here; this is
+not a formal equivalence result. Discovery and confirmation results are
+not pooled.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures_v3/fig2_confirmation.pdf}
+\caption{Confirmation population, fixed-layer curves for all four passes. Top: fit01 − raw (solid) and fit02 − raw (dashed) paired excess difference per layer, with the descriptive group-bootstrap pointwise 95\% band for fit01. Bottom: intended recovery for fit01 (red) and the raw lens (grey), with control recovery dotted. Pale red: the frozen primary band. Only the band mean carries the prospective inference.}\label{fig:2}
+\end{figure}
+
+\subsection{The early-pass deficit transfers, including in the same
+physical
+band}\label{the-early-pass-deficit-transfers-including-in-the-same-physical-band}
+
+All six prespecified early-pass comparisons remain negative on the new
+population (Table 2).
+
+\begin{table}[htbp]
+\caption{Fit01 minus raw excess hit@10, in percentage points. Brackets are simultaneous 95\% intervals from the 20-contrast secondary family.}\label{tab:2}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}lll@{}}
+\toprule\noalign{}
+Pass & Mean over fixed layers 1--48 & Any-layer recovery \\
+\midrule\noalign{}
+1 & −8.83 {[}−13.64, −4.01{]} & −44.41 {[}−59.03, −29.78{]} \\
+2 & −14.86 {[}−19.54, −10.18{]} & −57.37 {[}−72.01, −42.72{]} \\
+3 & −15.59 {[}−22.40, −8.77{]} & −61.08 {[}−79.59, −42.58{]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These summaries alone do not show what happens in the specific band that
+carries the pass-4 gain. As a \textbf{post-confirmation reviewer
+analysis}, the same physical layers 26--37 were evaluated in every pass
+with the frozen estimator, controls and groups (Table 3, Figure 3).
+
+\paragraph{Result 2: the same band is negative in every earlier pass.}
+
+Layers 26--37 show a deficit in each early pass whose simultaneous
+interval (a four-contrast post-confirmation family, Appendix B) excludes
+zero: −6.50, −8.64 and −11.14 points in passes 1--3. In pass 1 fit01
+recovers no intended label in the band at all. The pattern is
+pass-dependent at fixed physical depth, not an artifact of averaging
+over 48 layers.
+
+\begin{table}[htbp]
+\caption{The same physical band, layers 26–37, in every pass. Control recovery is below 0.35\% in every cell.}\label{tab:3}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pass
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+J-Lens intended
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Raw intended
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Paired excess difference
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interval
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+1 & 0.00\% & 6.46\% & −6.50 & {[}−11.91, −1.08{]} & post-confirmation,
+simultaneous \\
+2 & 4.22\% & 12.71\% & −8.64 & {[}−12.43, −4.85{]} & post-confirmation,
+simultaneous \\
+3 & 2.76\% & 13.91\% & −11.14 & {[}−16.76, −5.52{]} & post-confirmation,
+simultaneous \\
+4 & 37.92\% & 14.43\% & +23.19 & {[}+16.29, +32.90{]} & prospective
+primary \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures_v3/fig3_same_band.pdf}
+\caption{Layers 26–37 in every pass on the confirmation population. (a) Paired fit01 − raw excess difference; passes 1–3 (open circles) carry the post-confirmation simultaneous 95\% interval of family N1, pass 4 (filled square) the original prospective percentile interval. (b) Intended recovery by method.}\label{fig:3}
+\end{figure}
+
+\subsection{The estimator specification
+matters}\label{the-estimator-specification-matters}
+
+The control comparisons transfer to the new questions (Table 4, Figure
+4).
+
+\begin{table}[htbp]
+\caption{Estimator controls in percentage points; matched layer support within each control family; same 20-contrast family as Table 2.}\label{tab:4}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Contrast in pass 4, layers 26--37
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Difference
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Simultaneous 95\% interval
+\end{minipage} \\
+\midrule\noalign{}
+Main fit01 minus penultimate target & +14.38 & {[}+7.70, +21.07{]} \\
+Sampled-sum minus diagonal & +15.77 & {[}+5.80, +25.75{]} \\
+Penultimate target minus raw & +8.80 & {[}+0.76, +16.85{]} \\
+Sampled-sum minus raw & +21.72 & {[}+9.16, +34.29{]} \\
+Diagonal minus raw & +5.95 & {[}−0.34, +12.24{]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Result 3: the late gain depends on the derivative target and the position aggregation.}
+
+Changing the derivative target by one block reduces the advantage
+substantially; restricting the position reduction to the matching source
+position does so as well. Neither comparison isolates how Ouro reasons:
+it shows that the measured recovery depends on the lens's construction.
+The diagonal-only estimate is smaller and its support is borderline
+(lower bound within 0.4 points of zero on every numerical path,
+excluding zero only under regenerated states). The direct
+sampled-sum-minus-diagonal comparison is the clearer result.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures_v3/fig4_contrasts.pdf}
+\caption{Pass-4 band contrasts; the dashed vertical line marks zero difference. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 4.4, family N1).}\label{fig:4}
+\end{figure}
+
+\subsection{Post-confirmation reviewer
+checks}\label{post-confirmation-reviewer-checks}
+
+Three further analyses were specified on the already-used confirmation
+data after the confirmation; they are reported separately and do not
+alter the primary endpoint.
+
+\textbf{Within-domain controls.} Replacing each item's 79 controls by
+the seven other names in its benchmark domain gives a paired excess
+difference of \textbf{20.80 points} (simultaneous 95\% interval
+9.13--32.46). J-Lens recovers same-domain names at 3.07\% against 0.34\%
+for arbitrary controls (raw: 0.38\% against 0.04\%). Using within-domain
+controls therefore reduces the advantage by 2.39 points, from 23.19 to
+20.80: the lens recovers more competing names from the same domain, but
+the within-domain-adjusted advantage remains positive. This measures the
+sensitivity of the excess score to the control set; it does not identify
+a unique fraction of the signal as type-level information. A subset
+inequality derived from the published values (an item's within-domain
+excess difference is at least its intended difference minus 79/7 times
+its J-Lens all-control rate) held for every item; averaging its itemwise
+lower bounds gives +19.61 points, below the observed aggregate
++20.80-point advantage. Four of the ten domains contain a single
+semantic type (elements, countries, SI units, people); the others mix
+types (planets and moons; rivers, ranges, a desert and an island;
+molecules, a cell type and an organelle), so this is a within-domain
+control, not a same-type control. The gain is heterogeneous across
+domains: from about +51 points for countries and +40 for environment and
+geology to about zero for SI units, where neither method recovers unit
+names in this band, and to −1 for astronomy (+5 with the 79 controls),
+where the lens often recovers other planets and moons. Domains are not
+independence units.
+
+\textbf{Tokenized-input overlap.} For every item, every scored token of
+the intended label and of all 79 controls was compared with the exact
+model input. No intended-label token appears in any input. Six control
+tokens do, in six items: ``Voyager'' in three astronomy prompts,
+``Chile'' in an Andes prompt, ``Egypt'' in a Nile prompt, and the
+lower-case form ``io'' as a token inside ``Fidelio''. Dropping those
+controls for the affected items (both methods; 78 controls for six
+items) gives 23.19 points (16.25--32.72); dropping the six items gives
+22.90 points (15.92--33.15). Lexical word-level mentions without
+scored-token overlap occur once more (``newton'' in a pascal item). Zero
+token overlap does not establish absence of semantic clues or of the
+facts from pretraining; the prompts are designed to imply the
+intermediate.
+
+\textbf{Grouping.} The rule, memberships and the composition of the
+42-item group are given in Section 3.2 and the reviewer ledger; no
+alternative grouping was constructed.
+
+\section{Numerical verification}\label{numerical-verification}
+
+\paragraph{Audit note: post-confirmation, not prospectively registered.}
+
+The confirmation run used BF16 model execution on an RTX 5090. A
+development check initially failed because applying the output head to
+one residual row did not reproduce logits computed in a multi-row call.
+The verification below measured whether this affected the scored
+comparisons rather than assuming a small logit discrepancy was harmless.
+
+On a local RTX 5070 Ti with the confirmation's torch build and precision
+settings, the retained confirmation states, verified banks and frozen
+scoring code reproduced the saved arrays bit for bit across \textbf{160
+items, six arms and all scored columns}, including ranks, top-ten token
+IDs, saved exit logits and sampled transported vectors. Calls with 160,
+190, 191 and 192 rows matched the executed layout exactly; single-row
+calls changed 1.5--1.6 million of about 1.5 billion logits per arm by at
+most 0.125 (0.25 for raw) but no endpoint quantity.
+
+\begin{table}[htbp]
+\caption{Numerical sensitivity of the primary endpoint. The FP64 row applies a reference readout computation to the stored tensors, not an FP64 model. Alternative packing was measured on the local GPU, not in a fresh RTX 5090 run.}\label{tab:5}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Computation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Primary difference
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+95\% group interval
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Change from accepted
+\end{minipage} \\
+\midrule\noalign{}
+Accepted BF16 path & +23.19 & {[}+16.29, +32.90{]} & --- \\
+Alternative row packing & +23.19 & unchanged & 0.00 \\
+FP64 reference computation & +22.93 & {[}+16.17, +32.52{]} & −0.26 \\
+Locally regenerated states & +23.61 & {[}+16.52, +33.77{]} & +0.42 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CPU and GPU FP64 computations gave identical ranks, hits and top-ten
+sets (values differing by at most \(9\times10^{-14}\)). Resolving every
+exactly tied logit adversarially bounds the accepted estimate between
+\textbf{22.60 and 23.35 points}; moving every logit by up to 1/32 or 1/8
+in the adversarial direction gives 22.01--24.41 and 18.30--27.26.
+Regenerating states from the prompts on the local GPU was not
+bit-identical to the RTX 5090 forward: 37 of 160 state records matched
+exactly and 154 greedy continuations matched, yet replaying every arm on
+those states moved the endpoint by only 0.42 points. All six early-pass
+contrasts and the direct estimator-control contrasts keep their signs
+and zero-exclusion on every path. Bit-level state regeneration on
+another RTX 5090 was not tested.
+
+A separately implemented checker (a separate coding agent working from a
+specification, without producer code) reconstructed the saved analysis
+to within \(9\times10^{-16}\) and detected all 13 planted errors in
+isolated fixtures. ``Independent'' here means a separate implementation,
+not replication by another laboratory.
+
+\section{Local-exit targets: a conditional comparison, partly
+blocked}\label{local-exit-targets-a-conditional-comparison-partly-blocked}
+
+The main bank targets the final pass, so early-pass states are far from
+its target: a pass-1 state at layer 30 is 162 blocks and three
+pass-boundary normalizations away from virtual layer 191. One
+explanation of the early deficit is therefore transport distance rather
+than a property of early-pass representations. The intended test
+evaluates the same stored early-pass confirmation states with the raw
+lens, a J-Lens targeting the current pass's own exit, and the
+final-target J-Lens, in layers 26--37 of passes 1--3.
+
+\textbf{Inventory.} Local-exit banks exist only from the application era
+(5 September 2026): banks targeting virtual 47, 95, 143 and 191, fitted
+on the first 100 paragraphs of the historical calibration file (12
+articles) with one shared recipe that differs only in the target. Their
+merged files were purged; the final-target bank and four of its five
+shards survive locally, whereas the twelve shards of the three
+local-exit banks were previously uploaded to a private repository
+(upload receipts and hashes recorded) whose current availability has not
+been verified here; no credential for it is present on the analysis
+machine. The confirmation-population comparison is therefore
+\textbf{blocked}, and no comparison was improvised. Retrieval of those
+shards (11 GB, no fitting, no paid compute), if they remain available,
+would unblock it; a fit01-matched refit would cost about eight GPU-hours
+and would be a new estimator family.
+
+\paragraph{Descriptive observation: own-exit targets read early passes far better, on the discovery population.}
+
+The application-era banks were all applied to the 148 discovery items in
+one evaluation whose rank arrays survive. On the 90 eligible multihop
+items, in the fixed band 26--37, the lens targeting each pass's own exit
+recovers the intended concept far more often than both alternatives:
+intended recovery 15.4\%, 16.2\% and 25.2\% in passes 1--3, against
+2.1\%, 4.3\% and 10.1\% for the raw lens and 0.3\%, 0.4\% and 2.1\% for
+the final-target lens (Figure 5). Own exit minus final target: +14.6,
++16.9 and +23.0 points (shared-concept-cluster percentile intervals
+9.1--20.9, 11.5--22.8, 16.0--30.6); own exit minus raw: +13.0, +11.3 and
++14.9 (8.1--19.0, 6.6--16.6, 7.9--22.4). Control recovery stays below
+2.3\%.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures_v3/fig5_local_exit.pdf}
+\caption{Application-era matched banks (same recipe, target differs) evaluated on the discovery population, fixed layers, passes 1–3: raw lens (grey), final-target J-Lens (red) and the pass's own-exit J-Lens (teal). (d) Band means with descriptive shared-concept-cluster 95\% intervals. Post hoc and descriptive; not the confirmation population.}\label{fig:5}
+\end{figure}
+
+\textbf{Interpretation.} Within the rules fixed before these numbers
+were computed, this is the case in which the local target beats both
+alternatives: a target-dependent early-pass advantage, consistent with a
+transport explanation. It is not proof that averaging destroyed
+information; it is on the population on which the band was selected; it
+uses the older 12-article calibration and a different batch setting; the
+intervals are descriptive; and it has not been tested on the
+confirmation population. Two existing qualifications remain: shortening
+the final target by one block (the penultimate control) reduced the late
+gain, so transport distance alone is not established, and raw pass
+counts are not comparable transport lengths across architectures. The
+two observations are jointly consistent with a narrower hypothesis, not
+tested here: that the estimator reads well when its derivative target is
+an exit state --- the tensor the shared head actually reads after the
+pass-end normalization --- and degrades with distance from the nearest
+such target, so that moving the target off an exit by one block can cost
+more than moving the source a full pass away from it. That hypothesis
+predicts that a lens targeting the penultimate block of an early pass
+would read that pass worse than one targeting the pass's own exit; the
+retained banks do not include such a control. The historical Huginn
+pilot (Appendix A) did not identify a cause or rule out
+supervision-based explanations.
+
+\section{Interpretation and limits}\label{interpretation-and-limits}
+
+The supported result is a \textbf{localized improvement in reading
+annotated intermediate concepts from fixed Ouro states}: a specific
+final-pass band, one frozen estimator, transferred to new questions and
+concepts without refitting or band selection. The same band in the
+earlier passes shows the opposite sign, so the method is not uniformly
+better as computation proceeds, and the source of the measured gain is
+higher intended-concept recovery; the excess score is sensitive to the
+control set, with within-domain controls reducing the advantage by 2.39
+points while leaving it positive.
+
+One possible explanation for the strong raw baseline is Ouro's training
+objective, which applies weighted next-token losses at recurrent pass
+boundaries through a shared output head \citep{zhu2025ouro}. This does
+not supervise every physical block, and the present experiments do not
+isolate the effect of that objective. The target-dependence seen on the
+discovery population points to transport distance or target choice as a
+contributing factor, but architecture, calibration, target choice and
+executed depth remain entangled, and the Huginn pilot's evidence is
+limited by its incomplete artifact chain.
+
+Recovery is not use. In exploratory checks a lens recovered a labelled
+intermediate on questions the model answered incorrectly, and native
+exits can agree while their readouts disagree sharply (Appendix A).
+
+The main population limit is the small number of unequal dependency
+groups. The interval accounts for the declared grouping, not every
+possible shared fact, relation or template; the effective count of 8.63
+warns against reading 160 related questions as 160 demonstrations. The
+relation mixture is not difficulty-matched, labels are restricted to
+accepted single-token forms, the domain heterogeneity is large, and the
+evidence concerns one checkpoint and two retained calibration fits. The
+study does not establish performance on arbitrary concepts, other
+models, or monitoring under adversarial pressure.
+
+\subsection{Reproducibility and artifact
+availability}\label{reproducibility-and-artifact-availability}
+
+The confirmation banks, states, scores, frozen inputs and code permit
+exact table reconstruction, rescoring from banks and states, and forward
+replay (not bit-identical off the RTX 5090). Complete refitting of the
+original estimators is not available: an earlier retrieval failure and a
+later storage purge destroyed unique historical artifacts, including all
+four Ouro FP32 fitting checkpoints, the historical discovery-evaluation
+state cache, the truncated Huginn checkpoint and the merged files of the
+application-era local-exit banks (43 purged local paths, 33 distinct
+contents, with no copy found and no verified derivation). A further 19
+purged paths (15 distinct contents), including the local-exit bank
+shards, are unresolved: local records point to previously uploaded
+copies in a private remote repository whose current availability has not
+been verified here. Knowing the recipe does not restore those
+checkpoints, and the Huginn pilot is retained only at the saved-output
+level. On 11 September 2026 a copy-only archive of every surviving file
+(16,200 files, 52.15 GB, every byte re-hashed on the destination) was
+written to one external SSD and restoration-tested from that SSD alone
+with the laptop's paths hidden and no network: the frozen code matched
+its freeze, all four bank files loaded, the frozen analysis reproduced
+the primary and all twenty secondary contrasts exactly, and raw and
+fit01 rescoring from the archived states and weights reproduced the
+saved ranks bit for bit. Until a second destination exists it is a
+single-copy archive, not a redundant backup. The frozen records, code,
+compact results, figures and this manuscript are published in the
+repository \url{https://github.com/VykosMolt/JLens-Ouro} (research
+directory; files of 50 MB or more, including the banks and state caches,
+are listed there with hashes but not stored). No DOI exists at the time
+of writing.
+
+\section{Conclusion}\label{conclusion}
+
+The final-target J-Lens underperforms raw readout in Ouro's first three
+passes, including in the very layers where it outperforms raw in the
+fourth, and recovers more annotated intermediate content in a fixed
+region of the final pass. That advantage transferred to new questions
+and concepts and survives the measured numerical variations and control
+redefinitions. Its size depends strongly on the derivative target and
+the position aggregation, and retained discovery-set readouts suggest
+that a lens targeting the pass's own exit reads early passes far better
+than the final-target lens, so the early deficit belongs to the
+estimator's target rather than to the passes; that comparison awaits the
+confirmation population. The finding is about where a particular readout
+works, not about general superiority, successful reasoning or causal
+control.
+
+\subsubsection*{Broader Impact Statement}
+This paper evaluates a readout method on one frozen open-weights model. Hidden-state readouts could complement observation of visible reasoning, but only after establishing what their scores measure. No monitoring system, deception detector, or chain-of-thought baseline is evaluated here, and the study does not establish performance on arbitrary concepts, other models, or monitoring under adversarial pressure.
+
+\bibliographystyle{tmlr}
+\bibliography{references}
+
+\appendix
+\section{Exploratory findings kept separate from confirmation}\label{app:A}
+
+\subsection{Exit disagreement}\label{exit-disagreement}
+
+In the 7 September analysis of 148 prompts, native pass-3 and final
+predictions agreed \textbf{85.1\%} of the time (item-bootstrap interval
+79.1--90.5\%). Two J-Lens variants targeting the current and final exits
+agreed only \textbf{1.45\%} (0.58--2.51\%) averaged over physical layers
+41--47; layer 48 was excluded because some agreement there follows by
+construction. One token earlier, native agreement rose to 96.6\% while
+lens agreement remained 0.39\%. These are different comparisons, so the
+lens gap cannot be read as the amount of model revision, and poor output
+prediction does not by itself refute an intermediate-recovery method
+\citep{gurnee2026workspace}.
+
+\subsection{Passing continuations and
+arithmetic}\label{passing-continuations-and-arithmetic}
+
+The early multihop deficit remained when the discovery items were
+separated by the historical continuation-pass criterion. That criterion
+was imperfect: two numerical false positives reduced the original 72
+passes out of 148 to 70, while additionally accepting the numeric
+equivalent of one word-form target gave 71. Four-token continuations and
+lexical matching do not establish semantic correctness; the subgroup
+observations are exploratory.
+
+A separate supervised arithmetic probe scored 59.4\% against the raw
+lens's 76.4\% in pass 1, but exceeded it in pass 3 (35.6\% versus
+17.9\%). The classifiers trained on only 36 independent operand pairs; a
+bounded training-size comparison (+3.9 points, interval −2.9 to +10.9)
+was inconclusive. This used a different task family and a candidate-set
+metric, with incomplete provenance for the older J-Lens comparator; it
+is not pooled with the concept-recovery results.
+
+\subsection{Huginn pilot}\label{huginn-pilot}
+
+The pilot used one Huginn estimator calibrated on the same 100 texts as
+the preselected Ouro fit, eight recurrent passes and two evaluation
+initializations. Joint tokenizer eligibility retained 88 multihop items
+(98 labels) and 51 arithmetic items. J-Lens-minus-raw estimates were
+negative under all six prespecified summaries in both initializations;
+the cross-model differences of differences had mixed signs and
+simultaneous intervals containing zero. The prediction of a larger
+relative J-Lens advantage in Huginn was not supported. This does not
+isolate supervision: Huginn's coda is trained after sampled recurrence
+depths \citep{geiping2025huginn}, so it is not an
+unsupervised-intermediate control, and its raw-readout weakness is
+block-specific \citep{lu2025latentcot}. The fitted Huginn bank was never
+retrieved and its partial checkpoint was later lost; the saved
+statistics are historical evidence, not a verified cross-model
+replication.
+
+\section{Verification provenance and claim status}\label{app:B}
+
+\subsection{Verification and analysis
+provenance}\label{verification-and-analysis-provenance}
+
+The original confirmation freeze is unchanged. Two separately recorded
+corrections preceded new-item scoring: \texttt{precision\_v1} (10
+September, 10:44:52 UTC) removed redundant TF32 setters, and
+\texttt{native\_check\_v1} (22:56:18 UTC) changed the development
+comparison from a single residual row to a whole-sequence readout and
+resized run budgets. The checker's accepted run-specification pin was
+updated after outcomes were known. The post-confirmation verification
+reviewed these changes and found the scientific input, estimator,
+endpoint and analysis unchanged.
+
+The numerical results use the accepted BF16 endpoint as primary; FP64,
+alternate packing, tie handling and regenerated states are sensitivity
+checks. For diagonal minus raw, the accepted estimate is +5.95 points
+with simultaneous interval −0.34 to +12.24; FP64 gives −0.40 as lower
+bound and regenerated states +0.04, which is why its support is
+described as borderline.
+
+\textbf{Post-confirmation reviewer family (Sections 4.2 and 4.4).}
+Exactly four new inferential contrasts were fixed in a dated plan before
+computation: the within-domain paired excess difference in the pass-4
+band and the same-band paired differences in passes 1--3. They share one
+centered bootstrap max-\(t\) 95\% family (20,000 whole-group draws, seed
+2026091101, quantile 2.639). Every other new quantity is descriptive.
+The overlap sensitivities and the local-exit discovery-population
+summary are descriptive.
+
+\textbf{Records.} Confirmation run
+\texttt{ouro\_confirmation\_20260911\_fixed160\_native1}; frozen plan,
+benchmark and freeze receipt under
+\texttt{research/confirmation\_2026-09-09/}; verification under
+\texttt{research/verification\_2026-09-11/}
+(\texttt{FINAL\_VERIFICATION.md},
+\texttt{REPORT\_confirmation\_verified.md},
+\texttt{RUN\_SPECIFICATION.json}); this round's reviewer checks, methods
+ledger, numerical source ledger and archive receipt under
+\texttt{research/closeout\_2026-09-11/}. These are project provenance
+identifiers, not public links.
+
+\subsection{Claim status}\label{claim-status}
+
+\noindent\begin{minipage}{\linewidth}
+\captionof{table}{Claim status after the verification and reviewer rounds. Established = supported by the frozen or replayed evidence at the stated scope; Bounded screen = supported with a quantified limit; Diagnostic = descriptive observation, no inference; Unresolved = open; Retracted = an earlier statement withdrawn.}\label{tab:6}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Claim
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Basis
+\end{minipage} \\
+\midrule\noalign{}
+Fit01's pass-4 band advantage transfers to 160 new questions &
+\statusEstablished & Prospective primary +23.19 {[}16.29, 32.90{]};
+replay and FP64 paths leave it intact \\
+The early-pass deficit transfers, including in the same band &
+\statusEstablished & Six prespecified contrasts and the
+post-confirmation same-band family all exclude zero \\
+The late gain survives within-domain controls & \statusBounded &
+Within-domain controls reduce the advantage by 2.39 points (23.19 to
+20.80) and leave it positive; heterogeneity across domains is large; no
+fraction of the signal is identified as type-level \\
+Target choice and position aggregation change the late gain &
+\statusEstablished & fit01 − penultimate and sampled-sum − diagonal
+exclude zero on every path \\
+Diagonal fitting has no effect & \statusUnresolved & Diagonal − raw is
+borderline: lower bound within 0.4 points of zero \\
+Own-exit targets read early passes better & \statusDiagnostic &
+Descriptive, discovery population only; confirmation-population test
+blocked \\
+Ouro's shared-head supervision causes the strong raw baseline &
+\statusUnresolved & No intervention; Huginn pilot uninformative and
+estimator lost \\
+Recovered concepts are causally used & \statusUnresolved & No causal
+test; readable intermediates co-occur with wrong answers \\
+All historical estimator binaries were preserved & \statusRetracted &
+Four FP32 checkpoints, the Huginn estimator and the local-exit banks are
+lost or remote-only \\
+\bottomrule
+\end{tabular}
+\end{minipage}\par\vspace{\baselineskip}
+
+\section{Method details in brief}\label{app:C}
+
+\subsection{Executed settings, with their record sources in the methods
+ledger}\label{executed-settings-with-their-record-sources-in-the-methods-ledger}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Tokenization and input.} BOS + prompt tokens
+  (\texttt{truncation=True,\ max\_length=511}, never triggered); readout
+  context = common prefix of encode(prompt) and encode(prompt+answer);
+  position −1; batch size 1; SDPA attention; \texttt{use\_cache=False};
+  BF16 weights.
+\item
+  \textbf{Hooks and normalization.} Forward hook on each shared physical
+  block filtered by the recurrent step; recorded tensor = post-residual
+  block output, before the pass-end RMS normalization; states stored as
+  FP32 copies of BF16 values.
+\item
+  \textbf{Readout.} \(J h\) in FP32 (raw: \(h\)), cast to BF16,
+  RMS-normalize (FP32 internally, \(\epsilon=10^{-6}\)), BF16 head, one
+  call per item over all scored columns; descending argsort over 49,152
+  tokens; rank = min over accepted forms; hit = rank \textless{} 10.
+\item
+  \textbf{Calibration and fitting.} 100 WikiText-103 paragraphs per fit
+  (fit01--05 seeds 2026090701--05; paragraph-disjoint; 100/99/99/100/100
+  distinct articles), inputs of 128 tokens including BOS (six shorter),
+  valid positions 16 to len−2, cotangent summed over valid target
+  positions and gradient averaged over valid source positions, FP32 sum
+  over paragraphs divided by 100, FP16 storage, 8 output directions per
+  backward pass with CUDA-graph replay (bit-parity verified), RTX 5090.
+\item
+  \textbf{Controls.} Penultimate: target virtual 190, sources 0--189.
+  Positions: one uniform \(q\) per paragraph (seed 2026090801),
+  sampled-sum = \(\sum_p \partial h_{191}[q]/\partial h_v[p]\) (no
+  divisor), diagonal = \(\partial h_{191}[q]/\partial h_v[q]\), from one
+  backward stream. Matched supports for contrasts: band 26--37 for all
+  arms; final-third intersections 176--189 (target control) and 176--190
+  (position controls).
+\item
+  \textbf{Banks.} fit01 \texttt{90f01f6a…}, fit02 \texttt{101f31db…}
+  (byte-exact reconstruction from its intact checkpoint), penultimate
+  \texttt{dc6354df…}, positions \texttt{b8e8b7d2…} (both position arms);
+  four files, five bank arms, six evaluated arms.
+\item
+  \textbf{Application-era family (Section 6).} Same estimator with the
+  first 100 historical paragraphs (12 articles), 32 directions per
+  backward pass, B300 pod; targets 47, 95, 143, 191.
+\end{itemize}
+
+\section{Contribution and AI-assistance statement}\label{app:D}
+
+The original J-Lens study for the MATS application and the original
+write-up are the author's own work. AI coding agents were used to review
+the code and the paper drafts, for editing passes of the write-up, for
+fixing bugs found in the implementation and evaluation, for the
+verification of all results, and for making a cold research archive of
+them. Claude Fable 5.1 and GPT 6 Astra were used. Every single number,
+table, statement and result was verified by the author. AI assistants
+also contributed to implementation and execution of the post-application
+experiments, benchmark construction and review, analysis, figure
+preparation, and manuscript drafting.
