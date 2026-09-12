@@ -6,7 +6,7 @@ Does a Jacobian-based readout reveal intermediate content that a model's own out
 
 ::: {.roadmapbox title="How to read this paper"}
 
-Section 2 defines the two readouts, the fitting recipe as executed, and the score. Section 3 separates the discovery work, which selected the band, from the frozen new-question test. Section 4 gives the confirmation result, then the post-confirmation reviewer analyses in their own subsection. Section 5 is the numerical verification, Section 6 the partly blocked local-exit comparison, Section 7 the limits. Appendix A keeps the exploratory and Huginn material apart from the confirmation; Appendix B is the verification provenance and claim-status table; Appendix C the executed method settings; Appendix D the contribution statement.
+Section 2 places the study among readout and looped-model work. Section 3 defines the two readouts, the fitting recipe as executed, and the score. Section 4 separates the discovery work, which selected the band, from the frozen new-question test. Section 5 gives the confirmation result, then the post-confirmation reviewer analyses in their own subsection. Section 6 is the numerical verification, Section 7 the partly blocked local-exit comparison, Section 8 the limits. Appendix A keeps the exploratory and Huginn material apart from the confirmation; Appendix B is the verification provenance and claim-status table; Appendix C the executed method settings; Appendix D the contribution statement.
 
 :::
 
@@ -26,9 +26,19 @@ In one frozen recurrent model, one fixed Jacobian-lens estimator recovers annota
 
 :::
 
-# 2. Readouts and measurement
+# 2. Related work
 
-## 2.1 Model and fixed estimators
+**Readouts of intermediate states.** The logit lens applies a model's output head to an intermediate residual state [@nostalgebraist2020logitlens]. The tuned lens replaces the head by an affine probe per block, trained to match the model's output distribution [@belrose2023tunedlens]. The Jacobian lens [@gurnee2026workspace] instead transports an intermediate state to the final layer with the average input–output Jacobian over a calibration corpus and decodes it with the model's own unembedding; its authors report that on prompts with unverbalized intermediate computation the tuned lens tends to skip ahead to the output, and they find it less useful than either the logit lens or the Jacobian lens for inspecting internal computation. This paper compares only the two training-free readouts, the raw lens and J-Lens; Section 8 states why no tuned lens was fitted.
+
+**Looped and recurrent-depth models.** Ouro applies one shared block stack over recurrent passes and trains it with weighted next-token losses at pass boundaries through one shared head [@zhu2025ouro]. Huginn trains a recurrent core between a prelude and a coda after sampled recurrence depths [@geiping2025huginn]; @lu2025latentcot apply the logit lens to it and find its readability block-specific, the direct precedent for the raw-lens baseline here. @blayney2026mechanistic analyse the latent trajectories of looped models and report that many converge to layer-specific cyclic fixed points, with the recurrent block reproducing feedforward-like stages of inference; @popescu2026adaptive study adaptive depth in looped transformers and compare learned halting gates with confidence-based readouts of the trajectory. Neither measures a fixed readout at fixed physical depth across passes, which is the quantity the same-band comparison here reports.
+
+**Prior readouts on Ouro.** @kirin2026opi trains small supervised probes on frozen Ouro-RLTT trajectories to predict pre-answer success and candidate quality, and reports that recurrence moves where candidate quality can be read: early physical layers read weakly on the first pass and reach the late-layer basis by the third and fourth loops. Those probes are trained on task labels and read process quality; the readouts here are training-free and target annotated intermediate concepts on the base Ouro-2.6B checkpoint. The two results are complementary evidence that what can be read from Ouro at a given physical layer depends on the pass.
+
+**Why read latent passes.** Chain-of-thought monitoring relies on reasoning that is externalized as text, and @korbak2025monitorability argue that this monitorability is valuable and fragile. Models that compute in latent passes weaken that assumption, which is one reason to establish what a readout of those passes measures before anything is built on it. No monitor is built or evaluated here (Section 1).
+
+# 3. Readouts and measurement
+
+## 3.1 Model and fixed estimators
 
 The model is **ByteDance/Ouro-2.6B**, revision `1ed04250da1a9936042725d302e81c8fa2ab5abd` (not the Thinking or RLTT checkpoint), evaluated frozen in BF16 with four passes through 48 blocks, residual width 2,048 and a vocabulary of 49,152 tokens. I use one-based physical layers $\ell$ and pass numbers $r$; the stored zero-based virtual index is $v = 48(r-1) + (\ell-1)$. Ouro re-normalizes the residual stream at the end of every pass before carrying it into the next pass and before the shared output head, so a recorded state at the last block of a pass is the pre-normalization block output.
 
@@ -45,7 +55,7 @@ where $B_{r,\ell}$ is the frozen J-Lens matrix for that virtual layer. Ranking t
 
 Two further comparisons examine estimator specification. The **target control** changes the derivative target from the final block (virtual 191) to the penultimate block (190) while retaining final normalization and unembedding. The **position controls** place the cotangent at one uniformly drawn valid position $q$ per paragraph and keep all 2,048 derivative directions: *sampled-sum* sums the gradient over all valid source positions (its expectation over $q$ equals the dense estimator), whereas *diagonal* keeps only the source position $p=q$. These are distinct estimator constructions, all fitted on fit01's calibration paragraphs.
 
-## 2.2 Prompt, readout position and what counts as recovery
+## 3.2 Prompt, readout position and what counts as recovery
 
 Each question is one unfinished "Fact:" statement ending in a space; the intermediate concept is implied by the clue and never named, and the answer is the continuation. The model input is BOS plus the prompt tokens up to the boundary where the prompt's tokenization stops agreeing with the tokenization of prompt-plus-answer (in 131 of 160 items the trailing-space token merges into the answer's first token and is dropped); the readout position is the last input token, so every input token is causally visible to the scored state. There is no instruction, chat template, demonstration, prefilled response or padding; inputs are 13–35 tokens. Example (confirmation-001): "Fact: The planet whose sidereal rotation takes longer than its orbital period has an atmosphere dominated by" → readout at " by" (token 20), intermediate **Venus** (scored token 16293, " Venus"), answer "carbon dioxide", never shown.
 
@@ -68,9 +78,9 @@ This averages fixed-layer measurements; it does **not** ask whether a concept ap
 
 All effects below are in percentage points. Recovery rates are averages over item–layer cells, not the fraction of questions the model answers correctly. Subtracting control recovery makes the comparison more informative, but does not turn it into a causal test or a calibrated measure of semantic correctness.
 
-# 3. From discovery to a frozen new-question test
+# 4. From discovery to a frozen new-question test
 
-## 3.1 What the discovery work established
+## 4.1 What the discovery work established
 
 The discovery evaluation contained 90 eligible multihop items (100 labels) and 51 arithmetic items from the released lens-eval sets. Fixed-layer analysis showed that the early multihop loss was not merely an artifact of allowing the raw lens to recover a concept at a favourable late layer: the disadvantage remained in the middle of the stack. Arithmetic was mixed.
 
@@ -82,7 +92,7 @@ That was evidence about calibration variability on the **same questions**, not a
 
 \kirinfigcaption{Figure 1.}{Discovery population: fit01–fit05 minus raw, fixed-layer excess hit@10 for the 90 eligible multihop items, all four passes. Thin lines are the five fits, the bold line their mean, shading the crossed fit/item pointwise 95\% interval (not simultaneous). Pale red: layers 26–37, selected here and later frozen; grey: final third. The open point at layer 48 is the identity endpoint.}
 
-## 3.2 Confirmation population and inference
+## 4.2 Confirmation population and inference
 
 The confirmation set contains **160 two-hop questions, 80 intermediate concepts, two questions per concept**, in ten domains of eight concepts (arts and music, astronomy, biology, chemistry, countries, environment and geology, historical people, landforms, SI units, technology). All 160 were eligible; none of the 80 intermediate concepts appears in the discovery set. The alias audit found one exact metadata collision — "N", recorded as an alias of Newton, against the historical label "N" — which is not among the scored forms; no other alias collides. Construction and annotation were blind to method outcomes; factual hops, novelty and control hygiene were reviewed independently before the local freeze.
 
@@ -94,9 +104,9 @@ The primary interval uses **20,000 bootstrap resamples of whole dependency group
 
 **Dependency groups.** Items are joined into a group when they share an intermediate (or its aliases), an underlying fact, a concrete entity-substitution template (the same typed clue → entity → requested-slot construction, such as element clue → element → atomic number), or a normalized final answer or alias code. The 28 connected components have sizes 42, 24, 16, 10, 10, 6, four of 4 and eighteen of 2; the weight-based effective group count is $160^2/\sum_g n_g^2 = 8.63$. The largest group joins the 16 chemistry items (element→atomic-number and element→symbol templates) and the 16 SI-unit items (unit→symbol and unit→quantity templates) through tungsten's and Watt's shared answer "W", with three small clusters (Alps/Andes/Borneo; nucleus; ozone) attached by the small-integer answers "2" and "3". Leaving out any single group keeps the estimate between 19.73 and 24.87 points (low end without the 16 country items, high end without the 42-item group). The effective count is a weight summary, not a literal number of independent observations, and the grouping does not certify the absence of other dependence.
 
-# 4. Results on new questions
+# 5. Results on new questions
 
-## 4.1 The fixed final-pass advantage transfers
+## 5.1 The fixed final-pass advantage transfers
 
 ::: {.resultbox title="Result 1 --- the frozen pass-4 band transfers to new questions"}
 
@@ -120,7 +130,7 @@ The intended-recovery difference is **23.49 points** (16.62–33.16, descriptive
 
 \kirinfigcaption{Figure 2.}{Confirmation population, fixed-layer curves for all four passes. Top: fit01 − raw (solid) and fit02 − raw (dashed) paired excess difference per layer, with the descriptive group-bootstrap pointwise 95\% band for fit01. Bottom: intended recovery for fit01 (red) and the raw lens (grey), with control recovery dotted. Pale red: the frozen primary band. Only the band mean carries the prospective inference.}
 
-## 4.2 The early-pass deficit transfers, including in the same physical band
+## 5.2 The early-pass deficit transfers, including in the same physical band
 
 All six prespecified early-pass comparisons remain negative on the new population (Table 2).
 
@@ -153,7 +163,7 @@ Layers 26–37 show a deficit in each early pass whose simultaneous interval (a 
 
 \kirinfigcaption{Figure 3.}{Layers 26–37 in every pass on the confirmation population. (a) Paired fit01 − raw excess difference; passes 1–3 (open circles) carry the post-confirmation simultaneous 95\% interval of family N1, pass 4 (filled square) the original prospective percentile interval. (b) Intended recovery by method.}
 
-## 4.3 The estimator specification matters
+## 5.3 The estimator specification matters
 
 The control comparisons transfer to the new questions (Table 4, Figure 4).
 
@@ -175,9 +185,9 @@ Changing the derivative target by one block reduces the advantage substantially;
 
 ![Band contrasts](figures_v3/fig4_contrasts.pdf)
 
-\kirinfigcaption{Figure 4.}{Pass-4 band contrasts; the dashed vertical line marks zero difference. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 4.4, family N1).}
+\kirinfigcaption{Figure 4.}{Pass-4 band contrasts; the dashed vertical line marks zero difference. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 5.4, family N1).}
 
-## 4.4 Post-confirmation reviewer checks
+## 5.4 Post-confirmation reviewer checks
 
 Three further analyses were specified on the already-used confirmation data after the confirmation; they are reported separately and do not alter the primary endpoint.
 
@@ -185,9 +195,9 @@ Three further analyses were specified on the already-used confirmation data afte
 
 **Tokenized-input overlap.** For every item, every scored token of the intended label and of all 79 controls was compared with the exact model input. No intended-label token appears in any input. Six control tokens do, in six items: "Voyager" in three astronomy prompts, "Chile" in an Andes prompt, "Egypt" in a Nile prompt, and the lower-case form "io" as a token inside "Fidelio". Dropping those controls for the affected items (both methods; 78 controls for six items) gives 23.19 points (16.25–32.72); dropping the six items gives 22.90 points (15.92–33.15). Lexical word-level mentions without scored-token overlap occur once more ("newton" in a pascal item). Zero token overlap does not establish absence of semantic clues or of the facts from pretraining; the prompts are designed to imply the intermediate.
 
-**Grouping.** The rule, memberships and the composition of the 42-item group are given in Section 3.2 and the reviewer ledger; no alternative grouping was constructed.
+**Grouping.** The rule, memberships and the composition of the 42-item group are given in Section 4.2 and the reviewer ledger; no alternative grouping was constructed.
 
-# 5. Numerical verification
+# 6. Numerical verification
 
 ::: {.auditbox title="Audit note --- post-confirmation, not prospectively registered"}
 
@@ -210,7 +220,7 @@ CPU and GPU FP64 computations gave identical ranks, hits and top-ten sets (value
 
 A separately implemented checker (a separate coding agent working from a specification, without producer code) reconstructed the saved analysis to within $9\times10^{-16}$ and detected all 13 planted errors in isolated fixtures. "Independent" here means a separate implementation, not replication by another laboratory.
 
-# 6. Local-exit targets: a conditional comparison, partly blocked
+# 7. Local-exit targets: a conditional comparison, partly blocked
 
 The main bank targets the final pass, so early-pass states are far from its target: a pass-1 state at layer 30 is 162 blocks and three pass-boundary normalizations away from virtual layer 191. One explanation of the early deficit is therefore transport distance rather than a property of early-pass representations. The intended test evaluates the same stored early-pass confirmation states with the raw lens, a J-Lens targeting the current pass's own exit, and the final-target J-Lens, in layers 26–37 of passes 1–3.
 
@@ -228,7 +238,7 @@ The initial-study banks were all applied to the 148 discovery items in one evalu
 
 **Interpretation.** Within the rules fixed before these numbers were computed, this is the case in which the local target beats both alternatives: a target-dependent early-pass advantage, consistent with a transport explanation. It is not proof that averaging destroyed information; it is on the population on which the band was selected; it uses the older 12-article calibration and a different batch setting; the intervals are descriptive; and it has not been tested on the confirmation population. Two existing qualifications remain: shortening the final target by one block (the penultimate control) reduced the late gain, so transport distance alone is not established, and raw pass counts are not comparable transport lengths across architectures. The two observations are jointly consistent with a narrower hypothesis, not tested here: that the estimator reads well when its derivative target is an exit state — the tensor the shared head actually reads after the pass-end normalization — and degrades with distance from the nearest such target, so that moving the target off an exit by one block can cost more than moving the source a full pass away from it. That hypothesis predicts that a lens targeting the penultimate block of an early pass would read that pass worse than one targeting the pass's own exit; the retained banks do not include such a control. The historical Huginn pilot (Appendix A) did not identify a cause or rule out supervision-based explanations.
 
-# 7. Interpretation and limits
+# 8. Interpretation and limits
 
 The supported result is a **localized improvement in reading annotated intermediate concepts from fixed Ouro states**: a specific final-pass band, one frozen estimator, transferred to new questions and concepts without refitting or band selection. The same band in the earlier passes shows the opposite sign, so the method is not uniformly better as computation proceeds, and the source of the measured gain is higher intended-concept recovery; the excess score is sensitive to the control set, with within-domain controls reducing the advantage by 2.39 points while leaving it positive.
 
@@ -236,13 +246,15 @@ One possible explanation for the strong raw baseline is Ouro's training objectiv
 
 Recovery is not use. In exploratory checks a lens recovered a labelled intermediate on questions the model answered incorrectly, and native exits can agree while their readouts disagree sharply (Appendix A).
 
+**No tuned lens.** The comparison includes the two training-free readouts and no learned alternative. A tuned lens fits a per-layer map to the model's output distribution [@belrose2023tunedlens]; it asks whether a trained probe can predict the output from an intermediate state, whereas the question here is whether a fixed Jacobian transport recovers intermediate content that the head the model was trained with misses. The two questions have different reference points, and the J-Lens authors report that the tuned lens tends to skip ahead to the output on prompts with unverbalized intermediates [@gurnee2026workspace]. A tuned-lens arm on the frozen band, twelve layers in each of four passes, would show whether a data-trained map recovers the same intermediates; it has not been run, and it is the first limitation of the present comparison.
+
 The main population limit is the small number of unequal dependency groups. The interval accounts for the declared grouping, not every possible shared fact, relation or template; the effective count of 8.63 warns against reading 160 related questions as 160 demonstrations. The relation mixture is not difficulty-matched, labels are restricted to accepted single-token forms, the domain heterogeneity is large, and the evidence concerns one checkpoint and two retained calibration fits. The study does not establish performance on arbitrary concepts, other models, or monitoring under adversarial pressure.
 
 ## Reproducibility and artifact availability
 
 The confirmation banks, states, scores, frozen inputs and code permit exact table reconstruction, rescoring from banks and states, and forward replay (not bit-identical off the RTX 5090). Complete refitting of the original estimators is not available: an earlier retrieval failure and a later storage purge destroyed unique historical artifacts, including all four Ouro FP32 fitting checkpoints, the historical discovery-evaluation state cache, the truncated Huginn checkpoint and the merged files of the initial-study local-exit banks (43 purged local paths, 33 distinct contents, with no copy found and no verified derivation). A further 19 purged paths (15 distinct contents), including the local-exit bank shards, are unresolved: local records point to previously uploaded copies in a private remote repository whose current availability has not been verified here. Knowing the recipe does not restore those checkpoints, and the Huginn pilot is retained only at the saved-output level. On 11 September 2026 a copy-only archive of every surviving file (16,200 files, 52.15 GB, every byte re-hashed on the destination) was written to one external SSD and restoration-tested from that SSD alone with the laptop's paths hidden and no network: the frozen code matched its freeze, all four bank files loaded, the frozen analysis reproduced the primary and all twenty secondary contrasts exactly, and raw and fit01 rescoring from the archived states and weights reproduced the saved ranks bit for bit. Until a second destination exists it is a single-copy archive, not a redundant backup. The frozen records, code, compact results, figures and this manuscript are published in the repository <https://github.com/VykosMolt/JLens-Ouro> (research directory; files of 50 MB or more, including the banks and state caches, are listed there with hashes but not stored). No DOI exists at the time of writing.
 
-# 8. Conclusion
+# 9. Conclusion
 
 The final-target J-Lens underperforms raw readout in Ouro's first three passes, including in the very layers where it outperforms raw in the fourth, and recovers more annotated intermediate content in a fixed region of the final pass. That advantage transferred to new questions and concepts and survives the measured numerical variations and control redefinitions. Its size depends strongly on the derivative target and the position aggregation, and retained discovery-set readouts suggest that a lens targeting the pass's own exit reads early passes far better than the final-target lens, so the early deficit belongs to the estimator's target rather than to the passes; that comparison awaits the confirmation population. The finding is about where a particular readout works, not about general superiority, successful reasoning or causal control.
 
@@ -270,7 +282,7 @@ The original confirmation freeze is unchanged. Two separately recorded correctio
 
 The numerical results use the accepted BF16 endpoint as primary; FP64, alternate packing, tie handling and regenerated states are sensitivity checks. For diagonal minus raw, the accepted estimate is +5.95 points with simultaneous interval −0.34 to +12.24; FP64 gives −0.40 as lower bound and regenerated states +0.04, which is why its support is described as borderline.
 
-**Post-confirmation reviewer family (Sections 4.2 and 4.4).** Exactly four new inferential contrasts were fixed in a dated plan before computation: the within-domain paired excess difference in the pass-4 band and the same-band paired differences in passes 1–3. They share one centered bootstrap max-$t$ 95% family (20,000 whole-group draws, seed 2026091101, quantile 2.639). Every other new quantity is descriptive. The overlap sensitivities and the local-exit discovery-population summary are descriptive.
+**Post-confirmation reviewer family (Sections 5.2 and 5.4).** Exactly four new inferential contrasts were fixed in a dated plan before computation: the within-domain paired excess difference in the pass-4 band and the same-band paired differences in passes 1–3. They share one centered bootstrap max-$t$ 95% family (20,000 whole-group draws, seed 2026091101, quantile 2.639). Every other new quantity is descriptive. The overlap sensitivities and the local-exit discovery-population summary are descriptive.
 
 **Records.** Confirmation run `ouro_confirmation_20260911_fixed160_native1`; frozen plan, benchmark and freeze receipt under `research/confirmation_2026-09-09/`; verification under `research/verification_2026-09-11/` (`FINAL_VERIFICATION.md`, `REPORT_confirmation_verified.md`, `RUN_SPECIFICATION.json`); this round's reviewer checks, methods ledger, numerical source ledger and archive receipt under `research/closeout_2026-09-11/`. These are project provenance identifiers, not public links.
 
@@ -300,7 +312,7 @@ The numerical results use the accepted BF16 endpoint as primary; FP64, alternate
 - **Calibration and fitting.** 100 WikiText-103 paragraphs per fit (fit01–05 seeds 2026090701–05; paragraph-disjoint; 100/99/99/100/100 distinct articles), inputs of 128 tokens including BOS (six shorter), valid positions 16 to len−2, cotangent summed over valid target positions and gradient averaged over valid source positions, FP32 sum over paragraphs divided by 100, FP16 storage, 8 output directions per backward pass with CUDA-graph replay (bit-parity verified), RTX 5090.
 - **Controls.** Penultimate: target virtual 190, sources 0–189. Positions: one uniform $q$ per paragraph (seed 2026090801), sampled-sum = $\sum_p \partial h_{191}[q]/\partial h_v[p]$ (no divisor), diagonal = $\partial h_{191}[q]/\partial h_v[q]$, from one backward stream. Matched supports for contrasts: band 26–37 for all arms; final-third intersections 176–189 (target control) and 176–190 (position controls).
 - **Banks.** fit01 `90f01f6a…`, fit02 `101f31db…` (byte-exact reconstruction from its intact checkpoint), penultimate `dc6354df…`, positions `b8e8b7d2…` (both position arms); four files, five bank arms, six evaluated arms.
-- **Initial-study family (Section 6).** Same estimator with the first 100 historical paragraphs (12 articles), 32 directions per backward pass, B300 pod; targets 47, 95, 143, 191.
+- **Initial-study family (Section 7).** Same estimator with the first 100 historical paragraphs (12 articles), 32 directions per backward pass, B300 pod; targets 47, 95, 143, 191.
 
 \kirinpart{Appendix D}{Contribution and AI-assistance statement}
 

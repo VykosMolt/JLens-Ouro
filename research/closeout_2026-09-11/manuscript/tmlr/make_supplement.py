@@ -100,12 +100,12 @@ paper from the included compact readouts (`data/accepted_payload`) with the incl
 
 | Paper | Files |
 |---|---|
-| Sections 2, 3.2, Appendix C: model, estimators, prompts, scoring, fitting recipe, freeze | `reports/confirmation_2026-09-09/PROSPECTIVE_PLAN.md`, `FREEZE.json`, `corrections/`, `data/accepted_payload/run_spec.json`, `benchmark.json`, `population.json`, `methods/METHODS_COMPLETION.md`, `methods/EXAMPLES.md`, `code/frozen_evaluation`, `code/frozen_ouro_jlens`, `code/frozen_jlens` |
-| Section 3.1, Figure 1: discovery and independent refits | `reports/followup_2026-09-07/`, `reports/refit_round_2026-09-07/`, `data/refit/`, `data/followup/`, `manuscript/figure_data/discovery_five_fit_curves.csv` |
-| Section 4.1-4.3, Tables 1-4, Figures 2-4: confirmation results | `reports/confirmation_2026-09-09/REPORT.md`, `CLAIMS.md`, `results/.../analysis/analysis.json`, `data/accepted_payload/readouts/*.npz`, `manuscript/figure_data/` |
-| Section 4.4, Table 3, Figures 3-4: post-confirmation reviewer checks | `reviewer_checks/ANALYSIS_PLAN.md` (frozen before computation), `REVIEWER_CHECKS.md`, `RESULTS.json`, `PER_ITEM.csv`, `OVERLAP_LEDGER.csv`, `GROUP_MEMBERSHIP.csv`, `run_checks.py` |
-| Section 5, Table 5, Appendix B: numerical verification | `reports/verification_2026-09-11/FINAL_VERIFICATION.md`, `report/`, `metrics/VERIFICATION_METRICS.json`, `checker/`, `reviews/`, `RUN_SPECIFICATION.json` |
-| Section 6, Figure 5: local-exit targets on the discovery population | `local_exit/LOCAL_EXIT_STATUS.md`, `LOCAL_EXIT_BANK_INVENTORY.json`, `DISCOVERY_POPULATION_FIXED_BAND.json`, `discovery_population_curves.csv`, `data/initial_study/`, `reports/initial_study/` |
+| Sections 3, 4.2, Appendix C: model, estimators, prompts, scoring, fitting recipe, freeze | `reports/confirmation_2026-09-09/PROSPECTIVE_PLAN.md`, `FREEZE.json`, `corrections/`, `data/accepted_payload/run_spec.json`, `benchmark.json`, `population.json`, `methods/METHODS_COMPLETION.md`, `methods/EXAMPLES.md`, `code/frozen_evaluation`, `code/frozen_ouro_jlens`, `code/frozen_jlens` |
+| Section 4.1, Figure 1: discovery and independent refits | `reports/followup_2026-09-07/`, `reports/refit_round_2026-09-07/`, `data/refit/`, `data/followup/`, `manuscript/figure_data/discovery_five_fit_curves.csv` |
+| Sections 5.1-5.3, Tables 1-4, Figures 2-4: confirmation results | `reports/confirmation_2026-09-09/REPORT.md`, `CLAIMS.md`, `results/.../analysis/analysis.json`, `data/accepted_payload/readouts/*.npz`, `manuscript/figure_data/` |
+| Section 5.4, Table 3, Figures 3-4: post-confirmation reviewer checks | `reviewer_checks/ANALYSIS_PLAN.md` (frozen before computation), `REVIEWER_CHECKS.md`, `RESULTS.json`, `PER_ITEM.csv`, `OVERLAP_LEDGER.csv`, `GROUP_MEMBERSHIP.csv`, `run_checks.py` |
+| Section 6, Table 5, Appendix B: numerical verification | `reports/verification_2026-09-11/FINAL_VERIFICATION.md`, `report/`, `metrics/VERIFICATION_METRICS.json`, `checker/`, `reviews/`, `RUN_SPECIFICATION.json` |
+| Section 7, Figure 5: local-exit targets on the discovery population | `local_exit/LOCAL_EXIT_STATUS.md`, `LOCAL_EXIT_BANK_INVENTORY.json`, `DISCOVERY_POPULATION_FIXED_BAND.json`, `discovery_population_curves.csv`, `data/initial_study/`, `reports/initial_study/` |
 | Appendix A: exploratory findings and Huginn pilot | `reports/followup_2026-09-07/results/`, `probe/`, `reports/refit_round_2026-09-07/analysis/HUGINN_COMPARISON_CONTRACT.md`, `data/refit/huginn_run01/` |
 | Every number in the paper | `manuscript/ledgers/SOURCE_TO_MANUSCRIPT_LEDGER.md` (value -> record path), `SOURCE_VALUES.json` |
 | Figures | `manuscript/figures/*.pdf` (as in the paper), `manuscript/figure_data/*.csv` |

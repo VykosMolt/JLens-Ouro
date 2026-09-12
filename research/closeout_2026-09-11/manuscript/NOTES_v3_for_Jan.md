@@ -27,3 +27,7 @@ Your `~/Downloads/JLens_Ouro_Third_Draft.md` (saved 01:05) was ahead of the repo
 ## Layout rules (12 September, second pass)
 
 Pandoc emits every table as a `longtable`, which breaks across pages; the Lua filter now rewrites each table as a plain `tabular` and wraps table-or-figure plus its `\kirinfigcaption` in one `minipage`, so neither a table nor a figure is ever separated from its caption or split. The kirin boxes are set `unbreakable` in the wrapper (your `boxes.tex` is untouched), and `\kirinpart` asks for ten lines of room so a part heading cannot sit alone at a page foot. Cost: some pages end early (5 and 6 in this build) because the next block did not fit whole.
+
+## Related work and renumbering (12 September, after the pre-submission review)
+
+Section 2 is now "Related work" (readouts of intermediate states; looped and recurrent-depth models; prior readouts on Ouro, citing OPI in the third person; why read latent passes). Sections 2-8 became 3-9 and every in-text "Section N" was updated; the TMLR build verifies heading numbers against LaTeX, and I listed every in-text reference by hand after the change. The limits section opens with a "No tuned lens" paragraph. All six new references were checked against their source pages before being added.

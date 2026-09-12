@@ -75,15 +75,68 @@ recovered content.
 
 \paragraph{Organization.}
 
-Section 2 defines the two readouts, the fitting recipe as executed, and
-the score. Section 3 separates the discovery work, which selected the
-band, from the frozen new-question test. Section 4 gives the
-confirmation result, then the post-confirmation reviewer analyses in
-their own subsection. Section 5 is the numerical verification, Section 6
-the partly blocked local-exit comparison, Section 7 the limits. Appendix
-A keeps the exploratory and Huginn material apart from the confirmation;
+Section 2 places the study among readout and looped-model work. Section
+3 defines the two readouts, the fitting recipe as executed, and the
+score. Section 4 separates the discovery work, which selected the band,
+from the frozen new-question test. Section 5 gives the confirmation
+result, then the post-confirmation reviewer analyses in their own
+subsection. Section 6 is the numerical verification, Section 7 the
+partly blocked local-exit comparison, Section 8 the limits. Appendix A
+keeps the exploratory and Huginn material apart from the confirmation;
 Appendix B is the verification provenance and claim-status table;
 Appendix C the executed method settings.
+
+\section{Related work}\label{related-work}
+
+\textbf{Readouts of intermediate states.} The logit lens applies a
+model's output head to an intermediate residual state
+\citep{nostalgebraist2020logitlens}. The tuned lens replaces the head by
+an affine probe per block, trained to match the model's output
+distribution \citep{belrose2023tunedlens}. The Jacobian lens
+\citep{gurnee2026workspace} instead transports an intermediate state to
+the final layer with the average input--output Jacobian over a
+calibration corpus and decodes it with the model's own unembedding; its
+authors report that on prompts with unverbalized intermediate
+computation the tuned lens tends to skip ahead to the output, and they
+find it less useful than either the logit lens or the Jacobian lens for
+inspecting internal computation. This paper compares only the two
+training-free readouts, the raw lens and J-Lens; Section 8 states why no
+tuned lens was fitted.
+
+\textbf{Looped and recurrent-depth models.} Ouro applies one shared
+block stack over recurrent passes and trains it with weighted next-token
+losses at pass boundaries through one shared head \citep{zhu2025ouro}.
+Huginn trains a recurrent core between a prelude and a coda after
+sampled recurrence depths \citep{geiping2025huginn};
+\citet{lu2025latentcot} apply the logit lens to it and find its
+readability block-specific, the direct precedent for the raw-lens
+baseline here. \citet{blayney2026mechanistic} analyse the latent
+trajectories of looped models and report that many converge to
+layer-specific cyclic fixed points, with the recurrent block reproducing
+feedforward-like stages of inference; \citet{popescu2026adaptive} study
+adaptive depth in looped transformers and compare learned halting gates
+with confidence-based readouts of the trajectory. Neither measures a
+fixed readout at fixed physical depth across passes, which is the
+quantity the same-band comparison here reports.
+
+\textbf{Prior readouts on Ouro.} \citet{kirin2026opi} trains small
+supervised probes on frozen Ouro-RLTT trajectories to predict pre-answer
+success and candidate quality, and reports that recurrence moves where
+candidate quality can be read: early physical layers read weakly on the
+first pass and reach the late-layer basis by the third and fourth loops.
+Those probes are trained on task labels and read process quality; the
+readouts here are training-free and target annotated intermediate
+concepts on the base Ouro-2.6B checkpoint. The two results are
+complementary evidence that what can be read from Ouro at a given
+physical layer depends on the pass.
+
+\textbf{Why read latent passes.} Chain-of-thought monitoring relies on
+reasoning that is externalized as text, and
+\citet{korbak2025monitorability} argue that this monitorability is
+valuable and fragile. Models that compute in latent passes weaken that
+assumption, which is one reason to establish what a readout of those
+passes measures before anything is built on it. No monitor is built or
+evaluated here (Section 1).
 
 \section{Readouts and measurement}\label{readouts-and-measurement}
 
@@ -465,7 +518,7 @@ sampled-sum-minus-diagonal comparison is the clearer result.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures_v3/fig4_contrasts.pdf}
-\caption{Pass-4 band contrasts; the dashed vertical line marks zero difference. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 4.4, family N1).}\label{fig:4}
+\caption{Pass-4 band contrasts; the dashed vertical line marks zero difference. Black square: the prospective primary (percentile interval). Red circles: contrasts of the original 20-member simultaneous family. Teal diamond: the post-confirmation within-domain-control contrast (Section 5.4, family N1).}\label{fig:4}
 \end{figure}
 
 \subsection{Post-confirmation reviewer
@@ -515,7 +568,7 @@ facts from pretraining; the prompts are designed to imply the
 intermediate.
 
 \textbf{Grouping.} The rule, memberships and the composition of the
-42-item group are given in Section 3.2 and the reviewer ledger; no
+42-item group are given in Section 4.2 and the reviewer ledger; no
 alternative grouping was constructed.
 
 \section{Numerical verification}\label{numerical-verification}
@@ -679,6 +732,20 @@ Recovery is not use. In exploratory checks a lens recovered a labelled
 intermediate on questions the model answered incorrectly, and native
 exits can agree while their readouts disagree sharply (Appendix A).
 
+\textbf{No tuned lens.} The comparison includes the two training-free
+readouts and no learned alternative. A tuned lens fits a per-layer map
+to the model's output distribution \citep{belrose2023tunedlens}; it asks
+whether a trained probe can predict the output from an intermediate
+state, whereas the question here is whether a fixed Jacobian transport
+recovers intermediate content that the head the model was trained with
+misses. The two questions have different reference points, and the
+J-Lens authors report that the tuned lens tends to skip ahead to the
+output on prompts with unverbalized intermediates
+\citep{gurnee2026workspace}. A tuned-lens arm on the frozen band, twelve
+layers in each of four passes, would show whether a data-trained map
+recovers the same intermediates; it has not been run, and it is the
+first limitation of the present comparison.
+
 The main population limit is the small number of unequal dependency
 groups. The interval accounts for the declared grouping, not every
 possible shared fact, relation or template; the effective count of 8.63
@@ -815,7 +882,7 @@ with simultaneous interval −0.34 to +12.24; FP64 gives −0.40 as lower
 bound and regenerated states +0.04, which is why its support is
 described as borderline.
 
-\textbf{Post-confirmation reviewer family (Sections 4.2 and 4.4).}
+\textbf{Post-confirmation reviewer family (Sections 5.2 and 5.4).}
 Exactly four new inferential contrasts were fixed in a dated plan before
 computation: the within-domain paired excess difference in the pass-4
 band and the same-band paired differences in passes 1--3. They share one
@@ -929,7 +996,7 @@ ledger}\label{executed-settings-with-their-record-sources-in-the-methods-ledger}
   \texttt{dc6354df…}, positions \texttt{b8e8b7d2…} (both position arms);
   four files, five bank arms, six evaluated arms.
 \item
-  \textbf{Initial-study family (Section 6).} Same estimator with the
+  \textbf{Initial-study family (Section 7).} Same estimator with the
   first 100 historical paragraphs (12 articles), 32 directions per
   backward pass, B300 pod; targets 47, 95, 143, 191.
 \end{itemize}

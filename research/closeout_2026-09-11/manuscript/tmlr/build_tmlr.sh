@@ -93,13 +93,14 @@ for k in range(1, 7):
     if labels.get(f'tab:{k}') != str(k): ok = False; print('  table mismatch', k, labels.get(f'tab:{k}'))
 for k in range(1, 6):
     if labels.get(f'fig:{k}') != str(k): ok = False; print('  figure mismatch', k, labels.get(f'fig:{k}'))
-for L in 'ABC':
+for L in 'ABC':  # appendices
     if labels.get(f'app:{L}') != L: ok = False; print('  appendix mismatch', L, labels.get(f'app:{L}'))
 for v in ('submission', 'preprint'):
     p1 = subprocess.run(['pdftotext', '-f', '1', '-l', '1', f'tmlr/JLens_Ouro_TMLR_{v}.pdf', '-'], capture_output=True, text=True).stdout
     if 'AI assistance.' not in p1: ok = False; print(f'  {v}: AI-assistance footnote not on page 1')
 full = subprocess.run(['pdftotext', 'tmlr/JLens_Ouro_TMLR_submission.pdf', '-'], capture_output=True, text=True).stdout
-leaks = re.findall(r'Kirin|Vykos|github|illja|esterhazy|MATS', full, re.I)
+scrub = re.sub(r'Kirin \(2026\)|\(Kirin, 2026\)|Jan Kirin\.\s+Operational proto-introspection', '', full, flags=re.I)  # third-person self-citation is allowed
+leaks = re.findall(r'Kirin|Vykos|github|illja|esterhazy|MATS', scrub, re.I)
 if leaks: ok = False; print('  submission PDF leaks:', sorted(set(leaks)))
 if 'Appendix D' in full: ok = False; print('  submission PDF still mentions Appendix D')
 print('checks passed: cross-reference numbering, first-page footnote, anonymity' if ok else 'CHECKS FAILED'); sys.exit(0 if ok else 1)
