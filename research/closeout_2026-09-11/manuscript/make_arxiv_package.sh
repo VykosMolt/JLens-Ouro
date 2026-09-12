@@ -66,7 +66,7 @@ Built $(date -u +%Y-%m-%dT%H:%MZ) by \`make_arxiv_package.sh\` from commit $(git
 
 ## Metadata for the submission form
 
-- Title: Final-Target J-Lens in Ouro: Early-Pass Deficits and a Confirmed Late-Pass Advantage
+- Title: J-Lens in Ouro: A Confirmed Late-Pass Band and a Target-Dependent Early-Pass Deficit
 - Author: Jan Kirin
 - Comments: $PAGES pages, 5 figures, 6 tables. Code and records: https://github.com/VykosMolt/JLens-Ouro
 - Abstract (${#ABSTRACT} characters; arXiv's limit is 1,920):

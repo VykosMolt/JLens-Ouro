@@ -37,7 +37,7 @@ cat <<PRE
 \\newcommand{\\statusRetracted}{\\textsc{Retracted}}
 \\newcommand{\\statusHistorical}{\\textsc{Historical}}
 \\newcommand{\\statusCorrected}{\\textsc{Corrected}}
-\\title{Final-Target J-Lens in Ouro: Early-Pass Deficits and a Confirmed Late-Pass Advantage}
+\\title{J-Lens in Ouro: A Confirmed Late-Pass Band and a Target-Dependent Early-Pass Deficit}
 PRE
 }
 {
