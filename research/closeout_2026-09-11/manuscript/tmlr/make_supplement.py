@@ -93,11 +93,15 @@ the provenance, freeze and inventory files. The paper calls the first round of w
 
 ## Verify
 
-    python3 verify_supplement.py        # needs only numpy
+    python3 verify_supplement.py                                        # needs only numpy
+    python3 local_exit/confirmation_2026-09-12/verify_own_exit_family.py   # needs only numpy
 
-Rehashes every file against `MANIFEST.json`, then rebuilds the primary endpoint and all twenty secondary contrasts of the
-paper from the included compact readouts (`data/accepted_payload`) with the included frozen analysis code
-(`code/frozen_evaluation`, `code/frozen_analysis`) and compares the result with the saved `analysis.json`.
+The first rehashes every file against `MANIFEST.json`, then rebuilds the primary endpoint and all twenty secondary
+contrasts of the paper from the included compact readouts (`data/accepted_payload`) with the included frozen analysis
+code (`code/frozen_evaluation`, `code/frozen_analysis`) and compares the result with the saved `analysis.json`. The
+second is a separate NumPy-only implementation of the six-contrast own-exit family of Section 7 (excess score,
+whole-group bootstrap, max-t interval) that recomputes Table 6 from the stored rank arrays and compares with
+`local_exit/confirmation_2026-09-12/RESULTS.json`.
 
 ## Where each part of the paper is supported
 
@@ -170,9 +174,10 @@ def main():
         with zipfile.ZipFile(ZIP) as z:
             assert all(not (i.filename.startswith('/') or '..' in i.filename) for i in z.infolist()); z.extractall(td)
         root = Path(td) / 'JLens_Ouro_supplement'
-        r = subprocess.run([PY, '-B', 'verify_supplement.py'], cwd=root, capture_output=True, text=True)
-        print(r.stdout.strip()); 
-        if r.returncode != 0: print(r.stderr[-2000:]); sys.exit('verifier failed on the extracted zip')
+        for cmd in (['verify_supplement.py'], ['local_exit/confirmation_2026-09-12/verify_own_exit_family.py']):
+            r = subprocess.run([PY, '-B', *cmd], cwd=root, capture_output=True, text=True)
+            print(r.stdout.strip())
+            if r.returncode != 0: print(r.stderr[-2000:]); sys.exit(f'{cmd[0]} failed on the extracted zip')
         rescan = [str(p) for p in root.rglob('*') if p.is_file() and p.suffix.lower() in TEXT_SUFFIXES and FORBIDDEN.search(p.read_text(encoding='utf-8', errors='ignore'))]
         assert not rescan, rescan
     print(f'zip: {ZIP} {size:,} bytes ({size/1e6:.1f} MB; TMLR limit 100 MB); files {len(entries)} ({n_text} text redacted, {n_bin} binary); sha256 {sha(ZIP)}')

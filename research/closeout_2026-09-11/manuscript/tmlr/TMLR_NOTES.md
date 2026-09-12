@@ -36,3 +36,9 @@ Content is the same text, paragraph for paragraph. Only the presentation differs
 - Gurnee et al. reference: `month = jul`, prints "July 2026".
 - The arXiv Appendix D and the TMLR footnote name the same activities (review, editing, bug fixes, verification, archiving; implementation, analysis, figures and drafting of the follow-up experiments).
 - On the OpenReview form, consider requesting the Reproducibility Certification.
+
+## Second review pass (12 September, after the own-exit result)
+
+- Two factual corrections applied: the Section 7 interpretation no longer claims that pass-4 agreement between the families bounds calibration effects in earlier passes (the within-family comparison is the control; the pass-4 agreement is a descriptive observation), and the related-work and limits sentences now describe the tuned lens as a learned per-layer affine map applied before the fixed unembedding rather than a replacement of the head.
+- `local_exit/confirmation_2026-09-12/verify_own_exit_family.py`: NumPy-only reimplementation of the six-contrast family (excess score, whole-group bootstrap in the same draw structure, max-t interval); reproduces every estimate and interval endpoint of Table 6 to 1e-12. Shipped in the supplement, listed in its README, and run on the extracted zip by `make_supplement.py`.
+- Main text runs past twelve pages (references begin on page 13 of 17). TMLR permits it but applies its longer review timetable to submissions over twelve main-text pages; shortening, if wanted, should move operational detail out rather than compress the layout.
