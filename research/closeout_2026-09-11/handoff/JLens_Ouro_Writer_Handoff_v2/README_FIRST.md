@@ -9,7 +9,7 @@ Assembled 2026-09-11 from the actual J-Lens research checkout (`/home/moloch/jac
 3. `03_local_exit/LOCAL_EXIT_STATUS.md` — bank inventory, the precise blocker (local-exit banks remote-only), the retrieval-first proposal, and the descriptive discovery-population comparison (`DISCOVERY_POPULATION_FIXED_BAND.json`).
 4. `04_methods/METHODS_COMPLETION.md` — prompt/tokenization/readout/hook/normalization details, fitting and control recipes, benchmark provenance, identifiers, chronology, availability; `EDITORIAL_NOTES_RESOLUTION.md`; `EXAMPLES.md` (real ID-selected items with token IDs).
 5. `01_reports/` — intact copies of the discovery (7 Sep), refit (7–9 Sep), confirmation (9–11 Sep), repaired-confirmation and final-verification reports, claims tables, freezes, amendments, claim-change log, incident and spending records, purge manifests.
-6. `06_manuscript/CONTRIBUTION_AI_ASSISTANCE.md` — fact sheet; items marked for Jan to confirm.
+6. Contribution and AI-assistance statement: Appendix D of the manuscript, written by the author (current text in draft three, `research/closeout_2026-09-11/manuscript/JLens_Ouro_Third_Draft.md`). The interim fact sheet was withdrawn by the author on 12 September 2026 and is no longer part of this package.
 7. `07_archive/` — SSD acceptance receipt, archive index and manifest, restoration result, exclusions/secrets flags, and the proposed purge allowlist (dry run).
 
 ## Round chronology

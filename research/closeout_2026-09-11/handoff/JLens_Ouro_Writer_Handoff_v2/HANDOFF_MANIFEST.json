@@ -1,7 +1,7 @@
 {
  "schema": "writer_handoff_manifest.v2",
- "files": 277,
- "bytes": 118692714,
+ "files": 276,
+ "bytes": 118687707,
  "entries": [
   {
    "path": "00_task/JLens_Remaining_Work_Prompt.md",
@@ -660,8 +660,8 @@
   },
   {
    "path": "04_methods/EDITORIAL_NOTES_RESOLUTION.md",
-   "bytes": 2935,
-   "sha256": "1767b7c2408d3b3d7df116da772eb7cf0033f2ad0885457c8b05a13cfabde06b"
+   "bytes": 2993,
+   "sha256": "70ae092636f8a68baadddb42cd999cd265c0552478b286a151e8c21cdae40f3a"
   },
   {
    "path": "04_methods/EXAMPLES.md",
@@ -1012,11 +1012,6 @@
    "path": "06_manuscript/v2/CHANGELOG.md",
    "bytes": 3746,
    "sha256": "66e992c812498f03ad1bef406f8a09591920d3269ae700136b04d4a17b8c6f7a"
-  },
-  {
-   "path": "06_manuscript/v2/CONTRIBUTION_AI_ASSISTANCE.md",
-   "bytes": 5275,
-   "sha256": "f7f717b66a05d9b5013c477aece491a2ab386c5b73bfed492a8cc60611770942"
   },
   {
    "path": "06_manuscript/v2/JLens_Ouro_Second_Draft.md",
@@ -1370,8 +1365,8 @@
   },
   {
    "path": "README_FIRST.md",
-   "bytes": 5769,
-   "sha256": "b5162624541ac3ce1c654902a3f6d40de336d128015818e8b569de26cac0ff7b"
+   "bytes": 5979,
+   "sha256": "fda127d8743f1eec7ad514e5fa3335155390013d75640df877bf82dbb6ae10c4"
   },
   {
    "path": "logs/build_archive.log",
