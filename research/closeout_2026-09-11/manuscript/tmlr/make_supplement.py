@@ -30,7 +30,9 @@ PLAN = [
     ('08_code', 'code', []),
     ('06_manuscript/figure_data', 'manuscript/figure_data', []),
     ('06_manuscript/ledgers', 'manuscript/ledgers', []),
+    (M.parents[0] / 'local_exit' / 'confirmation_2026-09-12', 'local_exit/confirmation_2026-09-12', ['retrieval.log', 'merge.log', 'evaluate.log', 'pipeline.log', 'run_pipeline.sh', '__pycache__']),
 ]
+REGENERABLE = ['item_statistics_and_resamples.npz', 'followup_2026-09-07/results/correctness.json']  # dropped for the 100 MB limit; the verifier rebuilds the resamples
 DROP_RENDERS_UNDER = 'reports/'   # .png renders of data that is present as csv/json
 TEXT_SUFFIXES = {'.md', '.json', '.csv', '.py', '.txt', '.stdout', '.log', '.tex', '.svg', '.toml', '.yaml', '.yml', '.lock', '.sh', '.cfg', '.ini', ''}
 SUBS = [  # order matters
@@ -61,11 +63,12 @@ def stage():
     STAGE.mkdir(parents=True)
     n_text = n_bin = 0
     for src_rel, dst_rel, excl in PLAN:
-        src = H / src_rel
+        src = src_rel if isinstance(src_rel, Path) else H / src_rel
         for p in sorted(src.rglob('*')):
             if not p.is_file(): continue
             rel = p.relative_to(src).as_posix()
-            if any(x in rel or x in (src_rel + '/' + rel) for x in excl): continue
+            if any(x in rel or x in (str(src_rel) + '/' + rel) for x in excl): continue
+            if any(x in (str(src_rel) + '/' + rel) for x in REGENERABLE): continue
             dst = STAGE / dst_rel / rel
             if dst_rel.startswith(DROP_RENDERS_UNDER) and p.suffix.lower() == '.png': continue
             dst.parent.mkdir(parents=True, exist_ok=True)
@@ -105,7 +108,7 @@ paper from the included compact readouts (`data/accepted_payload`) with the incl
 | Sections 5.1-5.3, Tables 1-4, Figures 2-4: confirmation results | `reports/confirmation_2026-09-09/REPORT.md`, `CLAIMS.md`, `results/.../analysis/analysis.json`, `data/accepted_payload/readouts/*.npz`, `manuscript/figure_data/` |
 | Section 5.4, Table 3, Figures 3-4: post-confirmation reviewer checks | `reviewer_checks/ANALYSIS_PLAN.md` (frozen before computation), `REVIEWER_CHECKS.md`, `RESULTS.json`, `PER_ITEM.csv`, `OVERLAP_LEDGER.csv`, `GROUP_MEMBERSHIP.csv`, `run_checks.py` |
 | Section 6, Table 5, Appendix B: numerical verification | `reports/verification_2026-09-11/FINAL_VERIFICATION.md`, `report/`, `metrics/VERIFICATION_METRICS.json`, `checker/`, `reviews/`, `RUN_SPECIFICATION.json` |
-| Section 7, Figure 5: local-exit targets on the discovery population | `local_exit/LOCAL_EXIT_STATUS.md`, `LOCAL_EXIT_BANK_INVENTORY.json`, `DISCOVERY_POPULATION_FIXED_BAND.json`, `discovery_population_curves.csv`, `data/initial_study/`, `reports/initial_study/` |
+| Section 7, Table 6, Figure 5: own-exit targets on the confirmation population | `local_exit/confirmation_2026-09-12/ANALYSIS_PLAN.md` (frozen before computation), `RESULTS.json`, `REPORT.md`, `PER_ITEM.csv`, `readouts/*.npz`, `RETRIEVAL_RECEIPT.json`, `MERGE_RECORD.json`, `UNEMBED_TENSORS_RECORD.json`, scripts; discovery-population precursor (Appendix A): `local_exit/DISCOVERY_POPULATION_FIXED_BAND.json`, `data/initial_study/`, `reports/initial_study/` |
 | Appendix A: exploratory findings and Huginn pilot | `reports/followup_2026-09-07/results/`, `probe/`, `reports/refit_round_2026-09-07/analysis/HUGINN_COMPARISON_CONTRACT.md`, `data/refit/huginn_run01/` |
 | Every number in the paper | `manuscript/ledgers/SOURCE_TO_MANUSCRIPT_LEDGER.md` (value -> record path), `SOURCE_VALUES.json` |
 | Figures | `manuscript/figures/*.pdf` (as in the paper), `manuscript/figure_data/*.csv` |

@@ -89,7 +89,7 @@ md = Path('JLens_Ouro_Third_Draft.md').read_text()
 for num, title in re.findall(r'^#{1,2} (\d+(?:\.\d+)?)\.? (.+)$', md, re.M):
     hit = [l for t, l in sec if t == norm(title)]; got = labels.get(hit[0]) if hit else None
     if got != num: ok = False; print('  section mismatch', num, got, title)
-for k in range(1, 7):
+for k in range(1, 8):
     if labels.get(f'tab:{k}') != str(k): ok = False; print('  table mismatch', k, labels.get(f'tab:{k}'))
 for k in range(1, 6):
     if labels.get(f'fig:{k}') != str(k): ok = False; print('  figure mismatch', k, labels.get(f'fig:{k}'))

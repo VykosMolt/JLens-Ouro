@@ -1,5 +1,7 @@
 # Local-exit targets: inventory, blocker, proposal, and what the retained data already show
 
+> **Update 2026-09-12.** Steps 1 and 2 of Section 3 were executed at the author's direction with the author's Hub credential: the 13 shards were retrieved and hash-verified, merged with the frozen procedure (the exit3 merge equals the pod merge entry for entry), and applied to the accepted confirmation states under the plan frozen in `confirmation_2026-09-12/ANALYSIS_PLAN.md`. All six contrasts exclude zero: own exit − final target +22.60 / +26.50 / +34.17 points and own exit − raw +16.41 / +18.32 / +23.18 points in passes 1–3 (simultaneous 95%). Results: `confirmation_2026-09-12/REPORT.md`, `RESULTS.json`. The blocker described below is resolved; the text below is kept as the dated record.
+
 Status 2026-09-11. Files: [LOCAL_EXIT_BANK_INVENTORY.json](LOCAL_EXIT_BANK_INVENTORY.json), [DISCOVERY_POPULATION_FIXED_BAND.json](DISCOVERY_POPULATION_FIXED_BAND.json), [discovery_population_curves.csv](discovery_population_curves.csv), [script](local_exit_inventory_and_discovery_summary.py). No lens was fitted and no paid resource was used.
 
 ## 1. Bank inventory

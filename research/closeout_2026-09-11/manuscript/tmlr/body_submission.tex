@@ -20,15 +20,15 @@ advantage remains positive with within-domain controls (20.8 points,
 scoring and a cross-hardware state replay (changes of at most 0.42
 points), but it depends strongly on the estimator: changing the
 derivative target or the position aggregation substantially reduces it.
-On the discovery set, retained readouts of initial-study banks that
-target each pass's own exit recover more early-pass content than both
-the final-target lens and the raw lens, which points to the target
-rather than the pass as the source of the early deficit; the
-corresponding confirmation-set test is deferred because those banks are
-not available on the analysis machine. The result supports a localized,
-estimator- and target-specific improvement in concept recovery, not
-general J-Lens superiority, improved answer accuracy, or causal use of
-the recovered content.
+In a post-confirmation analysis on the same states, initial-study banks
+targeting each pass's own exit reverse the deficit: in the band they
+exceed the final-target lens of their family by 22.6, 26.5 and 34.2
+points and the raw lens by 16.4, 18.3 and 23.2 points (passes 1--3;
+simultaneous intervals exclude zero), so the early deficit belongs to
+the estimator's target, not to the passes. The result supports a
+localized, estimator- and target-specific improvement in concept
+recovery, not general J-Lens superiority, improved answer accuracy, or
+causal use of the recovered content.
 
 \end{abstract}
 
@@ -70,7 +70,8 @@ recovers annotated intermediate concepts from a fixed final-pass band
 far more often than the raw logit lens, and this transferred to 160 new
 questions without refitting or band selection. In the same physical
 layers of the three earlier passes the raw lens is better than this
-final-target estimator. Nothing here is evidence that the model uses the
+final-target estimator, and a lens targeting each pass's own exit is
+better than both. Nothing here is evidence that the model uses the
 recovered content.
 
 \paragraph{Organization.}
@@ -81,10 +82,10 @@ score. Section 4 separates the discovery work, which selected the band,
 from the frozen new-question test. Section 5 gives the confirmation
 result, then the post-confirmation reviewer analyses in their own
 subsection. Section 6 is the numerical verification, Section 7 the
-partly blocked local-exit comparison, Section 8 the limits. Appendix A
-keeps the exploratory and Huginn material apart from the confirmation;
-Appendix B is the verification provenance and claim-status table;
-Appendix C the executed method settings.
+own-exit-target comparison, Section 8 the limits. Appendix A keeps the
+exploratory and Huginn material apart from the confirmation; Appendix B
+is the verification provenance and claim-status table; Appendix C the
+executed method settings.
 
 \section{Related work}\label{related-work}
 
@@ -636,75 +637,115 @@ to within \(9\times10^{-16}\) and detected all 13 planted errors in
 isolated fixtures. ``Independent'' here means a separate implementation,
 not replication by another laboratory.
 
-\section{Local-exit targets: a conditional comparison, partly
-blocked}\label{local-exit-targets-a-conditional-comparison-partly-blocked}
+\section{Own-exit targets: the early deficit belongs to the
+target}\label{own-exit-targets-the-early-deficit-belongs-to-the-target}
 
 The main bank targets the final pass, so early-pass states are far from
 its target: a pass-1 state at layer 30 is 162 blocks and three
 pass-boundary normalizations away from virtual layer 191. One
 explanation of the early deficit is therefore transport distance rather
-than a property of early-pass representations. The intended test
-evaluates the same stored early-pass confirmation states with the raw
-lens, a J-Lens targeting the current pass's own exit, and the
-final-target J-Lens, in layers 26--37 of passes 1--3.
+than a property of early-pass representations. The test evaluates the
+same stored early-pass confirmation states with the raw lens, a J-Lens
+targeting the current pass's own exit, and the final-target J-Lens, in
+layers 26--37 of passes 1--3.
 
-\textbf{Inventory.} Local-exit banks exist only from the initial study
-(5 September 2026): banks targeting virtual 47, 95, 143 and 191, fitted
-on the first 100 paragraphs of the historical calibration file (12
-articles) with one shared recipe that differs only in the target. Their
-merged files were purged; the final-target bank and four of its five
-shards survive locally, whereas the twelve shards of the three
-local-exit banks were previously uploaded to a private repository
-(upload receipts and hashes recorded) whose current availability has not
-been verified here; no credential for it is present on the analysis
-machine. The confirmation-population comparison is therefore
-\textbf{blocked}, and no comparison was improvised. Retrieval of those
-shards (11 GB, no fitting, no paid compute), if they remain available,
-would unblock it; a fit01-matched refit would cost about eight GPU-hours
-and would be a new estimator family.
+\textbf{Banks.} The only own-exit banks are the initial-study family (5
+September 2026): banks targeting virtual 47, 95, 143 and 191, fitted on
+the first 100 paragraphs of the historical calibration file (12
+articles) with one shared recipe that differs only in the target, so
+within this family a difference between banks is a difference of target.
+Their merged files had been purged. On 12 September the thirteen
+surviving shards were retrieved from the author's private repository,
+each verified against its recorded hash, and merged with the frozen
+count-weighted procedure; the merge of the final-target bank equals the
+surviving pod merge entry for entry. The family's calibration
+(12-article prefix, 32 directions per backward pass) differs from
+fit01's, so own-exit − fit01 is reported only descriptively. The
+inferential contrasts, fixed in a dated plan before the banks were
+applied, are own-exit − final-target (exit 3) and own-exit − raw in the
+band for passes 1--3, one simultaneous family.
 
-\paragraph{Descriptive observation: own-exit targets read early passes far better, on the discovery population.}
+\paragraph{Result 4: own-exit targets reverse the early deficit on the confirmation population.}
 
-The initial-study banks were all applied to the 148 discovery items in
-one evaluation whose rank arrays survive. On the 90 eligible multihop
-items, in the fixed band 26--37, the lens targeting each pass's own exit
-recovers the intended concept far more often than both alternatives:
-intended recovery 15.4\%, 16.2\% and 25.2\% in passes 1--3, against
-2.1\%, 4.3\% and 10.1\% for the raw lens and 0.3\%, 0.4\% and 2.1\% for
-the final-target lens (Figure 5). Own exit minus final target: +14.6,
-+16.9 and +23.0 points (shared-concept-cluster percentile intervals
-9.1--20.9, 11.5--22.8, 16.0--30.6); own exit minus raw: +13.0, +11.3 and
-+14.9 (8.1--19.0, 6.6--16.6, 7.9--22.4). Control recovery stays below
-2.3\%.
+Applied to the accepted confirmation states with the frozen scorer,
+controls and groups, the own-exit lens recovers the intended concept in
+the band in 23.1\%, 31.3\% and 37.4\% of item--layer cells in passes
+1--3, against 6.5\%, 12.7\% and 13.9\% for the raw lens and 0.6\%, 4.7\%
+and 2.9\% for the final-target bank of the same family; control recovery
+stays below 0.4\%. Own exit minus final target: \textbf{+22.60, +26.50
+and +34.17 points}; own exit minus raw: \textbf{+16.41, +18.32 and
++23.18 points} (Table 6, Figure 5). All six simultaneous 95\% intervals
+exclude zero (one max-t family, 20,000 whole-group draws, quantile
+2.699). In pass 4 the same family's final-target bank reproduces the
+confirmed gain: exit 3 minus raw +22.39 points (16.07--31.68,
+descriptive) against fit01's +23.19.
+
+\begin{table}[htbp]
+\caption{Own-exit versus final-target and raw readouts in layers 26–37 on the confirmation population, initial-study family. Brackets: simultaneous 95\% intervals of the six-contrast post-confirmation family. Intended recovery per item–layer cell; control recovery is below 0.4\% in every cell.}\label{tab:6}
+\centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pass
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Own exit − final target
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Own exit − raw
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Own-exit intended
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Final-target intended
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Raw intended
+\end{minipage} \\
+\midrule\noalign{}
+1 & +22.60 {[}+11.61, +33.60{]} & +16.41 {[}+8.92, +23.91{]} & 23.12\% &
+0.57\% & 6.46\% \\
+2 & +26.50 {[}+18.37, +34.63{]} & +18.32 {[}+10.53, +26.11{]} & 31.30\%
+& 4.69\% & 12.71\% \\
+3 & +34.17 {[}+23.39, +44.94{]} & +23.18 {[}+11.49, +34.87{]} & 37.40\%
+& 2.92\% & 13.91\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation.} Within the rules fixed before these numbers
+were computed, this is the case in which the own-exit target beats both
+alternatives on the confirmation population: a target-dependent
+early-pass advantage, consistent with a transport explanation, now with
+simultaneous intervals rather than the descriptive discovery-population
+result that preceded it (Appendix A). It is not proof that averaging
+destroyed information, and it is a post-confirmation analysis on the
+population already used for the primary endpoint. The two estimator
+families differ in calibration; the agreement of their final-target
+banks in pass 4 (−0.80 points, −1.71 to +0.30) limits how much of the
+early-pass difference calibration could explain, but does not remove
+that caveat. Two existing qualifications remain: shortening the final
+target by one block (the penultimate control) reduced the late gain, so
+transport distance alone is not established, and raw pass counts are not
+comparable transport lengths across architectures. The observations are
+jointly consistent with a narrower hypothesis, not tested here: that the
+estimator reads well when its derivative target is an exit state --- the
+tensor the shared head actually reads after the pass-end normalization
+--- and degrades with distance from the nearest such target, so that
+moving the target off an exit by one block can cost more than moving the
+source a full pass away from it. That hypothesis predicts that a lens
+targeting the penultimate block of an early pass would read that pass
+worse than one targeting the pass's own exit; the retained banks do not
+include such a control. The historical Huginn pilot (Appendix A) did not
+identify a cause or rule out supervision-based explanations.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{figures_v3/fig5_local_exit.pdf}
-\caption{Initial-study matched banks (same recipe, target differs) evaluated on the discovery population, fixed layers, passes 1–3: raw lens (grey), final-target J-Lens (red) and the pass's own-exit J-Lens (teal). (d) Band means with descriptive shared-concept-cluster 95\% intervals. Post hoc and descriptive; not the confirmation population.}\label{fig:5}
+\caption{Initial-study family on the confirmation population, fixed layers, passes 1–3: raw lens (grey), final-target J-Lens (exit 3, red), fit01 (dashed red) and the pass's own-exit J-Lens (teal). (d) The six inferential contrasts, band means with simultaneous 95\% intervals. Post-confirmation analysis; the plan was fixed before the retrieved banks were applied.}\label{fig:5}
 \end{figure}
-
-\textbf{Interpretation.} Within the rules fixed before these numbers
-were computed, this is the case in which the local target beats both
-alternatives: a target-dependent early-pass advantage, consistent with a
-transport explanation. It is not proof that averaging destroyed
-information; it is on the population on which the band was selected; it
-uses the older 12-article calibration and a different batch setting; the
-intervals are descriptive; and it has not been tested on the
-confirmation population. Two existing qualifications remain: shortening
-the final target by one block (the penultimate control) reduced the late
-gain, so transport distance alone is not established, and raw pass
-counts are not comparable transport lengths across architectures. The
-two observations are jointly consistent with a narrower hypothesis, not
-tested here: that the estimator reads well when its derivative target is
-an exit state --- the tensor the shared head actually reads after the
-pass-end normalization --- and degrades with distance from the nearest
-such target, so that moving the target off an exit by one block can cost
-more than moving the source a full pass away from it. That hypothesis
-predicts that a lens targeting the penultimate block of an early pass
-would read that pass worse than one targeting the pass's own exit; the
-retained banks do not include such a control. The historical Huginn
-pilot (Appendix A) did not identify a cause or rule out
-supervision-based explanations.
 
 \section{Interpretation and limits}\label{interpretation-and-limits}
 
@@ -712,8 +753,10 @@ The supported result is a \textbf{localized improvement in reading
 annotated intermediate concepts from fixed Ouro states}: a specific
 final-pass band, one frozen estimator, transferred to new questions and
 concepts without refitting or band selection. The same band in the
-earlier passes shows the opposite sign, so the method is not uniformly
-better as computation proceeds, and the source of the measured gain is
+earlier passes shows the opposite sign for the final-target estimator,
+so that estimator is not uniformly better as computation proceeds; with
+the target moved to each pass's own exit the sign reverses, so the
+deficit is a property of the target. The source of the measured gain is
 higher intended-concept recovery; the excess score is sensitive to the
 control set, with within-domain controls reducing the advantage by 2.39
 points while leaving it positive.
@@ -722,11 +765,11 @@ One possible explanation for the strong raw baseline is Ouro's training
 objective, which applies weighted next-token losses at recurrent pass
 boundaries through a shared output head \citep{zhu2025ouro}. This does
 not supervise every physical block, and the present experiments do not
-isolate the effect of that objective. The target-dependence seen on the
-discovery population points to transport distance or target choice as a
-contributing factor, but architecture, calibration, target choice and
-executed depth remain entangled, and the Huginn pilot's evidence is
-limited by its incomplete artifact chain.
+isolate the effect of that objective. The target-dependence on the
+confirmation population isolates target choice within one estimator
+family, but architecture, the training objective and executed depth
+remain entangled, and the Huginn pilot's evidence is limited by its
+incomplete artifact chain.
 
 Recovery is not use. In exploratory checks a lens recovered a labelled
 intermediate on questions the model answered incorrectly, and native
@@ -767,23 +810,23 @@ later storage purge destroyed unique historical artifacts, including all
 four Ouro FP32 fitting checkpoints, the historical discovery-evaluation
 state cache, the truncated Huginn checkpoint and the merged files of the
 initial-study local-exit banks (43 purged local paths, 33 distinct
-contents, with no copy found and no verified derivation). A further 19
-purged paths (15 distinct contents), including the local-exit bank
-shards, are unresolved: local records point to previously uploaded
-copies in a private remote repository whose current availability has not
-been verified here. Knowing the recipe does not restore those
-checkpoints, and the Huginn pilot is retained only at the saved-output
-level. On 11 September 2026 a copy-only archive of every surviving file
-(16,200 files, 52.15 GB, every byte re-hashed on the destination) was
-written to one external SSD and restoration-tested from that SSD alone
-with the laptop's paths hidden and no network: the frozen code matched
-its freeze, all four bank files loaded, the frozen analysis reproduced
-the primary and all twenty secondary contrasts exactly, and raw and
-fit01 rescoring from the archived states and weights reproduced the
-saved ranks bit for bit. Until a second destination exists it is a
-single-copy archive, not a redundant backup. The frozen records, code,
-compact results, figures and this manuscript are included in the supplementary material (files of 50 MB or more, including the banks and state caches, are listed there with hashes but not stored). No DOI exists at the time
-of writing.
+contents, with no copy found and no verified derivation). Of a further
+19 purged paths (15 distinct contents) whose records pointed to
+previously uploaded copies in a private remote repository, the thirteen
+own-exit bank shards were retrieved from that repository on 12 September
+2026 and verified against their recorded hashes; the rest remain
+unverified. Knowing the recipe does not restore those checkpoints, and
+the Huginn pilot is retained only at the saved-output level. On 11
+September 2026 a copy-only archive of every surviving file (16,200
+files, 52.15 GB, every byte re-hashed on the destination) was written to
+one external SSD and restoration-tested from that SSD alone with the
+laptop's paths hidden and no network: the frozen code matched its
+freeze, all four bank files loaded, the frozen analysis reproduced the
+primary and all twenty secondary contrasts exactly, and raw and fit01
+rescoring from the archived states and weights reproduced the saved
+ranks bit for bit. Until a second destination exists it is a single-copy
+archive, not a redundant backup. The frozen records, code, compact
+results, figures and this manuscript are included in the supplementary material (files of 50 MB or more, including the banks and state caches, are listed there with hashes but not stored). No DOI exists at the time of writing.
 
 \section{Conclusion}\label{conclusion}
 
@@ -793,13 +836,12 @@ fourth, and recovers more annotated intermediate content in a fixed
 region of the final pass. That advantage transferred to new questions
 and concepts and survives the measured numerical variations and control
 redefinitions. Its size depends strongly on the derivative target and
-the position aggregation, and retained discovery-set readouts suggest
-that a lens targeting the pass's own exit reads early passes far better
-than the final-target lens, so the early deficit belongs to the
-estimator's target rather than to the passes; that comparison awaits the
-confirmation population. The finding is about where a particular readout
-works, not about general superiority, successful reasoning or causal
-control.
+the position aggregation, and on the confirmation population a lens
+targeting each pass's own exit reads early passes far better than both
+the final-target lens and the raw lens, so the early deficit belongs to
+the estimator's target rather than to the passes. The finding is about
+where a particular readout works, not about general superiority,
+successful reasoning or causal control.
 
 \subsubsection*{Broader Impact Statement}
 This paper evaluates a readout method on one frozen open-weights model. Hidden-state readouts could complement observation of visible reasoning, but only after establishing what their scores measure. No monitoring system, deception detector, or chain-of-thought baseline is evaluated here, and the study does not establish performance on arbitrary concepts, other models, or monitoring under adversarial pressure.
@@ -841,6 +883,25 @@ bounded training-size comparison (+3.9 points, interval −2.9 to +10.9)
 was inconclusive. This used a different task family and a candidate-set
 metric, with incomplete provenance for the older J-Lens comparator; it
 is not pooled with the concept-recovery results.
+
+\subsection{Own-exit targets on the discovery
+population}\label{own-exit-targets-on-the-discovery-population}
+
+Before the confirmation-population test of Section 7, the same
+initial-study banks had been evaluated on the discovery items in one
+initial-study evaluation whose rank arrays survive. The initial-study
+banks were all applied to the 148 discovery items in one evaluation
+whose rank arrays survive. On the 90 eligible multihop items, in the
+fixed band 26--37, the lens targeting each pass's own exit recovers the
+intended concept far more often than both alternatives: intended
+recovery 15.4\%, 16.2\% and 25.2\% in passes 1--3, against 2.1\%, 4.3\%
+and 10.1\% for the raw lens and 0.3\%, 0.4\% and 2.1\% for the
+final-target lens (Figure 5). Own exit minus final target: +14.6, +16.9
+and +23.0 points (shared-concept-cluster percentile intervals 9.1--20.9,
+11.5--22.8, 16.0--30.6); own exit minus raw: +13.0, +11.3 and +14.9
+(8.1--19.0, 6.6--16.6, 7.9--22.4). Control recovery stays below 2.3\%.
+These intervals are descriptive, the population is the one on which the
+band was selected, and the result is superseded by Section 7.
 
 \subsection{Huginn pilot}\label{huginn-pilot}
 
@@ -887,9 +948,19 @@ Exactly four new inferential contrasts were fixed in a dated plan before
 computation: the within-domain paired excess difference in the pass-4
 band and the same-band paired differences in passes 1--3. They share one
 centered bootstrap max-\(t\) 95\% family (20,000 whole-group draws, seed
-2026091101, quantile 2.639). Every other new quantity is descriptive.
-The overlap sensitivities and the local-exit discovery-population
-summary are descriptive.
+2026091101, quantile 2.639). Every other new quantity is descriptive;
+the overlap sensitivities and the discovery-population own-exit summary
+(Appendix A) are descriptive.
+
+\textbf{Own-exit family (Section 7).} Six further contrasts were fixed
+in a dated plan before the retrieved banks were applied to the
+confirmation states: own-exit − final-target (exit 3) and own-exit − raw
+in the band for passes 1--3. They share one centered bootstrap max-\(t\)
+95\% family (20,000 whole-group draws, seed 2026091201, quantile 2.699).
+The initial-study final-target bank's pass-4 comparisons and own-exit −
+fit01 are descriptive. Before the banks were applied, the frozen scorer
+reproduced the accepted raw and fit01 readouts from the same states bit
+for bit.
 
 \textbf{Records.} Confirmation run
 \texttt{ouro\_confirmation\_20260911\_fixed160\_native1}; frozen plan,
@@ -900,13 +971,15 @@ benchmark and freeze receipt under
 \texttt{REPORT\_confirmation\_verified.md},
 \texttt{RUN\_SPECIFICATION.json}); this round's reviewer checks, methods
 ledger, numerical source ledger and archive receipt under
-\texttt{research/closeout\_2026-09-11/}. These are project provenance
-identifiers, not public links.
+\texttt{research/closeout\_2026-09-11/}; the own-exit analysis (plan,
+retrieval receipt, merge record, readouts, results) under
+\texttt{research/closeout\_2026-09-11/local\_exit/confirmation\_2026-09-12/}.
+These are project provenance identifiers, not public links.
 
 \subsection{Claim status}\label{claim-status}
 
 \noindent\begin{minipage}{\linewidth}
-\captionof{table}{Claim status after the verification and reviewer rounds. Established = supported by the frozen or replayed evidence at the stated scope; Bounded screen = supported with a quantified limit; Diagnostic = descriptive observation, no inference; Unresolved = open; Retracted = an earlier statement withdrawn.}\label{tab:6}
+\captionof{table}{Claim status after the verification and reviewer rounds. Established = supported by the frozen or replayed evidence at the stated scope; Bounded screen = supported with a quantified limit; Diagnostic = descriptive observation, no inference; Unresolved = open; Retracted = an earlier statement withdrawn.}\label{tab:7}
 \centering\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
 \begin{tabular}{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
@@ -936,17 +1009,17 @@ Target choice and position aggregation change the late gain &
 exclude zero on every path \\
 Diagonal fitting has no effect & \statusUnresolved & Diagonal − raw is
 borderline: lower bound within 0.4 points of zero \\
-Own-exit targets read early passes better & \statusDiagnostic &
-Descriptive, discovery population only; confirmation-population test
-blocked \\
+Own-exit targets read early passes better than the final target and raw
+& \statusEstablished & Six-contrast post-confirmation family on the
+confirmation population, all exclude zero; one estimator family \\
 Ouro's shared-head supervision causes the strong raw baseline &
 \statusUnresolved & No intervention; Huginn pilot uninformative and
 estimator lost \\
 Recovered concepts are causally used & \statusUnresolved & No causal
 test; readable intermediates co-occur with wrong answers \\
 All historical estimator binaries were preserved & \statusRetracted &
-Four FP32 checkpoints, the Huginn estimator and the local-exit banks are
-lost or remote-only \\
+Four FP32 checkpoints and the Huginn estimator are lost; the own-exit
+bank shards were retrieved on 12 September \\
 \bottomrule
 \end{tabular}
 \end{minipage}\par\vspace{\baselineskip}
@@ -998,5 +1071,12 @@ ledger}\label{executed-settings-with-their-record-sources-in-the-methods-ledger}
 \item
   \textbf{Initial-study family (Section 7).} Same estimator with the
   first 100 historical paragraphs (12 articles), 32 directions per
-  backward pass, B300 pod; targets 47, 95, 143, 191.
+  backward pass, B300 pod; targets 47, 95, 143, 191. Shards retrieved
+  and hash-verified 12 September 2026, merged by count-weighted mean
+  (the exit 3 merge equals the pod merge entry for entry); merged banks
+  \texttt{f2f7f7f4…} (exit 0), \texttt{ac73fccf…} (exit 1),
+  \texttt{ed8b4990…} (exit 2), \texttt{aec69dba…} (exit 3). Readout with
+  the frozen scorer on the accepted confirmation states; the unembedding
+  and final-norm tensors were fetched by byte range from the public
+  model file at the pinned revision.
 \end{itemize}

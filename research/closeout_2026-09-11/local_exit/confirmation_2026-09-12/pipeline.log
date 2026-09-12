@@ -1,0 +1,19 @@
+fit01 bank verified: /home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt
+retrieval finished: ALL VERIFIED 1863 s
+exit0 merged from 4 shards; 100 prompts; f2f7f7f4ce02 2s
+exit1 merged from 4 shards; 100 prompts; ac73fccfa862 2s
+exit2 merged from 4 shards; 100 prompts; ed8b49901647 3s
+exit3 merged from 5 shards; 100 prompts; aec69dbaadfa 7s
+exit3 vs pod merge: identical files False | equal entries 1.000000 | max |diff| 0.0
+EVALUATION FAILED
+check: raw readouts reproduced bit for bit from these states with the fetched unembedding tensors
+check: fit01 {'allrank': True, 'rank': True, 'top1': True, 'top10_ids': True}
+exit0: readout of 47 virtual layers x 160 items in 3s
+exit1: readout of 95 virtual layers x 160 items in 3s
+exit2: readout of 143 virtual layers x 160 items in 5s
+exit3: readout of 192 virtual layers x 160 items in 6s
+Traceback (most recent call last):
+  File "/home/moloch/jacobian-lens/research/closeout_2026-09-11/local_exit/confirmation_2026-09-12/evaluate_local_exit.py", line 135, in <module>
+    '## Inference: the six-contrast family (simultaneous 95% max-t, whole-group bootstrap, seed %d, quantile %.4f)' % (SEED_FAMILY, q), '', '| Contrast | Estimate (pts) | Simultaneous 95% | Excludes zero |', '|---|---:|---|---|']
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+ValueError: unsupported format character 'm' (0x6d) at index 56

@@ -203,3 +203,31 @@ Status codes: exact (rounded) = machine-checked against the record at the printe
 | v1 | §3.1 | "Both positive band estimates had simultaneous intervals containing zero" | refit REPORT.md (56-metric family) |  | exact (prose), values added in v2 |
 | v1 | Abstract | "change the primary estimate by at most 0.42 points" | verification_2026-09-11/metrics/VERIFICATION_METRICS.json :: paths.regenerated_states_loca | 0.004193037974683594 | exact (rounded) |
 | v1 | App. A | Huginn coda/training statements cited only to internal [S2] | literature.md → Geiping et al. §3.3, Lu et al. §3.2 |  | citation added in v2 |
+
+## Added 2026-09-12: own-exit comparison on the confirmation population (Section 7, Table 6, Figure 5, abstract, conclusion, Appendix B)
+
+Source: `research/closeout_2026-09-11/local_exit/confirmation_2026-09-12/RESULTS.json` (plan `ANALYSIS_PLAN.md`, sha256 `16cdcbd0…`). Values in percentage points unless marked %.
+
+| Manuscript value | JSON path | Exact value |
+|---|---|---|
+| own exit minus final target pass1: +22.60 [+11.61, +33.60] | inference.family.own_exit_minus_final_target_pass1 | 0.226048 [0.116146, 0.335951] |
+| own exit minus final target pass2: +26.50 [+18.37, +34.63] | inference.family.own_exit_minus_final_target_pass2 | 0.264999 [0.183735, 0.346262] |
+| own exit minus final target pass3: +34.17 [+23.39, +44.94] | inference.family.own_exit_minus_final_target_pass3 | 0.341693 [0.233937, 0.449449] |
+| own exit minus raw pass1: +16.41 [+8.92, +23.91] | inference.family.own_exit_minus_raw_pass1 | 0.164142 [0.089201, 0.239083] |
+| own exit minus raw pass2: +18.32 [+10.53, +26.11] | inference.family.own_exit_minus_raw_pass2 | 0.183228 [0.105324, 0.261131] |
+| own exit minus raw pass3: +23.18 [+11.49, +34.87] | inference.family.own_exit_minus_raw_pass3 | 0.231791 [0.114891, 0.348690] |
+| max-t quantile 2.699 | inference.maxt_quantile_95 | 2.699112 |
+| pass 1 raw intended 6.46%, control 0.04% | descriptive.components.pass1.raw | 0.064583, 0.000422 |
+| pass 1 exit3 intended 0.57%, control 0.35% | descriptive.components.pass1.exit3 | 0.005729, 0.003474 |
+| pass 1 fit01 intended 0.00%, control 0.08% | descriptive.components.pass1.fit01 | 0.000000, 0.000791 |
+| pass 1 exit0 intended 23.12%, control 0.29% | descriptive.components.pass1.exit0 | 0.231250, 0.002947 |
+| pass 2 raw intended 12.71%, control 0.05% | descriptive.components.pass2.raw | 0.127083, 0.000468 |
+| pass 2 exit3 intended 4.69%, control 0.20% | descriptive.components.pass2.exit3 | 0.046875, 0.002031 |
+| pass 2 fit01 intended 4.22%, control 0.20% | descriptive.components.pass2.fit01 | 0.042188, 0.001998 |
+| pass 2 exit1 intended 31.30%, control 0.32% | descriptive.components.pass2.exit1 | 0.313021, 0.003178 |
+| pass 3 raw intended 13.91%, control 0.05% | descriptive.components.pass3.raw | 0.139063, 0.000475 |
+| pass 3 exit3 intended 2.92%, control 0.05% | descriptive.components.pass3.exit3 | 0.029167, 0.000481 |
+| pass 3 fit01 intended 2.76%, control 0.04% | descriptive.components.pass3.fit01 | 0.027604, 0.000435 |
+| pass 3 exit2 intended 37.40%, control 0.36% | descriptive.components.pass3.exit2 | 0.373958, 0.003580 |
+| pass 4 exit3 − raw +22.39 [+16.07, +31.68] | descriptive.pass4_final_target_bank_on_confirmation.exit3_minus_raw | 0.223866 |
+| pass 4 exit3 − fit01 -0.80 [-1.71, +0.30] | descriptive.pass4_final_target_bank_on_confirmation.exit3_minus_fit01 | -0.008017 |

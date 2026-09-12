@@ -1,0 +1,15 @@
+check: raw readouts reproduced bit for bit from these states with the fetched unembedding tensors
+check: fit01 {'allrank': True, 'rank': True, 'top1': True, 'top10_ids': True}
+exit0: readout of 47 virtual layers x 160 items in 2s
+exit1: readout of 95 virtual layers x 160 items in 3s
+exit2: readout of 143 virtual layers x 160 items in 4s
+exit3: readout of 192 virtual layers x 160 items in 6s
+
+## Inference: the six-contrast family (simultaneous 95% max-t, whole-group bootstrap, seed 2026091201, quantile 2.6991)
+
+| Contrast | Estimate (pts) | Simultaneous 95% | Excludes zero |
+|---|---:|---|---|
+| own exit minus final target pass1 | +22.60 | [+11.61, +33.60] | yes |
+| own exit minus final target pass2 | +26.50 | [+18.37, +34.63] | yes |
+| own exit minus final target pass3 | +34.17 | [+23.39, +44.94] | yes |
+done in 27 s
