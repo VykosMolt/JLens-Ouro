@@ -1,0 +1,77 @@
+\tcbset{
+  kirinbase/.style={
+    enhanced,
+    breakable,
+    boxrule=0.55pt,
+    arc=2.5mm,
+    outer arc=2.5mm,
+    left=3.2mm,right=3.2mm,top=2.4mm,bottom=2.4mm,
+    before skip=6pt,after skip=7pt,
+    fonttitle=\sffamily\bfseries,
+    coltitle=KirinInk,
+    coltext=KirinInk
+  }
+}
+
+\newtcolorbox{abstractbox}{
+  kirinbase,
+  title=Executive summary,
+  colback=white,
+  colbacktitle=white,
+  coltitle=KirinAccentDark,
+  colframe=KirinAccent,
+  borderline north={1.0pt}{0pt}{KirinAccent},
+  fontupper=\small,
+  before upper={\setlength{\parindent}{1em}}
+}
+
+% Companion to abstractbox for the page-2 "Results at a glance" layer: same
+% framing, no title — the section heading inside the box carries the name.
+\newtcolorbox{glancebox}{
+  kirinbase,
+  colback=white,
+  colframe=KirinAccent,
+  borderline north={1.0pt}{0pt}{KirinAccent},
+  fontupper=\small,
+  before upper={\setlength{\parindent}{1em}}
+}
+
+\newtcolorbox{resultbox}[1][Result]{
+  kirinbase,title=#1,
+  colback=KirinAccentFaint,
+  colbacktitle=KirinAccentPale,
+  coltitle=KirinAccentDark,
+  colframe=KirinAccent,
+  borderline west={2.2pt}{0pt}{KirinAccent}
+}
+
+\newtcolorbox{scopebox}[1][]{
+  kirinbase,
+  title=#1,
+  colback=KirinAccentFaint,
+  colframe=KirinRule,
+  borderline west={1.6pt}{0pt}{KirinAccent},
+  fontupper=\small
+}
+
+\newtcolorbox{auditbox}[1][Audit note]{
+  kirinbase,title=#1,
+  colback=KirinAccentFaint,
+  colbacktitle=KirinAccentPale,
+  coltitle=KirinUnresolved,
+  colframe=KirinUnresolved,
+  borderline west={2.2pt}{0pt}{KirinUnresolved}
+}
+
+\newtcolorbox{roadmapbox}[1][How to read this paper]{
+  kirinbase,title=#1,
+  colback=white,
+  colbacktitle=white,
+  coltitle=KirinAccentDark,
+  colframe=KirinRule,
+  borderline north={1.0pt}{0pt}{KirinAccent},
+  fontupper=\small
+}
+
+% Pandoc block quotes become restrained scope/proposition boxes.
+\renewenvironment{quote}{\begin{scopebox}}{\end{scopebox}}

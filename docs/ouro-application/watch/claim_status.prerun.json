@@ -1,0 +1,3148 @@
+{
+ "architecture_cause": {
+  "claim": "Shared-head recurrent supervision is a plausible contributor, not a demonstrated cause.",
+  "estimand": null,
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/recurrent.py",
+    "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+    "size": 5777
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "61c59aa62459dd3459dbcfdd6c04593e27b39e585b3d4826fd715a67dce22438",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {},
+  "population": null,
+  "status": "PLAUSIBLE_HYPOTHESIS",
+  "uncertainty": null,
+  "value": null
+ },
+ "arithmetic_relative_deficit": {
+  "claim": "On the retained evaluation (fit size not authenticated), the paired J-minus-logit effect for task-defined arithmetic intermediate-token readout is below zero at loops 1; inconclusive at loops 2, 3, 4; this is local arithmetic with unfrozen evaluation lineage.",
+  "effect_status": "SUPPORTED_LOCAL_UNFROZEN",
+  "estimand": "item-mean of own-name hit@10 at any layer in a loop minus the mean of the same any-layer statistic over matched control names",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/analyze.py",
+    "sha256": "cf1ede1b81c7cf4f66f13b6c2d2bd4f389e6192aa6b92bae72785e6fd57e57e1",
+    "size": 36952
+   },
+   {
+    "path": "src/ouro_jlens/evaldata.py",
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "size": 7527
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "16ce80855431f454f5d0d1850b9a47b16ecf480a236d15e4561e653a51aa19c8",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/eval/fitsize_n80/arrays.npz": "c6787554d0175cc63bc540471827e3dece81d3c3a644d82b3e96b5c81e92d629",
+   "artifacts/jlens/eval/fitsize_n80/items.json": "d80c2f87c249223d223a85cd80d00a9f2cc5a19474a9eb969d74bbca5dd42ed8",
+   "artifacts/jlens/eval/fitsize_n80/task_names.json": "e47fb5325fdfeb84ef89c98c578443a2e4c0fbb889489150e76da3078620aaa4"
+  },
+  "loop_decisions": [
+   "below",
+   "inconclusive",
+   "inconclusive",
+   "inconclusive"
+  ],
+  "loop_evidence": [
+   {
+    "ci95_unadjusted": [
+     -0.354,
+     -0.136
+    ],
+    "decision": "below",
+    "effect": -0.252,
+    "loop": 1
+   },
+   {
+    "ci95_unadjusted": [
+     -0.005,
+     0.246
+    ],
+    "decision": "inconclusive",
+    "effect": 0.121,
+    "loop": 2
+   },
+   {
+    "ci95_unadjusted": [
+     -0.081,
+     0.186
+    ],
+    "decision": "inconclusive",
+    "effect": 0.05,
+    "loop": 3
+   },
+   {
+    "ci95_unadjusted": [
+     -0.069,
+     0.023
+    ],
+    "decision": "inconclusive",
+    "effect": -0.02,
+    "loop": 4
+   }
+  ],
+  "population": {
+   "n_clean_items": 51,
+   "n_clean_slots": 51,
+   "n_raw_items": 55
+  },
+  "status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+  "uncertainty": {
+   "ci95_unadjusted": [
+    [
+     -0.354,
+     -0.136
+    ],
+    [
+     -0.005,
+     0.246
+    ],
+    [
+     -0.081,
+     0.186
+    ],
+    [
+     -0.069,
+     0.023
+    ]
+   ]
+  },
+  "value": [
+   -0.252,
+   0.121,
+   0.05,
+   -0.02
+  ]
+ },
+ "b300_validation": {
+  "claim": "The current validation artifact is hash-bound but does not satisfy both the exclusively-B300 and controller-approved immutable-image gates.",
+  "estimand": "M1-M5 mechanical validation gate on B300 hardware",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   },
+   {
+    "path": "src/ouro_jlens/run_b300.sh",
+    "sha256": "293afd4f6ebeaf7e49e02dd5d6557328158d957e0eeedac8aeb3ec890a5ce801",
+    "size": 37205
+   },
+   {
+    "path": "src/ouro_jlens/setup_b300.sh",
+    "sha256": "1201bf7a25ad757ef6fdb2b1aae419df6c7a2a7a6cace40e4b13051f523575b0",
+    "size": 4635
+   }
+  ],
+  "generator_set_sha256": "4c7007f457ab3d045ce6ce538b4eefd161f1c36fa17e58960eca13350888f51d",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/validation/milestones.json": "2075d08e21ff022085927bf4481d6409edb97ff2fa7c07e279c65a54c7148c81",
+   "jlens/__init__.py": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+   "jlens/_logging.py": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+   "jlens/examples.py": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+   "jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+   "jlens/hf.py": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+   "jlens/hooks.py": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+   "jlens/lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+   "jlens/protocol.py": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+   "jlens/vis.py": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+   "model_snapshot/.gitattributes": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975",
+   "model_snapshot/README.md": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1",
+   "model_snapshot/assets/benchmark.png": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+   "model_snapshot/assets/logo.png": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+   "model_snapshot/config.json": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a",
+   "model_snapshot/configuration_ouro.py": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb",
+   "model_snapshot/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+   "model_snapshot/model.safetensors": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+   "model_snapshot/modeling_ouro.py": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+   "model_snapshot/special_tokens_map.json": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319",
+   "model_snapshot/tokenizer.json": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+   "model_snapshot/tokenizer_config.json": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91",
+   "model_snapshot/vocab.json": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+   "src/ouro_jlens/evidence.py": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+   "src/ouro_jlens/recurrent.py": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+   "src/ouro_jlens/validate.py": "4f8cb2faf145415c128b8df4a98b3c3b1783c8a2c418f8d20efd8e117ca74a5a"
+  },
+  "population": "recorded validation device set",
+  "status": "NOT_CURRENT_B300_VALIDATION",
+  "uncertainty": null,
+  "value": {
+   "approved_image_digest": "runpod/pytorch@sha256:bbe1496e2215cca3d25a5e5cd291d31ea86603e4577a81eb40096787a50e5303",
+   "devices": [
+    {
+     "capability": [
+      12,
+      0
+     ],
+     "index": 0,
+     "name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+     "total_memory": 12386893824
+    }
+   ],
+   "image_digest": null
+  }
+ },
+ "checkpoint_comparison": {
+  "claim": "Across the retained base, Thinking, and RLTT rows, distributional trends are multihop KL decreases and JS decreases, order-ops KL mixed and JS mixed; categorical trends are multihop top-1 agreement mixed, order-ops top-1 agreement mixed. The metrics are heterogeneous, so no blanket agreement-improvement claim is made.",
+  "estimand": "exit-to-final KL, JS, entropy, final-token rank, and top-1 agreement",
+  "generator_set": [
+   {
+    "path": "dependency/jlens/__init__.py",
+    "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+    "size": 637
+   },
+   {
+    "path": "dependency/jlens/_logging.py",
+    "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+    "size": 1804
+   },
+   {
+    "path": "dependency/jlens/examples.py",
+    "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+    "size": 6300
+   },
+   {
+    "path": "dependency/jlens/fitting.py",
+    "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+    "size": 15078
+   },
+   {
+    "path": "dependency/jlens/hf.py",
+    "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+    "size": 8182
+   },
+   {
+    "path": "dependency/jlens/hooks.py",
+    "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+    "size": 2735
+   },
+   {
+    "path": "dependency/jlens/lens.py",
+    "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+    "size": 8646
+   },
+   {
+    "path": "dependency/jlens/protocol.py",
+    "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+    "size": 1774
+   },
+   {
+    "path": "dependency/jlens/vis.py",
+    "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+    "size": 19984
+   },
+   {
+    "path": "src/ouro_jlens/checkpoints.py",
+    "sha256": "fc31eb5a8fc9265005529f06c06e362d698c20ea52a8c52d8ba184adf6e5b1b2",
+    "size": 15336
+   },
+   {
+    "path": "src/ouro_jlens/evaldata.py",
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "size": 7527
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/evidence.py",
+    "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+    "size": 12530
+   },
+   {
+    "path": "src/ouro_jlens/recurrent.py",
+    "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+    "size": 5777
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "a0b98382e962adf9148f892f34da8a4155d95a8c155756a24a8b718de1d5eaa1",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/checkpoints/exit_divergence.json": "ccdbc6116b8fd20ab9c00c055e4de93ea4116561f8ab79f1782cdcdd5cc1f998",
+   "checkpoint/.gitattributes": "3c8ffbdd83480442dae979665aabed58fe59e33c062fe8dd5d726b9703fd4533",
+   "checkpoint/README.md": "12861a1397ac17f0fc7898e61961d5048769b93b0385f5e0e2377654d89eed35",
+   "checkpoint/assets/benchmark.png": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+   "checkpoint/assets/logo.png": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+   "checkpoint/assets/ouro_thinking.png": "79b5db34e6094ce62a3270dc4274403bdd7922140520b49240363e10983be841",
+   "checkpoint/chat_template.jinja": "609d03c963c8d8d0519c9212df62280bc6dd561013259c3b6cd0ee43f7910f58",
+   "checkpoint/config.json": "ad4b51dffae60bebeeac5e1d5055e78d01fc01b1a29cd89cd2e50edb848f645a",
+   "checkpoint/configuration_ouro.py": "ba60253335cecc5bd9cb3e5f8cfbd214aa7e865fc97a98208976fb2517811de6",
+   "checkpoint/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+   "checkpoint/model-00001.safetensors": "9f49e55b0d0ea368f2942cfd3fa256836ea7fa9002c6f860ca2d85ac1de252a1",
+   "checkpoint/model-00002.safetensors": "97a0d531a2c624dd98e60c0ebc46a7cc0413642f8cba6df7dac8df01a432df19",
+   "checkpoint/model-00003.safetensors": "0bf3d0c111c876ccc7f7ebaeb7cabc8dfccffde30acb4cd780a4c364d3679aad",
+   "checkpoint/model.safetensors": "c506a79247dc51fc0400d789365c3d43932f718abce9810f3606ace47d0a3080",
+   "checkpoint/model.safetensors.index.json": "e1842668e1ba1568364a4ae7227a5ab80ab5403c95baba37b92205d2cb22a001",
+   "checkpoint/modeling_ouro.py": "263c097a2ed6870ce549a65ef6d6bb9e8e167423f87d2c494e0988b9a4f63f4b",
+   "checkpoint/special_tokens_map.json": "688ac94df221b18a4d2d4579dfa3c4f0fd5ca3e394da46cd0a317fb5d57d4685",
+   "checkpoint/tokenizer.json": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+   "checkpoint/tokenizer_config.json": "0d304de54d3f8e0c0573d678c0f1d80cc26e9d23dcb328405f0ec99c4293d04f",
+   "checkpoint/vocab.json": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+   "dependency/jlens/__init__.py": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+   "dependency/jlens/_logging.py": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+   "dependency/jlens/examples.py": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+   "dependency/jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+   "dependency/jlens/hf.py": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+   "dependency/jlens/hooks.py": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+   "dependency/jlens/lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+   "dependency/jlens/protocol.py": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+   "dependency/jlens/vis.py": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+   "input_tokenizer/.gitattributes": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975",
+   "input_tokenizer/README.md": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1",
+   "input_tokenizer/assets/benchmark.png": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+   "input_tokenizer/assets/logo.png": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+   "input_tokenizer/config.json": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a",
+   "input_tokenizer/configuration_ouro.py": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb",
+   "input_tokenizer/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+   "input_tokenizer/model.safetensors": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+   "input_tokenizer/modeling_ouro.py": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+   "input_tokenizer/special_tokens_map.json": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319",
+   "input_tokenizer/tokenizer.json": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+   "input_tokenizer/tokenizer_config.json": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91",
+   "input_tokenizer/vocab.json": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+   "src/ouro_jlens/checkpoints.py": "fc31eb5a8fc9265005529f06c06e362d698c20ea52a8c52d8ba184adf6e5b1b2",
+   "src/ouro_jlens/evaldata.py": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+   "src/ouro_jlens/evaluate.py": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+   "src/ouro_jlens/evidence.py": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+   "src/ouro_jlens/recurrent.py": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+  },
+  "population": "retained base, Thinking, and RLTT checkpoint evaluation stimuli",
+  "status": "SUPPORTED_LOCAL_UNFROZEN",
+  "uncertainty": null,
+  "value": {
+   "base": {
+    "checkpoint_files": [
+     {
+      "path": "checkpoint/.gitattributes",
+      "sha256": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975",
+      "size": 1628
+     },
+     {
+      "path": "checkpoint/README.md",
+      "sha256": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1",
+      "size": 4360
+     },
+     {
+      "path": "checkpoint/assets/benchmark.png",
+      "sha256": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+      "size": 203205
+     },
+     {
+      "path": "checkpoint/assets/logo.png",
+      "sha256": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+      "size": 656922
+     },
+     {
+      "path": "checkpoint/config.json",
+      "sha256": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a",
+      "size": 2000
+     },
+     {
+      "path": "checkpoint/configuration_ouro.py",
+      "sha256": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb",
+      "size": 11550
+     },
+     {
+      "path": "checkpoint/merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "size": 466391
+     },
+     {
+      "path": "checkpoint/model.safetensors",
+      "sha256": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+      "size": 5336011242
+     },
+     {
+      "path": "checkpoint/modeling_ouro.py",
+      "sha256": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+      "size": 33350
+     },
+     {
+      "path": "checkpoint/special_tokens_map.json",
+      "sha256": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319",
+      "size": 825
+     },
+     {
+      "path": "checkpoint/tokenizer.json",
+      "sha256": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+      "size": 3522644
+     },
+     {
+      "path": "checkpoint/tokenizer_config.json",
+      "sha256": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91",
+      "size": 4211
+     },
+     {
+      "path": "checkpoint/vocab.json",
+      "sha256": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+      "size": 800656
+     }
+    ],
+    "checkpoint_id": "base",
+    "model_correct": 0.4864864864864865,
+    "model_files_sha256": "e7c77743e1e6108ad0f9be7f7945160aa6cbbdc7dbf5e03bbfb0ca399e11ee88",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "multihop": {
+     "entropy_mean": [
+      7.807000160217285,
+      4.269999980926514,
+      2.615999937057495,
+      2.5339999198913574
+     ],
+     "exit_top1_equals_final": [
+      0.409,
+      0.656,
+      0.785,
+      1.0
+     ],
+     "intermediate_is_exit_top1": [
+      0.011,
+      0.033,
+      0.044,
+      0.044
+     ],
+     "js_to_final_mean": [
+      0.37929999828338623,
+      0.1298000067472458,
+      0.026000000536441803,
+      -0.0
+     ],
+     "kl_exit_k_to_exit_last_mean": [
+      3.5840001106262207,
+      0.8640000224113464,
+      0.11800000071525574,
+      0.0
+     ],
+     "kl_median": [
+      3.9660000801086426,
+      0.4690000116825104,
+      0.04500000178813934,
+      0.0
+     ],
+     "median_rank_of_final_top1": [
+      2.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "model_correct": 0.3978494623655914,
+     "n": 93,
+     "n_scored": 90
+    },
+    "n_items": 148,
+    "order-ops": {
+     "entropy_mean": [
+      6.744999885559082,
+      1.9429999589920044,
+      1.6109999418258667,
+      1.559999942779541
+     ],
+     "exit_top1_equals_final": [
+      0.527,
+      0.855,
+      0.964,
+      1.0
+     ],
+     "intermediate_is_exit_top1": [
+      0.176,
+      0.078,
+      0.059,
+      0.039
+     ],
+     "js_to_final_mean": [
+      0.30799999833106995,
+      0.04259999841451645,
+      0.007499999832361937,
+      -0.0
+     ],
+     "kl_exit_k_to_exit_last_mean": [
+      4.241000175476074,
+      0.2800000011920929,
+      0.03099999949336052,
+      0.0
+     ],
+     "kl_median": [
+      4.50600004196167,
+      0.13600000739097595,
+      0.01600000075995922,
+      0.0
+     ],
+     "median_rank_of_final_top1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "model_correct": 0.6363636363636364,
+     "n": 55,
+     "n_scored": 51
+    },
+    "seconds": 92.0
+   },
+   "rltt": {
+    "checkpoint_files": [
+     {
+      "path": "checkpoint/chat_template.jinja",
+      "sha256": "609d03c963c8d8d0519c9212df62280bc6dd561013259c3b6cd0ee43f7910f58",
+      "size": 503
+     },
+     {
+      "path": "checkpoint/config.json",
+      "sha256": "7d6764dbc8210d023c8d83da4620910808ac5a450532b15550e57d1ef0e4f741",
+      "size": 2198
+     },
+     {
+      "path": "checkpoint/configuration_ouro.py",
+      "sha256": "4c7c6138715351f7b673eed4a8e7553ccccb8a1f1ab93e82e9773ad96c6ee7d6",
+      "size": 11823
+     },
+     {
+      "path": "checkpoint/merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "size": 466391
+     },
+     {
+      "path": "checkpoint/model-00001.safetensors",
+      "sha256": "9f49e55b0d0ea368f2942cfd3fa256836ea7fa9002c6f860ca2d85ac1de252a1",
+      "size": 1925468800
+     },
+     {
+      "path": "checkpoint/model-00002.safetensors",
+      "sha256": "97a0d531a2c624dd98e60c0ebc46a7cc0413642f8cba6df7dac8df01a432df19",
+      "size": 1929715216
+     },
+     {
+      "path": "checkpoint/model-00003.safetensors",
+      "sha256": "0bf3d0c111c876ccc7f7ebaeb7cabc8dfccffde30acb4cd780a4c364d3679aad",
+      "size": 1480826858
+     },
+     {
+      "path": "checkpoint/model.safetensors.index.json",
+      "sha256": "e1842668e1ba1568364a4ae7227a5ab80ab5403c95baba37b92205d2cb22a001",
+      "size": 39658
+     },
+     {
+      "path": "checkpoint/modeling_ouro.py",
+      "sha256": "bcd27ff6a18578feaec168695d70dc76509c57e4d4c377347c9d05d6266d9e82",
+      "size": 60513
+     },
+     {
+      "path": "checkpoint/special_tokens_map.json",
+      "sha256": "aadabc9bd7e3f4738bc1160ef0aa932ba09401c1f11271bd269a21ba987b353b",
+      "size": 857
+     },
+     {
+      "path": "checkpoint/tokenizer.json",
+      "sha256": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+      "size": 3522644
+     },
+     {
+      "path": "checkpoint/tokenizer_config.json",
+      "sha256": "7936619f224ec48539a38f8d7dbc64b3c1ba397f4c4b753397d52116cf71dcd8",
+      "size": 3710
+     },
+     {
+      "path": "checkpoint/vocab.json",
+      "sha256": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+      "size": 800656
+     }
+    ],
+    "checkpoint_id": "rltt",
+    "model_correct": 0.5135135135135135,
+    "model_files_sha256": "695c859ced55cab0e4f4ad3ef2254a4d49ff59edf69660fff2fed7b5fccee4a6",
+    "model_revision": "LOCAL_UNREVISIONED",
+    "multihop": {
+     "entropy_mean": [
+      6.632999897003174,
+      3.1649999618530273,
+      2.377000093460083,
+      2.3380000591278076
+     ],
+     "exit_top1_equals_final": [
+      0.366,
+      0.613,
+      0.828,
+      1.0
+     ],
+     "intermediate_is_exit_top1": [
+      0.044,
+      0.033,
+      0.044,
+      0.022
+     ],
+     "js_to_final_mean": [
+      0.3328999876976013,
+      0.10180000215768814,
+      0.021800000220537186,
+      -0.0
+     ],
+     "kl_exit_k_to_exit_last_mean": [
+      2.806999921798706,
+      0.5460000038146973,
+      0.0989999994635582,
+      0.0
+     ],
+     "kl_median": [
+      3.3459999561309814,
+      0.29499998688697815,
+      0.050999999046325684,
+      0.0
+     ],
+     "median_rank_of_final_top1": [
+      2.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "model_correct": 0.41935483870967744,
+     "n": 93,
+     "n_scored": 90
+    },
+    "n_items": 148,
+    "order-ops": {
+     "entropy_mean": [
+      3.7699999809265137,
+      1.4859999418258667,
+      1.4450000524520874,
+      1.402999997138977
+     ],
+     "exit_top1_equals_final": [
+      0.509,
+      0.8,
+      0.945,
+      1.0
+     ],
+     "intermediate_is_exit_top1": [
+      0.196,
+      0.059,
+      0.039,
+      0.039
+     ],
+     "js_to_final_mean": [
+      0.18440000712871552,
+      0.03590000048279762,
+      0.006899999920278788,
+      -0.0
+     ],
+     "kl_exit_k_to_exit_last_mean": [
+      1.784999966621399,
+      0.18199999630451202,
+      0.028999999165534973,
+      0.0
+     ],
+     "kl_median": [
+      1.1410000324249268,
+      0.10400000214576721,
+      0.014999999664723873,
+      0.0
+     ],
+     "median_rank_of_final_top1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "model_correct": 0.6727272727272727,
+     "n": 55,
+     "n_scored": 51
+    },
+    "seconds": 55.9
+   },
+   "thinking": {
+    "checkpoint_files": [
+     {
+      "path": "checkpoint/.gitattributes",
+      "sha256": "3c8ffbdd83480442dae979665aabed58fe59e33c062fe8dd5d726b9703fd4533",
+      "size": 1632
+     },
+     {
+      "path": "checkpoint/README.md",
+      "sha256": "12861a1397ac17f0fc7898e61961d5048769b93b0385f5e0e2377654d89eed35",
+      "size": 5007
+     },
+     {
+      "path": "checkpoint/assets/logo.png",
+      "sha256": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+      "size": 656922
+     },
+     {
+      "path": "checkpoint/assets/ouro_thinking.png",
+      "sha256": "79b5db34e6094ce62a3270dc4274403bdd7922140520b49240363e10983be841",
+      "size": 516109
+     },
+     {
+      "path": "checkpoint/config.json",
+      "sha256": "ad4b51dffae60bebeeac5e1d5055e78d01fc01b1a29cd89cd2e50edb848f645a",
+      "size": 1999
+     },
+     {
+      "path": "checkpoint/configuration_ouro.py",
+      "sha256": "ba60253335cecc5bd9cb3e5f8cfbd214aa7e865fc97a98208976fb2517811de6",
+      "size": 11595
+     },
+     {
+      "path": "checkpoint/merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "size": 466391
+     },
+     {
+      "path": "checkpoint/model.safetensors",
+      "sha256": "c506a79247dc51fc0400d789365c3d43932f718abce9810f3606ace47d0a3080",
+      "size": 5336011242
+     },
+     {
+      "path": "checkpoint/modeling_ouro.py",
+      "sha256": "263c097a2ed6870ce549a65ef6d6bb9e8e167423f87d2c494e0988b9a4f63f4b",
+      "size": 35495
+     },
+     {
+      "path": "checkpoint/special_tokens_map.json",
+      "sha256": "688ac94df221b18a4d2d4579dfa3c4f0fd5ca3e394da46cd0a317fb5d57d4685",
+      "size": 965
+     },
+     {
+      "path": "checkpoint/tokenizer.json",
+      "sha256": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+      "size": 3522644
+     },
+     {
+      "path": "checkpoint/tokenizer_config.json",
+      "sha256": "0d304de54d3f8e0c0573d678c0f1d80cc26e9d23dcb328405f0ec99c4293d04f",
+      "size": 4303
+     },
+     {
+      "path": "checkpoint/vocab.json",
+      "sha256": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+      "size": 800656
+     }
+    ],
+    "checkpoint_id": "thinking",
+    "model_correct": 0.5,
+    "model_files_sha256": "d83c92f76056febc9e7fe7443e76efc6b8eb5e6acb38a994bb06d61e5f5264d8",
+    "model_revision": "f1edd81e7ac41355db670500ceaf204e0f73af68",
+    "multihop": {
+     "entropy_mean": [
+      7.093999862670898,
+      3.5199999809265137,
+      2.447000026702881,
+      2.4189999103546143
+     ],
+     "exit_top1_equals_final": [
+      0.344,
+      0.591,
+      0.817,
+      1.0
+     ],
+     "intermediate_is_exit_top1": [
+      0.033,
+      0.033,
+      0.044,
+      0.033
+     ],
+     "js_to_final_mean": [
+      0.3504999876022339,
+      0.10939999669790268,
+      0.022600000724196434,
+      -0.0
+     ],
+     "kl_exit_k_to_exit_last_mean": [
+      3.046999931335449,
+      0.6159999966621399,
+      0.10300000011920929,
+      0.0
+     ],
+     "kl_median": [
+      3.690000057220459,
+      0.3569999933242798,
+      0.0560000017285347,
+      0.0
+     ],
+     "median_rank_of_final_top1": [
+      2.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "model_correct": 0.3978494623655914,
+     "n": 93,
+     "n_scored": 90
+    },
+    "n_items": 148,
+    "order-ops": {
+     "entropy_mean": [
+      4.422999858856201,
+      1.5829999446868896,
+      1.5199999809265137,
+      1.4869999885559082
+     ],
+     "exit_top1_equals_final": [
+      0.527,
+      0.818,
+      0.909,
+      1.0
+     ],
+     "intermediate_is_exit_top1": [
+      0.176,
+      0.059,
+      0.039,
+      0.039
+     ],
+     "js_to_final_mean": [
+      0.20029999315738678,
+      0.03530000150203705,
+      0.0066999997943639755,
+      -0.0
+     ],
+     "kl_exit_k_to_exit_last_mean": [
+      2.0739998817443848,
+      0.17800000309944153,
+      0.02800000086426735,
+      0.0
+     ],
+     "kl_median": [
+      1.6490000486373901,
+      0.09600000083446503,
+      0.01600000075995922,
+      0.0
+     ],
+     "median_rank_of_final_top1": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "model_correct": 0.6727272727272727,
+     "n": 55,
+     "n_scored": 51
+    },
+    "seconds": 58.1
+   }
+  }
+ },
+ "cross_loop_association": {
+  "claim": "Cross-loop matrices are descriptive and do not identify a causal mechanism.",
+  "estimand": "any-layer excess-hit@10 matrix indexed by fit loop and state loop",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/analyze.py",
+    "sha256": "cf1ede1b81c7cf4f66f13b6c2d2bd4f389e6192aa6b92bae72785e6fd57e57e1",
+    "size": 36952
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "055dad570dbbf4ce069c4c36891f08b861d8a7f1de7576a7c5fbad20e3267825",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/eval/fitsize_n32/arrays.npz": "bad57e9f8293ff7b1bab13d02c6b3e144f27c5ca807eb032e95edb8607aad0ce",
+   "artifacts/jlens/eval/fitsize_n80/arrays.npz": "c6787554d0175cc63bc540471827e3dece81d3c3a644d82b3e96b5c81e92d629"
+  },
+  "lineage_status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+  "lineage_verified": false,
+  "population": "retained n=32 and n=80 clean multihop and arithmetic items",
+  "status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+  "uncertainty": null,
+  "value": {
+   "32": {
+    "fit_prompts": null,
+    "input": {
+     "path": "artifacts/jlens/eval/fitsize_n32/arrays.npz",
+     "sha256": "bad57e9f8293ff7b1bab13d02c6b3e144f27c5ca807eb032e95edb8607aad0ce",
+     "size": 21320499
+    },
+    "lineage": {
+     "errors": [
+      "evaluation provenance is missing"
+     ],
+     "fit_prompts": null,
+     "status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+     "verified": false
+    },
+    "multihop": {
+     "cand_top1_fit_by_state": [
+      [
+       0.133,
+       0.167,
+       0.244,
+       0.2
+      ],
+      [
+       0.089,
+       0.111,
+       0.122,
+       0.111
+      ],
+      [
+       0.156,
+       0.144,
+       0.167,
+       0.211
+      ],
+      [
+       0.511,
+       0.544,
+       0.589,
+       0.556
+      ]
+     ],
+     "control10_fit_by_state": [
+      [
+       0.035,
+       0.049,
+       0.04,
+       0.038
+      ],
+      [
+       0.025,
+       0.036,
+       0.038,
+       0.04
+      ],
+      [
+       0.058,
+       0.057,
+       0.056,
+       0.05
+      ],
+      [
+       0.101,
+       0.097,
+       0.093,
+       0.092
+      ]
+     ],
+     "excess_hit10_fit_by_state": [
+      [
+       -0.002,
+       0.018,
+       0.015,
+       0.028
+      ],
+      [
+       -0.014,
+       -0.014,
+       0.017,
+       0.06
+      ],
+      [
+       0.042,
+       0.054,
+       0.089,
+       0.106
+      ],
+      [
+       0.422,
+       0.447,
+       0.485,
+       0.464
+      ]
+     ],
+     "fit_loop_effect": [
+      -0.124,
+      -0.126,
+      -0.066,
+      0.316
+     ],
+     "h1_ci95": [
+      -0.15,
+      -0.073
+     ],
+     "h1_fit_only": -0.174,
+     "h1_fit_only_ci95": [
+      -0.228,
+      -0.123
+     ],
+     "h1_loop1_minus_later_offdiag": -0.11,
+     "h1_preregistered": -0.11,
+     "h1_preregistered_ci95": [
+      -0.15,
+      -0.073
+     ],
+     "h1_state_only": -0.045,
+     "h1_state_only_ci95": [
+      -0.085,
+      -0.008
+     ],
+     "hit10_fit_by_state": [
+      [
+       0.033,
+       0.067,
+       0.056,
+       0.067
+      ],
+      [
+       0.011,
+       0.022,
+       0.056,
+       0.1
+      ],
+      [
+       0.1,
+       0.111,
+       0.144,
+       0.156
+      ],
+      [
+       0.522,
+       0.544,
+       0.578,
+       0.556
+      ]
+     ],
+     "n_items": 90,
+     "n_slots": 100,
+     "state_loop_effect": [
+      -0.027,
+      -0.012,
+      0.013,
+      0.026
+     ],
+     "variance_share": {
+      "fit_loop": 0.98,
+      "interaction": 0.0,
+      "state_loop": 0.01
+     }
+    },
+    "order_ops_numeric": {
+     "cand_top1_fit_by_state": [
+      [
+       0.686,
+       0.667,
+       0.647,
+       0.588
+      ],
+      [
+       0.627,
+       0.529,
+       0.412,
+       0.333
+      ],
+      [
+       0.471,
+       0.549,
+       0.392,
+       0.333
+      ],
+      [
+       0.784,
+       0.667,
+       0.431,
+       0.49
+      ]
+     ],
+     "control10_fit_by_state": [
+      [
+       0.196,
+       0.158,
+       0.181,
+       0.17
+      ],
+      [
+       0.094,
+       0.204,
+       0.22,
+       0.226
+      ],
+      [
+       0.427,
+       0.25,
+       0.169,
+       0.158
+      ],
+      [
+       0.618,
+       0.63,
+       0.602,
+       0.632
+      ]
+     ],
+     "excess_hit10_fit_by_state": [
+      [
+       0.059,
+       0.253,
+       0.152,
+       0.183
+      ],
+      [
+       0.122,
+       0.247,
+       0.192,
+       0.225
+      ],
+      [
+       0.201,
+       0.318,
+       0.184,
+       0.175
+      ],
+      [
+       0.303,
+       0.154,
+       0.124,
+       0.172
+      ]
+     ],
+     "fit_loop_effect": [
+      -0.03,
+      0.005,
+      0.028,
+      -0.003
+     ],
+     "h1_ci95": [
+      -0.053,
+      0.061
+     ],
+     "h1_fit_only": -0.002,
+     "h1_fit_only_ci95": [
+      -0.07,
+      0.066
+     ],
+     "h1_loop1_minus_later_offdiag": 0.005,
+     "h1_preregistered": 0.005,
+     "h1_preregistered_ci95": [
+      -0.053,
+      0.061
+     ],
+     "h1_state_only": 0.011,
+     "h1_state_only_ci95": [
+      -0.067,
+      0.091
+     ],
+     "hit10_fit_by_state": [
+      [
+       0.255,
+       0.412,
+       0.333,
+       0.353
+      ],
+      [
+       0.216,
+       0.451,
+       0.412,
+       0.451
+      ],
+      [
+       0.627,
+       0.569,
+       0.353,
+       0.333
+      ],
+      [
+       0.922,
+       0.784,
+       0.725,
+       0.804
+      ]
+     ],
+     "n_items": 51,
+     "n_slots": 51,
+     "state_loop_effect": [
+      -0.02,
+      0.052,
+      -0.029,
+      -0.003
+     ],
+     "variance_share": {
+      "fit_loop": 0.1,
+      "interaction": 0.67,
+      "state_loop": 0.23
+     }
+    }
+   },
+   "80": {
+    "fit_prompts": null,
+    "input": {
+     "path": "artifacts/jlens/eval/fitsize_n80/arrays.npz",
+     "sha256": "c6787554d0175cc63bc540471827e3dece81d3c3a644d82b3e96b5c81e92d629",
+     "size": 21162024
+    },
+    "lineage": {
+     "errors": [
+      "evaluation provenance is missing"
+     ],
+     "fit_prompts": null,
+     "status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+     "verified": false
+    },
+    "multihop": {
+     "cand_top1_fit_by_state": [
+      [
+       0.1,
+       0.1,
+       0.122,
+       0.144
+      ],
+      [
+       0.067,
+       0.067,
+       0.078,
+       0.1
+      ],
+      [
+       0.111,
+       0.144,
+       0.178,
+       0.189
+      ],
+      [
+       0.522,
+       0.578,
+       0.578,
+       0.556
+      ]
+     ],
+     "control10_fit_by_state": [
+      [
+       0.019,
+       0.03,
+       0.026,
+       0.024
+      ],
+      [
+       0.025,
+       0.036,
+       0.039,
+       0.04
+      ],
+      [
+       0.053,
+       0.052,
+       0.05,
+       0.05
+      ],
+      [
+       0.11,
+       0.1,
+       0.093,
+       0.093
+      ]
+     ],
+     "excess_hit10_fit_by_state": [
+      [
+       0.003,
+       0.003,
+       0.041,
+       0.053
+      ],
+      [
+       -0.003,
+       -0.025,
+       0.006,
+       0.049
+      ],
+      [
+       0.047,
+       0.059,
+       0.084,
+       0.105
+      ],
+      [
+       0.435,
+       0.455,
+       0.474,
+       0.451
+      ]
+     ],
+     "fit_loop_effect": [
+      -0.115,
+      -0.133,
+      -0.066,
+      0.314
+     ],
+     "h1_ci95": [
+      -0.131,
+      -0.061
+     ],
+     "h1_fit_only": -0.159,
+     "h1_fit_only_ci95": [
+      -0.209,
+      -0.107
+     ],
+     "h1_loop1_minus_later_offdiag": -0.095,
+     "h1_preregistered": -0.095,
+     "h1_preregistered_ci95": [
+      -0.131,
+      -0.061
+     ],
+     "h1_state_only": -0.032,
+     "h1_state_only_ci95": [
+      -0.067,
+      0.002
+     ],
+     "hit10_fit_by_state": [
+      [
+       0.022,
+       0.033,
+       0.067,
+       0.078
+      ],
+      [
+       0.022,
+       0.011,
+       0.044,
+       0.089
+      ],
+      [
+       0.1,
+       0.111,
+       0.133,
+       0.156
+      ],
+      [
+       0.544,
+       0.556,
+       0.567,
+       0.544
+      ]
+     ],
+     "n_items": 90,
+     "n_slots": 100,
+     "state_loop_effect": [
+      -0.019,
+      -0.017,
+      0.011,
+      0.025
+     ],
+     "variance_share": {
+      "fit_loop": 0.99,
+      "interaction": 0.0,
+      "state_loop": 0.01
+     }
+    },
+    "order_ops_numeric": {
+     "cand_top1_fit_by_state": [
+      [
+       0.608,
+       0.608,
+       0.451,
+       0.431
+      ],
+      [
+       0.451,
+       0.51,
+       0.373,
+       0.294
+      ],
+      [
+       0.529,
+       0.549,
+       0.392,
+       0.353
+      ],
+      [
+       0.804,
+       0.647,
+       0.451,
+       0.529
+      ]
+     ],
+     "control10_fit_by_state": [
+      [
+       0.005,
+       0.029,
+       0.06,
+       0.075
+      ],
+      [
+       0.161,
+       0.178,
+       0.163,
+       0.152
+      ],
+      [
+       0.465,
+       0.265,
+       0.172,
+       0.158
+      ],
+      [
+       0.647,
+       0.65,
+       0.612,
+       0.63
+      ]
+     ],
+     "excess_hit10_fit_by_state": [
+      [
+       0.054,
+       0.207,
+       0.116,
+       0.121
+      ],
+      [
+       0.231,
+       0.273,
+       0.19,
+       0.22
+      ],
+      [
+       0.222,
+       0.303,
+       0.181,
+       0.195
+      ],
+      [
+       0.275,
+       0.154,
+       0.133,
+       0.193
+      ]
+     ],
+     "fit_loop_effect": [
+      -0.067,
+      0.037,
+      0.033,
+      -0.003
+     ],
+     "h1_ci95": [
+      -0.062,
+      0.053
+     ],
+     "h1_fit_only": -0.051,
+     "h1_fit_only_ci95": [
+      -0.113,
+      0.009
+     ],
+     "h1_loop1_minus_later_offdiag": -0.004,
+     "h1_preregistered": -0.004,
+     "h1_preregistered_ci95": [
+      -0.062,
+      0.053
+     ],
+     "h1_state_only": 0.043,
+     "h1_state_only_ci95": [
+      -0.034,
+      0.121
+     ],
+     "hit10_fit_by_state": [
+      [
+       0.059,
+       0.235,
+       0.176,
+       0.196
+      ],
+      [
+       0.392,
+       0.451,
+       0.353,
+       0.373
+      ],
+      [
+       0.686,
+       0.569,
+       0.353,
+       0.353
+      ],
+      [
+       0.922,
+       0.804,
+       0.745,
+       0.824
+      ]
+     ],
+     "n_items": 51,
+     "n_slots": 51,
+     "state_loop_effect": [
+      0.004,
+      0.043,
+      -0.037,
+      -0.01
+     ],
+     "variance_share": {
+      "fit_loop": 0.44,
+      "interaction": 0.36,
+      "state_loop": 0.2
+     }
+    }
+   }
+  }
+ },
+ "estimator_independence": {
+  "claim": "The matched 2x2 position-by-reduction control has not been run.",
+  "estimand": null,
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "14673aae691a5a51fd4f631848bb9377d0e2ff1dd9af15ff8cbbcabafd34f55c",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {},
+  "population": null,
+  "status": "INCONCLUSIVE",
+  "uncertainty": null,
+  "value": null
+ },
+ "instrumentation": {
+  "claim": "Current-source validation passes the complete M1-M5 numerical gate; comparison count, source identities, and bit-exact status are recorded separately.",
+  "estimand": "M1-M5 mechanical validation gate",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/evidence.py",
+    "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+    "size": 12530
+   },
+   {
+    "path": "src/ouro_jlens/recurrent.py",
+    "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+    "size": 5777
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   },
+   {
+    "path": "src/ouro_jlens/validate.py",
+    "sha256": "4f8cb2faf145415c128b8df4a98b3c3b1783c8a2c418f8d20efd8e117ca74a5a",
+    "size": 38285
+   }
+  ],
+  "generator_set_sha256": "20fc843aefe8d2952e962aea55015277e2b14015cffff94cf85bd3c03db9b38e",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/validation/milestones.json": "2075d08e21ff022085927bf4481d6409edb97ff2fa7c07e279c65a54c7148c81",
+   "jlens/__init__.py": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+   "jlens/_logging.py": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+   "jlens/examples.py": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+   "jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+   "jlens/hf.py": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+   "jlens/hooks.py": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+   "jlens/lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+   "jlens/protocol.py": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+   "jlens/vis.py": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+   "model_snapshot/.gitattributes": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975",
+   "model_snapshot/README.md": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1",
+   "model_snapshot/assets/benchmark.png": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+   "model_snapshot/assets/logo.png": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+   "model_snapshot/config.json": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a",
+   "model_snapshot/configuration_ouro.py": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb",
+   "model_snapshot/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+   "model_snapshot/model.safetensors": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+   "model_snapshot/modeling_ouro.py": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+   "model_snapshot/special_tokens_map.json": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319",
+   "model_snapshot/tokenizer.json": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+   "model_snapshot/tokenizer_config.json": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91",
+   "model_snapshot/vocab.json": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+   "src/ouro_jlens/evidence.py": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+   "src/ouro_jlens/recurrent.py": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+   "src/ouro_jlens/validate.py": "4f8cb2faf145415c128b8df4a98b3c3b1783c8a2c418f8d20efd8e117ca74a5a"
+  },
+  "lineage_status": "SUPPORTED_CURRENT_VALIDATION",
+  "population": "current source, fixed local Ouro snapshot",
+  "status": "SUPPORTED_CURRENT_VALIDATION",
+  "uncertainty": null,
+  "value": {
+   "bit_exact": true,
+   "numerical_pass": true
+  }
+ },
+ "large_fit_robustness": {
+  "claim": "Nested fits do not establish behavior at n=1000 or fixed-n variability.",
+  "estimand": null,
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/analyze.py",
+    "sha256": "cf1ede1b81c7cf4f66f13b6c2d2bd4f389e6192aa6b92bae72785e6fd57e57e1",
+    "size": 36952
+   },
+   {
+    "path": "src/ouro_jlens/fitsize_report.py",
+    "sha256": "bc11d627aca92eb4e85fd0b8b62f6374d7120e9c7d372590779d3d020ce20015",
+    "size": 11924
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "40c23f2b97d3deb24aef6e2547e87794ab95fa1fc4230c544ec9d7708bd49a8b",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {},
+  "population": null,
+  "status": "INCONCLUSIVE_MISSING_OR_INVALID_FIT_SIZE_EVIDENCE",
+  "uncertainty": null,
+  "value": null
+ },
+ "lens_free_exit_agreement": {
+  "claim": "Item-weighted exit agreement is descriptive on the retained 93/55-stimulus populations; it is not current-generation evidence.",
+  "estimand": "fraction of unique items whose exit-k top token equals the final-exit top token",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/analyze.py",
+    "sha256": "cf1ede1b81c7cf4f66f13b6c2d2bd4f389e6192aa6b92bae72785e6fd57e57e1",
+    "size": 36952
+   },
+   {
+    "path": "src/ouro_jlens/evaldata.py",
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "size": 7527
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "16ce80855431f454f5d0d1850b9a47b16ecf480a236d15e4561e653a51aa19c8",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/eval/fitsize_n80/arrays.npz": "c6787554d0175cc63bc540471827e3dece81d3c3a644d82b3e96b5c81e92d629",
+   "artifacts/jlens/eval/fitsize_n80/items.json": "d80c2f87c249223d223a85cd80d00a9f2cc5a19474a9eb969d74bbca5dd42ed8",
+   "artifacts/jlens/eval/fitsize_n80/task_names.json": "e47fb5325fdfeb84ef89c98c578443a2e4c0fbb889489150e76da3078620aaa4"
+  },
+  "population": {
+   "multihop": 93,
+   "order_ops": 55
+  },
+  "status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+  "uncertainty": null,
+  "value": {
+   "exit_divergence": {
+    "kl_exit_k_to_exit_4_mean": [
+     3.828000068664551,
+     0.6470000147819519,
+     0.0860000029206276,
+     0.0
+    ],
+    "kl_exit_k_to_exit_4_median": [
+     4.080999851226807,
+     0.2199999988079071,
+     0.03099999949336052,
+     0.0
+    ]
+   },
+   "multihop": {
+    "exit_top1_equals_final_top1_all_items": [
+     0.409,
+     0.656,
+     0.785,
+     1.0
+    ],
+    "intermediate_cand_top1": [
+     0.156,
+     0.222,
+     0.2,
+     0.233
+    ],
+    "intermediate_excess10": [
+     0.095,
+     0.207,
+     0.207,
+     0.186
+    ],
+    "intermediate_is_exit_top1": [
+     0.011,
+     0.033,
+     0.044,
+     0.044
+    ],
+    "n_items": 90,
+    "n_raw_items": 93
+   },
+   "order-ops numeric": {
+    "exit_top1_equals_final_top1_all_items": [
+     0.527,
+     0.855,
+     0.964,
+     1.0
+    ],
+    "intermediate_cand_top1": [
+     0.275,
+     0.176,
+     0.176,
+     0.157
+    ],
+    "intermediate_excess10": [
+     0.149,
+     0.109,
+     0.109,
+     0.112
+    ],
+    "intermediate_is_exit_top1": [
+     0.176,
+     0.078,
+     0.059,
+     0.039
+    ],
+    "n_items": 51,
+    "n_raw_items": 55
+   }
+  }
+ },
+ "local_eventual_convergence": {
+  "claim": "Mean KL from the local-exit readout to the eventual-exit readout does not decrease strictly over loops 1-3 on a retained historical comparison with unfrozen evaluation lineage.",
+  "estimand": "mean KL from each local-exit readout to the eventual-exit readout at pre-final loops",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/analyze.py",
+    "sha256": "cf1ede1b81c7cf4f66f13b6c2d2bd4f389e6192aa6b92bae72785e6fd57e57e1",
+    "size": 36952
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "2549a55eaaccb7e39065a0a5f84d08da5f5f0e00575ea7ad25c7ae1affdc1c67",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/eval/round1_exit3x32/arrays.npz": "7ab042dabca011ff2e21a1ae8d3e138c9e5e02b32c6cc6c0a90570713e8d0d18"
+  },
+  "population": {
+   "n_items": 93,
+   "task": "multihop"
+  },
+  "status": "REFUTED_PRE_FINAL",
+  "uncertainty": null,
+  "value": [
+   {
+    "local_minus_eventual": 0.065,
+    "loop": 1,
+    "mean_kl_local_to_eventual": 4.903,
+    "multihop_mean_layer_excess_eventual": -0.0,
+    "multihop_mean_layer_excess_local": 0.065,
+    "top1_agreement_last8_layers": 0.002
+   },
+   {
+    "local_minus_eventual": 0.114,
+    "loop": 2,
+    "mean_kl_local_to_eventual": 4.567,
+    "multihop_mean_layer_excess_eventual": -0.007,
+    "multihop_mean_layer_excess_local": 0.107,
+    "top1_agreement_last8_layers": 0.018
+   },
+   {
+    "local_minus_eventual": 0.151,
+    "loop": 3,
+    "mean_kl_local_to_eventual": 6.526,
+    "multihop_mean_layer_excess_eventual": 0.016,
+    "multihop_mean_layer_excess_local": 0.167,
+    "top1_agreement_last8_layers": 0.008
+   }
+  ]
+ },
+ "multihop_relative_deficit": {
+  "claim": "On the retained evaluation (fit size not authenticated), the paired J-minus-logit effect for task-defined multihop intermediate-token readout is below zero at loops 1, 2, 3; inconclusive at loops 4; this is local arithmetic with unfrozen evaluation lineage.",
+  "effect_status": "SUPPORTED_LOCAL_UNFROZEN",
+  "estimand": "item-mean of own-name hit@10 at any layer in a loop minus the mean of the same any-layer statistic over matched control names",
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/analyze.py",
+    "sha256": "cf1ede1b81c7cf4f66f13b6c2d2bd4f389e6192aa6b92bae72785e6fd57e57e1",
+    "size": 36952
+   },
+   {
+    "path": "src/ouro_jlens/evaldata.py",
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "size": 7527
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "16ce80855431f454f5d0d1850b9a47b16ecf480a236d15e4561e653a51aa19c8",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/eval/fitsize_n80/arrays.npz": "c6787554d0175cc63bc540471827e3dece81d3c3a644d82b3e96b5c81e92d629",
+   "artifacts/jlens/eval/fitsize_n80/items.json": "d80c2f87c249223d223a85cd80d00a9f2cc5a19474a9eb969d74bbca5dd42ed8",
+   "artifacts/jlens/eval/fitsize_n80/task_names.json": "e47fb5325fdfeb84ef89c98c578443a2e4c0fbb889489150e76da3078620aaa4"
+  },
+  "loop_decisions": [
+   "below",
+   "below",
+   "below",
+   "inconclusive"
+  ],
+  "loop_evidence": [
+   {
+    "ci95_unadjusted": [
+     -0.46,
+     -0.25
+    ],
+    "decision": "below",
+    "effect": -0.355,
+    "loop": 1
+   },
+   {
+    "ci95_unadjusted": [
+     -0.583,
+     -0.382
+    ],
+    "decision": "below",
+    "effect": -0.483,
+    "loop": 2
+   },
+   {
+    "ci95_unadjusted": [
+     -0.519,
+     -0.313
+    ],
+    "decision": "below",
+    "effect": -0.416,
+    "loop": 3
+   },
+   {
+    "ci95_unadjusted": [
+     -0.105,
+     0.039
+    ],
+    "decision": "inconclusive",
+    "effect": -0.032,
+    "loop": 4
+   }
+  ],
+  "population": {
+   "n_clean_items": 90,
+   "n_clean_slots": 100,
+   "n_raw_items": 93
+  },
+  "status": "LOCAL_OBSERVATIONAL_ARITHMETIC_REPRODUCIBLE_LINEAGE_UNFROZEN",
+  "uncertainty": {
+   "ci95_unadjusted": [
+    [
+     -0.46,
+     -0.25
+    ],
+    [
+     -0.583,
+     -0.382
+    ],
+    [
+     -0.519,
+     -0.313
+    ],
+    [
+     -0.105,
+     0.039
+    ]
+   ]
+  },
+  "value": [
+   -0.355,
+   -0.483,
+   -0.416,
+   -0.032
+  ]
+ },
+ "probe_familywide_inference": {
+  "claim": "Probe intervals are pointwise and do not establish a multiplicity-adjusted family-wide result.",
+  "estimand": "candidate-set top-1 on fold-trainable prompts; supervised layer/C chosen by inner validation wholly inside each outer training partition, then scored on its untouched outer fold",
+  "generator_set": [
+   {
+    "path": "dependency/jlens/__init__.py",
+    "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+    "size": 637
+   },
+   {
+    "path": "dependency/jlens/_logging.py",
+    "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+    "size": 1804
+   },
+   {
+    "path": "dependency/jlens/examples.py",
+    "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+    "size": 6300
+   },
+   {
+    "path": "dependency/jlens/fitting.py",
+    "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+    "size": 15078
+   },
+   {
+    "path": "dependency/jlens/hf.py",
+    "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+    "size": 8182
+   },
+   {
+    "path": "dependency/jlens/hooks.py",
+    "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+    "size": 2735
+   },
+   {
+    "path": "dependency/jlens/lens.py",
+    "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+    "size": 8646
+   },
+   {
+    "path": "dependency/jlens/protocol.py",
+    "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+    "size": 1774
+   },
+   {
+    "path": "dependency/jlens/vis.py",
+    "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+    "size": 19984
+   },
+   {
+    "path": "src/ouro_jlens/evaldata.py",
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "size": 7527
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/evidence.py",
+    "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+    "size": 12530
+   },
+   {
+    "path": "src/ouro_jlens/fit_lens.py",
+    "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "size": 72898
+   },
+   {
+    "path": "src/ouro_jlens/probe.py",
+    "sha256": "15914aa97704afbe60ba7f335c3ac16a501d57679476c78d96cbc6809cf020d3",
+    "size": 23244
+   },
+   {
+    "path": "src/ouro_jlens/probe_cv.py",
+    "sha256": "370500ae9749a062651d6e6e4e9756e9d20e19346288174118724b5ebff1870f",
+    "size": 35177
+   },
+   {
+    "path": "src/ouro_jlens/probe_report.py",
+    "sha256": "3662a484552115c56c36c7df6c7377c2ba422917966e390e08efb0781111ab3a",
+    "size": 13203
+   },
+   {
+    "path": "src/ouro_jlens/recurrent.py",
+    "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+    "size": 5777
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "9ee3d89d9fc4459bd788273ff233f0d997cb7bdfa8f4e6d4cd9c17c9763a1c75",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/probe/cv_all648/summary.json": "ac6a2a67b25037df804cf7118de053c9fc7006cae5c730ddfccd30c3e0338421",
+   "dependency/jlens/__init__.py": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+   "dependency/jlens/_logging.py": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+   "dependency/jlens/examples.py": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+   "dependency/jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+   "dependency/jlens/hf.py": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+   "dependency/jlens/hooks.py": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+   "dependency/jlens/lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+   "dependency/jlens/protocol.py": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+   "dependency/jlens/vis.py": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+   "gpu_cache": "4cb03e201dd27b21fd296a9a2b4d98f3254612d1c08c34deecfdd590b081aad6",
+   "gpu_cache_provenance": "9b7a4733bdf9094440e05a62aa8d8d6fc9c1325a3de7a6426b1836c14467c16e",
+   "lens": "cd49c026edd81ac0369214f52c1b1a79e750a2eedc8756dbbcab0933e08793b7",
+   "lens_score_provenance": "54db60814b0122863e0ac54c3aeaf726b123e0ea00b5d16282b2911db508fa14",
+   "lens_scores": "ef0b3307775e9f8e1e35731dc5dfbe969a176e6b5f3fc22093960bbd2ff694c3",
+   "lens_sidecar": "20fe6f741f20fb2be51a1c992b986c48c3cdcf583c174370a4ec504369c374de",
+   "model_snapshot/.gitattributes": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975",
+   "model_snapshot/README.md": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1",
+   "model_snapshot/assets/benchmark.png": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+   "model_snapshot/assets/logo.png": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+   "model_snapshot/config.json": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a",
+   "model_snapshot/configuration_ouro.py": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb",
+   "model_snapshot/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+   "model_snapshot/model.safetensors": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+   "model_snapshot/modeling_ouro.py": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+   "model_snapshot/special_tokens_map.json": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319",
+   "model_snapshot/tokenizer.json": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+   "model_snapshot/tokenizer_config.json": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91",
+   "model_snapshot/vocab.json": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+   "probe_arrays": "1ff6157d3bddda1b3fcf782f2ceb98749bc0c5f5d4c1200d172b4b8d04d0c274",
+   "probe_cpu_design_provenance": "28a80d90145f98cdeeb2c80e800e85526e919d696471e1334f73ae73eb6d26ac",
+   "src/ouro_jlens/evaldata.py": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+   "src/ouro_jlens/evaluate.py": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+   "src/ouro_jlens/evidence.py": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+   "src/ouro_jlens/fit_lens.py": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+   "src/ouro_jlens/probe.py": "15914aa97704afbe60ba7f335c3ac16a501d57679476c78d96cbc6809cf020d3",
+   "src/ouro_jlens/probe_cv.py": "370500ae9749a062651d6e6e4e9756e9d20e19346288174118724b5ebff1870f",
+   "src/ouro_jlens/probe_report.py": "3662a484552115c56c36c7df6c7377c2ba422917966e390e08efb0781111ab3a",
+   "src/ouro_jlens/recurrent.py": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+  },
+  "population": {
+   "eligible_prompts": 576,
+   "eligible_unordered_pair_clusters": 39,
+   "excluded_clusters": [
+    "1+1",
+    "1+2",
+    "1+3",
+    "2+2",
+    "8+9",
+    "9+9"
+   ],
+   "excluded_untrainable_prompts": 72,
+   "fold_sizes_all": [
+    128,
+    136,
+    120,
+    136,
+    128
+   ],
+   "fold_sizes_eligible": [
+    104,
+    136,
+    80,
+    136,
+    120
+   ],
+   "total_prompts": 648,
+   "total_unordered_pair_clusters": 45,
+   "validation_pairs_by_fold": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      1,
+      8
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      8
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      9,
+      9
+     ]
+    ],
+    [
+     [
+      2,
+      7
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      3,
+      8
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      8,
+      8
+     ]
+    ],
+    [
+     [
+      1,
+      8
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      9
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      7,
+      9
+     ]
+    ],
+    [
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      7
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      5,
+      8
+     ],
+     [
+      6,
+      9
+     ],
+     [
+      8,
+      9
+     ]
+    ],
+    [
+     [
+      1,
+      9
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      9
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      7,
+      9
+     ]
+    ]
+   ]
+  },
+  "status": "INCONCLUSIVE_UNADJUSTED_INTERVALS",
+  "uncertainty": {
+   "bootstrap": {
+    "draws": 5000,
+    "fixed_lens_layer_selection": "repeated from other outer folds per draw",
+    "seed": 991,
+    "supervised_layer_selection": "fixed inner-validation choice; interval conditional on selection",
+    "unit": "outer-test unordered_operand_pair"
+   },
+   "contrasts": {
+    "eventual_exit_jacobian_lens_minus_logit_lens": {
+     "ci95": [
+      [
+       -0.5482,
+       -0.2214
+      ],
+      [
+       -0.1317,
+       0.1523
+      ],
+      [
+       -0.0911,
+       0.1084
+      ],
+      [
+       -0.2844,
+       -0.1054
+      ]
+     ],
+     "per_loop": [
+      -0.371528,
+      0.0,
+      -0.03125,
+      -0.190972
+     ]
+    },
+    "eventual_exit_jacobian_lens_minus_supervised_probe": {
+     "ci95": [
+      [
+       -0.3666,
+       -0.0208
+      ],
+      [
+       -0.2363,
+       0.0599
+      ],
+      [
+       -0.3014,
+       -0.0867
+      ],
+      [
+       -0.2317,
+       -0.0475
+      ]
+     ],
+     "per_loop": [
+      -0.201389,
+      -0.059028,
+      -0.208333,
+      -0.128472
+     ]
+    },
+    "supervised_probe_minus_logit_lens": {
+     "ci95": [
+      [
+       -0.3393,
+       -0.0563
+      ],
+      [
+       -0.0203,
+       0.2447
+      ],
+      [
+       0.059,
+       0.3393
+      ],
+      [
+       -0.1615,
+       0.0469
+      ]
+     ],
+     "per_loop": [
+      -0.170139,
+      0.059028,
+      0.177083,
+      -0.0625
+     ]
+    }
+   }
+  },
+  "value": {
+   "baselines": {
+    "majority_all_648": 0.111111,
+    "majority_eligible_576": 0.125,
+    "uniform_17_way": 0.058824
+   },
+   "readouts": {
+    "eventual_exit_jacobian_lens": {
+     "ci95": [
+      [
+       0.2312,
+       0.5617
+      ],
+      [
+       0.296,
+       0.6409
+      ],
+      [
+       0.0817,
+       0.2654
+      ],
+      [
+       0.0528,
+       0.1712
+      ]
+     ],
+     "per_loop": [
+      0.392361,
+      0.5,
+      0.147569,
+      0.119792
+     ],
+     "selected_physical_layer_by_heldout_fold": [
+      [
+       35,
+       26,
+       26,
+       35,
+       26
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       0,
+       18,
+       0,
+       18,
+       0
+      ],
+      [
+       34,
+       34,
+       34,
+       34,
+       34
+      ]
+     ]
+    },
+    "logit_lens": {
+     "ci95": [
+      [
+       0.6597,
+       0.9049
+      ],
+      [
+       0.2821,
+       0.6337
+      ],
+      [
+       0.0634,
+       0.2415
+      ],
+      [
+       0.2243,
+       0.3947
+      ]
+     ],
+     "per_loop": [
+      0.763889,
+      0.5,
+      0.178819,
+      0.310764
+     ],
+     "selected_physical_layer_by_heldout_fold": [
+      [
+       30,
+       24,
+       30,
+       34,
+       30
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       19,
+       19,
+       19,
+       19,
+       19
+      ],
+      [
+       19,
+       19,
+       19,
+       19,
+       19
+      ]
+     ]
+    },
+    "supervised_probe": {
+     "ci95": [
+      [
+       0.4577,
+       0.7228
+      ],
+      [
+       0.4185,
+       0.6917
+      ],
+      [
+       0.2401,
+       0.4692
+      ],
+      [
+       0.1589,
+       0.3442
+      ]
+     ],
+     "per_loop": [
+      0.59375,
+      0.559028,
+      0.355903,
+      0.248264
+     ],
+     "selected_physical_layer_by_heldout_fold": [
+      [
+       38,
+       30,
+       28,
+       41,
+       25
+      ],
+      [
+       6,
+       0,
+       9,
+       1,
+       0
+      ],
+      [
+       4,
+       4,
+       5,
+       6,
+       1
+      ],
+      [
+       2,
+       38,
+       11,
+       40,
+       2
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "submission_readiness": {
+  "claim": "The local observational result is not a completed mechanism study.",
+  "estimand": null,
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/manifest.py",
+    "sha256": "75c87373bc368215cde221d9a9f8da3ef3392df1c5c4ace3fac8c7290ed74a91",
+    "size": 36179
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   },
+   {
+    "path": "src/ouro_jlens/verify_artifacts.py",
+    "sha256": "efaca7ac7e0d08dfdaeb49f1e0319f38caa3e8e434ccb3a6f710962ddd2f2061",
+    "size": 21342
+   }
+  ],
+  "generator_set_sha256": "8fda3122fb324eff065e51f4ae269ee8f641f3ec6ac00ae0d5afc4e88907b523",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {},
+  "population": null,
+  "status": "NOT_ESTABLISHED",
+  "uncertainty": null,
+  "value": null
+ },
+ "supervised_probe": {
+  "claim": "The arithmetic probe is not supported without a complete, current provenance chain.",
+  "estimand": "candidate-set top-1 on fold-trainable prompts; supervised layer/C chosen by inner validation wholly inside each outer training partition, then scored on its untouched outer fold",
+  "generator_set": [
+   {
+    "path": "dependency/jlens/__init__.py",
+    "sha256": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+    "size": 637
+   },
+   {
+    "path": "dependency/jlens/_logging.py",
+    "sha256": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+    "size": 1804
+   },
+   {
+    "path": "dependency/jlens/examples.py",
+    "sha256": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+    "size": 6300
+   },
+   {
+    "path": "dependency/jlens/fitting.py",
+    "sha256": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+    "size": 15078
+   },
+   {
+    "path": "dependency/jlens/hf.py",
+    "sha256": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+    "size": 8182
+   },
+   {
+    "path": "dependency/jlens/hooks.py",
+    "sha256": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+    "size": 2735
+   },
+   {
+    "path": "dependency/jlens/lens.py",
+    "sha256": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+    "size": 8646
+   },
+   {
+    "path": "dependency/jlens/protocol.py",
+    "sha256": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+    "size": 1774
+   },
+   {
+    "path": "dependency/jlens/vis.py",
+    "sha256": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+    "size": 19984
+   },
+   {
+    "path": "src/ouro_jlens/evaldata.py",
+    "sha256": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+    "size": 7527
+   },
+   {
+    "path": "src/ouro_jlens/evaluate.py",
+    "sha256": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+    "size": 43821
+   },
+   {
+    "path": "src/ouro_jlens/evidence.py",
+    "sha256": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+    "size": 12530
+   },
+   {
+    "path": "src/ouro_jlens/fit_lens.py",
+    "sha256": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+    "size": 72898
+   },
+   {
+    "path": "src/ouro_jlens/probe.py",
+    "sha256": "15914aa97704afbe60ba7f335c3ac16a501d57679476c78d96cbc6809cf020d3",
+    "size": 23244
+   },
+   {
+    "path": "src/ouro_jlens/probe_cv.py",
+    "sha256": "370500ae9749a062651d6e6e4e9756e9d20e19346288174118724b5ebff1870f",
+    "size": 35177
+   },
+   {
+    "path": "src/ouro_jlens/probe_report.py",
+    "sha256": "3662a484552115c56c36c7df6c7377c2ba422917966e390e08efb0781111ab3a",
+    "size": 13203
+   },
+   {
+    "path": "src/ouro_jlens/recurrent.py",
+    "sha256": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed",
+    "size": 5777
+   },
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   }
+  ],
+  "generator_set_sha256": "9ee3d89d9fc4459bd788273ff233f0d997cb7bdfa8f4e6d4cd9c17c9763a1c75",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {
+   "artifacts/jlens/probe/cv_all648/summary.json": "ac6a2a67b25037df804cf7118de053c9fc7006cae5c730ddfccd30c3e0338421",
+   "dependency/jlens/__init__.py": "bd7bb6302565a712583b05b91d48c8638d9f5d2ace00e52db0db2fd300f7fe3a",
+   "dependency/jlens/_logging.py": "5943d28520b8fe0e1b2f8ba16d7802522a2370f11f213bc6bb694e09bcfc06ae",
+   "dependency/jlens/examples.py": "17270d800ffa169b72c1ab50940ae9a22cadf8a7a2449d897fa2a74b56569d6d",
+   "dependency/jlens/fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080",
+   "dependency/jlens/hf.py": "228cf078e4586a7b7f61a6f5064403b8960de337afd19256efa56f04d53e3222",
+   "dependency/jlens/hooks.py": "c781d6944fd23396d3fc65a04db1f1db807f6f12cd5912cdbd2fb67eb3508081",
+   "dependency/jlens/lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+   "dependency/jlens/protocol.py": "7217a3bc2c1cd01fed3e6b00c53effbd957effddc49fe073da89cb10d1b1a344",
+   "dependency/jlens/vis.py": "3d3b442c3d4686a632043cd8390c9923a243b3940726baeadd8e854e7dacc9b6",
+   "gpu_cache": "4cb03e201dd27b21fd296a9a2b4d98f3254612d1c08c34deecfdd590b081aad6",
+   "gpu_cache_provenance": "9b7a4733bdf9094440e05a62aa8d8d6fc9c1325a3de7a6426b1836c14467c16e",
+   "lens": "cd49c026edd81ac0369214f52c1b1a79e750a2eedc8756dbbcab0933e08793b7",
+   "lens_score_provenance": "54db60814b0122863e0ac54c3aeaf726b123e0ea00b5d16282b2911db508fa14",
+   "lens_scores": "ef0b3307775e9f8e1e35731dc5dfbe969a176e6b5f3fc22093960bbd2ff694c3",
+   "lens_sidecar": "20fe6f741f20fb2be51a1c992b986c48c3cdcf583c174370a4ec504369c374de",
+   "model_snapshot/.gitattributes": "303362d73b5944c7867b8449ce1744d4137b373a573a57158294595e9e42a975",
+   "model_snapshot/README.md": "a40689d50119e4eebbe2a3f25e1544617252c2dd12c5810e8433ca0318d113e1",
+   "model_snapshot/assets/benchmark.png": "2951a5a6c613921afdad333a9bd8955cb313b51c3d3e8e517103fc117e65278e",
+   "model_snapshot/assets/logo.png": "b971dc437f16af7155034488be23ca64039d66a85348a24710d7c6459f984484",
+   "model_snapshot/config.json": "23b5c6942a9f0ca8619fb15acfaca93e02c169cdc4e03dbceb4d8a2df145697a",
+   "model_snapshot/configuration_ouro.py": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb",
+   "model_snapshot/merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+   "model_snapshot/model.safetensors": "2fdf9805a3510b7dc82959a2db4872ef767a5bdc55520c6a1b54fc3e463c1bba",
+   "model_snapshot/modeling_ouro.py": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+   "model_snapshot/special_tokens_map.json": "55087bb8409060d9cb0f80495e34f4e0d8a84f68a799a6b0cab3132be0aae319",
+   "model_snapshot/tokenizer.json": "fcb808fe5e7642f5299be28aea07fc7f6d4f4364c3ac5e408e15a772cbc8fa8d",
+   "model_snapshot/tokenizer_config.json": "7e010da95d71b0fa1aa809552922c74cc1dd98d628f21ba39ca6c35aa18d5d91",
+   "model_snapshot/vocab.json": "7b9de3f47796abf8d00ab96be299fea0dc9afdf1827f34e7e0b9fb44593efe5c",
+   "probe_arrays": "1ff6157d3bddda1b3fcf782f2ceb98749bc0c5f5d4c1200d172b4b8d04d0c274",
+   "probe_cpu_design_provenance": "28a80d90145f98cdeeb2c80e800e85526e919d696471e1334f73ae73eb6d26ac",
+   "src/ouro_jlens/evaldata.py": "2772ddb2cbaa2a7c1fce2a23db14b36fbf9c266aabbd0425cf2c566ed01e6c74",
+   "src/ouro_jlens/evaluate.py": "ceb76d742ebee87f74ade09780b04cb5f43f5cda7256420ae6d6dc036280858d",
+   "src/ouro_jlens/evidence.py": "1dae8ea5c233c41a23e6d5b58fba7015136aaf1535bbac96a1e65b9d92ade879",
+   "src/ouro_jlens/fit_lens.py": "007517db44a77957479757a9e6f1f6b67375c64cd8d90df682b9f6f2a8b3c6b0",
+   "src/ouro_jlens/probe.py": "15914aa97704afbe60ba7f335c3ac16a501d57679476c78d96cbc6809cf020d3",
+   "src/ouro_jlens/probe_cv.py": "370500ae9749a062651d6e6e4e9756e9d20e19346288174118724b5ebff1870f",
+   "src/ouro_jlens/probe_report.py": "3662a484552115c56c36c7df6c7377c2ba422917966e390e08efb0781111ab3a",
+   "src/ouro_jlens/recurrent.py": "4477cde085e9e5965c33ebe737ca6b84148a0bd19562c1fa9e6077168e5a96ed"
+  },
+  "population": {
+   "eligible_prompts": 576,
+   "eligible_unordered_pair_clusters": 39,
+   "excluded_clusters": [
+    "1+1",
+    "1+2",
+    "1+3",
+    "2+2",
+    "8+9",
+    "9+9"
+   ],
+   "excluded_untrainable_prompts": 72,
+   "fold_sizes_all": [
+    128,
+    136,
+    120,
+    136,
+    128
+   ],
+   "fold_sizes_eligible": [
+    104,
+    136,
+    80,
+    136,
+    120
+   ],
+   "total_prompts": 648,
+   "total_unordered_pair_clusters": 45,
+   "validation_pairs_by_fold": [
+    [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      1,
+      8
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      8
+     ],
+     [
+      5,
+      6
+     ],
+     [
+      9,
+      9
+     ]
+    ],
+    [
+     [
+      2,
+      7
+     ],
+     [
+      3,
+      6
+     ],
+     [
+      3,
+      8
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      5,
+      5
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      8,
+      8
+     ]
+    ],
+    [
+     [
+      1,
+      8
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      9
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      4,
+      7
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      7,
+      7
+     ],
+     [
+      7,
+      9
+     ]
+    ],
+    [
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      7
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      5,
+      7
+     ],
+     [
+      5,
+      8
+     ],
+     [
+      6,
+      9
+     ],
+     [
+      8,
+      9
+     ]
+    ],
+    [
+     [
+      1,
+      9
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      9
+     ],
+     [
+      4,
+      5
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      6,
+      6
+     ],
+     [
+      7,
+      8
+     ],
+     [
+      7,
+      9
+     ]
+    ]
+   ]
+  },
+  "status": "SUPPORTED_LOCAL_UNFROZEN",
+  "uncertainty": {
+   "bootstrap": {
+    "draws": 5000,
+    "fixed_lens_layer_selection": "repeated from other outer folds per draw",
+    "seed": 991,
+    "supervised_layer_selection": "fixed inner-validation choice; interval conditional on selection",
+    "unit": "outer-test unordered_operand_pair"
+   },
+   "contrasts": {
+    "eventual_exit_jacobian_lens_minus_logit_lens": {
+     "ci95": [
+      [
+       -0.5482,
+       -0.2214
+      ],
+      [
+       -0.1317,
+       0.1523
+      ],
+      [
+       -0.0911,
+       0.1084
+      ],
+      [
+       -0.2844,
+       -0.1054
+      ]
+     ],
+     "per_loop": [
+      -0.371528,
+      0.0,
+      -0.03125,
+      -0.190972
+     ]
+    },
+    "eventual_exit_jacobian_lens_minus_supervised_probe": {
+     "ci95": [
+      [
+       -0.3666,
+       -0.0208
+      ],
+      [
+       -0.2363,
+       0.0599
+      ],
+      [
+       -0.3014,
+       -0.0867
+      ],
+      [
+       -0.2317,
+       -0.0475
+      ]
+     ],
+     "per_loop": [
+      -0.201389,
+      -0.059028,
+      -0.208333,
+      -0.128472
+     ]
+    },
+    "supervised_probe_minus_logit_lens": {
+     "ci95": [
+      [
+       -0.3393,
+       -0.0563
+      ],
+      [
+       -0.0203,
+       0.2447
+      ],
+      [
+       0.059,
+       0.3393
+      ],
+      [
+       -0.1615,
+       0.0469
+      ]
+     ],
+     "per_loop": [
+      -0.170139,
+      0.059028,
+      0.177083,
+      -0.0625
+     ]
+    }
+   }
+  },
+  "value": {
+   "baselines": {
+    "majority_all_648": 0.111111,
+    "majority_eligible_576": 0.125,
+    "uniform_17_way": 0.058824
+   },
+   "readouts": {
+    "eventual_exit_jacobian_lens": {
+     "ci95": [
+      [
+       0.2312,
+       0.5617
+      ],
+      [
+       0.296,
+       0.6409
+      ],
+      [
+       0.0817,
+       0.2654
+      ],
+      [
+       0.0528,
+       0.1712
+      ]
+     ],
+     "per_loop": [
+      0.392361,
+      0.5,
+      0.147569,
+      0.119792
+     ],
+     "selected_physical_layer_by_heldout_fold": [
+      [
+       35,
+       26,
+       26,
+       35,
+       26
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       0,
+       18,
+       0,
+       18,
+       0
+      ],
+      [
+       34,
+       34,
+       34,
+       34,
+       34
+      ]
+     ]
+    },
+    "logit_lens": {
+     "ci95": [
+      [
+       0.6597,
+       0.9049
+      ],
+      [
+       0.2821,
+       0.6337
+      ],
+      [
+       0.0634,
+       0.2415
+      ],
+      [
+       0.2243,
+       0.3947
+      ]
+     ],
+     "per_loop": [
+      0.763889,
+      0.5,
+      0.178819,
+      0.310764
+     ],
+     "selected_physical_layer_by_heldout_fold": [
+      [
+       30,
+       24,
+       30,
+       34,
+       30
+      ],
+      [
+       1,
+       1,
+       1,
+       1,
+       1
+      ],
+      [
+       19,
+       19,
+       19,
+       19,
+       19
+      ],
+      [
+       19,
+       19,
+       19,
+       19,
+       19
+      ]
+     ]
+    },
+    "supervised_probe": {
+     "ci95": [
+      [
+       0.4577,
+       0.7228
+      ],
+      [
+       0.4185,
+       0.6917
+      ],
+      [
+       0.2401,
+       0.4692
+      ],
+      [
+       0.1589,
+       0.3442
+      ]
+     ],
+     "per_loop": [
+      0.59375,
+      0.559028,
+      0.355903,
+      0.248264
+     ],
+     "selected_physical_layer_by_heldout_fold": [
+      [
+       38,
+       30,
+       28,
+       41,
+       25
+      ],
+      [
+       6,
+       0,
+       9,
+       1,
+       0
+      ],
+      [
+       4,
+       4,
+       5,
+       6,
+       1
+      ],
+      [
+       2,
+       38,
+       11,
+       40,
+       2
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "transport_mechanism": {
+  "claim": "Norm/scatter patterns do not establish prompt-specific rewriting.",
+  "estimand": null,
+  "generator_set": [
+   {
+    "path": "src/ouro_jlens/report.py",
+    "sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+    "size": 126712
+   },
+   {
+    "path": "src/ouro_jlens/transport_report.py",
+    "sha256": "daadb2bb46e59b497cb9fa4e73359cc64caa6fc8ef990b52501cf30443ef8f73",
+    "size": 10005
+   }
+  ],
+  "generator_set_sha256": "e9ca8164b82d0d88a9758a7b8cd19a33681914843e38233e5491b54339c62441",
+  "generator_sha256": "3d4c6e9c918851f64d37512bd8f115f4c2ab4ea677627d0200d59a3168a0cb9e",
+  "input_hashes": {},
+  "population": null,
+  "status": "INCONCLUSIVE",
+  "uncertainty": null,
+  "value": null
+ }
+}

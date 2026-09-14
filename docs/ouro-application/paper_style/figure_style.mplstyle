@@ -1,0 +1,25 @@
+figure.facecolor: white
+axes.facecolor: white
+savefig.facecolor: white
+font.family: sans-serif
+font.sans-serif: Source Sans Pro, Noto Sans, DejaVu Sans
+font.size: 9.2
+text.color: "#172027"
+axes.edgecolor: "#52606A"
+axes.labelcolor: "#172027"
+axes.linewidth: 0.65
+axes.titlesize: 10.2
+axes.titleweight: semibold
+axes.spines.top: False
+axes.spines.right: False
+axes.grid: True
+grid.color: "#D6DDE1"
+grid.linewidth: 0.55
+xtick.color: "#52606A"
+ytick.color: "#52606A"
+legend.frameon: False
+lines.linewidth: 1.65
+lines.markersize: 5.5
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none

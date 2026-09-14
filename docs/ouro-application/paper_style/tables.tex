@@ -1,0 +1,32 @@
+\sisetup{
+  detect-all,
+  input-open-uncertainty=,
+  input-close-uncertainty=,
+  table-number-alignment=center,
+  group-separator={,},
+  group-minimum-digits=4
+}
+
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.12}
+\arrayrulecolor{KirinRule}
+\AtBeginEnvironment{longtable}{%
+  \small
+  \setlength{\tabcolsep}{4pt}%
+  \renewcommand{\arraystretch}{1.10}%
+}
+\AtBeginEnvironment{tabular}{\small}
+\setlength{\LTpre}{5pt}
+\setlength{\LTpost}{6pt}
+\setlength{\heavyrulewidth}{0.8pt}
+\setlength{\lightrulewidth}{0.45pt}
+\setlength{\cmidrulewidth}{0.35pt}
+\newcommand{\kirintablehead}[1]{\rowcolor{KirinAccentPale}\sffamily\bfseries #1}
+\newcommand{\statusEstablished}{\textsc{Established}}
+\newcommand{\statusBounded}{\textsc{Bounded screen}}
+\newcommand{\statusUnresolved}{\textsc{Unresolved}}
+\newcommand{\statusDiagnostic}{\textsc{Diagnostic}}
+\newcommand{\statusRetracted}{\textsc{Retracted}}
+\newcommand{\statusHistorical}{\textsc{Historical}}
+\newcommand{\statusCorrected}{\textsc{Corrected}}
+

@@ -1,0 +1,32 @@
+\newcommand{\KirinTitleBlock}[7]{%
+  \thispagestyle{fancy}%
+  \begingroup
+  \setlength{\parindent}{0pt}%
+  \noindent\begin{minipage}[t]{0.72\linewidth}
+    {\sffamily\bfseries\fontsize{8.5pt}{10pt}\selectfont\color{KirinAccent}\MakeUppercase{#1}}
+  \end{minipage}%
+  \begin{minipage}[t]{0.28\linewidth}
+    \raggedleft{\sffamily\fontsize{8.5pt}{10pt}\selectfont\color{KirinMuted}#6}
+  \end{minipage}\par
+  \vspace{4pt}\color{KirinAccent}\hrule height 0.85pt\color{KirinInk}\vspace{9pt}
+  {\sffamily\bfseries\fontsize{23pt}{25.2pt}\selectfont\raggedright #2\par}
+  \vspace{4pt}
+  {\sffamily\fontsize{15.2pt}{17.5pt}\selectfont\color{KirinAccentDark}\raggedright #3\par}
+  \vspace{8pt}\color{KirinRule}\hrule height 0.45pt\color{KirinInk}\vspace{7pt}
+  {\sffamily\bfseries\fontsize{11.5pt}{13.2pt}\selectfont #4}\par
+  \vspace{2pt}
+  {\sffamily\fontsize{8.9pt}{10.6pt}\selectfont\color{KirinMuted}%
+    \href{https://github.com/VykosMolt}{github.com/VykosMolt}%
+    \ifstrempty{#5}{}{\enspace\textcolor{KirinRule}{|}\enspace #5}%
+  }\par
+  \ifstrempty{#7}{}{\vspace{5pt}{\sffamily\fontsize{8.5pt}{10.2pt}\selectfont\color{KirinMuted}#7\par}}
+  \vspace{6pt}
+  \endgroup
+}
+
+\newenvironment{kirinacknowledgment}{%
+  \par\vspace{1pt}\begingroup\small\setlength{\parindent}{0pt}%
+  \noindent\textbf{Acknowledgments.}\enspace
+}{%
+  \par\endgroup\vspace{4pt}%
+}

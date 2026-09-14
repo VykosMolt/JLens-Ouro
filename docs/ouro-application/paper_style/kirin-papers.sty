@@ -1,0 +1,184 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{kirin-papers}[2026/07/18 Shared visual system for Jan Kirin papers]
+
+\newif\ifkirinmethodology
+\kirinmethodologyfalse
+\DeclareOption{paper1}{\kirinmethodologyfalse}
+\DeclareOption{paper2}{\kirinmethodologytrue}
+\ProcessOptions\relax
+
+\RequirePackage{iftex}
+\ifPDFTeX
+  \PackageError{kirin-papers}{This style requires XeTeX or LuaTeX}{Compile with XeLaTeX or LuaLaTeX.}
+\fi
+
+% TeX-distributed fonts: no font files are bundled with the repository.
+\RequirePackage{libertinus}
+\RequirePackage[semibold]{sourcesanspro}
+\RequirePackage{microtype}
+
+\RequirePackage[letterpaper,top=0.64in,bottom=0.70in,left=0.76in,right=0.76in,
+  headheight=14pt,headsep=0.18in,footskip=0.34in]{geometry}
+\RequirePackage{amsmath}
+\RequirePackage{calc}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+% Compatibility for Pandoc captionless longtables under TeX Live 2025.
+\makeatletter
+\@ifundefined{c@none}{\newcounter{none}}{}
+\makeatother
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{siunitx}
+\RequirePackage[table]{xcolor}
+\RequirePackage{etoolbox}
+\RequirePackage{ragged2e}
+\RequirePackage{seqsplit}
+\RequirePackage{xurl}
+\RequirePackage{hyperref}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\RequirePackage{needspace}
+\RequirePackage{enumitem}
+\RequirePackage{newunicodechar}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc,shapes.geometric}
+
+\input{../paper_style/palette.tex}
+\input{../paper_style/boxes.tex}
+\input{../paper_style/tables.tex}
+\input{../paper_style/titlepage.tex}
+
+% Body size is deliberately between the standard 10 and 11 point classes.
+\makeatletter
+\renewcommand\normalsize{%
+  \@setfontsize\normalsize{10.3pt}{12.35pt}%
+  \abovedisplayskip 7.5pt plus 2pt minus 4pt%
+  \belowdisplayskip 7.5pt plus 2pt minus 4pt%
+  \abovedisplayshortskip 4pt plus 2pt%
+  \belowdisplayshortskip 5pt plus 2pt minus 2pt}
+\renewcommand\small{\@setfontsize\small{9.1pt}{10.75pt}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{8.25pt}{9.65pt}}
+\renewcommand\scriptsize{\@setfontsize\scriptsize{7.55pt}{8.7pt}}
+\makeatother
+\normalsize
+
+\setlength{\parindent}{1.08em}
+\setlength{\parskip}{0pt plus 0.4pt}
+\setlength{\emergencystretch}{1.25em}
+% Headings are visually unnumbered (the \titleformat label argument is empty),
+% but the counters must still advance: with secnumdepth = -1 hyperref cannot
+% build a unique \theH... anchor per heading, so nested headings collide, the
+% "anchor of a bookmark and its parent's must not be the same" warning fires,
+% and bookmark destinations resolve to the wrong page.
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlist{nosep,leftmargin=1.5em,topsep=3pt}
+
+% \Needspace must run BEFORE the heading is typeset, not inside \titleformat's
+% format argument: there it executes after hyperref has already written the
+% anchor, so a page break triggered by it strands the anchor on the previous
+% page. Prepending it to the sectioning commands keeps anchor and heading
+% together.
+\titleformat{\section}
+  {\sffamily\bfseries\color{KirinAccent}\fontsize{15.2pt}{17.5pt}\selectfont}
+  {}{0pt}{}
+\titlespacing*{\section}{0pt}{1.45em plus .25em minus .15em}{0.50em}
+\titleformat{\subsection}
+  {\sffamily\bfseries\color{KirinInk}\fontsize{12.2pt}{14.2pt}\selectfont}
+  {}{0pt}{}
+\titlespacing*{\subsection}{0pt}{1.15em plus .2em minus .1em}{0.35em}
+\titleformat{\subsubsection}
+  {\sffamily\bfseries\color{KirinAccentDark}\fontsize{10.6pt}{12.3pt}\selectfont}
+  {}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{0.95em plus .15em minus .1em}{0.25em}
+\titleformat{\paragraph}[runin]
+  {\sffamily\bfseries\color{KirinInk}\normalsize}{}{0pt}{}[.]
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{\PackageWarning{kirin-papers}{could not pretoc \string\section}}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{\PackageWarning{kirin-papers}{could not pretoc \string\subsection}}
+\pretocmd{\subsubsection}{\Needspace{2.5\baselineskip}}{}{\PackageWarning{kirin-papers}{could not pretoc \string\subsubsection}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=KirinAccentDark,
+  citecolor=KirinAccentDark,
+  urlcolor=KirinLink,
+  pdfborder={0 0 0}
+}
+
+% Long paths and hashes remain selectable and may break at any character.
+\let\kirinorigtexttt\texttt
+\renewcommand{\texttt}[1]{{\ttfamily\fontsize{9.1pt}{10.5pt}\selectfont\seqsplit{#1}}}
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\real}[1]{#1}
+\providecommand{\pandocbounded}[1]{\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{#1}}
+
+% Compact full-width divider for Paper 1's major parts and appendices.
+\newcommand{\kirinpart}[2]{%
+  \Needspace{5\baselineskip}%
+  \vspace{1.25em}%
+  \noindent\colorbox{KirinAccentPale}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+      \vspace{0.35em}%
+      {\sffamily\bfseries\fontsize{9pt}{10pt}\selectfont\color{KirinAccentDark}\MakeUppercase{#1}}%
+      \ifstrempty{#2}{}{\hfill{\sffamily\bfseries\fontsize{15pt}{17pt}\selectfont\color{KirinInk}#2}}%
+      \vspace{0.35em}}}%
+  \par\vspace{0.55em}}
+
+% The \pretocmd hooks above still supply \Needspace; only the visual format
+% changes here.
+\newcommand{\kirinappendixstyle}{%
+  \titleformat{\section}
+    {\sffamily\bfseries\color{KirinInk}\fontsize{13.2pt}{15.2pt}\selectfont}
+    {}{0pt}{}%
+  \titlespacing*{\section}{0pt}{1.25em plus .2em minus .1em}{0.4em}%
+  \titleformat{\subsection}
+    {\sffamily\bfseries\color{KirinInk}\fontsize{10.9pt}{12.8pt}\selectfont}
+    {}{0pt}{}%
+}
+
+% Figures here are centred boxes followed by this caption, not floats, so the
+% only thing holding the pair together is the penalty between them.
+% \nopagebreak[4] forbids that break, so a caption can never be orphaned from
+% its figure; \interlinepenalty then stops the caption splitting internally.
+% Together they move the whole figure+caption unit to the next page when it
+% will not fit.
+\newcommand{\kirinfigcaption}[2]{%
+  \nopagebreak[4]\par\nopagebreak[4]\vspace{3pt}\nopagebreak[4]%
+  \begingroup\interlinepenalty=10000\relax
+  \noindent{\small\sffamily\bfseries\color{KirinInk}#1}\enspace
+  {\small\color{KirinMuted}#2}\par
+  \endgroup\vspace{5pt}}
+
+\newcommand{\KirinShortTitle}{Jan Kirin}
+\newcommand{\KirinSetShortTitle}[1]{\renewcommand{\KirinShortTitle}{#1}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\sffamily\scriptsize\color{KirinMuted}\KirinShortTitle}
+\fancyfoot[R]{\sffamily\scriptsize\color{KirinMuted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.35pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{KirinRule}\leaders\hrule height \footrulewidth\hfill}}
+
+\newunicodechar{§}{\S{}}
+\newunicodechar{±}{\ensuremath{\pm}}
+\newunicodechar{·}{\ensuremath{\cdot}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{–}{--}
+\newunicodechar{—}{---}
+\newunicodechar{…}{\ldots{}}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{−}{\ensuremath{-}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{≡}{\ensuremath{\equiv}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{∼}{\ensuremath{\sim}}
+\newunicodechar{í}{\'{\i}}
+\newunicodechar{ö}{\"o}
+\newunicodechar{ş}{\c{s}}
