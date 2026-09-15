@@ -17,7 +17,7 @@ import uuid
 
 import numpy as np
 
-ROUND = Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07')
+ROUND = Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07')
 sys.path.insert(0, str(ROUND / 'analysis'))
 sys.path.insert(0, str(ROUND / 'monitoring'))
 import analyze_refits as frozen

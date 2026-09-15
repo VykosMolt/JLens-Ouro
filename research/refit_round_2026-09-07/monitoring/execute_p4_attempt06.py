@@ -1,7 +1,7 @@
 from pathlib import Path
 import datetime, hashlib, io, json, os, shlex, stat, subprocess, sys, tarfile, time
 
-ROUND = Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07')
+ROUND = Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07')
 DEPLOYMENT = ROUND / 'deployment'
 sys.path.insert(0, str(DEPLOYMENT))
 import lease

@@ -18,7 +18,7 @@ from pathlib import Path
 
 import numpy as np
 
-RESEARCH = Path('/home/moloch/jacobian-lens/research')
+RESEARCH = Path('/home/moloch/ouro_project/jacobian-lens/research')
 ROUND = RESEARCH / 'confirmation_2026-09-09'
 BUNDLE = ROUND / 'corrections/native_check_v1/bundle'
 RESULTS = ROUND / ('cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/'

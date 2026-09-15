@@ -36,7 +36,7 @@ MAX_GPU_RATE = 0.22
 DISK_GB = 120
 STORAGE_RATE = DISK_GB * 0.10 / 730.0
 BUDGET = 25.0
-LEDGER = Path("/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases")
+LEDGER = Path("/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/cloud_leases")
 # Retain the original conservative deadline and spending basis even though
 # this explicitly selected GPU has a lower permitted assignment price.
 HARD_RATE = 0.34 + STORAGE_RATE

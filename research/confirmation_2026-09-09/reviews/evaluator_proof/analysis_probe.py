@@ -1,7 +1,7 @@
 from pathlib import Path
 import sys,tempfile,json
 import numpy as np
-R=Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09');sys.path[:0]=[str(R/'analysis'),str(R/'evaluation')]
+R=Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09');sys.path[:0]=[str(R/'analysis'),str(R/'evaluation')]
 from analyze import analyze
 from measurement import SUPPORT,PRIMARY_VIRTUAL
 from plot import main

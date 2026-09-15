@@ -4,7 +4,7 @@ and every file >= 50 MiB out of the repository; list what is excluded (with hash
 research/GITHUB_EXCLUSIONS.md; scan the remaining set for secret-like content."""
 import os, re, json, subprocess, hashlib
 from pathlib import Path
-ROOT = Path('/home/moloch/jacobian-lens'); R = ROOT / 'research'
+ROOT = Path('/home/moloch/ouro_project/jacobian-lens'); R = ROOT / 'research'
 LIMIT = 50 * 2**20
 RULES = ['', '# ---- research records: kept out of GitHub (all of it is in the SSD archive; see research/GITHUB_EXCLUSIONS.md) ----',
          'research/verification_2026-09-11/preservation/bundle/', 'research/verification_2026-09-11/preservation/restore_check/',

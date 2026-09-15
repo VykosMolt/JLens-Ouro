@@ -43,7 +43,7 @@ STORAGE_RATE = DISK_GB * 0.10 / 730.0
 BUDGET = 25.0
 # Allow bounded time for both account-identity reads before watcher readiness.
 WATCHER_STARTUP_SECONDS = 180
-LEDGER = Path("/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases")
+LEDGER = Path("/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/cloud_leases")
 TERMINATION_RESERVE_SECONDS = 600
 CONTROLLER_FILES = tuple(sorted(handoff.SOURCE_NAMES))
 # Every new deadline includes the selected GPU's full permitted price and disk.

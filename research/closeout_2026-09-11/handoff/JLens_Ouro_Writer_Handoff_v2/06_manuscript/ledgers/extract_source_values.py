@@ -2,7 +2,7 @@
 """Collect every machine-readable source value the manuscripts cite, with path and key, into SOURCE_VALUES.json."""
 import json, csv
 from pathlib import Path
-RS = Path('/home/moloch/jacobian-lens/research'); HERE = Path(__file__).resolve().parent
+RS = Path('/home/moloch/ouro_project/jacobian-lens/research'); HERE = Path(__file__).resolve().parent
 C = RS / 'confirmation_2026-09-09'; V = RS / 'verification_2026-09-11'; R = RS / 'refit_round_2026-09-07'; F = RS / 'followup_2026-09-07'; X = RS / 'closeout_2026-09-11'
 vals = {}
 def put(key, value, path, jkey, note=''): vals[key] = {'value': value, 'source_path': str(path), 'source_key': jkey, 'note': note}

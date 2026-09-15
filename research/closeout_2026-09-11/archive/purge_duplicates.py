@@ -8,8 +8,8 @@ are removed with rmdir only. A deletion manifest is written locally and copied t
 import json, os, hashlib, subprocess, sys, shutil
 from datetime import datetime, timezone
 from pathlib import Path
-X = Path('/home/moloch/jacobian-lens/research/closeout_2026-09-11/archive'); DEST = Path('/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911')
-BUNDLE = '/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle/'; CHUNKS = '/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/'
+X = Path('/home/moloch/ouro_project/jacobian-lens/research/closeout_2026-09-11/archive'); DEST = Path('/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911')
+BUNDLE = '/home/moloch/ouro_project/jacobian-lens/research/verification_2026-09-11/preservation/bundle/'; CHUNKS = '/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/'
 UUID = '36df468b-3bf9-41a9-ace8-edccfb292434'
 def sha(p):
     h = hashlib.sha256()

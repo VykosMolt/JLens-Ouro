@@ -9,8 +9,8 @@ import json, os, hashlib, shutil
 from datetime import datetime, timezone
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
-X = Path('/home/moloch/jacobian-lens/research/closeout_2026-09-11/archive'); V = Path('/home/moloch/jacobian-lens/research/verification_2026-09-11')
-BUNDLE = str(V / 'preservation/bundle') + '/'; CHUNKS = '/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/'
+X = Path('/home/moloch/ouro_project/jacobian-lens/research/closeout_2026-09-11/archive'); V = Path('/home/moloch/ouro_project/jacobian-lens/research/verification_2026-09-11')
+BUNDLE = str(V / 'preservation/bundle') + '/'; CHUNKS = '/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/resources/input_chunks/'
 def sha(p):
     h = hashlib.sha256()
     with open(p, 'rb') as f:
@@ -22,10 +22,10 @@ arch = {e['source_path']: e for e in man['entries'] if e['kind'] == 'file'}
 orig = {}
 for part in ('core', 'verification'):
     for e in json.load(open(V / f'preservation/BUNDLE_MANIFEST_{part}.json'))['entries']: orig[str(V / 'preservation/bundle' / e['bundle_path'])] = e
-banks = {'90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f': '/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt',
-         '101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8': '/home/moloch/jacobian-lens/research/confirmation_2026-09-09/artifacts/reconstructed/ouro/fit_02/lens.pt',
-         'dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560': '/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt',
-         'b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775': '/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt'}
+banks = {'90f01f6afd83512feba4b1c9871052a9ee85de6cb7ab68bdb59d97c7c9d4b52f': '/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/prefetch_v3_20260909T134030Z_649dff12/staging/ouro/fit_01/final/cursor_000100_e090a066bc3b4630891f195e7e7d1d29/lens.pt',
+         '101f31db6aa56d97fbae7ecb3e2f241ef1805000484d0e22f5eba5fc0b9acde8': '/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/artifacts/reconstructed/ouro/fit_02/lens.pt',
+         'dc6354df970b29b8312829259ac282c829562aaaf95e45bb43e1bbc5ced5e560': '/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_penultimate/fit_01/final/cursor_000100_6d4d010756ab4a1cbca52509c897410c/lens.pt',
+         'b8e8b7d2d3f40030799395dee9e8376fe1fa0bf09f278319d31a0dff4efe6775': '/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/cloud_leases/attempt_06/retrieved/controls/ouro_positions/fit_01/final/cursor_000100_435bacee56d94ff988ff069b59f2c987/lens.pt'}
 bank_ok = {h: (os.path.isfile(p) and sha(p) == h) for h, p in banks.items()}
 print('retained banks hash-verified:', bank_ok, flush=True)
 targets = [e for e in man['entries'] if e['kind'] == 'file' and os.path.exists(e['source_path']) and (e['source_path'].startswith(BUNDLE) or (e['source_path'].startswith(CHUNKS) and e['source_path'].endswith('.part')))]

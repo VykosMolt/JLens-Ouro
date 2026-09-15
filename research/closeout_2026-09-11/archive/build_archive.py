@@ -13,10 +13,10 @@ from pathlib import Path
 
 DEST = Path('/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911')
 TREE = DEST / 'tree'
-LOCAL = Path('/home/moloch/jacobian-lens/research/closeout_2026-09-11/archive')
+LOCAL = Path('/home/moloch/ouro_project/jacobian-lens/research/closeout_2026-09-11/archive')
 ROOTS = [
-    '/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation',   # bundle first
-    '/home/moloch/jacobian-lens',
+    '/home/moloch/ouro_project/jacobian-lens/research/verification_2026-09-11/preservation',   # bundle first
+    '/home/moloch/ouro_project/jacobian-lens',
     '/home/moloch/ouro_project/artifacts/jlens',
     '/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B',
     '/home/moloch/ouro_project/artifacts/hf_cache/hub/datasets--Salesforce--wikitext',
@@ -24,9 +24,9 @@ ROOTS = [
     '/home/moloch/ouro_project/docs/jlens',
     '/home/moloch/.cache/huggingface/hub/models--Vykos--ouro-jlens-results',
 ]
-SECRET_FILES = {'/home/moloch/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519'}
+SECRET_FILES = {'/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/resources/ssh/id_ed25519'}
 EXCLUDE_DIR_NAMES = {'__pycache__', '.pytest_cache', '.ruff_cache'}
-EXCLUDE_PREFIXES = ['/home/moloch/jacobian-lens/research/closeout_2026-09-11']  # this round: added later as a manifested supplement
+EXCLUDE_PREFIXES = ['/home/moloch/ouro_project/jacobian-lens/research/closeout_2026-09-11']  # this round: added later as a manifested supplement
 EXCLUDE_SUFFIXES = ('.pyc',)
 
 def sha256(path):
@@ -102,7 +102,7 @@ def destination_identity():
 def git_records():
     g = DEST / 'git'; g.mkdir(parents=True, exist_ok=True)
     recs = {}
-    for name, repo in (('jacobian-lens', '/home/moloch/jacobian-lens'), ('ouro_project', '/home/moloch/ouro_project')):
+    for name, repo in (('jacobian-lens', '/home/moloch/ouro_project/jacobian-lens'), ('ouro_project', '/home/moloch/ouro_project')):
         head = run(['git', '-C', repo, 'rev-parse', 'HEAD']).stdout.strip()
         run(['git', '-C', repo, 'bundle', 'create', str(g / f'{name}.bundle'), '--all'])
         (g / f'{name}_status.txt').write_text(run(['git', '-C', repo, 'status', '--porcelain=v1', '--untracked-files=all']).stdout)

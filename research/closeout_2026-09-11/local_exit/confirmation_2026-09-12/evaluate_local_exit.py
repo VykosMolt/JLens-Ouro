@@ -24,7 +24,7 @@ def sha(p):
         for c in iter(lambda: f.read(1 << 22), b''): m.update(c)
     return m.hexdigest()
 PLAN = HERE / 'ANALYSIS_PLAN.md'; PLAN_SHA = sha(PLAN); assert PLAN_SHA.startswith('16cdcbd071e86449'), PLAN_SHA
-CACHE = Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/b355a0ea76244df587e8ea2865e40d125ba28eff09d1d8cc9a6f10e2c41aae9e/results/common/cache.pt')
+CACHE = Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/b355a0ea76244df587e8ea2865e40d125ba28eff09d1d8cc9a6f10e2c41aae9e/results/common/cache.pt')
 UNEMBED = Path('/home/moloch/ouro_project/artifacts/jlens/retrieved_2026-09-12/ouro26b_unembed_1ed04250.safetensors')
 MERGED = Path('/home/moloch/ouro_project/artifacts/jlens/retrieved_2026-09-12/merged')
 CONFIG = Path.home() / '.cache/huggingface/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/config.json'

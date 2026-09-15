@@ -7,9 +7,9 @@ import json, csv, sys
 from pathlib import Path
 import numpy as np
 HERE = Path(__file__).resolve().parent
-C = Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')
+C = Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09')
 A = C / 'cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results'
-R = Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07/analysis')
+R = Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/analysis')
 sys.dont_write_bytecode = True; sys.path[:0] = [str(C / 'evaluation'), str(C / 'analysis')]
 from measurement import ARMS, SUPPORT, score
 import analyze

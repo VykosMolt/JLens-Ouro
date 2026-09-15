@@ -15,7 +15,7 @@ import shlex
 import subprocess
 import sys
 
-ROOT = Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07')
+ROOT = Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07')
 sys.path.insert(0, str(ROOT / 'deployment'))
 import lease
 

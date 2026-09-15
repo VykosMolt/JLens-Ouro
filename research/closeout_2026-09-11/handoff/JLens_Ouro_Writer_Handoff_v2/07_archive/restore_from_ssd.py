@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np, torch, torch.nn.functional as F
 from safetensors import safe_open
 ARCH = Path('/run/media/moloch/ARCH_BACKUP/JLENS_COLD_ARCHIVE_20260911')
-PRES = ARCH / 'tree/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation'
+PRES = ARCH / 'tree/home/moloch/ouro_project/jacobian-lens/research/verification_2026-09-11/preservation'
 BUNDLE = PRES / 'bundle'; PAYLOAD = BUNDLE / 'accepted_final_payload/results'
 OUT = Path(sys.argv[1]); WORK = Path(sys.argv[2]); WORK.mkdir(parents=True, exist_ok=True)
 def sha256(p):
@@ -18,7 +18,7 @@ def sha256(p):
         for b in iter(lambda: f.read(1 << 24), b''): h.update(b)
     return h.hexdigest()
 res = {'schema': 'ssd_restoration_check.v1', 'started_utc': datetime.now(timezone.utc).isoformat(), 'archive': str(ARCH), 'bundle': str(BUNDLE)}
-res['isolation'] = {'live_research_visible': os.path.exists('/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/bundle/banks/fit01.pt'),
+res['isolation'] = {'live_research_visible': os.path.exists('/home/moloch/ouro_project/jacobian-lens/research/verification_2026-09-11/preservation/bundle/banks/fit01.pt'),
                     'live_ouro_artifacts_visible': os.path.exists('/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/blobs'),
                     'live_hf_cache_visible': os.path.exists('/home/moloch/.cache/huggingface/hub/models--Vykos--ouro-jlens-results/blobs'),
                     'HF_HUB_OFFLINE': os.environ.get('HF_HUB_OFFLINE'), 'network': None}

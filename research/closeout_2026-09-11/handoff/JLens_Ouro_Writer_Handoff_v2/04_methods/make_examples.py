@@ -4,7 +4,7 @@ frozen scorer readouts.SAMPLE_ITEMS, plus the first zero-drop boundary item and 
 import json, csv
 from pathlib import Path
 import transformers
-C = Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')
+C = Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09')
 A = C / 'cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results'
 snap = (C / '../verification_2026-09-11/preservation/bundle/model_snapshot').resolve()
 tok = transformers.AutoTokenizer.from_pretrained(str(snap), trust_remote_code=True, local_files_only=True)

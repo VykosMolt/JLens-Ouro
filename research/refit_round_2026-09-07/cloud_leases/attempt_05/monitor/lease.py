@@ -36,7 +36,7 @@ MAX_GPU_RATE = 0.69
 DISK_GB = 120
 STORAGE_RATE = DISK_GB * 0.10 / 730.0
 BUDGET = 25.0
-LEDGER = Path("/home/moloch/jacobian-lens/research/refit_round_2026-09-07/cloud_leases")
+LEDGER = Path("/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/cloud_leases")
 # Every new deadline includes the selected GPU's full permitted price and disk.
 HARD_RATE = MAX_GPU_RATE + STORAGE_RATE
 REMOTE = "/workspace/jlens"

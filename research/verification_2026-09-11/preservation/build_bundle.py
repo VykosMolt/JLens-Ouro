@@ -14,7 +14,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-RESEARCH = Path('/home/moloch/jacobian-lens/research')
+RESEARCH = Path('/home/moloch/ouro_project/jacobian-lens/research')
 R = RESEARCH / 'confirmation_2026-09-09'
 REFIT = RESEARCH / 'refit_round_2026-09-07'
 V = RESEARCH / 'verification_2026-09-11'

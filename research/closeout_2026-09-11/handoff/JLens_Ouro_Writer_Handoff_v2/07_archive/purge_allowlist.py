@@ -6,12 +6,12 @@ other projects (Ouro model weights, WikiText parquet), active manuscript/closeou
 and every file below the size floor (small reports stay on the laptop)."""
 import json, os, hashlib, csv, sys
 from pathlib import Path
-X = Path('/home/moloch/jacobian-lens/research/closeout_2026-09-11'); A = X / 'archive'
+X = Path('/home/moloch/ouro_project/jacobian-lens/research/closeout_2026-09-11'); A = X / 'archive'
 man = json.load(open(A / 'ARCHIVE_MANIFEST.json')); receipt = json.load(open(A / 'ACCEPTANCE_RECEIPT.json'))
 FLOOR = 8 * 2**20
 EXCLUDE_PREFIXES = ['/home/moloch/ouro_project/artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B', '/home/moloch/ouro_project/artifacts/hf_cache/hub/datasets--Salesforce--wikitext',
-                    '/home/moloch/ouro_project/src/ouro_jlens', '/home/moloch/ouro_project/docs/jlens', '/home/moloch/jacobian-lens/research/closeout_2026-09-11', '/home/moloch/jacobian-lens/.git',
-                    '/home/moloch/jacobian-lens/jlens', '/home/moloch/jacobian-lens/data', '/home/moloch/jacobian-lens/tests', '/home/moloch/jacobian-lens/assets']
+                    '/home/moloch/ouro_project/src/ouro_jlens', '/home/moloch/ouro_project/docs/jlens', '/home/moloch/ouro_project/jacobian-lens/research/closeout_2026-09-11', '/home/moloch/ouro_project/jacobian-lens/.git',
+                    '/home/moloch/ouro_project/jacobian-lens/jlens', '/home/moloch/ouro_project/jacobian-lens/data', '/home/moloch/ouro_project/jacobian-lens/tests', '/home/moloch/ouro_project/jacobian-lens/assets']
 reasons = {EXCLUDE_PREFIXES[0]: 'shared model cache used by ouro_project', EXCLUDE_PREFIXES[1]: 'shared dataset cache', EXCLUDE_PREFIXES[2]: 'active source code', EXCLUDE_PREFIXES[3]: 'active manuscript/application sources', EXCLUDE_PREFIXES[4]: 'this round (active, handoff, receipts)'}
 def sha256(p):
     h = hashlib.sha256()

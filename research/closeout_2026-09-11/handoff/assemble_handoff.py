@@ -3,7 +3,7 @@
 Multi-gigabyte banks/states/weights stay in the SSD archive; the zip is not their backup."""
 import json, shutil, hashlib, zipfile, sys, os
 from pathlib import Path
-RS = Path('/home/moloch/jacobian-lens/research'); X = RS / 'closeout_2026-09-11'; H = X / 'handoff' / 'JLens_Ouro_Writer_Handoff_v2'
+RS = Path('/home/moloch/ouro_project/jacobian-lens/research'); X = RS / 'closeout_2026-09-11'; H = X / 'handoff' / 'JLens_Ouro_Writer_Handoff_v2'
 C = RS / 'confirmation_2026-09-09'; V = RS / 'verification_2026-09-11'; R = RS / 'refit_round_2026-09-07'; F = RS / 'followup_2026-09-07'
 A = C / 'cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results'
 INP = Path('/tmp/claude-1000/-home-moloch-jacobian-lens/fcb94bb7-42d0-49fd-8993-7db96deb86a0/scratchpad/inputs')

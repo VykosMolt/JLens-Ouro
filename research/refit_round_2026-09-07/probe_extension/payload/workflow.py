@@ -24,7 +24,7 @@ import warnings
 HERE = Path(__file__).resolve().parent
 CONTRACT_SHA = 'b92411f0a4551870cc3a3a7be6d4d5fa168a3eec97b124f6634292eb211c6b8b'
 OURO = Path('/home/moloch/ouro_project')
-REPO = Path('/home/moloch/jacobian-lens')
+REPO = Path('/home/moloch/ouro_project/jacobian-lens')
 SNAPSHOT = OURO / 'artifacts/hf_cache/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd'
 LAYERS = [25, 26, 29, 31, 35, 39, 42]
 PROBE_LAYERS = [39, 31, 29, 42, 26]

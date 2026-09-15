@@ -6,7 +6,7 @@ import json
 import math
 import stat
 
-ROUND=Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07')
+ROUND=Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07')
 BASE=ROUND/'monitoring/attempt_06/20260909T115652Z'
 checks=[]
 inputs={}

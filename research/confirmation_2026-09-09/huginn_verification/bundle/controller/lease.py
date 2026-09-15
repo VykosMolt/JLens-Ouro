@@ -44,7 +44,7 @@ STORAGE_RATE = DISK_GB * 0.10 / 730.0
 BUDGET = 25.0
 # Allow bounded time for both account-identity reads before watcher readiness.
 WATCHER_STARTUP_SECONDS = 180
-LEDGER = Path("/home/moloch/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/cloud_leases")
+LEDGER = Path("/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/huginn_verification/cloud_leases")
 TERMINATION_RESERVE_SECONDS = 600
 CONTROLLER_FILES = tuple(sorted(handoff.SOURCE_NAMES))
 # Every new deadline includes the selected GPU's full permitted price and disk.
@@ -207,7 +207,7 @@ def load_run_config(path):
 
 
 # The phase is a separate debit/ledger, never a reset of the primary $4 ceiling.
-PRIMARY_CONTROLLER = Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09/controller')
+PRIMARY_CONTROLLER = Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09/controller')
 PRIMARY_LEDGER = PRIMARY_CONTROLLER.parent / 'cloud_leases'
 ORIGINAL_DEBIT_PATH = PRIMARY_CONTROLLER.parent / 'resources/prior_debit.json'
 ORIGINAL_DEBIT_RECORD = {'bytes': 4186, 'sha256': 'b55f5f6e99a598a4c7227298b0bd9cfaf6e8d39c6ac97f39df77162bd86f652a'}

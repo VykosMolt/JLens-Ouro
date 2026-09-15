@@ -8,7 +8,7 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 O = Path('/home/moloch/ouro_project/artifacts/jlens')
 HUB = Path('/home/moloch/.cache/huggingface/hub/models--Vykos--ouro-jlens-results')
-LED = json.load(open('/home/moloch/jacobian-lens/research/verification_2026-09-11/preservation/PRESERVATION_LEDGER.json'))
+LED = json.load(open('/home/moloch/ouro_project/jacobian-lens/research/verification_2026-09-11/preservation/PRESERVATION_LEDGER.json'))
 PURGE = json.load(open(O / 'PURGE_MANIFEST_2026-09-11.json'))
 E = O / 'eval/b300_local_allexits_strict'
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -81,7 +81,7 @@ def item_scores(a, cols):
             own[k] += h[j].mean() / len(slots); ctrl[k] += h[c].mean() / len(slots)
     return own, ctrl, own - ctrl
 clusters = {}
-with open('/home/moloch/jacobian-lens/research/followup_2026-09-07/audit/dependence_clusters.csv') as f:
+with open('/home/moloch/ouro_project/jacobian-lens/research/followup_2026-09-07/audit/dependence_clusters.csv') as f:
     for r in csv.DictReader(f): clusters[int(r['index'])] = r['concept_cluster']
 groups = [clusters[i] for i, _ in elig]
 rng_item = np.random.default_rng(2026091104); rng_grp = np.random.default_rng(2026091105)

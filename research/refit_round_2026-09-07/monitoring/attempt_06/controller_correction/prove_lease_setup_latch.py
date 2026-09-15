@@ -13,7 +13,7 @@ import sys
 import tempfile
 
 sys.dont_write_bytecode = True
-BASE = Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py')
+BASE = Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07/deployment/lease.py')
 PATCH = Path('/tmp/lease_setup_latch.patch')
 CANDIDATE = Path('/tmp/lease_setup_latch_candidate.py')
 OUTPUT = Path(tempfile.mkdtemp(prefix='lease-setup-latch-proof-'))

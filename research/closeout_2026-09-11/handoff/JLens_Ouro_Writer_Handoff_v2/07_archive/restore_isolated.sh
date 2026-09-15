@@ -6,7 +6,7 @@ WORK=/tmp/claude-1000/jlens_restore_$$
 mkdir -p "$WORK/empty"
 unshare -Urm --net bash -c "
   set -e
-  mount --bind $WORK/empty /home/moloch/jacobian-lens/research
+  mount --bind $WORK/empty /home/moloch/ouro_project/jacobian-lens/research
   mount --bind $WORK/empty /home/moloch/ouro_project/artifacts
   mount --bind $WORK/empty /home/moloch/.cache/huggingface
   export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 PYTORCH_ALLOC_CONF=expandable_segments:True

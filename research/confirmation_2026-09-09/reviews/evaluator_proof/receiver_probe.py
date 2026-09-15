@@ -2,7 +2,7 @@ from pathlib import Path
 import sys,tempfile,json,hashlib,copy
 import numpy as np
 import torch
-BASE=Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')
+BASE=Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09')
 sys.path.insert(0,str(BASE/'evaluation'))
 from validate_outputs import validate_outputs
 from artifacts import record

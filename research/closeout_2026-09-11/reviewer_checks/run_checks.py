@@ -4,7 +4,7 @@ import json, sys, csv, collections, re, hashlib
 from pathlib import Path
 import numpy as np
 HERE = Path(__file__).resolve().parent
-C = Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')
+C = Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09')
 A = C / 'cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef/results'
 SAVED = C / 'results/ouro_confirmation_20260911_fixed160_native1/analysis/analysis.json'
 sys.dont_write_bytecode = True

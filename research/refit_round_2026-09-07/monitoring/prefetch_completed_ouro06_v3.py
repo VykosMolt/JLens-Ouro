@@ -26,7 +26,7 @@ import time
 import uuid
 
 sys.dont_write_bytecode = True
-ROUND = Path('/home/moloch/jacobian-lens/research/refit_round_2026-09-07')
+ROUND = Path('/home/moloch/ouro_project/jacobian-lens/research/refit_round_2026-09-07')
 sys.path.insert(0, str(ROUND / 'deployment'))
 import lease
 

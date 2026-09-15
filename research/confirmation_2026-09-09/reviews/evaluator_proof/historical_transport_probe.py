@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,torch,numpy as np
-R=Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')
+R=Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09')
 paths=json.loads((R/'resources/materialized_inputs.json').read_text())['banks']
 cache=R.parent/'refit_round_2026-09-07/monitoring/attempt_06/ouro_handoff_20260909T110503Z/results/ouro_evaluation/common/cache.pt'
 C=torch.load(cache,map_location='cpu',mmap=True,weights_only=True);print('cache keys',list(C),flush=True)

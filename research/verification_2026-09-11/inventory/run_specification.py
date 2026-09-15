@@ -4,7 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 
-RESEARCH = Path('/home/moloch/jacobian-lens/research')
+RESEARCH = Path('/home/moloch/ouro_project/jacobian-lens/research')
 ROUND = RESEARCH / 'confirmation_2026-09-09'
 FINAL = ROUND / ('cloud_leases/attempt_06/handoff/accepted/ouro_confirmation_20260911_fixed160_native1/'
                  'ff7c0769b2b0dbe2e53b120daf7f0729434fe65e54c013288771f5052ffd4cef')

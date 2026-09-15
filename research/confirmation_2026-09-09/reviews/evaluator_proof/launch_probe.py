@@ -1,7 +1,7 @@
 from pathlib import Path
 import tempfile,sys,json,subprocess
 from unittest.mock import patch
-BASE=Path('/home/moloch/jacobian-lens/research/confirmation_2026-09-09')
+BASE=Path('/home/moloch/ouro_project/jacobian-lens/research/confirmation_2026-09-09')
 sys.path[:0]=[str(BASE/'evaluation'),str(BASE/'controller')]
 import launch,test_lifecycle as t,artifact_handoff as h,lease
 P=Path(tempfile.mkdtemp(prefix='confirmation-launch-proof-'));f=t.fixture(P,'launch-review')
