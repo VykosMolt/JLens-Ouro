@@ -1,106 +1,63 @@
-# jlens — Jacobian lens
+# J-Lens in Ouro
 
-> **This repository (VykosMolt/JLens-Ouro)** is the unmodified Anthropic reference implementation below plus a `research/` directory holding the J-Lens-versus-logit-lens study in the looped Ouro-2.6B model (discovery, independent refits, frozen 160-item confirmation, verification, closeout, manuscript). Start at [`research/README.md`](research/README.md). The `jlens/` package and `data/` are Anthropic's, unchanged.
+The Jacobian lens implementation in this repository is Anthropic's reference code, released under Apache-2.0, and their original README is preserved unchanged in [`README-upstream.md`](README-upstream.md). My contribution is the Ouro study in [`research/`](research/).
 
-> **Reference implementation.** Not maintained and not accepting contributions.
+Apart from `research/`, `docs/ouro-application/`, this README and some added `.gitignore` entries, every file is as Anthropic released it; the `main` branch holds their initial release for comparison.
 
-Companion code for [**Verbalizable Representations Form a Global Workspace in
-Language Models**](https://transformer-circuits.pub/2026/workspace/index.html).
+## The study
 
-The Jacobian lens reads out what an internal activation is disposed to make the
-model say. It linearly transports a residual-stream vector at any layer and
-position into the final-layer basis, then decodes it with the model's own
-unembedding into a ranked list of vocabulary tokens.
+I compare the J-Lens with the raw logit lens across the four recurrent passes of frozen Ouro-2.6B, which applies the same 48 blocks in each pass. The checkpoint is the base model (`ByteDance/Ouro-2.6B`, revision `1ed04250da1a9936042725d302e81c8fa2ab5abd`), not the Thinking or RLTT checkpoint.
 
-The transport is the average input–output Jacobian over a text corpus:
+The task is two-hop questions whose intermediate concept is implied but never named. The score is excess hit@10: whether the intended concept ranks in the top ten tokens of the full vocabulary at a given pass and layer, minus the same hit rate for control concepts. Layerwise discovery on earlier questions found a positive J-Lens region in pass 4, and five independent calibration fits reproduced it. I then froze one estimator (fit01) and the band before testing on new questions.
 
-```
-lens_l(h) = unembed( J_l @ h ), J_l = E[∂h_final / ∂h_l]
-```
+## Results
 
-The expectation is over prompts, source positions, and all current-and-future
-target positions in a generic web-text corpus; the precise estimator
-(cotangents summed over target positions, then averaged over source positions)
-is documented in the [`jlens.fitting`](jlens/fitting.py) module docstring.
+- Pass 4, physical layers 26–37, with the estimator and band frozen before testing 160 new two-hop questions with 80 unseen intermediate concepts: +23.19 points excess hit@10, 95% dependency-group bootstrap interval 16.29–32.90. Intended-concept recovery is 37.92% against 14.43% for the raw lens.
+- The same band in passes 1–3, with the final-target lens: −6.50 / −8.64 / −11.14 points.
+- Lenses targeting each pass's own exit beat the final-target lens by +22.60 / +26.50 / +34.17 points and the raw lens by +16.41 / +18.32 / +23.18 points. All six simultaneous 95% intervals exclude zero.
+- The early deficit belongs to the estimator's target, not to the passes.
 
-This repo fits the lens on open-weights decoder transformers, applies it, and
-renders the interactive layer × position view shown below. Examples use Qwen;
-other HuggingFace decoders adapt cleanly.
+Only the first result is prospective. The passes 1–3 and own-exit comparisons are post-confirmation analyses on the same states, each with its plan fixed before computation. The own-exit lenses come from the initial study and are compared with the final-target lens of their own family.
 
-![Slice visualisation: ASCII-face example](assets/slice_vis.png)
+This is a localized, estimator- and target-specific improvement in concept recovery. It does not show that the J-Lens is better in general, that answers improve, or that the model uses the recovered content.
 
-*The ASCII-face example: selecting the `^` (nose) position shows the lens
-reading out "nose" at mid layers, although the word never appears in the
-prompt.*
+## Limitations
 
-## Install
+- **No tuned-lens baseline.** This is the first limitation. The comparison covers two training-free readouts and no learned one, so it does not show whether a data-trained map recovers the same intermediates.
+- **Strong dependence on the estimator.** Changing the derivative target or the position aggregation substantially reduces the late-pass advantage.
+- **The Huginn pilot was negative.** J-Lens minus raw was negative under all six prespecified summaries, and the pilot's fitted estimator was lost.
+- **The freeze was local.** The estimator, band, scoring and analysis were fixed and timestamped before any new-question outcome, but this was not a public preregistration.
+- **Few effective dependency groups.** The 160 questions form 28 dependency groups of unequal size; the effective group count is about 8.6.
+
+## Paper
+
+"J-Lens in Ouro: A Confirmed Late-Pass Band and a Target-Dependent Early-Pass Deficit" (arXiv listing pending). The current build is [`research/closeout_2026-09-11/manuscript/JLens_Ouro_Third_Draft.pdf`](research/closeout_2026-09-11/manuscript/JLens_Ouro_Third_Draft.pdf).
+
+## What is in `research/`
+
+Each directory is one round of work, kept as it was recorded; corrections go into later directories.
+
+| Directory | Contents | Start at |
+|---|---|---|
+| [`followup_2026-09-07/`](research/followup_2026-09-07/) | Discovery analysis on the application-era outputs: layerwise J-Lens and logit-lens curves in all four passes, exit agreement, correctness strata, probe audit | `REPORT.md` |
+| [`refit_round_2026-09-07/`](research/refit_round_2026-09-07/) | Five independent calibration fits, derivative-target and position controls, the Huginn pilot, and the retrieval incident in which nine of sixteen estimator files were not recovered in full | `REPORT.md` |
+| [`confirmation_2026-09-09/`](research/confirmation_2026-09-09/) | The frozen confirmation: prospective plan, 160-question benchmark and dependency audit, freeze receipts, evaluation and analysis code, accepted readouts, reviews, spending | `README.md` |
+| [`verification_2026-09-11/`](research/verification_2026-09-11/) | Post-confirmation numerical checks (batch packing, FP32/FP64 precision, regenerated states, tie-order and logit-perturbation bounds), the repaired report and the claim-change log | `FINAL_VERIFICATION.md` |
+| [`closeout_2026-09-11/`](research/closeout_2026-09-11/) | Reviewer checks (within-domain controls, input-overlap audit, same band in every pass, dependency groups), the own-exit comparison in `local_exit/confirmation_2026-09-12/`, methods completion, a source-to-manuscript number ledger, manuscript sources and builds, the writer handoff, archive receipts | `PLAN.md` |
+
+[`research/GITHUB_EXCLUSIONS.md`](research/GITHUB_EXCLUSIONS.md) lists the 8,423 files (37.52 GB) left out of GitHub, each with its SHA-256: large lens banks, activation caches, replay arrays and model weights, same-disk duplicates, and secrets. [`docs/ouro-application/`](docs/ouro-application/) holds the earlier application-stage write-up and records the study started from.
+
+## Checking the numbers
+
+Both scripts need only NumPy and run in seconds:
 
 ```bash
-pip install -e .
+python research/closeout_2026-09-11/local_exit/confirmation_2026-09-12/verify_own_exit_family.py
+python research/closeout_2026-09-11/handoff/JLens_Ouro_Writer_Handoff_v2/verify_handoff.py
 ```
 
-## Usage
+The first recomputes the six own-exit contrasts and their simultaneous intervals from the stored rank arrays. The second rebuilds the primary result and the twenty secondary contrasts with the frozen analysis code. In a clone it also reports one missing file, `08_code/frozen_jlens/data/slice_vis.html`, which the upstream `.gitignore` keeps out of the repository, and exits non-zero for that reason alone.
 
-### Apply
+## License
 
-To apply a pre-fitted lens:
-
-```python
-import transformers, jlens
-
-hf = transformers.AutoModelForCausalLM.from_pretrained("org/model").cuda()
-tok = transformers.AutoTokenizer.from_pretrained("org/model")
-model = jlens.from_hf(hf, tok)
-
-lens = jlens.JacobianLens.from_pretrained("org/lens-repo", filename="model/lens.pt")
-lens_logits, model_logits, _ = lens.apply(
-    model, "Fact: The currency used in the country shaped like a boot is",
-    positions=[-2])
-for layer, logits in sorted(lens_logits.items()):
-    print(layer, [tok.decode([t]) for t in logits[0].topk(5).indices])
-```
-
-### Fit
-
-To fit a lens on your own model:
-
-```python
-lens = jlens.fit(model, prompts=my_prompts, checkpoint_path="out/ckpt.pt")
-lens.save("out/jacobian_lens.pt")
-```
-
-The paper's lenses use 1000 sequences of 128 tokens from a pretraining-like
-corpus. Quality saturates quickly (§9.3); ~100 prompts is usable. This is a
-reference implementation and is not optimized; fitting time is dominated by
-the model's own backward pass. Parallelize by running `fit()` on disjoint
-slices and combining with `JacobianLens.merge()`.
-
-## Walkthrough
-
-[`walkthrough.ipynb`](walkthrough.ipynb) is the end-to-end notebook: load a
-model, load (or fit) a lens, apply it at a few layers, and render a slice page
-like the one above.
-
-Reading a slice page:
-
-- Each cell shows the lens top-1 word at that (position, layer); the
-  superscript is its rank over the full vocabulary.
-- Click a cell to select a (position, layer) and pin its top-1 token; pinned
-  tokens get rank-tracking charts and a rank heatmap.
-- The bottom row (`L = n_layers − 1`) is the model's actual output.
-
-## License and data
-
-Code is released under the Apache License 2.0 — see [LICENSE](LICENSE).
-
-The replication and lens-eval prompt sets in [`data/`](data/) are synthetic,
-authored by Anthropic, and released under the same Apache License 2.0 as the
-code. See the READMEs in [`data/experiments/`](data/experiments/) and
-[`data/evaluations/`](data/evaluations/) for what each set contains.
-
-The slice-vis pages use [d3](https://github.com/d3/d3) (ISC license), loaded
-from the jsDelivr CDN with subresource integrity or inlined into
-self-contained pages.
-
-No model weights or text corpora are bundled; models and datasets downloaded
-at run time are subject to their own licenses.
+Anthropic's code and data are under the Apache License 2.0 ([`LICENSE`](LICENSE)). Code under `research/` is released under the same license unless a file states otherwise.
